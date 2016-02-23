@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CTS.OneC.LoggingService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CTS.OneC.LoggingService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://onecognizantcoresrvs.cognizant.com/ExceptionLogging/Logging.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="ApplicationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="WebApplication">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WebService">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WindowsService">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Batch">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ApplicationType" nillable="true" type="tns:ApplicationType" />
+  <xs:complexType name="ExceptionLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicationType" type="tns:ApplicationType" />
+      <xs:element minOccurs="0" name="ClassName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GlobalAppId" type="xs:int" />
+      <xs:element minOccurs="0" name="MachineName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MethodName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionLog" nillable="true" type="tns:ExceptionLog" />
+</xs:schema>

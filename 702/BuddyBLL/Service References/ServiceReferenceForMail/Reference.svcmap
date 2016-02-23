@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="660bae78-70e3-4e08-a245-454ea2b9b7d7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://onecuatcoresrvs.cognizant.com/messaging/onecommunicator/notification/vas.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="VAS.xsd" MetadataType="Schema" ID="390ec304-66ea-426f-9159-b5a86b5f3b96" SourceId="1" SourceUrl="http://onecuatcoresrvs.cognizant.com/Messaging/OneCommunicator/Notification/VAS.svc?xsd=xsd2" />
+    <MetadataFile FileName="VAS1.xsd" MetadataType="Schema" ID="459fccf6-5c64-4e2b-a143-998c082aa012" SourceId="1" SourceUrl="http://onecuatcoresrvs.cognizant.com/Messaging/OneCommunicator/Notification/VAS.svc?xsd=xsd1" />
+    <MetadataFile FileName="VAS.disco" MetadataType="Disco" ID="692a5299-1a33-4c3d-9d95-04205f542a45" SourceId="1" SourceUrl="http://onecuatcoresrvs.cognizant.com/Messaging/OneCommunicator/Notification/VAS.svc?disco" />
+    <MetadataFile FileName="VASWCF.wsdl" MetadataType="Wsdl" ID="21f94339-462a-46bf-a698-49b30a918be5" SourceId="1" SourceUrl="http://onecuatcoresrvs.cognizant.com/Messaging/OneCommunicator/Notification/VAS.svc?wsdl" />
+    <MetadataFile FileName="VAS2.xsd" MetadataType="Schema" ID="8ed32ee2-2721-4ae8-8585-8cad8d26a7e2" SourceId="1" SourceUrl="http://onecuatcoresrvs.cognizant.com/Messaging/OneCommunicator/Notification/VAS.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

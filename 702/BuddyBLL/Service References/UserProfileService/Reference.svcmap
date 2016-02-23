@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="662e66d9-6f74-4ce5-b8e1-296b0327884c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc " Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UserProfile.wsdl" MetadataType="Wsdl" ID="4685b3cd-5f40-4d89-abd3-5e43cb9176be" SourceId="1" SourceUrl="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc?wsdl" />
+    <MetadataFile FileName="UserProfile.xsd" MetadataType="Schema" ID="fb3ca87d-157d-4ada-8fbd-c4e2c58a9a02" SourceId="1" SourceUrl="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc?xsd=xsd1" />
+    <MetadataFile FileName="UserProfile1.xsd" MetadataType="Schema" ID="cf861155-b6db-4256-9607-efca981967fd" SourceId="1" SourceUrl="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc?xsd=xsd2" />
+    <MetadataFile FileName="UserProfile2.xsd" MetadataType="Schema" ID="eac7ef17-a89b-41af-8f32-6fbd5f1154a8" SourceId="1" SourceUrl="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc?xsd=xsd3" />
+    <MetadataFile FileName="UserProfile3.xsd" MetadataType="Schema" ID="c89ce05b-3657-4486-9177-811a2a3e247e" SourceId="1" SourceUrl="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc?xsd=xsd4" />
+    <MetadataFile FileName="UserProfile4.xsd" MetadataType="Schema" ID="7490b765-8a40-4d75-9209-9beac4a4205a" SourceId="1" SourceUrl="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc?xsd=xsd0" />
+    <MetadataFile FileName="UserProfile.disco" MetadataType="Disco" ID="425ef47f-4194-4a3d-81f4-b848fd4f7f8d" SourceId="1" SourceUrl="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

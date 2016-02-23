@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" />
+  <xs:element name="GetUserPhotograph">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AsscoiateId" type="xs:int" />
+        <xs:element minOccurs="0" name="strGlobalAppID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserPhotographResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserPhotographResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssociateDataByAssociateID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAssociateId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GlobalAppID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" minOccurs="0" name="Display_View" type="q1:Enumclass.ViewType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssociateDataByAssociateIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAssociateDataByAssociateIDResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssociatesData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDepartmentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDesignationID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GlobalAppID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" minOccurs="0" name="Display_View" type="q2:Enumclass.ViewType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssociatesDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAssociatesDataResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCircleDataByCircleId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="circleID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AssociateID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="iPageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="iPageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="GlobalAppID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" minOccurs="0" name="Display_View" type="q3:Enumclass.ViewType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCircleDataByCircleIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCircleDataByCircleIdResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCircleDatabyCircleName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="circleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GlobalAppId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AssociateID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="iPageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="iPageSize" type="xs:int" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" minOccurs="0" name="Display_View" type="q4:Enumclass.ViewType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCircleDatabyCircleNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCircleDatabyCircleNameResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMultipleAssociatesPhotograph">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AssociateIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strGlobalAppID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMultipleAssociatesPhotographResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMultipleAssociatesPhotographResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAppLevelCircles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strCircleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strGlobalAppID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCreatedByServiceID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AssociateIDslist" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCircleLogic" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCircleDescription" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAppLevelCirclesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateAppLevelCirclesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUserCircles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strCircleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strGlobalAppID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCreatedByAssociateID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AssociateIDslist" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCircleLogic" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCircleDescription" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUserCirclesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateUserCirclesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAssociatesFromCircle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strCircleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strGlobalAppID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AssociateIDslist" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCreatedUserID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" minOccurs="0" name="strCircleType" type="q5:Enumclass.CircleType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAssociatesFromCircleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteAssociatesFromCircleResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssociatesDetailsfromcircleIDS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAssociate_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCircleIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bPagination_Required" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="iPageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="iPageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="GlobalAppID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssociatesDetailsfromcircleIDSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAssociatesDetailsfromcircleIDSResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOneCMasterDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAssociate_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOneCMasterDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" minOccurs="0" name="GetOneCMasterDetailsResult" nillable="true" type="q6:MasterPageDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCircleDetailsForAssociate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAssociate_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GlobalAppId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCircleDetailsForAssociateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCircleDetailsForAssociateResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCircleDetailsForCircleID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCircleID" type="xs:int" />
+        <xs:element minOccurs="0" name="strAssociateID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strGlobalAppID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" minOccurs="0" name="strCircleCountRequired" type="q7:Enumclass.CircleCountRequired" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCircleDetailsForCircleIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCircleDetailsForCircleIDResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CircleDetailsSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strCircleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCircleDescription" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAssociateID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strGlobalAppID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" minOccurs="0" name="strCircleCountRequired" type="q8:Enumclass.CircleCountRequired" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CircleDetailsSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CircleDetailsSearchResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCircleIDDetailsForGlobalAPPID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strGlobalAppID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAssociateID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCircleIDDetailsForGlobalAPPIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCircleIDDetailsForGlobalAPPIDResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhotographBasedonUploadedtime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dtUploadDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="strGlobalAppID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPhotographBasedonUploadedtimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPhotographBasedonUploadedtimeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

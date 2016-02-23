@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="UserProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDAL">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserProfile" nillable="true" type="tns:UserProfile" />
+  <xs:complexType name="BaseDAL">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="BaseDAL" nillable="true" type="tns:BaseDAL" />
+  <xs:simpleType name="Enumclass.ViewType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="standardView">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DetailedView">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumclass.ViewType" nillable="true" type="tns:Enumclass.ViewType" />
+  <xs:simpleType name="Enumclass.CircleType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AppLevelCircles">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UserCentrcsCircle">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumclass.CircleType" nillable="true" type="tns:Enumclass.CircleType" />
+  <xs:complexType name="MasterPageDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlertCount" type="xs:int" />
+      <xs:element minOccurs="0" name="TooltipText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserPhoto" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MasterPageDetails" nillable="true" type="tns:MasterPageDetails" />
+  <xs:simpleType name="Enumclass.CircleCountRequired">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enumclass.CircleCountRequired" nillable="true" type="tns:Enumclass.CircleCountRequired" />
+</xs:schema>

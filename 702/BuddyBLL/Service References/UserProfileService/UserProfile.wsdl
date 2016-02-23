@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserProfile" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IUserProfile_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" />
+      <xsd:import schemaLocation="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserProfile_GetUserPhotograph_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPhotograph" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetUserPhotograph_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPhotographResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetUserPhotograph_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q1:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetUserPhotograph_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/System" name="detail" element="q2:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetAssociateDataByAssociateID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociateDataByAssociateID" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetAssociateDataByAssociateID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociateDataByAssociateIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetAssociateDataByAssociateID_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q3:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetAssociateDataByAssociateID_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/System" name="detail" element="q4:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetAssociatesData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociatesData" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetAssociatesData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociatesDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetAssociatesData_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q5:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetAssociatesData_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/System" name="detail" element="q6:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDataByCircleId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCircleDataByCircleId" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDataByCircleId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCircleDataByCircleIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDataByCircleId_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/System" name="detail" element="q7:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDataByCircleId_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q8:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDatabyCircleName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCircleDatabyCircleName" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDatabyCircleName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCircleDatabyCircleNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDatabyCircleName_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q9:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDatabyCircleName_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/System" name="detail" element="q10:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetMultipleAssociatesPhotograph_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMultipleAssociatesPhotograph" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetMultipleAssociatesPhotograph_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMultipleAssociatesPhotographResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetMultipleAssociatesPhotograph_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q11:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetMultipleAssociatesPhotograph_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/System" name="detail" element="q12:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_CreateAppLevelCircles_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAppLevelCircles" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_CreateAppLevelCircles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAppLevelCirclesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_CreateAppLevelCircles_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/System" name="detail" element="q13:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_CreateAppLevelCircles_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q14:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_CreateUserCircles_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserCircles" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_CreateUserCircles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserCirclesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_CreateUserCircles_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/System" name="detail" element="q15:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_CreateUserCircles_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q16:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_DeleteAssociatesFromCircle_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAssociatesFromCircle" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_DeleteAssociatesFromCircle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAssociatesFromCircleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_DeleteAssociatesFromCircle_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q17:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_DeleteAssociatesFromCircle_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/System" name="detail" element="q18:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetAssociatesDetailsfromcircleIDS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociatesDetailsfromcircleIDS" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetAssociatesDetailsfromcircleIDS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociatesDetailsfromcircleIDSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetAssociatesDetailsfromcircleIDS_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/System" name="detail" element="q19:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetAssociatesDetailsfromcircleIDS_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q20:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetOneCMasterDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneCMasterDetails" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetOneCMasterDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneCMasterDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetOneCMasterDetails_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/System" name="detail" element="q21:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetOneCMasterDetails_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q22:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDetailsForAssociate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCircleDetailsForAssociate" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDetailsForAssociate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCircleDetailsForAssociateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDetailsForAssociate_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q23:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDetailsForAssociate_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/System" name="detail" element="q24:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDetailsForCircleID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCircleDetailsForCircleID" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDetailsForCircleID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCircleDetailsForCircleIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDetailsForCircleID_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/System" name="detail" element="q25:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleDetailsForCircleID_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q26:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_CircleDetailsSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:CircleDetailsSearch" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_CircleDetailsSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CircleDetailsSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_CircleDetailsSearch_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q27:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_CircleDetailsSearch_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/System" name="detail" element="q28:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleIDDetailsForGlobalAPPID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCircleIDDetailsForGlobalAPPID" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleIDDetailsForGlobalAPPID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCircleIDDetailsForGlobalAPPIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleIDDetailsForGlobalAPPID_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/System" name="detail" element="q29:Exception" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetCircleIDDetailsForGlobalAPPID_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q30:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetPhotographBasedonUploadedtime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhotographBasedonUploadedtime" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetPhotographBasedonUploadedtime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhotographBasedonUploadedtimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetPhotographBasedonUploadedtime_UserProfileFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/CTS.OneC.ProfileService" name="detail" element="q31:UserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserProfile_GetPhotographBasedonUploadedtime_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/System" name="detail" element="q32:Exception" />
+  </wsdl:message>
+  <wsdl:portType name="IUserProfile">
+    <wsdl:operation name="GetUserPhotograph">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/GetUserPhotograph" message="tns:IUserProfile_GetUserPhotograph_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/GetUserPhotographResponse" message="tns:IUserProfile_GetUserPhotograph_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetUserPhotographUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_GetUserPhotograph_UserProfileFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetUserPhotographExceptionFault" name="ExceptionFault" message="tns:IUserProfile_GetUserPhotograph_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociateDataByAssociateID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/GetAssociateDataByAssociateID" message="tns:IUserProfile_GetAssociateDataByAssociateID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/GetAssociateDataByAssociateIDResponse" message="tns:IUserProfile_GetAssociateDataByAssociateID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetAssociateDataByAssociateIDUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_GetAssociateDataByAssociateID_UserProfileFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetAssociateDataByAssociateIDExceptionFault" name="ExceptionFault" message="tns:IUserProfile_GetAssociateDataByAssociateID_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociatesData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/GetAssociatesData" message="tns:IUserProfile_GetAssociatesData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/GetAssociatesDataResponse" message="tns:IUserProfile_GetAssociatesData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetAssociatesDataUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_GetAssociatesData_UserProfileFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetAssociatesDataExceptionFault" name="ExceptionFault" message="tns:IUserProfile_GetAssociatesData_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDataByCircleId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDataByCircleId" message="tns:IUserProfile_GetCircleDataByCircleId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDataByCircleIdResponse" message="tns:IUserProfile_GetCircleDataByCircleId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDataByCircleIdExceptionFault" name="ExceptionFault" message="tns:IUserProfile_GetCircleDataByCircleId_ExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDataByCircleIdUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_GetCircleDataByCircleId_UserProfileFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDatabyCircleName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDatabyCircleName" message="tns:IUserProfile_GetCircleDatabyCircleName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDatabyCircleNameResponse" message="tns:IUserProfile_GetCircleDatabyCircleName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDatabyCircleNameUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_GetCircleDatabyCircleName_UserProfileFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDatabyCircleNameExceptionFault" name="ExceptionFault" message="tns:IUserProfile_GetCircleDatabyCircleName_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleAssociatesPhotograph">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/GetMultipleAssociatesPhotograph" message="tns:IUserProfile_GetMultipleAssociatesPhotograph_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/GetMultipleAssociatesPhotographResponse" message="tns:IUserProfile_GetMultipleAssociatesPhotograph_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetMultipleAssociatesPhotographUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_GetMultipleAssociatesPhotograph_UserProfileFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetMultipleAssociatesPhotographExceptionFault" name="ExceptionFault" message="tns:IUserProfile_GetMultipleAssociatesPhotograph_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAppLevelCircles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/CreateAppLevelCircles" message="tns:IUserProfile_CreateAppLevelCircles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/CreateAppLevelCirclesResponse" message="tns:IUserProfile_CreateAppLevelCircles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/CreateAppLevelCirclesExceptionFault" name="ExceptionFault" message="tns:IUserProfile_CreateAppLevelCircles_ExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/CreateAppLevelCirclesUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_CreateAppLevelCircles_UserProfileFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserCircles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/CreateUserCircles" message="tns:IUserProfile_CreateUserCircles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/CreateUserCirclesResponse" message="tns:IUserProfile_CreateUserCircles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/CreateUserCirclesExceptionFault" name="ExceptionFault" message="tns:IUserProfile_CreateUserCircles_ExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/CreateUserCirclesUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_CreateUserCircles_UserProfileFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssociatesFromCircle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/DeleteAssociatesFromCircle" message="tns:IUserProfile_DeleteAssociatesFromCircle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/DeleteAssociatesFromCircleResponse" message="tns:IUserProfile_DeleteAssociatesFromCircle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/DeleteAssociatesFromCircleUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_DeleteAssociatesFromCircle_UserProfileFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/DeleteAssociatesFromCircleExceptionFault" name="ExceptionFault" message="tns:IUserProfile_DeleteAssociatesFromCircle_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociatesDetailsfromcircleIDS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/GetAssociatesDetailsfromcircleIDS" message="tns:IUserProfile_GetAssociatesDetailsfromcircleIDS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/GetAssociatesDetailsfromcircleIDSResponse" message="tns:IUserProfile_GetAssociatesDetailsfromcircleIDS_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetAssociatesDetailsfromcircleIDSExceptionFault" name="ExceptionFault" message="tns:IUserProfile_GetAssociatesDetailsfromcircleIDS_ExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetAssociatesDetailsfromcircleIDSUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_GetAssociatesDetailsfromcircleIDS_UserProfileFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOneCMasterDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/GetOneCMasterDetails" message="tns:IUserProfile_GetOneCMasterDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/GetOneCMasterDetailsResponse" message="tns:IUserProfile_GetOneCMasterDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetOneCMasterDetailsExceptionFault" name="ExceptionFault" message="tns:IUserProfile_GetOneCMasterDetails_ExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetOneCMasterDetailsUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_GetOneCMasterDetails_UserProfileFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDetailsForAssociate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDetailsForAssociate" message="tns:IUserProfile_GetCircleDetailsForAssociate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDetailsForAssociateResponse" message="tns:IUserProfile_GetCircleDetailsForAssociate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDetailsForAssociateUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_GetCircleDetailsForAssociate_UserProfileFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDetailsForAssociateExceptionFault" name="ExceptionFault" message="tns:IUserProfile_GetCircleDetailsForAssociate_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDetailsForCircleID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDetailsForCircleID" message="tns:IUserProfile_GetCircleDetailsForCircleID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDetailsForCircleIDResponse" message="tns:IUserProfile_GetCircleDetailsForCircleID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDetailsForCircleIDExceptionFault" name="ExceptionFault" message="tns:IUserProfile_GetCircleDetailsForCircleID_ExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetCircleDetailsForCircleIDUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_GetCircleDetailsForCircleID_UserProfileFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CircleDetailsSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/CircleDetailsSearch" message="tns:IUserProfile_CircleDetailsSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/CircleDetailsSearchResponse" message="tns:IUserProfile_CircleDetailsSearch_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/CircleDetailsSearchUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_CircleDetailsSearch_UserProfileFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/CircleDetailsSearchExceptionFault" name="ExceptionFault" message="tns:IUserProfile_CircleDetailsSearch_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleIDDetailsForGlobalAPPID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/GetCircleIDDetailsForGlobalAPPID" message="tns:IUserProfile_GetCircleIDDetailsForGlobalAPPID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/GetCircleIDDetailsForGlobalAPPIDResponse" message="tns:IUserProfile_GetCircleIDDetailsForGlobalAPPID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetCircleIDDetailsForGlobalAPPIDExceptionFault" name="ExceptionFault" message="tns:IUserProfile_GetCircleIDDetailsForGlobalAPPID_ExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetCircleIDDetailsForGlobalAPPIDUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_GetCircleIDDetailsForGlobalAPPID_UserProfileFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotographBasedonUploadedtime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserProfile/GetPhotographBasedonUploadedtime" message="tns:IUserProfile_GetPhotographBasedonUploadedtime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserProfile/GetPhotographBasedonUploadedtimeResponse" message="tns:IUserProfile_GetPhotographBasedonUploadedtime_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetPhotographBasedonUploadedtimeUserProfileFault" name="UserProfileFault" message="tns:IUserProfile_GetPhotographBasedonUploadedtime_UserProfileFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserProfile/GetPhotographBasedonUploadedtimeExceptionFault" name="ExceptionFault" message="tns:IUserProfile_GetPhotographBasedonUploadedtime_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUserProfile" type="tns:IUserProfile">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserPhotograph">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/GetUserPhotograph" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociateDataByAssociateID">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/GetAssociateDataByAssociateID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociatesData">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/GetAssociatesData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDataByCircleId">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/GetCircleDataByCircleId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDatabyCircleName">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/GetCircleDatabyCircleName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleAssociatesPhotograph">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/GetMultipleAssociatesPhotograph" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAppLevelCircles">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/CreateAppLevelCircles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserCircles">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/CreateUserCircles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssociatesFromCircle">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/DeleteAssociatesFromCircle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociatesDetailsfromcircleIDS">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/GetAssociatesDetailsfromcircleIDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOneCMasterDetails">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/GetOneCMasterDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDetailsForAssociate">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/GetCircleDetailsForAssociate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDetailsForCircleID">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/GetCircleDetailsForCircleID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CircleDetailsSearch">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/CircleDetailsSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleIDDetailsForGlobalAPPID">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/GetCircleIDDetailsForGlobalAPPID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotographBasedonUploadedtime">
+      <soap:operation soapAction="http://tempuri.org/IUserProfile/GetPhotographBasedonUploadedtime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_IUserProfile" type="tns:IUserProfile">
+    <wsp:PolicyReference URI="#NetTcpBinding_IUserProfile_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetUserPhotograph">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/GetUserPhotograph" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociateDataByAssociateID">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/GetAssociateDataByAssociateID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociatesData">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/GetAssociatesData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDataByCircleId">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/GetCircleDataByCircleId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDatabyCircleName">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/GetCircleDatabyCircleName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleAssociatesPhotograph">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/GetMultipleAssociatesPhotograph" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAppLevelCircles">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/CreateAppLevelCircles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserCircles">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/CreateUserCircles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssociatesFromCircle">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/DeleteAssociatesFromCircle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociatesDetailsfromcircleIDS">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/GetAssociatesDetailsfromcircleIDS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOneCMasterDetails">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/GetOneCMasterDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDetailsForAssociate">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/GetCircleDetailsForAssociate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDetailsForCircleID">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/GetCircleDetailsForCircleID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CircleDetailsSearch">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/CircleDetailsSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleIDDetailsForGlobalAPPID">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/GetCircleIDDetailsForGlobalAPPID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotographBasedonUploadedtime">
+      <soap12:operation soapAction="http://tempuri.org/IUserProfile/GetPhotographBasedonUploadedtime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UserProfileFault">
+        <soap12:fault use="literal" name="UserProfileFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ExceptionFault">
+        <soap12:fault use="literal" name="ExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Rest" type="tns:IUserProfile">
+    <wsdl:operation name="GetUserPhotograph">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="UserProfileFault" />
+      <wsdl:fault name="ExceptionFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociateDataByAssociateID">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="UserProfileFault" />
+      <wsdl:fault name="ExceptionFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociatesData">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="UserProfileFault" />
+      <wsdl:fault name="ExceptionFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDataByCircleId">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="ExceptionFault" />
+      <wsdl:fault name="UserProfileFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDatabyCircleName">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="UserProfileFault" />
+      <wsdl:fault name="ExceptionFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleAssociatesPhotograph">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="UserProfileFault" />
+      <wsdl:fault name="ExceptionFault" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAppLevelCircles">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="ExceptionFault" />
+      <wsdl:fault name="UserProfileFault" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserCircles">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="ExceptionFault" />
+      <wsdl:fault name="UserProfileFault" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAssociatesFromCircle">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="UserProfileFault" />
+      <wsdl:fault name="ExceptionFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociatesDetailsfromcircleIDS">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="ExceptionFault" />
+      <wsdl:fault name="UserProfileFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOneCMasterDetails">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="ExceptionFault" />
+      <wsdl:fault name="UserProfileFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDetailsForAssociate">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="UserProfileFault" />
+      <wsdl:fault name="ExceptionFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleDetailsForCircleID">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="ExceptionFault" />
+      <wsdl:fault name="UserProfileFault" />
+    </wsdl:operation>
+    <wsdl:operation name="CircleDetailsSearch">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="UserProfileFault" />
+      <wsdl:fault name="ExceptionFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCircleIDDetailsForGlobalAPPID">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="ExceptionFault" />
+      <wsdl:fault name="UserProfileFault" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhotographBasedonUploadedtime">
+      <wsdl:input />
+      <wsdl:output />
+      <wsdl:fault name="UserProfileFault" />
+      <wsdl:fault name="ExceptionFault" />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserProfile">
+    <wsdl:port name="BasicHttpBinding_IUserProfile" binding="tns:BasicHttpBinding_IUserProfile">
+      <soap:address location="http://onecuatvassrvs.cognizant.com/1/UserProfile.svc" />
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IUserProfile" binding="tns:NetTcpBinding_IUserProfile">
+      <soap12:address location="net.tcp://onecuatvassrvs.cognizant.com/1/UserProfile.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://onecuatvassrvs.cognizant.com/1/UserProfile.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="Rest" binding="tns:Rest" />
+  </wsdl:service>
+</wsdl:definitions>

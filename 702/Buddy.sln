@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Presentation", "01 Presentation", "{8F9B7F39-775E-4EDE-ACB6-6A89264E0865}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 BLL", "02 BLL", "{4F272454-9488-46B3-B080-6FC551FE48BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 DAL", "03 DAL", "{ABD18809-D156-4A9F-9AAA-25BBC0C19515}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buddy", "Buddy\Buddy.csproj", "{358A742C-A811-4481-A623-D1895729E070}"
+	ProjectSection(ProjectDependencies) = postProject
+		{999CCD5B-3710-4882-A450-1D7F19105802} = {999CCD5B-3710-4882-A450-1D7F19105802}
+		{E9F637ED-98DC-4139-97C9-7D39DFE02450} = {E9F637ED-98DC-4139-97C9-7D39DFE02450}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuddyBLL", "BuddyBLL\BuddyBLL.csproj", "{E9F637ED-98DC-4139-97C9-7D39DFE02450}"
+	ProjectSection(ProjectDependencies) = postProject
+		{999CCD5B-3710-4882-A450-1D7F19105802} = {999CCD5B-3710-4882-A450-1D7F19105802}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuddyDAL", "BuddyDAL\BuddyDAL.csproj", "{999CCD5B-3710-4882-A450-1D7F19105802}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://ctsintcosetfs:8080/tfs/onecapplication2
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Buddy\\Buddy.csproj
+		SccProjectTopLevelParentUniqueName1 = Buddy.sln
+		SccProjectName1 = Buddy
+		SccLocalPath1 = Buddy
+		SccProjectUniqueName2 = BuddyBLL\\BuddyBLL.csproj
+		SccProjectTopLevelParentUniqueName2 = Buddy.sln
+		SccProjectName2 = BuddyBLL
+		SccLocalPath2 = BuddyBLL
+		SccProjectUniqueName3 = BuddyDAL\\BuddyDAL.csproj
+		SccProjectTopLevelParentUniqueName3 = Buddy.sln
+		SccProjectName3 = BuddyDAL
+		SccLocalPath3 = BuddyDAL
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{358A742C-A811-4481-A623-D1895729E070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{358A742C-A811-4481-A623-D1895729E070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{358A742C-A811-4481-A623-D1895729E070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{358A742C-A811-4481-A623-D1895729E070}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9F637ED-98DC-4139-97C9-7D39DFE02450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9F637ED-98DC-4139-97C9-7D39DFE02450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9F637ED-98DC-4139-97C9-7D39DFE02450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9F637ED-98DC-4139-97C9-7D39DFE02450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999CCD5B-3710-4882-A450-1D7F19105802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999CCD5B-3710-4882-A450-1D7F19105802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999CCD5B-3710-4882-A450-1D7F19105802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999CCD5B-3710-4882-A450-1D7F19105802}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{358A742C-A811-4481-A623-D1895729E070} = {8F9B7F39-775E-4EDE-ACB6-6A89264E0865}
+		{E9F637ED-98DC-4139-97C9-7D39DFE02450} = {4F272454-9488-46B3-B080-6FC551FE48BE}
+		{999CCD5B-3710-4882-A450-1D7F19105802} = {ABD18809-D156-4A9F-9AAA-25BBC0C19515}
+	EndGlobalSection
+EndGlobal

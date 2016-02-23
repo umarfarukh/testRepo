@@ -1,0 +1,890 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{358A742C-A811-4481-A623-D1895729E070}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Buddy</RootNamespace>
+    <AssemblyName>Buddy</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>OneC.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.50927.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CTS.OneC.Platform.CoreServices.FormRedirectionUrl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=81a64a54e454dbc4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\Installer\CTS.OneC.Platform.CoreServices.FormRedirectionUrl.dll</HintPath>
+    </Reference>
+    <Reference Include="CTS.OneC.PlatForm.CoreServices.FormUrl_BLL">
+      <HintPath>..\..\..\..\..\Desktop\Installer\CTS.OneC.PlatForm.CoreServices.FormUrl_BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="CTS.OneC.PlatForm.CoreServices.FormUrl_DAL">
+      <HintPath>..\..\..\..\..\Desktop\Installer\CTS.OneC.PlatForm.CoreServices.FormUrl_DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="CTS.OneCognizant.Platform.CoreServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d22e7947834d2e0c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\CTS.OneCognizant.Platform.CoreServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin_view_buddy.aspx" />
+    <Content Include="Admin_view_newjoiners.aspx" />
+    <Content Include="Buddy.Publish.xml" />
+    <Content Include="BuddyAppEligibleError.aspx" />
+    <Content Include="BuddyAppError.aspx" />
+    <Content Include="BuddyAppHome.aspx" />
+    <Content Include="Buddy_view_circles.aspx" />
+    <Content Include="Buddy_view_history.aspx" />
+    <Content Include="buddy_view_home.aspx" />
+    <Content Include="buddy_view_notifications.aspx" />
+    <Content Include="buddy_view_other_buddies.aspx" />
+    <Content Include="buddy_view_storyline.aspx">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Content>
+    <Content Include="buddy_view_welcome.aspx" />
+    <Content Include="Docs\App dev guidelines.txt" />
+    <Content Include="Docs\URL Redirection.txt" />
+    <Content Include="Docs\User Context.txt" />
+    <Content Include="new_joiners_view_buddy_list.aspx" />
+    <Content Include="new_joiners_view_circles.aspx" />
+    <Content Include="new_joiners_view_feedback.aspx" />
+    <Content Include="new_joiners_view_history.aspx" />
+    <Content Include="new_joiners_view_home.aspx" />
+    <Content Include="new_joiners_view_notifications.aspx" />
+    <Content Include="new_joiners_view_registered_available_buddies.aspx" />
+    <Content Include="new_joiners_view_select_buddy.aspx" />
+    <Content Include="new_joiners_view_storyline.aspx" />
+    <Content Include="new_joiners_view_welcome.aspx" />
+    <Content Include="Pages\NA\Advisor_View.aspx" />
+    <Content Include="Pages\NA\NewHire_View.aspx" />
+    <Content Include="Resources\Images\about_buddy_program.png" />
+    <Content Include="Resources\Images\admin_view_icon.png" />
+    <Content Include="Resources\Images\admin_view_icon_hover.png" />
+    <Content Include="Resources\Images\admin_view_icon_hover1.png" />
+    <Content Include="Resources\Images\backward_arrow.png" />
+    <Content Include="Resources\Images\backward_arrow_hover.png" />
+    <Content Include="Resources\Images\buddy_4.gif" />
+    <Content Include="Resources\Images\buddy_bottom.jpg" />
+    <Content Include="Resources\Images\buddy_top.jpg" />
+    <Content Include="Resources\Images\buddy_wrapper_bg.gif" />
+    <Content Include="Resources\Images\bullet.png" />
+    <Content Include="Resources\Images\bullet_selected.png" />
+    <Content Include="Resources\Images\chatbox_bg_old.png" />
+    <Content Include="Resources\Images\circles_hover.png" />
+    <Content Include="Resources\Images\close.png" />
+    <Content Include="Resources\Images\communicator.jpg" />
+    <Content Include="Resources\Images\communicator3.png" />
+    <Content Include="Resources\Images\dummy_image_female.jpg" />
+    <Content Include="Resources\Images\dummy_image_female_large1.jpg" />
+    <Content Include="Resources\Images\dummy_image_male.jpg" />
+    <Content Include="Resources\Images\dummy_image_male_large1.jpg" />
+    <Content Include="Resources\Images\enrolled_available_hover.png" />
+    <Content Include="Resources\Images\errBuddyImage.jpg" />
+    <Content Include="Resources\Images\errJoineeImage.jpg" />
+    <Content Include="Resources\Images\errTextImage.png" />
+    <Content Include="Resources\Images\FBCLOSE.png" />
+    <Content Include="Resources\Images\FB_BTN.png" />
+    <Content Include="Resources\Images\FB_footer.png" />
+    <Content Include="Resources\Images\FB_Header.png" />
+    <Content Include="Resources\Images\FB_Header_strip.png" />
+    <Content Include="Resources\Images\FB_LightHeader.png" />
+    <Content Include="Resources\Images\header_icons.png" />
+    <Content Include="Resources\Images\history_hover.png" />
+    <Content Include="Resources\Images\home_hover.png" />
+    <Content Include="Resources\Images\info_hover.png" />
+    <Content Include="Resources\Images\info_tile.png" />
+    <Content Include="Resources\Images\loader-blue-large.gif" />
+    <Content Include="Resources\Images\loading-blue.gif" />
+    <Content Include="Resources\Images\my_location_circle.png" />
+    <Content Include="Resources\Images\my_location_circle_glow.png" />
+    <Content Include="Resources\Images\NA\about_buddy_program.png" />
+    <Content Include="Resources\Images\NA\Active_Deactive_icon.png" />
+    <Content Include="Resources\Images\NA\active_superviser.png" />
+    <Content Include="Resources\Images\NA\add_admin_item.png" />
+    <Content Include="Resources\Images\NA\admin_view_icon.png" />
+    <Content Include="Resources\Images\NA\admin_view_icon_hover.png" />
+    <Content Include="Resources\Images\NA\admin_view_icon_hover1.png" />
+    <Content Include="Resources\Images\NA\admin_view_title_bg.png" />
+    <Content Include="Resources\Images\NA\advisor_program.png" />
+    <Content Include="Resources\Images\NA\advisor_program_an.png" />
+    <Content Include="Resources\Images\NA\advisor_program_bg.png" />
+    <Content Include="Resources\Images\NA\advisor_program_tab.png" />
+    <Content Include="Resources\Images\NA\agree.png" />
+    <Content Include="Resources\Images\NA\agree_sel.png" />
+    <Content Include="Resources\Images\NA\agree_smal.png" />
+    <Content Include="Resources\Images\NA\arrow_left.png" />
+    <Content Include="Resources\Images\NA\arrow_rgt.png" />
+    <Content Include="Resources\Images\NA\associate_image.png" />
+    <Content Include="Resources\Images\NA\associate_image_img.png" />
+    <Content Include="Resources\Images\NA\backward_arrow.png" />
+    <Content Include="Resources\Images\NA\backward_arrow_hover.png" />
+    <Content Include="Resources\Images\NA\back_arrow.png" />
+    <Content Include="Resources\Images\NA\bg.png" />
+    <Content Include="Resources\Images\NA\bg_head.png" />
+    <Content Include="Resources\Images\NA\bg_lg.png" />
+    <Content Include="Resources\Images\NA\bg_md.png" />
+    <Content Include="Resources\Images\NA\bg_md_btm.png" />
+    <Content Include="Resources\Images\NA\bg_md_mid.png" />
+    <Content Include="Resources\Images\NA\bg_sm.png" />
+    <Content Include="Resources\Images\NA\bg_xs.png" />
+    <Content Include="Resources\Images\NA\bg_xs_btm.png" />
+    <Content Include="Resources\Images\NA\bg_xs_mid.png" />
+    <Content Include="Resources\Images\NA\btn_close.png" />
+    <Content Include="Resources\Images\NA\btn_no.png" />
+    <Content Include="Resources\Images\NA\btn_reset.png" />
+    <Content Include="Resources\Images\NA\btn_search.png" />
+    <Content Include="Resources\Images\NA\btn_send_request.png" />
+    <Content Include="Resources\Images\NA\btn_send_request_xs.png" />
+    <Content Include="Resources\Images\NA\btn_yes.png" />
+    <Content Include="Resources\Images\NA\buddies_dropdown_bg.png" />
+    <Content Include="Resources\Images\NA\buddylist_searchBox_bg.png" />
+    <Content Include="Resources\Images\NA\buddy_4.gif" />
+    <Content Include="Resources\Images\NA\buddy_arrow.png" />
+    <Content Include="Resources\Images\NA\buddy_bottom.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_callout.png" />
+    <Content Include="Resources\Images\NA\buddy_list_image1.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image10.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image11.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image13.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image14.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image15.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image16.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image17.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image18.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image19.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image2.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image20.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image21.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image2_copy.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image3.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image4.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image5.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image6.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image7.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image8.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_image9.jpg" />
+    <Content Include="Resources\Images\NA\buddy_list_search_block_bg.png" />
+    <Content Include="Resources\Images\NA\buddy_top.jpg" />
+    <Content Include="Resources\Images\NA\buddy_view_bg.png" />
+    <Content Include="Resources\Images\NA\buddy_wrapper_bg.gif" />
+    <Content Include="Resources\Images\NA\bullet.png" />
+    <Content Include="Resources\Images\NA\bullet_selected.png" />
+    <Content Include="Resources\Images\NA\chatbox_bg.png" />
+    <Content Include="Resources\Images\NA\chatbox_bg_old.png" />
+    <Content Include="Resources\Images\NA\checked_background.png" />
+    <Content Include="Resources\Images\NA\check_name_btn.png" />
+    <Content Include="Resources\Images\NA\check_name_btn_hover.png" />
+    <Content Include="Resources\Images\NA\choose_bg.png" />
+    <Content Include="Resources\Images\NA\cindy_left.gif" />
+    <Content Include="Resources\Images\NA\cindy_left.png" />
+    <Content Include="Resources\Images\NA\cindy_right.gif" />
+    <Content Include="Resources\Images\NA\cindy_storyline.png" />
+    <Content Include="Resources\Images\NA\cindy_welcome.png" />
+    <Content Include="Resources\Images\NA\circles_bg.png" />
+    <Content Include="Resources\Images\NA\circles_callout.png" />
+    <Content Include="Resources\Images\NA\circles_hover.png" />
+    <Content Include="Resources\Images\NA\circles_sprite.png" />
+    <Content Include="Resources\Images\NA\circles_tile.png" />
+    <Content Include="Resources\Images\NA\circle_dropdown_bg.png" />
+    <Content Include="Resources\Images\NA\close.png" />
+    <Content Include="Resources\Images\NA\communicator.jpg" />
+    <Content Include="Resources\Images\NA\communicator3.png" />
+    <Content Include="Resources\Images\NA\connections_arrow_next.png" />
+    <Content Include="Resources\Images\NA\connections_arrow_previous.png" />
+    <Content Include="Resources\Images\NA\connections_arrow_sprite.png" />
+    <Content Include="Resources\Images\NA\connections_image1.png" />
+    <Content Include="Resources\Images\NA\connections_image2.png" />
+    <Content Include="Resources\Images\NA\connections_image3.png" />
+    <Content Include="Resources\Images\NA\connections_image_bg.png" />
+    <Content Include="Resources\Images\NA\connections_shine.png" />
+    <Content Include="Resources\Images\NA\contact_bg.png" />
+    <Content Include="Resources\Images\NA\contact_close.png" />
+    <Content Include="Resources\Images\NA\contact_footer.png" />
+    <Content Include="Resources\Images\NA\contact_footer_backup.png" />
+    <Content Include="Resources\Images\NA\contact_header.png" />
+    <Content Include="Resources\Images\NA\contact_image.png" />
+    <Content Include="Resources\Images\NA\contact_image_holder.png" />
+    <Content Include="Resources\Images\NA\contact_shine.png" />
+    <Content Include="Resources\Images\NA\dashboard_content_bg.png" />
+    <Content Include="Resources\Images\NA\desktop_associate.png" />
+    <Content Include="Resources\Images\NA\disagree.png" />
+    <Content Include="Resources\Images\NA\disagree_sel.png" />
+    <Content Include="Resources\Images\NA\disagree_smal.png" />
+    <Content Include="Resources\Images\NA\dropdown_arrow.png" />
+    <Content Include="Resources\Images\NA\drop_circle.png" />
+    <Content Include="Resources\Images\NA\drop_circle_hover.png" />
+    <Content Include="Resources\Images\NA\dummy_image.jpg" />
+    <Content Include="Resources\Images\NA\dummy_image_female.jpg" />
+    <Content Include="Resources\Images\NA\dummy_image_female.png" />
+    <Content Include="Resources\Images\NA\dummy_image_female_large.jpg" />
+    <Content Include="Resources\Images\NA\dummy_image_female_large1.jpg" />
+    <Content Include="Resources\Images\NA\dummy_image_male.jpg" />
+    <Content Include="Resources\Images\NA\dummy_image_male.png" />
+    <Content Include="Resources\Images\NA\dummy_image_male_large.jpg" />
+    <Content Include="Resources\Images\NA\dummy_image_male_large1.jpg" />
+    <Content Include="Resources\Images\NA\end_connection_btn.png" />
+    <Content Include="Resources\Images\NA\enrolled_available_hover.png" />
+    <Content Include="Resources\Images\NA\errBuddyImage.jpg" />
+    <Content Include="Resources\Images\NA\errJoineeImage.jpg" />
+    <Content Include="Resources\Images\NA\errTextImage.png" />
+    <Content Include="Resources\Images\NA\excel_icon.png" />
+    <Content Include="Resources\Images\NA\FBCLOSE.png" />
+    <Content Include="Resources\Images\NA\FB_BTN.png" />
+    <Content Include="Resources\Images\NA\FB_footer.png" />
+    <Content Include="Resources\Images\NA\FB_Header.png" />
+    <Content Include="Resources\Images\NA\FB_Header_strip.png" />
+    <Content Include="Resources\Images\NA\FB_LightHeader.png" />
+    <Content Include="Resources\Images\NA\feedback_btn.png" />
+    <Content Include="Resources\Images\NA\feedback_content_bg.png" />
+    <Content Include="Resources\Images\NA\feedback_footer_bg.png" />
+    <Content Include="Resources\Images\NA\feedback_top_bg.png" />
+    <Content Include="Resources\Images\NA\go_arrow.png" />
+    <Content Include="Resources\Images\NA\go_arrow_large.png" />
+    <Content Include="Resources\Images\NA\go_arrow_white.png" />
+    <Content Include="Resources\Images\NA\go_btn_storyline.png" />
+    <Content Include="Resources\Images\NA\header_icons.png" />
+    <Content Include="Resources\Images\NA\history_content_bg.png" />
+    <Content Include="Resources\Images\NA\history_content_left_bg.png" />
+    <Content Include="Resources\Images\NA\history_details_an.png" />
+    <Content Include="Resources\Images\NA\history_details_bg.png" />
+    <Content Include="Resources\Images\NA\history_details_tab.png" />
+    <Content Include="Resources\Images\NA\history_header_bg.png" />
+    <Content Include="Resources\Images\NA\history_hover.png" />
+    <Content Include="Resources\Images\NA\history_tile.png" />
+    <Content Include="Resources\Images\NA\home_bg.png" />
+    <Content Include="Resources\Images\NA\home_hover.png" />
+    <Content Include="Resources\Images\NA\home_image_holder.png" />
+    <Content Include="Resources\Images\NA\icon-navbar.png" />
+    <Content Include="Resources\Images\NA\icon-profile.png" />
+    <Content Include="Resources\Images\NA\icon.png" />
+    <Content Include="Resources\Images\NA\icon_active_details.png" />
+    <Content Include="Resources\Images\NA\icon_active_History.png" />
+    <Content Include="Resources\Images\NA\icon_active_home%402x.png" />
+    <Content Include="Resources\Images\NA\icon_active_home.png" />
+    <Content Include="Resources\Images\NA\icon_active_more%402x.png" />
+    <Content Include="Resources\Images\NA\icon_active_more.png" />
+    <Content Include="Resources\Images\NA\icon_active_Notification.png" />
+    <Content Include="Resources\Images\NA\icon_active_Request.png" />
+    <Content Include="Resources\Images\NA\icon_active_search.png" />
+    <Content Include="Resources\Images\NA\icon_active_superadmin%402x.png" />
+    <Content Include="Resources\Images\NA\icon_active_superadmin.png" />
+    <Content Include="Resources\Images\NA\icon_active_superviser%402x.png" />
+    <Content Include="Resources\Images\NA\icon_active_superviser.png" />
+    <Content Include="Resources\Images\NA\icon_advisor.png" />
+    <Content Include="Resources\Images\NA\icon_advisor_details.png" />
+    <Content Include="Resources\Images\NA\icon_bulletdot.png" />
+    <Content Include="Resources\Images\NA\icon_connection.png" />
+    <Content Include="Resources\Images\NA\icon_deactive_details.png" />
+    <Content Include="Resources\Images\NA\icon_deactive_History.png" />
+    <Content Include="Resources\Images\NA\icon_deactive_home.png" />
+    <Content Include="Resources\Images\NA\icon_deactive_more.png" />
+    <Content Include="Resources\Images\NA\icon_deactive_Notification.png" />
+    <Content Include="Resources\Images\NA\icon_deactive_Request.png" />
+    <Content Include="Resources\Images\NA\icon_deactive_search.png" />
+    <Content Include="Resources\Images\NA\icon_deactive_superadmin%402x.png" />
+    <Content Include="Resources\Images\NA\icon_deactive_superadmin.png" />
+    <Content Include="Resources\Images\NA\icon_deactive_superviser%402x.png" />
+    <Content Include="Resources\Images\NA\icon_deactive_superviser.png" />
+    <Content Include="Resources\Images\NA\icon_decative_details%402x.png" />
+    <Content Include="Resources\Images\NA\icon_decative_History%402x.png" />
+    <Content Include="Resources\Images\NA\icon_decative_home%402x.png" />
+    <Content Include="Resources\Images\NA\icon_decative_notification%402x.png" />
+    <Content Include="Resources\Images\NA\icon_decative_request%402x.png" />
+    <Content Include="Resources\Images\NA\icon_decative_Search%402x.png" />
+    <Content Include="Resources\Images\NA\icon_history.png" />
+    <Content Include="Resources\Images\NA\icon_search_advisor.png" />
+    <Content Include="Resources\Images\NA\icon_sprite.png" />
+    <Content Include="Resources\Images\NA\icon_supervisor.png" />
+    <Content Include="Resources\Images\NA\icon_volunteer.png" />
+    <Content Include="Resources\Images\NA\image_associate.png" />
+    <Content Include="Resources\Images\NA\image_bg.png" />
+    <Content Include="Resources\Images\NA\image_bg_new.png" />
+    <Content Include="Resources\Images\NA\image_gif.gif" />
+    <Content Include="Resources\Images\NA\info_hover.png" />
+    <Content Include="Resources\Images\NA\info_tile.png" />
+    <Content Include="Resources\Images\NA\iphone_associate.png" />
+    <Content Include="Resources\Images\NA\loader-blue-large.gif" />
+    <Content Include="Resources\Images\NA\loading-blue.gif" />
+    <Content Include="Resources\Images\NA\logo.png" />
+    <Content Include="Resources\Images\NA\logotxt.png" />
+    <Content Include="Resources\Images\NA\my_location_circle.png" />
+    <Content Include="Resources\Images\NA\my_location_circle_glow.png" />
+    <Content Include="Resources\Images\NA\neutral.png" />
+    <Content Include="Resources\Images\NA\neutral_sel.png" />
+    <Content Include="Resources\Images\NA\neutral_small.png" />
+    <Content Include="Resources\Images\NA\notifications_bg.png" />
+    <Content Include="Resources\Images\NA\notifications_hover.png" />
+    <Content Include="Resources\Images\NA\notifications_tile.png" />
+    <Content Include="Resources\Images\NA\notification_popup_arrow.png" />
+    <Content Include="Resources\Images\NA\outlook.jpg" />
+    <Content Include="Resources\Images\NA\presence_16-away.png" />
+    <Content Include="Resources\Images\NA\presence_16-busy.png" />
+    <Content Include="Resources\Images\NA\presence_16-dnd.png" />
+    <Content Include="Resources\Images\NA\presence_16-idle-online.png" />
+    <Content Include="Resources\Images\NA\presence_16-off.png" />
+    <Content Include="Resources\Images\NA\presence_16-online.png" />
+    <Content Include="Resources\Images\NA\presence_16-unknown.png" />
+    <Content Include="Resources\Images\NA\proceed_arrow.png" />
+    <Content Include="Resources\Images\NA\proceed_arrow_hover.png" />
+    <Content Include="Resources\Images\NA\progress_bar_image.png" />
+    <Content Include="Resources\Images\NA\radio_sprite.png" />
+    <Content Include="Resources\Images\NA\recommend_advisor.png" />
+    <Content Include="Resources\Images\NA\recommend_advisor_an.png" />
+    <Content Include="Resources\Images\NA\recommend_advisor_bg.png" />
+    <Content Include="Resources\Images\NA\recommend_advisor_tab.png" />
+    <Content Include="Resources\Images\NA\recommend_buddy1.png" />
+    <Content Include="Resources\Images\NA\recommend_buddy2.png" />
+    <Content Include="Resources\Images\NA\recommend_buddy3.png" />
+    <Content Include="Resources\Images\NA\registered_available_tile.png" />
+    <Content Include="Resources\Images\NA\remove_admin.png" />
+    <Content Include="Resources\Images\NA\result_profile.png" />
+    <Content Include="Resources\Images\NA\searchBox_bg.png" />
+    <Content Include="Resources\Images\NA\search_advisor_an.png" />
+    <Content Include="Resources\Images\NA\search_advisor_bg.png" />
+    <Content Include="Resources\Images\NA\search_advisor_tab.png" />
+    <Content Include="Resources\Images\NA\search_block_bg.png" />
+    <Content Include="Resources\Images\NA\search_btn.png" />
+    <Content Include="Resources\Images\NA\search_icon.png" />
+    <Content Include="Resources\Images\NA\select_buddy.png" />
+    <Content Include="Resources\Images\NA\select_buddy_hover.png" />
+    <Content Include="Resources\Images\NA\shine.png" />
+    <Content Include="Resources\Images\NA\slider_bg.png" />
+    <Content Include="Resources\Images\NA\slider_bg_2.png" />
+    <Content Include="Resources\Images\NA\slider_bg_3.png" />
+    <Content Include="Resources\Images\NA\slider_bg_4.png" />
+    <Content Include="Resources\Images\NA\slider_bg_5.png" />
+    <Content Include="Resources\Images\NA\slider_handle.png" />
+    <Content Include="Resources\Images\NA\slider_handle_green.png" />
+    <Content Include="Resources\Images\NA\smiley_cool.png" />
+    <Content Include="Resources\Images\NA\smiley_disappointed.png" />
+    <Content Include="Resources\Images\NA\smiley_happy.png" />
+    <Content Include="Resources\Images\NA\smiley_lol.png" />
+    <Content Include="Resources\Images\NA\smiley_sad.png" />
+    <Content Include="Resources\Images\NA\sprite.png" />
+    <Content Include="Resources\Images\NA\star_empty.png" />
+    <Content Include="Resources\Images\NA\star_filled.png" />
+    <Content Include="Resources\Images\NA\storyline_arrow.png" />
+    <Content Include="Resources\Images\NA\storyline_hover.png" />
+    <Content Include="Resources\Images\NA\storyline_Icon.png" />
+    <Content Include="Resources\Images\NA\storyline_tile.png" />
+    <Content Include="Resources\Images\NA\st_agree.png" />
+    <Content Include="Resources\Images\NA\st_agree_sel.png" />
+    <Content Include="Resources\Images\NA\st_agree_smal.png" />
+    <Content Include="Resources\Images\NA\st_disagree.png" />
+    <Content Include="Resources\Images\NA\st_disagree_selected.png" />
+    <Content Include="Resources\Images\NA\st_disagree_small.png" />
+    <Content Include="Resources\Images\NA\superviser.png" />
+    <Content Include="Resources\Images\NA\tab_divider.png" />
+    <Content Include="Resources\Images\NA\test-image.png" />
+    <Content Include="Resources\Images\NA\ui-anim_basic_16x16.gif" />
+    <Content Include="Resources\Images\NA\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Resources\Images\NA\user_image.png" />
+    <Content Include="Resources\Images\NA\user_image_female.png" />
+    <Content Include="Resources\Images\NA\user_image_male.png" />
+    <Content Include="Resources\Images\NA\vertical_bar.png" />
+    <Content Include="Resources\Images\NA\welcome_bg.png" />
+    <Content Include="Resources\Images\NA\welcome_image_holder.png" />
+    <Content Include="Resources\Images\NA\welcome_nj_image.png" />
+    <Content Include="Resources\Images\NA\wrapper_bg.jpg" />
+    <Content Include="Resources\Images\notifications_hover.png" />
+    <Content Include="Resources\Images\outlook.jpg" />
+    <Content Include="Resources\Images\presence_16-away.png" />
+    <Content Include="Resources\Images\presence_16-busy.png" />
+    <Content Include="Resources\Images\presence_16-dnd.png" />
+    <Content Include="Resources\Images\presence_16-idle-online.png" />
+    <Content Include="Resources\Images\presence_16-off.png" />
+    <Content Include="Resources\Images\presence_16-online.png" />
+    <Content Include="Resources\Images\presence_16-unknown.png" />
+    <Content Include="Resources\Images\proceed_arrow.png" />
+    <Content Include="Resources\Images\proceed_arrow_hover.png" />
+    <Content Include="Resources\Images\select_buddy.png" />
+    <Content Include="Resources\Images\select_buddy_hover.png" />
+    <Content Include="Resources\Images\sprite.png" />
+    <Content Include="Resources\Images\storyline_hover.png" />
+    <Content Include="Resources\Images\storyline_Icon.png" />
+    <Content Include="Resources\Images\ui-anim_basic_16x16.gif" />
+    <Content Include="Resources\Images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Resources\Images\user_image_female.png" />
+    <Content Include="Resources\Images\user_image_male.png" />
+    <Content Include="Resources\JS\buddy.js" />
+    <Content Include="Resources\JS\buddy_view.js" />
+    <Content Include="Resources\JS\jquery-1.8.3.js" />
+    <Content Include="Resources\JS\JSCommunicatorStatus.js" />
+    <Content Include="Resources\JS\NA\AdvisorView.js" />
+    <Content Include="Resources\JS\NA\AdvisorView_older.js" />
+    <Content Include="Resources\JS\NA\bootstrap-select.js" />
+    <Content Include="Resources\JS\NA\bootstrap.min.js" />
+    <Content Include="Resources\JS\NA\buddy_view.js" />
+    <Content Include="Resources\JS\NA\custom.js" />
+    <Content Include="Resources\JS\NA\html5shiv.js" />
+    <Content Include="Resources\JS\NA\jquery-1.9.1.min.js" />
+    <Content Include="Resources\JS\NA\jquery-ui.js" />
+    <Content Include="Resources\JS\NA\jquery.colorbox.js" />
+    <Content Include="Resources\JS\NA\jquery.jqtransform.js" />
+    <Content Include="Resources\JS\NA\jquery.lazyload.min.js" />
+    <Content Include="Resources\JS\NA\jquery.ui.touch-punch.js" />
+    <Content Include="Resources\JS\NA\JSCommunicatorStatus.js" />
+    <Content Include="Resources\JS\NA\NewHire_View.js" />
+    <Content Include="Resources\JS\NA\NewHire_View_older.js" />
+    <Content Include="Resources\JS\NA\new_joiners_view.js" />
+    <Content Include="Resources\JS\NA\raphael.js" />
+    <Content Include="Resources\JS\NA\respond.min.js" />
+    <Content Include="Resources\JS\new_joiners_view.js" />
+    <Content Include="Resources\JS\jquery-1.4.4.min_carousel.js" />
+    <Content Include="Resources\JS\jquery-ui-1.10.0.custom.js" />
+    <Content Include="Resources\JS\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="Resources\JS\jquery.bgdsize.js" />
+    <Content Include="Resources\JS\jquery.carousel-1.1.js" />
+    <Content Include="Resources\JS\jquery.easing.1.3.js" />
+    <Content Include="Resources\JS\jquery.easing.compatibility.js" />
+    <Content Include="Resources\JS\jquery.jkit.1.1.11.js" />
+    <Content Include="Resources\JS\jquery.jkit.1.1.11.min.js" />
+    <Content Include="Resources\JS\jquery.livequery.js" />
+    <Content Include="Resources\JS\jquery.mousewheel.min.js" />
+    <Content Include="Resources\JS\pie.js" />
+    <Content Include="Resources\JS\raphael.js" />
+    <Content Include="Resources\JS\scroll.js" />
+    <Content Include="Resources\Styles\jquery-ui-autocomplete.css" />
+    <Content Include="Resources\Styles\NA\bootstrap-select.css" />
+    <Content Include="Resources\Styles\NA\bootstrap.css" />
+    <Content Include="Resources\Styles\NA\colorbox.css" />
+    <Content Include="Resources\Styles\NA\jqtransform.css" />
+    <Content Include="Resources\Styles\NA\jquery-ui.css" />
+    <Content Include="Resources\Styles\NA\jquery-ui.custom.css" />
+    <Content Include="Resources\Styles\NA\styles.css" />
+    <Content Include="Resources\Styles\styles.css" />
+    <Content Include="Pages\NA\ShowImage.ashx" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="Resources\Images\add_admin_item.png" />
+    <Content Include="Resources\Images\admin_view_title_bg.png" />
+    <Content Include="Resources\Images\back_arrow.png" />
+    <Content Include="Resources\Images\buddies_dropdown_bg.png" />
+    <Content Include="Resources\Images\buddylist_searchBox_bg.png" />
+    <Content Include="Resources\Images\buddy_arrow.png" />
+    <Content Include="Resources\Images\buddy_list_callout.png" />
+    <Content Include="Resources\Images\buddy_list_image1.jpg" />
+    <Content Include="Resources\Images\buddy_list_image10.jpg" />
+    <Content Include="Resources\Images\buddy_list_image11.jpg" />
+    <Content Include="Resources\Images\buddy_list_image13.jpg" />
+    <Content Include="Resources\Images\buddy_list_image14.jpg" />
+    <Content Include="Resources\Images\buddy_list_image15.jpg" />
+    <Content Include="Resources\Images\buddy_list_image16.jpg" />
+    <Content Include="Resources\Images\buddy_list_image17.jpg" />
+    <Content Include="Resources\Images\buddy_list_image18.jpg" />
+    <Content Include="Resources\Images\buddy_list_image19.jpg" />
+    <Content Include="Resources\Images\buddy_list_image2.jpg" />
+    <Content Include="Resources\Images\buddy_list_image20.jpg" />
+    <Content Include="Resources\Images\buddy_list_image21.jpg" />
+    <Content Include="Resources\Images\buddy_list_image2_copy.jpg" />
+    <Content Include="Resources\Images\buddy_list_image3.jpg" />
+    <Content Include="Resources\Images\buddy_list_image4.jpg" />
+    <Content Include="Resources\Images\buddy_list_image5.jpg" />
+    <Content Include="Resources\Images\buddy_list_image6.jpg" />
+    <Content Include="Resources\Images\buddy_list_image7.jpg" />
+    <Content Include="Resources\Images\buddy_list_image8.jpg" />
+    <Content Include="Resources\Images\buddy_list_image9.jpg" />
+    <Content Include="Resources\Images\buddy_list_search_block_bg.png" />
+    <Content Include="Resources\Images\buddy_view_bg.png" />
+    <Content Include="Resources\Images\chatbox_bg.png" />
+    <Content Include="Resources\Images\checked_background.png" />
+    <Content Include="Resources\Images\check_name_btn.png" />
+    <Content Include="Resources\Images\check_name_btn_hover.png" />
+    <Content Include="Resources\Images\cindy_left.gif" />
+    <Content Include="Resources\Images\cindy_left.png" />
+    <Content Include="Resources\Images\cindy_right.gif" />
+    <Content Include="Resources\Images\cindy_storyline.png" />
+    <Content Include="Resources\Images\cindy_welcome.png" />
+    <Content Include="Resources\Images\circles_bg.png" />
+    <Content Include="Resources\Images\circles_callout.png" />
+    <Content Include="Resources\Images\circles_sprite.png" />
+    <Content Include="Resources\Images\circles_tile.png" />
+    <Content Include="Resources\Images\circle_dropdown_bg.png" />
+    <Content Include="Resources\Images\connections_arrow_sprite.png" />
+    <Content Include="Resources\Images\connections_image1.png" />
+    <Content Include="Resources\Images\connections_image2.png" />
+    <Content Include="Resources\Images\connections_image3.png" />
+    <Content Include="Resources\Images\connections_image_bg.png" />
+    <Content Include="Resources\Images\connections_shine.png" />
+    <Content Include="Resources\Images\contact_bg.png" />
+    <Content Include="Resources\Images\contact_close.png" />
+    <Content Include="Resources\Images\contact_footer.png" />
+    <Content Include="Resources\Images\contact_footer_backup.png" />
+    <Content Include="Resources\Images\contact_header.png" />
+    <Content Include="Resources\Images\contact_image.png" />
+    <Content Include="Resources\Images\contact_image_holder.png" />
+    <Content Include="Resources\Images\contact_shine.png" />
+    <Content Include="Resources\Images\dashboard_content_bg.png" />
+    <Content Include="Resources\Images\dropdown_arrow.png" />
+    <Content Include="Resources\Images\drop_circle.png" />
+    <Content Include="Resources\Images\drop_circle_hover.png" />
+    <Content Include="Resources\Images\dummy_image.jpg" />
+    <Content Include="Resources\Images\dummy_image_female.png" />
+    <Content Include="Resources\Images\dummy_image_female_large.jpg" />
+    <Content Include="Resources\Images\dummy_image_male.png" />
+    <Content Include="Resources\Images\dummy_image_male_large.jpg" />
+    <Content Include="Resources\Images\feedback_content_bg.png" />
+    <Content Include="Resources\Images\feedback_footer_bg.png" />
+    <Content Include="Resources\Images\feedback_top_bg.png" />
+    <Content Include="Resources\Images\go_arrow.png" />
+    <Content Include="Resources\Images\go_arrow_large.png" />
+    <Content Include="Resources\Images\go_arrow_white.png" />
+    <Content Include="Resources\Images\go_btn_storyline.png" />
+    <Content Include="Resources\Images\history_content_bg.png" />
+    <Content Include="Resources\Images\history_content_left_bg.png" />
+    <Content Include="Resources\Images\history_header_bg.png" />
+    <Content Include="Resources\Images\history_tile.png" />
+    <Content Include="Resources\Images\home_bg.png" />
+    <Content Include="Resources\Images\home_image_holder.png" />
+    <Content Include="Resources\Images\icon_sprite.png" />
+    <Content Include="Resources\Images\image_gif.gif" />
+    <Content Include="Resources\Images\notifications_bg.png" />
+    <Content Include="Resources\Images\notifications_tile.png" />
+    <Content Include="Resources\Images\notification_popup_arrow.png" />
+    <Content Include="Resources\Images\radio_sprite.png" />
+    <Content Include="Resources\Images\recommend_buddy1.png" />
+    <Content Include="Resources\Images\recommend_buddy2.png" />
+    <Content Include="Resources\Images\recommend_buddy3.png" />
+    <Content Include="Resources\Images\registered_available_tile.png" />
+    <Content Include="Resources\Images\remove_admin.png" />
+    <Content Include="Resources\Images\searchBox_bg.png" />
+    <Content Include="Resources\Images\search_block_bg.png" />
+    <Content Include="Resources\Images\search_btn.png" />
+    <Content Include="Resources\Images\shine.png" />
+    <Content Include="Resources\Images\slider_bg.png" />
+    <Content Include="Resources\Images\slider_bg_2.png" />
+    <Content Include="Resources\Images\slider_bg_3.png" />
+    <Content Include="Resources\Images\slider_bg_4.png" />
+    <Content Include="Resources\Images\slider_bg_5.png" />
+    <Content Include="Resources\Images\slider_handle.png" />
+    <Content Include="Resources\Images\slider_handle_green.png" />
+    <Content Include="Resources\Images\smiley_cool.png" />
+    <Content Include="Resources\Images\smiley_disappointed.png" />
+    <Content Include="Resources\Images\smiley_happy.png" />
+    <Content Include="Resources\Images\smiley_lol.png" />
+    <Content Include="Resources\Images\smiley_sad.png" />
+    <Content Include="Resources\Images\star_empty.png" />
+    <Content Include="Resources\Images\star_filled.png" />
+    <Content Include="Resources\Images\storyline_arrow.png" />
+    <Content Include="Resources\Images\storyline_tile.png" />
+    <Content Include="Resources\Images\user_image.png" />
+    <Content Include="Resources\Images\welcome_bg.png" />
+    <Content Include="Resources\Images\welcome_image_holder.png" />
+    <Content Include="Resources\Images\welcome_nj_image.png" />
+    <Content Include="Resources\Images\wrapper_bg.jpg" />
+    <Content Include="Resources\Styles\carousel.css" />
+    <Content Include="Resources\Styles\jquery-ui-1.10.0.custom.css" />
+    <Content Include="Resources\Styles\PIE.htc" />
+    <Content Include="Resources\Styles\reset.css" />
+    <Content Include="Resources\Images\logo.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="ShowImage.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_view_buddy.aspx.cs">
+      <DependentUpon>Admin_view_buddy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_view_buddy.aspx.designer.cs">
+      <DependentUpon>Admin_view_buddy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_view_newjoiners.aspx.cs">
+      <DependentUpon>Admin_view_newjoiners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_view_newjoiners.aspx.designer.cs">
+      <DependentUpon>Admin_view_newjoiners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BuddyAppEligibleError.aspx.cs">
+      <DependentUpon>BuddyAppEligibleError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuddyAppEligibleError.aspx.designer.cs">
+      <DependentUpon>BuddyAppEligibleError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BuddyAppError.aspx.cs">
+      <DependentUpon>BuddyAppError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuddyAppError.aspx.designer.cs">
+      <DependentUpon>BuddyAppError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BuddyAppHome.aspx.cs">
+      <DependentUpon>BuddyAppHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuddyAppHome.aspx.designer.cs">
+      <DependentUpon>BuddyAppHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buddy_view_circles.aspx.cs">
+      <DependentUpon>Buddy_view_circles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buddy_view_circles.aspx.designer.cs">
+      <DependentUpon>Buddy_view_circles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buddy_view_history.aspx.cs">
+      <DependentUpon>Buddy_view_history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buddy_view_history.aspx.designer.cs">
+      <DependentUpon>Buddy_view_history.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buddy_view_home.aspx.cs">
+      <DependentUpon>buddy_view_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buddy_view_home.aspx.designer.cs">
+      <DependentUpon>buddy_view_home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buddy_view_notifications.aspx.cs">
+      <DependentUpon>buddy_view_notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buddy_view_notifications.aspx.designer.cs">
+      <DependentUpon>buddy_view_notifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buddy_view_other_buddies.aspx.cs">
+      <DependentUpon>buddy_view_other_buddies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buddy_view_other_buddies.aspx.designer.cs">
+      <DependentUpon>buddy_view_other_buddies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buddy_view_storyline.aspx.cs">
+      <DependentUpon>buddy_view_storyline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buddy_view_storyline.aspx.designer.cs">
+      <DependentUpon>buddy_view_storyline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buddy_view_welcome.aspx.cs">
+      <DependentUpon>buddy_view_welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buddy_view_welcome.aspx.designer.cs">
+      <DependentUpon>buddy_view_welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\DALTransaction.cs" />
+    <Compile Include="new_joiners_view_buddy_list.aspx.cs">
+      <DependentUpon>new_joiners_view_buddy_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="new_joiners_view_buddy_list.aspx.designer.cs">
+      <DependentUpon>new_joiners_view_buddy_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="new_joiners_view_circles.aspx.cs">
+      <DependentUpon>new_joiners_view_circles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="new_joiners_view_circles.aspx.designer.cs">
+      <DependentUpon>new_joiners_view_circles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="new_joiners_view_feedback.aspx.cs">
+      <DependentUpon>new_joiners_view_feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="new_joiners_view_feedback.aspx.designer.cs">
+      <DependentUpon>new_joiners_view_feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="new_joiners_view_history.aspx.cs">
+      <DependentUpon>new_joiners_view_history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="new_joiners_view_history.aspx.designer.cs">
+      <DependentUpon>new_joiners_view_history.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="new_joiners_view_home.aspx.cs">
+      <DependentUpon>new_joiners_view_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="new_joiners_view_home.aspx.designer.cs">
+      <DependentUpon>new_joiners_view_home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="new_joiners_view_notifications.aspx.cs">
+      <DependentUpon>new_joiners_view_notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="new_joiners_view_notifications.aspx.designer.cs">
+      <DependentUpon>new_joiners_view_notifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="new_joiners_view_registered_available_buddies.aspx.cs">
+      <DependentUpon>new_joiners_view_registered_available_buddies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="new_joiners_view_registered_available_buddies.aspx.designer.cs">
+      <DependentUpon>new_joiners_view_registered_available_buddies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="new_joiners_view_select_buddy.aspx.cs">
+      <DependentUpon>new_joiners_view_select_buddy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="new_joiners_view_select_buddy.aspx.designer.cs">
+      <DependentUpon>new_joiners_view_select_buddy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="new_joiners_view_storyline.aspx.cs">
+      <DependentUpon>new_joiners_view_storyline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="new_joiners_view_storyline.aspx.designer.cs">
+      <DependentUpon>new_joiners_view_storyline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="new_joiners_view_welcome.aspx.cs">
+      <DependentUpon>new_joiners_view_welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="new_joiners_view_welcome.aspx.designer.cs">
+      <DependentUpon>new_joiners_view_welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NA\Advisor_View.aspx.cs">
+      <DependentUpon>Advisor_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NA\Advisor_View.aspx.designer.cs">
+      <DependentUpon>Advisor_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NA\NewHire_View.aspx.cs">
+      <DependentUpon>NewHire_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NA\NewHire_View.aspx.designer.cs">
+      <DependentUpon>NewHire_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NA\ShowImage.ashx.cs">
+      <DependentUpon>ShowImage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowImage.ashx.cs">
+      <DependentUpon>ShowImage.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Docs\OneC VS Project Template.docx" />
+    <None Include="OneC.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database Scripts\" />
+    <Folder Include="Test Cases\" />
+    <Folder Include="Test Launch Pages\" />
+    <Folder Include="User Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BuddyBLL\BuddyBLL.csproj">
+      <Project>{E9F637ED-98DC-4139-97C9-7D39DFE02450}</Project>
+      <Name>BuddyBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BuddyDAL\BuddyDAL.csproj">
+      <Project>{999CCD5B-3710-4882-A450-1D7F19105802}</Project>
+      <Name>BuddyDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50189</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

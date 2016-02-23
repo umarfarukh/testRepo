@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0798e4ab-fe31-4f26-8afc-8a9a4993cfd7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://onecognizantcoresrvs.cognizant.com/ExceptionLogging/Logging.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Logging.xsd" MetadataType="Schema" ID="1ac873d9-58b9-4694-840e-9790d2138615" SourceId="1" SourceUrl="http://onecognizantcoresrvs.cognizant.com/ExceptionLogging/Logging.svc?xsd=xsd0" />
+    <MetadataFile FileName="Logging1.xsd" MetadataType="Schema" ID="1a25b8c9-83b2-4653-8121-010649867b63" SourceId="1" SourceUrl="http://onecognizantcoresrvs.cognizant.com/ExceptionLogging/Logging.svc?xsd=xsd1" />
+    <MetadataFile FileName="Logging.disco" MetadataType="Disco" ID="0b05ff88-cb2d-415d-9dbe-e0c24ed220e9" SourceId="1" SourceUrl="http://onecognizantcoresrvs.cognizant.com/ExceptionLogging/Logging.svc?disco" />
+    <MetadataFile FileName="Logging.wsdl" MetadataType="Wsdl" ID="3944f27d-8660-4709-bc69-de448e759820" SourceId="1" SourceUrl="http://onecognizantcoresrvs.cognizant.com/ExceptionLogging/Logging.svc?wsdl" />
+    <MetadataFile FileName="Logging2.xsd" MetadataType="Schema" ID="cd936ee6-8fdb-413c-b659-311a9763db32" SourceId="1" SourceUrl="http://onecognizantcoresrvs.cognizant.com/ExceptionLogging/Logging.svc?xsd=xsd3" />
+    <MetadataFile FileName="Logging3.xsd" MetadataType="Schema" ID="71c060ff-0770-40f2-b5c3-fac5db6f45df" SourceId="1" SourceUrl="http://onecognizantcoresrvs.cognizant.com/ExceptionLogging/Logging.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
