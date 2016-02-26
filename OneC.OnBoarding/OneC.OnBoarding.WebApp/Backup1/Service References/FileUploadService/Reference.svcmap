@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1eb58885-65cf-4a18-a91f-04c3ac45f4be" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://onecognizantcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DocumentUploadService1.disco" MetadataType="Disco" ID="76fed836-044b-4ee9-8090-906221b42410" SourceId="1" SourceUrl="http://onecognizantcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc?disco" />
+    <MetadataFile FileName="DocumentUploadService5.xsd" MetadataType="Schema" ID="35ebb54e-f5d9-4554-9245-51bd4ab532b2" SourceId="1" SourceUrl="http://onecognizantcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DocumentUploadService51.xsd" MetadataType="Schema" ID="96127f4b-c6b3-4969-ac5f-34dee4457537" SourceId="1" SourceUrl="http://onecognizantcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DocumentUploadService52.xsd" MetadataType="Schema" ID="663c8d26-7131-48ec-8583-b6bd79496e9c" SourceId="1" SourceUrl="http://onecognizantcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DocumentUploadService53.xsd" MetadataType="Schema" ID="e401f412-f891-4681-af21-584701048818" SourceId="1" SourceUrl="http://onecognizantcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DocumentUploadService54.xsd" MetadataType="Schema" ID="3cb4ea97-f5b0-459e-8e6b-9280f8a2fad0" SourceId="1" SourceUrl="http://onecognizantcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DocumentUploadService1.wsdl" MetadataType="Wsdl" ID="5ecbc048-51c2-49a5-adc4-b626981e0cfe" SourceId="1" SourceUrl="http://onecognizantcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

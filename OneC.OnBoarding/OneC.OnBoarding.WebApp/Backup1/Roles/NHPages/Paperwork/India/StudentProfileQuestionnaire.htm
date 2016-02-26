@@ -1,0 +1,1345 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,IE=9,IE=8" />
+    <title></title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>    
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>    
+    <script src="../../../../Scripts/Forms/India/StudentProfileQuestionnaire.js" type="text/javascript"></script>    
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <style type="text/css">
+        .alert_f_text
+        {
+            float: left;
+            height: 10px;
+            margin: 0;
+            padding: 0 0 0 10px;
+            text-align: right;
+            width: 200px;
+            font-size: 0.8em;
+            color: #ff0000;
+            display: none;
+        }
+        .alert_f
+        {
+            height: 12px;
+            width: 13px;
+            margin: 6px;
+            float: left;
+            margin-bottom: 3px;
+            display: none;
+        }
+        .pageDetails .personalDetails li button.ui-datepicker-trigger
+        {
+            float: none;
+            margin-right: 0;
+        }
+        .pageDetails input, .pageDetails select
+        {
+            width: 150px;
+            float: right;
+        }
+        .pageDetails ul.personalDetails
+        {
+            margin-left: 7px;
+            margin-bottom: 10px;
+        }
+        .pageDetails ul.personalDetails li
+        {
+            border-left: 1px solid #d4e7ef;
+            border-top: 1px solid #d4e7ef;
+            border-right: 1px solid #d4e7ef;
+            margin-left: 13px;
+            padding-left: 1px;
+            width: 96%;
+            height: 30px;
+        }
+        
+        .pageDetails ul.personalDetails li label.sno
+        {
+            width: 5%;
+            height: 30px;
+            float: left;
+            padding-top: 15px;
+            padding-left: 5px;
+        }
+        .pageDetails ul.personalDetails li label.elective
+        {
+            width: 23%;
+            border-left: 1px solid #d4e7ef;
+            text-align: center;
+            height: 36px;
+            float: left;
+            padding-top: 10px;
+        }
+        .pageDetails ul.personalDetails li label.project
+        {
+            width: 18%;
+            border-left: 1px solid #d4e7ef;
+            text-align: center;
+            height: 35px;
+            float: left;
+            padding-top: 13px;
+        }
+        #certification span.learning1 input
+        {
+            width: 140px;
+            float: left;
+        }
+        .pageDetails ul.personalDetails li label.learning
+        {
+            width: 19.7%;
+            border-left: 1px solid #d4e7ef;
+            text-align: center;
+            height: 30px;
+            float: left;
+            padding-top: 15px;
+        }
+        .pageDetails ul.personalDetails li span.learning2
+        {
+         
+            border-left: 1px solid #d4e7ef;
+            text-align: center;
+            height: 45px;
+            float: left;
+            padding-top: 15px;
+        }
+        .pageDetails ul.personalDetails li span.learning1
+        {
+            width: 15%;
+            border-left: 1px solid #d4e7ef;
+            text-align: center;
+            height: 45px;
+            float: left;
+            padding-top: 15px;
+        }
+        .pageDetails ul.personalDetails li span.learningD
+        {
+            width: 25%;
+            border-left: 1px solid #d4e7ef;
+            text-align: center;
+            height: 45px;
+            float: left;
+            padding-top: 15px;
+        }
+        .pageDetails ul.personalDetails li span.score
+        {
+            width: 15%;
+            border-left: 1px solid #d4e7ef;
+            text-align: center;
+            height: 45px;
+            float: left;
+            padding-top: 15px;
+        }
+        .pageDetails ul.personalDetails li span.score input
+        {
+            width: 110px;
+        }
+        .pageDetails ul.personalDetails li span.learning1 tbForm
+        {
+            float: right;
+            margin-right: 0px;
+            width: 130px;
+            margin-top: 5px;
+        }
+        .pageDetails ul.personalDetails li .tbForm
+        {
+            float: right;
+            margin-right: 5px;
+            width: 150px;
+            margin-top: -5px;
+        }
+        /*start 298015-Made proper Alignment*/
+        .pageDetails ul.personalDetails li .academics
+        {
+            margin-right: 20px;
+            margin-top: 0px;
+        }        
+        .pageDetails ul.personalDetails li .projectDetails
+        {
+            margin-right: -15px;
+            margin-top: 0px;
+        }
+        /*end*/
+        .pageDetails ul.personalDetails li .ddForm
+        {
+            border: 1px solid #000;
+            margin-bottom: 10px;
+        }
+        .pageDetails ul.learn li.lear label
+        {
+            border-left: none;
+            border-right: 1px solid #d4e7ef;
+        }
+        .pageDetails ul.learn li.lear tbForm
+        {
+            width: 130px;
+            margin: 5px 1px 1px 1px;
+        }
+        
+        .pageDetails .date
+        {
+            /*298015 - increased width from 70 to 75*/
+            width: 75px;
+            height: 20px;
+            border: 1px solid #000;
+            margin-top: -5px;
+            float: left;
+        }
+        .pageDetails .ui-datepicker-trigger
+        {
+            margin-top: -5px;
+        }
+        .pageDetails .tbFormN
+        {
+            width: 120px;
+            border: 1px solid #000;
+            margin-right: 5px;
+        }
+        /*start 298015-made proper alignment */
+        .pageDetails .projectDetails2
+        {
+            height: 20px;             
+            margin-right: 15px;
+        }
+        /*end*/
+        .pageDetails .proficiency
+        {
+            width: 30%;
+            height: 40px;
+            float: left;
+            border-right: 1px solid #d4e7ef;
+            padding-top: 5px;
+            padding-left: 2px;
+        }
+        .pageDetails .proficiencyN
+        {
+            width: 69.4%;
+            height: 40px;
+            float: left;
+            padding-top: 5px;
+            padding-left: 2px;
+        }
+        .pageDetails .proficiencyN textarea
+        {
+            width: 570px;
+            height: 30px;
+            float: left;
+            margin-top: 5px;
+            margin-left: 5px;
+            border: 1px solid #000;
+        }
+        .pageDetails .Presentation
+        {
+            width: 21%;
+            height: 40px;
+            float: left;
+            border-right: 1px solid #d4e7ef;
+            padding-top: 5px;
+            padding-left: 2px;
+        }
+        .pageDetails ul.personalDetails li label.Presentation input.tbForm
+        {
+            margin-top: 5px;
+            float: left;
+            margin-left: 5px;
+            width: 160px;
+            height: 30px;
+        }
+        .pageDetails .Presentation textarea
+        {
+            width: 160px;
+            height: 30px;
+            float: left;
+            margin-top: 5px;
+            margin-left: 5px;
+            border: 1px solid #000;
+        }
+        .pageDetails .PresentationD
+        {
+            width: 57%;
+            height: 40px;
+            float: left;
+            padding-top: 5px;
+            padding-left: 2px;
+        }
+        .pageDetails .PresentationD textarea
+        {
+            width: 460px;
+            height: 30px;
+            float: left;
+            margin-top: 5px;
+            margin-left: 5px;
+            border: 1px solid #000;
+        }
+        
+        
+        .pageDetails .Presentation
+        {
+            width: 21%;
+            height: 40px;
+            float: left;
+            border-right: 1px solid #d4e7ef;
+            padding-top: 5px;
+            padding-left: 2px;
+        }
+        ul.personalDetails li.language label
+        {
+            width: 24.64%;
+            height: 40px;
+            float: left;
+            border-right: 1px solid #d4e7ef;
+            padding-top: 5px;
+            padding-left: 2px;
+            text-align: center;
+        }
+        ul.personalDetails li.language label select.tbForm
+        {
+            margin-top: 5px;
+            margin-right: 5px;
+            float: left;
+            width: 200px;
+        }
+        ul.personalDetails li.member label
+        {
+            width: 49.64%;
+            height: 40px;
+            float: left;
+            border-right: 1px solid #d4e7ef;
+            padding-top: 5px;
+            padding-left: 2px;
+            text-align: center;
+        }
+        .pageDetails .otherinfo
+        {
+            width: 99%;
+            text-align: center;
+            height: 40px;
+            padding: 9px 0 4px 0;
+            margin-bottom: 10px;
+            border: 1px solid #d4e7ef;
+        }
+        .pageDetails .otherinfo label
+        {
+            height: auto;
+            width: auto;
+        }
+        .pageDetails .otherinfo textarea
+        {
+            width: 96%;
+            border: 1px solid #000;
+        }
+        
+        
+        ul.personalDetails li.member label select.tbForm, ul.personalDetails li.member label input.tbForm
+        {
+            margin: 5px 10px 5px 5px;
+            float: left;
+            width: 400px;
+        }
+        .ui-datepicker select.ui-datepicker-month
+        {
+            float: left;
+            width: 47%;
+            font-size: 0.8em;
+            font-weight: normal;
+        }
+        .sideheading
+        {
+            color: #0099ff;
+            font-weight: bold;
+            float: left;
+            width: 96%;
+        }
+        .tablealign
+        {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="baseContent">
+        <div id="pageMain">
+            <div id="headerContent">
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <br />
+                            <p class="blueText" style="text-align: center; font-weight: bold;">
+                                COGNIZANT TECHNOLOGY SOLUTIONS CORPORATION
+                            </p>
+                            <br />
+                            <p class="blueText" style="text-align: center; font-weight: bold;">
+                                Student Profile Questionnaire
+                            </p>
+                            <br />
+                            <p class="pageText" style="text-align: left;">
+                                <a style="float: left; margin-right: 5px;">Dear </a>
+                                <input type="text" id="Pg_1_text_Name_Header" class="inputText_Readonly" style="cursor: default;
+                                    float: left;" unselectable="on" readonly="readonly" />,
+                                <br />
+                                <br />
+                                Congratulations! We are delighted to welcome you into Cognizant!<br />
+                                <br />
+                                The right person in the right role! This is a maxim we firmly believe in.
+                                <br />
+                                <br />
+                                As an associate of Cognizant, we believe that you should be given the opportunity
+                                to grow not just professionally, but also hone soft-skills such as communication,
+                                team management skills and personal effectiveness, which would help in your overall
+                                growth in the organization.<br />
+                                <br />
+                                Which is why, we would like to receive additional information from you that will
+                                help us understand you better!
+                                <br />
+                                <br />
+                                Please take time to complete this questionnaire.
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                Regards,
+                                <br />
+                                Cognizant HR
+                            </p>
+                            <br />
+                            <p class="bluetext page_text sideheading" title="Please provide information about your elective course(s). Mention the semester during which you took the elective(s) and the percentage marks that you obtained (convert CGPA to percentage marks). Please also provide the reason for choosing this elective course in the Remarks column.">
+                                Academic Details:</p>
+                            <br />
+                            <p class="page_text tablealign">
+                                Please share details of all your elective courses and your academic performance.
+                                Do specify why you chose this elective.
+                            </p>
+                            <ul class="personalDetails tablealign" id="semester">
+                                <li>
+                                    <label class="blueText sno">
+                                        Sl.No </label>
+                                    <label class="blueText elective" title="Please provide information about your elective course(s). Mention the semester during which you took the elective(s) and the percentage marks that you obtained (convert CGPA to percentage marks). Please also provide the reason for choosing this elective course in the Remarks column.">
+                                        Name Of Elective Course </label>
+                                    <label class="blueText elective">
+                                        Studied In Which Semester </label>
+                                    <label class="blueText elective">
+                                        Percentage </label>
+                                    <label class="blueText elective">
+                                        Remarks </label>
+                                </li>
+                                <li>
+                                    <label class="sno">
+                                        <span style="float: right; color: Red; padding-bottom: 4px;">*</span> 1.</label>
+                                    <label class="blueText elective">
+                                        <input type="text" id="Pg_1_Text_NameOfTheElectives1" maxlength="500" class="tbForm academics textMandatory"
+                                            title="Elective" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Elective1" />
+                                    </label>
+                                    <label for="semester" class="elective">
+                                        <select id="Pg_1_DropDownList_Semister1" title="Semester" class="tbForm academics ddForm dropdown"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Semester1"
+                                            jqxb-listsource="SemesterList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </label>
+                                    <label class="elective">
+                                        <input id="Pg_1_Text_Percentage1" title="Percentage" maxlength="5" class="tbForm academics textMandatory onlyFloating ccpDisabled"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Score1" /></label>
+                                    <label class="elective">
+                                        <textarea id="Pg_1_Textarea_Remarks1" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" title="Remarks" class="tbForm academics onkeyDown" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.AcademyDetails.Remarks1"></textarea>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="sno">
+                                        2.</label>
+                                    <label class="elective">
+                                        <input type="text" id="Pg_1_Text_NameoftheElective2" class="tbForm academics" maxlength="500"
+                                            title="Please provide information about your elective course(s). Mention the semester during which you took the elective(s) and the percentage marks that you obtained (convert CGPA to percentage marks). Please also provide the reason for choosing this elective course in the Remarks column."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Elective2" />
+                                    </label>
+                                    <label class="elective">
+                                        <select id="Pg_1_DropDownList_Semister2" class="tbForm academics ddForm" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.AcademyDetails.Semester2" jqxb-listsource="SemesterList"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </label>
+                                    <label class="elective">
+                                        <input id="Pg_1_Text_Percentage2" maxlength="5" class="tbForm academics onlyFloating ccpDisabled"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Score2" />
+                                    </label>
+                                    <label class="elective">
+                                        <textarea id="Pg_1_Textarea_Remarks2" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" class="tbForm academics" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Remarks2"></textarea>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="sno">
+                                        3.</label>
+                                    <label class="elective">
+                                        <input type="text" id="Pg_1_Text_NameoftheElective3" class="tbForm academics" maxlength="500"
+                                            title="Please provide information about your elective course(s). Mention the semester during which you took the elective(s) and the percentage marks that you obtained (convert CGPA to percentage marks). Please also provide the reason for choosing this elective course in the Remarks column."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Elective3" />
+                                    </label>
+                                    <label class="elective">
+                                        <select id="Pg_1_DropDownList_Semister3" class="tbForm academics ddForm " jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.AcademyDetails.Semester3" jqxb-listsource="SemesterList"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </label>
+                                    <label class="elective">
+                                        <input id="Pg_1_Text_Percentage3" maxlength="5" class="tbForm academics onlyFloating ccpDisabled"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Score3" />
+                                    </label>
+                                    <label class="elective">
+                                        <textarea id="Pg_1_Textarea_Remarksmlttxtbox3" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" class="tbForm academics" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Remarks3"></textarea>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="sno">
+                                        4.</label>
+                                    <label class="elective">
+                                        <input type="text" id="Pg_1_Text_NameoftheElective4" class="tbForm academics" maxlength="500"
+                                            title="Please provide information about your elective course(s). Mention the semester during which you took the elective(s) and the percentage marks that you obtained (convert CGPA to percentage marks). Please also provide the reason for choosing this elective course in the Remarks column."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Elective4" />
+                                    </label>
+                                    <label class="elective">
+                                        <select id="Pg_1_DropDownList_Semister4" class="tbForm academics ddForm" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.AcademyDetails.Semester4" jqxb-listsource="SemesterList"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </label>
+                                    <label class="elective">
+                                        <input id="Pg_1_Text_Percentage4" maxlength="5" class="tbForm academics onlyFloating ccpDisabled"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Score4" />
+                                    </label>
+                                    <label class="elective">
+                                        <textarea id="Pg_1_Textarea_Remarks4" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" class="tbForm academics" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Remarks4"></textarea>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="sno">
+                                        5.</label>
+                                    <label class="elective">
+                                        <input type="text" id="Pg_1_Text_NameoftheElective5" class="tbForm academics" maxlength="500"
+                                            title="Please provide information about your elective course(s). Mention the semester during which you took the elective(s) and the percentage marks that you obtained (convert CGPA to percentage marks). Please also provide the reason for choosing this elective course in the Remarks column."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Elective5" />
+                                    </label>
+                                    <label class="elective">
+                                        <select id="Pg_1_DropDownList_Semister5" class="tbForm academics ddForm" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.AcademyDetails.Semester5" jqxb-listsource="SemesterList"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </label>
+                                    <label class="elective">
+                                        <input id="Pg_1_Text_Percentage5" title="Percentage in the respective semister" maxlength="5"
+                                            class="tbForm academics onlyFloating ccpDisabled" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Score5" />
+                                    </label>
+                                    <label class="elective">
+                                        <textarea id="Pg_1_Textarea_Remarks5" title="Pen down if any remarks in this scenario"
+                                            onkeypress="RestrictCharCount(this.id,500)" allowchar="500" class="tbForm academics" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.AcademyDetails.Remarks5"></textarea>
+                                    </label>
+                                </li>
+                                <li style="border-bottom: 1px solid  #d4e7ef;">
+                                    <label class="sno">
+                                        6.</label>
+                                    <label class="elective ">
+                                        <input type="text" id="Pg_1_Text_NameoftheElective6" class="tbForm academics" maxlength="500"
+                                            title="Please provide information about your elective course(s). Mention the semester during which you took the elective(s) and the percentage marks that you obtained (convert CGPA to percentage marks). Please also provide the reason for choosing this elective course in the Remarks column."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Elective6" />
+                                    </label>
+                                    <label class="elective ">
+                                        <select id="Pg_1_DropDownList_Semister6" class="tbForm academics ddForm" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.AcademyDetails.Semester6" jqxb-listsource="SemesterList"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </label>
+                                    <label class="elective ">
+                                        <input id="Pg_1_Text_Percentage6" maxlength="5" class="tbForm academics onlyFloating ccpDisabled"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Score6" />
+                                    </label>
+                                    <label class="elective ">
+                                        <textarea id="Pg_1_Textarea_Remarks6" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" class="tbForm academics" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.AcademyDetails.Remarks6"></textarea>
+                                    </label>
+                                </li>
+                            </ul>
+                            <br />
+                            <p class="bluetext page_text sideheading" title="Please provide information on the various certification courses that you have completed.  These can be both internal and external certifications. Please mention details of the certifying body, duration of the course, score and remarks, if any.">
+                                Learning Courses And Certification:
+                            </p>
+                            <br />
+                            <p class="page_text tablealign">
+                                Please provide details of any learning / training courses and certification (internal
+                                and external certifications) you have attended and completed.
+                                <br />
+                                If your Certification is not listed in the drop down list, please select ‘Others’
+                                and provide its details in the ‘Remarks’ column. Certification ‘From’ and ‘To’ dates
+                                can be the same. For Learning / Training courses, please select ‘Others’ and provide
+                                its details in the ‘Remarks’ column.
+                            </p>
+                            <br />
+                            <ul class="personalDetails learn tablealign" id="certification">
+                                <li class="lear" style="height: 45px;">
+                                    <span class="learning1" style="color:#0099ff;">
+                                        Name of the Learning Program and Certification
+                                    </span>
+                                    <span class="learning2" style="color:#0099ff;width:127px;">
+                                        Certifying body     
+                                    </span>
+                                    <span class="learningD" style="color:#0099ff;">                                    
+                                        <a style="width: 45%; float: left;">From</a> <a style="width: 45%; float: left;">To</a>
+                                        <!--<a style="width: 45%; float: left;">From</a> <a style="width: 45%; float: right; margin-right:5px;">To</a>-->
+                                    </span>
+                                    <span class="score" style="color:#0099ff;">
+                                    Score
+                                    </span>
+                                    <span class="learning2" style="border-right: none;color:#0099ff;" title="Pen down if any remarks in this scenario">
+                                     Remarks
+                                    </span>
+                                </li>
+                                <li class="lear" style="height: 45px;">
+
+                                    <span class="learning1">
+
+                                     <select class="tbForm ddForm certification" id="Pg_1_DropDownList_NoTLPCertification1"  jqxb-datasource="FormDetails"
+                                     style="width:120px" jqxb-datamember="QuestionnaireData.CertificationDetails.Certification1" jqxb-listsource="certificationlist"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>                                 
+                                       
+                                        <input id="Pg_1_Text_othershide1" class="tbForm" style="display: none;width:120px" title="OtherCertification"  
+                                            name="Please provide information on the other certification details, if any."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.OtherCertification1" />
+                                    </span>
+                                    <span class="learning2">
+                                        <input id="Pg_1_Text_certifyingbody1" class="tbForm" maxlength="500" title="Please provide information on the various certification courses that you have completed.  These can be both internal and external certifications. Please mention details of the certifying body, duration of the course, score and remarks, if any."
+                                          style="width:120px;float:left;"  jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CertificationBody1" />
+                                    </span>
+                                    <span class="learningD">
+                                        <a style="float: left;">
+                                            <input id="Pg_1_Text_FromDate1" type="text" readonly="readonly" class="date" style="margin-right: 5px;
+                                                margin-left: 5px;" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CAttended1" />                                            
+                                        </a>
+                                        <input id="Pg_1_Text_ToDate1" type="text" class="date" style="margin-left: 5px;"
+                                            readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CAttendedTo1" />                                        
+                                    </span>
+                                    <span class="score">
+                                        <input id="Pg_1_Text_Score1" class="tbForm onlyFloating" maxlength="5" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.CertificationDetails.CScore1" />
+                                    
+                                    </span>
+                                    <span class="learning2" style="border-right: none;">
+                                        <textarea id="Pg_1_Textarea_CRemarks1" class="tbForm" onkeypress="RestrictCharCount(this.id,500)"  style="width:120px"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CRemarks1"></textarea>
+                                    </span>
+                                </li>
+                                <li class="lear" style="height: 45px;">
+                                    <span class="learning1">
+                                        <select id="Pg_1_DropDownList_NoTLPCertifation2" class="tbForm ddForm certification"
+                                           style="width:120px"  jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.Certification2"
+                                            jqxb-listsource="certificationlist" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                      
+                                        <input id="Pg_1_Text_Othershide2" class="tbForm" style="display: none;width:120px" jqxb-datasource="FormDetails" 
+                                            jqxb-datamember="QuestionnaireData.CertificationDetails.OtherCertification2" />
+                                    </span>
+                                    <span class="learning2">
+                                        <input id="Pg_1_Text_Certifyingbody2" class="tbForm" maxlength="500" title="Please provide information on the various certification courses that you have completed.  These can be both internal and external certifications. Please mention details of the certifying body, duration of the course, score and remarks, if any."
+                                        style="width:120px;float:left;" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CertificationBody2" />
+                                    </span>
+                                    <span class="learningD">
+                                        <a style="float: left;">
+                                            <input id="Pg_1_Text_FromDate2" type="text" class="date" readonly="readonly" style="margin-right: 5px;
+                                                margin-left: 5px;" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CAttended2" /></a>
+                                        <a>
+                                            <input id="Pg_1_Text_ToDate2" class="date" style="margin-left: 5px;" type="text"
+                                                readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CAttendedTo2" /></a>
+                                    </span>
+                                    <span class="score">
+                                      <input id="Pg_1_Text_Score2" class="tbForm onlyFloating" maxlength="5" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.CertificationDetails.CScore2" />
+                                      
+                                    </span>
+                                    <span class="learning2" style="border-right: none;">
+                                        <textarea id="Pg_1_Textarea_CRemarks2" class="tbForm" onkeypress="RestrictCharCount(this.id,500)"  style="width:120px"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CRemarks2"></textarea>
+                                    </span>
+                                </li>
+                                <li class="lear" style="height: 45px;">
+                                    <span class="learning1">
+                                        <select id="Pg_1_DropDownList_NoTLPCertification3" class="tbForm ddForm certification"
+                                           style="width:120px;"  jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.Certification3"
+                                            jqxb-listsource="certificationlist" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                     
+                                        <input id="Pg_1_Text_Othershide3" class="tbForm" style="display: none;width:120px;" jqxb-datasource="FormDetails" 
+                                            jqxb-datamember="QuestionnaireData.CertificationDetails.OtherCertification3" />
+                                    </span>
+                                    <span class="learning2">
+                                        <input id="Pg_1_Text_Certifyingbody3" class="tbForm" maxlength="500" title="Please provide information on the various certification courses that you have completed.  These can be both internal and external certifications. Please mention details of the certifying body, duration of the course, score and remarks, if any."
+                                           style="width:120px;float:left;"  jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CertificationBody3" />
+                                    </span>
+                                    <span class="learningD">
+                                        <a style="float: left;">
+                                            <input id="Pg_1_Text_FromDate3" type="text" class="date" readonly="readonly" style="margin-right: 5px;
+                                                margin-left: 5px;" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CAttended3" /></a>
+                                        <input id="Pg_1_Text_ToDate3" type="text" class="date" style="margin-left: 5px;"
+                                            readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CAttendedTo3" />
+                                    </span>
+                                    <span class="score">
+                                       <input id="Pg_1_Text_Score3" class="tbForm onlyFloating" maxlength="5" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.CertificationDetails.CScore3" />
+                                    </span>
+                                    <span class="learning2" style="border-right: none;">
+                                        <textarea id="Pg_1_Textarea_CRemarks3" class="tbForm" onkeypress="RestrictCharCount(this.id,500)"  style="width:120px"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CRemarks3"></textarea>
+                                    </span>
+                                </li>
+                                <li class="lear" style="height: 45px; border-bottom: 1px solid #d4e7ef;">
+                                    <span class="learning1">
+                                        <select id="Pg_1_DropDownList_NoTLPCertification4" class="tbForm ddForm certification"
+                                          style="width:120px"   jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.Certification4"
+                                            jqxb-listsource="certificationlist" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                     
+                                        <input id="Pg_1_Text_Othershide4" class="tbForm" style="display: none; float: right;width:120px;" 
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.OtherCertification4" />
+                                    </span>
+                                    <span class="blueText learning2">
+                                        <input id="Pg_1_Text_Certifyingbody4" class="tbForm" maxlength="500" title="Please provide information on the various certification courses that you have completed.  These can be both internal and external certifications. Please mention details of the certifying body, duration of the course, score and remarks, if any."
+                                           style="width:120px;float:left;" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CertificationBody4" />
+                                    </span>
+                                    <span class="blueText learningD">
+                                        <a style="float: left;">
+                                            <input id="Pg_1_Text_FromDate4" type="text" class="date" readonly="readonly" style="margin-right: 5px;
+                                                margin-left: 5px;" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CAttended4" /></a>
+                                        <input id="Pg_1_Text_ToDate4" type="text" class="date" style="margin-left: 5px;"
+                                            readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CAttendedTo4" />
+                                    </span>
+                                    <span class="blueText score">
+                                     <input id="Pg_1_Text_Score4" class="tbForm onlyFloating" maxlength="5" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.CertificationDetails.CScore4" />
+                                    </span>
+                                    <span class="learning2" style="border-right: none;">
+                                        <textarea id="Pg_1_Textarea_CRemarks4" class="tbForm" onkeypress="RestrictCharCount(this.id,500)"  style="width:120px"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.CertificationDetails.CRemarks4"></textarea>
+                                    </span>
+                                </li>
+                            </ul>
+                            <br />
+                            <p class="page_text sideheading" title="Please provide information about your final year project. If you have undertaken any other project, please provide information on the same. Kindly specify the name of the company for which you undertook the project, the project duration and the technologies used in the project. Give a brief description of the project(s) in not more than 100 words in the Project Description tab.">
+                                Project Details:
+                            </p>
+                            <br />
+                            <p class="page_text tablealign">
+                                Please provide details of your final year project and any other project(s) that
+                                you have completed.
+                            </p>
+                            <br />
+                            <ul class="personalDetails tablealign">
+                                <li>
+                                    <label class="blueText sno">
+                                        Sl.No</label>
+                                    <label class="blueText project">
+                                        Project Title
+                                    </label>
+                                    <label class="blueText project">
+                                        Company
+                                    </label>
+                                    <label class="blueText project">
+                                        Project Timelines(In Months)</label>
+                                    <label class="blueText project">
+                                        Technology Used
+                                    </label>
+                                    <label class="blueText project">
+                                        Description
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="sno">
+                                        <span style="float: right; color: Red">*</span> 1.</label>
+                                    <label class="project" title="Please provide information about your final year project. If you have undertaken any other project, please provide information on the same. Kindly specify the name of the company for which you undertook the project, the project duration and the technologies used in the project. Give a brief description of the project(s) in not more than 100 words in the Project Description tab.">
+                                        Final Year Project</label>
+                                    <label class="project">
+                                        <input type="text" id="Pg_1_Text_Company1" class="tbFormN projectDetails2 textMandatory preview"
+                                            maxlength="500" title="Company" name="Please provide information about your final year project. If you have undertaken any other project, please provide information on the same. Kindly specify the name of the company for which you undertook the project, the project duration and the technologies used in the project. Give a brief description of the project(s) in not more than 100 words in the Project Description tab."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.TechnologyDetails.Company1" />
+                                    </label>
+                                    <label class="project">
+                                        <input type="text" id="Pg_1_Text_Pjttimeline1" class="tbFormN projectDetails2 textMandatory OnlyNumeric"
+                                            maxlength="2" title="Month" name="Please enter the no.of months" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.TechnologyDetails.Timeline1" />
+                                    </label>
+                                    <label class="project">
+                                        <input type="text" id="Pg_1_Text_Technologies1" class="tbFormN projectDetails2 textMandatory" maxlength="500"
+                                            jqxb-datasource="FormDetails" title="technology" name="Name of the technology"
+                                            jqxb-datamember="QuestionnaireData.TechnologyDetails.Technology1" /></label>
+                                    <label class="project" >
+                                        <textarea id="Pg_1_Textarea_Description1" class="tbForm projectDetails" jqxb-datasource="FormDetails"
+                                            onkeypress="RestrictCharCount(this.id,500)" allowchar="500" jqxb-datamember="QuestionnaireData.TechnologyDetails.Description1"></textarea></label>
+                                </li>
+                                <li>
+                                    <label class="sno">
+                                        2.</label>
+                                    <label class="project">
+                                        Project1</label>
+                                    <label class="project">
+                                        <input type="text" id="Pg_1_Text_Company2" class="tbFormN projectDetails2" maxlength="500" title="Please provide information about your final year project. If you have undertaken any other project, please provide information on the same. Kindly specify the name of the company for which you undertook the project, the project duration and the technologies used in the project. Give a brief description of the project(s) in not more than 100 words in the Project Description tab."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.TechnologyDetails.Company2" />
+                                    </label>
+                                    <label class="project">
+                                        <input type="text" id="Pg_1_Text_Pjttimeline2" class="tbFormN projectDetails2 OnlyNumeric" title="Please enter the no.of months"
+                                            maxlength="2" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.TechnologyDetails.Timeline2" />
+                                    </label>
+                                    <label class="project">
+                                        <input id="Pg_1_Text_Technologies2" class="tbFormN projectDetails2" maxlength="500" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.TechnologyDetails.Technology2" /></label>
+                                    <label class="project" >
+                                        <textarea id="Pg_1_Textarea_Description2" class="tbForm projectDetails" jqxb-datasource="FormDetails"
+                                            onkeypress="RestrictCharCount(this.id,500)" allowchar="500" jqxb-datamember="QuestionnaireData.TechnologyDetails.Description2"></textarea></label>
+                                </li>
+                                <li>
+                                    <label class="sno">
+                                        3.</label>
+                                    <label class="project" title="Please provide information about your final year project. If you have undertaken any other project, please provide information on the same. Kindly specify the name of the company for which you undertook the project, the project duration and the technologies used in the project. Give a brief description of the project(s) in not more than 100 words in the Project Description tab.">
+                                        Project2</label>
+                                    <label class="project">
+                                        <input type="text" id="Pg_1_Text_Company3" class="tbFormN projectDetails2" maxlength="500" title="Please provide information about your final year project. If you have undertaken any other project, please provide information on the same. Kindly specify the name of the company for which you undertook the project, the project duration and the technologies used in the project. Give a brief description of the project(s) in not more than 100 words in the Project Description tab."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.TechnologyDetails.Company3" />
+                                    </label>
+                                    <label class="project">
+                                        <input type="text" id="Pg_1_Text_Pjttimeline3" class="tbFormN projectDetails2 OnlyNumeric" title="Please enter the no.of months"
+                                            maxlength="2" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.TechnologyDetails.Timeline3" />
+                                    </label>
+                                    <label class="project">
+                                        <input id="Pg_1_Text_Technologies3" class="tbFormN projectDetails2" maxlength="500" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.TechnologyDetails.Technology3" /></label>
+                                    <label class="project">
+                                        <textarea id="Pg_1_Textarea_Description3" class="tbForm projectDetails" jqxb-datasource="FormDetails"
+                                            onkeypress="RestrictCharCount(this.id,500)" allowchar="500" jqxb-datamember="QuestionnaireData.TechnologyDetails.Description3"></textarea></label>
+                                </li>
+                                <li style="border-bottom: 1px solid #d4e7ef;">
+                                    <label class="sno">
+                                        4.</label>
+                                    <label class="project" title="Please provide information about your final year project. If you have undertaken any other project, please provide information on the same. Kindly specify the name of the company for which you undertook the project, the project duration and the technologies used in the project. Give a brief description of the project(s) in not more than 100 words in the Project Description tab.">
+                                        Project3</label>
+                                    <label class="project">
+                                        <input type="text" id="Pg_1_Text_Company4" class="tbFormN projectDetails2" maxlength="500" title="Please provide information about your final year project. If you have undertaken any other project, please provide information on the same. Kindly specify the name of the company for which you undertook the project, the project duration and the technologies used in the project. Give a brief description of the project(s) in not more than 100 words in the Project Description tab."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.TechnologyDetails.Company4" />
+                                    </label>
+                                    <label class="project">
+                                        <input type="text" id="Pg_1_Text_Pjttimeline4" class="tbFormN projectDetails2 OnlyNumeric" title="Please enter the no.of months"
+                                            maxlength="2" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.TechnologyDetails.Timeline4" />
+                                    </label>
+                                    <label class="project">
+                                        <input id="Pg_1_Text_Technologies4" class="tbFormN projectDetails2" maxlength="500" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.TechnologyDetails.Technology4" /></label>
+                                    <label class="project" >
+                                        <textarea id="Pg_1_Textarea_Description4" class="tbForm projectDetails" jqxb-datasource="FormDetails"
+                                            onkeypress="RestrictCharCount(this.id,500)" allowchar="500" jqxb-datamember="QuestionnaireData.TechnologyDetails.Description4"></textarea></label>
+                                </li>
+                            </ul>
+                            <br />
+                            <p class="page_text sideheading" title="Kindly list the areas of your technical expertise.">
+                                IT Technology Proficiency:
+                            </p>
+                            <br />
+                            <ul class="personalDetails tablealign">
+                                <li>
+                                    <label style="padding-top: 5px; padding-left: 2px;">
+                                        Primary (If you have reasonable command over it and have worked on projects using
+                                        this technology)</label>
+                                </li>
+                                <li>
+                                    <label class="proficiency">
+                                        Programming Languages
+                                    </label>
+                                    <label class="proficiencyN">
+                                        <textarea id="Pg_1_Textarea_Pgmlang1" title="Kindly list the areas of your technical expertise."
+                                            onkeypress="RestrictCharCount(this.id,500)" allowchar="500" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.ITProficiencyDetails.programmingLanguage1">
+                                        </textarea>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="proficiency">
+                                        Operating System
+                                    </label>
+                                    <label class="proficiencyN">
+                                        <textarea id="Pg_1_Textarea_OperatingSystm1" title="Kindly list the areas of your technical expertise."
+                                            onkeypress="RestrictCharCount(this.id,500)" allowchar="500" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.ITProficiencyDetails.programmingOperatingSystem1">
+                                        </textarea>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="proficiency">
+                                        Databases
+                                    </label>
+                                    <label class="proficiencyN">
+                                        <textarea id="Pg_1_Textarea_DateBases1" title="Kindly list the areas of your technical expertise."
+                                            onkeypress="RestrictCharCount(this.id,500)" allowchar="500" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.ITProficiencyDetails.programmingDatabase1">
+                                        </textarea>
+                                    </label>
+                                </li>
+                                <li style="border: 1px solid #d4e7ef;">
+                                    <label class="proficiency">
+                                        Others
+                                    </label>
+                                    <label class="proficiencyN">
+                                        <textarea id="Pg_1_Textarea_Others1" title="Kindly list the areas of your technical expertise."
+                                            onkeypress="RestrictCharCount(this.id,500)" allowchar="500" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.ITProficiencyDetails.others1">
+                                        </textarea>
+                                    </label>
+                                </li>
+                            </ul>
+                            <br />
+                            <ul class="personalDetails tablealign">
+                                <li>
+                                    <label style="padding-top: 5px; padding-left: 2px;">
+                                        Secondary (If you have learnt it but have not worked on it)
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="proficiency">
+                                        Programming Languages
+                                    </label>
+                                    <label class="proficiencyN">
+                                        <textarea id="Pg_1_Textarea_Prglang2" title="Kindly list the areas of your technical expertise."
+                                            onkeypress="RestrictCharCount(this.id,500)" allowchar="500" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.ITProficiencyDetails.programmingLanguage2">
+                                        </textarea>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="proficiency">
+                                        Operating System
+                                    </label>
+                                    <label class="proficiencyN">
+                                        <textarea id="Pg_1_Textarea_OperatingSystem2" title="Kindly list the areas of your technical expertise."
+                                            onkeypress="RestrictCharCount(this.id,500)" allowchar="500" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.ITProficiencyDetails.programmingOperatingSystem2">
+                                        </textarea>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="proficiency">
+                                        Databases
+                                    </label>
+                                    <label class="proficiencyN">
+                                        <textarea id="Pg_1_Textarea_DataBase2" title="Kindly list the areas of your technical expertise."
+                                            onkeypress="RestrictCharCount(this.id,500)" allowchar="500" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.ITProficiencyDetails.programmingDatabase2">
+                                        </textarea>
+                                    </label>
+                                </li>
+                                <li style="border: 1px solid #d4e7ef;">
+                                    <label class="proficiency">
+                                        Others
+                                    </label>
+                                    <label class="proficiencyN">
+                                        <textarea id="Pg_1_Textarea_Others2" title="Kindly list the areas of your technical expertise."
+                                            onkeypress="RestrictCharCount(this.id,500)" allowchar="500" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.ITProficiencyDetails.others2">
+                                        </textarea>
+                                    </label>
+                                </li>
+                            </ul>
+                            <br />
+                            <p class="page_text blueText sideheading" title="Please provide information on the various papers you have presented. Do include conference details and a brief description of the paper.">
+                                Paper Presentation :
+                            </p>
+                            <br />
+                            <ul class="personalDetails tablealign">
+                                <li>
+                                    <label class="Presentation" title="Please provide information on the various papers you have presented. Do include conference details and a brief description of the paper."
+                                        style="text-align: center;">
+                                        Title of the Paper
+                                    </label>
+                                    <label class="Presentation" style="text-align: center;">
+                                        Conference Details
+                                    </label>
+                                    <label class="PresentationD" style="text-align: center;">
+                                        Description
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="Presentation">
+                                        <input id="Pg_1_Text_Title1" class="tbForm" maxlength="500" title="Please provide information on the various papers you have presented. Do include conference details and a brief description of the paper."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.PaperPresentationDetails.Title1" /></label>
+                                    <label class="Presentation">
+                                        <textarea id="Pg_1_Textarea_Detail1" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.PaperPresentationDetails.Detail1">
+                                        </textarea>
+                                    </label>
+                                    <label class="PresentationD">
+                                        <textarea id="Pg_1_Textarea_PPDescription1" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.PaperPresentationDetails.Description1">
+                                      </textarea>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="Presentation">
+                                        <input id="Pg_1_Text_Title2" class="tbForm" maxlength="500" title="Please provide information on the various papers you have presented. Do include conference details and a brief description of the paper."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.PaperPresentationDetails.Title2" /></label>
+                                    <label class="Presentation">
+                                        <textarea id="Pg_1_Textarea_Details2" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.PaperPresentationDetails.Detail2">
+                                        </textarea>
+                                    </label>
+                                    <label class="PresentationD">
+                                        <textarea id="Pg_1_Textarea_PPDescription2" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.PaperPresentationDetails.Description2">
+                                      </textarea>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="Presentation">
+                                        <input id="Pg_1_Text_Title3" class="tbForm" maxlength="500" title="Please provide information on the various papers you have presented. Do include conference details and a brief description of the paper."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.PaperPresentationDetails.Title3" /></label>
+                                    <label class="Presentation">
+                                        <textarea id="Pg_1_Textarea_Details3" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.PaperPresentationDetails.Detail3">
+                                        </textarea>
+                                    </label>
+                                    <label class="PresentationD">
+                                        <textarea id="Pg_1_Textarea_PPDescription3" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.PaperPresentationDetails.Description3">
+                                      </textarea>
+                                    </label>
+                                </li>
+                                <li style="border-bottom: 1px solid #d4e7ef;">
+                                    <label class="Presentation">
+                                        <input id="Pg_1_Text_Title4" class="tbForm" maxlength="500" title="Please provide information on the various papers you have presented. Do include conference details and a brief description of the paper."
+                                            jqxb-datasource="FormDetails" style="float: none;" jqxb-datamember="QuestionnaireData.PaperPresentationDetails.Title4" /></label>
+                                    <label class="Presentation">
+                                        <textarea id="Pg_1_Textarea_Details4" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.PaperPresentationDetails.Detail4">
+                                        </textarea>
+                                    </label>
+                                    <label class="PresentationD">
+                                        <textarea id="Pg_1_Textarea_PPDescription4" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.PaperPresentationDetails.Description4">
+                                      </textarea>
+                                    </label>
+                                </li>
+                            </ul>
+                            <br />
+                            <p class="page_text blueText sideheading" title="Please select the various foreign languages you are proficient in. Indicate your proficiency level by adding information on reading, writing and conversation capabilities in each language.">
+                                Foreign Language:
+                            </p>
+                            <br />
+                            <ul class="personalDetails tablealign">
+                                <li class="language">
+                                    <label>
+                                        Language
+                                    </label>
+                                    <label>
+                                        Read
+                                    </label>
+                                    <label>
+                                        Write
+                                    </label>
+                                    <label style="border-right: none;">
+                                        Speak
+                                    </label>
+                                </li>
+                                <li class="language">
+                                    <label>
+                                        <select id="Pg_1_DropDownList_Language1" title="Please select the various foreign languages you are proficient in. Indicate your proficiency level by adding information on reading, writing and conversation capabilities in each language."
+                                            class="tbForm ddForm" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.LanguageDetails.Language1"
+                                            jqxb-listsource="language" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </label>
+                                    <label>
+                                        <select id="Pg_1_DropDownList_Read1" class="tbForm ddForm" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.LanguageDetails.Read1">
+                                            <option>-- Select-- </option>
+                                            <option>Yes </option>
+                                            <option>No </option>
+                                        </select>
+                                    </label>
+                                    <label>
+                                        <select id="Pg_1_DropDownList_Write1" class="tbForm ddForm" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.LanguageDetails.Write1">
+                                            <option>-- Select-- </option>
+                                            <option>Yes </option>
+                                            <option>No </option>
+                                        </select>
+                                    </label>
+                                    <label style="border-right: none;">
+                                        <select id="Pg_1_DropDownList_Speak1" class="tbForm ddForm" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.LanguageDetails.Speak1">
+                                            <option>-- Select-- </option>
+                                            <option>Yes </option>
+                                            <option>No </option>
+                                        </select>
+                                    </label>
+                                </li>
+                                <li class="language">
+                                    <label>
+                                        <select id="Pg_1_DropDownList_Language2" title="Please select the various foreign languages you are proficient in. Indicate your proficiency level by adding information on reading, writing and conversation capabilities in each language."
+                                            class="tbForm ddForm " jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.LanguageDetails.Language2"
+                                            jqxb-listsource="language" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </label>
+                                    <label>
+                                        <select id="Pg_1_DropDownList_Read2" class="tbForm ddForm " jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.LanguageDetails.Read2">
+                                            <option>-- Select-- </option>
+                                            <option>Yes </option>
+                                            <option>No </option>
+                                        </select>
+                                    </label>
+                                    <label>
+                                        <select id="Pg_1_DropDownList_Write2" class="tbForm ddForm " jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.LanguageDetails.Write2">
+                                            <option>-- Select-- </option>
+                                            <option>Yes </option>
+                                            <option>No </option>
+                                        </select>
+                                    </label>
+                                    <label style="border-right: none;">
+                                        <select id="Pg_1_DropDownList_Speak2" class="tbForm ddForm " jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.LanguageDetails.Speak2">
+                                            <option>-- Select-- </option>
+                                            <option>Yes </option>
+                                            <option>No </option>
+                                        </select>
+                                    </label>
+                                </li>
+                                <li class="language">
+                                    <label>
+                                        <select id="Pg_1_DropDownList_Language3" title="Please select the various foreign languages you are proficient in. Indicate your proficiency level by adding information on reading, writing and conversation capabilities in each language."
+                                            class="tbForm ddForm " jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.LanguageDetails.Language3"
+                                            jqxb-listsource="language" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </label>
+                                    <label>
+                                        <select id="Pg_1_DropDownList_Read3" class="tbForm ddForm " jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.LanguageDetails.Read3">
+                                            <option>-- Select-- </option>
+                                            <option>Yes </option>
+                                            <option>No </option>
+                                        </select>
+                                    </label>
+                                    <label>
+                                        <select id="Pg_1_DropDownList_Write3" class="tbForm ddForm " jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.LanguageDetails.Write3">
+                                            <option>-- Select-- </option>
+                                            <option>Yes </option>
+                                            <option>No </option>
+                                        </select>
+                                    </label>
+                                    <label style="border-right: none;">
+                                        <select id="Pg_1_DropDownList_Speak3" class="tbForm ddForm " jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.LanguageDetails.Speak3">
+                                            <option>-- Select-- </option>
+                                            <option>Yes </option>
+                                            <option>No </option>
+                                        </select>
+                                    </label>
+                                </li>
+                                <li class="language" style="border-bottom: 1px solid #d4e7ef;">
+                                    <label>
+                                        <select id="Pg_1_DropDownList_Language4" title="Please select the various foreign languages you are proficient in. Indicate your proficiency level by adding information on reading, writing and conversation capabilities in each language."
+                                            class="tbForm ddForm " jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.LanguageDetails.Language4"
+                                            jqxb-listsource="language" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </label>
+                                    <label>
+                                        <select id="Pg_1_DropDownList_Read4" class="tbForm ddForm " jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.LanguageDetails.Read4">
+                                            <option>-- Select-- </option>
+                                            <option>Yes </option>
+                                            <option>No </option>
+                                        </select>
+                                    </label>
+                                    <label>
+                                        <select id="Pg_1_DropDownList_Write4" class="tbForm ddForm " jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.LanguageDetails.Write4">
+                                            <option>-- Select-- </option>
+                                            <option>Yes </option>
+                                            <option>No </option>
+                                        </select>
+                                    </label>
+                                    <label style="border-right: none;">
+                                        <select id="Pg_1_DropDownList_Speak4" class="tbForm ddForm" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.LanguageDetails.Speak4">
+                                            <option>-- Select-- </option>
+                                            <option>Yes </option>
+                                            <option>No </option>
+                                        </select>
+                                    </label>
+                                </li>
+                            </ul>
+                            <br />
+                            <p class="page_text blueText sideheading" title="Please share information on the various extra-curricular activities that you pursue. Kindly include a brief description of each activity. If you have won any awards or recognition in these activities, please mention that in the Details section.">
+                                Extra Curricular:
+                            </p>
+                            <br />
+                            <ul class="personalDetails tablealign">
+                                <li>
+                                    <label class="Presentation" style="text-align: center;">
+                                        Category
+                                    </label>
+                                    <label class="Presentation" style="text-align: center;">
+                                        Description
+                                    </label>
+                                    <label class="PresentationD" style="text-align: center;">
+                                        Details (including any awards/Performance details)
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="Presentation" style="text-align: center;">
+                                        Sports</label>
+                                    <label class="Presentation">
+                                        <input id="Pg_1_Text_Sports" class="tbForm " maxlength="500" title="Please share information on the various extra-curricular activities that you pursue. Kindly include a brief description of each activity. If you have won any awards or recognition in these activities, please mention that in the Details section."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.ExtraCurricularDetails.SportDescription" />
+                                    </label>
+                                    <label class="PresentationD">
+                                        <textarea id="Pg_1_Textarea_Sportsdesc" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.ExtraCurricularDetails.SportDetails">
+                                       </textarea>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="Presentation" style="text-align: center;">
+                                        Art</label>
+                                    <label class="Presentation">
+                                        <input id="Pg_1_Text_Art" class="tbForm " maxlength="500" title="Please share information on the various extra-curricular activities that you pursue. Kindly include a brief description of each activity. If you have won any awards or recognition in these activities, please mention that in the Details section."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.ExtraCurricularDetails.ArtDescription" />
+                                    </label>
+                                    <label class="PresentationD">
+                                        <textarea id="Pg_1_Textarea_Artdesc" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.ExtraCurricularDetails.ArtDetails">
+                                       </textarea>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="Presentation" style="text-align: center;">
+                                        Hobbies</label>
+                                    <label class="Presentation">
+                                        <input id="Pg_1_Text_Hobbies" class="tbForm" maxlength="500" title="Please share information on the various extra-curricular activities that you pursue. Kindly include a brief description of each activity. If you have won any awards or recognition in these activities, please mention that in the Details section."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.ExtraCurricularDetails.HobbyDescription" />
+                                    </label>
+                                    <label class="PresentationD">
+                                        <textarea id="Pg_1_Textarea_Hobbies" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.ExtraCurricularDetails.HobbyDetails">
+                                       </textarea>
+                                    </label>
+                                </li>
+                                <li style="border-bottom: 1px solid #d4e7ef;">
+                                    <label class="Presentation" style="text-align: center;">
+                                        Others</label>
+                                    <label class="Presentation">
+                                        <input id="Pg_1_Text_Others" class="tbForm " maxlength="500" title="Please share information on the various extra-curricular activities that you pursue. Kindly include a brief description of each activity. If you have won any awards or recognition in these activities, please mention that in the Details section."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.ExtraCurricularDetails.OtherDescription" />
+                                    </label>
+                                    <label class="PresentationD">
+                                        <textarea id="Pg_1_Textarea_Othersdesc" jqxb-datasource="FormDetails" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" jqxb-datamember="QuestionnaireData.ExtraCurricularDetails.OtherDetails">
+                                       </textarea>
+                                    </label>
+                                </li>
+                            </ul>
+                            <br />
+                            <!--Membership in any professional body :-->
+                            <p class="page_text sideheading" title="Let us know if you are a member of any professional body (such as IEEE). Also indicate if you are an active member or a past member in the Period of association tab.">
+                                Membership in any professional body :
+                            </p>
+                            <br />
+                            <ul class="personalDetails tablealign">
+                                <li class="member">
+                                    <label>
+                                        Name of organization
+                                    </label>
+                                    <label style="border-right: none;">
+                                        Period of association
+                                    </label>
+                                </li>
+                                <li class="member">
+                                    <label>
+                                        <input id="Pg_1_Text_NameOfOrganization1" class="tbForm" maxlength="500" title="Let us know if you are a member of any professional body (such as IEEE). Also indicate if you are an active member or a past member in the Period of association tab."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.ProfessionalDetails.ProfessionalBody1" />
+                                    </label>
+                                    <label style="border-right: none;">
+                                        <select id="Pg_1_DropDownList_PeriodOfAssociation1" class="tbForm ddForm" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.ProfessionalDetails.PeriodofAssociation1">
+                                            <option>--Select--</option>
+                                            <option>Less Than Or Equal To 1 Year </option>
+                                            <option>2Years </option>
+                                            <option>3Years </option>
+                                            <option>4 Years or More Than 4 Years </option>
+                                        </select>
+                                    </label>
+                                </li>
+                                <li class="member" style="border-bottom: 1px solid #d4e7ef;">
+                                    <label>
+                                        <input id="Pg_1_Text_NameOfOrganization2" class="tbForm" maxlength="500" title="Let us know if you are a member of any professional body (such as IEEE). Also indicate if you are an active member or a past member in the Period of association tab."
+                                            jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.ProfessionalDetails.ProfessionalBody2" />
+                                    </label>
+                                    <label style="border-right: none;">
+                                        <select id="Pg_1_DropDownList_PeriodOfAssociation2" class="tbForm ddForm " jqxb-datasource="FormDetails"
+                                            jqxb-datamember="QuestionnaireData.ProfessionalDetails.PeriodofAssociation2">
+                                            <option>--Select--</option>
+                                            <option>Less Than Or Equal To 1 Year </option>
+                                            <option>2Years </option>
+                                            <option>3Years </option>
+                                            <option>4 Years or More Than 4 Years </option>
+                                        </select>
+                                    </label>
+                                </li>
+                            </ul>
+                            <br />
+                            <!--Other relevant information -->
+                            <p class="page_text blueText sideheading">
+                                Any other relevant information that you would like to share :
+                            </p>
+                            <br />
+                            <ul class="personalDetails otherinfo tablealign">
+                                <li style="border: none;">
+                                   
+                                        <textarea id="Pg_1_Textarea_Otherrelativeinfo" onkeypress="RestrictCharCount(this.id,500)"
+                                            allowchar="500" jqxb-datasource="FormDetails" jqxb-datamember="QuestionnaireData.OtherInfoDetails.OtherRelevantInfo">
+                                       </textarea>
+                                   
+                                </li>
+                            </ul>
+                            <br />
+                            <div style="width: 94%; margin: 10px 0 0 10px; padding: 9px 0 4px 0px;">
+                                <p class="pageText" style="width: 45%; float: left;">
+                                    <label style="float: left; text-align: center;">
+                                        Name:</label>
+                                    <label style="float: left; text-align: center;">
+                                        <input type="text" id="Pg_1_Text_Name_Footer" class="inputText_Readonly" style="cursor: default;"
+                                            unselectable="on" readonly="readonly" /></label>
+                                </p>
+                                <p class="pageText" style="width: 45%; float: right; text-align: right;">
+                                    Date:
+                                    <label style="float: right; text-align: center;">
+                                        <input type="text" id="Pg_1_Text_Date_Footer" class="inputText_Readonly" style="cursor: default;"
+                                            unselectable="on" readonly="readonly" /></label>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Signature" id="Sign_PageId_1">
+                    </div>
+                </div>
+            </div>
+            <div id='footerContent'>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

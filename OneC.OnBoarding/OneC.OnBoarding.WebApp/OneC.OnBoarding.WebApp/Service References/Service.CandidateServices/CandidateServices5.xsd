@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/" elementFormDefault="qualified" targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SessionDetails">
+    <xs:sequence>
+      <xs:element name="SessionId" type="xs:long" />
+      <xs:element name="LoginId" nillable="true" type="xs:string" />
+      <xs:element name="SessionStartTime" type="xs:dateTime" />
+      <xs:element name="BrowserDetails" nillable="true" type="xs:string" />
+      <xs:element name="SessionCount" type="xs:short" />
+      <xs:element name="Remarks" nillable="true" type="xs:string" />
+      <xs:element name="SessionFlag" type="xs:short" />
+      <xs:element name="UniqueSessionId" nillable="true" type="xs:string" />
+      <xs:element name="IsSessionActive" type="xs:boolean" />
+      <xs:element name="LoggedInUser" nillable="true" type="xs:string" />
+      <xs:element name="IsCustomMessageLogEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SessionDetails" nillable="true" type="tns:SessionDetails" />
+</xs:schema>

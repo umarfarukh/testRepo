@@ -1,0 +1,1604 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>W4 Form</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/US/W4.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/US/W4.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <style type="text/css">
+        .inputText_Readonly
+        {
+            background-color: InactiveCaptionText;
+            font-size: 15px;
+            padding: 3px 5px 2px;
+            border: 1px solid #ccc !important;
+            background: #f0f0f0;
+            color: #888 !important;
+            cursor: default;
+        }
+        table.table_grid
+        {
+            border: 1px solid #000; /* margin-top:10px;*/
+            height: 380px;
+            margin: 10px 0 0 35px;
+            font-size: 1.2em;
+        }
+        .pagesContainer
+        {
+            font-family: Arial,Verdana,Helvetica, sans-serif;
+            font-size: 0.6em;
+            line-height: 16px;
+            color: #000;
+        }
+        
+        .pagesContainer div, .pagesContainer p, .pagesContainer .flt_left, .pagesContainer .flt_right, .pagesContainer table, .pagesContainer tr, .pagesContainer td, .pagesContainer span, .pagesContainer input, .pagesContainer select, .pagesContainer textarea, .pagesContainer h1, .pagesContainer h2, .pagesContainer h3, .pagesContainer h4, .pagesContainer h5, .pagesContainer h6, .pagesContainer ul, .pagesContainer li, .pagesContainer ol
+        {
+            font-family: Arial,Verdana,Helvetica, sans-serif;
+            color: #000;
+        }
+        .pagesContainer table, .pagesContainer tr, .pagesContainer td, .pagesContainer p
+        {
+            font-size: 13px;
+        }
+        table.table_grid td
+        {
+            border: 1px solid #000;
+            padding: 0;
+            vertical-align: 0;
+        }
+        .pageOne span
+        {
+            font-weight: bold;
+            text-decoration: none;
+            width: auto;
+            float: left;
+            height: 10px;
+        }
+        .flt_right
+        {
+            float: right;
+        }
+        .flt_right .flt_left input
+        {
+            margin-left: 5px;
+            margin-right: 30px;
+        }
+        .empul
+        {
+            width: 850px;
+        }
+        .Signature
+        {
+            font-size: 10px;
+        }
+        table.table_grid td span
+        {
+            padding-left: 5px;
+        }
+    </style>
+  
+</head>
+<body oncontextmenu="return false;">
+    <div id='baseContent'>
+        <div id='pageMain'>
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class="pagesContainer">
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div style="border-bottom: 3px solid #000; height: 700px;">
+                                <div class="pageText pageOne" style="float: left; width: 29%; padding: 0px">
+                                    <br />
+                                    <h2 style="border-bottom: 3px solid #000; font-size: 24px; color: #000; font-weight: bold;
+                                        margin-bottom: 10px;">
+                                        Form W-4 (2014)</h2>
+                                    <p>
+                                        <span style="font-weight: bold; text-decoration: none;">Purpose.</span> Complete Form W-4 so that your employer can withhold the correct federal income tax from your pay. Consider completing a new Form W-4 each year and when your personal or financial situation changes.</p>
+                                    <br />
+                                    <p>
+                                        <span style="font-weight: bold; text-decoration: none;">Exemption from withholding.</span>If you are exempt, complete only lines 1, 2, 3, 4, and 7 and sign the form to validate it. Your exemption for 2014 expires February 17, 2015. See Pub. 505, Tax Withholding and Estimated Tax. </p>
+                                    <br />
+                                    <p>
+                                        <span style="font-weight: bold; text-decoration: none;">Note.</span>
+                                         If another person can claim you as a dependent on his or her tax return, you cannot claim exemption from withholding if your income exceeds $1,000 and includes more than $350 of unearned income (for example, interest and dividends).
+                                         </p>
+                                 
+                                    <br />
+                                    <p>
+                                        <span style="font-weight: bold; text-decoration: none;">Exceptions.</span> An employee may be able to claim exemption from withholding even if the employee is a dependent, if the employee:</p>
+                              
+                                    <p>• Is age 65 or older,</p>
+                                    <p>• Is blind, or</p>
+                                     <br />
+                                     <p>• Will claim adjustments to income; tax credits; or itemized deductions, on his or her tax return.</p>
+                                     <p>The exceptions do not apply to supplemental wages greater than $1,000,000.</p>
+                                     <br />
+                                </div>
+                                <div class="pageText pageOne" style="float: left; width: 29%; margin-left: 1%;">
+                                     <p>
+                                      <span style="font-weight: bold; text-decoration: none;">Basic instructions.</span>
+                                        If you are not exempt, complete the <font style="font-weight: bold">Personal Allowances
+                                            Worksheet</font> below. 
+                                        The worksheets on page 2 further adjust your withholding
+                                        allowances based on itemized deductions, certain credits, adjustments to income,
+                                        or two-earners/multiple jobs situations.</p>
+                                
+                                    <p>
+                                        <strong style="font-weight: bold">Complete all worksheets that apply.</strong> However, you may claim fewer (or zero) allowances.
+                                        For regular wages, withholding must be based on allowances you claimed and may not
+                                        be a flat amount or percentage of wages.</p>
+                                    <br />
+                                    <p>
+                                        <span style="font-weight: bold; text-decoration: none;">Head of household.</span>
+                                        Generally, you can claim head of household filing status on your tax return only
+                                        if you are unmarried and pay more than 50% of the costs of keeping up a home for
+                                        yourself and your dependent(s) or other qualifying individuals. See Pub. 501, Exemptions,
+                                        Standard Deduction, and Filing Information, for information.</p>
+                                    <br />
+                                    <p>
+                                        <span style="font-weight: bold; text-decoration: none;">Tax credits.</span> You
+                                        can take projected tax credits into account in figuring your allowable number of
+                                        withholding allowances. Credits for child or dependent care expenses and the child
+                                        tax credit may be claimed using the <strong style="font-weight: bold;">Personal Allowances
+                                            Worksheet</strong> below. See Pub. 505, for information on converting your other
+                                        credits into withholding allowances.</p>
+                                    <br />
+                                    <p>
+                                        <span style="font-weight: bold; text-decoration: none;">Nonwage income.</span> If
+                                        you have a large amount of nonwage income, such as interest or dividends, consider
+                                        making 
+                                        </p></div>
+                                        
+                                <div class="pageText pageOne" style="float: left; width: 29%; margin-left: 1%;">
+                                <p>
+                                        estimated tax payments using Form 1040-ES, 
+                                        Estimated Tax for Individuals.Otherwise,
+                                        you may owe additional tax. If you have pension or annuity
+                                        income, see Pub. 505 to find out if you should adjust your withholding on Form W-4
+                                        or W-4P.</p>
+                                    <br />
+                                    <p>
+                                        <span style="font-weight: bold; text-decoration: none;">Two earners or multiple jobs.</span>
+                                        If you have a working spouse or more than one job, figure the total number of allowances
+                                        you are entitled to claim on all jobs using worksheets from only one Form W-4. Your
+                                        withholding usually will be most accurate when all allowances are claimed on the
+                                        Form W-4 for the highest paying job and zero allowances are claimed on the others.
+                                        See Pub. 505 for details.</p>
+                                    <br />
+                                    <p>
+                                        <span style="font-weight: bold; text-decoration: none;">Nonresident alien.</span>
+                                        If you are a nonresident alien, see Notice 1392, Supplemental Form W-4 Instructions
+                                        for Nonresident Aliens, before completing this form.</p>
+                                    <br />
+                                    <p>
+                                        <span style="font-weight: bold; text-decoration: none;">Check your withholding.</span>
+                                        After your Form W-4 takes effect, use Pub. 505 to see how the amount you are having
+                                        withheld compares to your projected total tax for 2014. See Pub. 505, especially
+                                        if your earnings exceed $130,000 (Single) or $180,000 (Married).</p>
+                                    <br />
+                                    <p>
+                                        <span style="font-weight: bold; text-decoration: none;">Future developments.</span>
+                                        Information about any future developments affecting Form W-4 (such as legislation
+                                        enacted after we release it) will be posted at www.irs.gov/w4.</p>
+                                    <br />
+                                    <div class="clear" style="height: 100%">
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class='flt_left'>
+                                <div class='flt_left' style="width: 100%;">
+                                    <h2 style="font-size: 1.5em; font-weight: bolder; color: #000; text-align: center;
+                                        border-bottom: 1px solid #000; margin-bottom:20px;">
+                                      Personal Allowances Worksheet <span style="font-weight: normal;">(Keep for your records.)<br /></span></h2>
+                               </div>
+                               
+                                <div class='flt_left' style="width: 100%;">
+                                    <div class="flt_left" style="width: 100%; height: 40px;">
+                                        <div class="flt_left" style="width: 3%; padding-right: 5px;">
+                                            <span style="font-weight: bold;">A</span>
+                                        </div>
+                                        <div class="flt_left " style="width: 80%;">
+                                            Enter “1” for <span style="font-weight: bold; text-decoration: none;">yourself</span>
+                                            if no one else can claim you as a dependent
+                                        </div>
+                                        <div class="flt_right">
+                                            <div class="flt_left" style="width: 7%;">
+                                                <span style="font-weight: bold; text-decoration: none;">A</span>
+                                            </div>
+                                            <div class="flt_left" style="width: 10%;">
+                                                <input id="Pg_1_text_A" maxlength="1" style="width: 60px; border: 1px solid #000;
+                                                    text-align: center;" class="allowOnlyOne calc" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="W4Form.PAWA" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="flt_left" style="width: 100%; height: 70px;">
+                                        <div class="flt_left" style="width: 3%; padding-right: 5px;">
+                                            <span style="font-weight: bold; text-decoration: none;">B</span>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            <div class="flt_left" style="width: 10%;">
+                                                Enter “1” if:</div>
+                                            <div style="width: 90%;" class="flt_left">
+                                                <div style="padding-left: 20px; float: left;">
+                                                    <img src="../../../../Images/bracetleft.gif" border="0" alt="not found" style="float: left;" />
+                                                    <ul style="list-style: disc; padding-left: 30px; float: left;">
+                                                        <li>You are single and have only one job; or </li>
+                                                        <li>You are married, have only one job, and your spouse does not work; or&nbsp;
+                                                        </li>
+                                                        <li>Your wages from a second job or your spouse’s wages (or the total of both) are $1,500
+                                                            or less. </li>
+                                                    </ul>
+                                                    <img src="../../../../Images/bracketsright.gif" border="0" alt="not found" style="bottom: 1px;
+                                                        left: 0px; padding-bottom: 10px; float: left;" />
+                                                    <div style="padding-right: 20px; float: right;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flt_right">
+                                            <div class="flt_left" style="width: 7%;">
+                                                <span style="font-weight: bold; text-decoration: none;">B</span></div>
+                                            <div class="flt_left" style="width: 10%;">
+                                                <input id="Pg_1_text_B" maxlength="1" class="allowOnlyOne calc" style="width: 60px;
+                                                    border: 1px solid #000; text-align: center;" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.PAWB" /></div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="flt_left" style="width: 100%; height: 40px;">
+                                        <div class="flt_left" style="width: 3%; padding-right: 5px;">
+                                            <span style="font-weight: bold;">C</span>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            Enter “1” for your <span style="font-weight: bold; text-decoration: none;">spouse</span>
+                                            . But, you may choose to enter “-0-” if you are married and have either a working
+                                            spouse or more than one job. (Entering “-0-” may help you avoid having too little
+                                            tax withheld.)
+                                        </div>
+                                        <div class="flt_right">
+                                            <div class="flt_left" style="width: 7%;">
+                                                <span style="font-weight: bold; text-decoration: none;">C</span>
+                                            </div>
+                                            <div class="flt_left" style="width: 10%;">
+                                                <input id="Pg_1_text_C" maxlength="1" class="allowZeroAndOne calc" style="width: 60px;
+                                                    border: 1px solid #000; text-align: center;" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.PAWC" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="flt_left" style="width: 100%; height: 40px;">
+                                        <div class="flt_left" style="width: 3%; padding-right: 5px;">
+                                            <span style="font-weight: bold;">D</span>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            Enter number of<span style="font-weight: bold; text-decoration: none;"> dependents</span>
+                                            (other than your spouse or yourself) you will claim on your tax return
+                                        </div>
+                                        <div class="flt_right">
+                                            <div class="flt_left" style="width: 7%;">
+                                                <span style="font-weight: bold; text-decoration: none;">D</span>
+                                            </div>
+                                            <div class="flt_left" style="width: 10%;">
+                                                <input id="Pg_1_text_D" maxlength="1" class="allowOnlyNumbers calc" style="width: 60px;
+                                                    border: 1px solid #000; text-align: center;" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.PAWD" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="flt_left" style="width: 100%; height: 40px;">
+                                        <div class="flt_left" style="width: 3%; padding-right: 5px;">
+                                            <span style="font-weight: bold;">E</span>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            Enter “1” if you will file as<strong style="font-weight: bold;"> head of household</strong>
+                                            on your tax return (see conditions under Head of household above)
+                                        </div>
+                                        <div class="flt_right">
+                                            <div class="flt_left" style="width: 7%;">
+                                                <span style="font-weight: bold; text-decoration: none;">E</span>
+                                            </div>
+                                            <div class="flt_left" style="width: 10%;">
+                                                <input id="Pg_1_text_E" maxlength="1" class="allowOnlyOne calc" style="width: 60px;
+                                                    border: 1px solid #000; text-align: center;" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.PAWE" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="flt_left" style="width: 100%; height: 40px;">
+                                        <div class="flt_left" style="width: 3%; padding-right: 5px;">
+                                            <span style="font-weight: bold;">F</span>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            Enter “1” if you have at least $2,000 of <strong style="font-weight: bold;">child or
+                                                dependent care expenses</strong> for which you plan to claim a credit<br />
+                                            (<strong style="font-weight: bold;">Note</strong>. Do <strong style="font-weight: bold;">
+                                                not</strong> include child support payments. See Pub. 503, Child and Dependent
+                                            Care Expenses, for details.)
+                                        </div>
+                                        <div class="flt_right">
+                                            <div class="flt_left" style="width: 7%;">
+                                                <span style="font-weight: bold; text-decoration: none;">F</span>
+                                            </div>
+                                            <div class="flt_left" style="width: 10%;">
+                                                <input id="Pg_1_text_F" maxlength="1" class="allowOnlyOne calc" style="width: 60px;
+                                                    border: 1px solid #000; text-align: center;" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.PAWF" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="flt_left" style="width: 100%; height: 80px;">
+                                        <div class="flt_left" style="width: 3%; padding-right: 5px;">
+                                            <span style="font-weight: bold;">G</span>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            <strong style="font-weight: bold;">Child Tax Credit </strong>(including additional
+                                            child tax credit). See Pub. 972, Child Tax Credit, for more information.<br />
+                                            <ul style="list-style: disc; padding-left: 20px;">
+                                                <li>If your total income will be less than $65,000 ($95,000 if married), enter “2” for
+                                                    each eligible child; then less “1” if you have three to six eligible children or
+                                                    less “2” if you have seven or more eligible children.</li>
+                                                <li>If your total income will be between $65,000 and $84,000 ($95,000 and $119,000 if
+                                                    married), enter “1” for each eligible child.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="flt_right">
+                                            <div class="flt_left" style="width: 7%; padding-right: 5px;">
+                                                <span style="font-weight: bold; text-decoration: none;">G</span>
+                                            </div>
+                                            <div class="flt_left" style="width: 10%;">
+                                                <input id="Pg_1_text_G" maxlength="1" class="allowOnlyNumbers  calc" style="width: 60px;
+                                                    border: 1px solid #000; text-align: center;" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.PAWG" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="flt_left" style="width: 100%; height: 40px;">
+                                        <div class="flt_left" style="width: 3%; padding-right: 5px;">
+                                            <span style="font-weight: bold;">H</span>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            Add lines A through G and enter total here. (<strong style="font-weight: bold;">Note</strong>.
+                                            This may be different from the number of exemptions you claim on your tax return.)
+                                        </div>
+                                        <div class="flt_right">
+                                            <div class="flt_left" style="width: 7%;">
+                                                <span style="font-weight: bold; text-decoration: none;">H</span>
+                                            </div>
+                                            <div class="flt_left" style="width: 10%;">
+                                                <input id="Pg_1_text_H" readonly="readonly" class="OnlyNumeric total" maxlength="4"
+                                                    value="" style="width: 60px; border: 1px solid #000; text-align: center;" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="W4Form.PAWH" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div style="width: 100%; padding-left: 20px;">
+                                        <div style="width: 5%;">
+                                            &nbsp; &nbsp;
+                                        </div>
+                                        <div class="flt_left" style="width: 12%;">
+                                            For accuracy,<strong style="font-weight: bold;"> complete all worksheets that apply.</strong>
+                                        </div>
+                                        <div style="width: 80%;" class="flt_left">
+                                            <div style="float: left">
+                                                <img src="../../../../Images/bracetleft.gif" alt="not found" style="top: 1px; left: 0px;" />
+                                            </div>
+                                            <div style="float: left; width: 95%">
+                                                <ul style="margin-top: 0px; list-style-type: disc; padding-left: 20px;">
+                                                    <li>If you plan to <strong style="font-weight: bold;">itemize</strong> or <strong
+                                                        style="font-weight: bold;">claim adjustments to income</strong> and want to reduce
+                                                        your withholding, see the <strong style="font-weight: bold;">Deductions and Adjustments Worksheet</strong> on page 2.
+                                                    </li>
+                                                    <li>If you are <strong style="font-weight: bold;"> single and have more than one job </strong> or are <strong style="font-weight: bold;">  married and you and your spouse both work </strong>  and the 
+                                                    combined earnings from all jobs exceed $50,000 ($20,000 if married), 
+                                                    see the <strong style="font-weight: bold;">  Two-Earners/Multiple Jobs Worksheet </strong> on page 2 to avoid having too little tax withheld.</li>
+                                                    <li>If <strong style="font-weight: bold;">neither</strong> of the above situations applies, <b>stop here</b> and enter the
+                                                        number from line H on line 5 of Form W-4 below. </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class='flt_left' style='margin: 0'>
+                                    <p class="flt_left" style="width: 850px; margin-bottom: 5px; border-top: #000 3px solid;
+                                        font-weight: bold;" align="center"><br />
+                                        -------------------------------------------- Separate here and give Form W-4 to your employer.
+                                         Keep the top part for your records.                                        --------------------------</p>
+                                    <div class='flt_left' id="title">
+                                        <div class='flt_left '>
+                                            <div class='flt_left' style="border-bottom: #000 2px solid; width: 860px;">
+                                                <div class="flt_left" style="width: 19%; padding-right: 5px; float: left; border-right: #000 2px solid;
+                                                    height: 115px; margin-top: 0px; padding-top: 10px;">
+                                                    Form <span style="font-size: 32px; font-weight: bold; padding-bottom: 2px;">W-4</span>
+                                                    <br />
+                                                    <span>
+                                                        <br />
+                                                        Department of the Treasury Internal Revenue Service</span>
+                                                </div>
+                                                <div class="flt_left" style="text-align: center; padding-left: 10px; width: 60%;
+                                                    float: left; font-weight: bold;">
+                                                    <h2 style="font-size: 16px; margin: .83em 0; font-weight: bolder; color: #000; text-align: center">
+                                                        Employee’s Withholding Allowance Certificate</h2>
+                                                    <img src="../../../../Images/right_arrow.gif" alt="img not found" /><span style="font-size: 12px;">
+                                                        Whether you are entitled to claim a certain number of allowances or exemption from
+                                                        withholding is subject to review by the IRS. Your employer may be required to send a copy of this
+                                                        form to the IRS. </span>
+                                                </div>
+                                                <div style="border-left: #000 2px solid; padding-left: 5px; width: 18%; float: right;
+                                                    height: 125px;">
+                                                    <p class="flt_left">
+                                                        OMB No. 1545-0074</p><br /><br />
+                                                       <p style="font-size: 32px; font-weight: bold; padding-bottom: 2px;">2014</p>
+                                                    <!--<img style="vertical-align: bottom" src="../../../../Images/2014year.png" alt="Image Not Found" />-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="empul" style="list-style-type: none; height: 205px;">
+                                            <li style="height: 66px;">
+                                                <div style="clear: both; width: 100%">
+                                                    <div class="flt_left" style="width: 1%; padding-top: 5px; padding-right: 5px;">
+                                                        <strong style="font-weight: bold;">1</strong>
+                                                    </div>
+                                                    <div class="flt_left" style="border-bottom: 1px solid #000; border-right: 1px solid #000;
+                                                        width: 35%; padding: 5px 0 5px 0;">
+                                                        Your first name and middle <br />initial.<span style="color: Red">&nbsp;*</span>
+                                                        <br />
+                                                        <input class="inputText_Readonly" type="text" style="border: 1px solid #000; width: 80%;"
+                                                            id="Pg_1_text_FMName" readonly="readonly" unselectable="on" />
+                                                    </div>
+                                                    <div class="flt_left" style="border-bottom: 1px solid #000; border-right: 1px solid #000;
+                                                        width: 30%; padding: 5px 0 5px 0;">
+                                                        &nbsp; LastName.<span style="color: Red">&nbsp;*</span><br />
+                                                        <br />
+                                                        &nbsp;
+                                                        <input class="inputText_Readonly" type="text" style="border: 1px solid #000" id="Pg_1_text_LName"
+                                                            readonly="readonly" unselectable="on" />
+                                                    </div>
+                                                    <div class="border_left flt_left" style="border-bottom: 1px solid #000; width: 30%;
+                                                        padding: 5px 0 5px 0;">
+                                                        <strong style="font-weight: bold;">&nbsp;2</strong>&nbsp;&nbsp; <strong style="font-weight: bold;">
+                                                            Your social security number.</strong><br />
+                                                        <br />
+                                                        &nbsp;
+                                                        <input class="inputText_Readonly" type="text" style="border: 1px solid #000" id="Pg_1_text_SSN"
+                                                            readonly="readonly" unselectable="on" />
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="flt_left" style="border-bottom: #000 1px solid; margin-top: -2px; padding-left: 10px;
+                                                    width: 96%;">
+                                                    <div class="flt_left" style="padding-bottom: 5px; margin-top: 1px; padding-left: 0px;
+                                                        width: 36%; border-right: #000 1px solid; padding-top: 4px;">
+                                                        Home address (number and street or rural route) <span style="color: Red">&nbsp;*</span><br />
+                                                        <br />
+                                                        <div class="flt_left">
+                                                            <textarea class="inputText_Readonly" id="Pg_1_text_address" style="border: 1px solid #000;
+                                                                width: 200px" rows="0" cols="0" readonly="readonly" unselectable="on"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="flt_left" style="width: 1%; padding-top: 7px;">
+                                                            <strong style="font-weight: bold;">3</strong>
+                                                        </div>
+                                                        <div class="flt_left" style="padding: 5px 0 5px 0; margin-left: 2px;">
+                                                            <input id="Pg_1_check_Single" type="checkbox" name="Pg_1_check_Single" style="vertical-align: middle;"
+                                                                jqxb-datasource="FormDetails" jqxb-datamember="W4Form.Single" jqxb-bindedattribute="checked"
+                                                                onclick="Uncheckcontrol1();" />
+                                                            <label for="Pg_1_check_Single">
+                                                                Single</label>
+                                                            <input id="Pg_1_check_Married" type="checkbox" style="vertical-align: middle;" name="Pg_1_check_Single"
+                                                                jqxb-datasource="FormDetails" jqxb-datamember="W4Form.Married" jqxb-bindedattribute="checked"
+                                                                onclick="Uncheckcontrol2();" />
+                                                            <label for="Pg_1_check_Married">
+                                                                Married</label>
+                                                            <input id="Pg_1_check_MarSing" type="checkbox" style="vertical-align: middle;" name="Pg_1_check_Single"
+                                                                jqxb-datasource="FormDetails" jqxb-datamember="W4Form.MarSingle" jqxb-bindedattribute="checked"
+                                                                onclick="Uncheckcontrol3();" />
+                                                            <label for="Pg_1_check_MarSing">
+                                                                Married, but withhold at higher Single rate.</label>
+                                                            <span style="color: Red">&nbsp;*</span>
+                                                            <br />
+                                                            <br />
+                                                            <strong style="font-weight: bold;">Note.</strong> If married, but legally separated,
+                                                            or spouse is a nonresident alien, check the<br />
+                                                            “Single” box.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="flt_left" style="border-bottom: #000 1px solid; width: 97%;">
+                                                    <div>
+                                                        <div class="flt_left" style="padding-bottom: 5px; padding-left: 5px; width: 36%;
+                                                            padding-right: 2px; border-right: #000 1px solid; padding-top: 4px;">
+                                                            City or town, state, and ZIP code <span style="color: Red">&nbsp;*</span><br />
+                                                            <div class="flt_left">
+                                                                <input class="inputText_Readonly" type="text" style="border: 1px solid #000;" id="Pg_1_text_code"
+                                                                    readonly="readonly" unselectable="on" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="flt_left" style="width: 1%; padding-top: 5px;">
+                                                            <strong style="padding-left: 5px; margin-right: 5px;">4&nbsp;</strong>
+                                                        </div>
+                                                        <div class="flt_left" style="padding-bottom: 5px; padding-left: 0px; padding-right: 0px;
+                                                            padding-top: 5px; width: 500px;">
+                                                            <strong style="margin-left: 8px; font-weight: bold;"> If your last name differs from
+                                                                that shown on your social security card,<br />
+                                                                check here. You must call 1-800-772-1213 for a replacement card.</strong>&nbsp;&nbsp;
+                                                            <img src="../../../../Images/right_arrow.gif" alt="img not found" />
+                                                            <input id="Pg_1_check_SSC" type="checkbox" name="Pg_1_check_SSC" jqxb-datasource="FormDetails"
+                                                                jqxb-datamember="W4Form.CheckLastName" jqxb-bindedattribute="checked" onclick="onclickCheckLastName();" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <br />
+                                        <div class="flt_left" style="border-bottom: 1px solid #000;">
+                                            <div class="flt_left" style="width: 825px; height: 25px;">
+                                                <div class="flt_left" style="width: 2%;">
+                                                    <span style="font-weight: bold;">5</span>
+                                                </div>
+                                                <div class="flt_left" style="width: 80%;">
+                                                    Total number of allowances you are claiming (from line<strong style="font-weight: bold;">
+                                                        H</strong> above <strong style="font-weight: bold;">or</strong> from the applicable worksheet on page 2)
+                                                </div>
+                                                <div class="flt_left" style="width: 2%; height: 25px; border-right: #000 2px solid;
+                                                    border-left: #000 1px solid;">
+                                                    <span style="color: Red;"></span> <span style="font-weight: bold; text-decoration: none;">
+                                                        5</span>
+                                                </div>
+                                                <div class="flt_left" style="width: 10%;">
+                                                    <input id="Pg_1_text_Tot" maxlength="3" class="OnlyNumeric" style="border-bottom: #000 1px solid;
+                                                        border-left: #000 1px solid; width: 50px; border-top: #000 1px solid; border-right: #000 1px solid;
+                                                        float: right; margin-top: 3px;" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.EWAC5" />
+                                                </div>
+                                            </div>
+                                            <div class="flt_left" style="width: 825px; height: 25px;">
+                                                <div class="flt_left" style="width: 2%;">
+                                                    <span style="font-weight: bold;">6</span>
+                                                </div>
+                                                <div class="flt_left" style="width: 50%;">
+                                                    Additional amount, if any, you want withheld from each paycheck
+                                                </div>
+                                                <div class="flt_left" style="width: 2%; margin-left:250px; border-top: 2px solid #000; border-bottom: 1px solid #000;
+                                                    border-left: 1px solid #000; height: 19px;">
+                                                    <span style="font-weight: bold; text-decoration: none;">&nbsp;6</span>
+                                                </div>
+                                                <div class="flt_left" style="width: 15%; border: 1px solid #000; border-right: none;">
+                                                    <span style="font-weight: bold;">$</span>
+                                                    <input id="Pg_1_text_AdditionalAmt" maxlength="10" class="OnlyNumeric" style="border-bottom: #000 1px solid;
+                                                        border-left: #000 1px solid; width: 50px; border-top: #000 1px solid; border-right: #000 1px solid;
+                                                        margin-left: 20px;" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.EWAC6" />
+                                                </div>
+                                            </div>
+                                            <div class="flt_left" style="width: 825px; margin-top: -5px;">
+                                                <div class="flt_left" style="width: 2%;">
+                                                    <span style="font-weight: bold;">7</span>
+                                                </div>
+                                                <div class="flt_left" style="width: 80%; border-right: 1px solid #000;">
+                                                    I claim exemption from withholding for 2014, and I certify that I meet both of the
+                                                    following conditions for exemption.<br />
+                                                    <ul style="list-style: disc; padding-left: 30px;">
+                                                        <li>Last year I had a right to a refund of all federal income tax withheld because I
+                                                            had no tax liability and </li>
+                                                        <li>This year I expect a refund of all federal income tax withheld because I expect
+                                                            to have no tax liability.</li>
+                                                    </ul>
+                                                    If you meet both conditions, write “Exempt” here .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  <img src="../../../../Images/right_arrow.gif" alt="img not found" />
+                                                </div>
+                                                <div class="flt_left" style="width: 17%; height: 43px;">
+                                                    &nbsp; &nbsp;
+                                                </div>
+                                                <!--<div class="flt_left" style="width: 80%; padding-right: 17px; border-right: #000 1px solid; padding-bottom: 4px;">
+                                                    
+                                                </div>-->
+                                                <div class="flt_left" style="border-bottom: #000 1px solid; border-left: #000 1px solid;
+                                                    width: 2%; border-top: #000 1px solid; border-right: #000 1px solid; padding-bottom: 2px;">
+                                                    <span style="font-weight: bold; text-decoration: none;">&nbsp;7</span>
+                                                </div>
+                                                <div class="flt_left" style="width: 12%; float: right;">
+                                                    <input id="Pg_1_text_Exempt" class="W4FormTextbox" onkeypress="RestrictCharCount(this.id,5)" 
+                                                        allowchar="6" maxlength="6" style="width: 50px;
+                                                        border: 1px solid #000;" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.EWAC7" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flt_left" style="border-bottom: 1px solid #000; padding-bottom: 10px;
+                                            height: 85px;">
+                                            <div class="flt_left" style="margin-left: 2px;">
+                                                Under penalties of perjury, I declare that I have examined this certificate and,
+                                                to the best of my knowledge and belief, it is true, correct, and complete.<br />
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <div class="flt_left" style="width: 100%;">
+                                               
+                                                <div style="width: 70%; float: left;">
+                                                <strong style="font-weight: bold;">Employee’s signature </strong><br />(This form is not valid unless you sign it.) <span style="color: Red"></span>
+                                              
+                                                    <img src="../../../../Images/right_arrow.gif" alt="img not found" />
+                                                    <input class="inputText_Readonly" type="text" style="border: 1px solid #000" id="Pg_1_text_Signature"
+                                                        readonly="readonly" disabled="disabled" unselectable="on" />
+                                                </div>
+                                                <div style="width:30%; float: right;">
+                                                    <strong style="font-weight: bold;">Date</strong> <span style="color: Red"></span>
+                                                    <img src="../../../../Images/right_arrow.gif" alt="img not found" />
+                                                    <input class="inputText_Readonly" type="text" style="border: 1px solid #000" id="Pg_1_text_Signdate"
+                                                        readonly="readonly" unselectable="on" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flt_left" style="width: 850px; border-bottom: 1px solid #000;">
+                                            <div class="flt_left" style="width: 35%; height: 100px; border-right: 1px solid #000;">
+                                                <div class="flt_left" style="width: 3%; padding-top: 5px;">
+                                                    <span style="font-weight: bold;">8</span>
+                                                </div>
+                                                <div class="flt_left" style="padding: 5px 0 5px 0; width: 93%">
+                                                    Employer’s name and address(Employer: </br>Complete lines 8 and 10 only if sending to the IRS.)<br />
+                                                    <input type="text" style="border: 1px solid #000; width: 150px;" id="Pg_1_text_EstTax"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="W4Form.EWAC8" maxlength="100" />
+                                                </div>
+                                            </div>
+                                            <div class="flt_left" style="width: 32%; height: 100px; border-right: 1px solid #000;">
+                                                <div class="flt_left" style="width: 6%; padding-top: 5px;">
+                                                    <span style="font-weight: bold;">9</span>
+                                                </div>
+                                                <div class="flt_left" style="padding: 5px 0 5px 0;">
+                                                    Office code (optional)<br />
+                                                    <input type="text" style="border: 1px solid #000; width: 150px;" id="Pg_1_text_OfficeCode"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="W4Form.EWAC9" maxlength="100" />
+                                                </div>
+                                            </div>
+                                            <div class="flt_left" style="width: 32%; height: 100px;">
+                                                <div class="flt_left" style="width: 6%; padding-top: 5px;">
+                                                    <span style="font-weight: bold;">10</span>
+                                                </div>
+                                                <div class="flt_left" style="padding: 5px 0 5px 0;">
+                                                    Employer identification number (EIN)<br />
+                                                    <input type="text" class="ENI" style="border: 1px solid #000; width: 150px;" id="Pg_1_text_EIN"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="W4Form.EWACEIDN" maxlength="100" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flt_left" style="width: 100%; padding-top: 3px;">
+                                            <div class="flt_left" style="width: 55%">
+                                                <span style="font-weight: bold;">For Privacy Act and Paperwork Reduction Act Notice,
+                                                    see page 2.&nbsp;</span>
+                                            </div>
+                                            <div class="flt_left" style="width: 25%">
+                                                Cat. No. 10220Q</div>
+                                            <div class="flt_left" style="width: 20%; float: right;">
+                                                Form <font size="4px"><span style="font-weight: bold;">W-4 </span></font>(2014)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Signature" id="Sign_PageId_1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 1st page-->
+                <!--Start of 2nd Page-->
+                <div class="pageData">
+               
+                    <div class="pageContent">
+                     <div class="flt_left" style="width: 20%; margin-left:22px; float: left;">
+                        Form <font size="4px"><span style="font-weight: bold;">W-4 </span></font>(2014)
+                                            </div>
+                        <div class="pageDetails">
+                        
+                            <div class="BorderBox" style="height: 550px; padding-left: 2px;">
+                              
+                            <div class='flt_left' style="width: 100%;">
+                                <h2 style="font-size: 1.5em; margin: .83em 0; font-weight: bolder; color: #000; border-bottom: 1px solid #000;
+                                    text-align: center;">
+                                    Deductions and Adjustments Worksheet</h2>
+                                <br />
+                                </div>
+                                <p class="flt_left" style="height: 20px;">
+                                    <span style="font-weight: bold;">Note.</span> Use this worksheet only if you plan
+                                    to itemize deductions or claim certain credits or adjustments to income.</p>
+                                <div style="width: 100%;">
+                                    <div class="flt_left" style="width: 100%; height: 40px;">
+                                        <div class="flt_left" style="width: 3%;">
+                                            <strong style="font-weight: bold;">1</strong>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            Enter an estimate of your 2014 itemized deductions. These include qualifying home mortgage interest, charitable contributions, state and local taxes, medical expenses in excess of 10% (7.5% if either you or your spouse was born before January 2, 1950) of your income, and miscellaneous deductions. For 2014, you may have to reduce your itemized deductions if your income is over $305,050 and you are married filing jointly or are a qualifying widow(er); $279,650 if you are head of household; $254,200 if you are single and not head of household or a qualifying widow(er); or $152,525 if you are married filing separately. See Pub. 505 for details.
+                                        </div>
+                                        <div class="flt_left" style="width: 7%;">
+                                            <strong style="font-weight: bold;">1</strong>&nbsp;&nbsp;
+                                        </div>
+                                        <div class="flt_left" style="width: 10%;">
+                                            <strong style="font-weight: bold;">$</strong>&nbsp;
+                                            <input id="Pg_2_text_Deduction1" class="OnlyNumeric" style="width: 60px; border: 1px solid #000;
+                                                text-align: center;" maxlength="10" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.DAW1" />
+                                        </div>
+                                    </div>
+                                    <div class="flt_left" style="width: 100%; margin-top:60px; height: 55px;">
+                                        <div class="flt_left" style="width: 3%;">
+                                            <strong style="font-weight: bold;">2</strong>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            <div class="flt_left">
+                                                Enter :</div>
+                                            <div class="flt_left">
+                                                 $12,400 if married filing jointly or qualifying widow(er) 
+                                                <br />
+                                                $9,100 if head of household
+                                                <br />
+                                                $6,200 if single or married filing separately
+                                            </div>
+                                        </div>
+                                        <div class="flt_left" style="width: 7%;">
+                                            <strong style="font-weight: bold;">2</strong>&nbsp;&nbsp;
+                                        </div>
+                                        <div class="flt_left" style="width: 10%;">
+                                            <strong style="font-weight: bold;">$</strong>&nbsp;
+                                            <select id="Pg_2__select_Deduction2" class="OnlyNumeric" style="width: 60px; border: 1px solid #000"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="W4Form.DAW2">
+                                                <option value="12400">12400</option>
+                                                <option value="9100">9100</option>
+                                                <option value="6200">6200</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="flt_left" style="width: 100%; height: 40px;">
+                                        <div class="flt_left" style="width: 3%;">
+                                            <strong style="font-weight: bold;">3</strong>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            <strong style="font-weight: bold;">Subtract</strong> line 2 from line 1. If zero
+                                            or less, enter “-0-”
+                                        </div>
+                                        <div class="flt_left" style="width: 7%;">
+                                            <strong style="font-weight: bold;">3</strong>&nbsp;&nbsp;
+                                        </div>
+                                        <div class="flt_left" style="width: 10%;">
+                                            <strong style="font-weight: bold;">$</strong>&nbsp;
+                                            <input id="Pg_2_text_Deduction3" class="OnlyNumeric" readonly="readonly" style="width: 60px;
+                                                border: 1px solid #000; text-align: center;" maxlength="10" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="W4Form.DAW3" />
+                                        </div>
+                                    </div>
+                                    <div class="flt_left" style="width: 100%; height: 40px;">
+                                        <div class="flt_left" style="width: 3%;">
+                                            <strong style="font-weight: bold;">4</strong>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            Enter an estimate of your 2014 adjustments to income and any additional standard
+                                            deduction. (Pub. 505)
+                                        </div>
+                                        <div class="flt_left" style="width: 7%;">
+                                            <strong style="font-weight: bold;">4</strong>&nbsp;&nbsp;
+                                        </div>
+                                        <div class="flt_left" style="width: 10%;">
+                                            <strong style="font-weight: bold;">$</strong>&nbsp;
+                                            <input id="Pg_2_text_Deduction4" class="OnlyNumeric" style="width: 60px; border: 1px solid #000;
+                                                text-align: center;" maxlength="10" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.DAW4" />
+                                        </div>
+                                    </div>
+                                    <div class="flt_left" style="width: 100%; height: 40px;">
+                                        <div class="flt_left" style="width: 3%;">
+                                            <strong style="font-weight: bold;">5</strong>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            <strong style="font-weight: bold;">Add </strong>lines 3 and 4 and enter the total.
+                                            (Include any amount for credits from the Converting Credits to Withholding Allowances
+                                            for 2014 Form W-4 worksheet in Pub. 505.)
+                                        </div>
+                                        <div class="flt_left" style="width: 7%;">
+                                            <strong style="font-weight: bold;">5</strong>&nbsp;&nbsp;
+                                        </div>
+                                        <div class="flt_left" style="width: 10%;">
+                                            <strong style="font-weight: bold;">$</strong>&nbsp;
+                                            <input id="Pg_2_text_Deduction5" class="OnlyNumeric " readonly="readonly" style="width: 60px;
+                                                border: 1px solid #000; text-align: center;" maxlength="10" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="W4Form.DAW5" />
+                                        </div>
+                                    </div>
+                                    <div class="flt_left" style="width: 100%; height: 40px;">
+                                        <div class="flt_left" style="width: 3%;">
+                                            <strong style="font-weight: bold;">6</strong>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            Enter an estimate of your 2014 nonwage income (such as dividends or interest)
+                                        </div>
+                                        <div class="flt_left" style="width: 7%;">
+                                            <strong style="font-weight: bold;">6</strong>&nbsp;&nbsp;
+                                        </div>
+                                        <div class="flt_left" style="width: 10%;">
+                                            <strong style="font-weight: bold;">$</strong>&nbsp;
+                                            <input id="Pg_2_text_Deduction6" class="OnlyNumeric" style="width: 60px; border: 1px solid #000;
+                                                text-align: center;" maxlength="10" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.DAW6" />
+                                        </div>
+                                    </div>
+                                    <div class="flt_left" style="width: 100%; height: 40px;">
+                                        <div class="flt_left" style="width: 3%;">
+                                            <strong style="font-weight: bold;">7</strong>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            <strong style="font-weight: bold;">Subtract</strong> line 6 from line 5. If zero
+                                            or less, enter “-0-”
+                                        </div>
+                                        <div class="flt_left" style="width: 7%;">
+                                            <strong style="font-weight: bold;">7</strong>&nbsp;&nbsp;
+                                        </div>
+                                        <div class="flt_left" style="width: 10%;">
+                                            <strong style="font-weight: bold;">$</strong>&nbsp;
+                                            <input id="Pg_2_text_Deduction7" class="OnlyNumeric" readonly="readonly" style="width: 60px;
+                                                border: 1px solid #000; text-align: center;" maxlength="10" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="W4Form.DAW7" />
+                                        </div>
+                                    </div>
+                                    <div class="flt_left" style="width: 100%; height: 40px;">
+                                        <div class="flt_left" style="width: 3%;">
+                                            <strong style="font-weight: bold;">8</strong>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            <strong style="font-weight: bold;">Divide</strong> the amount on line 7 by $3,950
+                                            and enter the result here. Drop any fraction
+                                        </div>
+                                        <div class="flt_left" style="width: 7%;">
+                                            <strong style="font-weight: bold;">8</strong>&nbsp;&nbsp;
+                                        </div>
+                                        <div class="flt_left" style="width: 10%;">
+                                            &nbsp;&nbsp;&nbsp;
+                                            <input id="Pg_2_text_Deduction8" class="OnlyNumeric" readonly="readonly" style="width: 60px;
+                                                border: 1px solid #000; text-align: center;" maxlength="10" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="W4Form.DAW8" />
+                                        </div>
+                                    </div>
+                                    <div class="flt_left" style="width: 100%; height: 40px;">
+                                        <div class="flt_left" style="width: 3%;">
+                                            <strong style="font-weight: bold;">9</strong>
+                                        </div>
+                                        <div class="flt_left" style="width: 80%;">
+                                            Enter the number from the <strong style="font-weight: bold;">Personal Allowances Worksheet</strong>,
+                                            line H, page 1
+                                        </div>
+                                        <div class="flt_left" style="width: 7%;">
+                                            <strong style="font-weight: bold;">9</strong>&nbsp;&nbsp;
+                                        </div>
+                                        <div class="flt_left" style="width: 10%;">
+                                            &nbsp;&nbsp;&nbsp;
+                                            <input id="Pg_2_text_Deduction9" class="OnlyNumeric total" style="width: 60px; border: 1px solid #000;
+                                                text-align: center;" maxlength="10" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.DAW9" />
+                                        </div>
+                                    </div>
+                                    <div class="flt_left" style="width: 100%;">
+                                        <div class="flt_left" style="width: 3%;">
+                                            <strong style="font-weight: bold;">10</strong>
+                                        </div>
+                                        <div class="flt_left" style="width: 79%;">
+                                            <strong style="font-weight: bold;">Add</strong> lines 8 and 9 and enter the total
+                                            here. If you plan to use the <strong style="font-weight: bold;">Two-Earners/Multiple
+                                                Jobs Worksheet</strong>, also enter this total on line 1 below. Otherwise, <strong
+                                                    style="font-weight: bold;">stop here</strong> and enter this total on Form
+                                            W-4, line 5, page 1
+                                        </div>
+                                        <div class="flt_left" style="width: 8%;">
+                                            <strong style="font-weight: bold;">10</strong>&nbsp;&nbsp;
+                                        </div>
+                                        <div class="flt_left" style="width: 10%;">
+                                            &nbsp;&nbsp;&nbsp;
+                                            <input id="Pg_2_text_Deduction10" class="OnlyNumeric" readonly="readonly" style="width: 60px;
+                                                border: 1px solid #000; text-align: center;" maxlength="10" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="W4Form.DAW10" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="BorderBox" style="height: auto; padding: 0 0 10px 2px; margin-bottom: 5px;
+                                float: left; width: 875px;">
+                                <div class='flt_left' style="width: 100%;">
+                                <h2 style="font-size: 1.5em; margin: .83em 0; font-weight: bolder; color: #000; text-align: center;
+                                    border-bottom: 1px solid #000;">
+                                    Two-Earners/Multiple Jobs Worksheet <span style="font-weight: normal;">
+                                        (See Two earners or multiple jobs on page 1.)</span></h2>
+                                        </div>
+                                <p class="flt_left" style="height: 20px;">
+                                    <span style="font-weight: bold;">Note.</span>Use this worksheet only if the instructions
+                                    under line H on page 1 direct you here.</p>
+                                <div class="flt_left" style="width: 860px; height: 40px;">
+                                    <div class="flt_left" style="width: 3%;">
+                                        <strong style="font-weight: bold;">1</strong>
+                                    </div>
+                                    <div class="flt_left" style="width: 80%;">
+                                        Enter the number from line H, page 1 (or from line 10 above if you used the<strong
+                                            style="font-weight: bold;"> Deductions and Adjustments Worksheet</strong>)
+                                    </div>
+                                    <div class="flt_left" style="width: 7%; text-align: center;">
+                                        <strong style="font-weight: bold;">1&nbsp;&nbsp;</strong>
+                                    </div>
+                                    <div class="flt_left" style="width: 10%;">
+                                        <input id="Pg_2_text_Multiple1" class="OnlyNumeric" style="width: 60px; border: 1px solid #000;
+                                            text-align: center;" maxlength="10" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.TEJW1" />
+                                    </div>
+                                </div>
+                                <div class="flt_left" style="width: 860px; height: 40px;">
+                                    <div class="flt_left" style="width: 3%;">
+                                        <strong style="font-weight: bold;">2</strong>
+                                    </div>
+                                    <div class="flt_left" style="width: 80%;">
+                                        Find the number in <strong style="font-weight: bold;">Table 1</strong> below that
+                                        applies to the <strong style="font-weight: bold;">LOWEST</strong> paying job and
+                                        enter it here. <strong style="font-weight: bold;">However</strong>, if you are married
+                                        filing jointly and wages from the highest paying job are $65,000 or less, do not
+                                        enter more than “3.”
+                                    </div>
+                                    <div class="flt_left" style="width: 7%; text-align: center;">
+                                        <strong style="font-weight: bold;">2&nbsp;&nbsp;</strong>
+                                    </div>
+                                    <div class="flt_left" style="width: 10%;">
+                                        <input id="Pg_2_text_Multiple2" class="OnlyNumeric" style="width: 60px; border: 1px solid #000;
+                                            text-align: center;" maxlength="10" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.TEJW2" />
+                                    </div>
+                                </div>
+                                <div class="flt_left" style="width: 860px; height: 40px;">
+                                    <div class="flt_left" style="width: 3%;">
+                                        <strong style="font-weight: bold;">3</strong>
+                                    </div>
+                                    <div class="flt_left" style="width: 80%;">
+                                        If line 1 is <strong style="font-weight: bold;">more than or equal</strong> to line
+                                        2, subtract line 2 from line 1. Enter the result here (if zero, enter “-0-”) and
+                                        on Form W-4, line 5, page 1. <strong style="font-weight: bold;">Do not </strong>
+                                        use the rest of this worksheet
+                                    </div>
+                                    <div class="flt_left" style="width: 7%; text-align: center;">
+                                        <strong style="font-weight: bold;">3&nbsp;&nbsp;</strong>
+                                    </div>
+                                    <div class="flt_left" style="width: 10%;">
+                                        <input id="Pg_2_text_Multiple3" class="OnlyNumeric" style="width: 60px; border: 1px solid #000;
+                                            text-align: center;" maxlength="10" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.TEJW3" />
+                                    </div>
+                                </div>
+                                <div class="flt_left" style="height: 50px;">
+                                    <span class="flt_left" style="font-weight: bold;">Note.</span> <span class="flt_left">
+                                        If line 1 is <strong style="font-weight: bold;">less than</strong> line 2, enter
+                                        “-0-” on Form W-4, line 5, page 1. Complete lines 4 through 9 below to figure the
+                                        additional withholding amount necessary to avoid a year-end tax bill.</span>
+                                </div>
+                                <div class="flt_left" style="width: 860px; height: 40px;">
+                                    <div class="flt_left" style="width: 3%;">
+                                        <strong style="font-weight: bold;">4</strong>
+                                    </div>
+                                    <div class="flt_left" style="width: 80%;">
+                                        Enter the number from line 2 of this worksheet
+                                    </div>
+                                    <div class="flt_left" style="width: 7%; text-align: center;">
+                                        <strong style="font-weight: bold;">4&nbsp;&nbsp;</strong>
+                                    </div>
+                                    <div class="flt_left" style="width: 10%;">
+                                        <input id="Pg_2_text_Multiple4" class="OnlyNumeric" readonly="readonly" style="width: 60px;
+                                            border: 1px solid #000; text-align: center;" maxlength="10" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="W4Form.TEJW4" />
+                                    </div>
+                                </div>
+                                <div class="flt_left" style="width: 860px; height: 40px;">
+                                    <div class="flt_left" style="width: 3%;">
+                                        <strong style="font-weight: bold;">5</strong>
+                                    </div>
+                                    <div class="flt_left" style="width: 80%;">
+                                        Enter the number from line 1 of this worksheet
+                                    </div>
+                                    <div class="flt_left" style="width: 7%; text-align: center;">
+                                        <strong style="font-weight: bold;">5&nbsp;&nbsp;</strong>
+                                    </div>
+                                    <div class="flt_left" style="width: 10%;">
+                                        <input id="Pg_2_text_Multiple5" class="OnlyNumeric" readonly="readonly" style="width: 60px;
+                                            border: 1px solid #000; text-align: center;" maxlength="10" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="W4Form.TEJW5" />
+                                    </div>
+                                </div>
+                                <div class="flt_left" style="width: 860px; height: 40px;">
+                                    <div class="flt_left" style="width: 3%;">
+                                        <strong style="font-weight: bold;">6</strong>
+                                    </div>
+                                    <div class="flt_left" style="width: 80%;">
+                                        <strong style="font-weight: bold;">Subtract</strong> line 5 from line 4
+                                    </div>
+                                    <div class="flt_left" style="width: 7%; text-align: center;">
+                                        <strong style="font-weight: bold;">6&nbsp;&nbsp;</strong>
+                                    </div>
+                                    <div class="flt_left" style="width: 10%;">
+                                        <input id="Pg_2_text_Multiple6" class="OnlyNumeric" readonly="readonly" style="width: 60px;
+                                            border: 1px solid #000; text-align: center;" maxlength="10" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="W4Form.TEJW6" />
+                                    </div>
+                                </div>
+                                <div class="flt_left" style="width: 860px; height: 40px;">
+                                    <div class="flt_left" style="width: 3%;">
+                                        <strong style="font-weight: bold;">7</strong>
+                                    </div>
+                                    <div class="flt_left" style="width: 80%;">
+                                        Find the amount in Table 2 below that applies to the <strong style="font-weight: bold;">
+                                            HIGHEST</strong> paying job and enter it here
+                                    </div>
+                                    <div class="flt_left" style="width: 6%; text-align: center; padding-left: 5px">
+                                        <strong style="font-weight: bold;">7</strong>&nbsp;
+                                    </div>
+                                    <div class="flt_left" style="width: 10%;">
+                                        <strong style="font-weight: bold;">$</strong><input id="Pg_2_text_Multiple7" class="OnlyNumeric"
+                                            style="width: 60px; border: 1px solid #000; text-align: center;" maxlength="10"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="W4Form.TEJW7" />
+                                    </div>
+                                </div>
+                                <div class="flt_left" style="width: 860px; height: 40px;">
+                                    <div class="flt_left" style="width: 3%;">
+                                        <strong style="font-weight: bold;">8</strong>
+                                    </div>
+                                    <div class="flt_left" style="width: 80%;">
+                                        <strong style="font-weight: bold;">Multiply</strong> line 7 by line 6 and enter
+                                        the result here. This is the additional annual withholding needed
+                                    </div>
+                                    <div class="flt_left" style="width: 6%; text-align: center; padding-left: 5px">
+                                        <strong style="font-weight: bold;">8</strong>&nbsp;
+                                    </div>
+                                    <div class="flt_left" style="width: 10%;">
+                                        <strong style="font-weight: bold;">$</strong><input id="Pg_2_text_Multiple8" class="OnlyNumeric"
+                                            readonly="readonly" style="width: 60px; border: 1px solid #000; text-align: center;"
+                                            maxlength="10" jqxb-datasource="FormDetails" jqxb-datamember="W4Form.TEJW8" />
+                                    </div>
+                                </div>
+                                <div class="flt_left" style="width: 860px; height: 40px; margin-bottom: 5px;">
+                                    <div class="flt_left" style="width: 3%;">
+                                        <strong style="font-weight: bold;">9</strong>
+                                    </div>
+                                    <div class="flt_left" style="width: 80%;">
+                                        <strong style="font-weight: bold;">Divide</strong> line 8 by the number of pay periods
+                                        remaining in 2014. For example, divide by 25 if you are paid every two weeks and
+                                        you complete this form on a date in January when there are 25 pay periods remaining
+                                        in 2014. Enter the result here and on Form W-4, line 6, page 1. This is the additional
+                                        amount to be withheld from each paycheck
+                                    </div>
+                                    <div class="flt_left" style="width: 6%; text-align: center; padding-left: 5px">
+                                        <strong style="font-weight: bold;">9</strong>&nbsp;
+                                    </div>
+                                    <div class="flt_left" style="width: 10%;">
+                                        <strong style="font-weight: bold;">$</strong><input id="Pg_2_text_Multiple9" class="OnlyNumeric"
+                                            style="width: 60px; border: 1px solid #000; text-align: center;" maxlength="10"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="W4Form.TEJW9" />
+                                    </div>
+                                </div>
+                                <table width="100%" cellspacing="0" class="table_grid" style="border-left: 1px; border-right: 0px;
+                                    float: left; margin-bottom: 10px;">
+                                    <tr>
+                                        <td colspan="4" align="center" class="border_btm">
+                                            <h2 style="margin: 15px 0; font-weight: bold; font-size: 23px;">
+                                                Table 1</h2>
+                                        </td>
+                                        <td colspan="4" align="center" class="border_btm" style="border-left: 3px solid #000;">
+                                            <h2 style="margin: 15px 0; font-weight: bold; font-size: 23px;">
+                                                Table 2</h2>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" align="center" class="border_btm">
+                                            <h4 style="margin: 15px 0; font-weight: bold; font-size: 14px;">
+                                                Married Filing Jointly</h4>
+                                        </td>
+                                        <td colspan="2" align="center" class="border_btm" style="border-left: 2px solid #000;">
+                                            <h4 style="margin: 15px 0; font-weight: bold; font-size: 14px;">
+                                                All Others</h4>
+                                        </td>
+                                        <td colspan="2" align="center" class="border_btm" style="border-left: 3px solid #000;">
+                                            <h4 style="margin: 15px 0; font-weight: bold; font-size: 14px;">
+                                                Married Filing Jointly</h4>
+                                        </td>
+                                        <td colspan="2" align="center" class="border_btm" style="border-left: 2px solid #000;">
+                                            <h4 style="margin: 15px 0; font-weight: bold; font-size: 14px;">
+                                                All Others</h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="space_L3">If wages from <strong style="font-weight: bold;">LOWEST</strong>
+                                                paying job are—</span>
+                                        </td>
+                                        <td>
+                                            <span class="space_L3">Enter on line 2 above</span>
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            <span class="space_L3">If wages from <strong style="font-weight: bold;">LOWEST</strong>
+                                                paying job are—</span>
+                                        </td>
+                                        <td>
+                                            <span class="space_L3">Enter on line 2 above</span>
+                                        </td>
+                                        <td style="border-left: 3px solid #000;">
+                                            <span>If wages from <strong style="font-weight: bold;">HIGHEST</strong> paying job are—</span>
+                                        </td>
+                                        <td>
+                                            <span class="space_L3">Enter on line 7 above</span>
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            <span class="space_L3">If wages from <strong style="font-weight: bold;">HIGHEST</strong>
+                                                paying job are—</span>
+                                        </td>
+                                        <td>
+                                            <span class="space_L3">Enter on line 7 above</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            $0 - $6,000 
+                                        </td>
+                                        <td align="center">
+                                            0
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            $0 - $6,000 
+                                        </td>
+                                        <td align="center">
+                                            0
+                                        </td>
+                                        <td align="center" style="border-left: 3px solid #000;">
+                                            $0 -$74,000 
+                                        </td>
+                                        <td align="center">
+                                            $590
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            $0 -$37,000 
+                                        </td>
+                                        <td align="center">
+                                            $590
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            06,001 - 13,000 
+                                        </td>
+                                        <td align="center">
+                                            1
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            6,001 - 16,000 
+                                        </td>
+                                        <td align="center">
+                                            1
+                                        </td>
+                                        <td align="center" style="border-left: 3px solid #000;">
+                                            74,001 - 130,000 
+                                        </td>
+                                        <td align="center">
+                                            990
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            37,001 - 80,000 
+                                        </td>
+                                        <td align="center">
+                                            990
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            13,001 - 24,000 
+                                        </td>
+                                        <td align="center">
+                                            2
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            16,001 - 25,000 
+                                        </td>
+                                        <td align="center">
+                                            2
+                                        </td>
+                                        <td align="center" style="border-left: 3px solid #000;">
+                                            130,001- 200,000 
+                                        </td>
+                                        <td align="center">
+                                            1,110
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            80,001- 175,000 
+                                        </td>
+                                        <td align="center">
+                                            1,110
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            24,001 - 26,000 
+                                        </td>
+                                        <td align="center">
+                                            3
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            25,001 - 34,000 
+                                        </td>
+                                        <td align="center">
+                                            3
+                                        </td>
+                                        <td align="center" style="border-left: 3px solid #000;">
+                                            200,001 - 355,000 
+                                        </td>
+                                        <td align="center">
+                                            1,300
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            175,001 - 385,000 -
+                                        </td>
+                                        <td align="center">
+                                            1,300
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            26,001 - 33,000
+                                        </td>
+                                        <td align="center">
+                                            4
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            34,001 - 43,000 
+                                        </td>
+                                        <td align="center">
+                                            4
+                                        </td>
+                                        <td align="center" style="border-left: 3px solid #000;">
+                                            355,001 - 400,000
+                                        </td>
+                                        <td align="center">
+                                            1,380
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            385,001 and over
+                                        </td>
+                                        <td align="center">
+                                            1,560
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            33,001 - 43,000
+                                        </td>
+                                        <td align="center">
+                                            5
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            43,001 - 70,000
+                                        </td>
+                                        <td align="center">
+                                            5
+                                        </td>
+                                        <td style="border-left: 3px solid #000;">
+                                           400,001 and over
+                                        </td>
+                                        <td>
+                                          1,560
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            43,001 - 49,000
+                                        </td>
+                                        <td align="center">
+                                            6
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            70,001 - 85,000 
+                                        </td>
+                                        <td align="center">
+                                            6
+                                        </td>
+                                        <td style="border-left: 3px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            49,001 - 60,000 
+                                        </td>
+                                        <td align="center">
+                                            7
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            85,001 - 110,000
+                                        </td>
+                                        <td align="center">
+                                            7
+                                        </td>
+                                        <td style="border-left: 3px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            60,001 - 75,000
+                                        </td>
+                                        <td align="center">
+                                            8
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            110,001 - 125,000
+                                        </td>
+                                        <td align="center">
+                                            8
+                                        </td>
+                                        <td style="border-left: 3px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            75,001 - 80,000
+                                        </td>
+                                        <td align="center">
+                                            9
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            125,001 - 140,000
+                                        </td>
+                                        <td align="center">
+                                            9
+                                        </td>
+                                        <td style="border-left: 3px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            80,001 - 100,000 
+                                        </td>
+                                        <td align="center">
+                                            10
+                                        </td>
+                                        <td align="center" style="border-left: 2px solid #000;">
+                                            140,001 and over
+                                        </td>
+                                        <td align="center">
+                                            10
+                                        </td>
+                                        <td style="border-left: 3px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            100,001 - 115,000
+                                        </td>
+                                        <td align="center">
+                                            11
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td style="border-left: 3px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            115,001 - 130,000
+                                        </td>
+                                        <td align="center">
+                                            12
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td style="border-left: 3px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            130,001 - 140,000
+                                        </td>
+                                        <td align="center">
+                                            13
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td style="border-left: 3px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            140,001 - 150,000
+                                        </td>
+                                        <td align="center">
+                                            14
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td style="border-left: 3px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            150,001 and over
+                                        </td>
+                                        <td align="center">
+                                            15
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td style="border-left: 3px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td style="border-left: 2px solid #000;">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="flt_left">
+                                <div class="flt_left" style="width: 49%;">
+                                    <p>
+                                        <strong style="font-weight: bold;">Privacy Act and Paperwork Reduction Act Notice.</strong>
+                                        We ask for the information on this form to carry out the Internal Revenue laws of
+                                        the United States. Internal Revenue Code sections 3402(f)(2) and 6109 and their
+                                        regulations require you to provide this information; your employer uses it to determine
+                                        your federal income tax withholding. Failure to provide a properly completed form
+                                        will result in your being treated as a single person who claims no withholding allowances;
+                                        providing fraudulent information may subject you to penalties. Routine uses of this
+                                        information include giving it to the Department of Justice for civil and criminal
+                                        litigation; to cities, states, the District of Columbia, and U.S. commonwealths
+                                        and possessions for use in administering their tax laws; and to the Department of
+                                        Health and Human Services for use in the National Directory of New Hires. We may
+                                        also disclose this information to other countries under a tax treaty, to federal
+                                        and state agencies to enforce federal nontax criminal laws, or to federal law enforcement
+                                        and intelligence agencies to combat terrorism.</p>
+                                </div>
+                                <div class="flt_right" style="padding-left: 5px; width: 49%;">
+                                    <p>
+                                        &nbsp;&nbsp;You are not required to provide the information requested on a form
+                                        that is subject to the Paperwork Reduction Act unless the form displays a valid
+                                        OMB control number. Books or records relating to a form or its instructions must
+                                        be retained as long as their contents may become material in the administration
+                                        of any Internal Revenue law. Generally, tax returns and return information are confidential,
+                                        as required by Code section 6103.</p>
+                                    <p>
+                                        &nbsp;&nbsp; The average time and expenses required to complete and file this form
+                                        will vary depending on individual circumstances. For estimated averages, see the
+                                        instructions for your income tax return.</p>
+                                    <p>
+                                        &nbsp;&nbsp; If you have suggestions for making this form simpler, we would be happy
+                                        to hear from you. See the instructions for your income tax return.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 2nd Page-->
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

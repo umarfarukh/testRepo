@@ -1,0 +1,524 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Equipment Request Form</title>
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/US/CPERF_US.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <style type="text/css">
+        .personalDetails
+        {
+            margin-top: 0px;
+        }
+        .pageDetails .personalDetails li
+        {
+            border-top: 1px solid #d4e7ef;
+            border-left: 1px solid #d4e7ef;
+            padding-top: 5px;
+            padding-left: 21px;
+            width: 47%;
+        }
+        .pageDetails .personalDetails li.second
+        {
+            border-right: 1px solid #d4e7ef;
+            padding-left: 22px;
+        }
+        .details
+        {
+            width: 95.7%;
+            margin-bottom: 5px;
+        }
+        .alert_f_text
+        {
+            float: left;
+            padding: 0 0 0 0;
+            text-align: left;
+            width: 410px;
+        }
+        .alert_f
+        {
+            float: left;
+        }
+        .inputText_Readonly
+        {
+            background-color: InactiveCaptionText;
+            font-size: 15px;
+            padding: 3px 5px 2px;
+            border: 1px solid #ccc !important;
+            background: #f0f0f0;
+            color: #888 !important;
+            cursor: default;
+        }
+    </style>
+    <!--<script language="javascript" type="text/javascript"> 
+         window.onbeforeunload = closeIt;
+         function closeIt() {
+             //self.parent.location.reload();
+
+             // disablePopup();
+             window.parent.opener.disablePopup();
+             window.close();
+             window.opener.updateWithNewData();
+
+
+         }
+         function disablePopup() {
+             //disables popup only if it is enabled
+
+             $("#overLay").hide();
+             $(".popupContactwrapper").hide();
+             popupStatus = 0;
+
+         }
+</script>-->
+</head>
+<body>
+    <div id="baseContent">
+        <div id="pageMain">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <!-- -------First Page-------------->
+                <!--<div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <h2 class="blueText">
+                                <br />
+                                Cognizant Provided Equipment-Eligibility
+                            </h2>
+                            <br />
+                            <div class="pageText">
+                                <p>
+                                    Dear New Associate,</p>
+                                <br />
+                                <p>
+                                    While the majority of our associates use client-provided equipment to perform their
+                                    daily activities, we do have certain associates who require Cognizant provided equipment
+                                    to perform their role. Depending on your role/level, you may be automatically eligible
+                                    for Cognizant provided equipment. Please review the table below to determine your
+                                    eligibility for equipment.</p>
+                                <br />
+                            </div>
+                            <h4 class="blueText">
+                                ELIGIBILITY
+                            </h4>
+                            <br />
+                            <div class="pageHeader">
+                                <p>
+                                    NON-CBC,CBC ASSOCIATES,NON-CORPORATE ASSOCIATES:<span style="color:Red;">Laptops</span></p>
+                            </div>
+                            <div class="pageDetails details">
+                                <ul class="personalDetails">
+                                    <li>Associate Director level and below</li>
+                                    <li class="second">Laptop with Director/Client Partner* approval</li>
+                                    <li style="border-bottom: 1px solid #d4e7ef;">Director level and above</li>
+                                    <li class="second" style="border-bottom: 1px solid #d4e7ef;">Laptop no approval required</li>
+                                </ul>
+                            </div>
+                            <div style="clear: both; padding-bottom: 5px;">
+                            </div>
+                             <div class="pageHeader">
+                                <p>
+                                    NON-CBC,CBC ASSOCIATES,NON-CORPORATE ASSOCIATES:<span style="color:Red;">Blackberry and Cellphone</span></p>
+                            </div>
+                            <div class="pageDetails details">
+                                <ul class="personalDetails">
+                                    <li>Director level and above</li>
+                                    <li class="second">Blackberry no approval required</li>
+                                    <li style="border-bottom: 1px solid #d4e7ef;">Associate Director</li>
+                                    <li class="second" style="border-bottom: 1px solid #d4e7ef;">Blackberry with Director/Client Partner* approval </li>
+                                    <li style="border-bottom: 1px solid #d4e7ef;">Senior Manager level and below</li>
+                                    <li class="second" style="border-bottom: 1px solid #d4e7ef;">Blackberry BU Head Approval</li>
+                                    <li style="border-bottom: 1px solid #d4e7ef;">Senior Manager level and below</li>
+                                    <li class="second" style="border-bottom: 1px solid #d4e7ef;">Cellphone with Director/Client Partner* approval</li>
+                                </ul>
+                            </div>
+                            <div style="clear: both; padding-bottom: 5px;">
+                            </div>
+                            <div class="pageHeader">
+                                <p style=" padding-top:5px;">
+                                    CORPORATE ASSOCIATES <span style="font-size: 10px;">(Academy, Administration, Corporate Operations,
+                                        Executive Office, Finance, GWFM, HR, Immigration, Legal, Marketing, NSS, Recruitment,
+                                        Sales)</span><span style="color:Red;">Laptop and Phone Device</span></p>
+                            </div>
+                            <div class="pageDetails details">
+                                <ul class="personalDetails">
+                                    <li>Associate Director level and below</li>
+                                    <li class="second">Laptop does not require approval; <br /> Cell phone only with Department head approval;</li>
+                                   <!-- <li></li>
+                                    <li class="second">Cell phone only with Department head approval;</li>-->
+                                   <!-- <li style="border-bottom: 1px solid #d4e7ef;">Director level and above</li>
+                                    <li class="second" style="border-bottom: 1px solid #d4e7ef;">Laptop and Blackberry (no approval required)</li>
+                                </ul>
+                            </div>
+                            <div style="clear: both;">
+                            </div>
+                            <div class="pageText">
+                                <br />
+                                <p>
+                                    <label class="cont_red">
+                                        *</label>
+                                    Director/Client Partner must be from within same BU as associate requesting equipment
+                                </p>
+                                <br />
+                                <p>
+                                    If Director or Department approval is required, we will seek approval on your behalf
+                                    upon receipt of this form and processing of your associate ID. If as per the table
+                                    above, no additional approval is required, and we receive your form at least 5 business
+                                    days before your start date, we will have equipment ready for you on your first
+                                    day.
+                                </p>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <!-- second page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <h2 class="blueText space_b10">
+                                Cognizant Provided Equipment-Request Form and Policies
+                               
+                            </h2>
+                        </div>
+                        <div class="pageDetails" style="border-top: none">
+                        <p class="pageText"> Eligible candidates will be sent their equipment with approval.Any inquiries should be directed to your Recruiter.</p>
+                            <ul class="personalDetails" style="margin-left: 2px">
+                                <li>
+                                    <label for="Pg_2_text_Name" class="notMandatory">
+                                        Associate Name</label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" class="inputText_Readonly" unselectable="on" id="Pg_2_text_Name"
+                                        readonly="readonly" />
+                                </li>
+                                <li>
+                                    <label for="Pg_2_text_AssociateId" class="notMandatory">
+                                        AssociateID(If Available)</label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" class="inputText_Readonly" unselectable="on" id="Pg_2_text_AssociateId"
+                                        readonly="readonly" />
+                                </li>
+                                <li>
+                                    <label for="Pg_2_text_level" class="notMandatory">
+                                        Level (From Offer Letter)</label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" class="inputText_Readonly" unselectable="on" id="Pg_2_text_level"
+                                        readonly="readonly" /></li>
+                                <li>
+                                    <label for="Pg_2_text_mailid">
+                                        <span>*</span>Personal Email ID</label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" id="Pg_2_text_mailid" class="inputText_Readonly" unselectable="on"
+                                        readonly="readonly" /></li>
+                                <li>
+                                    <label for="Pg_2_text_TelNo">
+                                        <span>*</span>Telephone Number</label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" id="Pg_2_text_TelNo" class="inputText_Readonly" unselectable="on"
+                                        maxlength="13" readonly="readonly" />
+                                </li>
+                                <li>
+                                    <label for="Address" class="notMandatory">
+                                        Address</label></li>
+                                <li class="second">
+                                    <input type="radio" name="Address" id="Pg_2_text_Permanent" onclick="Permanent();"
+                                        style="vertical-align: middle;" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Address.permanent"
+                                        jqxb-bindedattribute="checked" />&nbsp;Permanent
+                                    <input type="radio" name="cognizantOffice" id="Pg_2_text_CognizantOffices" style="vertical-align: middle;"
+                                        onclick="cognizantOffice();" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Address.cognizantOffice"
+                                        jqxb-bindedattribute="checked" />&nbsp;Cognizant Office </li>
+                                <!-- <div style="padding: 5px 0 5px 10px;">-->
+                                <li class="CognizantOffice">
+                                    <label for="Location" class="notMandatory">
+                                        Location
+                                    </label>
+                                </li>
+                                <li class="second CognizantOffice">
+                                    <select title="Location" id="Location" style="border: 1px solid #d4e7ef; float: left;"
+                                        class="tbForm" name="Location" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.location"
+                                        jqxb-listsource="LocationCity" jqxb-listvalue="UserValue" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <!--    </div>-->
+                                <li style="height: 60px;">
+                                    <label for="Pg_2_text_ShippingStreetAddressd">
+                                        <span>*</span>Shipping Street Address<br />
+                                        (If you will be in a Cognizant Office on your first day, please enter office address
+                                        here)</label>
+                                </li>
+                                <li class="second" style="height: 60px;">
+                                    <textarea id="addressForm" style="width: 180px; height: 40px; float: left;" class="tbForm Alphanumeric onlyAlphanumeric txtare"
+                                        title="ShippingStreetAddress" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.ShippingStreetAddress"
+                                        cols="20" name="S1" rows="1" onkeypress="RestrictCharCount(this.id,199)" allowchar="200"></textarea>
+                                </li>
+                                <li>
+                                    <label for="Pg_2_text_Shippingcity">
+                                        <span>*</span>ShippingCity/State/Zip</label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" class="tbForm textMandatory onlyAlphanumeric" title="Shippingcity"
+                                        id="Pg_2_text_Shippingcity" jqxb-datasource="FormDetails" style="float: left;
+                                        width: 180px;" jqxb-datamember="EquipmentRequestData.Shippingcity" maxlength="30" />
+                                </li>
+                                <li>
+                                    <label for="Pg_2_text_DOJ">
+                                        <span>*</span>Date Of Joining</label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" id="Pg_2_text_DOJ" class="inputText_Readonly" maxlength="13" class="inputText_Readonly"
+                                        unselectable="on" />
+                                </li>
+                                <li style="border-bottom: 1px solid #d4e7ef">
+                                    <label for="Pg_2_text_DOJ">
+                                        <span>*</span>RecruiterId</label>
+                                </li>
+                                <li class="second" style="border-bottom: 1px solid #d4e7ef">
+                                    <input type="text" id="Pg_2_text_RecruiterId" class="inputText_Readonly" maxlength="13"
+                                        class="inputText_Readonly" unselectable="on" />
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="clear: both; height: 10px;">
+                        </div>
+                        <div class="pageDetails disableassets" style="margin-bottom: 5px;">
+                            <h2 class="blueText space_b10">
+                                Equipment Request
+                            </h2>
+                            <div class="pageDetails pageText" style="margin-left: -10px; border: none; border-top: 1px solid #d4e7ef;
+                                margin-bottom: -20px">
+                                <div style="width: 100%; margin: 10px 0 5px 0;" id="Pg_2_Laptop" class="disablelaptop">
+                                    <div style="width: 15%; float: left;">
+                                        <input type="checkbox" id="Pg_2_text_Laptop" class='equipment' value="Laptop" name="Laptop" style="vertical-align: middle;"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Laptop" jqxb-bindedattribute="checked" />&nbsp;Laptop
+                                    </div>
+                                    <div style="width: 83%; float: left; margin-bottom: 10px;">
+                                        <div style="padding-bottom: 5px;">
+                                            <input id="Latop" class="collapses" type="image" src="../../../../Images/collapse.png"
+                                                alt="(Show Details...)" style="vertical-align: top" />&nbsp;Laptop Policies</div>
+                                        <div style="clear: both;">
+                                        </div>
+                                        <div style="margin-left: 5%; display: none;" class="Latop">
+                                            <ul style="list-style-type: disc;">
+                                                <li>Laptops will not be issued without associate ID – NO EXCEPTIONS.</li>
+                                                <li>Any exceptions to eligibility policy require Director/Dept Head approval &amp; an
+                                                    expected date of return of the laptop. </li>
+                                                <li>Contractors can be issued laptops only with approval of the Talent Manager &amp;
+                                                    Director. An NDA needs to be signed prior to issue.</li>
+                                                <li>User is required to return laptop to NSS (IT Department) upon separation from Cognizant
+                                                    or completion of project.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="width: 100%; margin-bottom: 5px;" class='DesignationView disablecellphone' id="Pg_2_CellPhone">
+                                    <div style="width: 15%; float: left;">
+                                        <input type="checkbox" id="Pg_2_text_Cellphone" class='equipment' name="CellPhone" style="vertical-align: middle;"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Cellphone"
+                                            jqxb-bindedattribute="checked" />&nbsp;CellPhone
+                                    </div>
+                                    <div style="width: 83%; float: left; margin-bottom: 10px;">
+                                        <div style="padding-bottom: 5px;">
+                                            <input id="Phone" class="collapses" type="image" src="../../../../Images/collapse.png"
+                                                alt="(Show Details...)" style="vertical-align: top" />&nbsp;Cell Phone Policies</div>
+                                        <div style="clear: both;">
+                                        </div>
+                                        <div style="margin-left: 5%; display: none;" class="Phone">
+                                            <ul style="list-style-type: disc;">
+                                                <li>Cell phones will not be issued without associate ID – NO EXCEPTIONS. </li>
+                                                <li>Any exceptions to eligibility policy require Director/Dept Head approval &amp; an
+                                                    expected date of return of the cell phone. </li>
+                                                <li>Personal cell phone numbers cannot be ported to Cognizant equipment. </li>
+                                                <li>User is required to return cell phone to NSS (IT Department) upon separation from
+                                                    Cognizant or completion of projects.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="width: 100%;" class='DesignationView disableblackberry' id="Pg_2_BlackBerry">
+                                    <div style="width: 15%; float: left;">
+                                        <input type="checkbox" name="Pg_2_text_BlackBerry" class='equipment' id="Pg_2_text_BlackBerry" value="Blackberry"
+                                            style="vertical-align: middle;" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Blackberry"
+                                            jqxb-bindedattribute="checked" />&nbsp;BlackBerry
+                                    </div>
+                                    <div style="width: 83%; float: left; margin-bottom: 10px;">
+                                        <div style="padding-bottom: 5px;">
+                                            <input id="Blackberry" class="collapses" type="image" src="../../../../Images/collapse.png"
+                                                alt="(Show Details...)" style="vertical-align: top" />&nbsp;Blackberry Policies
+                                        </div>
+                                        <div style="clear: both;">
+                                        </div>
+                                        <div style="margin-left: 5%; display: none;" class="Blackberry">
+                                            <ul style="list-style-type: disc;">
+                                                <li>Blackberries will not be issued without associate ID – NO EXCEPTIONS. </li>
+                                                <li>Any exceptions to eligibility policy require Director/Dept Head approval &amp; an
+                                                    expected date of return of the blackberry. </li>
+                                                <li><u>PORTING : </u>Number porting will only be permissible from your current carrier to our
+                                                    primary carrier – AT&amp;T, and will be transferred within 1-2 weeks from the date
+                                                    the request is received by NSS (IT Department) (not the date you submit this form).
+                                                    Keep in mind this may delay you from having your Blackberry on your first day.</li>
+                                                <li><u>You must complete the form from your corresponding provider. Links to forms can
+                                                    be found on next page. </u></li>
+                                                <li>Cognizant provided Blackberries are provided with AT&amp;T service and an assigned
+                                                    business phone number. </li>
+                                                <li>Personal blackberries will not be supported by Cognizant.</li>
+                                                <li>iPhones cannot be ported to Cognizant accounts, and personal iPhones will not be
+                                                    supported by Cognizant. </li>
+                                                <li>User is required to return blackberry to NSS (IT Department) upon separation from
+                                                    Cognizant or completion of project.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="clear: both;">
+                        </div>
+                        <div id="conformation" class="pageText"  style="padding: 5px 0 5px 10px; display: none;">
+                            <label>
+                                Do you intend to port an existing Blackberry number to Cognizant?&nbsp;&nbsp;</label>
+                            <input type="radio" id="yes" name="choice" value="Yes" style="vertical-align: middle;
+                                margin-right: 5px;" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.yes"
+                                jqxb-bindedattribute="checked" />Yes
+                            <input type="radio" style="vertical-align: middle; margin-right: 5px; margin-left: 5px;"
+                                id="no" name="choice" value="No" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.No"
+                                jqxb-bindedattribute="checked" />No<br />
+                        </div>
+                        <div style="clear: both;">
+                        </div>
+                        <div id="details" class="pageDetails" style="display: none; margin-bottom: 5px;">
+                            <ul class="pageText">
+                                <li style="text-align: center;">PORTING BLACKBERRIES<br />
+                                    (VP and above levels ONLY) </li>
+                                <li>If You are porting an Existing Blackberry number to a Cognizant AT&amp;T account,
+                                    Please complete the following information and submit this form along with &nbsp;your
+                                    completed New Hire Paperwork&nbsp;Please note only existing Canadian numbers may
+                                    be ported. </li>
+                            </ul>
+                            <ul class="personalDetails">
+                                <li>
+                                    <label>
+                                        Current Carrier
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="CurrentCarrier" value="AT&T" style="vertical-align: middle;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.ATT" jqxb-bindedattribute="checked" />&nbsp;AT&T
+                                    <input type="radio" name="CurrentCarrier" value="Sprint" style="vertical-align: middle;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Sprint" jqxb-bindedattribute="checked" />&nbsp;Sprint
+                                    <input type="radio" name="CurrentCarrier" value="T-Mobile" style="vertical-align: middle;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.TMobile"
+                                        jqxb-bindedattribute="checked" />&nbsp;T-Mobile
+                                    <input type="radio" name="CurrentCarrier" value="Verizon" style="vertical-align: middle;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.verizon"
+                                        jqxb-bindedattribute="checked" />&nbsp;Verizon
+                                    <input type="radio" name="CurrentCarrier" value="Others" style="vertical-align: middle;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Others" jqxb-bindedattribute="checked" />&nbsp;Others</li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Current Mobile Number</label></li>
+                                <li>
+                                    <input type="text" title="MobileNumber" id="mobilePhone" class="tbForm OnlyNumeric Mobile"
+                                        style="float: left;" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.CurrentMobileNumber"
+                                        maxlength="24" />
+                                </li>
+                                <li style="border-bottom: 1px solid #d4e7ef">
+                                    <label>
+                                        <span>*</span>Device Model
+                                    </label>
+                                </li>
+                                <li style="border-bottom: 1px solid #d4e7ef;">
+                                    <input type="text" title="Devicemodel" id="DeviceModel" class="tbForm onlyAlphanumeric"
+                                        style="float: left;" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.DeviceModel"
+                                        maxlength="20" />
+                                </li>
+                            </ul>
+                            <ul style="margin-right: 6px;">
+                                <li class="pageText" style="border-left: 1px solid #d4e7ef; border-right: 1px solid #d4e7ef;
+                                    margin-right: 1px;">
+                                    <p>
+                                        Please Complete the following information in order to port your existing Phone number
+                                        to Cognizant</p>
+                                </li>
+                            </ul>
+                            <ul class="personalDetails">
+                                <li>
+                                    <label for="Account Number">
+                                        <span>*</span>Account Number</label></li><li class="second">
+                                            <input type="text" title="Account Number" id="Accountnumber" class="tbForm OnlyNumeric  Mobile"
+                                                style="float: left;" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.AccountNumber"
+                                                maxlength="17" />
+                                        </li>
+                                <li>
+                                    <label for="AccountName">
+                                        <span>*</span>Name of the Account</label></li><li class="second">
+                                            <input type="text" title="Account name" id="AccountName" style="float: left;" class="tbForm tbForm  onlyAlp"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.NameoftheAccount"
+                                                maxlength="50" />
+                                        </li>
+                                <li>
+                                    <label for="StreetAddress">
+                                        <span>*</span>Street Address on the Account
+                                    </label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" title="StreetAddress" id="Streetaddress" style="float: left;"
+                                        class="tbForm onlyAlphanumeric" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Streetaddress"
+                                        maxlength="55" />
+                                </li>
+                                <li>
+                                    <label for="City/Station/Zip">
+                                        <span>*</span> City/Station/Zip on the Account
+                                    </label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" title="City/State/Zip" id="usercity" style="float: left;" class="tbForm onlyAlphanumeric"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.City" maxlength="30" />
+                                </li>
+                                <li style="border-bottom: 1px solid #d4e7ef">
+                                    <label for="AccountPassword">
+                                        Password in the Account (if Applicable)
+                                    </label>
+                                </li>
+                                <li class="second" style="border-bottom: 1px solid #d4e7ef;">
+                                    <input type="password" style="float: left;" class="tbForm" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="EquipmentRequestData.Password" maxlength="20" />
+                                </li>
+                            </ul>
+                            <div class="pageText" style="margin: 5px 0 -15px -20px;">
+                                <p>
+                                    FOR ALL CARRIERS, if your Existing Blackberry is under a "Family Plan" , whereby
+                                    you are sharing minutes with multiple users, We cannot port the number. Please have
+                                    your Existing Blackberry Number moved to an individual account to enable us to port
+                                    to a number to a Cognizant AT&T account.</p>
+                                <br />
+                            </div>
+                        </div>
+                        <div class="pageText" style="height: 40px; padding-left: 0px; width: 94%; margin-left: 10px;">
+                            <span style="color: Red; text-decoration: none; float: left; display: inline;">*&nbsp;</span>
+                            Please note: Submission of this form is not a guarantee you will receive equipment
+                            from Cognizant - it is only a request and may require additional approval from your
+                            manager prior to processing.</div>
+                    </div>
+                    <!--  <div class="Signature" id="Sign_PageId_2">
+                    </div>-->
+                </div>
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

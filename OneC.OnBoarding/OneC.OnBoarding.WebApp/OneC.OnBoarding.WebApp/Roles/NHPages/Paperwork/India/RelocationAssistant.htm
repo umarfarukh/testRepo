@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,IE=9,IE=8"/>
+    <title>Relocation Assistance Form</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/India/RelocationAssistant.js" type="text/javascript"></script>
+    <!--<script type="text/javascript" src="../../../../Scripts/Validations.js"></script>-->
+    <style type="text/css">
+        .Details
+        {
+            text-decoration: none;
+            display: inline;
+            width: 80%;
+            margin: 15px 0 0 0px;
+            float: left;
+            font-size: 1.4em;
+            font-family: "Trebuchet MS" ,Verdana, Arial, Helvetica, sans-serif;
+            color: #4a4a4a;
+        }
+        /* 298015- Relocation icon added for the Relocation Assistant form */
+        #imgRelocation{float:right;width:30px;height:40px;}
+        #aRelocationLink{margin-right:9px;}
+    </style>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id="pageMain" class="equipmentForm">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        Relocation Assistance Form
+                                        <!--298015 Relocation assistance app icon-->
+                                        <!--<a style="margin-right: 600px; float: right;" id="aRelocationLink" href="#" runat="server" onclick="redirectToRAapp();"><img style="height: 35px; margin-top: -12px;" id="imgRelocation" title="Click here to view Relocation Assistance app" alt="" src="../../../../Images/RelocationAssistance/s1_navigation.png"></a>-->
+                                    </p>
+                                </div>
+                                <br />
+                                <li>
+                                    <label>
+                                        <span></span>Candidate ID
+                                    </label>
+                                    <input type="text" id="Relocation_CandidateId" readonly="readonly" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="RelocationAssistant.CandidateId" class="tbForm" disabled="disabled" maxlength="45" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span></span>Candidate Name
+                                    </label>
+                                    <input type="text" id="Pg_1_text_Name" readonly="readonly" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="RelocationAssistant.AssociateName" class="tbForm" disabled="disabled" maxlength="45" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Mobile Phone</label>
+                                    <input type="text" id="Relocate_Mobile" jqxb-datasource="FormDetails" jqxb-datamember="RelocationAssistant.Mphone"
+                                        class="tbForm OnlyNumeric" maxlength="10" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Designation</label>
+                                    <input type="text" id="Text3" jqxb-datasource="FormDetails" jqxb-datamember="RelocationAssistant.Designation"
+                                        disabled="disabled" class="tbForm" maxlength="45" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Home Phone</label>
+                                    <input type="text" id="Text2" jqxb-datasource="FormDetails" jqxb-datamember="RelocationAssistant.Hphone"
+                                        class="tbForm OnlyNumeric" maxlength="13"/>
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Origin City</label>
+                                    <input type="text" id="Text4" jqxb-datasource="FormDetails" jqxb-datamember="RelocationAssistant.Origincity"
+                                        class="tbForm onlyAlp" maxlength="45" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Destination City</label>
+                                    <input type="text" jqxb-datasource="FormDetails" jqxb-datamember="RelocationAssistant.Destinationcity"
+                                        class="tbForm onlyAlp" maxlength="45" />
+                                </li>
+                                <li style="height: 40px;">
+                                    <label>
+                                        <span>*</span>Relocation from (address)
+                                    </label>
+                                    <textarea style="height: 40px;" cols="1" rows="2" id="Pg_1_text_fromAddress" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="RelocationAssistant.FromAddress" class="tbForm onlyAlphanumeric"
+                                        onkeydown="RestrictCharCount(this.id,150)" title="Address"></textarea>
+                                </li>
+                                <li style="height: 40px;">
+                                    <label>
+                                        <span>*</span><a>Relocation to (address)
+                                        </a>
+                                    </label>
+                                    <textarea style="height: 40px;" class="tbForm onlyAlphanumeric" cols="1" rows="2"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="RelocationAssistant.ToAddress"
+                                        onkeydown="RestrictCharCount(this.id,150)" title="Address" id="Textarea1"></textarea>
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Contact Person Name</label>
+                                    <input type="text" id="Pg_1_text_contactperson" jqxb-datasource="FormDetails" jqxb-datamember="RelocationAssistant.Contactperson"
+                                        class="tbForm onlyAlp" maxlength="45"/>
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Survey Date</label>
+                                    <input type="text" id="Pg_1_text_DateOfSurvey" jqxb-datasource="FormDetails" jqxb-datamember="RelocationAssistant.DateofSurvey"
+                                        style="float: left; width: 110px; margin-left: 133px;" maxlength="20" readonly="readonly"
+                                        title="Date of Survey" class="tbForm dateMandatory jQrydatepicker" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Contact Person Number
+                                    </label>
+                                    <input type="text" id="Pg_1_text_contactpersonno" jqxb-datasource="FormDetails" jqxb-datamember="RelocationAssistant.Contactpersonno"
+                                        class="tbForm OnlyNumeric" maxlength="13" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Preferred Time Slot for Survey</label>
+                                    <select id="Pg_1__select_timeslot" class=" tbForm " jqxb-datasource="FormDetails"
+                                        jqxb-datamember="RelocationAssistant.Surveytimeslot">
+                                        <option value="12 a.m. - 02 a.m.">12 a.m. - 02 a.m.</option>
+                                        <option value="02 a.m. - 04 a.m.">02 a.m. - 04 a.m.</option>
+                                        <option value="04 a.m. - 06 a.m.">04 a.m. - 06 a.m.</option>
+                                        <option value="06 a.m. - 08 a.m.">06 a.m. - 08 a.m.</option>
+                                        <option value="08 a.m. - 10 a.m.">08 a.m. - 10 a.m.</option>
+                                        <option value="10 a.m. - 12 p.m.">10 a.m. - 12 p.m.</option>
+                                        <option value="12 p.m. - 02 p.m.">12 p.m. - 02 p.m.</option>
+                                        <option value="02 p.m. - 04 p.m.">02 p.m. - 04 p.m.</option>
+                                        <option value="04 p.m. - 06 p.m.">04 p.m. - 06 p.m.</option>
+                                        <option value="06 p.m. - 08 p.m.">06 p.m. - 08 p.m.</option>
+                                        <option value="08 p.m. - 10 p.m.">08 p.m. - 10 p.m.</option>
+                                        <option value="10 p.m. - 12 a.m.">10 p.m. - 12 a.m.</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Relocation Amount</label>
+                                    <input type="text" id="Text5" jqxb-datasource="FormDetails" jqxb-datamember="RelocationAssistant.RelocationAmount"
+                                        disabled="disabled" class="tbForm" />
+                                </li>
+                            </ul>
+                            <div>
+                                <label class="Details">
+                                    Empanelled Vendors:Choose Vendors and request for a quote</label>
+                                <table id="Vendors" class="Details">
+                                </table>
+                            </div>
+                            <div class="pageDetails" style="border:0px">
+                            <ul class="personalDetails">
+                                
+  
+<li>
+                                    <p style="color: Red;">
+                                    Disclaimer:
+                                </p>
+                                </li>
+
+                                <li style="color: Red; width:100%">
+                                    <p>
+                                    a. The Relocation Amount <u>includes ticketing </u>cost and governed by Cognizant
+                                    relocation policy.
+                                </p>
+                                </li>
+
+                                <li style="color: Red; width:100%">
+                                     <p style="color: Red;">
+                                    b. The relocation claim submission should be done within 3 months of joining.</p>
+                                </li>
+                                
+                           
+                        </ul></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div id="footerContent">
+        </div>
+        </div>       
+    </div>
+</body>
+</html>

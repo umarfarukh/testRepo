@@ -1,0 +1,1406 @@
+/***********************************************************************************************
+
+	1. Global Reset
+	
+	2. General Elements
+		2.1 GLOBAL CLASSES
+	
+	3. Layout
+		3.1 Header
+		3.2 Banner
+		3.3 Content Wrapper
+		3.4 Left Column
+		3.5 Right Column
+		3.6 Footer	
+		3.7 Search	
+		3.8 page content wrapper
+		3.9 Pagination
+		3.10 content grid
+        3.13 Tooltip
+        3.16 Overlay Popup
+        3.17  Calendar
+
+		
+***********************************************************************************************/
+
+
+/* 1. Global Reset
+-----------------------------------------------------------------------------------------------
+===============================================================================================*/
+* {
+	margin: 0;
+	padding: 0;	
+  }
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
+/* 2. General Elements
+ ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+body {
+	margin: 0px;
+	font-size: 75%;
+	font-family: "Trebuchet MS" ,Verdana, Arial, Helvetica, sans-serif;
+	color: #4a4a4a;
+	background:#f9fdff  url(../../Images/AppSpot/bodybg.jpg) repeat-x;
+	overflow:auto !important;	
+
+}
+
+h1 {font-size:18px;}
+
+h2 {font-size: 16px;}
+
+h3{font-size: 14px;}
+
+h4{font-size: 13px;color:#757575;}
+
+a,a:visited{color: #0379b4;text-decoration: none;}
+
+a:focus{outline:none;}
+
+a:hover {text-decoration:none; color:#575757;}
+
+select{ background:url(../../Images/AppSpot/bg_formfield.gif) repeat-x; border:1px solid #93a8a9; padding:3px; }
+input[type="text"]{font-family: "Trebuchet MS" ,Verdana, Arial, Helvetica, sans-serif;background:url(../../Images/AppSpot/bg_formfield.gif) repeat-x; border:1px solid #93a8a9;}
+textarea{font-family: "Trebuchet MS" ,Verdana, Arial, Helvetica, sans-serif;background:url(../../Images/AppSpot/bg_formfield.gif) repeat-x; border:1px solid #93a8a9;}
+	
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
+/* 2.1 GLOBAL CLASSES
+ ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+	
+.clear{clear:both; }
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */ 
+
+
+.flt_left{float:left;}
+.flt_right{float:right;}
+
+.hide{display:none;}
+
+ul{list-style:none; margin:0px; padding:0px;}
+
+.center-text{text-align:center;}
+.right-text{text-align:right;}
+.left-text{text-align:left;}
+
+a img{border:0px; outline:none;}
+
+.txtDarkbrown{color:#604d17;}
+.txtBrown{color:#a37959;}
+.txtGreen{color:#6eb245;}
+.txtred{color:#dc1715;}
+
+.font_blue{color:#27a0dd;}
+.cont_red{color:#c40101;}
+
+.bgNone{background:none !important;}
+.border_leftnone{border-left:none !important;}
+.border_rightnone{border-right:0px solid !important;}
+
+.bold{font-weight:bold;}
+
+.txt_10{font-size:10px;}
+.txt_12{font-size:12px;}
+.txt_13{font-size:13px;}
+.txt_14{font-size:14px;}
+
+.space_r2 {margin-right:2px;}
+.space_r5 {margin-right:5px;}
+.space_r10 {margin-right:10px;}
+.space_r15 {margin-right:15px;}
+.pad_r6 {padding-right: 6px;}
+.space_L5 {margin-left:5px;}
+.space_L10 {margin-left:10px;}
+.space_L20 {margin-left:20px;}
+.space_t5 {margin-top:5px;}
+.space_t7 {margin-top:7px;}
+.space_t10 {margin-top:10px;}
+.space_t20 {margin-top:20px;}
+.space_b3 {margin-bottom:3px;}
+.space_b5 {margin-bottom:5px;}
+.space_b10 {margin-bottom:10px;}
+.no_space{	padding:0px !important;}
+
+.pad_r12 { padding-right: 12px;}
+select{border:1px solid #717171;}
+
+h1.title {
+        color:#5B5B5B;
+        font-size:14px;
+        font-weight:bold;
+        margin:13px 0 10px;
+}
+
+
+/* 3. Layout
+----------CENTER OF THE LAYOUT-------------- */
+
+#container{
+	margin:0px auto;
+	width:1000px;
+	background:url(../../Images/AppSpot/headerbg.jpg) no-repeat center top;
+	position:relative;
+	font-size:11px;
+}
+
+/* 3.1 HEADER
+------------------------------------------------------------------------------------------------ */
+
+
+#header {
+	height: 95px;
+	position:relative;	
+}
+	#logo{
+		float:left;
+		margin-left:26px;
+		display:inline;
+		width:200px;
+	}
+
+	#header_rightbox{
+		float:right;
+		width:600px;
+		margin-right:15px;
+		display:inline;
+	}
+
+	.top_nav{
+		height:26px;
+		background:url(../../Images/AppSpot/bg_topnav.gif) no-repeat right bottom;
+		padding-right:2px;
+		width:600px;
+	}
+	
+	.top_links{
+		float:right;
+		background:url(../../Images/AppSpot/bg_topnav.gif) repeat-x left top;
+		padding:5px;
+		position:relative;
+		color:#b9b9b9;		
+	}
+	
+	.sep_language{
+		display:none;
+	}
+
+	.top_links a{padding:0px 3px;color:#0379b4;}
+	.top_links a:hover{text-decoration:none; color:#575757;}
+	
+	.site_action_btn{
+		position:absolute;top:3px; left:0px;
+	}
+	
+	.top_links a.language{
+		background:transparent url(../../Images/AppSpot/allow_lang.gif) no-repeat scroll right 7px;
+		cursor:pointer;
+		padding-right:16px;
+		position:relative;
+		width:50px;
+		outline:none;
+		outline-width:0px;
+	}
+	
+	.languageBox{width:50px;}
+	
+	.lang_option{
+		position:absolute;
+		top:26px;
+		right:102px;
+		background-color:#ebf6fc;
+		width:60px;
+		display:none;
+		z-index:99;
+		padding-left:5px;
+		z-index: inherit;
+	}
+	
+/* 3.2  Navigation Dropdown property */
+
+
+    #topNavigation {
+                background:url("../../Images/AppSpot/bg_topnav.gif") repeat-x scroll left top transparent;
+                color:#B9B9B9;
+                float:right;
+                height:27px;
+                padding:0 3px;
+                position:relative;
+				z-index:2;
+    }
+    
+    #topNavigation #divMenuMFT #lblMyLinks{padding:0px !important;}
+
+    #topNavigation ul.mainmenu {
+                    list-style:none outside none;
+                    margin:0;
+                    padding:0;
+    }
+
+    #topNavigation ul li {
+                    color:#444444;
+                    float:left;
+                    padding:0px 0px 0px 5px;
+                    position:relative;
+                    z-index:200;
+    }
+
+    #topNavigation a, #topNavigation span {
+                    display:block;
+                    padding:5px 0;
+    }
+    
+    #topNavigation a:hover{text-decoration:none; color:#575757;}
+
+    #topNavigation span.seperator {
+                    color:#B9B9B9;
+    }
+
+    .hover_toplink {
+                    background:url("../../Images/AppSpot/bg_dropdown.png") no-repeat scroll 0 0 transparent;
+                    display:none;
+                    left:-3px;
+                    padding-left:3px;
+                    position:absolute;
+                    top:0;
+                    width:110px;
+    }
+
+    .hover_toplink a {
+                    color:#444444;
+                    text-decoration:none;
+    }
+    .hover_toplink a:hover {
+                    color:#444444;
+                    text-decoration:none;
+    }
+
+    .settings .hover_toplink {
+                    background:url("../../Images/AppSpot/bg_navdropmenusettings.png") no-repeat scroll right top transparent;
+                    padding-left:8px;
+                    position:absolute;
+                    right:0;
+                    top:0;
+                    width:50px;
+    }
+
+    #divAdminSettings{padding:0px !Important;}
+
+    #topNavigation .topShadow {
+                    left:0;
+                    position:absolute;
+                    top:22px;
+    }
+
+    #topNavigation .mainmenu li ul.nav_submenu {
+                    background:url("../../Images/AppSpot/bg_navdropmenu.png") repeat-y scroll 0 0 transparent;
+                    left:0;
+                    padding-top:10px;
+                    position:absolute;
+                    top:100%;
+                    width:200px;
+                    z-index:33;
+    }
+
+    #topNavigation .mainmenu li ul.nav_submenu li {
+                    display:block;
+                    margin-left:3px;
+                    padding-left:0;
+                    width:194px;
+    }
+
+    #topNavigation .mainmenu li ul.nav_submenu li a {
+                    background:url("../../Images/AppSpot/arrow_toplink.gif") no-repeat scroll 6px 6px transparent;
+                    color:#0279B3;
+                    display:block;
+                    font-size:12px;
+                    padding:1px 5px 2px 15px;
+                    text-decoration:none;
+    }
+
+    #topNavigation .mainmenu li ul.nav_submenu li a:hover{
+                    background:#ededed url(../../Images/AppSpot/arrow_toplink.gif) no-repeat 6px 6px;
+                    color:#575757; text-decoration:none;
+    }
+
+
+    #topNavigation .mainmenu li ul.nav_submenu li.add_taskdevider {
+                    border-bottom:1px solid #D1D9DD;
+                    height:5px;
+                    margin-bottom:5px;
+                    margin-left:10px;
+                    width:90%;
+    }
+
+    #topNavigation .mainmenu li ul.nav_submenu li.add_task a {
+                    background:url("../../Images/AppSpot/add_linkicon.png") no-repeat scroll 6px 5px transparent;
+                    padding-left:22px;
+    }
+
+    #topNavigation .mainmenu li ul.nav_submenu li.add_task a:hover{
+                    background:#ededed url(../../Images/AppSpot/add_linkicon.png) no-repeat 6px 5px;
+                    color:#575757; text-decoration:none;
+    }
+
+    #topNavigation .btm_gradient {
+                    background:url("../../Images/AppSpot/bg_navgradient.gif") repeat-x scroll left bottom transparent;
+                    height:14px;
+    }
+
+    #topNavigation .mainmenu li ul.nav_submenu .btm_shadow {
+                    background:url("../../Images/AppSpot/bottom_shadow_topmenu.png") repeat-x scroll 0 0 transparent;
+                    bottom:-3px;
+                    height:4px;
+                    left:0;
+                    position:absolute !important;
+                    width:195px !important;
+    }
+
+    #topNavigation .settings .topShadow {
+                    left:-116px;
+                    position:absolute;
+                    top:22px;
+    }
+
+    #topNavigation .mainmenu li.settings ul.nav_submenu {
+                    background:url("../../Images/AppSpot/dropdown_bgsettings.png") repeat-y scroll 0 0 transparent;
+                    left:-117px;
+                    padding-top:10px;
+                    position:absolute;
+                    top:100%;
+                    width:175px;
+                    z-index:33;
+    }
+
+    #topNavigation .mainmenu li.settings ul.nav_submenu li {
+                    display:block;
+                    margin-left:3px;
+                    padding-left:0;
+                    width:169px;
+    }
+
+   /* #topNavigation .mainmenu li ul.nav_submenu li a {
+                    background:url("../../Images/AppSpot/arrow_toplink.gif") no-repeat scroll 6px 6px transparent;
+                    color:#0279B3;
+                    display:block;
+                    font-size:12px;
+                    padding:1px 5px 2px 15px;
+                    text-decoration:none;
+    }*/
+
+    #topNavigation .mainmenu li.settings ul.nav_submenu .btm_shadow {
+                    background:url("../../Images/AppSpot/btm_shadow_settingsmenu.png") repeat-x scroll 0 0 transparent;
+                    bottom:-3px;
+                    height:4px;
+                    left:-3px;
+                    position:absolute !important;
+                    width:175px !important;
+    }
+
+    .space_toplink{padding-right:8px;}
+	
+	
+	.oneStoreLink{float:right; width:92px; height:27px; margin-right:8px; display:inline; background:url(../../Images/AppSpot/bgappstore_link.png) no-repeat bottom left;}
+	.oneStoreLink a{ display:block; text-align:center;padding:7px 0px 0px 21px;}
+
+
+	a.languagearrow {
+		background: url("../../Images/AppSpot/allow_lang.gif") no-repeat scroll right 7px transparent;
+		cursor: pointer;
+		outline: 0 none;   
+		position: relative;
+		float:right;
+		width: 10px;
+		height:10px;
+		margin-top:5px;
+	}
+	
+/* welcome user message */
+
+	.welcome_userbox{
+		padding-top:24px;
+		padding-right:10px;
+		color:#4f4f4f;
+		text-align:right;
+		font-size:14px;
+		float:right;
+		margin-top:-11px;
+	}
+	
+	.welcome_userbox a{
+		color:#0379b4;
+		font-size:13px;
+	}
+	
+	.welcome_userbox a:hover{
+		color:#575757;text-decoration:none;		
+	}
+	
+	.welcome_userbox .userName{
+		font-weight:bold;
+		font-size:14px;
+		margin-left:5px;	
+	}
+	
+
+		
+/* 3.3 Content Wrapper
+------------------------------------------------------------------------------------------------ */	
+
+#wrapper{
+	width:962px;	
+	margin:0px auto;
+	background:url(../../Images/AppSpot/bgWrapper.png) no-repeat top center;
+	margin-top:10px;
+	padding:5px 6px;	
+}
+
+#content_wrapper{
+	float:left;
+	width:795px;
+}
+
+#content-widget{width:962px; background:#fff; padding:10px 0px; min-height:580px;}
+
+
+.wide_wrapper{
+	background:url("../../Images/AppSpot/box_btm795.gif") no-repeat scroll center bottom #FFFFFF;
+	float:left;
+	min-height:500px;
+	padding:10px 0;
+	width:795px;	
+}
+
+/*Specifically added for Global Search master page*/
+.wide_wrapper_globalsearch{
+	background:url("../../Images/AppSpot/box_btm795.gif") no-repeat scroll center bottom #FFFFFF;
+	float:left;
+	min-height:580px;
+	padding:10px 0;
+	width:962px;
+}
+.wrapper-fullwidth{
+	background:url("../../Images/AppSpot/box_btm795.gif") no-repeat scroll center bottom #FFFFFF;
+	/*float:left;
+	min-height:600px;*/
+	min-height:570px;
+	padding:0px 0px 10px 0px;
+	width:962px;
+	margin:0px auto;
+}
+/* 
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------- */
+/* 3.4 Left Column
+ ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+#col_Leftpannel{
+	float:left;
+	width:167px;	
+	background:url(../../Images/AppSpot/sep_left_column.png) no-repeat right 120px;
+	}
+
+	.left_tabs ul{
+		margin:0px;
+		padding:0px;
+		list-style-type:none;	
+	}
+	
+	.left_tabs ul li{	
+		display:block;
+		font-size:19px;
+		position:relative;
+		color:#393939;
+	}
+	
+	.left_tabs ul li .newupdate{
+		position:absolute;
+		top:5px;
+		right:23px;	
+		font-size:12px;
+		color:#fff;
+		background:#ff921b;	
+		text-align:center;
+		padding:0px 5px;
+		border:1px solid #d17816;
+	}
+	
+	.left_tabs ul li a{
+		display:block;
+		overflow:hidden;
+ 		padding:43px 0px 44px 21px;
+		text-decoration:none;
+		background:url(../../Images/AppSpot/leftNavTabBg.jpg) no-repeat left top;  /*298015 wrong path old-../../Templates/images/leftNavTabBg.png*/
+		color:#fff;
+		font-size:16px;
+	}
+	
+ 	
+	.left_tabs ul li a span{display:block;}
+	.left_tabs ul li a.tab1 { background-position:left top}
+	.left_tabs ul li.active a.tab2 {border-left:5px solid #7da662;}
+	.left_tabs ul li.active a.tab3 {border-left:5px solid #4c90a1;}
+	.left_tabs ul li.active a.tab4 {border-left:5px solid #9a8873;}
+	.left_tabs ul li.active a.tab5 {border-left:5px solid #7da662;}
+	
+	.left_tabs ul li.active a{
+		display:block;
+ 		text-decoration:none;
+		color:#261c02;
+		font-size:16px;
+		background-position:left bottom;
+		border-left:5px solid #686868;
+		color:#393939;
+	}
+	.left_tabs ul li a:hover{
+		color:#f0f0f0 !Important;
+	}
+	.left_tabs ul li.active a:hover{
+		color:#261c02 !Important;
+		cursor:default;
+	}
+	
+.left_tabs ul li a {
+    background: url("../../Images/AppSpot/leftNavTabBg.jpg") no-repeat scroll left top transparent;
+    color: #FFFFFF;
+    display: block;
+    font-size: 16px;
+    overflow: hidden;
+    padding: 25px 0 25px 16px;
+    text-decoration: none;
+}
+
+.left_tabs ul li a.tab2 {background-position: left -72px;}
+.left_tabs ul li a.tab3 {background-position: left -144px;}
+.left_tabs ul li a.tab4 {background-position: left -216px;}
+.left_tabs ul li a.tab5 {background-position: left -288px;}
+.left_tabs ul li.active a {background-position: left bottom;}
+.left_tabs ul li.active a.tab5 {border-left: 5px solid #997e94;}
+
+/* 3.5 Right Column oneclick
+------------------------------------------------------------------------------------------------ */	
+
+#col_Rightpannel{
+		float:right;
+		width:168px;	
+		padding:10px 0px;
+		min-height:500px;
+		background:#fff url(../../Images/AppSpot/box_btm168.jpg) no-repeat bottom center;
+		}
+
+	.right_box{
+		margin:0px auto;
+		width:151px;
+		padding-bottom:15px;		
+		}
+
+
+	.right_box h2{
+		background:url(../../Images/AppSpot/Rbox_headingbg.jpg) repeat-x;
+		padding:3px 5px 4px 5px;
+		color:#fff;
+		font-size:13px;
+		font-weight:bold;	
+		}
+	
+	.right_box .right_content{
+		padding:5px 0px 0px 0px;
+		}
+	
+	.right_box ul{
+		margin:0px;
+		padding:0px;
+		list-style-type:none;
+		}
+	
+	.right_box ul li{
+		display:block;
+		padding:2px 0px 1px 0px;		
+		}
+	
+	.right_box ul li a{
+		color:#0088cc;
+		text-decoration:none;	
+		}
+	
+	.right_box ul li a:hover{text-decoration:none;color:#575757;}
+	
+	.right_box .duedate{
+		width:75px;
+		float:left;
+		}
+	
+	.right_box .priority{
+		width:76px;
+		float:left;
+		}
+		
+	.stat_count{
+		float:left;		
+		width:19px;
+		text-align:right;
+		margin-right:3px;
+	}
+	
+	.prev_month a {
+		text-indent:-9999px;
+		display:block;
+		height:16px;
+		background: url(../../Images/AppSpot/date_prev.gif) no-repeat 4px center;
+	}
+	.next_month a {
+		text-indent:-9998px;
+		display:block;
+		height:16px;
+		background: url(../../Images/AppSpot/date_next.gif) no-repeat 9px 4px;
+	}
+	a.cal_selected {
+	    background-color:#007bb6 !Important;
+		color:#fff !Important;
+		display:block;
+		border:1px solid #fff;
+		font-weight:bold;
+	}
+    a.stat_selected{background:#007bb6; color:#fff !Important; padding:0px;}
+    a.tag_selected{background:#007bb6; color:#fff !Important; padding:0px;}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
+/* FOOTER
+ ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#footer{
+	margin:0px auto;
+	width:980px;
+	padding:5px 0px;	
+	}
+	
+	#footer #footer_content{
+		margin:0px auto;
+		width:970px;
+		padding-top:5px;	
+	}
+	
+	.footer_links{
+		float:left;
+		width:400px;	
+	}
+	
+	.footer_links ul{
+		list-style-type:none;
+		margin:0px;
+		padding:0px;
+	}
+	
+	.footer_links ul li{
+		display:inline;
+		margin:0px;
+		padding:0px 10px;
+		border-right:1px solid #d9d9d9;
+	}
+	
+	.footer_links ul li a{color:#2099d4; text-decoration:none;}
+	.footer_links ul li a:hover{text-decoration:underline;}
+	
+	.footer_links ul li.first_footerlink{
+		display:inline;
+		margin:0px;
+		padding-left:0px;
+		border-right:1px solid #d9d9d9;
+	}	
+	.footer_links ul li.last_footerlink{
+		border-right:0px solid #d9d9d9;
+	}	
+	.copyright{
+		float:right;
+		width:400px;
+		text-align:right;
+		color:#a7a7a7;	
+	}
+	.copyrightTxt{
+		float:right;		
+		text-align:right;
+		color:#a7a7a7;
+		padding-top:11px;	
+}
+	
+
+/* footer property end  */
+
+/* 3.7 Search
+------------------------------------------------------------------------------------------------ */	
+
+#search_wrapper{
+		background:url(../../Images/AppSpot/bg_search.gif) no-repeat center top;
+		margin-bottom:3px;		
+		}
+	
+		#search_box{			
+			margin:0px auto;
+			padding:8px 0px 0px 0px;
+			height:33px;
+			width:568px;
+		}
+		 
+		#search_box .search_field{
+			width:512px;
+			float:left;
+		}
+		
+		#search_box .search_field input{
+			padding:3px 5px 3px 5px;
+			color:#4a4a4a;
+			background:url(../../Images/AppSpot/search_inputbg.jpg) repeat-x;
+			border:1px solid #717171;
+			font-size:12px;
+		}
+		
+		#search_box .searchbtn_field{			
+			float:left;
+		}
+		
+		#search_box input.btn_field{
+			padding:5px 5px 7px 5px;
+			background: url(../../Images/AppSpot/bg_searchbtn.gif) repeat-x;
+			color:#fff;
+			border: none;
+			font-size:12px;
+			cursor:pointer;
+			width:55px;
+			text-decoration:none;
+		}
+		
+		#search_box input.btn_field:hover{			
+			color:#f0f0f0;
+		}
+		
+		a.btn_Gray, .btn_Gray{
+			padding:5px 5px 7px 5px;
+			background: url(../../Images/AppSpot/bg_searchbtn.gif) repeat-x;
+			color:#fff !Important;
+			border: none;
+			font-size:12px;
+			cursor:pointer;
+			height:35px;
+			float:left;
+			margin-left:5px;
+			display:inline;
+			text-decoration:none;
+		}
+		a.btn_Gray:hover,.btn_Gray:hover{text-decoration:none;}
+		
+		input.btn_field, a.btn_field {
+			background: url("../../Images/AppSpot/bg_searchbtn.gif") repeat-x scroll 0 0 transparent;
+			border: medium none;
+			color: #FFFFFF;
+			cursor: pointer;
+			font-size: 13px;
+			font-weight: bold;
+			padding: 4px 5px 7px;
+		}
+
+		
+/* 3.8 home page content
+------------------------------------------------------------------------------------------------ */	
+
+
+#col_centerPannel{
+	float:left;
+	width:624px;	
+	padding:10px 0px;
+	min-height:500px;	
+	background:#fff url(../../Images/AppSpot/box_btm624.jpg) no-repeat bottom center;
+}
+
+	.content_box{
+		margin:0px auto;
+		width:604px;
+		padding-top:10px;
+	}
+	
+	.content{
+		margin:0px auto;
+		width:604px;
+	}
+
+/* 3.9 Pagination 
+********************************************************* */
+
+.pagination{
+	padding-top:15px;
+	padding-bottom:20px;
+	text-align:right;
+}
+
+.pagination select{
+    font-size:10px;
+}
+	.pagination .btn_pagination a{
+		border-top:1px solid #d7d7d7;
+		border-bottom:1px solid #aaaaaa;
+		border-left:1px solid #cdcdcd;
+		border-right:1px solid #cdcdcd;
+		padding:3px 8px;
+		background:#fff url(../../Images/AppSpot/btn_brdcrumb.jpg) repeat-x bottom left;
+		font-size:10px;
+		color:#6d6d6d;
+		margin-right:2px;
+		float:left;
+	}
+	
+	.pagination .btn_pagination a:hover{
+		border:1px solid #b2b2b2;	
+		font-size:10px;
+		color:#FFF !Important;
+		margin-right:2px;
+		text-decoration:none;
+		background:#c9c9c9 url(../../Images/AppSpot/btn_brdcrumb_h.jpg) repeat-x bottom left;
+	}
+	
+	.pagination .btn_pagination .active_point{
+		border:1px solid #b2b2b2;
+		padding:3px 8px;
+		font-size:10px;
+		color:#FFF;
+		margin-right:2px;;
+		background:#5e5e5e;
+		background-image:none;
+		text-decoration:none;
+		float:left;
+		background:#c9c9c9 url(../../Images/AppSpot/btn_brdcrumb_h.jpg) repeat-x bottom left;
+	}
+	
+	.prev_point{
+		padding-left:8px; display:block;
+		background:url(../../Images/AppSpot/arrow_brdcm_prev.gif) no-repeat left 6px;
+	}
+	
+	.prev_point:hover{
+		
+		background:url(../../Images/AppSpot/arrow_brdcm_prev.gif) no-repeat left -14px;
+	}
+	
+	.next_point{
+		padding-right:8px;display:block;
+		background: url(../../Images/AppSpot/arrow_brdcm_next.gif) no-repeat right 6px;
+	}
+	
+	.next_point:hover{		
+		background:url(../../Images/AppSpot/arrow_brdcm_next.gif) no-repeat right -14px;
+	}
+	
+	.pagination_pages{
+		padding-top:5px;
+		padding-left:2px;
+		color:#666;
+	}
+
+
+/* 3.10 content grid
+------------------------------------------------------------------------------------------------ */	
+
+.content_grid{
+	width:100%;
+	padding-top:3px;
+}
+
+
+/* 3.11 grid wrapper */
+
+.grid_wrapper{
+	width:604px;
+	margin-bottom:10px;
+}
+
+.gridbox_toprow .text_gridtoprow, .search_result_box  .text_searchtoprow{
+		padding:7px 0px;
+	}
+
+    .links_txt_topgrid ul li a{
+		font-size:12px;		
+    }
+
+	.datagrid{
+		min-height:355px;
+	}
+	
+	#gvUserTasks{
+		background:#828282 url(../../Images/AppSpot/grid_heading.png) repeat-x top left;
+	}
+	
+	#gvUserTasks th{
+		background:url(../../Images/AppSpot/sep_gridheading.gif) repeat-y top right;
+		border-right:0px solid #a6a6a6;
+		border-left:0px solid #797979;	
+	}
+	#gvUserTasks th.grid_col6{
+		background: transparent;
+	}
+	
+	.grid_wrapper th{	
+		color:#fff;		
+		padding:10px 5px 9px 5px;
+		text-align:left;
+		background:#828282 url(../../Images/AppSpot/grid_heading.png) repeat-x top left;
+		border-right:1px solid #a6a6a6;
+		border-left:1px solid #797979;	
+		font-size:11px;
+		font-weight:normal;	
+		border-bottom:1px solid #828282;
+	}
+	
+/* 3.13 Tooltip
+************************************************************************************************* */
+
+	.tooltips span {	
+		display:none;
+		position:absolute;
+		z-index:1000;
+		padding:12px;
+		background:url(../../Images/AppSpot/overlay.png);
+		width:280px;
+		color:#ccc;	
+	}
+	
+	.tooltips span {	
+		display:none;
+		position:absolute;
+		z-index:1000;
+		padding:12px;
+		background:url(../../Images/AppSpot/overlay.png);
+		width:280px;
+		color:#ccc;	
+	}
+	
+	a.tooltips:hover span{
+		text-decoration:none;
+	}
+	
+	.row_bold a.tooltips:hover{
+		text-decoration:none;
+		color:#0379b4 !Important;
+	}
+	
+	.tooltop_arrow{margin-top:-22px; position:absolute;	}	
+	
+    .tooltips em{
+        font-style:normal;
+        font-weight:bold;
+    }   
+	
+ 
+	
+/* 3.14 Search Result page
+========================================*/	
+
+.search_result_box{
+	width:517px;
+	margin-top:3px;
+	margin-left:9px;
+	float:left;
+}
+	.search_result_data_box{
+		min-height:300px;
+	}
+
+	.heading_content{
+		background:#828282 url(../../Images/AppSpot/bg_rightSectionHeading.jpg) repeat-x top left;
+		color:#fff;
+		padding:8px;
+		font-size:13px;
+		font-weight:bold;
+	}
+	
+	.search_result_item li{
+		padding:8px;
+		border-bottom:1px solid #ededed;
+		display:block;	
+	}
+	
+	.search_result_item li.odd_row{
+		background-color:#fbfafa;	
+	}
+	
+	.search_result_item h4{
+		color:#0379b4;
+		font-weight:bold;
+		font-size:11px;
+	}
+	
+	.search_result_item p{
+		color:#3c3c3c;
+		padding-top:5px;	
+	}
+	
+	.search_result_item .search_result_url,.search_result_item .search_result_url a{
+		color:#8d8d8d;
+		text-decoration:none;	
+	}
+	
+	
+	.search_rightcolumn{
+		float:right;
+		margin-right:9px;
+		display:inline;
+		margin-top:3px;
+		width:247px;
+		border:1px solid #e8e5e5;
+	
+	}
+	
+	.search_rightcolumn .Rightcontetn_box{
+		padding:10px 8px;
+	}
+	
+	.Rightcontetn_box .heading_content{	
+		padding:3px 8px;	
+	}
+	
+	.Rightcontetn_box .sub_heading{
+		padding:5px 5px;
+		font-size:11px;		
+		color:#848484;
+		color:#222222;	
+	}
+	
+	.Rightcontetn_box .right_Section{
+		padding-bottom:8px;	
+	}
+	
+	.sub_details{
+		padding:0px 5px;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:10px;
+
+	}
+	
+	.sub_details ul li{
+		padding:3px 0px;
+		color:#8d8d8d;
+	}
+	
+	.total_search_ruselt{
+		padding:3px 0px;
+		border-bottom:1px solid #ededed;	
+	}
+	
+	.more_link{
+		text-align:right;
+		float:right;
+	}
+	
+	
+/* 3.15 Brown theme I am cognizant page
+========================================*/
+
+.wide_wrapper .content{
+	width:781px;
+}
+
+.amI_chart{
+	float:left;
+	width:100%;
+}
+
+.wide_content_rightcolumn  {
+	border:1px solid #E8E5E5;
+	display:inline;
+	float:right;
+	margin-right:18px;
+	margin-top:25px;
+	width:167px;
+	}
+
+	.wide_content_rightcolumn .Rightcontetn_box {
+		padding:10px;
+	}
+	.chart_wrapper .sub_details ul li{
+		color:#3a3a3a;
+	
+	}
+	
+	.Rightcontetn_box {
+		margin:0 auto;	
+	}
+	
+	.brown #search_box .search_field input{
+		border:1px solid #b8ab9b;
+		
+	}
+	.brown #search_box input.btn_field {
+		background:url("../../Images/AppSpot/bg_brownbtn.jpg") repeat-x;
+	}
+
+	.brown h3{
+		color:#69563f;
+		font-size:13px;
+		font-weight:bold;
+	 }
+	 
+	.wherustand{
+		width:783px;
+		float:left;
+		margin-top:12px;
+	}
+	
+	.brown .approval_wrapper{
+		margin:40px 0px;
+		width:100%;
+		float:left;	
+	}
+	
+	.brown .prog_barbox{
+		float:left;
+		padding-left:30px;
+		padding-right:20px;
+		width:240px;
+	}
+	
+	.brown .prog_barbox .progress_bar{
+		padding-top:8px;
+	}
+	
+	.brown .heading_content{
+		background:url("../../Images/AppSpot/bg_brown_heading.jpg") repeat-x scroll left top #a09383;
+	}
+
+
+	.border_right{border-right:1px solid #ccc;}
+	
+	.brown .chart_wrapper{padding:10px 0px;}
+		
+	.brown .chart_wrapper h3 {padding-left:20px;}
+		
+	.brown .chart_wrapper .wide_content_rightcolumn {margin:0;}
+		
+	.brown .chart_wrapper .right_Section h3 {
+		padding-left:5px;
+		font-size:12px;
+		color:#fff;
+	 }
+	 
+	 .ratingtext{float:left; width:106px;}
+	
+	 .ratting{float:left; width:106px;}
+
+
+
+/* 3.16 overlay Popup
+========================================*/
+
+#overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+    z-index:9999;
+	width: 100%;
+	height: 500px;
+	background-color: #000;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	}
+	
+	#backgroundPopup{
+        display:none;
+        position:fixed;
+        _position:absolute; /* hack for internet explorer 6*/
+        height:100%;
+        width:100%;
+        top:0;
+        left:0;
+        background:#000000;
+        border:1px solid #cecece;
+		z-index:999;
+    }
+    
+    .ovarlay_div{
+	    width:100%; 
+	    height:100%; 
+	    position:relative; 
+	    opacity:0.4; 
+	    filter:alpha(opacity=40);
+	    background: url(../../Images/AppSpot/overlay.png); 
+	    display:none;
+    }
+
+	
+	.loader_img{
+	    display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+	
+	#overlay_contentbox {
+		left:0;
+		position:absolute;
+		text-align:left;
+		width:100%;
+		z-index:100;
+		
+		}	
+		
+	#outeroverlayContainer {
+		background-color:#FFFFFF;
+		height:370px;
+		margin:0 auto;
+		position:relative;
+		width:705px;
+		border:1px solid #7f7f7f;		
+		}
+		
+	.overlayContainer {
+		padding:10px;
+		}
+	
+	.overlayContainer #toprow h2{
+		color:#fff;
+		float:left;
+		padding:1px 0px;
+		font-weight:normal;
+		padding-right:5px;
+	    }
+	
+		
+	.overlayContainer #toprow #btnClose {
+		float:right;	
+		width:18px;
+		text-align:right;
+		}
+	#loading {
+		height:25%;
+		left:0;
+		line-height:0;
+		position:absolute;
+		text-align:center;
+		top:40%;
+		width:100%;
+		}		
+	#toprow{
+		background: url(../../Images/AppSpot/bg_popup_heading.jpg) repeat-x;
+		color:#fff;
+		padding:6px 10px;		
+	}
+	
+	.popup_content{	
+		line-height:130%;
+		padding:15px 10px;
+		font-size:12px;
+	}
+	
+	.popup_content p{
+		margin:5px 0px 10px 0px;
+	
+	}
+	
+	
+	
+	#popupContact{
+		display:none;
+		position:fixed;
+		_position:absolute; /* for internet explorer 6*/
+		height:384px;
+		width:705px;
+		background:#FFFFFF;
+		border:2px solid #cecece;
+		z-index:2;
+		padding:12px;
+		font-size:13px;
+	}	
+	
+	#popupContact h2{color:#fff;}
+	#popupContactClose{font-size:14px; line-height:14px; right:18px; top:18px; position:absolute; color:#6fa5fd; font-weight:700; display:block; cursor:pointer;}
+
+/* overlay property end
+------------------------------------------------------------------------------------------------ */	
+
+/* App inv and Down time Popups */
+	select.fullwidth{width:100%;}
+    input[type="text"].fullwidth{width:98%;font-family: "Trebuchet MS" ,Verdana, Arial, Helvetica, sans-serif;}
+    textarea.fullwidth{width:98%;font-family: "Trebuchet MS" ,Verdana, Arial, Helvetica, sans-serif;}
+	.dateFiled{width:60px !important;}
+    .popupForm{margin-top:10px;}
+    .popupForm td{padding:3px 5px 3px 0px;}
+    input[type="text"], textarea, select{ background:url(../../Images/AppSpot/bg_formfield.gif) repeat-x; border:1px solid #93a8a9; padding:3px; font-size:12px; color:#403e3e;}
+    .popupForm label{ font-size:12px; color:#2e2b2b; font-weight:bold;}
+	
+/*Ticker CSS :*/
+
+.ticker_box{ background:#fff9ce; border:1px solid #f4c374; margin:0px auto; width:966px; padding:1px 3px; margin-bottom:3px; height:17px; }
+.contentTicker{width:100%;}
+.browser_notes{color:#a7a7a7; float:right; display:inline; margin:11px 10px 0px 0px; border-right:1px solid #9D9D9D; padding-right:10px;} 
+.ui-icon {background: url(../../Images/AppSpot/sh_downarrow.gif) no-repeat scroll right 5px transparent; float: right; height: 16px; margin-right: 3px; width: 12px;}
+
+
+/*.my-apps{background:url(../../Images/AppSpot/ico_MyApps.gif) no-repeat right top; width:82px; height:24px; cursor:pointer; float:right;}*/
+.my-apps{background:url(../../Images/AppSpot/icon-MyApps-deactive.gif) no-repeat right top; width:81px; height:25px; cursor:pointer; margin:10px 0px 0px 30px; float:left;}
+.my-apps-active{background:url(../../Images/AppSpot/icon-MyApps-active.gif) no-repeat right top; width:81px; height:25px; cursor:pointer; margin:10px 0px 0px 30px; float:left;}
+.footer-notify{background:url(../../Images/AppSpot/footer-note.png) no-repeat; height:35px; width:139px; margin-left:10px; float:right; padding-right:40px;}
+
+ul.languageMenu{background:url(../../Images/AppSpot/languagedropdown.png) no-repeat bottom left                                                                !important; margin:0px; padding:0px;}
+#topNavigation .languageMenu li{width:141px; display:block; padding:3px 2px 3px 10px;}
+#topNavigation .languageMenu li a{padding:0px 0px 0 10px;background: url(../../Images/AppSpot/arrow_toplink.gif) no-repeat scroll 1px 6px transparent; color: #0279B3;}
+
+/*Virtual cuppord panel*/
+/*.virtual-cup{ margin-top:12px; height:27px;*margin-top:-11px;}*/
+.virtual-cup{ height:27px; position:absolute; right:12px; top:70px;}
+.virtual-cup .left-bg{background:url(../../Images/AppSpot/bg-vcpanel-left.gif) no-repeat top left; height:27px; width:5px;}
+.virtual-cup .right-bg{background:url(../../Images/AppSpot/bg-vcpanel-rt.gif) no-repeat top left; height:27px; width:5px;}
+
+.virtual-cup ul{ background:url(../../Images/AppSpot/bg-vcpanel.gif) repeat-x top left; height:27px; color:#fff; padding:0px 5px;}
+.virtual-cup li{display:block; float:left; padding:5px 2px;}
+.virtual-cup li span{font-size:13px; font-weight:bold;}
+.virtual-cup img{vertical-align:middle;}
+
+#vctooltip span.helpTip_arrow{
+	display:block;
+	background: url(../../Images/AppSpot/bg-vcarrow.png) no-repeat right top;
+	width:26px;
+	height:18px;
+	position:absolute;
+	top:-18px;
+	right:40px;
+}
+
+#vctooltip{
+ position:absolute;
+ width:400px;
+ background-color:#323333;
+ padding:10px;
+ color:#d6d6d6;
+ line-height:130%;
+ font-size:12px;
+ z-index:999;
+ }
+
+.tooltop_arrow {display:block; background:url(../../Images/AppSpot/tooltip-arrow.png) no-repeat right top; width:11px; height:9px; position:absolute; top:13px; right:10px;}
+#supTooltip{position:absolute; background:#323333; padding:5px 8px; color:#fff; border:0px; font-size:11px; width:300px; z-index:999;}
+/***************** Notification Style here ******************/
+.notificaton-box{ float:right; margin-right:15px;}
+.notificaton-box a{ display:block; background:url(../../Images/AppSpot/notification-bg.gif) repeat-x bottom #fdfdfd; padding:5px 3px 5px 8px; border:1px solid #cdcac7; border-top:0px; float:left; position:relative; z-index:99;}
+.notificaton-box a.notificaton-active{ background:#FFF; background-image:none; border-bottom:1px solid #FFF;}
+.notificaton-box img{ vertical-align:middle; margin-right:5px;}
+.noteNum{ font-size:10px; background:#FF9933; padding:0px 2px; color:#fff; margin:0px 5px;}
+
+.notification-info{ display:none; position:absolute; top:26px; padding:5px 8px; background:url(../../Images/AppSpot/notification-bg.gif) repeat-x bottom #ffffff; width:180px; z-index:59; border:1px solid #cdcac7;}
+.notification-list li a{ background:url(../../Images/AppSpot/arrow_toplink.gif) no-repeat 5px center; border:none; padding-left:15px; float:none; }
+.notification-list li a:hover{ background:url(../../Images/AppSpot/arrow_toplink.gif) no-repeat 5px center #ededed; border:none; padding-left:15px; float:none; }
+.notification-list li.notify-more{ border-top:1px solid #d1d9dd; clear:both; margin-top:8px;}
+.notification-list li.notify-more a{ background:none; float:right;}
+/***************** Notification Style Ends here ******************/

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DocumentUploadService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpMtomBinding_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <msf:Streamed xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://onecdevintcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://onecdevintcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://onecdevintcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/OneC_GenericUploadDataContract" />
+      <xsd:import schemaLocation="http://onecdevintcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://onecdevintcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/OneC_GenericUploadMessageContract" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDocumentUploadService_GetTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentUploadService_GetTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentUploadService_GetFileURL_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileURL" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentUploadService_GetFileURL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentUploadService_GetFilesForScanAndUpdateFileStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilesForScanAndUpdateFileStatus" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentUploadService_GetFilesForScanAndUpdateFileStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilesForScanAndUpdateFileStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentUploadService_DeleteFileUploadDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFileUploadDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentUploadService_DeleteFileUploadDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFileUploadDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentUploadService_DeleteFileUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFileUpload" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentUploadService_DeleteFileUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFileUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentUploadService_DownloadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFile" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentUploadService_DownloadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentUploadService_UploadFile_WithResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFile_WithResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentUploadService_UploadFile_WithResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFile_WithResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentUploadService_DownloadFile_WithDecryption_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFile_WithDecryption" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentUploadService_DownloadFile_WithDecryption_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFile_WithDecryptionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDocumentUploadService">
+    <wsdl:operation name="GetTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentUploadService/GetTemplate" message="tns:IDocumentUploadService_GetTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentUploadService/GetTemplateResponse" message="tns:IDocumentUploadService_GetTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileURL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentUploadService/GetFileURL" message="tns:IDocumentUploadService_GetFileURL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentUploadService/GetFileURLResponse" message="tns:IDocumentUploadService_GetFileURL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilesForScanAndUpdateFileStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentUploadService/GetFilesForScanAndUpdateFileStatus" message="tns:IDocumentUploadService_GetFilesForScanAndUpdateFileStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentUploadService/GetFilesForScanAndUpdateFileStatusResponse" message="tns:IDocumentUploadService_GetFilesForScanAndUpdateFileStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFileUploadDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentUploadService/DeleteFileUploadDetails" message="tns:IDocumentUploadService_DeleteFileUploadDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentUploadService/DeleteFileUploadDetailsResponse" message="tns:IDocumentUploadService_DeleteFileUploadDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFileUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentUploadService/DeleteFileUpload" message="tns:IDocumentUploadService_DeleteFileUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentUploadService/DeleteFileUploadResponse" message="tns:IDocumentUploadService_DeleteFileUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentUploadService/DownloadFile" message="tns:IDocumentUploadService_DownloadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentUploadService/DownloadFileResponse" message="tns:IDocumentUploadService_DownloadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile_WithResponse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentUploadService/UploadFile_WithResponse" message="tns:IDocumentUploadService_UploadFile_WithResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentUploadService/UploadFile_WithResponseResponse" message="tns:IDocumentUploadService_UploadFile_WithResponse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile_WithDecryption">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentUploadService/DownloadFile_WithDecryption" message="tns:IDocumentUploadService_DownloadFile_WithDecryption_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentUploadService/DownloadFile_WithDecryptionResponse" message="tns:IDocumentUploadService_DownloadFile_WithDecryption_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpMtomBinding" type="tns:IDocumentUploadService">
+    <wsp:PolicyReference URI="#BasicHttpMtomBinding_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTemplate">
+      <soap:operation soapAction="http://tempuri.org/IDocumentUploadService/GetTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileURL">
+      <soap:operation soapAction="http://tempuri.org/IDocumentUploadService/GetFileURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilesForScanAndUpdateFileStatus">
+      <soap:operation soapAction="http://tempuri.org/IDocumentUploadService/GetFilesForScanAndUpdateFileStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFileUploadDetails">
+      <soap:operation soapAction="http://tempuri.org/IDocumentUploadService/DeleteFileUploadDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFileUpload">
+      <soap:operation soapAction="http://tempuri.org/IDocumentUploadService/DeleteFileUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap:operation soapAction="http://tempuri.org/IDocumentUploadService/DownloadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile_WithResponse">
+      <soap:operation soapAction="http://tempuri.org/IDocumentUploadService/UploadFile_WithResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile_WithDecryption">
+      <soap:operation soapAction="http://tempuri.org/IDocumentUploadService/DownloadFile_WithDecryption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding" type="tns:IDocumentUploadService">
+    <wsp:PolicyReference URI="#NetTcpBinding_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetTemplate">
+      <soap12:operation soapAction="http://tempuri.org/IDocumentUploadService/GetTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileURL">
+      <soap12:operation soapAction="http://tempuri.org/IDocumentUploadService/GetFileURL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilesForScanAndUpdateFileStatus">
+      <soap12:operation soapAction="http://tempuri.org/IDocumentUploadService/GetFilesForScanAndUpdateFileStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFileUploadDetails">
+      <soap12:operation soapAction="http://tempuri.org/IDocumentUploadService/DeleteFileUploadDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFileUpload">
+      <soap12:operation soapAction="http://tempuri.org/IDocumentUploadService/DeleteFileUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap12:operation soapAction="http://tempuri.org/IDocumentUploadService/DownloadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile_WithResponse">
+      <soap12:operation soapAction="http://tempuri.org/IDocumentUploadService/UploadFile_WithResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile_WithDecryption">
+      <soap12:operation soapAction="http://tempuri.org/IDocumentUploadService/DownloadFile_WithDecryption" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DocumentUploadService">
+    <wsdl:port name="BasicHttpMtomBinding" binding="tns:BasicHttpMtomBinding">
+      <soap:address location="http://onecdevintcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc" />
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding" binding="tns:NetTcpBinding">
+      <soap12:address location="net.tcp://ctsintcovodisr1.cts.com/SharedStorage/DocumentUploadService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://ctsintcovodisr1.cts.com/SharedStorage/DocumentUploadService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

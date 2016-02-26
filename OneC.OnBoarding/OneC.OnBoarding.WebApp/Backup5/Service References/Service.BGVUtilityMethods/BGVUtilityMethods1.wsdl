@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/Imports">
+      <xsd:import schemaLocation="http://localhost:51555/ServiceHost/BGVUtilityMethods.svc?xsd=xsd0" namespace="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/" />
+      <xsd:import schemaLocation="http://localhost:51555/ServiceHost/BGVUtilityMethods.svc?xsd=xsd3" namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" />
+      <xsd:import schemaLocation="http://localhost:51555/ServiceHost/BGVUtilityMethods.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:51555/ServiceHost/BGVUtilityMethods.svc?xsd=xsd2" namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" />
+      <xsd:import schemaLocation="http://localhost:51555/ServiceHost/BGVUtilityMethods.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" />
+      <xsd:import schemaLocation="http://localhost:51555/ServiceHost/BGVUtilityMethods.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBGVUtilityMethods_FetchVendorDashboardData_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchVendorDashboardData" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_FetchVendorDashboardData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchVendorDashboardDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_FetchVendorDashboardData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q1:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetVendorCandidateData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorCandidateData" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetVendorCandidateData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorCandidateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetVendorCandidateData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q2:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetVendorDocListInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorDocListInfo" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetVendorDocListInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorDocListInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetVendorDocListInfo_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q3:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_SaveVendorDocListInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveVendorDocListInfo" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_SaveVendorDocListInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveVendorDocListInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_SaveVendorDocListInfo_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q4:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetAssignVendorCandidateData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssignVendorCandidateData" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetAssignVendorCandidateData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssignVendorCandidateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetAssignVendorCandidateData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q5:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetAssignVendorComponents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssignVendorComponents" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetAssignVendorComponents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssignVendorComponentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetAssignVendorComponents_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q6:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_SaveAssignVendorCandidateData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAssignVendorCandidateData" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_SaveAssignVendorCandidateData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAssignVendorCandidateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_SaveAssignVendorCandidateData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q7:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_BackPapers_InputMessage">
+    <wsdl:part name="parameters" element="tns:BackPapers" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_BackPapers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BackPapersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_BackPapers_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q8:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_DocListInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocListInfo" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_DocListInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocListInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_DocListInfo_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q9:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_ComponentData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComponentData" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_ComponentData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComponentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_ComponentData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q10:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_SaveComponentData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveComponentData" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_SaveComponentData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveComponentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_SaveComponentData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q11:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_SaveVerificationData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveVerificationData" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_SaveVerificationData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveVerificationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_SaveVerificationData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q12:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_AutoSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:AutoSearch" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_AutoSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutoSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_AutoSearch_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q13:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_ValidateComponentData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateComponentData" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_ValidateComponentData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateComponentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_ValidateComponentData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q14:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_PersonalData_InputMessage">
+    <wsdl:part name="parameters" element="tns:PersonalData" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_PersonalData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PersonalDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_PersonalData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q15:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_SavePersonalData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePersonalData" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_SavePersonalData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePersonalDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_SavePersonalData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q16:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_ValidatePersonalInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePersonalInfo" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_ValidatePersonalInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePersonalInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_ValidatePersonalInfo_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q17:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetPagePathForRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagePathForRole" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetPagePathForRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagePathForRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetPagePathForRole_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q18:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetPageNotifications_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageNotifications" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetPageNotifications_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetPageNotifications_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q19:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetPageComparisionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageComparisionData" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetPageComparisionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageComparisionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBGVUtilityMethods_GetPageComparisionData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q20:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:portType name="IBGVUtilityMethods">
+    <wsdl:operation name="FetchVendorDashboardData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/FetchVendorDashboardData" message="tns:IBGVUtilityMethods_FetchVendorDashboardData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/FetchVendorDashboardDataResponse" message="tns:IBGVUtilityMethods_FetchVendorDashboardData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/FetchVendorDashboardDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_FetchVendorDashboardData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorCandidateData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetVendorCandidateData" message="tns:IBGVUtilityMethods_GetVendorCandidateData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetVendorCandidateDataResponse" message="tns:IBGVUtilityMethods_GetVendorCandidateData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetVendorCandidateDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_GetVendorCandidateData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorDocListInfo">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetVendorDocListInfo" message="tns:IBGVUtilityMethods_GetVendorDocListInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetVendorDocListInfoResponse" message="tns:IBGVUtilityMethods_GetVendorDocListInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetVendorDocListInfoOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_GetVendorDocListInfo_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveVendorDocListInfo">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/SaveVendorDocListInfo" message="tns:IBGVUtilityMethods_SaveVendorDocListInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/SaveVendorDocListInfoResponse" message="tns:IBGVUtilityMethods_SaveVendorDocListInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/SaveVendorDocListInfoOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_SaveVendorDocListInfo_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignVendorCandidateData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetAssignVendorCandidateData" message="tns:IBGVUtilityMethods_GetAssignVendorCandidateData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetAssignVendorCandidateDataResponse" message="tns:IBGVUtilityMethods_GetAssignVendorCandidateData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetAssignVendorCandidateDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_GetAssignVendorCandidateData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignVendorComponents">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetAssignVendorComponents" message="tns:IBGVUtilityMethods_GetAssignVendorComponents_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetAssignVendorComponentsResponse" message="tns:IBGVUtilityMethods_GetAssignVendorComponents_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetAssignVendorComponentsOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_GetAssignVendorComponents_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAssignVendorCandidateData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/SaveAssignVendorCandidateData" message="tns:IBGVUtilityMethods_SaveAssignVendorCandidateData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/SaveAssignVendorCandidateDataResponse" message="tns:IBGVUtilityMethods_SaveAssignVendorCandidateData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/SaveAssignVendorCandidateDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_SaveAssignVendorCandidateData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BackPapers">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/BackPapers" message="tns:IBGVUtilityMethods_BackPapers_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/BackPapersResponse" message="tns:IBGVUtilityMethods_BackPapers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/BackPapersOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_BackPapers_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocListInfo">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/DocListInfo" message="tns:IBGVUtilityMethods_DocListInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/DocListInfoResponse" message="tns:IBGVUtilityMethods_DocListInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/DocListInfoOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_DocListInfo_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComponentData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/ComponentData" message="tns:IBGVUtilityMethods_ComponentData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/ComponentDataResponse" message="tns:IBGVUtilityMethods_ComponentData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/ComponentDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_ComponentData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveComponentData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/SaveComponentData" message="tns:IBGVUtilityMethods_SaveComponentData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/SaveComponentDataResponse" message="tns:IBGVUtilityMethods_SaveComponentData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/SaveComponentDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_SaveComponentData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveVerificationData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/SaveVerificationData" message="tns:IBGVUtilityMethods_SaveVerificationData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/SaveVerificationDataResponse" message="tns:IBGVUtilityMethods_SaveVerificationData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/SaveVerificationDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_SaveVerificationData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoSearch">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/AutoSearch" message="tns:IBGVUtilityMethods_AutoSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/AutoSearchResponse" message="tns:IBGVUtilityMethods_AutoSearch_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/AutoSearchOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_AutoSearch_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateComponentData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/ValidateComponentData" message="tns:IBGVUtilityMethods_ValidateComponentData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/ValidateComponentDataResponse" message="tns:IBGVUtilityMethods_ValidateComponentData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/ValidateComponentDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_ValidateComponentData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonalData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/PersonalData" message="tns:IBGVUtilityMethods_PersonalData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/PersonalDataResponse" message="tns:IBGVUtilityMethods_PersonalData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/PersonalDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_PersonalData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePersonalData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/SavePersonalData" message="tns:IBGVUtilityMethods_SavePersonalData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/SavePersonalDataResponse" message="tns:IBGVUtilityMethods_SavePersonalData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/SavePersonalDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_SavePersonalData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePersonalInfo">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/ValidatePersonalInfo" message="tns:IBGVUtilityMethods_ValidatePersonalInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/ValidatePersonalInfoResponse" message="tns:IBGVUtilityMethods_ValidatePersonalInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/ValidatePersonalInfoOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_ValidatePersonalInfo_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPagePathForRole">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetPagePathForRole" message="tns:IBGVUtilityMethods_GetPagePathForRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetPagePathForRoleResponse" message="tns:IBGVUtilityMethods_GetPagePathForRole_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetPagePathForRoleOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_GetPagePathForRole_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPageNotifications">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetPageNotifications" message="tns:IBGVUtilityMethods_GetPageNotifications_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetPageNotificationsResponse" message="tns:IBGVUtilityMethods_GetPageNotifications_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetPageNotificationsOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_GetPageNotifications_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPageComparisionData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetPageComparisionData" message="tns:IBGVUtilityMethods_GetPageComparisionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetPageComparisionDataResponse" message="tns:IBGVUtilityMethods_GetPageComparisionData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/IBGVUtilityMethods/GetPageComparisionDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IBGVUtilityMethods_GetPageComparisionData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,276 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, *
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+body
+{
+    font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+{
+    display: block;
+}
+body
+{
+    line-height: 1;
+}
+ol, ul
+{
+    list-style: none;
+}
+blockquote, q
+{
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after
+{
+   /* content: '';*/
+    content: none;
+}
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#landing_page, accept_offer_page, accept_offer_page_campus, #reject_offer_page1, #reject_offer_page2
+{
+    width: 90%;
+    padding: 12px 0 0 17px;
+}
+
+#landing_page div
+{
+    width: 90%;
+}
+
+
+#landing_page p, #accept_offer_page p, #accept_offer_page_campus p, #reject_offer_page1 p, #reject_offer_page2 p
+{
+    font-size: 1.3em;
+    color: #272626;
+    line-height: 30px;
+    width: 90%;
+    float: left;
+}
+
+.bold_text
+{
+    font-weight: bold;
+}
+#landing_page form label, accept_offer_page, accept_offer_page_campus form label, #reject_offer_page1 form label, #reject_offer_page2 form label,#please_label,#please3_label
+{
+    font-size: 1.3em;
+    color: #272626;
+    line-height: 30px;
+    width: 100px;
+}
+.radiobtn
+{
+    color: #272626;
+    font-size: 1.3em;
+    line-height: 30px;
+    margin-left: 16px;
+    float: left;
+    clear: both;
+    width: 90%;
+}
+#landing_page input
+{
+    margin-left: 20px;
+}
+#accept_offer_page, #accept_offer_page_campus
+{
+    float: left;
+    width: 90%;
+}
+.textbx
+{
+    border: 1px solid #717171;
+    height: 20px;
+    width: 170px;
+    font-size: 0.9em;
+    color: #272626;
+}
+.selectbx
+{
+    border-top: 1px solid #abadb3;
+    border: 1px solid #e3e9ef;
+    height: 20px;
+    width: 170px;
+    font-size: 0.9em;
+    color: #272626;
+    line-height: 1;
+}
+#reject
+{
+    margin-left: 50px;
+}
+#edoj
+{
+    width: 150px;
+}
+#Img1, #Img2, #submit_accept
+{
+    cursor: pointer;
+    padding: 15px 0 0 0px;
+    float: left;
+    clear: both;
+}
+img
+{
+    cursor: pointer;
+}
+textarea
+{
+    height: 100px;
+    width: 295px;
+    border: 1px solid #000;
+    color: #9a9a9a;
+}
+
+#reject_offer_page1 .bold_text, #reject_offer_page2 .bold_text, #reject_offer_page1 p, #reject_offer_page2 p, #reject_offer_page1 label, #reject_offer_page2 label, #reject_offer_pageCampus p
+{
+    font-size: 1em;
+}
+.note-error
+{
+    text-align: left;
+    border: 1px solid #fdc771;
+    background: url(../../../Images/ico_alert2.gif) no-repeat 10px 5px #fef9cf; /*298015 wrng path, old ../../Images/ico_alert2.gif */
+    padding: 1px 25px 3px 30px;
+    margin-top: 8px;
+    margin: 10px auto 0px auto;
+    font-weight: bold;
+    width: 20%;
+    height: 30%;
+}
+#offerpagecontent div.pageContent
+{
+    height: 520px;
+}
+
+#accept_offer_page_campus p label
+{
+    float: left;
+    width: 30%;
+    padding-left: 15px;
+    line-height: 1.2em;
+}
+#AcceptContentCampus, #accept_offer_page_campus p, #reject_offer_pageCampus p
+{
+    margin-bottom: 10px;
+    float: left;
+}
+
+#AcceptContentCampus p, #RejectContentCampus p
+{
+    margin-bottom: 0;
+}
+
+#reject_offer_pageCampus, #reject_offer_pageCampus p, #reject_offer_pageCampus div
+{
+    float: left;
+    width: 90%;
+}
+.space_b10
+{
+    margin-bottom: 10px;
+}
+
+.alignForm p label
+{
+    width: 30%;
+    text-align: left;
+    float: left;
+}
+
+#IntroContent p, #AcceptContentCampus p, #RejectContentCampus p, #AcceptContent p, #RejectContent p
+{
+    line-height: 1.3em;
+    width: 100%;
+}
+#accept_offer_page_campus button.ui-datepicker-trigger
+{
+    vertical-align: top;
+}
+
+#offerpagecontent b
+{
+    font-weight: bold;
+}
+
+/*for OfferAcceptReject Form*/
+
+.offerPage
+{
+    width: 820px;
+}
+.offerPage #pageMain
+{
+    height: 520px;
+}
+.offerPage #baseContent
+{
+    width: 799px;
+    margin: 0;
+    border: 1px solid #bfbfbf;
+    border-left: none;
+    border-top: none;
+    overflow: hidden;
+}
+.offerPage .navF
+{
+    width: 797px;
+    margin: 0;
+    border-left: 1px solid #bfbfbf;
+}
+.offerPage #pageMain, .offerPage #headerContent
+{
+    width: 800px;
+    margin: 0;
+}
+.offerPage .pagesContainer, .offerPage .pageContent
+{
+    width: 798px;
+    margin: 0;
+}
+
+.offerPage #offerpagecontent div.pageContent
+{
+    height: 365px;
+}
+
+.offerPage .pageDetails
+{
+    width: 740px;
+    margin-top: 15px;
+}
+
+.offerPage #headerContent .headerF
+{
+    height: 50px;
+}
+
+.offerPage .navF img
+{
+    display: none;
+}
+
+.offerPage .landing_page
+{
+    width: 96%;
+}
+
+.offerPage #landing_page div, .offerPage #landing_page p
+{
+    width: 100%;
+}

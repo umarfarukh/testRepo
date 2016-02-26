@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/Forms/CoreScripts/JSON.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/Ireland/NewHireInduction.js" type="text/javascript"></script>
+    <!--<script language="javascript" type="text/javascript">
+         window.onbeforeunload = closeIt;
+         function closeIt() {
+             //self.parent.location.reload();
+
+             // disablePopup(); 
+             window.parent.opener.disablePopup();
+             window.close();
+             window.opener.updateWithNewData();
+
+
+         }
+         function disablePopup() {
+             //disables popup only if it is enabled
+
+             $("#overLay").hide();
+             $(".popupContactwrapper").hide();
+             popupStatus = 0;
+
+         }
+</script>-->
+</head>
+<body>
+    <div id='baseContent'>
+        <div id="pageMain" class="inductionForm">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <ul class="personalDetails" id="InductionSelctionDiv" style="display: none">
+                                <div class="pageHeader">
+                                    <p>
+                                        New Hire Induction</p>
+                                </div>
+
+                              <div id="newhireinduction" style="display: none">
+                            
+                              <p class="pageText" style="text-align: justify">Dear 
+                                                                     <label id="Pg_1_text_Name"></label>
+                              </p>
+                               <br />
+                              <p class="pageText" style="text-align: justify">
+                               Welcome to Cognizant Ireland. </p>
+                               <br />
+                              <p class="pageText" style="text-align: justify">
+                              We are delighted you will be joining us, and would like to invite you to a Corporate Induction program. 
+                              This program will introduce you to the Company and the various teams and activities that will enable a 
+                              better understanding of our organization and the functions that enable your role at Cognizant. The 
+                              Corporate Induction program is held at our Cognizant office location in London, further details will 
+                              follow in an email once you have completed registration. Please note that your line manager at 
+                              Cognizant will be notified of your registration date for the course and may help you with any additional 
+                              information that you may require, if you have questions you can also speak  with your recruiter (on 
+                              copy) in the email that you will receive from the system upon registration completion.
+                              </p>
+                              <br />
+                              <p class="pageText" style="text-align: justify">
+                              We wish you success in your new role at Cognizant.<br /><br />Welcome on-board!</p>
+                              </div>
+                            
+                                <li style="margin-top: 10px;">
+                                    <label for="prefix_form">
+                                        <span>*</span>Induction Dates</label>
+                                    <select id="TrainingId" class="tbForm dropdown" name="TrainingDates" onchange="TrainingSelectindexChange();"
+                                        title="TrainingDates" jqxb-datasource="FormDetails" jqxb-datamember="NewHireInduction.TrainingId"
+                                        jqxb-listsource="TrainingId" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li style="margin-top: 10px;"> 
+                                    <label for="prefix_form">
+                                        Induction Location:</label>
+                                    <input type="text" style="font-weight: bolder;" class="tbForm" id="Pg_1_text_State"
+                                        readonly="readonly" disabled="true" />
+                                </li>
+                                <li>
+                                    <label for="prefix_form" id="mlvlStartdate">
+                                        Induction Start Time:</label>
+                                     <label for="prefix_form" class="smLabels" style="display: none">
+                                        Day 1 - Induction Start Time:</label>
+                                    <input type="text" style="font-weight: bolder;" class="tbForm" id="Pg_1_text_StartTime"
+                                        readonly="readonly" disabled="true" />
+                                    <!--      <input type="label" id="Pg_1_text_StartTime"  readonly="readonly"
+                                        class="tbForm" maxlength="50" title="Start Time" />-->
+                                </li>
+                                <li>
+                                    <label for="prefix_form">
+                                        Induction End Time</label>
+                                    <input type="text" style="font-weight: bolder;" class="tbForm" id="Pg_1_text_EndTime"
+                                        readonly="readonly" disabled="true" />
+                                    <!--     <input type="label" id="Pg_1_text_EndTime"  readonly="readonly"
+                                        class="tbForm" maxlength="50" title="End Time" />-->
+                                </li>
+                                 <li class="smLabels" style="display: none">
+                                    <label for="prefix_form" id="Pg_1_lbl_Day2ST">
+                                       Day 2 - Induction Start Time:</label>
+                                    <input type="text" style="font-weight: bolder;" class="tbForm" id="Pg_1_text_DaytwoStartTime"
+                                        readonly="readonly" disabled="true" />
+                                    <!--      <input type="label" id="Pg_1_text_StartTime"  readonly="readonly"
+                                        class="tbForm" maxlength="50" title="Start Time" />-->
+                                </li>
+                                <li class="smLabels" style="display: none">
+                                    <label for="prefix_form" id="Pg_1_lbl_Day2ET">
+                                        Induction End Time</label>
+                                    <input type="text" style="font-weight: bolder;" class="tbForm" id="Pg_1_text_DaytwoEndTime"
+                                        readonly="readonly" disabled="true" />
+                                    <!--     <input type="label" id="Pg_1_text_EndTime"  readonly="readonly"
+                                        class="tbForm" maxlength="50" title="End Time" />-->
+                                </li>
+                                <li style="width: 70%;">
+                                    <input type="button" class="btnImg" id="btnRegister" onclick="RegisterCancel(1); return;" />
+                                    <input type="button" class="btnImg" id="btnCancel" onclick="RegisterCancel(2); return;"
+                                        style="margin-left: 15px;" />
+                                </li>
+                                <li style="color: #3f678f; width: 70%;">
+                                    <label id="note">
+                                    </label>
+                                </li>
+                                 <li style="color: #3f678f; width: 70%;">
+                                    <label id="note1">
+                                    </label>
+                                </li>
+                            </ul>
+                            <div id="nodataDiv" style="display: none">
+                                No Training Dates Available
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

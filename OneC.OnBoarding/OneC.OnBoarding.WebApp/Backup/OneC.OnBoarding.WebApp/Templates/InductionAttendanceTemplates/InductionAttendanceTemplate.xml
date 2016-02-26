@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40"
+ xmlns:x2="http://schemas.microsoft.com/office/excel/2003/xml"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+    <Created>2006-09-16T00:00:00Z</Created>
+    <LastSaved>2013-10-23T08:19:22Z</LastSaved>
+    <Version>14.00</Version>
+  </DocumentProperties>
+  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+    <RemovePersonalInformation/>
+  </OfficeDocumentSettings>
+  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+    <WindowHeight>8010</WindowHeight>
+    <WindowWidth>14805</WindowWidth>
+    <WindowTopX>240</WindowTopX>
+    <WindowTopY>105</WindowTopY>
+    <ProtectStructure>False</ProtectStructure>
+    <ProtectWindows>False</ProtectWindows>
+    <FutureVer>11</FutureVer>
+  </ExcelWorkbook>
+  <Styles>
+    <Style ss:ID="Default" ss:Name="Normal">
+      <Alignment ss:Vertical="Bottom"/>
+      <Borders/>
+      <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+      <Interior/>
+      <NumberFormat/>
+      <Protection/>
+    </Style>
+    <Style ss:ID="s31" ss:Name="Calculation">
+      <Borders>
+        <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+         ss:Color="#7F7F7F"/>
+        <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+         ss:Color="#7F7F7F"/>
+        <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+         ss:Color="#7F7F7F"/>
+        <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+         ss:Color="#7F7F7F"/>
+      </Borders>
+      <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#FF6600"
+       ss:Bold="1"/>
+      <Interior ss:Color="#F2F2F2" ss:Pattern="Solid"/>
+    </Style>
+    <Style ss:ID="s63" ss:Parent="s31">
+      <Borders>
+        <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+         ss:Color="#7F7F7F"/>
+        <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+         ss:Color="#7F7F7F"/>
+        <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+         ss:Color="#7F7F7F"/>
+      </Borders>
+      <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#FF6600"
+       ss:Bold="1"/>
+      <Interior ss:Color="#F2F2F2" ss:Pattern="Solid"/>
+    </Style>
+    <Style ss:ID="s64" ss:Parent="s31">
+      <Borders>
+        <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+         ss:Color="#7F7F7F"/>
+        <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+         ss:Color="#7F7F7F"/>
+        <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+         ss:Color="#7F7F7F"/>
+      </Borders>
+      <Font ss:FontName="Calibri" ss:Size="11" ss:Color="#FF6600" ss:Bold="1"/>
+      <Interior ss:Color="#F2F2F2" ss:Pattern="Solid"/>
+    </Style>
+    <Style ss:ID="s65">
+      <Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+      <Borders>
+        <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+        <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+        <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+      </Borders>
+      <Font ss:FontName="Calibri" ss:Size="11" ss:Color="#000000"/>
+    </Style>
+    <Style ss:ID="s66">
+      <Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+      <Borders>
+        <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+        <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+      </Borders>
+      <Font ss:FontName="Calibri" ss:Size="11" ss:Color="#000000"/>
+    </Style>
+    <Style ss:ID="s67">
+      <Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+      <Borders>
+        <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+        <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+      </Borders>
+      <Font ss:FontName="Calibri" ss:Size="11" ss:Color="#000000"/>
+      <NumberFormat ss:Format="Short Date"/>
+    </Style>
+  </Styles>
+  <Worksheet ss:Name="Sheet1">
+    <Table ss:ExpandedColumnCount="6" ss:ExpandedRowCount="2" x:FullColumns="1"
+     x:FullRows="1" ss:DefaultRowHeight="15">
+      <Column ss:Width="74.25"/>
+      <Column ss:Width="217.5"/>
+      <Column ss:AutoFitWidth="0" ss:Width="102.75"/>
+      <Column ss:Width="83.25"/>
+      <Column ss:AutoFitWidth="0" ss:Width="81"/>
+      <Column ss:Width="132.75"/>
+      <Row ss:AutoFitHeight="0">
+        <Cell ss:StyleID="s63">
+          <Data ss:Type="String">CandidateId</Data>
+        </Cell>
+        <Cell ss:StyleID="s63">
+          <Data ss:Type="String">InductionAttendancStatus</Data>
+        </Cell>
+        <Cell ss:StyleID="s64">
+          <Data ss:Type="String">Location</Data>
+        </Cell>
+        <Cell ss:StyleID="s63">
+          <Data ss:Type="String">InductionDate</Data>
+        </Cell>
+        <Cell ss:StyleID="s63">
+          <Data ss:Type="String">FacilitatorId</Data>
+        </Cell>
+      </Row>
+      <Row ss:AutoFitHeight="0">
+        <Cell ss:StyleID="s65"/>
+        <Cell ss:StyleID="s65"/>
+        <Cell ss:StyleID="s66"/>
+        <Cell ss:StyleID="s67"/>
+      </Row>
+    </Table>
+    <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+      <PageSetup>
+        <Header x:Margin="0.3"/>
+        <Footer x:Margin="0.3"/>
+        <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+      </PageSetup>
+      <Unsynced/>
+      <Print>
+        <ValidPrinterInfo/>
+        <HorizontalResolution>600</HorizontalResolution>
+        <VerticalResolution>600</VerticalResolution>
+      </Print>
+      <Selected/>
+      <Panes>
+        <Pane>
+          <Number>3</Number>
+          <ActiveRow>9</ActiveRow>
+          <ActiveCol>1</ActiveCol>
+        </Pane>
+      </Panes>
+      <ProtectObjects>False</ProtectObjects>
+      <ProtectScenarios>False</ProtectScenarios>
+    </WorksheetOptions>
+    <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+      <Range>R1C3</Range>
+      <Type>List</Type>
+      <CellRangeList/>
+      <Value>&quot;Bangalore, Chennai, Coimbatore, Gurgaon, Hyderabad, Kochi, Kolkata, Mumbai, Pune, Thane ,Noida &quot;</Value>
+    </DataValidation>
+    <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+      <Range>R2C3:R1048576C3</Range>
+      <Type>List</Type>
+      <CellRangeList/>
+      <Value>&quot;Atulya Building,CCC,Chill – SEZ, DLF Cyber city, Hinjewadi, Hiranandani Business Park, Manyata Embassy Park, MEPZ,Pathshala 1-7th Floor,Pathshala 2-5th floor,Sector 62,Techno Complex, Thane, Tikri Office, Sec-135 &quot;</Value>
+    </DataValidation>
+    <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+      <Range>C2</Range>
+      <Type>List</Type>
+      <CellRangeList/>
+      <Value>&quot;Joining Completed – Induction Attended,Joining Completed – Induction Not Attended,Joining Deferred by Candidate,Joining Deferred by Cognizant&quot;</Value>
+    </DataValidation>
+    <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+      <Range>C1</Range>
+      <Type>Whole</Type>
+      <Qualifier>GreaterOrEqual</Qualifier>
+      <Value>6</Value>
+    </DataValidation>
+    <DataValidation xmlns="urn:schemas-microsoft-com:office:excel">
+      <Range>C4</Range>
+      <Type>Date</Type>
+      <Qualifier>GreaterOrEqual</Qualifier>
+      <Value>2000</Value>
+    </DataValidation>
+  </Worksheet>
+  <Worksheet ss:Name="Sheet2">
+    <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1"
+     x:FullRows="1" ss:DefaultRowHeight="15">
+      <Row ss:AutoFitHeight="0"/>
+    </Table>
+    <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+      <PageSetup>
+        <Header x:Margin="0.3"/>
+        <Footer x:Margin="0.3"/>
+        <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+      </PageSetup>
+      <Unsynced/>
+      <ProtectObjects>False</ProtectObjects>
+      <ProtectScenarios>False</ProtectScenarios>
+    </WorksheetOptions>
+  </Worksheet>
+  <Worksheet ss:Name="Sheet3">
+    <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1"
+     x:FullRows="1" ss:DefaultRowHeight="15">
+      <Row ss:AutoFitHeight="0"/>
+    </Table>
+    <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+      <PageSetup>
+        <Header x:Margin="0.3"/>
+        <Footer x:Margin="0.3"/>
+        <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+      </PageSetup>
+      <Unsynced/>
+      <ProtectObjects>False</ProtectObjects>
+      <ProtectScenarios>False</ProtectScenarios>
+    </WorksheetOptions>
+  </Worksheet>
+  <x2:MapInfo x2:HideInactiveListBorder="false"
+   x2:SelectionNamespaces="xmlns:ns1='XlsxReadWrite'">
+    <x2:Schema x2:ID="Schema1" x2:Namespace="XlsxReadWrite">
+      <xs:schema id="NewDataSet" targetNamespace="XlsxReadWrite" xmlns:mstns="XlsxReadWrite" xmlns="XlsxReadWrite" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+        <xs:annotation>
+          <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+            <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+              <Connections/>
+              <Tables/>
+              <Sources/>
+            </DataSource>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="NewDataSet" msprop:Generator_UserDSName="NewDataSet">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="XlsxReadWriteTable" msprop:Generator_TableClassName="XlsxReadWriteTableDataTable" msprop:Generator_TableVarName="tableXlsxReadWriteTable" msprop:Generator_TablePropName="XlsxReadWriteTable" msprop:Generator_RowDeletingName="XlsxReadWriteTableRowDeleting" msprop:Generator_UserTableName="XlsxReadWriteTable" msprop:Generator_RowChangingName="XlsxReadWriteTableRowChanging" msprop:Generator_RowEvHandlerName="XlsxReadWriteTableRowChangeEventHandler" msprop:Generator_RowDeletedName="XlsxReadWriteTableRowDeleted" msprop:Generator_RowEvArgName="XlsxReadWriteTableRowChangeEvent" msprop:Generator_RowChangedName="XlsxReadWriteTableRowChanged" msprop:Generator_RowClassName="XlsxReadWriteTableRow">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0"/>
+                    <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName" type="xs:string" minOccurs="0"/>
+                    <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName" type="xs:string" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+      </xs:schema>
+    </x2:Schema>
+    <x2:Map x2:ID="NewDataSet_Map" x2:SchemaID="Schema1" x2:RootElement="NewDataSet">
+      <x2:ShowImportExportValidationErrors/>
+      <x2:Entry x2:Type="table" x2:ID="1" x2:ShowTotals="false">
+        <x2:Range>Sheet1!R2C1:R2C4</x2:Range>
+        <x2:HeaderRange>R1C1</x2:HeaderRange>
+        <x:FilterOn>True</x:FilterOn>
+        <x2:XPath>/ns1:NewDataSet/ns1:XlsxReadWriteTable</x2:XPath>
+        <x2:Field x2:ID="CandidateId">
+          <x2:Range>RC</x2:Range>
+          <x2:XPath>ns1:ID</x2:XPath>
+          <x2:XSDType>string</x2:XSDType>
+          <ss:Cell>
+          </ss:Cell>
+          <x2:Aggregate>None</x2:Aggregate>
+        </x2:Field>
+        <x2:Field x2:ID="InductionAttendancStatus">
+          <x2:Range>RC[1]</x2:Range>
+          <x2:XPath>ns1:LastName</x2:XPath>
+          <x2:XSDType>string</x2:XSDType>
+          <ss:Cell>
+          </ss:Cell>
+          <x2:Aggregate>None</x2:Aggregate>
+        </x2:Field>
+        <x2:Field x2:ID="Location">
+          <x2:Range>RC[2]</x2:Range>
+          <x2:XSDType>string</x2:XSDType>
+          <ss:Cell>
+          </ss:Cell>
+          <x2:Aggregate>None</x2:Aggregate>
+        </x2:Field>
+        <x2:Field x2:ID="InductionDate">
+          <x2:Range>RC[3]</x2:Range>
+          <x2:XSDType>string</x2:XSDType>
+          <ss:Cell>
+          </ss:Cell>
+          <x2:Aggregate>None</x2:Aggregate>
+        </x2:Field>
+      </x2:Entry>
+    </x2:Map>
+  </x2:MapInfo>
+</Workbook>

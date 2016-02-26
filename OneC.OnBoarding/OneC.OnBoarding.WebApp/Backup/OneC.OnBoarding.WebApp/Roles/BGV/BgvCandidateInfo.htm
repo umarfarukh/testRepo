@@ -1,0 +1,486 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <title>BGV Candidate Information</title>
+    <link href="../../Styles/Calender.Css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="BgvCandidateInfo.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        li.alignMe input, li.alignMe select, li.alignMe textarea, input[type="text"] {
+            float: right;
+        }
+        .ui-datepicker-trigger {
+            margin: 0;
+            margin-right: -135px;
+        }
+        .info_section div ul.info_section_list li.datePickerLi img.alert_f{
+            margin-left:-25px;
+            top:5px;
+            float:left;
+            position:absolute;
+            }
+        .info_section div ul.info_section_list li label.alert_f_text{
+            margin-right:0;
+            width:300px;
+            text-align:right;
+            }
+    </style>
+</head>
+<body>
+    <div class="Basic_info_section" style="border: 1px solid #CCCCCC;">
+        <div class="inner_header_basicinfo inner_header_basicinfo_width flft">
+            <div>
+                Candidate Information</div>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="info_section">
+            <div id="divCandidateDetails" style="padding-top: 15px">
+                <ul class="flft info_section_list">
+                    <li style="font-size: 11px">
+                        <label for="CandidateId" class="page_text">
+                            <span>*</span>Candidate ID</label>
+                        <input type="text" id="CandidateId" class="textMandatory txtbx OnlyNumeric readOnly"
+                            jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.CandidateId" titile="Candidate Id"
+                            maxlength="30" />
+                        <label for="CandidateIdOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li style="font-size: 11px">
+                        <label for="prefix_form" class="page_text">
+                            <span>*</span>First Name</label>
+                        <input type="text" id="CandidateFirstName" class="txtbx textMandatory hrssReadonly onlyAlp"
+                            jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.CandidateFirstName"
+                            title="Candidate First Name" maxlength="200" />
+                        <!-- ac-enabled="true" ac-url="../../../FormsService.aspx/FetchCandidatesFiltersearch" ac-length="2" ac-type="3"-->
+                        <label for="CandidateFirstNameOld" class="page_old_text" style="float: right;">
+                        </label>
+                    </li>
+                    <li style="font-size: 11px">
+                        <label for="prefix_form" class="page_text">
+                            Middle Name</label>
+                        <input type="text" id="CandidateMiddleName" class="txtbx hrssReadonly onlyAlp" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.CandidateMiddleName" title="Candidate Middle Name"
+                            maxlength="200" />
+                        <!-- ac-enabled="true" ac-url="../../../FormsService.aspx/FetchCandidatesFiltersearch" ac-length="2" ac-type="3"-->
+                        <label for="CandidateMiddleNameOld" class="page_old_text" style="float: right;">
+                        </label>
+                    </li>
+                    <li style="font-size: 11px">
+                        <label for="prefix_form" class="page_text">
+                            <span>*</span>Last Name</label>
+                        <input type="text" id="CandidateLastName" class="txtbx textMandatory hrssReadonly onlyAlp"
+                            jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.CandidateLastName"
+                            title="Candidate Last Name" maxlength="200" />
+                        <!-- ac-enabled="true" ac-url="../../../FormsService.aspx/FetchCandidatesFiltersearch" ac-length="2" ac-type="3"-->
+                        <label for="CandidateLastNameOld" class="page_old_text" style="float: right;">
+                        </label>
+                    </li>
+                    <li class="alignMe">
+                        <label for="prefix_form" class="page_text">
+                            Designation</label>
+                        <input type="text" id="Designation" class="txtbx readOnly" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.Designation" title="Designation" maxlength="200" />
+                        <!--          ac-enabled="true" ac-url="../../../../FormsService.aspx/FetchCandidatesFiltersearch" ac-type="2"-->
+                        <label for="DesignationOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span>*</span>Expected Date of Joining</label>
+                        <input type="text" id="DOJFromInputBox" class="datetbx textMandatory readOnly" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.DOJ" title="Date of Joining" />
+                        <label for="DOJOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe nfc">
+                        <label for="prefix_form" class="page_text">
+                            <span>*</span>Type Of Joiner</label>
+                        <select class="txtbx dropdown" id="JoiningType" jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.Joining"
+                            jqxb-listsource="JoiningList" jqxb-listvalue="ID" jqxb-listtext="Description"
+                            title="Type Of Joining">
+                        </select>
+                    </li>
+                    <li class="alignMe nfc">
+                        <label for="NInum_form" class="page_text">
+                            <span>*</span>Offer Extended Date</label>
+                        <input type="text" id="date" class="datetbx textMandatory readOnly" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.OfferExtendedDate" title="Offer Extended Date" />
+                    </li>
+                    <li class="alignMe">
+                        <label for="prefix_form" class="page_text">
+                            <span>*</span>Offer Location</label>
+                        <input type="text" id="OfferLocation" class="txtbx readOnly textMandatory" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.OfferLocation" titile="Offer Location" />
+                    </li>
+                    <li class="alignMe">
+                        <label for="prefix_form" class="page_text">
+                            <span>*</span>Joining Location</label>
+                        <input type="text" id="JoiningLocation" class="txtbx readOnly textMandatory" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.JoiningLocation" titile="Joining Location" />
+                    </li>
+                    <li class="alignMe nfc">
+                        <label for="NInum_form" class="page_text">
+                            Account Name</label>
+                        <input type="text" id="txtAccountName" class="txtbx readOnly" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.AccountName" title=" Account Name" maxlength="200" />
+                    </li>
+                    <li class="alignMe nfc">
+                        <label for="NInum_form" class="page_text">
+                            Owning Department</label>
+                        <input type="text" id="OwningDepartment" class="txtbx hrssReadonly" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.OwningDepartment" title="Owning Department"
+                            maxlength="200" />
+                    </li>
+                    <li class="alignMe nfc">
+                        <label for="NInum_form" class="page_text">
+                            <span>*</span>BU</label>
+                        <input type="text" id="Bu" class="txtbx textMandatory hrssReadonly" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.BU" title="BU" />
+                    </li>
+                    <li class="alignMe nfc">
+                        <label for="NInum_form" class="page_text">
+                            <span>*</span>Case Priority</label>
+                        <select id="casePriority" class="txtbx dropdown" jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.CasePriority"
+                            jqxb-listsource="CasePriorityList" jqxb-listvalue="ID" jqxb-listtext="Description"
+                            titile="Case Priority">
+                        </select>
+                    </li>
+                    <li class="alignMe nfc" style="display: none;">
+                        <label for="NInum_form" class="page_text">
+                            Expected BGV Closure Date</label>
+                        <input type="text" id="ExpBgvClosureDate" class="datetbx hrssReadonly" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.ExpectedBgvClosureDate" title="Expected Bgv Closure Date" />
+                    </li>
+                    <li class="alignMe nfc" style="display: none;">
+                        <label for="NInum_form" class="page_text">
+                            Interim BGV Completion Date</label>
+                        <input type="text" id="InterimBgvCompletionDate" class="datetbx hrssReadonly" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.InterimBgvCompletionDate" title="Interim Bgv Completion Date" />
+                    </li>
+                    <li class="alignMe nfc" style="display: none;">
+                        <label for="NInum_form" class="page_text">
+                            BGV Completion Date</label>
+                        <input type="text" id="dateformat" class="datetbx hrssReadonly" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.BgvCompletionDate" title="Bgv Completion Date" />
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span id="homePhoneMand">*</span>Home Phone</label>
+                        <input type="text" id="homePhone" class="txtbx OnlyNumeric  textMandatory"
+                            jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.HomePh" title="Home Phone"
+                            maxlength="13" />
+                        <label for="HomePhOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span id="mobileMand">*</span>Mobile</label>
+                        <input type="text" id="mobile" class="txtbx OnlyNumeric textMandatory"
+                            jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.Mobile" title="Mobile Phone"
+                            maxlength="10" />
+                        <label for="MobileOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span>*</span>EmailId</label>
+                        <input type="text" id="Emailid" class="txtbx textMandatory readOnly OnlyEmail" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.EmailId" title="Email Id" maxlength="45" />
+                        <label for="EmailIdOld" class="page_old_text">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="inner_header_basicinfo inner_sub_header_basicinfo_width flft" style="width: 900px;">
+                <div>
+                    Current Address</div>
+            </div>
+            <div class="clear">
+            </div>
+            <div id="divCandidateAddrDetails" style="padding-top: 15px">
+                <ul class="flft info_section_list">
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="currentAddMand"></span>Address</label>
+                        <textarea type="text" class="txtbx hrssReadonly nhTextMandatory" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.CurrentAddress" allowchar="200" style="height: 25px"
+                            title="Address" id="currAddress"></textarea>
+                        <label for="CurrentAddressOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="currentCountryMand"></span>Country</label>
+                        <select class="txtbx hrssReadonly nhDropdownMandatory" id="currentCountry" name="CountryValue"
+                            jqxb-datasource="CisDetails" title="Country" jqxb-datamember="CisPersonalData.CurrentCountry"
+                            jqxb-listsource="CountryList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                        </select>
+                        <label for="CurrentCountryOld" class="page_old_text">
+                        </label>
+                        <!--<input type="text" id="CountryValue" jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.CurrentCountry"
+                   class="txtbx" title="Home Phone"  />-->
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="currentStateMand"></span>State</label>
+                        <!--<input type="text" id="StateValue" jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.CurrentState"
+                     class="txtbx" title="Home Phone"  />-->
+                        <select class="txtbx hrssReadonly nhDropdownMandatory" id="currentState" name="StateValue"
+                            jqxb-datasource="CisDetails" title="State" jqxb-datamember="CisPersonalData.CurrentState"
+                            jqxb-listsource="CurrStateList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                        </select>
+                        <label for="CurrentStateOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="currentCityMand"></span>City</label>
+                        <input type="text" id="currentCity" jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.CurrentCity"
+                            class="txtbx  nhTextMandatory onlyAlp" title="City" maxlength="100" />
+                        <label for="CurrentCityOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="currentPinCodeMand"></span>Pin Code</label>
+                        <input type="text" id="currentPincode" jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.CurrentPinCode"
+                            class="txtbx hrssReadonly nhTextMandatory OnlyNumeric" title="Pincode" maxlength="10" />
+                        <label for="CurrentPinCodeOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe datePickerLi">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="currentDurationOfStayFromMand"></span>Duration of
+                            stay From
+                        </label>
+                        <input type="text" id="currentDurationOfStayFrom" class="datetbx hrssReadonly nhDateMandatory"
+                            jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.CurrentDurationOfStayFrom"
+                            title="Duration Of Stay From" readonly = "readonly" />
+                        <label for="CurrentDurationOfStayFromOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe datePickerLi">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="currentDurationOfStayToMand"></span>Duration of stay
+                            To</label>
+                        <input type="text" id="currentDurationOfStayTo" class="datetbx hrssReadonly nhDateMandatory"
+                            jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.CurrentDurationOfStayTo"
+                            title="Duration Of Stay To" readonly = "readonly" />
+                        <label for="CurrentDurationOfStayToOld" class="page_old_text">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="inner_header_basicinfo inner_sub_header_basicinfo_width flft">
+                <div>
+                    Permanent Address</div>
+            </div>
+            <div class="clear">
+            </div>
+            <div id="divCandidatePermAddrDetails" style="padding-top: 15px">
+                <div class="page_text hrssReadonly" style="color: #393939; font-size: 11px; padding-left: 15px;
+                    padding-bottom: 10px">
+                    <input type="checkbox" class="hrssReadonly" jqxb-datasource="CisDetails" style='vertical-align: middle;
+                        padding-left: 20px' jqxb-datamember="CisPersonalData.IsSameCurrPermAddress" jqxb-bindedattribute="checked"
+                        onclick="ChkPemanentAddress()" id="chkPermAddress" />Is Permanent Address same
+                    as Current Address?
+                </div>
+                <ul class="flft info_section_list">
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="permAddMand"></span>Address</label>
+                        <textarea type="text" class="txtbx hrssReadonly nhTextMandatory" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.PermanentAddress" onkeydown="RestrictCharCount(this.id,200)"
+                            allowchar="150" style="height: 25px" title="Address" id="permanentAddress"></textarea>
+                        <label for="PermanentAddressOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="permCountryMand"></span>Country</label>
+                        <select class="txtbx hrssReadonly nhDropdownMandatory" id="permanentCountry" name="PermanentCountryValue"
+                            jqxb-datasource="CisDetails" title="Country" jqxb-datamember="CisPersonalData.PermanentCountry"
+                            jqxb-listsource="CountryList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                        </select>
+                        <label for="PermanentCountryOld" class="page_old_text">
+                        </label>
+                        <!--<input type="text" id="PermanentCountry" jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.PermanentCountry"
+                     class="txtbx" title="Home Phone"  />-->
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="permStateMand"></span>State</label>
+                        <select class="txtbx hrssReadonly nhDropdownMandatory" id="permanentState" name="PermanentStateValue"
+                            jqxb-datasource="CisDetails" title="State" jqxb-datamember="CisPersonalData.PermanentState"
+                            jqxb-listsource="PermStateList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                        </select>
+                        <label for="PermanentStateOld" class="page_old_text">
+                        </label>
+                        <!-- <input type="text" id="PermanentState" jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.PermanentState"
+                   class="txtbx" title="Home Phone"  />-->
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="permCityMand"></span>City</label>
+                        <input type="text" id="permanentCity" jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.PermanentCity"
+                            class="txtbx hrssReadonly nhTextMandatory onlyAlp" title="City" maxlength="100" />
+                        <label for="PermanentCityOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="permPincodeMand"></span>PinCode</label>
+                        <input type="text" id="permanentPinCode" jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.PermanentPinCode"
+                            class="txtbx hrssReadonly nhTextMandatory OnlyNumeric" title="Pincode" maxlength="10" />
+                        <label for="PermanentPinCodeOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe datePickerLi">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="permanentDurationOfStayFromMand"></span>Duration of
+                            stay From
+                        </label>
+                        <input type="text" id="permanentDurationOfStayFrom" class="datetbx hrssReadonly nhDateMandatory"
+                            jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.PermanentDurationOfStayFrom"
+                            title="Duration Of Stay From" readonly = "readonly" />
+                        <label for="PermanentDurationOfStayFromOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe datePickerLi">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="permanentDurationOfStayToMand"></span>Duration of
+                            stay To</label>
+                        <input type="text" id="permanentDurationOfStayTo" class="datetbx hrssReadonly nhDateMandatory"
+                            jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.PermanentDurationOfStayTo"
+                            title="Duration Of Stay To" readonly = "readonly" />
+                        <label for="PermanentDurationOfStayToOld" class="page_old_text">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="inner_header_basicinfo inner_sub_header_basicinfo_width flft">
+                <div>
+                    Longest Stay Address in Last Seven Years</div>
+            </div>
+            <div class="clear">
+            </div>
+            <div id="divCandidateLongStayAddrDetails" style="padding-top: 15px">
+                <div class="page_text hrssReadonly" style="color: #393939; font-size: 11px; padding-left: 15px;
+                    padding-bottom: 10px">
+                    <input type="checkbox" class="hrssReadonly" jqxb-datasource="CisDetails" style='vertical-align: middle;
+                        padding-left: 20px' jqxb-datamember="CisPersonalData.IsSameCurrLongestStayAddress"
+                        jqxb-bindedattribute="checked" onclick="ChkLongestStayAddress()" id="chkLongestStayAddress" />Is
+                    Longest Stay Address same as Current Address?
+                </div>
+                <ul class="flft info_section_list">
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="longAddMand"></span>Address</label>
+                        <textarea type="text" class="txtbx hrssReadonly nhTextMandatory" jqxb-datasource="CisDetails"
+                            jqxb-datamember="CisPersonalData.LongestStayAddress" onkeydown="RestrictCharCount(this.id,200)"
+                            allowchar="150" style="height: 25px" title="Address" id="longestStayAddress"></textarea>
+                        <label for="LongestStayAddressOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="longCountryMand"></span>Country</label>
+                        <!--<input type="text" id="LongestStayCountry" jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.LongestStayCountry"
+                     class="txtbx" title="Home Phone"  />-->
+                        <select class="txtbx hrssReadonly nhDropdownMandatory" id="longestStayCountry" name="LongestStayCountryValue"
+                            jqxb-datasource="CisDetails" title="Country" jqxb-datamember="CisPersonalData.LongestStayCountry"
+                            jqxb-listsource="CountryList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                        </select>
+                        <label for="LongestStayCountryOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="longStateMand"></span>State</label>
+                        <select class="txtbx hrssReadonly nhDropdownMandatory" id="longestStayState" name="LongestStayState"
+                            jqxb-datasource="CisDetails" title="State" jqxb-datamember="CisPersonalData.LongestStayState"
+                            jqxb-listsource="longestStayStateList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                        </select>
+                        <label for="LongestStayStateOld" class="page_old_text">
+                        </label>
+                        <!--<input type="text" id="LongestStayState" jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.LongestStayState"
+                    class="txtbx" title="Home Phone"  />-->
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="longCityMand"></span>City</label>
+                        <input type="text" id="longestStayCity" jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.LongestStayCity"
+                            class="txtbx hrssReadonly nhTextMandatory onlyAlp" title="City" maxlength="100" />
+                        <label for="LongestStayCityOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="longPincodeMand"></span>PinCode</label>
+                        <input type="text" id="longestStayPinCode OnlyNumeric" jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.LongestStayPinCode"
+                            class="txtbx hrssReadonly nhTextMandatory" title="pincode" maxlength="10" />
+                        <label for="LongestStayPinCodeOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe datePickerLi">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="longestStaytDurationOfStayFromMand"></span>Duration
+                            of stay From
+                        </label>
+                        <input type="text" id="longestStaytDurationOfStayFrom" class="datetbx hrssReadonly  nhDateMandatory"
+                            jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.LongestStaytDurationOfStayFrom"
+                            title="Duration Of Stay From" readonly = "readonly" />
+                        <label for="LongestStaytDurationOfStayFromOld" class="page_old_text">
+                        </label>
+                    </li>
+                    <li class="alignMe datePickerLi">
+                        <label for="NInum_form" class="page_text">
+                            <span class="nhMandatory" id="longestStayDurationOfStayToMand"></span>Duration of
+                            stay To</label>
+                        <input type="text" id="longestStayDurationOfStayTo" class="datetbx hrssReadonly nhDateMandatory"
+                            jqxb-datasource="CisDetails" jqxb-datamember="CisPersonalData.LongestStayDurationOfStayTo"
+                            title="Duration Of Stay To" readonly = "readonly" />
+                        <label for="LongestStayDurationOfStayToOld" class="page_old_text">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div id="divBgvNoticeBar">
+        </div>
+        <div class="proceed" style="margin-right: 20px; padding-top: 10px;">
+            <input type="button" class="btn_" id="btnSaveTask" onclick="SaveCisData(0);" value="Save"
+                title="Save" style="margin-right: 20px;" />
+            <input type="button" class="btn_" id="btnSubmitTask" onclick="SaveCisData(1); return false;"
+                value="Submit and Proceed Next" />
+        </div>
+    </div>
+    <script src="../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/Forms/CoreScripts/OBUtilityScripts.js" type="text/javascript"></script>
+    <script src="BgvCandidateInfo.js" type="text/javascript"></script>
+    <script src="BgvScript.js" type="text/javascript"></script>
+    <script src="BgvValidation.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $().ready(function () {
+            $('.page_old_text').each(function () {
+                if ($(this).prev()[0].tagName.toLowerCase() == 'select') {
+                    var id = $(this).prev().attr('id');
+                    var txt = $.trim($(this).text());
+                    $(this).text($('#' + id).find('option[value="' + txt + '"]').text());
+
+                }
+            });
+        });
+    </script>
+</body>
+</html>

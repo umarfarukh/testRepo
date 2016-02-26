@@ -1,0 +1,487 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,IE=9,IE=8" />
+    <title>Personal Data Form</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="../../../../Styles/jquery.ui.all.css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>    
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/Denmark/PersonalData.js" type="text/javascript"></script>
+    
+    <style type="text/css">
+        .pd_india ul.personalDetails li.date_box LABEL.notMandatory
+        {
+            margin-right: 0;
+            margin-left: 50px;
+        }
+        
+        .pd_india ul.personalDetails li.date_box label.alert_f_text
+        {
+            float: left;
+            margin-left: -500px;
+        }
+         .pd_india ul.personalDetails li.date_box1 label.alert_f_text{
+			    float: left; margin-top: 23px;
+			}
+			.pd_india ul.personalDetails li.date_box1 img.alert_f{
+			    float: left; margin-left: -170px;
+			}
+			.pd_india ul.personalDetails li.date_box1 input{
+			    width:145px;
+			}
+    </style>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id="pageMain" class="personalDataForm">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails pd_india">
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        Registration Form New Employee
+                                    </p>
+                                </div>
+                                <br />
+                                <li>
+                                    <label>
+                                        <span>*</span> First Name</label>
+                                    <input type="text" id="Pg_1_text_FirstName" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.FirstName"
+                                        readonly="readonly" maxlength="30" title="First Name" class="tbForm textMandatory onlyAlp"
+                                        disabled="disabled" />
+                                </li>
+                                <li class="pageText">
+                                    <label>
+                                        Middle Name</label>
+                                    <input type="text" id="Pg_1_text_MiddleName" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.MiddleName"
+                                        maxlength="30" title="Middle  Name" class="tbForm onlyAlp" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span> Sur Name</label>
+                                    <input type="text" id="Pg_1_text_SurName" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.LastName"
+                                        readonly="readonly" maxlength="30" title="Sur Name" class="tbForm textMandatory onlyAlp"
+                                        disabled="disabled" />
+                                </li>
+                                <li class="date_box">
+                                    <label>
+                                        Date of Birth</label>
+                   <input type="text" id="Pg_1_text_DateOfBirth" style="margin-right:0px"; jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.DOB"
+                    maxlength="30" readonly="readonly" title="Date of Birth" class="tbForm textMandatory jQrydatepicker"/>
+                   </li>
+                                <li>
+                                    <label>
+                                        <span>*</span> Nationality</label>
+                                    <select class="tbForm dropdown" id="Pg_1_text_Nationality" name="Nationality" jqxb-datasource="FormDetails"
+                                        title="Nationality" jqxb-datamember="PersonalData.Nationality" jqxb-listsource="CountryList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li>
+                                    <label>
+                                       Marital Status</label>
+                                    <select id="maritalstatus_form" class="tbForm" name="MaritalStatus" title="Marital Status"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.MaritalStatus" jqxb-listsource="MaritalList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="sex_form" style="margin-left:25px;">
+                                        Gender</label>
+                                    <select class="tbForm" id="sex_form" name="Sex" jqxb-datasource="FormDetails"
+                                        title="Sex" jqxb-datamember="PersonalData.Gender" jqxb-listsource="GenderList"
+                                        jqxb-listvalue="UserValue" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span> CPR(Danish ID Number)</label>
+                                    <input type="text" id="Pg_1_text_CPRNumber" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NationalID"
+                                        title="CPR Number" onkeypress="RestrictCharCount(this.id,19)" allowchar="20"
+                                        class="tbForm textMandatory AlphanumericOnly" maxlength="20" />
+                                </li>
+
+                                <li>
+                                <label for="mobile"> 
+                                <span>*</span>Mobile Phone 
+                                </label>
+                                <input type="text" id="Pg_1_text_Mobile" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Mobile"
+                                class="tbForm textMandatory OnlyNumeric" onkeypress="RestrictCharCount(this.id,14)" allowchar="15" 
+                                maxlength="15" title="Mobile Phone" />
+                                </li>
+                                <li>
+                                <label for="email"><span>*</span> Email address 
+                                </label>
+                                <input type="text" id="Pg_1_text_EmailAddress" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.EmailId"
+                                class="tbForm textMandatory" title="Email Address" />
+                                </li>
+
+                            </ul>
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p style="font-weight: bold;">
+                                        Permanent Address
+                                    </p>
+                                </div>
+                                <br />
+                                <li>
+                                    <label>
+                                        <span>*</span> Address Line 1
+                                    </label>
+                                    <input type="text" id="Pg_1_text_PAddress1" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PermanentAddressLine1"
+                                        class="tbForm textMandatory onlyAlphanumeric" maxlength="55" title="Please Enter the Addressline1" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Address Line 2
+                                    </label>
+                                    <input type="text" id="Pg_1_text_PAddress2" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PermanentAddressLine2"
+                                        class="tbForm textMandatory onlyAlphanumeric" maxlength="55" title="Please Enter the Addressline2" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span> City
+                                    </label>
+                                    <input type="text" id="Pg_1_text_PCity" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PermanentCity"
+                                        class="tbForm textMandatory onlyAlp" maxlength="30" title="Please Enter the City" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span> Zipcode
+                                    </label>
+                                    <input type="text" id="Pg_1_text_PZipcode" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PermanentPinCode"
+                                        class="tbForm textMandatory Alphanumeric" onkeypress="RestrictCharCount(this.id,9)"
+                                        allowchar="10" title="Please Enter the ZIPcode" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span> Country</label>
+                                    <select class="tbForm dropdown" id="Pg_1_text_CurrentCountry" name="Gender" jqxb-datasource="FormDetails"
+                                        title="Country" jqxb-datamember="PersonalData.PermanentCountry" jqxb-listsource="CountryList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span> Home Telephone
+                                    </label>
+                                    <input type="text" id="Pg_1_text_HomeTelephone" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.HomePh"
+                                        class="tbForm textMandatory OnlyNumeric" onkeypress="RestrictCharCount(this.id,14)" allowchar="15"
+                                        title="Telephone" />
+                                </li>
+                            </ul>
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        Present Address
+                                    </p>
+                                </div>
+                                <br />
+                                <li>
+                                    <input type="checkbox" jqxb-datasource="FormDetails" style='vertical-align: middle;'
+                                        jqxb-datamember="PersonalData.IsSameCurrPermAddress" jqxb-bindedattribute="checked"
+                                        onchange="ChkPemanentAddress()" id="chkpermAddress_form" />
+                                    Is Present Address same as Permanent Address? </li>
+                                <li></li>
+                                <li>
+                                    <label>
+                                        <span>*</span> Address Line 1
+                                    </label>
+                                    <input type="text" id="Pg_1_text_CAddress1" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.CurrentAddressLine1"
+                                        class="tbForm textMandatory onlyAlphanumeric" maxlength="30" title="Please Enter the Addressline1" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span> Address Line 2
+                                    </label>
+                                    <input type="text" id="Pg_1_text_CAddress2" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.CurrentAddressLine2"
+                                        class="tbForm textMandatory onlyAlphanumeric" maxlength="30" title="Please Enter the Addressline2" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span> City
+                                    </label>
+                                    <input type="text" id="Pg_1_text_CCity" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.CurrentCity"
+                                        class="tbForm textMandatory onlyAlp" maxlength="30" title="Please Enter the city" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span> Zipcode
+                                    </label>
+                                    <input type="text" id="Pg_1_text_CZipcode" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.CurrentPinCode"
+                                        class="tbForm textMandatory Alphanumeric" onkeypress="RestrictCharCount(this.id,9)"
+                                        allowchar="10" title="Please Enter the Zipcode" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span> Country</label>
+                                    <select class="tbForm dropdown" id="Pg_1_text_Country" name="Gender" jqxb-datasource="FormDetails"
+                                        title="Country" jqxb-datamember="PersonalData.CurrentCountry" jqxb-listsource="CountryList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                               
+                            </ul>
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p style="font-weight: bold;">
+                                        Emergency Contact
+                                    </p>
+                                </div>
+                                <br />
+                                <li>
+                                    <label for="name">
+                                        <span>*</span> Emergency Contact Name
+                                    </label>
+                                    <input type="text" id="Pg_2_text_Emergencyname" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.EmergencyContactName"
+                                        class="tbForm textMandatory Alphaspecialchar" maxlength="30" title="Emergency Name" />
+                                </li>
+                                <li>
+                                    <label for="relation">
+                                        <span>*</span> Emergency Contact<br />
+                                        Relationship
+                                    </label>
+                                    <select class="tbForm dropdown" id="Pg_2_text_RelationShip" name="Relationship" jqxb-datasource="FormDetails"
+                                        title="Emergency Contact Relation" jqxb-datamember="PersonalData.EmergencyContactRelationship"
+                                        jqxb-listsource="RelationshipList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="telefone">
+                                        <span>*</span> Emergency Contact Phone
+                                    </label>
+                                    <input type="text" id="Pg_2_text_Emergencytelephone" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="PersonalData.EmergencyContactNo" class="tbForm textMandatory OnlyNumeric"
+                                        onkeypress="RestrictCharCount(this.id,14)" allowchar="15" title="Contact Phone number" />
+                                </li>
+                            </ul>
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p style="font-weight: bold;">
+                                        Passport Details
+                                    </p>
+                                </div>
+                                <br />
+                                <li>
+                                    <label for="nameinpassport">
+                                        <span>*</span> Name as in Passport
+                                    </label>
+                                    <input type="text" id="Pg_1_text_PassportName" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PassportName"
+                                        class="tbForm textMandatory Alphaspecialchar" value="pass" maxlength="30" title="Name as in passport" />
+                                </li>
+                                 <!-- <li >
+                        <label for="nameinpassport"><span>*</span>
+                        First Name
+                        </label>
+                        <input type="text" id="Pg_1_text_PassportName" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PassportName"
+                         class="tbForm textMandatory Alphaspecialchar" value="pass"
+                         maxlength="30" title="Name as in passport" />
+                        </li>-->
+
+                        <li  class="pageText"> 
+                        <label for="nameinpassport" class="notMandatory">
+                        Middle Name
+                        </label>
+                        <input type="text" id="Text1" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PassportMiddleName"
+                         class="tbForm Alphaspecialchar"
+                         maxlength="30" title="Name as in Passport" />
+                        </li>
+                        <li> 
+                        <label for="nameinpassport">
+                        <span>*</span>Last Name
+                        </label>
+                        <input type="text" id="Text2" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PassportLastName"
+                         class="tbForm textMandatory Alphaspecialchar"
+                         maxlength="30" title="Name as in Passport" />
+                        </li>
+                                <li>
+                                    <label for="number">
+                                        <span>*</span> Passport Number
+                                    </label>
+                                    <input type="text" id="Pg_1_text_Number" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PassportNo"
+                                        class="tbForm textMandatory  onlyAlphanumeric" maxlength="30" title="Number" />
+                                </li>
+                                <li class="date_box date_box1">
+                                    <label for="dateofissue">
+                                        <span>*</span> Date Of Issue
+                                    </label>
+                                    <input type="text" id="Pg_1_text_Dateofissue" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PassportIssueDate"
+                                        class="tbForm textMandatory jQrydatepicker" readonly="readonly" title="Dateofissue" />
+                                </li>
+                                <li>
+                                    <label for="placeofissue">
+                                        <span>*</span> Place Of Issue
+                                    </label>
+                                    <input type="text" id="Pg_1_text_Placeofissue" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PlaceOfIssue"
+                                        class="tbForm textMandatory onlyAlp" maxlength="30" title="Placeofissue" />
+                                </li>
+                                <li class="date_box date_box1">
+                                    <label for="expirydate">
+                                        <span>*</span> Expiry Date
+                                    </label>
+                                    <input type="text" id="Pg_1_text_Expirydate" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PassportExpiryDate"
+                                        class="tbForm textMandatory jQryExpdate" readonly="readonly" title="Expirydate" />
+                                </li>
+                                <li>
+                                    <label for="countrylist">
+                                        <span>*</span> Country
+                                    </label>
+                                    <select class="tbForm dropdown" id="PassportCountry" name="PassportCountry" jqxb-datasource="FormDetails"
+                                        title="PassportCountry" jqxb-datamember="PersonalData.PassportCountry" jqxb-listsource="CountryList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 1st page-->
+                <!--Start of 2nd page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p style="font-weight: bold;">
+                                        Contract Data
+                                    </p>
+                                </div>
+                                <br />
+                                <li>
+                                    <label>
+                                        <span>*</span> Hours Per Week</label>
+                                    <input type="text" id="Pg_2_text_HoursPerWeek" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.HoursPerWeek"
+                                        maxlength="30" title="HoursPerWeek" class="tbForm textMandatory OnlyNumeric"
+                                        onkeypress="RestrictCharCount(this.id,2)" allowchar="3" />
+                                </li>
+                                <li class="pageText">
+                                    <label>
+                                        Contract
+                                    </label>
+                                    <select class="tbForm" id="Contract" name="AccountType" jqxb-datasource="FormDetails"
+                                        title="Contract" jqxb-datamember="PersonalData.Contract" jqxb-listsource="Contractlist"
+                                        jqxb-listvalue="UserValue" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="account type">
+                                        Working Days a Week
+                                    </label>
+                                    <select class="tbForm" id="WhichDays" name="AccountType" jqxb-datasource="FormDetails"
+                                        title="Working days a week" jqxb-datamember="PersonalData.WorkingDays" jqxb-listsource="WorkingDaysaWeek"
+                                        jqxb-listvalue="UserValue" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li>
+                                    <label>
+                                        <span></span>&nbsp; Which Days</label>
+                                    <input type="checkbox" style="padding: 0 5px" name="WhichDays" id="Pg_2_check_Mon"
+                                        class="days" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Mon"
+                                        jqxb-bindedattribute="checked" onchange="WhichDays();"> Monday</input>
+                                    <input type="checkbox" style="padding: 0 5px" name="WhichDays" id="Pg_2_check_Tue"
+                                        jqxb-datasource="FormDetails" class="days" jqxb-datamember="PersonalData.Tue"
+                                        jqxb-bindedattribute="checked" onchange="WhichDays();"> Tuesday</input>
+                                    <input type="checkbox" style="padding: 0 5px" name="WhichDays" id="Pg_2_check_Wed"
+                                        jqxb-datasource="FormDetails" class="days" jqxb-datamember="PersonalData.Wed"
+                                        jqxb-bindedattribute="checked" onchange="WhichDays();"> Wednesday</input><br />
+                                    <br />
+                                    <input type="checkbox" style="padding: 0 5px" name="WhichDays" id="Pg_2_check_Thur"
+                                        jqxb-datasource="FormDetails" class="days" jqxb-datamember="PersonalData.Thur"
+                                        jqxb-bindedattribute="checked" onchange="WhichDays();"> Thursday</input>
+                                    <input type="checkbox" style="padding: 0 5px" name="WhichDays" id="Pg_2_check_Fri"
+                                        jqxb-datasource="FormDetails" class="days" jqxb-datamember="PersonalData.Fri"
+                                        jqxb-bindedattribute="checked" onchange="WhichDays();"> Friday</input>
+                                </li>
+                                <li>
+                                    <label for="account type">
+                                        EmploymentContract
+                                    </label>
+                                    <select class="tbForm" id="EmploymentContract" name="AccountType" jqxb-datasource="FormDetails"
+                                        title="EmploymentContract" jqxb-datamember="PersonalData.Employment" jqxb-listsource="EmploymentContract"
+                                        jqxb-listvalue="UserValue" jqxb-listtext="Description">
+                                    </select>
+
+                                </li>
+                            </ul>
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        Bank Details
+                                    </p>
+                                </div>
+                                <br />
+                                <li>
+                                    <label for="account type">
+                                       <span>*</span>Account Type
+                                    </label>
+                                    <select class="tbForm dropdown" id="Pg_2_text_accounttype_form" name="AccountType"
+                                        jqxb-datasource="FormDetails" title="Account Type" jqxb-datamember="PersonalData.AccountType"
+                                        jqxb-listsource="AccountTypeList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="accountholder">
+                                       <span>*</span>Name as on the Account
+                                    </label>
+                                    <input type="text" id="Pg_2_text_accountholder" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.BankAccountName" onkeypress="RestrictCharCount(this.id,49)" allowchar="50" maxlength="50"
+                                        class="tbForm textMandatory onlyAlp" title="AccountName" />
+                                </li>
+                                <li>
+                                    <label for="nr">
+                                       <span>*</span>IBAN Number
+                                    </label>
+                                    <input type="text" id="Pg_2_text_nr" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.BankAccountNo" onkeypress="RestrictCharCount(this.id,34)" allowchar="35" maxlength="35"
+                                        class="tbForm textMandatory Alphanumeric" title="IBAN Number" />
+                                </li>
+                                <li>
+                                    <label for="swiftcode">
+                                        <span>*</span>SWIFT Code
+                                    </label>
+                                    <input type="text" id="Pg_2_text_swiftcode" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.SortCode"
+                                        class="tbForm onlyAlp textMandatory" onkeypress="RestrictCharCount(this.id,10)" allowchar="11"
+                                        maxlength="11" title="SwiftCode" />
+                                </li>
+                                <li>
+                                    <label for="countrylist">
+                                      <span>*</span>Country
+                                    </label>
+                                    <select class="tbForm dropdown" id="Pg_2_text_Country_form" name="BankCountry" jqxb-datasource="FormDetails"
+                                        title="BankCountry" jqxb-datamember="PersonalData.BankCountry" jqxb-listsource="CountryList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="BankNumber">
+                                       <span>*</span>Bank Registration Number
+                                    </label>
+                                    <input type="text" id="Pg_2_BankRegistrationNumber" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="PersonalData.BankRegistrationNumber" class="tbForm textMandatory" title="Bank Registration Number" />
+                                  </li>
+                            </ul>
+                        </div>
+                        <div class="Signature" id="Sign_PageId_2">
+                        </div>
+                    </div>
+                </div>
+                <!--End of 2nd page-->
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

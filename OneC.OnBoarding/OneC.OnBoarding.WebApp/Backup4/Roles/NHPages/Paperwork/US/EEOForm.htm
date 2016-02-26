@@ -1,0 +1,482 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>EEO Form</title>
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/US/EEOForm.js" type="text/javascript"></script>
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <style type="text/css">
+        .inputText_Readonly
+        {
+            background-color: InactiveCaptionText;
+            font-size: 15px;
+            padding: 3px 5px 2px;
+            border: 1px solid #ccc !important;
+            background: #f0f0f0;
+            color: #888 !important;
+            cursor: default;
+        }
+        .color .spanRed
+        {
+            color: Red;
+            text-decoration: none;
+            display: inline;
+            padding-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id='pageMain'>
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="page_header11">
+                                <p>
+                                    Equal Employment Opportunity (EEO) and Veteran Self-Identification Form</p>
+                            </div>
+                            <div>
+                                <p class="pageText">
+                                    Cognizant is an equal opportunity employer. The United States government has outlined
+                                    regulations regarding equal employment opportunity which require us to compile annual
+                                    statistical reports on employees. In order to comply with these laws and regulations,
+                                    we are requesting your cooperation in completing this EEO Self Identification Form.
+                                    Please be assured that you will not be subject to any adverse treatment if you choose
+                                    not to disclose the information requested. In the event that you do provide the
+                                    information requested, the information and this form will be processed and maintained
+                                    separately from your personnel file.
+                                </p>
+                                <ul class="eeo_tbl space_b10">
+                                    <li>
+                                        <div class="pageText">
+                                            &nbsp; Social Security Number
+                                        </div>
+                                        <div class="pageText">
+                                            <!--<a style="color: Red">*&nbsp;</a>-->Last Name
+                                        </div>
+                                        <div class="pageText">
+                                            &nbsp;&nbsp;First Name
+                                        </div>
+                                        <div class="pageText">
+                                            <!--<a style="color: Red">*&nbsp;</a>-->Middle Initial
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText">
+                                            <input class="inputText_Readonly" unselectable="on" type="text" style="border: 1px solid #000"
+                                                id="Pg_1_text_SecurityNumber" readonly="readonly" />
+                                        </div>
+                                        <div class="pageText">
+                                            <input class="inputText_Readonly" unselectable="on" type="text" style="border: 1px solid #000"
+                                                id="Pg_1_text_LastName" readonly="readonly" />
+                                        </div>
+                                        <div class="pageText">
+                                            <input class="inputText_Readonly" unselectable="on" type="text" style="border: 1px solid #000"
+                                                id="Pg_1_text_FirstName" readonly="readonly" />
+                                        </div>
+                                        <div class="pageText">
+                                            <input class="inputText_Readonly" unselectable="on" type="text" style="border: 1px solid #000"
+                                                id="Pg_1_text_MiddleInitial" readonly="readonly" />
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p class="pageText">
+                                    <b>Select all the following categories with which you identify:</b>
+                                </p>
+                                <ul class='eeo_tbl space_b10'>
+                                    <li  >
+                                        <div class="pageText">
+                                            <input type="radio" name="F" id="Pg_1_radio_Female"   style="vertical-align: middle;" disabled="disabled"   />Female
+                                        </div>
+                                        <div class="pageText">
+                                            <input type="radio" name="M" id="Pg_1_radio_Male"  style="vertical-align: middle;" disabled="disabled"  />  Male
+                                        </div>
+                                        <div class="pageText">
+                                            <input type="radio" name="Null" id="Pg_1_radio_NotToAnswer"  style="vertical-align: middle;" disabled="disabled"    />  I prefer not to answer</div>
+                                    </li>
+                                </ul>
+                                <ul class='eeo_chktbl space_b10'>
+                                    <li>
+                                        <div class="page_text_underline">
+                                            <b>ETHNICITY</b></div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText eeoChkDiv">
+                                            <input type="radio" name="ETHNICITY" id="Pg_1_radio_HISPANIC" onclick="EnableHispanic();"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="EEOForm.Hispanic" jqxb-bindedattribute="checked" /></div>
+                                        <div class="pageText">
+                                            <p style="font-weight: bold">
+                                                HISPANIC OR LATINO</p>
+                                            - A person of Cuban, Mexican, Puerto Rican, South or Central American, or other
+                                            Spanish culture or origin regardless of race.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText eeoChkDiv">
+                                            <input type="radio" name="ETHNICITY" id="Pg_1_radio_NONHISPANIC" onclick="EnableNonHispanic();"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="EEOForm.NonHispanic" jqxb-bindedattribute="checked" /></div>
+                                        <div class="pageText">
+                                            <p style="font-weight: bold">
+                                                I AM NOT HISPANIC OR LATINO</p>
+                                            - I am <u>not</u> person of Cuban, Mexican, Puerto Rican, South or Central American, or
+                                            other Spanish culture or origin regardless of race.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText eeoChkDiv">
+                                            <input type="radio" name="ETHNICITY" id="Pg_1_radio_EthnicityNoAnswer" onclick="EnableEthnicityNotPrefer();"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="EEOForm.NotPrefered" jqxb-bindedattribute="checked" /></div>
+                                        <div class="pageText">
+                                            <p style="font-weight: bold">
+                                                I PREFER NOT TO ANSWER</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div id="race">
+                                    <ul class='eeo_chktbl space_b10'>
+                                        <li>
+                                            <div class="page_text_underline">
+                                                <b>RACE</b></div>
+                                        </li>
+                                        <li>
+                                            <div class="pageText eeoChkDiv">
+                                                <input type="radio" id="Pg_1_radio_White" name="race" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="EEOForm.White" jqxb-bindedattribute="checked" onclick="EnableWhite();" /></div>
+                                            <div class="pageText">
+                                                <p style="font-weight: bold">
+                                                    WHITE</p>
+                                                (Not Hispanic or Latino) - All persons having origins in any of the original peoples
+                                                of Europe, North Africa or the Middle East;</div>
+                                        </li>
+                                        <li>
+                                            <div class="pageText eeoChkDiv">
+                                                <input type="radio" id="Pg_1_radio_Black" name="race" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="EEOForm.Black" jqxb-bindedattribute="checked" onclick="EnableBlack();" /></div>
+                                            <div class="pageText">
+                                                <p style="font-weight: bold">
+                                                    BLACK OR AFRICAN AMERICAN
+                                                </p>
+                                                (Not Hispanic or Latino) -All persons having origins in any of the black racial
+                                                groups of Africa;</div>
+                                        </li>
+                                        <li>
+                                            <div class="pageText eeoChkDiv">
+                                                <input type="radio" id="Pg_1_radio_Native" name="race" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="EEOForm.Native" jqxb-bindedattribute="checked" onclick="EnableNative();" /></div>
+                                            <div class="pageText">
+                                                <p style="font-weight: bold">
+                                                    NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER</p>
+                                                (Not Hispanic or Latino) - A person having origins in any of the peoples of Hawaii,
+                                                Guam, Samoa, or other Pacific Islands;
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pageText eeoChkDiv">
+                                                <input type="radio" id="Pg_1_radio_Asian" name="race" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="EEOForm.Asian" jqxb-bindedattribute="checked" onclick="EnableAsian();" /></div>
+                                            <div class="pageText" style="width: 90%;">
+                                                <p style="font-weight: bold">
+                                                    ASIAN</p>
+                                                (Not Hispanic or Latino) - A person having origins in any of the original peoples
+                                                of the Far East, Southeast Asia, or the Indian Subcontinent including, for example,
+                                                Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands,
+                                                Thailand, and Vietnam;
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pageText eeoChkDiv">
+                                                <input type="radio" id="Pg_1_radio_American" name="race" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="EEOForm.American" jqxb-bindedattribute="checked" onclick="EnableAmerican();" /></div>
+                                            <div class="pageText">
+                                                <p style="font-weight: bold">
+                                                    NATIVE AMERICAN OR ALASKAN NATIVE</p>
+                                                (Not Hispanic or Latino) - A person having origins in any of the original peoples
+                                                of North and South America (including Central America), and who maintains tribal
+                                                affiliation or community recognition;</div>
+                                        </li>
+                                        <li>
+                                            <div class="pageText eeoChkDiv">
+                                                <input type="radio" id="Pg_1_radio_TwoMore" name="race" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="EEOForm.TwoMore" jqxb-bindedattribute="checked" onclick="EnableTwoOrMore();" /></div>
+                                            <div class="pageText">
+                                                <p style="font-weight: bold">
+                                                    TWO OR MORE RACES</p>
+                                                (Not Hispanic or Latino) - All persons who identify with more than one of the above
+                                                five races.
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pageText eeoChkDiv">
+                                                <input type="radio" id="Pg_1_radio_RaceNoAns" name="race" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="EEOForm.RaceNoAns" jqxb-bindedattribute="checked" onclick="EnableRaceNoAns();" /></div>
+                                            <div class="pageText">
+                                                <p style="font-weight: bold">
+                                                    I PREFER NOT TO ANSWER</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class='eeo_chktbl space_b10'>
+                                    <li>
+                                        <div class="page_text_underline">
+                                            <b>VETERAN</b></div>
+                                    </li>
+                                    <li>
+                                        <!--<div class="pageText eeoChkDiv">
+                                            <input type="radio" id="Pg_1_radio_Veteran" name="veteran" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEOForm.Veterancheck" jqxb-bindedattribute="checked" onclick="EnableVeteran();" /></div>-->
+                                        <!--<div id="diveone" class="pageText" style="width: 90%;">-->
+                                        <p class="pageText">
+                                            I served in the United States Army, Navy, Marine Corps, Air Force, or Coast Guard,
+                                            in a reserve unit of one of these military components, or in the National or Air
+                                            National Guard of the United States, and was discharged or released under <b>conditions
+                                                other than dishonorable.</b>
+                                        </p>
+                                        <!--  <p style="font-weight: bold">
+                                            </p>
+                                            <br />
+                                            <div id="divetow">-->
+                                        <!--     <ul class='eeo_chktbl mini_tblRow space_b10'>-->
+                                        <li>
+                                            <p class="pageText" style="color: #757575">
+                                                SPECIAL DESIGNATIONS:</p>
+                                        </li>
+                                        <li>
+                                            <div class="pageText eeoChkDiv">
+                                                <input type="checkbox" id="Pg_1_chkbox_DisabledVeteran" name="DisabledVeteran" jqxb-datasource="FormDetails"
+                                                    onclick="EnableDisabledVeterans();" jqxb-datamember="EEOForm.DisabledVeteran"
+                                                    jqxb-bindedattribute="checked" /></div>
+                                            <div class="pageText">
+                                                <p style="font-weight: bold">
+                                                    DISABLED VETERAN</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pageText eeoChkDiv">
+                                                <input type="checkbox" id="Pg_1_chkbox_ArmedVeteran" name="ArmedVeteran" jqxb-datasource="FormDetails"
+                                                    onclick="EnableArmedVeterans();" jqxb-datamember="EEOForm.ArmedVeteran" jqxb-bindedattribute="checked" /></div>
+                                            <div class="pageText">
+                                                <p style="font-weight: bold">
+                                                    ARMED FORCES SERVICE MEDAL VETERANS</p>
+                                                <br />
+                                                A veteran who, while serving on active duty in the Armed Forces, participated in
+                                                a United States military operation <b>for which an Armed Forces service medal was awarded</b>
+                                                pursuant to Executive Order 12985.
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="pageText eeoChkDiv">
+                                                <input type="checkbox" id="Pg_1_chkbox_OthersVeteran" name="OthersVeteran" jqxb-datasource="FormDetails"
+                                                    onclick="EnableOthers();" jqxb-datamember="EEOForm.OthersVeteran" jqxb-bindedattribute="checked" /></div>
+                                            <div class="pageText">
+                                                <p style="font-weight: bold">
+                                                    OTHER PROTECTED VETERANS</p>
+                                                <br />
+                                                Veterans who served on active duty in the U.S. military <b>during a war or in a campaign
+                                                    or expedition </b>for which a campaign badge is awarded.</div>
+                                        </li>
+                                        <li>
+                                            <div class="pageText eeoChkDiv">
+                                                <input type="checkbox" id="Pg_1_chkbox_SeperatedVeteran" name="SeperatedVeteran"
+                                                    onclick="EnableSeperatedVeterans();" jqxb-datasource="FormDetails" jqxb-datamember="EEOForm.SeperatedVeteran"
+                                                    jqxb-bindedattribute="checked" /></div>
+                                            <div class="pageText">
+                                                <p style="font-weight: bold">
+                                                    RECENTLY SEPARATED VETERANS</p>
+                                                <br />
+                                                Veterans within 36 months from discharge or release from active duty.</div>
+                                        </li>
+                                        <!--</ul>-->
+                                        <!--   </div>-->
+                                        <!--  </div>-->
+                                    </li>
+                                    <li>
+                                        <div class="pageText eeoChkDiv">
+                                            <input type="checkbox" id="Pg_1_chkbox_military" name="Military" jqxb-datasource="FormDetails"
+                                                onclick="EnableMilitary();" jqxb-datamember="EEOForm.Military" jqxb-bindedattribute="checked" /></div>
+                                        <div class="pageText">
+                                            <p style="font-weight: bold">
+                                                MILITARY SERVICE- OTHER
+                                            </p>
+                                            A person who served on active duty in the U.S. military, but did not serve during
+                                            a war or in a campaign or Expedition for which a campaign badge is awarded.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText eeoChkDiv">
+                                            <input type="checkbox" id="Pg_1_chkbox_Reservists" name="Reservists" jqxb-datasource="FormDetails"
+                                                onclick="EnableReservists();" jqxb-datamember="EEOForm.Reservists" jqxb-bindedattribute="checked" /></div>
+                                        <div class="pageText">
+                                            <p style="font-weight: bold">
+                                                RESERVISTS/ NATIONAL GUARD
+                                            </p>
+                                            I am currently serving in a Reserve Component or National Guard.</div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText eeoChkDiv">
+                                            <input type="checkbox" id="Pg_1_chkbox_NoneOfAbove" name="NoneOfAbove" onclick="EnableNoneVeterans();"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="EEOForm.NoneOfAbove" jqxb-bindedattribute="checked" /></div>
+                                        <div class="pageText">
+                                            <p style="font-weight: bold">
+                                                I AM NOT A VETERAN.</p>
+                                            I read the above definitions and none of them apply to me.</div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText eeoChkDiv">
+                                            <input type="checkbox" id="Pg_1_chkbox_VeteranNoAns" name="VeteranNoAns" onclick="EnableNotPreferVeterans();"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="EEOForm.VeteranNoAns" jqxb-bindedattribute="checked" /></div>
+                                        <div class="pageText">
+                                            <p style="font-weight: bold">
+                                                I PREFER NOT TO ANSWER</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class='eeo_chktbl space_b10'>
+                                    <li>
+                                        <div class="page_text_underline">
+                                            <b>DISABILITY</b></div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText eeoChkDiv">
+                                            <input type="radio" name="disability" id="Radio2" onclick="EnableDisability();" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEOForm.Disability" jqxb-bindedattribute="checked" /></div>
+                                        <div class="pageText">
+                                            <p style="font-weight: bold">
+                                                I AM AN INDIVIDUAL WITH DISABILITY</p>
+                                            - any person who has a physical or mental impairment which substantially limits
+                                            one or more such person's major life activities, has a record of such impairment,
+                                            or is regarded as having such impairment.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText eeoChkDiv">
+                                            <input type="radio" name="disability" id="Radio1" onclick="EnableNONDisability();"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="EEOForm.NonDisability" jqxb-bindedattribute="checked" /></div>
+                                        <div class="pageText">
+                                            <p style="font-weight: bold">
+                                                I AM NOT AN INDIVIDUAL WITH DISABILITY</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText eeoChkDiv">
+                                            <input type="radio" name="disability" id="Radio3" onclick="EnableDisabilityNotPrefer();"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="EEOForm.DisabilityNoAns" jqxb-bindedattribute="checked" /></div>
+                                        <div class="pageText">
+                                            <p style="font-weight: bold">
+                                                I PREFER NOT TO ANSWER</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End  of 1st Page-->
+                <!--Start of 2nd Page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div>
+                                <p class="pageText">
+                                    <b style="font-weight: bold;">Veteran</b> - An individual who served in military
+                                    for not less than 90 consecutive days during a national emergency declared in accordance
+                                    with federal law or was discharged from military service for an estabilished service-connected
+                                    disability;was honorably discharged from military service; and is competent.
+                                </p>
+                                <p class="pageText">
+                                    <b style="font-weight: bold;">Disabled Veteran</b> - A "disabled veteran" is (1)
+                                    A veteran of the U.S. military,ground,naval or air service who is entitled to compensation(or
+                                    who but for the receipt of military pay would be entitled to compensation) under
+                                    laws administered by the Secretary of Veteran Affairs, or (2) A person who was discharged
+                                    or released from active duty because of a service-connected disability.
+                                </p>
+                                <p class="pageText color">
+                                    <b style="font-weight: bold;">Armed Forces Service Medal Veteran</b> - An "Armed
+                                    Forces Service Medal veteran" is any veteran who, while serving on active duty in
+                                    the U.S. military,ground,naval or air service,participated in a United States military
+                                    operation <span class="spanRed">for which an Armed Forces service medal</span> was
+                                    awarded pursuant to Executive Order 12985.The Affirmative Action team can request
+                                    a copy of the DD Form 214 otherwise known as their Certificate of Release or Discharge
+                                    from Active Duty to determine what veteran preferences you are eligible for as a
+                                    veteran.Ex:Vietanam Era,Korean,Desert Shield,Operational Iraqi Freedom. A full list
+                                    of the eligible campaigns can be found at:<a href="http://www.opm.gov/staffingportal/vgmedal2.asp"
+                                        target="_blank">http://www.opm.gov/staffingportal/vgmedal2.asp</a>
+                                </p>
+                                <p class="pageText color">
+                                    <b style="font-weight: bold;">Other Protected Veteran</b> - An "other protected
+                                    veteran" is a veteran who served on active duty in the U.S. military, ground,naval
+                                    or air service <span class="spanRed">during a war or in a campaign or expedition</span>for
+                                    which a campaign badge has been authorized ,under the laws administered by the Department
+                                    of Defense. <a href="http://www.opm.gov/staffingportal/uniserv.asp" target="_blank">
+                                        http://www.opm.gov/staffingportal/uniserv.asp</a>
+                                </p>
+                                <p class="pageText">
+                                    <b style="font-weight: bold;">Recently Seperated Veteran</b> - "Recently seperated
+                                    veteran" is any veteran during the three-year period beginning on the date of such
+                                    veteran's discharge or release from the active duty in the U.S. military,ground,naval
+                                    or air service.
+                                </p>
+                                <p class="pageText color">
+                                    <b style="font-weight: bold;">Reservists/National Guard </b>-is an individual that
+                                    is <span class="spanRed">currently</span> serving in the National Guard or any branch
+                                    of the military reserves.
+                                </p>
+                                <p class="pageText">
+                                    <b style="font-weight: bold;">An Individual with a Disability</b> - An "individual
+                                    with a disability" is defined as a person who (1) has a physical or mental impairment
+                                    which substantially limits one or more of his or her major life activities,(2) has
+                                    a record of such impairment , or (3) is regarded as having such an impairment.
+                                </p>
+                            </div>
+                            <div>
+                                <p class="pageText">
+                                    <span style="text-align: center; font-style: italic; text-decoration: underline;">Americans
+                                        with Disabilities Act (ADA)</span><br />
+                                    The employer also is subject to the Americans with Disabilities Act (ADA).Consistent
+                                    with the ADA,Cognizant's policy is to provide reasonable accomodations to any individual
+                                    with a disability who needs such an accomodation to complete the job application
+                                    process or to perform the job in question.If you need such an accomodation, you
+                                    may request it any time by contacting your Talent Manager or your immediate supervisor.Making
+                                    a request for an accomodation will not subject you to any adversr treatment.
+                                </p>
+                            </div>
+                            <div>
+                                <p class="pageText">
+                                    If you have a disability or are a covered veteran and would like to self-identify
+                                    ,please complete this form and return to Cognizant Human Resource Benefits,either
+                                    along with your initial new hire paperwork,or email the document to Cognizant EEO
+                                    and Affirmative Action Team at <a href="mailto:AAHelp@cognizant.com" target="_blank">
+                                        AAHelp@cognizant.com.</a>
+                                </p>
+                            </div>
+                            <div style="float: right; margin-right: 18px; width: 30%;">
+                                <span style="float: left; color: red; font-weight: bold; margin-top: 5px;">*</span><label
+                                    class="pageText" style="padding-left: 1px; padding-right: 20px; float: left;">Date</label><input
+                                        type="text" class="inputText_Readonly" id="Pg_1_text_Date" style="float: right;"
+                                        readonly="readonly" unselactable="on" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Signature" id="Sign_PageId_2">
+                    </div>
+                </div>
+                <!--End of 2nd Page-->
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

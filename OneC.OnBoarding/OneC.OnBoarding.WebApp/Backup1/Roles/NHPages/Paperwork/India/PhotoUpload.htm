@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+   <title>Photo Upload</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/photoupload.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/jquery.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/JSON.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/jQXB.1.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.alerts.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/India/PhotoUpload.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id='pageMain' >
+            <div id='headerContent'>
+                <div id="pagingControls">  
+                </div> 
+            </div> <!--headerContent-->
+            <div id='PageContent' class="pagesContainer" style="overflow:auto; height:555px;position:relative;">
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pagesDetails">
+                        <div class="margin_auto" >                                                                           
+                            <div class="wrap" style="background-color:transparent; height:200px;">
+                                <div id="main" style="display:block; overflow:auto;height:350px;">
+	                                <p><span id="uploadHeadingSpan">Upload your picture</span> <img src="../../../../Images/close.png" alt="Close" class="close" title="Close" style="display:none"/></p>
+                                    <span class="links_img" style="display:none"><a href="#">Refresh</a></span>
+                                      <div class="fleft wrap_left" style="width:45%;margin:0;padding:0;height:auto;">
+                                    <div class="photo_frame" id="photoDiv" style="display:none" >
+                                        <div class="photo" >
+                                            <p  align="center">
+                                                <a href='#' id="uploadUrl" onclick="PhotoUpload();">Click here to upload</a> </p>
+                                                <p style="width:114px">
+                                                <a href='#' id="refreshLnkCandidate" onclick="RefershTheImage();" style="display:none" class="mediumFont">View the photograph</a>
+                                                </p>
+                                        </div> <!--photo-->
+                                    </div> <!--photoDiv-->   
+                                    <div class="photo_frame" id="imgDiv"  runat="server" style="display: inline; " >
+                                        <div class="photo">
+                                            <img runat="server" ID="imgUpload"  Width="112px" Height="132px" src="" /><br />
+                                        </div> <!--photo-->
+
+                                    </div> <!--imgDiv--> 
+                                     <span class="links_img_btm"><a href='#' id="refreshLnk" onclick="RefershTheImage();" style="display:inline" class="mediumFont">View the photograph</a></span>
+                                          <div class="fleft" id="adminUploadDiv" style="display:none">
+           <input type="text" id="name1"/>
+             <input type="file" size="20" id="browse_txtbx"  name="Browse"/>
+             <img src="../../../../Images/browse.png"  alt="browse" title="Browse" class="browse_photo"/>
+               <div class="fleft width100per paddingB20L5">
+        	<input type="button" class="done_btn marginTL20 font13 width195" id="Pg_1_button_Upload" onclick="UploadFormDetails()"  alt="Click here to upload your photo" title="Click here to upload your photo" value="Click here to upload your photo"/>
+        </div>
+        </div>
+      
+                                   
+                                   </div>
+                                    <div class="photo_info" style="float:left;width:45%;margin-left:10px;height:auto;">
+    <p class="color_red font12" style="margin-top:8px"><label for="errorMessage" id="errorLabel"></label></p>
+    <div id="nameDivCandidateView">
+ 
+        <p class="color_red font11">*(maximum permissible characters is 20)</p>
+      
+      <p>  <label for="firstName">First Name:</label></p>
+        <input type="text" id="firstName"  style="font-size:1.3em"   jqxb-datasource="FormDetails" jqxb-datamember="PhotoUpload.FirstName" />
+          <p>  <label for="lastName">Last Name:</label></p>
+           <input type="text" id="lastName"  style="font-size:1.3em"   jqxb-datasource="FormDetails" jqxb-datamember="PhotoUpload.LastName" />
+        </div>
+
+        <div id="nameDivAdminView" style="display:none" >
+        <p>  <label for="firstName" id="adminlblfirstName">First Name:</label></p>
+        <input type="text" id="adminfirstName"  style="font-size:1.3em" />
+          <p>  <label for="lastName" id="adminlbllastName">Last Name:</label></p>
+           <input type="text" id="adminlastName"  style="font-size:1.3em" />
+    	<p><label for="name">Name to be displayed on ID card:</label></p>
+        <p class="color_red font11" id="nameInfo">*(maximum permissible characters is 20)</p>
+
+        <input type="text" id="nameOnIDCard"  style="font-size:1.3em"   jqxb-datasource="FormDetails" jqxb-datamember="PhotoUpload.NameOnIDCard" />
+        </div>
+        <div id="acceptRejectDiv" style="display:none">
+        <p >
+        <input type="radio" value="accept" name="accept" id="accept_radio"   onclick="return ShowHideDiv(this);" />
+        <label for="accept_radio">Approve</label>
+        <input type="radio" value="reject" name="accept" id="reject_radio"  onclick="return ShowHideDiv(this);"  />
+        <label for="reject_radio">Reject</label>
+        </p>
+        <div id="rejectDiv">
+        
+        <p class="marginT10"><input type="checkbox" id="displayNameCheckBox" class="marginR5"  /><label for="display_name">IDCard DisplayName:</label></p>
+         <p class="marginT10"><input type="checkbox" id="uploadPhotoCheckBox" class="marginR5"  onclick="return ShowHideDiv(this);" /><label for="upload_photo">Uploaded Photograph:</label></p>
+        
+        <p class="marginTB10"><label for="remarks">Reason for Rejection:</label></p>
+        <textarea id="remarksTextArea" class="height50" style="font-size:1.3em" jqxb-datasource="FormDetails" jqxb-datamember="PhotoUpload.Remarks"></textarea>
+       <div id="resonForRejectionDiv" style="display:none">
+            <p class="marginTB10" ><label for="error"  id="reasonRejectionLabel"  style="color: Red; font-size: 11px"></label></p>
+          </div>
+        </div>
+        </div>
+        <p class="paddingB20">
+       <input type="button" class="done_btn" id="doneButton"  title="Done" value="Done" onclick="return ValidateSave();"/>
+       <input type="button" class="done_btn"  id="submitButton"  title="Submit" value="Submit" style="display:none"  onclick="return ValidateSubmit();"/>
+
+                       
+            </p>
+    </div>
+                                    <div style="clear:both"></div>
+                                </div> <!--main-->
+                                <div style="width:96%;padding-left:20px;">
+                                <div class="pre" style="float:left; padding-right:0px; width:45%">
+                                 <p class="font14 color_pre">Prerequisites for a right picture:</p>
+                                        <p class="font14 color_pre paddingTB10"><a href="#">Do's</a></p>
+                                        <ul>
+                                        <li>You should be in "Business casuals" attire and against plain <br />white or light blue background.</li>
+                                        <li>Image should be of good quality and the size of the image should not <br /> exceed 200kB.</li>
+                                        <li>You should be facing the camera such that both the ears are visible.</li>
+                                        <li>The image sholud be colored.</li>
+                                        </ul>
+                                        </div>
+                                        <div class="pre" style="width:45%;float:right;padding-top:8px;">
+                                        <p class="font14 color_pre paddingTB10"><a href="#">Dont's</a></p>
+                                        <ul>
+                                        <li>No informal or casual attire.</li>
+		                                <li>No head gear/het,etc unless you wear it habitually on account of </br> religious reasons .</li>
+		                                <li>No dark glasses/non-prescription tinted glasses.</li> 
+                                        </ul>
+                                        </div>
+                                        </div>  
+                                        <!--<div class="pre" style="float:right"> 
+                                        <p class="font14 color_pre paddingTB10"> <a href="#">Dont's </a></p>
+                                        <!--<ul>
+                                        <li>No informal or casual attire.</li>
+		                                <li>No head gear/het,etc unless you wear it habitually on account of religious reasons .</li>
+		                                <li>No dark glasses/non-prescription tinted glasses.</li> 
+                                        </ul>-->
+                                <!--</div> --><!--pre-->
+                            </div>	<!--wrap-->	 
+                           
+                        </div> <!--margin_auto-->
+                    </div> <!--pagesDetails-->
+                </div> <!--pageData-->
+            </div> <!--PageContent-->
+        </div> <!--pageMain-->
+    </div><!--baseContent-->
+</body>
+
+<script type="text/javascript">
+    $(document).change(function () {
+
+        if (($("#browse_txtbx").val())) {
+            $("#name1").val($("#browse_txtbx").val());
+
+        }
+    });
+//    $(document).ready(function () {
+//        // $('.do_collapsible').hide();
+//       // $('.dont_collapsible').hide();
+//        $('.do_click').click(function () {
+//            $('.do_collapsible').toggle();
+//            $('.dont_collapsible').hide();
+//        });
+//        $('.dont_click').click(function () {
+//            $('.do_collapsible').hide();
+//            $('.dont_collapsible').toggle();
+//        });
+//    });
+ 
+</script>
+
+</html>
+

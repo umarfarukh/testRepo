@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Candidate Recruitment Feedback Survey</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <link href="../../../../Styles/Survey/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Survey/checkStyle.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <!--<script src="../../../../Scripts/Survey/customInput.js" type="text/javascript"></script>-->
+</head>
+<body>
+    <div class="popup_wrapper_content">
+        <!--  <a href="#" class="close"></a>-->
+        <div class="clear">
+        </div>
+        <div class="popup_wrapper">
+            <div class="flrt status_holder">
+                <p class="fontclr">
+                </p>
+                <div class="status_wrapper" title="Survey Status">
+                    <div style="width: 91%">
+                        <div class="status">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="title flft" id="SurveyType">
+                <a class="survey_image"></a>
+            </p>
+            <div class="clear">
+            </div>
+            <div class="tab_holder flft">
+                <div class="tab_header">
+                    <div id="SurveyTitle">
+                    </div>
+                </div>
+                <div class="tab_content" style="overflow-y: scroll; position: relative;">
+                </div>
+            </div>
+            <div class="btns" style="width: 99%">
+                <div class="flrt mright mtop">
+                    <input type="button" class="submit_en" id="submit" value="Submit" onclick="Survey.Mandatory(2)"
+                        style="display: none;" />
+                    <input type="button" class="save_en dis_btn" value="Save" id="save" onclick="Survey.SaveSurveyData(1)" />
+                    <input type="button" class="previous_en prev dis_btn" value="<< Previous" id="prev"
+                        onclick="Survey.Prev()" />
+                    <input type="button" class="next_en nxt dis_btn" id="next" value="Next >>" onclick="Survey.Next()" />
+                </div>
+                <div class="flft mleft mtop">
+                    <input type="button" class="skip_en" id="skip" value="Skip" onclick="window.parent.surveydisablePopup()" />
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Survey/Survey.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Survey/jquery.screwdefaultbuttons.js" type="text/javascript"></script>
+<!--    <script src="../../../../Scripts/JQuery/jquery.alerts.js" type="text/javascript"></script>-->
+</body>
+</html>

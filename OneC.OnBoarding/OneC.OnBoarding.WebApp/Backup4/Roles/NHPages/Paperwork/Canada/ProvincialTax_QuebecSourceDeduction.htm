@@ -1,0 +1,1672 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Provincial Tax Quebecsource Deduction Form</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/Canada/Quebec.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/Canada/ProvincialTax_QuebecSourceDeduction.js"
+        type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <style type="text/css">
+        .inputText_Readonly
+        {
+            background-color: InactiveCaptionText;
+            font-size: 15px;
+            padding: 3px 5px 2px;
+            border: 1px solid #ccc !important;
+            background: #f0f0f0;
+            color: #888 !important;
+            cursor: default;
+        }
+        .page_text
+        {
+            text-align: left;
+            line-height: 16px;
+            color: #000;
+        }
+        #headerContent, #footerContent
+        {
+            font-size: 10px;
+        }
+        span.currentDate
+        {
+            width: 40px;
+            text-decoration: none;
+            display: inline;
+        }
+        span.line_bluebox
+        {
+            text-decoration: none;
+            height: 10px;
+        }
+        body
+        {
+            color: #000;
+        }
+        .pagesContainer div, .pagesContainer p, .pagesContainer .flt_left, .pagesContainer .flt_right, .pagesContainer table, .pagesContainer tr, .pagesContainer td, .pagesContainer span, .pagesContainer input, .pagesContainer select, .pagesContainer textarea, .pagesContainer h1, .pagesContainer h2, .pagesContainer h3, .pagesContainer h4, .pagesContainer h5, .pagesContainer h6, .pagesContainer ul, .pagesContainer li, .pagesContainer ol
+        {
+            font-family: Arial,Verdana,Helvetica,sans-serif;
+            color: #000;
+        }
+        h3.blueText, h1.hdr_text
+        {
+            color: #0060ac;
+        }
+        .protaxform_borderbox
+        {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="baseContent">
+        <div id="pageMain">
+            <div id="headerContent">
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id="PageContent" class="pagesContainer">
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent" id="first">
+                        <div class="pageDetails">
+                            <div style="width: 20%" class="flt_left">
+                                <img style="height: 45px" alt="quebec" src="../../../../Images/logo_revenue_quebec.gif" /></div>
+                            <div style="width: 60%; color: #0060ac" class="flt_left">
+                                <h1 class="hdr_text" style='color: #0060ac'>
+                                    <span style='color: #0060ac'>Source<br />
+                                        Deductions Return </span><span style="width: 30%; text-align: left; font-size: 46px;">
+                                            <span class='currentDate' style="color: #0060ac"></span></span>
+                                    <br class="clear" />
+                                </h1>
+                            </div>
+                            <div style="width: 20%" class="flt_left">
+                                <p style="text-align: right; height: 45px">
+                                    TP-1015.3-V<br />
+                                    <span class='currentDate'></span>-01</p>
+                            </div>
+                            <div style="clear: both">
+                            </div>
+                            <p class="pagehdr_text">
+                                To ensure that your source deductions of income tax are calculated correctly, you
+                                must remit this form, duly completed, to your employer or payer. Be sure to use
+                                the “<a onclick="page2();" href="#.">General information</a>” section; the information
+                                follows the order of the lines on the return. In this form, the term “employer”
+                                refers to both employers and payers (of pension income, for example).</p>
+                            <p  class="pagehdr_text">
+                                Please complete the form in its entirety, with the exception of your Employee ID
+                                which is not required at this time. Once you receive your Employee ID, you will
+                                be asked to enter the ID and sign the form. This notification/reminder will be sent
+                                to you as a post-joining action item.
+                            </p>
+                            <br />
+                            <h3 class="blueText">
+                                1 Identification of the employee or payee</h3>
+                            <div class="form_box" visible="true">
+                                <div class="form_grid">
+                                    <div class="row_first">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td>
+                                                    <span style="color: Red">&nbsp;*</span> Last name<br />
+                                                    <input type="text" class="inputText_Readonly" unselectable="on" style="width: 175px;"
+                                                        id="Pg_1_text_LastName" readonly="readonly" />
+                                                </td>
+                                                <td colspan="2">
+                                                    <span style="color: Red">&nbsp;*</span> First name<br />
+                                                    <input class="inputText_Readonly" unselectable="on" type="text" style="width: 175px;"
+                                                        id="Pg_1_text_FirstName" readonly="readonly" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td valign="top">
+                                                    Employee or payee number<br />
+                                                    <input class="inputText_Readonly" unselectable="on" type="text" style="width: 175px;"
+                                                        id="Pg_1_text_Empnumber" readonly="readonly" />
+                                                </td>
+                                                <td valign="top">
+                                                    <span style="color: Red">&nbsp;* </span>Date of birth<br />
+                                                    <input class="inputText_Readonly" unselectable="on" type="text" style="width: 175px;"
+                                                        id="Pg_1_text_DOB" readonly="readonly" />
+                                                </td>
+                                                <td>
+                                                    <span style="color: Red">&nbsp;* </span>Social insurance number<br />
+                                                    <input class="inputText_Readonly" unselectable="on" type="text" style="width: 175px;"
+                                                        id="Pg_1_text_SSN" readonly="readonly" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="blueText">
+                                2 Calculation of the amount to be used to determine the deduction code</h3>
+                            <div class="light_bluebg">
+                                <table class="Calculationgrid" cellspacing="0" cellpadding="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td class="border_bottom" colspan="4">
+                                                <strong>Basic amount</strong>. Enter $10,505 unless you have more than one employer
+                                                and have already entered $10,505 on a TP-1015.3-V form completed for another employer.
+                                                In this case, do not complete lines 1 through 10. Go directly to the code box (below
+                                                line 10) and enter 0 as your deduction code. Complete lines 11 through 19 as applicable.
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td class="v_bottom border_bottom">
+                                                <select id="Pg_1_option_Basicamt" class="inputText" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="ProvincialTaxQuebecSourceDeduction.BasicAmnt_1" jqxb-listvalue="UserValue">
+                                                    <option></option>
+                                                    <option>10505</option>
+                                                </select>
+                                            </td>
+                                            <td class="v_bottom" align="middle">
+                                                1
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <a onclick="javascript:HideShowDiv_M(2);" href="#LineSpan2">Amount transferred from
+                                                    one spouse to the other</a> <span id="Span_Spouse" class="flt_right" style="display: none;">
+                                                        To include such an amount in the calculation, check this box. &nbsp;
+                                                        <input id="Pg_1_check_Include" name="spouse" type="checkbox" jqxb-datasource="FormDetails"
+                                                            jqxb-bindedattribute="checked" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.chkSpouse" /></span>
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div style="width: 95%" class="border_bottom space_L20">
+                                                    Maximum amount respecting a spouse</div>
+                                            </td>
+                                            <td width="16" align="right">
+                                                $
+                                            </td>
+                                            <td class="border_bottom" colspan="2">
+                                                <input type="text" class="inputText" id="Pg_1_text_Maxamt" readonly="readonly" value="10505"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.MaxAmtSpouse"
+                                                    maxlength="12" />
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div style="width: 95%" class="border_bottom space_L20">
+                                                    <strong>Less</strong>: Your spouse’s estimated taxable income for <span class='currentDate'>
+                                                    </span>&nbsp;
+                                                </div>
+                                            </td>
+                                            <td width="16" align="right">
+                                                -
+                                            </td>
+                                            <td colspan="2">
+                                                <input type="text" class="inputText OnlyNumeric value" id="Pg_1_text_EstTax" maxlength="8"
+                                                    readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.EstTaxAmntSp"
+                                                    maxlength="12" />
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border_bottom">
+                                                Amount transferred from one spouse to the other. If the result is negative, enter
+                                                0.
+                                            </td>
+                                            <td width="16" align="right">
+                                                =
+                                            </td>
+                                            <td class="v_bottom" colspan="2">
+                                                <input type="text" class="inputText" id="Pg_1_text_TransAmt1" readonly="readonly"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.AmntTransf"
+                                                    maxlength="12" />
+                                            </td>
+                                            <td valign="bottom">
+                                                + ? &nbsp;
+                                            </td>
+                                            <td class="border_bottom v_bottom">
+                                                <input type="text" class="inputText" id="Pg_1_text_calc2" readonly="readonly" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="ProvincialTaxQuebecSourceDeduction.Calc_2" maxlength="4" />
+                                            </td>
+                                            <td valign="bottom">
+                                                2
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border_bottom" colspan="4">
+                                                <a onclick="javascript:HideShowDiv_M(2);" href="#LineSpan3">Amount for dependants</a>
+                                            </td>
+                                            <td valign="bottom">
+                                                +
+                                            </td>
+                                            <td class="border_bottom v_bottom">
+                                                <input type="text" class="inputText" id="Pg_1_text_calc3" readonly="readonly" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="ProvincialTaxQuebecSourceDeduction.Calc_3" maxlength="4" />
+                                            </td>
+                                            <td>
+                                                3<a onclick="test();" href="#"><img id="img3" title="This amount is carried automatically from another section of the form. You must complete that section first.Click on the arrow to go to the section concerned "
+                                                    alt="" src="../../../../Images/ArrowDown.JPG" /></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border_bottom" colspan="4">
+                                                <a href="#">Amount for a severe and prolonged impairment in mental or physical functions</a>
+                                            </td>
+                                            <td valign="bottom">
+                                                +
+                                            </td>
+                                            <td class="border_bottom v_bottom">
+                                                <input type="text" class="inputText value OnlyNumeric" maxlength="4" id="Pg_1_text_calc5"
+                                                    readonly="readonly" title="The value must be equal to 2390 for each person with a severe and prolonged impairment in mental or physical functions"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.Calc_5"
+                                                    maxlength="4" />
+                                            </td>
+                                            <td valign="bottom">
+                                                5
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border_bottom" colspan="4">
+                                                <strong>Amount with respect to age, for a person living alone or for retirement income</strong>
+                                            </td>
+                                            <td valign="bottom">
+                                                +
+                                            </td>
+                                            <td class="border_bottom ">
+                                                <input type="text" class="inputText" id="Pg_1_text_calc9" readonly="readonly" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="ProvincialTaxQuebecSourceDeduction.Calc_9" maxlength="4" />
+                                            </td>
+                                            <td>
+                                                9<a href="#" onclick="test2();"><img id="img9" title="This amount is carried automatically from another section of the form. You must complete that section first.Click on the arrow to go to the section concerned "
+                                                    alt="" src="../../../../Images/ArrowDown.JPG" /></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border_bottom" colspan="4">
+                                                Add lines 1 through 9.
+                                            </td>
+                                            <td valign="bottom">
+                                                =
+                                            </td>
+                                            <td class="border_bottom">
+                                                <input type="text" class="inputText" id="Pg_1_text_calc10" readonly="readonly" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="ProvincialTaxQuebecSourceDeduction.Calc_10" maxlength="8" />
+                                            </td>
+                                            <td valign="bottom">
+                                                10
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border_bottom" colspan="4">
+                                                <a onclick="javascript:HideShowDiv_M(3);" href="#">Deduction code.</a>Enter the
+                                                deduction code for the amount on line 10 in the box. <strong>
+                                                    <br />
+                                                    If the amount on line 10 is over $32,001, enter the amount from line 10 rather than
+                                                    the deduction code.</strong>
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td class="border_bottom">
+                                                <input type="text" class="inputText OnlyNumeric" style="width: 85px;" id="Pg_1_text_calccode"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.DeductCode"
+                                                    maxlength="8" />
+                                                Code
+                                            </td>
+                                            <td valign="bottom">
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height: 34px" class="border_bottom" colspan="4">
+                                                <strong>Additional amount of income tax to be withheld.</strong> Enter the additional
+                                                amount to be deducted for each pay period.
+                                            </td>
+                                            <td style="height: 34px">
+                                                &nbsp;
+                                            </td>
+                                            <td style="height: 34px" class="border_bottom v_bottom">
+                                                <input type="text" class="inputText OnlyNumeric" id="Pg_1_text_calc11" maxlength="8"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.Calc_11" />
+                                            </td>
+                                            <td style="height: 34px" valign="bottom">
+                                                11
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border_bottom" colspan="4">
+                                                <strong>Deductions to be taken into account by the employer to calculate remuneration
+                                                    subject to source deductions<br />
+                                                </strong><a onclick="javascript:HideShowDiv_M(3);" href="#LineSpan14">Housing deduction
+                                                    for residents of designated remote areas</a>
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td class="border_bottom v_bottom">
+                                                <input type="text" class="total OnlyNumeric inputText" id="Pg_1_text_calc14" maxlength="8"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.Calc_14" />
+                                            </td>
+                                            <td valign="bottom">
+                                                14
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height: 36px" class="border_bottom" colspan="4">
+                                                <a onclick="javascript:HideShowDiv_M(3);" href="#LineSpan15">Deductible support payments</a>
+                                            </td>
+                                            <td style="height: 36px" valign="bottom">
+                                                +
+                                            </td>
+                                            <td style="height: 36px" class="border_bottom v_bottom">
+                                                <input type="text" class="total OnlyNumeric inputText" id="Pg_1_text_calc15" maxlength="8"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.Calc_15" />
+                                            </td>
+                                            <td style="height: 36px" valign="bottom">
+                                                15
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border_bottom" colspan="3">
+                                                Add lines 14 and 15.
+                                                <br />
+                                                (Note that your employer must divide the amount by the number of pays<br />
+                                                remaining in the year and subtract the result from your gross pay for each pay period.)
+                                            </td>
+                                            <td class="border_bottom" valign="bottom" align="right">
+                                                Total
+                                            </td>
+                                            <td valign="bottom">
+                                                =
+                                            </td>
+                                            <td class="border_bottom" valign="bottom">
+                                                <input type="text" class="inputText" id="Pg_1_text_calc19" readonly="readonly" value="0"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.Total_19"
+                                                    maxlength="8" />
+                                            </td>
+                                            <td valign="bottom">
+                                                19
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <a onclick="javascript:showMsg();" href="#">Exemption for an employee.</a>You may
+                                                ask to be exempted from source deductions of income tax with respect to your <strong>
+                                                    employment income</strong> if you expect your total income from all sources
+                                                to be lower than the result of the following calculation: the amount on line 10,
+                                                multiplied by 1.25, plus the amount on line 19. To request the exemption, enter
+                                                the letter X in box 20. This request is <strong>valid for the <span class='currentDate'>
+                                                </span>&nbsp; calendar year only.</strong> Please note that <strong>this exemption may
+                                                    be requested only with respect to remuneration that is employment income.</strong>
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td class="border_bottom" valign="bottom">
+                                                <select id="Select2" class="inputText" style="width: 50px" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="ProvincialTaxQuebecSourceDeduction.ddl_20" maxlength="8">
+                                                    <option value=""></option>
+                                                    <option value="X">X</option>
+                                                </select>
+                                                <input type="text" style="width: 75px;" id="Pg_1_text_calc20" class="OnlyNumeric inputText"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.txt_20"
+                                                    maxlength="8" />
+                                            </td>
+                                            <td valign="bottom">
+                                                20
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h3 class="blueText">
+                                3 Certification</h3>
+                            <div class="light_bluebg">
+                                <table class="Calculationgrid" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="4">
+                                                I certify that the information provided in this return is accurate and complete.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 10%" align="left">
+                                                <span style="color: red">&nbsp;*</span> Signature
+                                            </td>
+                                            <td width="50%">
+                                                <input type="text" class="inputText_Readonly" unselectable="on" style="border-bottom-color: white;
+                                                    border-top-color: white; width: 230px; border-right-color: white; border-left-color: white"
+                                                    id="Pg_1_text_Signature" readonly="readonly" maxlength="10" minlength="6" />
+                                                <div style="border-bottom: black 1px solid; width: 95%">
+                                                </div>
+                                            </td>
+                                            <td style="width: 10%" align="left">
+                                                <span style="margin-left: 20px"><span style="color: red">&nbsp;* </span>Date</span>
+                                            </td>
+                                            <td class=" border_bottom" width="50%">
+                                                <input type="text" class="inputText_Readonly" unselectable="on" id="Pg_1_text_SignatureDate"
+                                                    readonly="readonly" maxlength="10" minlength="6" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h4 class="boldleft" style="float: left; margin-left: 10px;">
+                                Ministère du Revenu</h4>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 2nd page-->
+                <!--Start of 2nd page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="pageTwo">
+                                <h3 class="blueText" style="text-align: center; padding-top: 5px;" class="blueText">
+                                    General information</h3>
+                                <!--Start of 2nd page left part-->
+                                <div style="width: 45%" class="page_text flt_left">
+                                    If you receive a salary, wages, commissions or a similar amount, or amounts such
+                                    as pension income, parental insurance benefits or employment insurance benefits,
+                                    you must provide your employer or payer with a duly completed copy of form TP-1015.3-V<br>
+                                    <div style="padding-left: 25px" class="space_b10">
+                                        <ul style="list-style-type: disc">
+                                            <li>when you take up employment, if you are remunerated by your employer;</li>
+                                            <li>before you receive remuneration for the first time, if you are remunerated by a
+                                                payer (rather than an employer);</li>
+                                            <li>within 15 days after an event that results in a <strong>reduction</strong> of the
+                                                amounts entered on the previous TP-1015.3-V form completed. However, if the source
+                                                deduction code does not change, in spite of a reduction in the amounts on lines
+                                                2 to 9, you do not have to complete another copy of the form.<br>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    You may, at any time, complete a copy of form TP-1015.3-V to <strong>increase</strong>
+                                    the amount of your allowable deductions and personal tax credits.<br>
+                                    &nbsp;The form must also be completed to enable your employer or payer to
+                                    <div style="padding-left: 25px" class="space_b10">
+                                        <ul style="list-style-type: disc">
+                                            <li>withhold an additional amount of Québec income tax, if you make a request to that
+                                                effect on line 11; or </li>
+                                            <li>stop withholding Québec income tax from your <strong>employment income</strong>,
+                                                if you ask to be exempted from source deductions on line 20.</li></ul>
+                                    </div>
+                                    <p>
+                                        If you do not complete form TP-1015.3-V, income tax will be withheld only on the
+                                        basis of the basic amount ($10,505) provided for on line 1. In this case, the employer
+                                        or payer will use deduction code A.
+                                    </p>
+                                    <p>
+                                        If you have already filed form TP-1015.3-V, you are not required to complete a new
+                                        form simply because of the indexation of the personal income tax system, since the
+                                        indexation will not affect your deduction code.
+                                    </p>
+                                    <p>
+                                        Please note that the personal tax credits and deductions that appear on this form
+                                        may be subject to a limit if you are not resident in Canada in <span class='currentDate'>
+                                        </span>&nbsp; or you become a non-resident in <span class='currentDate'></span>.
+                                        In such cases, contact us.
+                                    </p>
+                                    <div style="width: 100%; float: left">
+                                        <h4>
+                                            <span class="line_bluebox">Line 2 </span>Amount transferred from one spouse to the
+                                            other</h4>
+                                    </div>
+                                    <div>
+                                        If you expect to have a<strong> spouse on December 31, <span class='currentDate'></span>
+                                            &nbsp;,</strong> you may claim the “amount transferred from one spouse to the
+                                        other.”
+                                        <br>
+                                        However, you cannot claim the amount if your spouse receives any of the following:
+                                        <div style="padding-left: 25px" class="space_b10">
+                                            <ul style="list-style-type: disc">
+                                                <li>indemnities further to an industrial accident;</li>
+                                                <li>indemnities further to a precautionary cessation of work;</li>
+                                                <li>indemnities further to a traffic accident;</li>
+                                                <li>indemnities further to an act of good citizenship;</li>
+                                                <li>indemnities for being the victim of a crime.</li></ul>
+                                        </div>
+                                        <p>
+                                            Refer to the guide to the income tax return for 2009 and follow the instructions
+                                            for lines 101 through 299 when<strong> calculating your spouse’s estimated taxable income.
+                                            </strong>
+                                        </p>
+                                        <br>
+                                        Please note that to be able to claim the amount transferred from one spouse to the
+                                        other, you and your spouse must each file an income tax return for <span class='currentDate'>
+                                        </span>&nbsp;.
+                                    </div>
+                                </div>
+                                <!--End of 2nd page left part-->
+                                <!--Start of 2nd page right part-->
+                                <div style="width: 46%" class="page_text flt_right">
+                                    <div class='protaxform_borderbox space_b10'>
+                                        <p style="margin-bottom: 3px; font-size: 15px; font-weight: bold">
+                                            Spouse</p>
+                                        The person to whom you are married, the person with whom you are living in a civil
+                                        union or the person who is your de facto spouse.
+                                        <p style="margin-top: 10px; font-weight: bold; text-decoration: underline">
+                                            Note
+                                        </p>
+                                        <div>
+                                            A de facto spouse is the person of the opposite sex or of the same sex who, at any
+                                            time in <span class='currentDate'></span>,</div>
+                                        <div style="padding-left: 25px" class="space_b10">
+                                            <ul style="list-style-type: disc">
+                                                <li>is living in a conjugal relationship with you and is the biological or adoptive
+                                                    parent (legally or in fact) of at least one of your children;<br>
+                                                    <strong>Or</strong></li>
+                                                <li>has been living in a conjugal relationship with you for at least 12 consecutive
+                                                    months (the 12-month period is considered to have been uninterrupted if you live
+                                                    apart because of the breakdown of your relationship for a period of less than 90
+                                                    days).</li></ul>
+                                        </div>
+                                        <p style="margin-top: 10px; font-weight: bold;">
+                                            Spouse on December 31, <span class='currentDate'></span>
+                                        </p>
+                                        The person who
+                                        <div style="padding-left: 25px" class="space_b10">
+                                            <ul style="list-style-type: disc">
+                                                <li>is your spouse at the end of that day. If you and your spouse are living apart on
+                                                    December 31, <span class='currentDate'></span>, because of the breakdown of your
+                                                    relationship, you are considered to have a spouse on December 31, <span class='currentDate'>
+                                                    </span>&nbsp;, if you begin living together again and the separation lasts for less
+                                                    than 90 days; <strong>Or</strong></li>
+                                                <li>is your spouse at the time of his or her death in <span class='currentDate'></span>
+                                                    &nbsp;, provided you and your spouse are not living apart on that date because of
+                                                    the breakdown of your relationship and you do not have a new spouse on December
+                                                    31, <span class='currentDate'></span>.</li></ul>
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; float: left">
+                                        <h4>
+                                            <span class="line_bluebox">Line 3</span>Amount for dependants</h4>
+                                    </div>
+                                    <div class="space_b10">
+                                        <h4>
+                                            Amount for children under 18 enrolled in post-secondary studies</h4>
+                                        <br class="clear" />
+                                        <p>
+                                            If you have at least one child under 18 enrolled in post-secondary studies on December
+                                            31, <span class='currentDate'></span>, complete work chart 1.</p>
+                                        <p>
+                                            If the child expects to transfer the unused portion of his or her credits to his
+                                            or her spouse, you cannot claim the amount with respect to that child.</p>
+                                    </div>
+                                    <div class="protaxform_borderbox">
+                                        <div class="space_b10">
+                                            <strong>Child under 18 enrolled in post-secondary studies</strong>
+                                            <br>
+                                            A person whom you are supporting and who, in <span class='currentDate'></span>,
+                                            is a full-time student pursuing vocational training at the secondary level or post-secondary
+                                            studies. The person may be
+                                            <div style="padding-left: 25px" class="space_b10">
+                                                <ul style="list-style-type: disc">
+                                                    <li>your or your spouse’s child;</li>
+                                                    <li>a person of whom you or your spouse has the custody and control (legally or in fact);</li>
+                                                    <li>the spouse of your child;</li>
+                                                    <li>the spouse of your spouse’s child.</li></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="space_b10">
+                                        <h4 class="space_b10">
+                                            Amount for other dependants</h4>
+                                        <p>
+                                            If you have at least one <strong>other dependant 18 or over</strong>, complete work
+                                            chart 1. Please note that the amount is $2,820 for each of the other dependants.</p>
+                                        <p>
+                                            You cannot claim this amount for a person who, in <span class='currentDate'></span>
+                                            &nbsp;, is a full-time student pursuing vocational training at the secondary level
+                                            or post-secondary studies, or who expects to transfer the unused portion of his
+                                            or her credits to his or her spouse.</p>
+                                    </div>
+                                </div>
+                                <!--End of 2nd page right part-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 2nd page-->
+                <!--Start of 3rd page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageThree" style="width: 98%">
+                            <div class="pageDetails">
+                                <!--Start of 3rd page left part-->
+                                <div class="flt_left" style="width: 100%">
+                                    <div style="width: 45%" class="page_text flt_left">
+                                        <div class="protaxform_borderbox space_b10">
+                                            <strong>Other dependant<br>
+                                            </strong>A person who
+                                            <div style="padding-left: 25px" class="space_b10">
+                                                <ul style="list-style-type: disc">
+                                                    <li>is 18 or over in <span class='currentDate'></span>;</li>
+                                                    <li>is related to you or to your spouse by blood, marriage or adoption; and</li>
+                                                    <li>ordinarily lives with you and is supported by you.</li></ul>
+                                            </div>
+                                            <p>
+                                                The person is not your spouse or a child who is transferring to you an amount for
+                                                a child 18 or over enrolled in post-secondary studies.</p>
+                                        </div>
+                                        <div class="flt_left" style="width: 100%">
+                                            <h4>
+                                                <span class="line_bluebox ">Line 5 </span>Amount for a severe and prolonged impairment
+                                                in mental or physical functions</h4>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                You may claim $2,390 on line 5 for each person with a severe and prolonged impairment
+                                                in mental or physical functions. This person may be <strong>you</strong> or <strong>
+                                                    your spouse</strong>, if you entered an amount on line 2.</p>
+                                            <p>
+                                                A person is considered to have a severe and prolonged impairment in mental or physical
+                                                functions if a recognized health professional attests that the impairment has lasted
+                                                (or may reasonably be expected to last) for a continuous period of at least 12 months
+                                                and if it significantly restricts the person’s ability to perform a basic activity
+                                                of daily living. A person is considered to be in this situation if, because of a
+                                                chronic illness, he or she must have therapy, prescribed by a physician, administered
+                                                at least twice a week (for a total of at least 14 hours for the week, including
+                                                time for travel and post-treatment recovery), and the therapy is essential to the
+                                                maintenance of his or her vital functions.</p>
+                                        </div>
+                                        <div class="flt_left" style="width: 100%">
+                                            <h4>
+                                                <span class="line_bluebox">Line 9</span> Amount with respect to age, for a person
+                                                living alone or for retirement income</h4>
+                                        </div>
+                                        <div>
+                                            <strong>Amount with respect to age<br>
+                                            </strong>If you or your spouse is 65 or over in <span class='currentDate'></span>
+                                            &nbsp;, complete work chart 2.
+                                            <p>
+                                                <strong>Amount for a person living alone</strong>
+                                            </p>
+                                            <p>
+                                                You may claim $1,230 on line 75 of work chart 2 if, <strong>throughout <span class='currentDate'>
+                                                </span>&nbsp;,</strong> you expect to maintain and ordinarily live in a dwelling
+                                                in which you <strong>will live alone</strong> or<strong> only with </strong>
+                                            </p>
+                                            <div style="padding-left: 25px" class="space_b10">
+                                                <ul style="list-style-type: disc">
+                                                    <li>one or more persons under 18; or</li>
+                                                    <li>one or more of your children 18 or over who are full-time students pursuing vocational
+                                                        training at the secondary level or post-secondary studies.</li></ul>
+                                            </div>
+                                            <div>
+                                                <b>Dwelling</b>
+                                                <p>
+                                                    A house, an apartment or a similar place of residence in which a person ordinarily
+                                                    eats and sleeps, and which is equipped with kitchen and bathroom facilities.</p>
+                                                <p>
+                                                    <strong>Note :</strong>A room in a boarding house or a hotel is not a dwelling.</p>
+                                            </div>
+                                            <p>
+                                                <strong>Additional amount for a person living alone (single-parent family) </strong>
+                                                <br>
+                                                You may claim $1,525 on line 76 of work chart 2 if you expect to be entitled, in
+                                                <span class='currentDate'></span>, to the amount for a person living alone, and</p>
+                                            <div style="padding-left: 25px" class="space_b10">
+                                                <ul style="list-style-type: disc">
+                                                    <li>expect to live, <strong>at some time in <span class='currentDate'></span></strong>
+                                                        , with one or more of your children 18 or over who are full-time students pursuing
+                                                        vocational training at the secondary level or post-secondary studies, and</li>
+                                                    <li>do not expect to be entitled to the child assistance payments <strong>for the month
+                                                        of December for the year</strong>. If you expect to be entitled to the child assistance
+                                                        for one or more months of the year (other than December), you must reduce the additional
+                                                        amount for a person living alone (single-parent family) on the basis of the number
+                                                        of months for which you will be entitled to the child assistance payments.</li></ul>
+                                                <p>
+                                                    To calculate the amount, complete work chart 2.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--End of 3rd page left part-->
+                                    <!--Start of 3rd page right part-->
+                                    <div style="width: 46%" class="page_text flt_right">
+                                        <div class="space_b10 flt_left">
+                                            <h4>
+                                                Amount for retirement income</h4>
+                                            <p>
+                                                If you or your spouse expects to receive retirement income, complete work chart
+                                                2.</p>
+                                        </div>
+                                        <div style="width: 100%" class="flt_left space_b10">
+                                            <h4>
+                                                <span class="line_bluebox">Line 10</span>Deduction code</h4>
+                                        </div>
+                                        <table style="width: 60%" class="Deductioncode_table space_b10" border="0" cellspacing="0"
+                                            cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        &nbsp; <strong>Code</strong>
+                                                    </td>
+                                                    <td width="100%" colspan="2" align="middle">
+                                                        &nbsp;<strong> Amount ($)&nbsp; </strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        &nbsp;<strong> 0</strong>
+                                                    </td>
+                                                    <td width="100%" colspan="2" align="middle">
+                                                        &nbsp; &nbsp; <strong>Nil</strong>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        &nbsp; A
+                                                    </td>
+                                                    <td width="50%" align="right">
+                                                        &nbsp; 1
+                                                    </td>
+                                                    <td width="100%" align="middle">
+                                                        10,505
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        B
+                                                    </td>
+                                                    <td width="50%" align="right">
+                                                        10,506
+                                                    </td>
+                                                    <td width="100%" align="middle">
+                                                        12,000
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        C
+                                                    </td>
+                                                    <td width="50%" align="right">
+                                                        12,001
+                                                    </td>
+                                                    <td width="100%" align="middle">
+                                                        14,000
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        D
+                                                    </td>
+                                                    <td width="50%" align="right">
+                                                        14,001
+                                                    </td>
+                                                    <td width="100%" align="middle">
+                                                        16,500
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        E
+                                                    </td>
+                                                    <td width="50%" align="right">
+                                                        16,501
+                                                    </td>
+                                                    <td width="100%" align="middle">
+                                                        17,500
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        F
+                                                    </td>
+                                                    <td width="50%" align="right">
+                                                        17,501
+                                                    </td>
+                                                    <td width="100%" align="middle">
+                                                        18,500
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        G
+                                                    </td>
+                                                    <td width="50%" align="right">
+                                                        18,501
+                                                    </td>
+                                                    <td width="100%" align="middle">
+                                                        20,000
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        H
+                                                    </td>
+                                                    <td width="50%" align="right">
+                                                        20,001
+                                                    </td>
+                                                    <td width="100%" align="middle">
+                                                        21,500
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        I
+                                                    </td>
+                                                    <td width="50%" align="right">
+                                                        21,501
+                                                    </td>
+                                                    <td width="100%" align="middle">
+                                                        24,000
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        J
+                                                    </td>
+                                                    <td width="50%" align="right">
+                                                        24,001
+                                                    </td>
+                                                    <td width="100%" align="middle">
+                                                        26,000
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        K
+                                                    </td>
+                                                    <td width="50%" align="right">
+                                                        26,001
+                                                    </td>
+                                                    <td width="100%" align="middle">
+                                                        27,000
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        L
+                                                    </td>
+                                                    <td width="50%" align="right">
+                                                        27,001
+                                                    </td>
+                                                    <td width="100%" align="middle">
+                                                        29,000
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        M
+                                                    </td>
+                                                    <td width="50%" align="right">
+                                                        29,001
+                                                    </td>
+                                                    <td width="100%" align="middle">
+                                                        30,000
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        N
+                                                    </td>
+                                                    <td width="50%" align="right">
+                                                        30,001
+                                                    </td>
+                                                    <td width="100%" align="middle">
+                                                        32,000
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="light_bluebg" align="middle">
+                                                        X
+                                                    </td>
+                                                    <td width="100%" colspan="2" align="middle">
+                                                        <strong>Exemption</strong>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!--End of 3rd page left part-->
+                                <div class="page_text flt_left">
+                                    <div class="space_b10">
+                                        <div class="flt_left" style="width: 100%">
+                                            <h4>
+                                                <span class="line_bluebox">Line 14</span>Housing deduction for residents of designated
+                                                remote areas
+                                            </h4>
+                                        </div>
+                                        <p>
+                                            If, in <span class='currentDate'></span>, you expect to live in one or more prescribed
+                                            <strong>northern zones</strong> for a period of at least <strong>six consecutive months</strong>
+                                            beginning or ending in the year, you may deduct the lower of the following amounts
+                                            on line 14:</p>
+                                        <div style="padding-left: 25px" class="space_b10">
+                                            <ul style="list-style-type: disc">
+                                                <li>20% of your net income for <span class='currentDate'></span>; or</li>
+                                                <li>one of the following amounts:
+                                                    <div class="space_b10">
+                                                        <p>
+                                                            – $16.50 multiplied by the number of days in the year you expect to live in a prescribed
+                                                            northern zone, if no other person living in the same dwelling (see the definition
+                                                            at the left) claims this deduction; or</p>
+                                                        <p>
+                                                            – $8.25 multiplied by the number of days in the year you expect to live in such
+                                                            a zone, in all other cases.</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p>
+                                            If, in <span class='currentDate'></span>, you expect to live in a prescribed <strong>
+                                                intermediate zone</strong> for a period of at least <strong>six consecutive months</strong>
+                                            beginning or ending in the year, enter 50% of the result obtained in the previous
+                                            paragraph.</p>
+                                        <p>
+                                            For further information, refer to the guide Deduction for Residents of Designated
+                                            Remote Areas (TP-350.1. G-V).</p>
+                                        <div class="flt_left" style="width: 100%">
+                                            <h4>
+                                                <span class="line_bluebox">Line 15</span>Deductible support payments
+                                            </h4>
+                                        </div>
+                                        <p>
+                                            If, in <span class='currentDate'></span>, you expect to make support payments to
+                                            your spouse or former spouse, to the mother or father of your child, or to a third
+                                            party, for the benefit of your child or one of the aforementioned persons, you may
+                                            deduct the support paid on line 15, provided, as a rule, you meet the following
+                                            conditions:</p>
+                                        <div style="padding-left: 25px" class="space_b10">
+                                            <ul style="list-style-type: disc">
+                                                <li>The support is paid under a judgment or a written agreement, as an allowance payable
+                                                    on a periodic basis for the maintenance of the recipient, the maintenance of one
+                                                    of his or her children, or the maintenance of the recipient and the child, and you
+                                                    are living apart from the recipient at the time the payments are made.</li>
+                                                <li>The support payments are not subject to the measures concerning the tax treatment
+                                                    of support payments.</li></ul>
+                                        </div>
+                                        <p>
+                                            For further information, refer to the brochure The Tax Effects of Separation and
+                                            Divorce (IN-128-V).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 3rd page-->
+                <!--Start of 4th page-->
+                <div class="pageData" id="fourth">
+                    <div class="pageContent">
+                        <div class="pageFour" style="width: 98%;">
+                            <div class="pageDetails">
+                                <div id="main_can_1" class="flt_left">
+                                    <h3 class="blueText" style="color: black">
+                                        Work chart 1– Amount for dependants</h3>
+                                    <div class="space_L20 space_b10">
+                                        <p class="font13 lineht">
+                                            If you are claiming an amount for more than two children under 18 or more than two
+                                            other dependants, attach another sheet containing the requested information and
+                                            carry the result of your calculations to line 52.</p>
+                                    </div>
+                                    <div class="space_b10 light_bluebg">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td rowspan="2" style="width: 38%">
+                                                        &nbsp;
+                                                    </td>
+                                                    <td colspan="2" style="text-align: center; width: 30%;">
+                                                        <p>
+                                                            <strong>Children below 18</strong><br />
+                                                            on December 31, <span class='currentDate'></span>
+                                                        </p>
+                                                    </td>
+                                                    <td style="width: 10px">
+                                                        &nbsp;
+                                                    </td>
+                                                    <td colspan="2" style="text-align: center; width: 30%;">
+                                                        <p>
+                                                            <strong>Other dependants</strong><br />
+                                                            (18 or over)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: center" class="black_border">
+                                                        <p>
+                                                            <strong>1st child</strong></p>
+                                                    </td>
+                                                    <td style="text-align: center" class="black_border">
+                                                        <p>
+                                                            <strong>2nd child</strong></p>
+                                                    </td>
+                                                    <td style="width: 10px">
+                                                        &nbsp;
+                                                    </td>
+                                                    <td style="text-align: center" class="black_border">
+                                                        <p>
+                                                            <strong>1st person</strong>
+                                                            <input id="Checkbox1" type="checkbox" value="chkIncome" jqxb-datasource="FormDetails"
+                                                                jqxb-bindedattribute="checked" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.FirstPerson" />
+                                                        </p>
+                                                    </td>
+                                                    <td style="text-align: center" class="black_border">
+                                                        <p>
+                                                            <strong>2nd person</strong>
+                                                            <input id="Checkbox2" type="checkbox" value="chkIncome" jqxb-datasource="FormDetails"
+                                                                jqxb-bindedattribute="checked" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.SecondPerson" />
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 38%; border-top: 1px solid #000;" class="border_bottom">
+                                                        <p>
+                                                            Amount for children under 18 enrolled in post -secondary studies. Enter $1,940 per
+                                                            completed term that was started in <span class='currentDate'></span>. <b>(maximum: two
+                                                                terms)</b>.</p>
+                                                    </td>
+                                                    <td class="black_border" style="background-color: #fff">
+                                                        <select id="Pg_4_Option_ChildAmt1" style="width: 50%;" class="children1" disabled="disabled"
+                                                            jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC1_1stChild"
+                                                            jqxb-listvalue="UserValue">
+                                                            <option value="0">0</option>
+                                                            <option value="1940">1940</option>
+                                                            <option value="3880">3880</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="black_border" style="background-color: #fff">
+                                                        <select id="Pg_4_Option_ChildAmt2" style="width: 50%;" class="children2" disabled="disabled"
+                                                            jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC1_2ndChild"
+                                                            jqxb-listvalue="UserValue">
+                                                            <option value="0">0</option>
+                                                            <option value="1940">1940</option>
+                                                            <option value="3880">3880</option>
+                                                        </select>
+                                                    </td>
+                                                    <td style="width: 10px">
+                                                        &nbsp;
+                                                    </td>
+                                                    <td class="black_border" style="background-color: #fff">
+                                                        <input type="text" style="width: 120px;" id="Pg_4_text_1stperson" class="OnlyNumeric inputText_Quebec children3"
+                                                            value="2820" disabled="disabled" maxlength="8" jqxb-datasource="FormDetails"
+                                                            jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC1_1stPerson" maxlength="8" />
+                                                    </td>
+                                                    <td class="black_border" style="background-color: #fff">
+                                                        <input type="text" style="width: 120px;" id="Pg_4_text_2ndperson" class="OnlyNumeric inputText_Quebec children4"
+                                                            value="2820" disabled="disabled" maxlength="8" jqxb-datasource="FormDetails"
+                                                            jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC1_2ndPerson" maxlength="8" />
+                                                    </td>
+                                                    <td>
+                                                        40
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 38%" class="border_bottom">
+                                                        <p>
+                                                            Estimated net income for <span class='currentDate'></span>multiplied by 80%</p>
+                                                    </td>
+                                                    <td class="black_border" style="background-color: #fff">
+                                                        -<input type="text" style="width: 100px;" id="Pg_4_text_EstAmt1stchild" class="children1 OnlyNumeric inputText_Quebec"
+                                                            readonly="readonly" maxlength="8" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC1_1stChild45" />
+                                                    </td>
+                                                    <td class="black_border" style="background-color: #fff">
+                                                        -<input type="text" style="width: 100px;" id="Pg_4_text_EstAmt2ndchild" class="children2 OnlyNumeric inputText_Quebec"
+                                                            readonly="readonly" maxlength="8" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC1_2ndChild45" />
+                                                    </td>
+                                                    <td style="width: 10px">
+                                                        &nbsp;
+                                                    </td>
+                                                    <td class="black_border" style="background-color: #fff">
+                                                        -<input type="text" style="width: 100px;" id="Pg_4_text_EstAmt1stperson" class="children3 OnlyNumeric inputText_Quebec"
+                                                            disabled="disabled" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC1_1stPerson45"
+                                                            maxlength="8" />
+                                                    </td>
+                                                    <td class="black_border" style="background-color: #fff">
+                                                        -<input type="text" style="width: 100px;" id="Pg_4_text_EstAmt2ndperson" class="children4 OnlyNumeric inputText_Quebec"
+                                                            disabled="disabled" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC1_2ndPerson45"
+                                                            maxlength="8" />
+                                                    </td>
+                                                    <td>
+                                                        45
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 38%" class="border_bottom">
+                                                        <p>
+                                                            Subtract line 45 from line 40.<br />
+                                                            If the result is negative, enter 0.</p>
+                                                    </td>
+                                                    <td class="black_border" style="background-color: #fff">
+                                                        =<input type="text" style="width: 100px;" id="Text47" class="children1 OnlyNumeric inputText_Quebec"
+                                                            disabled="disabled" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC1_1stChild50"
+                                                            maxlength="8" />
+                                                    </td>
+                                                    <td class="black_border" style="background-color: #fff">
+                                                        =<input type="text" style="width: 100px;" id="Text46" class="children2 OnlyNumeric inputText_Quebec"
+                                                            disabled="disabled" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC1_2ndChild50"
+                                                            maxlength="8" />
+                                                    </td>
+                                                    <td style="width: 10px">
+                                                        &nbsp;
+                                                    </td>
+                                                    <td class="black_border" style="background-color: #fff">
+                                                        =<input type="text" style="width: 100px;" id="Text45" class="children3 OnlyNumeric inputText_Quebec"
+                                                            disabled="disabled" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC1_1stPerson50"
+                                                            maxlength="8" />
+                                                    </td>
+                                                    <td class="black_border" style="background-color: #fff">
+                                                        =<input type="text" style="width: 100px;" id="Text44" class="children4 OnlyNumeric inputText_Quebec"
+                                                            disabled="disabled" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC1_2ndPerson50"
+                                                            maxlength="8" />
+                                                    </td>
+                                                    <td>
+                                                        50
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="border_bottom" colspan="5">
+                                                        <p>
+                                                            Add the amounts on line 50.</p>
+                                                    </td>
+                                                    <td class="black_border" style="background-color: #fff">
+                                                        <input type="text" style="width: 120px;" id="Text43" class="inputText_Quebec" value="0"
+                                                            disabled="disabled" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC1_Total52"
+                                                            maxlength="8" />
+                                                    </td>
+                                                    <td>
+                                                        52
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="border_bottom" colspan="5">
+                                                        <p>
+                                                            <b>If</b> one or more of the other dependants for whom you are claiming an amount
+                                                            reach the age of 18 in <span class='currentDate'></span>, enter the result of the
+                                                            following calculation: <b>$235</b> x number of months in the year up to and including
+                                                            the month of the dependant's birthday. <b>Otherwise</b> , enter 0.</p>
+                                                    </td>
+                                                    <td class="black_border" style="background-color: #fff">
+                                                        -<input type="text" style="width: 100px;" id="Text42" class="OnlyNumeric inputText_Quebec"
+                                                            readonly="readonly" maxlength="8" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC1_55"
+                                                            maxlength="8" />
+                                                    </td>
+                                                    <td>
+                                                        55
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="border_bottom" colspan="5">
+                                                        <p>
+                                                            <b>Amount for dependants</b> Subtract line 55 from line 52.<br />
+                                                            If the result is negative, enter 0. Carry the result to line 3.</p>
+                                                    </td>
+                                                    <td class="black_border" style="background-color: #fff">
+                                                        =<input type="text" style="width: 100px;" id="Text41" class="inputText_Quebec" value="0"
+                                                            disabled="disabled" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC1_AmntDepend60"
+                                                            maxlength="8" />
+                                                    </td>
+                                                    <td>
+                                                        60<a onclick="test1();" href="#"><img id="img60" title="Click on the arrow to go the feild in which the result is automatically entered "
+                                                            alt="" src="../../../../Images/ArrowUp.JPG" /></a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="border_bottom">
+                                                    <td colspan="6">
+                                                        <p>
+                                                            1. Do not take the amount of the deduction for residents of remote areas or the
+                                                            amount of scholarships, bursaries or any similar financial assistance into account
+                                                            when calculating the estimated income of a child under 18 or other dependant.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <h3 class="blueText" style="color: Black;">
+                                    Work chart 2 – Amount with respect to age, for a person living alone or for retirement
+                                    income</h3>
+                                <div class="light_bluebg flt_left main_can">
+                                    <table style="width: 100%" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <strong>Amount with respect to age </strong>
+                                                    <br />
+                                                    <div style="width: 95%" class="border_bottom space_L20">
+                                                        If you were born before January 1, 1946, enter $2,260.</div>
+                                                    &nbsp;
+                                                </td>
+                                                <td class="black_border" bgcolor="white">
+                                                    &nbsp;&nbsp;
+                                                    <input type="text" id="Text40" class="OnlyNumeric inputText_Quebec" disabled="disabled"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_70"
+                                                        maxlength="8" />
+                                                </td>
+                                                <td>
+                                                    70
+                                                </td>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div style="width: 95%" class="border_bottom space_L20">
+                                                        If you expect to have a spouse on December 31, <span class='currentDate'></span>
+                                                        &nbsp;, who was born before January 1, 1946,<br />
+                                                        enter $2,260.</div>
+                                                </td>
+                                                <td class="border_left border_right border_bottom" bgcolor="white">
+                                                    +
+                                                    <select id="Select4" style="width: 50%;" disabled="disabled" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_71" jqxb-listvalue="UserValue"
+                                                        maxlength="8">
+                                                        <option value="0">0</option>
+                                                        <option value="2260">2260</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    71
+                                                </td>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div style="width: 95%" class="border_bottom space_L20">
+                                                        Add lines 70 and 71.</div>
+                                                </td>
+                                                <td class="black_border" bgcolor="white">
+                                                    =
+                                                    <input type="text" style="width: 120px;" class="inputText_Quebec" id="Text38" disabled="disabled"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_Total70to71"
+                                                        maxlength="8" />
+                                                </td>
+                                                <td class=" border_right border_bottom border_top" bgcolor="white">
+                                                    ?<input type="text" class="inputText_Quebec" id="Text39" disabled="disabled" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_73" maxlength="8" />
+                                                </td>
+                                                <td>
+                                                    73
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border_bottom" colspan="2">
+                                                    A<strong>mount for a person living alone</strong>(<a onclick="page2()" href="#">see
+                                                        the general information</a>)
+                                                </td>
+                                                <td class="border_left border_right border_bottom" bgcolor="white">
+                                                    &nbsp;&nbsp;
+                                                    <select id="Select6" style="width: 50%;" disabled="disabled" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_75" jqxb-listvalue="UserValue">
+                                                        <option value="0">0</option>
+                                                        <option value="1230">1230</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    75
+                                                </td>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border_bottom">
+                                                    <strong>Additional amount for a person living alone</strong>(<a onclick="page3()"
+                                                        href="#LineSpan15">single-parent family</a>)<br />
+                                                    (see the general information)
+                                                </td>
+                                                <td class="black_border" bgcolor="white">
+                                                    &nbsp;&nbsp;
+                                                    <select id="Select7" style="width: 50%" disabled="disabled" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_76" jqxb-listvalue="UserValue">
+                                                        <option value="0">0</option>
+                                                        <option value="1525">1525</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    76
+                                                </td>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div style="width: 95%" class="border_bottom space_L20">
+                                                        <strong>$127 </strong>x number of months in <span class='currentDate'></span>in
+                                                        which you will<br />
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; be entitled to
+                                                        child assistance payments
+                                                    </div>
+                                                </td>
+                                                <td class="border_left border_right border_bottom" bgcolor="white">
+                                                    -
+                                                    <select id="Select5" style="width: 50%" disabled="disabled" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_77" jqxb-listvalue="UserValue">
+                                                        <option value="0">0</option>
+                                                        <option value="127">127</option>
+                                                        <option value="254">254</option>
+                                                        <option value="381">381</option>
+                                                        <option value="508">508</option>
+                                                        <option value="635">635</option>
+                                                        <option value="762">762</option>
+                                                        <option value="889">889</option>
+                                                        <option value="1016">1016</option>
+                                                        <option value="1143">1143</option>
+                                                        <option value="1270">1270</option>
+                                                        <option value="1397">1397</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    77
+                                                </td>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border_bottom">
+                                                    <div style="width: 100%" class="space_L20">
+                                                        Subtract line 77 from line 76.
+                                                    </div>
+                                                </td>
+                                                <td class="black_border" bgcolor="white">
+                                                    =<input type="text" style="width: 120px;" class="inputText_Quebec" id="Text36" disabled="disabled"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_Total77To76"
+                                                        maxlength="8" />
+                                                </td>
+                                                <td class=" border_right border_bottom border_top" bgcolor="white">
+                                                    +<br />
+                                                    ?<input type="text" style="width: 120px;" class="inputText_Quebec" id="Text37" disabled="disabled"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_78"
+                                                        maxlength="8" />
+                                                </td>
+                                                <td>
+                                                    78
+                                                </td>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border_bottom" colspan="2">
+                                                    Add lines 75 and 78.
+                                                </td>
+                                                <td class="black_border" bgcolor="white">
+                                                    =<input type="text" style="width: 120px;" class="inputText_Quebec" id="Text34" disabled="disabled"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_Total75And78"
+                                                        maxlength="8" />
+                                                </td>
+                                                <td class=" border_right border_bottom border_top" bgcolor="white">
+                                                    +<br />
+                                                    ?<input type="text" style="width: 120px;" class="inputText_Quebec" id="Text35" disabled="disabled"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_79"
+                                                        maxlength="8" />
+                                                </td>
+                                                <td>
+                                                    79
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <strong>Amount for retirement income </strong>
+                                                    <div style="width: 95%" class="border_bottom space_L20">
+                                                        If you expect to receive retirement income entitling you to a tax credit in <span
+                                                            class='currentDate'></span>&nbsp;, enter the estimated amount of your retirement
+                                                        income entitling you to a tax credit (maximum $2,010).</div>
+                                                </td>
+                                                <td class="border_left border_right border_bottom" bgcolor="white">
+                                                    &nbsp;
+                                                    <input type="text" style="width: 120px;" class="OnlyNumeric inputText_Quebec" id="Text33"
+                                                        maxlength="4" readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_80"
+                                                        maxlength="8" />
+                                                </td>
+                                                <td>
+                                                    80
+                                                </td>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div style="width: 95%" class="border_bottom space_L20">
+                                                        If you expect to have a spouse on December 31, <span class='currentDate'></span>
+                                                        &nbsp;, enter his or her estimated retirement income giving entitlement to a tax
+                                                        credit (maximum $2,010).
+                                                    </div>
+                                                </td>
+                                                <td class="border_left border_right border_bottom" bgcolor="white">
+                                                    +<input type="text" style="width: 118px;" id="Text32" class="OnlyNumeric inputText_Quebec"
+                                                        title="The value must be less than or equal to $<span class='currentDate'></span>"
+                                                        readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_81"
+                                                        maxlength="4" />
+                                                </td>
+                                                <td>
+                                                    81
+                                                </td>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div style="width: 95%" class="border_bottom space_L20">
+                                                        Add lines 80 and 81.</div>
+                                                </td>
+                                                <td class="black_border" bgcolor="white">
+                                                    =<input type="text" style="width: 120px;" class="inputText_Quebec" id="Text22" disabled="disabled"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_Toatl80And81"
+                                                        maxlength="4" />
+                                                </td>
+                                                <td class=" border_right border_bottom border_top" bgcolor="white">
+                                                    +<br />
+                                                    ?<input type="text" style="width: 120px;" class="inputText_Quebec" id="Text31" disabled="disabled"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_82"
+                                                        maxlength="4" />
+                                                </td>
+                                                <td>
+                                                    82
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">
+                                                    <div style="width: 95%" class="border_bottom space_L20">
+                                                        Add lines 73, 79 and 82.</div>
+                                                </td>
+                                                <td class="black_border" bgcolor="white">
+                                                    =
+                                                    <input type="text" style="width: 120px;" class="inputText_Quebec" id="Text21" disabled="disabled"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_85"
+                                                        maxlength="4" />
+                                                </td>
+                                                <td>
+                                                    85
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <strong>Estimated net family income</strong>
+                                                    <div style="width: 95%" class="border_bottom space_L20">
+                                                        Total of your estimated net income and that of your spouse on December 31, <span
+                                                            class='currentDate'></span>&nbsp;
+                                                    </div>
+                                                </td>
+                                                <td class="black_border" bgcolor="white" align="left">
+                                                    &nbsp;
+                                                    <input type="text" style="width: 120px;" class="OnlyNumeric inputText_Quebec" id="Text17"
+                                                        readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_90"
+                                                        maxlength="4" />
+                                                </td>
+                                                <td>
+                                                    90
+                                                </td>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    &nbsp;
+                                                </td>
+                                                <td class="border_left border_right border_bottom" bgcolor="white">
+                                                    -
+                                                    <input type="text" style="width: 120px;" class="inputText_Quebec" id="Text19" disabled="disabled"
+                                                        value="30490" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_91"
+                                                        maxlength="4" />
+                                                </td>
+                                                <td>
+                                                    91
+                                                </td>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div style="width: 95%" class="border_bottom space_L20">
+                                                        Subtract line 91 from line 90. If the result is negative, enter 0.</div>
+                                                </td>
+                                                <td class="black_border" bgcolor="white">
+                                                    =
+                                                    <input type="text" style="width: 120px;" class="inputText_Quebec" id="Text20" disabled="disabled"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_92"
+                                                        maxlength="4" />
+                                                </td>
+                                                <td>
+                                                    92
+                                                </td>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    &nbsp;
+                                                </td>
+                                                <td class="border_left border_right border_bottom" bgcolor="white">
+                                                    x
+                                                    <input type="text" style="width: 120px;" class="inputText_Quebec" id="Text11" disabled="disabled"
+                                                        value="15%" jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_92Mul"
+                                                        maxlength="4" />
+                                                </td>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                                <td>
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div style="width: 95%" class="border_bottom space_L20">
+                                                        Multiply line 92 by 15%.</div>
+                                                </td>
+                                                <td class="black_border" bgcolor="white">
+                                                    =<input type="text" style="width: 120px;" class="inputText_Quebec" id="Text14" disabled="disabled"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_92MulTotal"
+                                                        maxlength="4" />
+                                                </td>
+                                                <td class=" border_right border_bottom border_top" bgcolor="white">
+                                                    -<br />
+                                                    ?
+                                                    <input type="text" style="width: 120px;" class="inputText_Quebec" id="Text13" disabled="disabled"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_95"
+                                                        maxlength="4" />
+                                                </td>
+                                                <td>
+                                                    95
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">
+                                                    <div style="width: 95%" class="border_bottom space_L20">
+                                                        Subtract line 95 from line 85. If the result is negative, enter 0.</div>
+                                                </td>
+                                                <td class="black_border" bgcolor="white">
+                                                    =<input type="text" style="width: 120px;" class="inputText_Quebec" id="Text10" disabled="disabled"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_96"
+                                                        maxlength="4" />
+                                                </td>
+                                                <td>
+                                                    96
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">
+                                                    <div style="width: 95%" class="border_bottom space_L20">
+                                                        Amount from line 9 of your spouse’s TP-1015.3-V form</div>
+                                                </td>
+                                                <td class="border_left border_right border_bottom" bgcolor="white">
+                                                    -
+                                                    <input type="text" style="width: 120px;" class="OnlyNumeric inputText_Quebec" id="Text9"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_97"
+                                                        maxlength="4" />
+                                                </td>
+                                                <td>
+                                                    97
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">
+                                                    <div style="width: 95%" class="border_bottom space_L20">
+                                                        Subtract line 97 from line 96. Carry the result to line 9.<br />
+                                                        <p align="center">
+                                                            <strong>Amount with respect to age, for a person living alone or for retirement income</strong></p>
+                                                    </div>
+                                                </td>
+                                                <td class="black_border" bgcolor="white">
+                                                    =<input type="text" style="width: 120px;" class="inputText_Quebec" id="Text18" disabled="disabled"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="ProvincialTaxQuebecSourceDeduction.WC2_98"
+                                                        maxlength="4" />
+                                                </td>
+                                                <td>
+                                                    98<a onclick="test1();" href="#"><img id="img98" title="Click on the arrow to go the feild in which the result is automatically entered "
+                                                        alt="" src="../../../../Images/ArrowUp.JPG" /></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--<div class="Signature" id="Sign_PageId_4">
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <!--End of 4th page-->
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

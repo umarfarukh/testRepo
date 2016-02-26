@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/" elementFormDefault="qualified" targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/BGVUtilityMethods/ServiceContracts/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:51555/ServiceHost/BGVUtilityMethods.svc?xsd=xsd2" namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" />
+  <xs:import schemaLocation="http://localhost:51555/ServiceHost/BGVUtilityMethods.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" />
+  <xs:import schemaLocation="http://localhost:51555/ServiceHost/BGVUtilityMethods.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="FetchVendorDashboardData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objVendorDashboardParams" nillable="true" type="q1:VendorDashboard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchVendorDashboardDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchVendorDashboardDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVendorCandidateData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" minOccurs="0" name="objVendorCandidateInfo" nillable="true" type="q2:VendorCandidateInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVendorCandidateDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetVendorCandidateDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVendorDocListInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objVendorDashboardParams" nillable="true" type="q3:VendorDashboard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVendorDocListInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetVendorDocListInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveVendorDocListInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" minOccurs="0" name="objVendorDocListInfoParams" nillable="true" type="q4:VendorDocListInfoParams" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveVendorDocListInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveVendorDocListInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssignVendorCandidateData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objAssignVendorData" nillable="true" type="q5:CandidateBGVData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssignVendorCandidateDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAssignVendorCandidateDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssignVendorComponents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objAssignVendorData" nillable="true" type="q6:CandidateBGVData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssignVendorComponentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAssignVendorComponentsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAssignVendorCandidateData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objAssignVendorData" nillable="true" type="q7:CandidateBGVData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAssignVendorCandidateDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveAssignVendorCandidateDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BackPapers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objBackPapersParams" nillable="true" type="q8:BackPapersDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BackPapersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BackPapersResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocListInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objDocListInfo" nillable="true" type="q9:DocListInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocListInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocListInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComponentData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objComponentData" nillable="true" type="q10:ComponentData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComponentDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ComponentDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveComponentData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objSaveComponent" nillable="true" type="q11:SaveComponent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveComponentDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveComponentDataResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveVerificationData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objSaveComponent" nillable="true" type="q12:SaveComponent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveVerificationDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveVerificationDataResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutoSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objAutocomplete" nillable="true" type="q13:Autocomplete" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutoSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="AutoSearchResult" nillable="true" type="q14:Autocomplete" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateComponentData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" minOccurs="0" name="objValidation" nillable="true" type="q15:Validation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateComponentDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" minOccurs="0" name="ValidateComponentDataResult" nillable="true" type="q16:Validation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonalData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objCandidateInformationDC" nillable="true" type="q17:CandidateInformationDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonalDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PersonalDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePersonalData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objCandidateInformationDC" nillable="true" type="q18:CandidateInformationDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePersonalDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePersonalDataResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidatePersonalInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" minOccurs="0" name="objValidation" nillable="true" type="q19:ValidatePersonalData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidatePersonalInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" minOccurs="0" name="ValidatePersonalInfoResult" nillable="true" type="q20:ValidatePersonalData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPagePathForRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objPageNavigationDC" nillable="true" type="q21:PageNavigationDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPagePathForRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPagePathForRoleResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageNotifications">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objPageNotifications" nillable="true" type="q22:PageNotifications" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageNotificationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetPageNotificationsResult" nillable="true" type="q23:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageComparisionData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" minOccurs="0" name="objCompareDC" nillable="true" type="q24:CompareDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageComparisionDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPageComparisionDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

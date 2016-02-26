@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/Imports">
+      <xsd:import schemaLocation="http://localhost:50555/ServiceHost/DashBoardServices.svc?xsd=xsd0" namespace="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/" />
+      <xsd:import schemaLocation="http://localhost:50555/ServiceHost/DashBoardServices.svc?xsd=xsd5" namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" />
+      <xsd:import schemaLocation="http://localhost:50555/ServiceHost/DashBoardServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50555/ServiceHost/DashBoardServices.svc?xsd=xsd2" namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" />
+      <xsd:import schemaLocation="http://localhost:50555/ServiceHost/DashBoardServices.svc?xsd=xsd3" namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" />
+      <xsd:import schemaLocation="http://localhost:50555/ServiceHost/DashBoardServices.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.CandidateDC" />
+      <xsd:import schemaLocation="http://localhost:50555/ServiceHost/DashBoardServices.svc?xsd=xsd6" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDashBoardServices_FetchADMINDataDashboardExcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchADMINDataDashboardExcel" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchADMINDataDashboardExcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchADMINDataDashboardExcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchADMINDataDashboardExcel_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q1:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetLocationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationList" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetLocationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetLocationList_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q2:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetDepartment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartment" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetDepartment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetDepartment_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q3:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchDashboardDataForExcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchDashboardDataForExcel" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchDashboardDataForExcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchDashboardDataForExcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchDashboardDataForExcel_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q4:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSDashBoardAssetReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchNSSDashBoardAssetReport" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSDashBoardAssetReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchNSSDashBoardAssetReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSDashBoardAssetReport_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q5:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSDashboardDataForExcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchNSSDashboardDataForExcel" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSDashboardDataForExcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchNSSDashboardDataForExcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSDashboardDataForExcel_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q6:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_ForcasteDashboardExcelReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:ForcasteDashboardExcelReport" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_ForcasteDashboardExcelReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ForcasteDashboardExcelReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_ForcasteDashboardExcelReport_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q7:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UploadExcelDetailsData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadExcelDetailsData" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UploadExcelDetailsData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadExcelDetailsDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UploadExcelDetailsData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q8:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UpdatePhotoStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePhotoStatus" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UpdatePhotoStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePhotoStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UpdatePhotoStatus_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q9:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_SaveApprovalRequestData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveApprovalRequestData" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_SaveApprovalRequestData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveApprovalRequestDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_SaveApprovalRequestData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q10:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchAssetApprovalRequestData_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAssetApprovalRequestData" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchAssetApprovalRequestData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAssetApprovalRequestDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchAssetApprovalRequestData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q11:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UpdateAssetApprovalStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAssetApprovalStatus" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UpdateAssetApprovalStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAssetApprovalStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UpdateAssetApprovalStatus_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q12:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchRCData_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchRCData" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchRCData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchRCDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchRCData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q13:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchTrainingExcelData_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTrainingExcelData" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchTrainingExcelData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTrainingExcelDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchTrainingExcelData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q14:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchCandidateData_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCandidateData" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchCandidateData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCandidateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchCandidateData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q15:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UpdateCandidateDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCandidateDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UpdateCandidateDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCandidateDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UpdateCandidateDetails_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q16:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_DashBoardProcessCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:DashBoardProcessCount" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_DashBoardProcessCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DashBoardProcessCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_DashBoardProcessCount_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q17:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetWorkLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkLocation" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetWorkLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetWorkLocation_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q18:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UnlockCandidateAccess_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnlockCandidateAccess" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UnlockCandidateAccess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnlockCandidateAccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UnlockCandidateAccess_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q19:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetHRSSMappedCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHRSSMappedCountry" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetHRSSMappedCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHRSSMappedCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetHRSSMappedCountry_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q20:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetLevel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLevel" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetLevel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetLevel_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q21:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCity" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetCity_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q22:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_LapTopBlackpBerryCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:LapTopBlackpBerryCount" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_LapTopBlackpBerryCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LapTopBlackpBerryCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_LapTopBlackpBerryCount_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q23:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_Equipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:Equipment" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_Equipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EquipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_Equipment_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q24:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_BindWorklocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:BindWorklocation" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_BindWorklocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BindWorklocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_BindWorklocation_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q25:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSData_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchNSSData" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchNSSDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q26:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchHRSSData_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchHRSSData" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchHRSSData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchHRSSDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchHRSSData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q27:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UpdateCandidateJoiningStatusDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCandidateJoiningStatusDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UpdateCandidateJoiningStatusDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCandidateJoiningStatusDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UpdateCandidateJoiningStatusDetails_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q28:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_DashBoardProcessCountForHRSS_InputMessage">
+    <wsdl:part name="parameters" element="tns:DashBoardProcessCountForHRSS" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_DashBoardProcessCountForHRSS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DashBoardProcessCountForHRSSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_DashBoardProcessCountForHRSS_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q29:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSDataDashboard_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchNSSDataDashboard" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSDataDashboard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchNSSDataDashboardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSDataDashboard_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q30:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetIMMappedCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIMMappedCountry" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetIMMappedCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIMMappedCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetIMMappedCountry_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q31:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetTimelineFilters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimelineFilters" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetTimelineFilters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimelineFiltersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetTimelineFilters_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q32:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetAssetRequestTimelineStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetRequestTimelineStatus" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetAssetRequestTimelineStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetRequestTimelineStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetAssetRequestTimelineStatus_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q33:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSDashBoardData_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchNSSDashBoardData" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSDashBoardData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchNSSDashBoardDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSDashBoardData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q34:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSCandidateData_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchNSSCandidateData" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSCandidateData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchNSSCandidateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchNSSCandidateData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q35:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UpdateNSSAssetDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNSSAssetDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UpdateNSSAssetDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNSSAssetDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_UpdateNSSAssetDetails_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q36:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_DashBoardAssetCountForNSS_InputMessage">
+    <wsdl:part name="parameters" element="tns:DashBoardAssetCountForNSS" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_DashBoardAssetCountForNSS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DashBoardAssetCountForNSSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_DashBoardAssetCountForNSS_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q37:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetFileUploadDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileUploadDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetFileUploadDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileUploadDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetFileUploadDetails_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q38:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchADMINDataDashboard_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchADMINDataDashboard" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchADMINDataDashboard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchADMINDataDashboardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_FetchADMINDataDashboard_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q39:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetStatusList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusList" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetStatusList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDashBoardServices_GetStatusList_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q40:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:portType name="IDashBoardServices">
+    <wsdl:operation name="FetchADMINDataDashboardExcel">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchADMINDataDashboardExcel" message="tns:IDashBoardServices_FetchADMINDataDashboardExcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchADMINDataDashboardExcelResponse" message="tns:IDashBoardServices_FetchADMINDataDashboardExcel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchADMINDataDashboardExcelOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_FetchADMINDataDashboardExcel_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationList">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetLocationList" message="tns:IDashBoardServices_GetLocationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetLocationListResponse" message="tns:IDashBoardServices_GetLocationList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetLocationListOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_GetLocationList_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartment">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetDepartment" message="tns:IDashBoardServices_GetDepartment_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetDepartmentResponse" message="tns:IDashBoardServices_GetDepartment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetDepartmentOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_GetDepartment_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchDashboardDataForExcel">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchDashboardDataForExcel" message="tns:IDashBoardServices_FetchDashboardDataForExcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchDashboardDataForExcelResponse" message="tns:IDashBoardServices_FetchDashboardDataForExcel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchDashboardDataForExcelOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_FetchDashboardDataForExcel_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchNSSDashBoardAssetReport">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSDashBoardAssetReport" message="tns:IDashBoardServices_FetchNSSDashBoardAssetReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSDashBoardAssetReportResponse" message="tns:IDashBoardServices_FetchNSSDashBoardAssetReport_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSDashBoardAssetReportOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_FetchNSSDashBoardAssetReport_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchNSSDashboardDataForExcel">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSDashboardDataForExcel" message="tns:IDashBoardServices_FetchNSSDashboardDataForExcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSDashboardDataForExcelResponse" message="tns:IDashBoardServices_FetchNSSDashboardDataForExcel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSDashboardDataForExcelOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_FetchNSSDashboardDataForExcel_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ForcasteDashboardExcelReport">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/ForcasteDashboardExcelReport" message="tns:IDashBoardServices_ForcasteDashboardExcelReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/ForcasteDashboardExcelReportResponse" message="tns:IDashBoardServices_ForcasteDashboardExcelReport_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/ForcasteDashboardExcelReportOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_ForcasteDashboardExcelReport_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadExcelDetailsData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UploadExcelDetailsData" message="tns:IDashBoardServices_UploadExcelDetailsData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UploadExcelDetailsDataResponse" message="tns:IDashBoardServices_UploadExcelDetailsData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UploadExcelDetailsDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_UploadExcelDetailsData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhotoStatus">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UpdatePhotoStatus" message="tns:IDashBoardServices_UpdatePhotoStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UpdatePhotoStatusResponse" message="tns:IDashBoardServices_UpdatePhotoStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UpdatePhotoStatusOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_UpdatePhotoStatus_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveApprovalRequestData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/SaveApprovalRequestData" message="tns:IDashBoardServices_SaveApprovalRequestData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/SaveApprovalRequestDataResponse" message="tns:IDashBoardServices_SaveApprovalRequestData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/SaveApprovalRequestDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_SaveApprovalRequestData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchAssetApprovalRequestData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchAssetApprovalRequestData" message="tns:IDashBoardServices_FetchAssetApprovalRequestData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchAssetApprovalRequestDataResponse" message="tns:IDashBoardServices_FetchAssetApprovalRequestData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchAssetApprovalRequestDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_FetchAssetApprovalRequestData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetApprovalStatus">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UpdateAssetApprovalStatus" message="tns:IDashBoardServices_UpdateAssetApprovalStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UpdateAssetApprovalStatusResponse" message="tns:IDashBoardServices_UpdateAssetApprovalStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UpdateAssetApprovalStatusOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_UpdateAssetApprovalStatus_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchRCData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchRCData" message="tns:IDashBoardServices_FetchRCData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchRCDataResponse" message="tns:IDashBoardServices_FetchRCData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchRCDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_FetchRCData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchTrainingExcelData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchTrainingExcelData" message="tns:IDashBoardServices_FetchTrainingExcelData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchTrainingExcelDataResponse" message="tns:IDashBoardServices_FetchTrainingExcelData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchTrainingExcelDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_FetchTrainingExcelData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchCandidateData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchCandidateData" message="tns:IDashBoardServices_FetchCandidateData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchCandidateDataResponse" message="tns:IDashBoardServices_FetchCandidateData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchCandidateDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_FetchCandidateData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCandidateDetails">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UpdateCandidateDetails" message="tns:IDashBoardServices_UpdateCandidateDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UpdateCandidateDetailsResponse" message="tns:IDashBoardServices_UpdateCandidateDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UpdateCandidateDetailsOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_UpdateCandidateDetails_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DashBoardProcessCount">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/DashBoardProcessCount" message="tns:IDashBoardServices_DashBoardProcessCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/DashBoardProcessCountResponse" message="tns:IDashBoardServices_DashBoardProcessCount_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/DashBoardProcessCountOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_DashBoardProcessCount_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkLocation">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetWorkLocation" message="tns:IDashBoardServices_GetWorkLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetWorkLocationResponse" message="tns:IDashBoardServices_GetWorkLocation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetWorkLocationOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_GetWorkLocation_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockCandidateAccess">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UnlockCandidateAccess" message="tns:IDashBoardServices_UnlockCandidateAccess_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UnlockCandidateAccessResponse" message="tns:IDashBoardServices_UnlockCandidateAccess_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UnlockCandidateAccessOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_UnlockCandidateAccess_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHRSSMappedCountry">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetHRSSMappedCountry" message="tns:IDashBoardServices_GetHRSSMappedCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetHRSSMappedCountryResponse" message="tns:IDashBoardServices_GetHRSSMappedCountry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetHRSSMappedCountryOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_GetHRSSMappedCountry_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLevel">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetLevel" message="tns:IDashBoardServices_GetLevel_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetLevelResponse" message="tns:IDashBoardServices_GetLevel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetLevelOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_GetLevel_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCity">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetCity" message="tns:IDashBoardServices_GetCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetCityResponse" message="tns:IDashBoardServices_GetCity_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetCityOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_GetCity_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LapTopBlackpBerryCount">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/LapTopBlackpBerryCount" message="tns:IDashBoardServices_LapTopBlackpBerryCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/LapTopBlackpBerryCountResponse" message="tns:IDashBoardServices_LapTopBlackpBerryCount_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/LapTopBlackpBerryCountOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_LapTopBlackpBerryCount_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Equipment">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/Equipment" message="tns:IDashBoardServices_Equipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/EquipmentResponse" message="tns:IDashBoardServices_Equipment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/EquipmentOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_Equipment_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BindWorklocation">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/BindWorklocation" message="tns:IDashBoardServices_BindWorklocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/BindWorklocationResponse" message="tns:IDashBoardServices_BindWorklocation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/BindWorklocationOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_BindWorklocation_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchNSSData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSData" message="tns:IDashBoardServices_FetchNSSData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSDataResponse" message="tns:IDashBoardServices_FetchNSSData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_FetchNSSData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchHRSSData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchHRSSData" message="tns:IDashBoardServices_FetchHRSSData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchHRSSDataResponse" message="tns:IDashBoardServices_FetchHRSSData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchHRSSDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_FetchHRSSData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCandidateJoiningStatusDetails">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UpdateCandidateJoiningStatusDetails" message="tns:IDashBoardServices_UpdateCandidateJoiningStatusDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UpdateCandidateJoiningStatusDetailsResponse" message="tns:IDashBoardServices_UpdateCandidateJoiningStatusDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UpdateCandidateJoiningStatusDetailsOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_UpdateCandidateJoiningStatusDetails_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DashBoardProcessCountForHRSS">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/DashBoardProcessCountForHRSS" message="tns:IDashBoardServices_DashBoardProcessCountForHRSS_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/DashBoardProcessCountForHRSSResponse" message="tns:IDashBoardServices_DashBoardProcessCountForHRSS_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/DashBoardProcessCountForHRSSOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_DashBoardProcessCountForHRSS_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchNSSDataDashboard">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSDataDashboard" message="tns:IDashBoardServices_FetchNSSDataDashboard_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSDataDashboardResponse" message="tns:IDashBoardServices_FetchNSSDataDashboard_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSDataDashboardOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_FetchNSSDataDashboard_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIMMappedCountry">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetIMMappedCountry" message="tns:IDashBoardServices_GetIMMappedCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetIMMappedCountryResponse" message="tns:IDashBoardServices_GetIMMappedCountry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetIMMappedCountryOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_GetIMMappedCountry_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTimelineFilters">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetTimelineFilters" message="tns:IDashBoardServices_GetTimelineFilters_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetTimelineFiltersResponse" message="tns:IDashBoardServices_GetTimelineFilters_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetTimelineFiltersOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_GetTimelineFilters_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetRequestTimelineStatus">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetAssetRequestTimelineStatus" message="tns:IDashBoardServices_GetAssetRequestTimelineStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetAssetRequestTimelineStatusResponse" message="tns:IDashBoardServices_GetAssetRequestTimelineStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetAssetRequestTimelineStatusOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_GetAssetRequestTimelineStatus_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchNSSDashBoardData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSDashBoardData" message="tns:IDashBoardServices_FetchNSSDashBoardData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSDashBoardDataResponse" message="tns:IDashBoardServices_FetchNSSDashBoardData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSDashBoardDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_FetchNSSDashBoardData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchNSSCandidateData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSCandidateData" message="tns:IDashBoardServices_FetchNSSCandidateData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSCandidateDataResponse" message="tns:IDashBoardServices_FetchNSSCandidateData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchNSSCandidateDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_FetchNSSCandidateData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNSSAssetDetails">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UpdateNSSAssetDetails" message="tns:IDashBoardServices_UpdateNSSAssetDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UpdateNSSAssetDetailsResponse" message="tns:IDashBoardServices_UpdateNSSAssetDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/UpdateNSSAssetDetailsOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_UpdateNSSAssetDetails_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DashBoardAssetCountForNSS">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/DashBoardAssetCountForNSS" message="tns:IDashBoardServices_DashBoardAssetCountForNSS_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/DashBoardAssetCountForNSSResponse" message="tns:IDashBoardServices_DashBoardAssetCountForNSS_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/DashBoardAssetCountForNSSOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_DashBoardAssetCountForNSS_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileUploadDetails">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetFileUploadDetails" message="tns:IDashBoardServices_GetFileUploadDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetFileUploadDetailsResponse" message="tns:IDashBoardServices_GetFileUploadDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetFileUploadDetailsOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_GetFileUploadDetails_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchADMINDataDashboard">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchADMINDataDashboard" message="tns:IDashBoardServices_FetchADMINDataDashboard_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchADMINDataDashboardResponse" message="tns:IDashBoardServices_FetchADMINDataDashboard_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/FetchADMINDataDashboardOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_FetchADMINDataDashboard_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusList">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetStatusList" message="tns:IDashBoardServices_GetStatusList_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetStatusListResponse" message="tns:IDashBoardServices_GetStatusList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/IDashBoardServices/GetStatusListOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IDashBoardServices_GetStatusList_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

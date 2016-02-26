@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>ER ProcessView</title>
+    <input type="hidden" id="hdnPId" value="5" />
+    <script type="text/javascript" src="../../Scripts/JQuery/1.8/jquery.js"></script>
+    <script type="text/javascript" src="../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js"></script>
+    <link href="../../Styles/styles.css" rel="stylesheet" type="text/css" />
+    <script src="ERProcessView.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../Scripts/script.js"></script>
+    <script type="text/javascript" src="../../Scripts/JQuery/jquery.ui.datepicker.js"></script>
+    <link href="../../Styles/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/Calender.Css" rel="stylesheet" type="text/css" />
+    
+</head>
+<body style="overflow: hidden;">
+    <div id="smFrame" style="display: none;">
+        <iframe id="sm" frameborder="0" width="0" height="0" runat="server" src="../../CommonPages/SessionMaintainer.aspx">
+        </iframe>
+    </div>
+        <div class="clear">
+        </div>
+        <div id="divdashboardBase" class="content_wrapper">
+            <div class="candidate_details">
+                <div class="header">
+                    <div class="flft" style="margin-left: 4px;">
+                        Search by</div>
+                  
+                </div>
+                <div class="clear">
+                </div>
+                <div id="divsearchfilter" class="content">
+                    <ul class="flft">
+                        <li id="lilblcandidateid" class="width85">
+                            <label id="lblCandidateInputBox">
+                                Candidate ID:</label>
+                        </li>
+                        <li id="litxtcandiateid">
+                            <input type="text" class="txtbx" id="CandidateInputBox" onkeypress="javascript:return ValidateOnlyInteger(event);"
+                                maxlength="15" tabindex="1" />
+                        </li>
+                      
+                        <li id="lilblName" class="width85">
+                            <label id="name">
+                                Name:</label>
+                        </li>
+                        <li id="litxtName">
+                            <input type="text" class="txtbx" id="CandidateNameInputBox" maxlength="250" tabindex="3"
+                                ac-enabled="true" ac-url="../../../DashboardService.aspx/FetchCandidatessearchForDashboard"
+                                ac-length="3" ac-width="250" ac-oncomplete="Onentertext();" ac-onsuccess="" ac-onfailure="" />
+                        </li>
+                        
+                       
+                        <li id="lilblCountry" class="width85">
+                            <label id="country">
+                                Country:</label>
+                        </li>
+                        <li id="litxtCountry">
+                            <select class="styled" id="countrySelectBox" name="SELECT_COUNTRY" tabindex="5">
+                            </select>
+                        </li>
+                         <!--<li id="lilblAssetStatus" class="width85">
+                            <label id="lblAssetStatus">Asset Status:</label>
+                        </li>
+                        <li>
+                           <select class="styled" id="selectAssetStatus" name="AssetStatus"   tabindex="5">
+                            </select></li>-->
+                        <div class="clear">
+                        </div>
+                        <li id="lilblERFromStatus" class="width85">
+                            <label id="lblERFromStatus">
+                                ER Form Status:</label>
+                        </li>
+                        <li id="litextERFromStatus">
+                          
+                            <select class="styled" id="ERFromCandidateStatus" name="ERFromStatus" tabindex="5">
+                            </select>
+                        </li>
+                        <li id="lilblConfirmationERprocess" class="width85">
+                            <label id="lblConfirmationERprocess">
+                               RC Confirmation:</label>
+                        </li>
+                        <li id="liConfirmationERprocess">
+                             <select class="styled" id="ConfirmationERprocess" name="ConfirmationERprocess" tabindex="5">
+                            </select>
+                        </li>
+                        <li id="lilblFromDate" class="width85">
+                            <label id="lblfrom">
+                                From Date:</label>
+                        </li>
+                        <li id="litxtFromDate">
+                            <input type="text" class="txtbxdate" id="DOJFromInputBox" value="From Date" tabindex="8"
+                                readonly="readonly" />
+                        </li>
+                        <li id="lilblToDate" class="width65">
+                            <label id="lblto">
+                                To Date:</label>
+                        </li>
+                        <li id="litxtToDate">
+                            <input type="text" class="txtbxdate" id="DOJToInputBox" value="To Date" tabindex="9"
+                                readonly="readonly" />
+                        </li>
+                       <li id="lilblHireType" class="width85">
+                            <label id="lblHireType">
+                                Hire Type:</label>
+                        </li>
+                        <li id="liddHireType">
+                             <select class="styled" id="ddHireType" name="HireType" tabindex="10">
+                            </select>
+                        </li>
+                         <li id="liProcessType" class="width85">
+                            <label id="liProcessType_lbl">
+                                ProcessType:</label>
+                        </li>
+                        <li id="liProcess_Select">
+                             <select class="styled" id="ddl_ProcessType" name="ProcessType" tabindex="11">
+                            </select>
+                        </li>
+                    </ul>
+                    <div class="clear">
+                    </div>
+                    <div class="btns flrt">
+                        <input id="apply_nh" type="submit" class="search_btn" value="Apply" tabindex="14" />
+                        <input id="clear_nh" type="reset" class=" search_btn" value="Clear" tabindex="15" />
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+            <div id="divDashboardSearch" class="candidate_details" style="height: 240px; overflow: auto;">
+                <table id="tblDashboardData" style="width:100%;" class="paper_wrk" cellpadding="0" cellspacing="0" >
+                    <tr>
+                    </tr>
+                </table>
+            </div>
+            <div id="divPagination" class="pagination flrt" style="margin-top:2px; text-align:right;padding-bottom:5px; padding-top:3px">
+            </div>
+        </div>
+        <div id="divLoadOther" style="display: none;" class="content_wrapper">
+            <iframe id="ifLoadOtherPage" height="550px" width="940px" style="overflow:hidden;" allowtransparency="true"  scrolling="no" frameborder="0" runat="server"></iframe>
+        </div>
+    
+    <div class="clear">
+    </div>
+    <div id="LoadingImage" style="position: absolute; z-index: 99999; top: 220px; left: 400px;
+        display: none">
+        <img alt="" src="../../Images/spinner.gif" />
+    </div>
+    <iframe id="iframeExcel" height="10px" width="100px" frameborder="0" scrolling="no">
+    </iframe>
+    <input type="hidden" id="hdnProcessId" /> 
+    <input type="hidden" id="hdnCandidateType" />
+    <input type="hidden" id="hdnPageNo" />
+    <input type="hidden" id="hdnTotalRecord" />
+    <input type="hidden" id="hdnCandidateId" />
+    <input type="hidden" id="hdnCountryId" />
+    <input type="hidden" id="hdnSessionId" />
+    <input type="hidden" id="hdnRoleId" />
+    <input type="hidden" id="hdnCandidateName" />
+</body>
+</html>

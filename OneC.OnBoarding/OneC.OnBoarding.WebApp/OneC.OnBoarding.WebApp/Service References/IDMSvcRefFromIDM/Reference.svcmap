@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="af3e85c2-5f7a-4c22-b630-1a605af020e9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.237.213.45/EUMS_Service/Service_EUMS.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service_EUMS.disco" MetadataType="Disco" ID="efb87e99-746d-42cd-90bc-aa326099abb4" SourceId="1" SourceUrl="http://10.237.213.45/EUMS_Service/Service_EUMS.svc?disco" />
+    <MetadataFile FileName="Service_EUMS.xsd" MetadataType="Schema" ID="7f51e58d-b421-46ef-a81d-f291dffd5b05" SourceId="1" SourceUrl="http://10.237.213.45/EUMS_Service/Service_EUMS.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service_EUMS.wsdl" MetadataType="Wsdl" ID="7e8ac41d-f281-4f1b-afb6-aca884fedc81" SourceId="1" SourceUrl="http://10.237.213.45/EUMS_Service/Service_EUMS.svc?wsdl" />
+    <MetadataFile FileName="Service_EUMS1.xsd" MetadataType="Schema" ID="b6851b8e-5bfb-4da7-b99d-4fa4714f9934" SourceId="1" SourceUrl="http://10.237.213.45/EUMS_Service/Service_EUMS.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service_EUMS2.xsd" MetadataType="Schema" ID="7a6783b6-e9d6-4a40-962b-1379a2cd8fa2" SourceId="1" SourceUrl="http://10.237.213.45/EUMS_Service/Service_EUMS.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service_EUMS3.xsd" MetadataType="Schema" ID="74a41a9a-574c-4d5d-b42f-fe331c7e7df7" SourceId="1" SourceUrl="http://10.237.213.45/EUMS_Service/Service_EUMS.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,87 @@
+/*	CSS for customized radio buttons and check boxes */
+
+/* page styles */
+
+fieldset { 
+	padding: 0 15px 3em;
+	border: 0;
+}
+
+legend {
+	font-size: 1.4em;
+	font-weight: bold;
+	padding: .2em 5px;
+}
+
+	
+/*	wrapper divs */
+.custom-checkbox, .custom-radio { position: relative; }
+	
+/* input, label positioning */
+.custom-checkbox input, 
+.custom-radio input {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	/**top:4px;*/
+	*top:10px;
+	*left:6px;
+	margin: 0;
+	z-index: 0;
+	padding:0;
+}
+
+.custom-checkbox label, 
+.custom-radio label {
+	color: #3D3D3D;
+	display: block;
+	position: relative;
+	z-index: 1;
+	font-size: 12px;
+	
+	line-height: 1;
+	padding: 12px 0 4px 35px;
+	margin: 0 0 .3em;
+	*margin: 0;
+	cursor: pointer;
+}
+
+	
+/* states */
+.custom-checkbox label { background: url(../../Images/Survey/unchk.png) no-repeat  10px 10px; }
+
+/*.custom-radio label { background: url(../../Images/Survey/radiobutton.gif) no-repeat; }*/
+
+.custom-checkbox label, .custom-radio label {
+	/*	background-position: -10px -14px; */
+	
+}
+
+.custom-checkbox label.hover,
+.custom-checkbox label.focus,
+.custom-radio label.hover,
+.custom-radio label.focus {
+	/*background-position: -10px -114px;*/
+	
+}
+
+.custom-checkbox label.checked, 
+.custom-radio label.checked {
+	/*	background-position: -10px -214px; */
+	
+	background:url(../../Images/Survey/chk.png) no-repeat 10px 10px; 
+	 
+}
+
+.custom-checkbox label.checkedHover, 
+.custom-checkbox label.checkedFocus {
+	/*background-position: -10px -314px;*/
+	background: url(../../Images/Survey/chk.png) no-repeat  10px 10px; 
+	
+}
+
+.custom-checkbox label.focus, 
+.custom-radio label.focus {
+	/*outline: 1px dotted #ccc;*/
+	
+}

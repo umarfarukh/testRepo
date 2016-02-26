@@ -1,0 +1,431 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>PAI Form</title>
+    <script src="../../../../Scripts/JQuery/1.8/jquery.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/India/PAIForm.js" type="text/javascript"></script>
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+	
+}
+body{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;  font-size:62.5%; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:62.5%;}
+#pf_main
+{
+	width:949px;
+
+	height:994px;
+}
+.font16 {font-size:1.6em;}
+.font14{font-size:1.4em;}
+.font13{font-size:1.3em;}
+.boldtext{font-weight:bold;}
+.textcenter{text-align:center;}
+.paddingTB10{padding:10px 0;}
+.paddingTB8{padding:8px 0;}
+.paddingT5{padding:5px 0 0 0;}
+.paddingL5{padding-left:5px;}
+.marginL20{margin-left:20px;}
+.marginT20{margin-top:20px;}
+.marginB20{margin-bottom:20px;}
+.marginR20{margin-right:20px;}
+.details_pf{height:342px;
+    }
+.epf{height:355px;
+    }
+.epf li,#pf_main ul li{border:1px solid #d4e7ef;}
+.fleft{float:left;}
+.lineht17{line-height:17px;}
+.details_pf li{width:48%; border:1px solid #d4e7ef;height:41px;
+    }
+.borderTnone{ border-top:none !important;}
+.borderRnone{ border-right:none !important;}
+.width180{width:174px;
+    }
+.height100{height:100px;}
+.height50{height:60px;
+    }
+.textright{text-align:right;}
+.fright{float:right;}
+.marginT40{margin-top:40px;
+        width: 906px;
+    }
+.paddingL10{padding-left:10px;
+        width: 923px;
+    }
+.eps{height:350px;
+        width: 914px;
+    }
+.width275{width:200px;
+    }
+.width90{width:57px;
+    }
+.eps li{border:1px solid #d4e7ef;}
+.width305{width:260px;
+    }
+.grey_color{color:#3a3a3a;}
+.paddingR20{padding-right:20px;}
+.valignT{vertical-align:top;}
+    .style1
+    {
+        height: 85px;
+        width: 400px;
+    }
+    
+.pageData ul.personalDetails
+{
+    width:70%;
+    border:1px solid #d4e7ef;
+    border-bottom:none;
+    border-right:none;
+    float:left;
+    margin-left:165px;
+    margin-bottom:10px;
+    }
+.pageData ul.personalDetails li
+{
+    width:40%;
+    padding:10px 25px 10px 35px;
+    border:none;
+    border-bottom:1px solid #d4e7ef;
+    border-right:1px solid #d4e7ef;
+    }
+.pageDetails .pageHeader
+{
+    margin-bottom:10px;
+    }
+    .alert_f_text
+    {
+        padding-left:0px;
+        width:auto;
+        }
+        .paddingTB10 span
+        {
+            float:left;
+            padding-left:2px;
+            }
+            ul.eps li input.tbForm, ul.eps li select
+            {
+                margin-right:5px;
+                }
+            
+</style>
+</head>
+<body>
+    <div id="baseContent">
+        <div id="main_f">
+            <div id="headerContent">
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id="PageContent" class="pagesContainer">
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="pageHeader ">
+                                <p class="paddingL5 paddingTB8" style="text-align: center;">
+                                    PERSONAL ACCIDENT INSURANCE NOMINATION FORM</p>
+                            </div>
+                            <ul class="personalDetails">
+                                <li>
+                                    <label>
+                                        Name of the Associate</label>
+                                </li>
+                                <li>
+                                    <input class="inputText_Readonly" type="text" id="Pg_1_text_AssociateName" style="border: 1px solid #000;"
+                                        readonly="readonly" title="Name" /><br />
+                                </li>
+                                <li>
+                                    <label>
+                                        Father's/Husband's Name<br />
+                                        (in case of married women)
+                                    </label>
+                                </li>
+                                <li>
+                                    <input class="inputText_Readonly" type="text" style="border: 1px solid #000; margin-top: 5px"
+                                        id="Pg_1_text_Father_HusbandName" readonly="readonly" /><br />
+                                </li>
+                                <li>
+                                    <label>
+                                        Permanent Address
+                                    </label>
+                                </li>
+                                <li>
+                                    <textarea class="inputText_Readonly" readonly="readonly" style="height: 22px;" rows="0"
+                                        cols="0" id="Pg_1_text_Address"></textarea>
+                                </li>
+                                <li>
+                                    <label>
+                                        Date Of Birth
+                                    </label>
+                                </li>
+                                <li>
+                                    <input class="inputText_Readonly" type="text" style="border: 1px solid #000; margin-top: 5px"
+                                        id="Pg_1_text_DOB" readonly="readonly" /><br />
+                                </li>
+                                <li>
+                                    <label>
+                                        Date Of Joining
+                                    </label>
+                                </li>
+                                <li>
+                                    <input class="inputText_Readonly" type="text" style="border: 1px solid #000; margin-top: 5px"
+                                        id="Pg_1_text_DOJ" readonly="readonly" /><br />
+                                </li>
+                                <li>
+                                    <label>
+                                        Designation</label>
+                                </li>
+                                <li>
+                                    <input class="inputText_Readonly" type="text" style="border: 1px solid #000; margin-top: 5px"
+                                        id="Pg_1_text_Designation" readonly="readonly" />
+                                </li>
+                                <li>
+                                    <label>
+                                        Function</label>
+                                </li>
+                                <li>
+                                    <input name="Function" class="inputText_Readonly" type="text" style="border: 1px solid #000"
+                                        id="Pg_1_text_Function" readonly="readonly" />
+                                </li>
+                            </ul>
+                            <div class="pageHeader fleft ">
+                                <p style="text-align: center;">
+                                    DETAILS OF NOMINATION</p>
+                            </div>
+                            <ul class="eps marginT40 " style="margin-bottom: 10px; margin-left: 15px; float: left;
+                                width: 870px;">
+                                <li class="width90 fleft textcenter borderRnone height50 font13">
+                                    <p class="paddingTB10 blueText">
+                                        Sl.No</p>
+                                </li>
+                                <li class="width275 fleft textcenter borderRnone height50 font13">
+                                    <p class="paddingTB10 blueText">
+                                        Name of the Nominee
+                                    </p>
+                                </li>
+                                <li class="width275 fleft textcenter borderRnone height50 font13">
+                                    <p class="paddingTB10 blueText">
+                                        Age of the Nominee/s</p>
+                                </li>
+                                <li class="width275 fleft textcenter  height50 font13 ">
+                                    <p class="paddingTB10 blueText">
+                                        Relationship</p>
+                                </li>
+                                <li class="width275 fleft textcenter  height50 font13 ">
+                                    <p class="paddingTB10 blueText">
+                                        Percentage Nomination<br />
+                                        (100%max)</p>
+                                </li>
+                                <!--second row-->
+                                <li class="width90 fleft textcenter borderRnone height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        1.</p>
+                                </li>
+                                <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <span style="color: Red;">*</span>
+                                        <input name="NomineeName1" id="NomineeName1" title="Name" class="tbForm  onlyAlp textMandatory"
+                                            style="width: 147px; float: right; border: 1px solid #000;" maxlength="45" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="PAIForm.Nominee1.NomineeName" /></p>
+                                </li>
+                                <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <span style="color: Red;">*</span>
+                                        <input id="NomineeAge1" title="Age" class="tbForm OnlyNumeric textMandatory" style="width: 158px;
+                                            float: right; border: 1px solid #000;" jqxb-datasource="FormDetails" maxlength="3"
+                                            jqxb-datamember="PAIForm.Nominee1.NomineeAge" />
+                                    </p>
+                                </li>
+                                <li class="width275 fleft textcenter  height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <span style="color: Red;">*</span>
+                                        <select id="Relationship1" name="Relation" title="Relation" style="border: 1px solid #000;
+                                            width: 147px; float: right;" class="tbForm ddForm dropdown" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="PAIForm.Nominee1.Relationship" jqxb-listsource="RelationList"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select></p>
+                                </li>
+                                <li class="width275 fleft textcenter  height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <span style="color: Red;">*</span>
+                                        <input id="TotalAmt1" type="text" title="Nomination" class="tbForm OnlyNumeric textMandatory"
+                                            style="border: 1px solid #000; width: 147px; float: right;" maxlength="3" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="PAIForm.Nominee1.TotalAmt" /></p>
+                                </li>
+                                <!--third row-->
+                                <li class="width90 fleft textcenter borderRnone height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        2.
+                                    </p>
+                                </li>
+                                <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <input name="NomineeName2" class="tbForm onlyAlp" style="width: 147px; border: 1px solid #000;
+                                            float: right;" maxlength="45" jqxb-datasource="FormDetails" jqxb-datamember="PAIForm.Nominee2.NomineeName" />
+                                    </p>
+                                </li>
+                                <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <input id="NomineeAge2" class="tbForm OnlyNumeric" style="width: 158px; border: 1px solid #000;
+                                            float: right;" jqxb-datasource="FormDetails" maxlength="3" jqxb-datamember="PAIForm.Nominee2.NomineeAge" />
+                                    </p>
+                                </li>
+                                <li class="width275 fleft textcenter  height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <select id="Relationship2" name="Relation" style="border: 1px solid #000; width: 147px;
+                                            float: right;" class="tbForm ddForm" jqxb-datasource="FormDetails" jqxb-datamember="PAIForm.Nominee2.Relationship"
+                                            jqxb-listsource="RelationList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </p>
+                                </li>
+                                <li class="width275 fleft textcenter  height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <input id="TotalAmt2" type="text" class="tbForm OnlyNumeric" style="border: 1px solid #000;
+                                            width: 147px; float: right;" maxlength="3" jqxb-datasource="FormDetails" jqxb-datamember="PAIForm.Nominee2.TotalAmt" />
+                                    </p>
+                                </li>
+                                <!--fourth row-->
+                                <li class="width90 fleft textcenter borderRnone height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        3.
+                                    </p>
+                                </li>
+                                <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <input name="NomineeName3" class="tbForm onlyAlp" style="width: 147px; border: 1px solid #000;
+                                            float: right;" maxlength="45" jqxb-datasource="FormDetails" jqxb-datamember="PAIForm.Nominee3.NomineeName" />
+                                    </p>
+                                </li>
+                                <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <input id="NomineeAge3" class="tbForm OnlyNumeric" style="width: 158px; border: 1px solid #000;
+                                            float: right;" jqxb-datasource="FormDetails" maxlength="3" jqxb-datamember="PAIForm.Nominee3.NomineeAge" />
+                                    </p>
+                                </li>
+                                <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <select id="Relationship3" name="Relation" style="border: 1px solid #000; width: 147px;
+                                            float: right;" class="tbForm ddForm" jqxb-datasource="FormDetails" jqxb-datamember="PAIForm.Nominee3.Relationship"
+                                            jqxb-listsource="RelationList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </p>
+                                </li>
+                                <li class="width275 fleft textcenter  height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <input id="TotalAmt3" type="text" class="tbForm OnlyNumeric" style="border: 1px solid #000;
+                                            width: 147px; float: right;" maxlength="3" jqxb-datasource="FormDetails" jqxb-datamember="PAIForm.Nominee3.TotalAmt" />
+                                    </p>
+                                </li>
+                                <!--fifth row-->
+                                <li class="width90 fleft textcenter borderRnone height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        4.
+                                    </p>
+                                </li>
+                                <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <input name="NomineeName4" class="tbForm onlyAlp" style="width: 147px; border: 1px solid #000;
+                                            float: right;" maxlength="45" jqxb-datasource="FormDetails" jqxb-datamember="PAIForm.Nominee4.NomineeName" />
+                                    </p>
+                                </li>
+                                <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <input id="NomineeAge4" class="tbForm OnlyNumeric" style="width: 158px; border: 1px solid #000;
+                                            float: right;" jqxb-datasource="FormDetails" maxlength="3" jqxb-datamember="PAIForm.Nominee4.NomineeAge" />
+                                    </p>
+                                </li>
+                                <li class="width275 fleft textcenter  height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <select id="Relationship4" name="Relation" style="border: 1px solid #000; width: 147px;
+                                            float: right;" class="tbForm ddForm" jqxb-datasource="FormDetails" jqxb-datamember="PAIForm.Nominee4.Relationship"
+                                            jqxb-listsource="RelationList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </p>
+                                </li>
+                                <li class="width275 fleft textcenter  height50 font13 borderTnone">
+                                    <p class="paddingTB10">
+                                        <input id="TotalAmt4" type="text" class="tbForm OnlyNumeric" style="border: 1px solid #000;
+                                            width: 147px; float: right;" maxlength="3" jqxb-datasource="FormDetails" jqxb-datamember="PAIForm.Nominee4.TotalAmt" />
+                                    </p>
+                                </li>
+
+                                <li class="pageText">
+                                 # If Married > Spouse, Children (married or unmarried), his/her dependent parents, deceased 
+                            sons widow and chidren.<br /> If unmarried, then Parents, Brother, Sister or any other person(s).
+                                </li>
+
+                            </ul>                           
+
+                            <div class="pageHeader fleft ">
+                                <p style="text-align: center;">
+                                    ASSIGNMENT</p>
+                            </div>
+                            <div class="page_text fleft">
+                                <br />
+                                I,<input class="inputText_Readonly" id="Pg_1_text_Name" type="text" style="border: 1px solid #000;"
+                                    readonly="readonly" />
+                                do hereby assign the amount payable by the insurance service provider of Cognizant, in the event
+                                of my death to (relation to the insured) and I further declare that in the event
+                                of the death of the assigneed named herein all the benefits shall become payable
+                                to the children named in the policy and I further declare that his/her their receipt
+                                shall be sufficient to discharge the Company.
+                            </div>
+                        </div>
+                        <div class="Signature" id="Sign_PageId_1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='footerContent'>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, * { border: 0; font: inherit; vertical-align: baseline; overflow: visible; margin: 0; padding: 0; }
+body { font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif; font-size: 72.5%; line-height: 1; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ul { list-style-type: none; }
+a { text-decoration: none; }
+.flt_left { float: left; }
+.flt_right { float: right; }
+.width50 { width: 50%; }
+#overLay { display: none; position: fixed; _position: absolute; /* hack for internet explorer 6*/ height: 100%; width: 100%; top: 0; left: 0; background-color: #000000; border: 1px solid #cecece; z-index: 9999; }
+div.container { width: 910px; height: 500px; border: 1px solid #152936; padding: 5px; background-image: url('../../Images/Survey/background.png'); background-repeat: repeat-x; }
+.container .leftPanel { width: 29%; height: 94.7%; border: 1px solid #152936; float: left; padding-top: 5px; padding-left: 2px; }
+.container div.rightPanel { width: 70%; border-right: 1px solid #152936; border-top: 1px solid #152936; border-bottom: 1px solid #152936; float: left; height: 95.7%; }
+.headerContent { width: 100%;  background:url(../../Images/Bgv/header_bg.png) repeat-x; color: #fff; }
+table.headerContent thead tr th {height: 30px; vertical-align: middle;font-weight:bold;font-size:1.2em; }
+.listContainer { height: 90%; }
+.listContainer ul { text-align: center; border-bottom: 1px solid #b2b2b2; height: 35px; margin: 0; }
+.listContainer ul li {height: 19px;margin-top:6px; }
+.leftBorder { border-left: 1px solid #b2b2b2; }
+table.search { padding: 5px; min-height: 60px; }
+table.search tbody tr td { margin-left: 10px; padding-right: 10px; height: 30px; text-align: left; width: 30%; }
+.searchHead { width: 97%; border-top: none;  background:url(../../Images/Bgv/header_bg.png) repeat-x;color: #fff; font-weight: 700; cursor: pointer; text-decoration: none; height: 20px; padding-top: 5px; padding-left: 5px; }
+.searchHead a { color: #fff; }
+.searchHead a img, .rootContainer div a img { vertical-align: middle; margin-top: -2px; border-color: transparent; width: 15px; }
+.leftpanelsub { width: 95.2%; padding: 8px 0 10px 10px; border: 1px solid ##bfc5bf; background-color: #fff; padding-top: 8px; }
+.head img { height: 14px;vertical-align:middle;}
+.head-ul { padding: 5px 0 0 25px; }
+.search input[type="text"], select { width: 130px; float: right; border :1px solid #b2b2b2;height:20px;}
+.search input[type="button"] { float: left; color: #fff; cursor: pointer; border-radius: 2px; border: 1px solid #5482a3; margin-left: 10px; margin-right: 10px; background-image: url("../../Images/Bgv/header_bg.png"); }
+.list { height: 92%; overflow: hidden; }
+.candidateList { min-height: 350px; height: 100%; }
+.clear { height: 10px; }
+.leftPanel ul li { padding-bottom: 10px; }
+.rootContainer { margin-top: 10px; margin-left: 10px; }
+.pagination a { width: 100px; border: 1px solid #5482a3; background-color: #d3d3cc; border-radius: 2px; color: #000; margin-right: 10px; padding: 2px; padding-left: 4px; padding-right: 4px; }
+.pagination a.active { background-color: #b8adad; }
+.pagination label { width: 100px; margin-right: 10px; }
+.ui-datepicker-trigger { margin: 1px 0 0 126px; position: absolute; margin-left:110px\9;_margin-left:110px; }
+.datePickerTd button { float: right; padding: 0; }
+.datePickerTd input { margin-left: 80px; margin-top: 2px; position: absolute; }
+.candidateID { cursor: pointer; }
+input.search {height:20px;width:60px;}
+.width30 {width:33.33%;}
+a{outline : 0}

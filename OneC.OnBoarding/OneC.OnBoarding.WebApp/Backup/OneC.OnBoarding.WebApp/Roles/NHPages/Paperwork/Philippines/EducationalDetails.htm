@@ -1,0 +1,447 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Educational Details Form</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/Philippines/EducationalDetails.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+
+        function Text2_onclick() {
+
+        }
+
+// ]]>
+    </script>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id="pageMain">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer personalDataForm'>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        Bachelors Education Details</p>
+                                </div>
+                            </ul>
+                            <div id="divBachelors">
+                                <ul class="personalDetails">
+                                   <li>
+                                        <label for="educationalattainment_form">
+                                            <span>*</span>Educational Attainment</label>
+                                        <select id="Bachelorseducationalattainment_form" class="tbForm dropdown" title="Educationalattainment" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="EducationDetails.UGEducatinalAttainment" jqxb-listsource="EducationalAttainment" jqxb-listvalue="ID"
+                                            jqxb-listtext="Description">
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label for="country_form">
+                                            <span>*</span>Country</label>
+                                        <select id="Bachelorscountry_form" class="tbForm dropdown" title="Country" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="EducationDetails.UGCountry" jqxb-listsource="CountryList" jqxb-listvalue="ID"
+                                            jqxb-listtext="Description">
+                                        </select>
+                                    </li>
+                                    <li style="height: 35px">
+                                        <label for="firstname_form">
+                                            <span>*</span>Province
+                                        </label>
+                                        <select id="bachelorsstate_form" class="tbForm dropdown" title="State" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="EducationDetails.UGState" jqxb-listsource="BachelorsStateList"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                        <input type="text" class="tbForm textMandatory onlyAlp" style='margin: 2px 0 0 100px;'
+                                            jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.UGStateOthers"
+                                            maxlength="45" id="bachelorsstateothers_form" title="State" />
+                                    </li>
+                                    <li style='height: auto;'>
+                                        <label for="middlename_form">
+                                            <span>*</span>University</label>
+                                        <select id="Bachelorsuniversity_form" class="tbForm dropdown" title="University"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.UGCollege" jqxb-listsource="BachelorsCollegeList"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                        <br />
+                                       </li>
+                                       <li>
+                                        <input type="text" class="tbForm  onlyAlp"  style="margin-top: 3px; margin-right: -2px; margin-bottom: 0px; margin-left: 50px; "
+                                            jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.UGOthersCollege"
+                                            maxlength="45" id="BachelorsothersUniverity_form" title="University" />
+                                    </li>
+                                    <li >
+                                    
+                                        <label for="middlename_form">
+                                            <span>*</span>College</label>
+                                        <input type="text" class="tbForm textMandatory onlyAlp" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="EducationDetails.UGBoardOrUniversity" maxlength="30" id="BachelorsCollege_form"
+                                            title="College" />
+                                    </li>
+                                    <li style='height: auto;'>
+                                        <label for="surname_form">
+                                            <span>*</span>Degree/Course</label>
+                                        <select id="BachelorsDeg_form" class="tbForm dropdown" title="Degree/Course" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="EducationDetails.UGDegree" jqxb-listsource="DegreeList" jqxb-listvalue="ID"
+                                            jqxb-listtext="Description">
+                                        </select>
+                                        <input type="text" class="tbForm textMandatory onlyAlp" style='float: right; margin: 2px 0 0 50px;'
+                                            jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.UGOthersDegree"
+                                            maxlength="45" id="BachelorsOthDeg_form" title="Degree/Course" />
+                                    </li>
+                                    <li>
+                                        <label for="maritalstatus_form">
+                                            <span>*</span>Discipline</label>
+                                        <select id="BachelorsDiscp_form" class="tbForm dropdown" title="Discipline" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="EducationDetails.UGDiscipline" jqxb-listsource="DisciplineList"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label for="sex_form">
+                                            <span>*</span>Course Attended</label>
+                                        <select class="tbForm dropdown" id="BachelorsCourseAttended_form" name="Course Attended"
+                                            jqxb-datasource="FormDetails" title="Course Attended" jqxb-datamember="EducationDetails.UGModeofEdu"
+                                            jqxb-listsource="ModeofEducation" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label for="phone_form">
+                                            <span></span>CGPA/Class</label>
+                                        <input type="text" class="tbForm Alphanumeric" jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.UGGradeOrClass"
+                                            maxlength="5" id="bachelorsCGPA_form" title="Please enter numerics (eg; 1,2,3 or I,II,III ) or maximum of 5 characters(eg; First,1st,2nd)" />
+                                    </li>
+                                    <li>
+                                        <label for="sortcode_form">
+                                            <span>*</span>Attended From</label>
+                                        <input type="text" id="Bachelorsfrom_form" jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.UGAttendedFrom"
+                                            readonly="readonly" class="tbForm textMandatory date_field_from jqrydatepicker"
+                                            title="Attended From" maxlength="45" class="tbForm" />
+                                    </li>
+                                    <li>
+                                        <label for="NInum_form">
+                                            <span>*</span>Attended To</label>
+                                        <input type="text" id="Bachelorsto_form" jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.UGAttendedTo"
+                                            readonly="readonly" class="tbForm textMandatory date_field jqrydatepicker" title="Attended To"
+                                            maxlength="45" class="tbForm" />
+                                    </li>
+                                    <!--<li>
+                                        <label for="NInum_form">
+                                            <span>*</span>Roll no./Reg no.</label>
+                                        <input type="text" id="BachelorsRoll_form" jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.UGRegistrationNumber"
+                                            title="Roll no./Reg no." maxlength="45" class="tbForm textMandatory Alphanumeric" />
+                                    </li>-->
+                                    <li>
+                                        <label for="middlename_form">
+                                            <span>*</span>Completion Status</label>
+                                        <select id="bach_completionstatus_form" class="tbForm dropdown" title="Degree/Course"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.UGCompletionStatus"
+                                            jqxb-listsource="CompletionStatus" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pageDetails">
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        Post Graduation Education Details</p>
+                                </div>
+
+                                <li style="margin-top: 5px;">
+                                    <input type="checkbox" id="chk_higher" jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.IsPGExists"
+                                        jqxb-bindedattribute="checked" onclick="checkHigher();" />Do you want to enter
+                                    Post Graduation Education details?</li>
+                            </ul>
+                            <div id="divHigher">
+                                <ul class="personalDetails">
+                                  <li>
+                                        <label for="educationalattainment_form">
+                                            <span>*</span>Educational Attainment</label>
+                                        <select id="Highereducationalattainment_form" class="tbForm dropdown" title="Educationalattainment" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="EducationDetails.PGEducatinalAttainment" jqxb-listsource="EducationalAttainment" jqxb-listvalue="ID"
+                                            jqxb-listtext="Description">
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label for="country_form">
+                                            <span>*</span>Country</label>
+                                        <select id="Highercountry_form" class="tbForm dropdown" title="Country" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="EducationDetails.PGCountry" jqxb-listsource="CountryList" jqxb-listvalue="ID"
+                                            jqxb-listtext="Description">
+                                        </select>
+                                    </li>
+                                    <li style="height: 35px">
+                                        <label for="firstname_form">
+                                            <span>*</span>Province
+                                        </label>
+                                        <select id="Higherstate_form" class="tbForm dropdown" title="State" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="EducationDetails.PGState" jqxb-listsource="HigherStateList"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                        <input type="text" class="tbForm textMandatory onlyAlp" style='margin: 2px 0 0 100px;'
+                                            jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.PGStateOthers"
+                                            maxlength="45" id="higherstateothers_form" title="State" />
+                                    </li>
+                                    <li style='height: auto;'>
+                                        <label for="middlename_form">
+                                            <span>*</span>University</label>
+                                        <select id="Higheruniversity_form" class="tbForm dropdown" title="University" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="EducationDetails.PGCollege" jqxb-listsource="HigherCollegeList"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                        <br />
+                                    
+                                        <input type="text" class="tbForm onlyAlp"  style="margin-top: 3px; margin-right: -2px; margin-bottom: 0px; margin-left: 50px; float: right; display: inline-block;"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.PGOthersCollege"
+                                            maxlength="45" id="HigherOthuniversity_form" title="University" />
+                                    </li>
+                                    <li>
+                                        <label for="middlename_form">
+                                            <span>*</span>College</label>
+                                        <input type="text" class="tbForm textMandatory onlyAlp" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="EducationDetails.PGBoardOrUniversity" maxlength="30" id="higherCollege_form"
+                                            title="College" />
+                                    </li>
+                                    <li style='height: auto;'>
+                                        <label for="surname_form">
+                                            <span>*</span>Degree/Course</label>
+                                        <select id="HigherDeg_form" class="tbForm dropdown" title="Degree/Course" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="EducationDetails.PGDegree" jqxb-listsource="DegreeList" jqxb-listvalue="ID"
+                                            jqxb-listtext="Description">
+                                        </select>
+                                        <input type="text" class="tbForm textMandatory onlyAlp" style='float: right; margin: 2px 0 0 50px;'
+                                            jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.PGOthersDegree"
+                                            maxlength="45" id="HigherOthDeg_form" title="Degree/Course" />
+                                    </li>
+                                    <li>
+                                        <label for="maritalstatus_form">
+                                            <span>*</span>Discipline</label>
+                                        <select id="higherDiscipline_form" class="tbForm dropdown" title="Discipline" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="EducationDetails.PGDiscipline" jqxb-listsource="DisciplineList"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label for="sex_form">
+                                            <span>*</span>Course Attended</label>
+                                        <select class="tbForm dropdown" id="higherCourseAttended_form" name="Course Attended"
+                                            jqxb-datasource="FormDetails" title="Course Attended" jqxb-datamember="EducationDetails.PGModeofEdu"
+                                            jqxb-listsource="ModeofEducation" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label for="phone_form">
+                                            <span></span>CGPA/Class</label>
+                                        <input type="text" class="tbForm Alphanumeric" jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.PGGradeOrClass"
+                                            maxlength="5" id="higherCGPA_form" title="Please enter numerics (eg; 1,2,3 or I,II,III ) or maximum of 5 characters(eg; First,1st,2nd)" />
+                                    </li>
+                                    <li>
+                                        <label for="sortcode_form">
+                                            <span>*</span>Attended From</label>
+                                        <input type="text" id="Higherfrom_form" jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.PGAttendedFrom"
+                                            readonly="readonly" class="tbForm textMandatory date_field_from jqrydatepicker"
+                                            title="Attended From" maxlength="45" class="tbForm" />
+                                    </li>
+                                    <li>
+                                        <label for="NInum_form">
+                                            <span>*</span>Attended To</label>
+                                        <input type="text" id="Higherto_form" jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.PGAttendedTo"
+                                            readonly="readonly" class="tbForm textMandatory date_field jqrydatepicker" title="Attended To"
+                                            maxlength="45" class="tbForm" />
+                                    </li>
+                                   <!-- <li>
+                                        <label for="NInum_form">
+                                            <span>*</span>Roll no./Reg no.</label>
+                                        <input type="text" id="higherRoll_form" jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.PGRegistrationNumber"
+                                            title="Roll no./Reg no." maxlength="45" class="tbForm textMandatory Alphanumeric" />
+                                    </li>-->
+                                    <li>
+                                        <label for="middlename_form">
+                                            <span>*</span>Completion Status</label>
+                                        <select id="high_completionstatus_form" class="tbForm dropdown" title="Degree/Course"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.PGCompletionStatus"
+                                            jqxb-listsource="CompletionStatus" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pageDetails">
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        Any Other Degree Education Details</p>
+                                </div>
+                                 <li style="margin-top: 5px;">
+                                    <input type="checkbox" id="chk_otherdegree" jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.IsAnyOtherDegreeExists"
+                                        jqxb-bindedattribute="checked" onclick="checkOthers();" />Do you want to enter
+                                    Any Other Degree Education details?</li>
+                                <br />
+                                </ul>
+                                <div id="divothers">
+                                <ul class="personalDetails">
+                                        <li>
+                                        <label for="educationalattainment_form">
+                                            <span>*</span>Educational Attainment</label>
+                                        <select id="voceducationalattainment_form" class="tbForm dropdown" title="Educationalattainment" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="EducationDetails.AnyOtherEducatinalAttainment" jqxb-listsource="EducationalAttainment" jqxb-listvalue="ID"
+                                            jqxb-listtext="Description">
+                                        </select>
+                                    </li>
+                                <li>
+                                    <label for="country_form">
+                                        <span>*</span>Country</label>
+                                    <select id="voccountry_form" class="tbForm dropdown" title="Country" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="EducationDetails.DiplomaCountry" jqxb-listsource="CountryList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li style="height: 35px">
+                                    <label for="firstname_form">
+                                        <span>*</span>Province
+                                    </label>
+                                    <select id="vocstate_form" class="tbForm dropdown" title="State" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="EducationDetails.DiplomaState" jqxb-listsource="VocStateList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                    <input type="text" class="tbForm textMandatory onlyAlp" style='margin: 2px 0 0 100px;'
+                                        jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.DiplomaStateOthers"
+                                        maxlength="45" id="vocotherstate_form" title="State" />
+                                </li>
+                                <li style='height: auto;'>
+                                    <label for="middlename_form">
+                                        <span>*</span>University</label>
+                                    <select id="vocuniversity_form" class="tbForm dropdown" title="University" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="EducationDetails.DiplomaCollege" jqxb-listsource="VocUniversityList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                    <br />
+                                    
+                                    <input type="text" class="tbForm onlyAlp"style="margin-top: 3px; margin-right: -2px; margin-bottom: 0px; margin-left: 50px; float: right; display: inline-block;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.DiplomaOthersCollege"
+                                        maxlength="45" id="vocothuniversity_form" title="University" />
+                                </li>
+                                <li>
+                                    <label for="middlename_form">
+                                        <span>*</span>College</label>
+                                    <input type="text" class="tbForm textMandatory onlyAlp" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="EducationDetails.DiplomaBoardOrUniversity" maxlength="30" id="Text20"
+                                        title="College" />
+                                </li>
+                                <li style='height: auto;'>
+                                    <label for="surname_form">
+                                        <span>*</span>Degree/Course</label>
+                                    <select id="VocDeg_form" class="tbForm dropdown" title="Degree/Course" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="EducationDetails.DiplomaDegree" jqxb-listsource="DegreeList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                    <input type="text" class="tbForm textMandatory onlyAlp" style='float: right; margin: 2px 0 0 50px;'
+                                        jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.DiplomaOthersDegree"
+                                        maxlength="45" id="VocOthDeg_form" title="Degree/Course" />
+                                </li>
+                                <li>
+                                    <label for="maritalstatus_form">
+                                        <span>*</span>Discipline</label>
+                                    <select id="vocDiscipline_form" class="tbForm dropdown" title="Discipline" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="EducationDetails.DiplomaDiscipline" jqxb-listsource="DisciplineList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="sex_form">
+                                        <span>*</span>Course Attended</label>
+                                    <select class="tbForm dropdown" id="vocCourseAttended_form" name="Course Attended"
+                                        jqxb-datasource="FormDetails" title="Course Attended" jqxb-datamember="EducationDetails.DiplomaModeofEdu"
+                                        jqxb-listsource="ModeofEducation" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="phone_form">
+                                        <span></span>CGPA/Class</label>
+                                    <input type="text" class="tbForm Alphanumeric" jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.DiplomaGradeOrClass"
+                                        maxlength="5" id="vocCGPA_form" title="Please enter numerics (eg; 1,2,3 or I,II,III ) or maximum of 5 characters(eg; First,1st,2nd)" />
+                                </li>
+                                <li>
+                                    <label for="sortcode_form">
+                                        <span>*</span>Attended From</label>
+                                    <input type="text" id="vocfrom_form" jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.DiplomaAttendedFrom"
+                                        readonly="readonly" class="tbForm textMandatory date_field_from jqrydatepicker"
+                                        title="Attended From" maxlength="45" />
+                                </li>
+                                <li>
+                                    <label for="NInum_form">
+                                        <span>*</span>Attended To</label>
+                                    <input type="text" id="vocto_form" jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.DiplomaAttendedTo"
+                                        readonly="readonly" class="tbForm textMandatory date_field jqrydatepicker" title="Attended To"
+                                        maxlength="45" />
+                                </li>
+                               <!-- <li>
+                                    <label for="NInum_form">
+                                        <span>*</span>Roll no./Reg no.</label>
+                                    <input type="text" id="vocRegnum_form" jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.DiplomaRegistrationNumber"
+                                        title="Roll no./Reg no." maxlength="45" class="tbForm textMandatory Alphanumeric" />
+                                        
+                                      
+                                </li>-->
+                                <li>
+                                    <label for="middlename_form">
+                                        <span>*</span>CompletionStatus</label>
+                                    <select id="voc_completionstatus_form" class="tbForm dropdown" title="Degree/Course"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.DiplomaCompletionStatus"
+                                        jqxb-listsource="CompletionStatus" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="pageDetails">
+                            <ul class="personalDetails">
+                                <li style="width: 40%">
+                                    <label for="sex_form">
+                                        <p>
+                                        Do you have breaks in Education?</label>
+                                    <input type="checkbox" id="chky_form" onclick="IsBreakEducation(1)" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="EducationDetails.IsBreakinEducation.Yes" jqxb-bindedattribute="checked"
+                                        name="isbreak" />Yes
+                                    <input type="checkbox" id="chkn_form" onclick="IsBreakEducation(0)" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="EducationDetails.IsBreakinEducation.No" jqxb-bindedattribute="checked"
+                                        name="isbreak" />No </p> </li>
+                                <li style="width: 60%">
+                                    <label>
+                                        <span class="reasonclass">*</span> Reason for Breaks in Education
+                                    </label>
+                                    <textarea style="vertical-align: middle; float: right;" type="text" id="reason_form"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="EducationDetails.ReasonforBreakinEducation"
+                                        onkeydown="RestrictCharCount(this.id,150)" allowchar="150" class="tbForm textAlphanumeric"></textarea>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="Signature" id="Sign_PageId_1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <div id="footerContent">
+          </div>
+        </div>
+    
+    </div>
+  
+</body>
+</html>

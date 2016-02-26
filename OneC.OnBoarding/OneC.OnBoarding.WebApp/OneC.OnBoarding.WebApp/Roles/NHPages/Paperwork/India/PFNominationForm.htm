@@ -1,0 +1,860 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <title>PF Nomination Form</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/India/PFNominationForm.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+</head>
+<style>
+    @charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+	
+}
+body{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;  font-size:62.5%; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:62.5%;}
+.font16 {font-size:1.6em;}
+.font14{font-size:1.4em;}
+.font13{font-size:1.3em;}
+.boldtext{font-weight:bold;}
+.textcenter{text-align:center;}
+.paddingTB10{padding:10px 0;}
+.paddingTB8{padding:8px 0;}
+.paddingT5{padding:5px 0 0 0;}
+.paddingL5{padding-left:5px;}
+.marginL20{margin-left:20px;}
+.marginLMax{margin-left:160px;}
+.marginT20{margin-top:20px;}
+.marginB20{margin-bottom:20px;}
+.marginR20{margin-right:20px;}
+.epf{height:310px;}
+.epf li{border:1px solid #d4e7ef;}
+.fleft{float:left;}
+.lineht17{line-height:17px;}
+.details_pf li{width:48%; border:1px solid #d4e7ef;height:48px;
+    }
+.borderTnone{ border-top:none !important;}
+.borderRnone{ border-right:none !important;}
+.width180{width:180px;}
+.height100{height:100px;}
+.height50{height:50px;}
+.textright{text-align:right;}
+.fright{float:right;}
+.marginT40{margin-top:40px;}
+    </style>
+<style>
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+	
+}
+body{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;  font-size:62.5%; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:62.5%;}
+#pf_main
+{
+	width:900px;
+    float:left;
+	height:100%;
+}
+.font16 {font-size:1.6em;}
+.font14{font-size:1.4em;}
+.font13{font-size:1.3em;}
+.boldtext{font-weight:bold;}
+.textcenter{text-align:center;}
+.paddingTB10{padding:10px 0;}
+.paddingTB8{padding:8px 0;}
+.paddingT5{padding:5px 0 0 0;}
+.paddingL5{padding-left:5px;}
+.marginL20{margin-left:20px;}
+.marginT20{margin-top:20px;}
+.marginB20{margin-bottom:20px;}
+.marginR20{margin-right:20px;}
+.epf{height:355px;
+    }
+.epf li,#pf_main ul li{border:1px solid #d4e7ef;}
+.fleft{float:left;}
+.lineht17{line-height:17px;}
+.details_pf li{width:48%; border:1px solid #d4e7ef;height:41px;
+    }
+.borderTnone{ border-top:none !important;}
+.borderRnone{ border-right:none !important;}
+.width180{width:174px;
+    }
+.height100{height:100px;}
+.height50{height:60px;
+    }
+.textright{text-align:right;}
+.fright{float:right;}
+.marginT40{margin-top:40px;
+        width: 70%;
+    }
+.paddingL10{padding-left:10px;
+        width: 923px;
+    }
+.eps{height:312px;
+        width: 914px;
+    }
+.width275{width:273px;
+    }
+.width90{width:57px;
+    }
+.eps li{border:1px solid #d4e7ef;}
+.width305{width:260px;
+    }
+.grey_color{color:#3a3a3a;}
+.paddingR20{padding-right:20px;}
+.paddingL20{padding-left:20px;}
+.valignT{vertical-align:top;}
+    .style1
+    {
+        height: 85px;
+        width: 386px;
+    }
+    .ui-datepicker-trigger
+    {
+        vertical-align:middle;
+        margin-left:5px;
+        }
+        .alert_f_text{
+            
+            padding-left:0px;
+            width:220px;
+            }
+            .alert_f{
+                float:left;
+                }
+</style>
+<body>
+    <div id="baseContent">
+        <div id="pageMain">
+            <div id="headerContent">
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id="PageContent" class="pagesContainer">
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="fleft">
+                            <table>
+                                <tr>
+                                    <td class="style1">
+                                        <img align="left" style="width: 100px; height: 85px;" src="../../../../Images/PFFormLogo.JPG"
+                                            v:shapes="_x0000_i1025">
+                                    </td>
+                                    <td style="width: 100px; height: 35px">
+                                        <img align="left" style="width: 154px; height: 42px;" src="../../../../Images/PFFormheader.JPG"
+                                            alt="test;" v:shapes="_x0000_i1025">
+                                    </td>
+                                </tr>
+                            </table>
+                            <div id="pf_main" style="margin-left: 5px;">
+                                <p class="font16 boldtext textcenter paddingTB10">
+                                    (For Unexempted/Exempted Establishments)</p>
+                                <p class="font16 boldtext textcenter paddingTB10">
+                                    PF NOMINATION AND DECLARATION FORM</p>
+                                <p class="textcenter font13">
+                                    (Declaration and Nomination Form under the Employees Provident Funds and Employees'Pension
+                                    Scheme)</p>
+                                <p class="textcenter font13 boldtext paddingT5">
+                                    (Paragraphs 33 &amp; 61(1) of the Employees' Provident Funds Scheme, 1952 and paragraph
+                                    18 of the Employees' Pension Scheme, 1995)</p>
+                                <ul style="width: 98%; margin-left: 25px;" class="details_pf marginLMax marginT40 ">
+                                    <li class="fleft font13 borderRnone ">
+                                        <p class="paddingL5 paddingTB8">
+                                            Name</p>
+                                    </li>
+                                    <li class="fleft paddingL20">
+                                        <br />
+                                        <input class="inputText_Readonly" type="text" id="Pg_1_text_Name" style="border: 1px solid #000;
+                                            width: 150px;" readonly="readonly" title="Name" /><br />
+                                    </li>
+                                    <li class="fleft font13 borderTnone borderRnone">
+                                        <p class="paddingL5 paddingTB8">
+                                            <span style="color: Red; float: left">*</span>&nbsp;Father&#39;s Name
+                                        </p>
+                                    </li>
+                                    <li class="fleft borderTnone font13 paddingL20">
+                                        <br />
+                                        <span style="color: Red;"></span>
+                                        <input type="text" class="tbForm textMandatory onlyAlp" id="Pg_1_text_Father" style="border: 1px solid #000;
+                                            width: 150px;" maxlength="45" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.FatherName"
+                                            title="Father" /><br />
+                                    </li>
+                                    <li class="fleft font13 borderTnone borderRnone">
+                                        <p class="paddingL5 paddingTB8">
+                                            Husband&#39;s Name
+                                        </p>
+                                    </li>
+                                    <li class="fleft borderTnone font13 paddingL20">
+                                        <br />
+                                        <span style="color: Red;"></span>
+                                        <input type="text" class="tbForm onlyAlp" id="Pg_1_text_husband" style="border: 1px solid #000;
+                                            width: 150px;" maxlength="45" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Husband"
+                                            title="Husband" /><br />
+                                    </li>
+                                    <li class="fleft font13 borderTnone borderRnone">
+                                        <p class="paddingL5 paddingTB8">
+                                            Date of birth
+                                        </p>
+                                    </li>
+                                    <li class="fleft borderTnone paddingL20">
+                                        <br />
+                                        <input class="inputText_Readonly" type="text" id="Pg_1_text_Date" style="border: 1px solid #000;
+                                            width: 150px;" readonly="readonly" title="DateOfBirth" />
+                                        <br />
+                                    </li>
+                                    <li class="fleft font13 borderTnone borderRnone">
+                                        <p class="paddingL5 paddingTB8">
+                                            Sex
+                                        </p>
+                                    </li>
+                                    <li class="fleft borderTnone paddingL20">
+                                        <br />
+                                        <input class="inputText_Readonly" type="text" id="Pg_1_text_Sex" style="border: 1px solid #000;
+                                            width: 150px;" readonly="readonly" title="Sex" /><br />
+                                    </li>
+                                    <li class="fleft font13 borderTnone borderRnone">
+                                        <p class="paddingL5 paddingTB8">
+                                            Marital Status
+                                        </p>
+                                    </li>
+                                    <li class="fleft borderTnone paddingL20">
+                                        <br />
+                                        <input class="inputText_Readonly" type="text" id="Pg_1_text_MaritalStatus" style="border: 1px solid #000;
+                                            width: 150px;" readonly="readonly" title="Marital Status " /><br />
+                                    </li>
+                                    <li class="fleft font13 borderTnone borderRnone">
+                                        <p class="paddingL5 paddingTB8">
+                                            Account No.(PF or EPS No.)</p>
+                                    </li>
+                                    <li class="fleft borderTnone paddingL20">
+                                        <br />
+                                        <input class="inputText_Readonly " style="border: 1px solid #000; width: 152px;"
+                                            readonly="readonly" id="Pg1_text_PerAddress" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.AccountNo" />
+                                    </li>
+                                    <li class="fleft font13 borderTnone borderRnone">
+                                        <p class="paddingL5 paddingTB8">
+                                            Permanent Address</p>
+                                    </li>
+                                    <li class="fleft borderTnone  paddingL20">
+                                        <br />
+                                        <textarea class="inputText_Readonly  " cols="35" readonly="readonly" style="border: 1px solid #000;
+                                            vertical-align: middle; top: 0px; bottom: 3px; width: 150px; height: 22px;" id="Pg_1_text_AddressPermanent">  </textarea></li>
+                                    <li class="fleft font13 borderTnone borderRnone">
+                                        <p class="paddingL5 paddingTB8">
+                                            Temporary Address</p>
+                                    </li>
+                                    <li class="fleft font13 borderTnone paddingL20">
+                                        <br />
+                                        <textarea cols="35" style="border: 1px solid #000; vertical-align: middle; width: 163px;
+                                            height: 22px;" id="Pg1_text_TemporaryAddress" onkeydown="RestrictCharCount(this.id,150)" allowchar="150"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.TemporaryAddress">  </textarea></li>
+                                </ul>
+                                <p class="font16 boldtext textcenter marginB20 marginT20 paddingTB10 fleft" style="width: 90%">
+                                    <u>PART A (EPF) #</u></p>
+                                <p class="font13 lineht17 marginL20 marginR20 fleft" style="width: 90%">
+                                    I hereby nominate the person(s)/cancel the nomination made by me previously and
+                                    nominate, the person(s) mentioned below to receive the amount standing to my credit
+                                    in the Employees' Provident Fund, in the event of my death.</p>
+                                <ul class="marginL20 epf font13 marginT20 fleft">
+                                    <li class="width180 fleft textcenter borderRnone height100 paddingT5">&nbsp;Name &amp;
+                                        address of the Nominee/s</li>
+                                    <li class="width180 fleft textcenter borderRnone height100 paddingT5">Nominee's Relationship
+                                        with the member</li>
+                                    <li class="width180 fleft textcenter borderRnone height100 paddingT5">Date of Birth
+                                    </li>
+                                    <li class="width180 fleft textcenter borderRnone height100 paddingT5">Total amount or
+                                        share of accumulations in Provident Fund to be paid to each nominee(%)</li>
+                                    <li class="width180 fleft textcenter height100 paddingT5">If the nominee is a minor
+                                        , name and relationship and address of the guardian who may receive the amount during
+                                        the minority of the nominee</li>
+                                    <!--second row-->
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <span style="float: left; color: red; padding-left: 2px;">*</span>&nbsp;
+                                        <textarea rows="2" cols="35" onkeydown="RestrictCharCount(this.id,150)"  allowchar="150" style="border: 1px solid #000;
+                                            width: 140px;" id="Pg_1_text_NomineeAdd1" class="tbForm Alphanumeric textMandatory"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Nominee1.NomineeName"
+                                            title="NomineeNameAddress">  </textarea><br />
+                                    </li>
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <span style="float: left; color: red; padding-left: 2px;">*</span>&nbsp;
+                                        <select style="border: 1px solid #000; width: 150px;" id="Pg_1_text_Relationship1"
+                                            name="Relationship" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Nominee1.NomineeRelationship"
+                                            jqxb-listsource="RelationshipList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select><br />
+                                    </li>
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <span style="float: left; color: red; padding-left: 2px;">*</span>&nbsp;
+                                        <input type="text" id="Pg_1_text_DataOfBirth1" class="nospace tbForm textMandatory"
+                                            style="border: 1px solid #000; width: 130px; margin-left:-10px" readonly="readonly" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="PersonalData.Nominee1.DateOfBirth" title="DataOfBirth1" /><br />
+                                    </li>
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <span style="float: left; color: red; padding-left: 2px;">*</span>&nbsp;
+                                        <input type="text" class="nospace tbForm textMandatory OnlyNumeric" id="Pg_1_text_Benefits1"
+                                            style="border: 1px solid #000; width: 140px; " jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Nominee1.NomineeShare"
+                                            maxlength="3" title="Proportion share" name="Total Percent should be 100 For eg : If nominating two person – you can split 50% & 50%" /><br />
+                                    </li>
+                                    <li class="width180 fleft textcenter height50 borderTnone">
+                                        <br />
+                                        <textarea rows="2" cols="35" style="border: 1px solid #000; width: 150px;" id="Pg_1_text_Nominee1"
+                                            class="Alphanumeric" onkeydown="RestrictCharCount(this.id,150)" allowchar="150" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="PersonalData.Nominee1.FamilyNomineeInfo">  </textarea><br />
+                                    </li>
+                                    <!--third row-->
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <textarea rows="2" cols="35" onkeydown="RestrictCharCount(this.id,150)"  allowchar="150" style="border: 1px solid #000;
+                                            width: 140px;" class="Alphanumeric" id="Pg_1_text_NomineeAdd2" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="PersonalData.Nominee2.NomineeName">  </textarea><br />
+                                    </li>
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <select style="border: 1px solid #000; width: 150px;" id="Pg_1_text_Relationship2"
+                                            name="Relationship" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Nominee2.NomineeRelationship"
+                                            jqxb-listsource="RelationshipList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </li>
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <input type="text" id="Pg_1_text_DataOfBirth2" class="tbForm  nospace" readonly="readonly"
+                                            style="border: 1px solid #000; width: 130px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Nominee2.DateOfBirth"
+                                            title="DataOfBirth2" /><br />
+                                    </li>
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <input type="text" id="Pg_1_text_Benefits2" class="nospace OnlyNumeric" style="border: 1px solid #000;
+                                            width: 140px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Nominee2.NomineeShare"
+                                            maxlength="3" title="Benefits2" /></li>
+                                    <li class="width180 fleft textcenter height50 borderTnone">
+                                        <br />
+                                        <textarea rows="2" cols="35" style="border: 1px solid #000; width: 150px;" id="Pg_1_text_Nominor2"
+                                            class="Alphanumeric" onkeydown="RestrictCharCount(this.id,150)"  allowchar="150" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="PersonalData.Nominee2.FamilyNomineeInfo">  </textarea><br />
+                                    </li>
+                                    <!--fourth row-->
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <textarea rows="2" cols="35" onkeydown="RestrictCharCount(this.id,150)" allowchar="150" style="border: 1px solid #000;
+                                            width: 140px;" class="Alphanumeric" id="Pg_1_text_NomineeAdd3" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="PersonalData.Nominee3.NomineeName">  </textarea><br />
+                                        <br />
+                                    </li>
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <select style="border: 1px solid #000; width: 150px;" id="Pg_1_text_Relationship3"
+                                            name="Relationship" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Nominee3.NomineeRelationship"
+                                            jqxb-listsource="RelationshipList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select></li>
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <input type="text" id="Pg_1_text_DataOfBirth3" class="tbForm nospace" readonly="readonly"
+                                            style="border: 1px solid #000; width: 130px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Nominee3.DateOfBirth"
+                                            title="DataOfBirth3" /><br />
+                                    </li>
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <input type="text" id="Pg_1_text_Benefits3" class="nospace OnlyNumeric" style="border: 1px solid #000;
+                                            width: 150px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Nominee3.NomineeShare"
+                                            maxlength="3" title="Benefits3" /><br />
+                                    </li>
+                                    <li class="width180 fleft textcenter height50 borderTnone">
+                                        <br />
+                                        <textarea rows="2" cols="35" style="border: 1px solid #000; width: 150px;" id="Pg_1_text_Nominor3"
+                                            class="Alphanumeric" onkeydown="RestrictCharCount(this.id,150)" allowchar="150" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="PersonalData.Nominee3.FamilyNomineeInfo">  </textarea><br />
+                                    </li>
+                                    <!--fifth row-->
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <textarea rows="2" cols="35" onkeydown="RestrictCharCount(this.id,150)" allowchar="150" style="border: 1px solid #000;
+                                            width: 140px;" class="Alphanumeric" id="Pg_1_text_NomineeAdd4" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="PersonalData.Nominee4.NomineeName">  </textarea><br />
+                                        <br />
+                                    </li>
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <select style="border: 1px solid #000; width: 150px;" id="Pg_1_text_Relationship4"
+                                            name="Relationship" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Nominee4.NomineeRelationship"
+                                            jqxb-listsource="RelationshipList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select></li>
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <input type="text" id="Pg_1_text_DataOfBirth4" class="nospace tbForm" readonly="readonly"
+                                            style="border: 1px solid #000; width: 130px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Nominee4.DateOfBirth"
+                                            title="DataOfBirth4" /><br />
+                                    </li>
+                                    <li class="width180 fleft textcenter borderRnone height50 borderTnone">
+                                        <br />
+                                        <input type="text" id="Pg_1_text_Benefits4" class="nospace OnlyNumeric" style="border: 1px solid #000;
+                                            width: 140px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Nominee4.NomineeShare"
+                                            maxlength="3" title="Benefits4" /></li>
+                                    <li class="width180 fleft textcenter height50 borderTnone">
+                                        <br />
+                                        <textarea rows="2" cols="35" style="border: 1px solid #000; width: 150px;" id="Pg_1_text_Nominor4"
+                                            class="Alphanumeric" onkeydown="RestrictCharCount(this.id,150)"  allowchar="150" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="PersonalData.Nominee4.FamilyNomineeInfo">  </textarea><br />
+                                    </li>
+                                </ul>
+                                <ol class="fleft marginL20">
+                                    <li style="text-align: left; font-size: 1.3em; line-height: 1.3em;">1. Certified that
+                                        I have no family as defined in para 2(g) of the Employees' Provident Funds Scheme,1952,
+                                        and should I acquire a family hereafter,the above nomination should be deemed as
+                                        cancelled.</li>
+                                    <li style="text-align: left; font-size: 1.3em; line-height: 1.2em;">2. Certified that
+                                        my father/mother is/are dependent upon me.</li>
+                                </ol>
+                                <p class="fright font13 marginR20" style="text-align: right; margin-right: 25px;
+                                    width: 95%; margin-bottom: 10px;">
+                                    ------------------------------
+                                    <br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Signature of the subscriber</p>
+                                <p class="boldtext marginL20 font13 paddingTB10 fleft" style="width: 96%;">
+                                    Note: - A Fresh nomination shall be made by the member on his marriage and any nomination
+                                    made before such marriage shall be deemed to be invalid
+                                </p>
+                                <div class="Signature" id="Sign_PageId_1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 1nd page-->
+                <!--Start of 2nd page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div id="page2">
+                            <div id="Div1">
+                                <p class="font16 boldtext textcenter paddingTB10">
+                                    <u>Part B (EPS) (Para 18) $</u>)</p>
+                                <p id= "ForTbl1" class="font13 paddingL10  paddingTB8" style="width: 90%;">
+                                    I hereby furnish below particulars of the members of my family who would be eligible
+                                    to receive widow/children pension in the event of my death</p>
+                                    <div id="table1">
+                                <ul id="Table1_id" class="eps marginL20 marginT40 " style="width: 900px;">
+                                    <li class="width90 fleft textcenter borderRnone height50 font13">
+                                        <p class="paddingTB10">
+                                            Sl.No.</p>
+                                    </li>
+                                    <li class="width275 fleft textcenter borderRnone height50 font13">
+                                        <p class="paddingTB10">
+                                            Name and address of the family member
+                                        </p>
+                                    </li>
+                                    <li class="width275 fleft textcenter borderRnone height50 font13">
+                                        <p class="paddingTB10">
+                                            Date of Birth</p>
+                                    </li>
+                                    <li class="width275 fleft textcenter  height50 font13 ">
+                                        <p class="paddingTB10">
+                                            Relationship with the member</p>
+                                    </li>
+                                    <!--second row-->
+                                    <li class="width90 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            1.</p>
+                                    </li>
+                                    <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <span style="float: left; color: Red; padding: 5px 0 0 0; margin-right: 48px;">&nbsp;&nbsp;*</span>
+                                            <textarea rows="2" cols="35" title="Name" style="border: 1px solid #000; width: 150px;
+                                                float: left;" id="Pg_2_text_address1" class="tbForm Alphanumeric textMandatory" onkeydown="RestrictCharCount(this.id,150)" allowchar="150"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NomineeDetail1.NomineeAddress">  </textarea><br />
+                                        </p>
+                                    </li>
+                                    <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <span style="float: left; color: Red; padding: 5px 0 0 0; margin-right: 35px;">&nbsp;&nbsp;*</span>
+                                            <input type="text" id="Pg_2_text_DataOfBirth5" class="tbForm nospace" readonly="readonly"
+                                                style="border: 1px solid #000; width: 150px; float: left; margin-right: -50px;"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NomineeDetail1.DateOfBirth"
+                                                title="DataOfBirth5" />
+                                        </p>
+                                    </li>
+                                    <li class="width275 fleft textcenter  height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <span style="float: left; color: Red; padding: 5px 0 0 0; margin-right: 48px;">&nbsp;&nbsp;*</span>
+                                            <select style="border: 1px solid #000; width: 150px; float: left;" title="Relation"
+                                                id="Pg_2_text_Relationship11" class="dropdown" name="Relationship" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="PersonalData.NomineeDetail1.FamilyNomineeInfo" jqxb-listsource="RelationshipList"
+                                                jqxb-listvalue="ID" jqxb-listtext="Description">
+                                            </select></p>
+                                    </li>
+                                    <!--third row-->
+                                    <li class="width90 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            2.</p>
+                                    </li>
+                                    <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <textarea rows="2" cols="35" class="Alphanumeric" onkeydown="RestrictCharCount(this.id,150)" allowchar="150"
+                                                style="border: 1px solid #000; width: 150px;" id="Pg_2_text_address2" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="PersonalData.NomineeDetail2.NomineeAddress">   </textarea></p>
+                                    </li>
+                                    <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <input type="text" id="Pg_2_text_DataOfBirth6" class="tbForm nospace" readonly="readonly"
+                                                style="border: 1px solid #000; width: 150px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NomineeDetail2.DateOfBirth"
+                                                title="DataOfBirth6" /></p>
+                                        <br />
+                                    </li>
+                                    <li class="width275 fleft textcenter  height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <select style="border: 1px solid #000; width: 150px;" id="Pg_2_text_Relationship"
+                                                name="Relationship" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NomineeDetail2.FamilyNomineeInfo"
+                                                jqxb-listsource="RelationshipList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                            </select>
+                                        </p>
+                                    </li>
+                                    <!--fourth row-->
+                                    <li class="width90 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            3.</p>
+                                    </li>
+                                    <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <textarea rows="2" cols="35" onkeydown="RestrictCharCount(this.id,150)" allowchar="150" style="border: 1px solid #000;
+                                                width: 150px;" class="Alphanumeric" id="Pg_2_text_address3" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="PersonalData.NomineeDetail3.NomineeAddress">  </textarea><br />
+                                        </p>
+                                    </li>
+                                    <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <input type="text" id="Pg_2_text_DataOfBirth7" class="tbForm nospace" readonly="readonly"
+                                                style="border: 1px solid #000; width: 150px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NomineeDetail3.DateOfBirth"
+                                                title="DataOfBirth7" /><br />
+                                        </p>
+                                    </li>
+                                    <li class="width275 fleft textcenter  height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <select style="border: 1px solid #000; width: 150px;" id="Pg_2_text_Relationship33"
+                                                name="Relationship" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NomineeDetail3.FamilyNomineeInfo"
+                                                jqxb-listsource="RelationshipList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                            </select></p>
+                                    </li>
+                                    <!--fifth row-->
+                                    <li class="width90 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            4.</p>
+                                    </li>
+                                    <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <textarea rows="2" cols="35" onkeydown="RestrictCharCount(this.id,150)" allowchar="150" style="border: 1px solid #000;
+                                                width: 150px;" class="Alphanumeric" id="Pg_2-text_address4" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="PersonalData.NomineeDetail4.NomineeAddress">  </textarea><br />
+                                        </p>
+                                    </li>
+                                    <li class="width275 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <input type="text" id="Pg_2_text_DataOfBirth8" class="nospace tbForm" readonly="readonly"
+                                                style="border: 1px solid #000; width: 150px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NomineeDetail4.DateOfBirth" /></p>
+                                    </li>
+                                    <li class="width275 fleft textcenter  height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <select style="border: 1px solid #000; width: 150px;" id="Pg_2_text_Relationship12"
+                                                name="Relationship" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NomineeDetail4.FamilyNomineeInfo"
+                                                jqxb-listsource="RelationshipList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                            </select></p>
+                                    </li>
+                                </ul>
+                                </div>
+                                <br />
+                                <br />
+                                <p id="ForTbl1_1" class="font13 lineht17 marginL20 marginR20">
+                                    Certified that I have no family , as defined in para 2(viii) of Employees' Pension
+                                    Scheme , 1995 and should I acquire a family hereafter I shall furnish particulars
+                                    thereon in the above form.
+                                </p>
+                                <p id="ForTbl2" class="font13 lineht17 marginL20 marginR20 paddingTB10">
+                                    I hereby nominate the following persons for receiving the monthly widow pension
+                                    (admissible under para 16 2(a) (i) and (ii) of Employees' Pension Scheme,1995 in
+                                    the event of my death without any eiligible family member for receiving Pension)
+                                </p>
+                                <div id="table2">
+                                <ul id="Table2_id" class="eps marginL20 marginT40 " style="width: 900px;">
+                                    <li class="width305 fleft textcenter borderRnone height50 font13">
+                                        <p class="paddingTB10">
+                                            Name and address of the family member
+                                        </p>
+                                    </li>
+                                    <li class="width305 fleft textcenter borderRnone height50 font13">
+                                        <p class="paddingTB10">
+                                            Date of Birth</p>
+                                    </li>
+                                    <li class="width305 fleft textcenter  height50 font13 ">
+                                        <p class="paddingTB10">
+                                            Relationship with the member</p>
+                                    </li>
+                                    <!--second row-->
+                                    <li class="width305 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <br />
+                                            <span style="float: left; color: Red; padding: 5px 0 0 0; margin-right: 48px;">&nbsp;&nbsp;*</span>
+                                            <textarea cols="35" style="border: 1px solid #000; width: 147px; height: 26px; margin-left: -60px;" id="Pg_2_text_Nominee1" title="Name"
+                                                class="Alphanumeric textMandatory" onkeydown="RestrictCharCount(this.id,150)" allowchar="150" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="PersonalData.NomineeDetail5.NomineeAddress">  </textarea></p>
+                                    </li>
+                                    <li class="width305 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <br />
+                                            <span style="float: left; color: Red; padding: 5px 0 0 0; margin-right: 48px;">&nbsp;&nbsp;*</span>
+                                            <input type="text" id="Pg_2_text_DataOfBirth9" class="nospace tbForm" readonly="readonly"
+                                                style="border: 1px solid #000; width: 150px; margin-left: -60px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NomineeDetail5.DateOfBirth" /></p>
+                                    </li>
+                                    <li class="width305 fleft textcenter  height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <br />
+                                            <span style="float: left; color: Red; padding: 5px 0 0 0; margin-right: 48px;">&nbsp;&nbsp;*</span>
+                                            <select style="border: 1px solid #000; width: 150px; float: left; margin-left: -20px;" title="Relation"
+                                                id="Pg_2_text_Relationship1" class="dropdown" name="Relationship" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="PersonalData.NomineeDetail5.FamilyNomineeInfo" jqxb-listsource="RelationshipList"
+                                                jqxb-listvalue="ID" jqxb-listtext="Description">
+                                            </select></p>
+                                </li>
+                                    <!--third row-->
+                                    <li class="width305 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <br />
+                                            <textarea cols="35" width="150" style="border: 1px solid #000; width: 150px; height: 26px; margin-left: 5px;"
+                                                class="Alphanumeric" id="Pg_2_text_Nominee2" onkeydown="RestrictCharCount(this.id,150)" allowchar="150"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NomineeDetail6.NomineeAddress">  </textarea></p>
+                                    </li>
+                                    <li class="width305 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <br />
+                                            <input type="text" id="Pg_2_text_DataOfBirth10" class="tbForm nospace" readonly="readonly"
+                                                style="border: 1px solid #000; width: 150px; margin-left: 5px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NomineeDetail6.DateOfBirth" /></p>
+                                    </li>
+                                    <li class="width305 fleft textcenter  height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <br />
+                                            <select style="border: 1px solid #000; width: 150px; float: left; margin-left: 40px;" title="Relation"
+                                                id="Pg_2_text_Relationship2" class="dropdown" name="Relationship" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="PersonalData.NomineeDetail6.FamilyNomineeInfo" jqxb-listsource="RelationshipList"
+                                                jqxb-listvalue="ID" jqxb-listtext="Description">
+                                            </select></p>
+                                        </p>
+                                    </li>
+                                    <!--fourth row-->
+                                    <li class="width305 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <br />
+                                            <textarea cols="35" onkeydown="RestrictCharCount(this.id,150)" allowchar="150" class="Alphanumeric"
+                                                style="border: 1px solid #000; width: 150px; height: 24px; margin-left: 5px;" id="Pg_2_text_Nominee3"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NomineeDetail7.NomineeAddress">  </textarea><br />
+                                        </p>
+                                    </li>
+                                    <li class="width305 fleft textcenter borderRnone height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <br />
+                                            <input type="text" id="Pg_2_text_DataOfBirth11" class="tbForm nospace" readonly="readonly"
+                                                style="border: 1px solid #000; width: 150px; margin-left: 5px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NomineeDetail7.DateOfBirth" /></p>
+                                    </li>
+                                    <li class="width305 fleft textcenter  height50 font13 borderTnone">
+                                        <p class="paddingTB10">
+                                            <br />
+                                            <select style="border: 1px solid #000; width: 150px; float: left; margin-left: 40px;" title="Relation"
+                                                id="Pg_2_text_Relationship2" class="dropdown" name="Relationship" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="PersonalData.NomineeDetail7.FamilyNomineeInfo" jqxb-listsource="RelationshipList"
+                                                jqxb-listvalue="ID" jqxb-listtext="Description">
+                                            </select></p>
+                                    </li>
+                                </ul>
+                                </div>
+                                <p class="font13 marginL20 paddingTB10">
+                                    Dated the :<input class="inputText_Readonly" type="text" id="Pg_2_text_CurrentDate"
+                                        style="border: 1px solid #000" readonly="readonly" />
+                                </p>
+                                <p class="fright font13 marginR20">
+                                    --------------------------------------------<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Signature of the subscriber</p>
+                                <br />
+                                <div class="pageDetails">
+                                    <p class="font16 textcenter paddingTB10 boldtext grey_color">
+                                        <u>CERTIFICATE BY EMPLOYER</u></p>
+                                </div>
+                                <div class="pageDetails">
+                                    <p class="font13 lineht17 marginL20 marginR20">
+                                        Certified that the above declaration and nomination has been signed/thumb impressed
+                                        before me by Shri/Shrimati<input class="inputText_Readonly" type="text" id="Pg_2_text_Name"
+                                            style="border: 1px solid #000" readonly="readonly" />
+                                        employed in my establishment after he/she has read the entries/the entries have
+                                        been read over to him/her by me and got confirmed by him/her.</p>
+                                </div>
+                                <br />
+                                <p class="marginL20 font13 marginT40 paddingTB10 fleft">
+                                    Place :----------------------------------
+                                </p>
+                                <p class="marginL20 font13 paddingTB10 fleft" style="clear: left;">
+                                    Date :<input class="inputText_Readonly" type="text" id="Pg_2_text_CurrentDate2" style="border: 1px solid #000"
+                                        readonly="readonly" /></p>
+                                <img style="float:right; margin: -70px -10px 0 0;width:330px;height:100px;" src="../../../../Images/Sign.png" />
+                                <br /><br /><br />
+
+                                <p id="normal" class="fright font13 grey_color boldtext" style="clear: both; margin-top: -20px;">
+                                    ------------------------------------------------------------<br />
+                                    Signature of the Employer or other authorised
+                                    <br />  
+                                    <!--<span class="fleft boldtext ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                                    Officer
+                                        of the establishment
+                                        <br />
+                                        <br />
+                                        Designation: &nbsp;&nbsp; <u>Senior Director &ndash; HR</u>
+                                        <br /><br /><br /><br /><br /><br /><br /><br />
+
+                                        
+                                    
+                                    <!--<div id="SealImgItaas" style="width: 400px; height: 80px; margin-top: 0px; margin-left: 0px;
+                                        display: block; background-size: contain;background-size: 120px 70px;background-repeat:no-repeat">-->
+                                        <img id="SealImgItaas" alt="cts" style="float: left; margin: -70px -10px 0 0;width:100px;height:100px;" />
+                                        <div><p class="address font13" id="CompanyAddress" style="width: 360px; margin-top: 400px; margin-left: 550px; font-size: 14px;">
+                                        </div>
+                                    </p>
+                                    </p>
+                                    <!--</div>-->
+                                    
+                                
+                                
+
+                                       <!-- <img style="float: left; margin: -70px -10px 0 0;width:100px;height:100px;" src="../../../../Images/roundseal.png" />&nbsp;&nbsp;
+                                        <!--Name and address of the Factory/<br />&nbsp;&nbsp;&nbsp;Establishment or rubber stamp thereof&nbsp;&nbsp;
+                                        <br />
+                                        <br /><br /><br />
+                                        <label>Cognizant Technology Solutions India Private Limited,<br /> 
+                                        5/535, Old Mahabalipuram Road, Okkiyam, <br />Thoraipakkam, Chennai - 600097, India.</label>&nbsp;&nbsp;
+                                        <!--<label id="ubs">Cognizant Technology Services Private Limited, <br />6th Floor , New no. 165, Old no. 110,<br />
+                                    Menon Eternity building, St. Mary’s Road, Alwarpet,<br /> Chennai – 600 018, India.</label>&nbsp;&nbsp;
+                                        <label id="cls" style="margin-left:-25px;">Cognizant Global Services Private Limited, 5th Floor, <br />Block A, Lake View,
+                                    Bagmane Technology Park, <br />C.V. Raman Nagar, Bangalore – 560 093, India.</label>&nbsp;&nbsp;
+                                    <br /><br />
+                                    <!--</span>
+                                </p>
+
+                                <p id="ubs" class="fright font13 grey_color boldtext" style="clear: both; margin-top: -20px;">
+                                    ------------------------------------------------------------<br />
+                                    Signature of the Employer or other authorised
+                                    <br />  
+                                    <!--<span class="fleft boldtext ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    Officer
+                                        of the establishment
+                                        <br />
+                                        <br />
+                                        Designation: &nbsp;&nbsp; <u>Senior Director &ndash; HR</u>
+                                        <br /><br /><br /><br /><br /><br /><br /><br />
+                                        <img style="float: left; margin: -70px -10px 0 0;width:100px;height:100px;" src="../../../../Images/roundsealUBIND.png" />&nbsp;&nbsp;
+                                        <!--Name and address of the Factory/<br />&nbsp;&nbsp;&nbsp;Establishment or rubber stamp thereof&nbsp;&nbsp;
+                                        <br />
+                                        <br /><br /><br />
+                                        <!--<label id="Label1">Cognizant Technology Solutions India Private Limited,<br /> 
+                                        5/535, Old Mahabalipuram Road, Okkiyam, <br />Thoraipakkam, Chennai - 600097, India.</label>&nbsp;&nbsp;
+                                        <label>Cognizant Technology Services Private Limited, <br />6th Floor , New no. 165, Old no. 110,<br />
+                                    Menon Eternity building, St. Mary’s Road, Alwarpet,<br /> Chennai – 600 018, India.</label>&nbsp;&nbsp;
+                                        <!--<label id="Label3" style="margin-left:-25px;">Cognizant Global Services Private Limited, 5th Floor, <br />Block A, Lake View,
+                                    Bagmane Technology Park, <br />C.V. Raman Nagar, Bangalore – 560 093, India.</label>&nbsp;&nbsp;
+                                    <br /><br />
+                                    <!--</span>
+                                </p>-->
+
+                            </div>
+                            <div class="Signature" id="Sign_PageId_2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='footerContent'>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

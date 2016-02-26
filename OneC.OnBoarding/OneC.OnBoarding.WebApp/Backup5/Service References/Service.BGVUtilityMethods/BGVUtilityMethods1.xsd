@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:51555/ServiceHost/BGVUtilityMethods.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="VendorCandidateInfo">
+    <xs:sequence>
+      <xs:element name="_x003C_CandidateId_x003E_k__BackingField" type="xs:long" />
+      <xs:element name="_x003C_InfoXML_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_SessionId_x003E_k__BackingField" type="xs:long" />
+      <xs:element name="_x003C_SpMode_x003E_k__BackingField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VendorCandidateInfo" nillable="true" type="tns:VendorCandidateInfo" />
+  <xs:complexType name="VendorDocListInfoParams">
+    <xs:sequence>
+      <xs:element name="_x003C_Action_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CandidateBgvAssignComponentDetail_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_CandidateBgvConComponentDetail_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_CandidateBgvVendorMapping_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_CandidateId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_DocList_x003E_k__BackingField" nillable="true" type="tns:ArrayOfDocListItems" />
+      <xs:element name="_x003C_FinalStatus_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_FinalSubStatus_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_SessionId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_SpMode_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_Status_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_SubStatus_x003E_k__BackingField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VendorDocListInfoParams" nillable="true" type="tns:VendorDocListInfoParams" />
+  <xs:complexType name="ArrayOfDocListItems">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocListItems" nillable="true" type="tns:DocListItems" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocListItems" nillable="true" type="tns:ArrayOfDocListItems" />
+  <xs:complexType name="DocListItems">
+    <xs:sequence>
+      <xs:element name="_x003C_Action_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_DocId_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Status_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_SubStatus_x003E_k__BackingField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocListItems" nillable="true" type="tns:DocListItems" />
+  <xs:complexType name="ArrayOfAssignVendorVerificationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssignVendorVerificationData" nillable="true" type="tns:AssignVendorVerificationData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAssignVendorVerificationData" nillable="true" type="tns:ArrayOfAssignVendorVerificationData" />
+  <xs:complexType name="AssignVendorVerificationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssignType" type="xs:int" />
+      <xs:element minOccurs="0" name="BoxId" type="xs:int" />
+      <xs:element minOccurs="0" name="HrComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HrStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:int" />
+      <xs:element minOccurs="0" name="VendorId" type="xs:int" />
+      <xs:element minOccurs="0" name="VerificationLevel" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AssignVendorVerificationData" nillable="true" type="tns:AssignVendorVerificationData" />
+  <xs:complexType name="ArrayOfAssignVendorComponentData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssignVendorComponentData" nillable="true" type="tns:AssignVendorComponentData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAssignVendorComponentData" nillable="true" type="tns:ArrayOfAssignVendorComponentData" />
+  <xs:complexType name="AssignVendorComponentData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BoxId" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComponentDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentRunnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="HrComments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HrStatus" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AssignVendorComponentData" nillable="true" type="tns:AssignVendorComponentData" />
+  <xs:complexType name="ArrayOfAssignVendorDocumentData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssignVendorDocumentData" nillable="true" type="tns:AssignVendorDocumentData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAssignVendorDocumentData" nillable="true" type="tns:ArrayOfAssignVendorDocumentData" />
+  <xs:complexType name="AssignVendorDocumentData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssignStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="BoxId" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComponentDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentRunnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentMatrixId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AssignVendorDocumentData" nillable="true" type="tns:AssignVendorDocumentData" />
+  <xs:complexType name="ArrayOfManDocConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ManDocConfig" nillable="true" type="tns:ManDocConfig" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfManDocConfig" nillable="true" type="tns:ArrayOfManDocConfig" />
+  <xs:complexType name="ManDocConfig">
+    <xs:sequence>
+      <xs:element name="_x003C_CandidateBgvComponentDetail_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_DocumentMatrixId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_IsDefault_x003E_k__BackingField" type="xs:unsignedByte" />
+      <xs:element name="_x003C_IsMandatory_x003E_k__BackingField" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ManDocConfig" nillable="true" type="tns:ManDocConfig" />
+  <xs:complexType name="ArrayOfComponentList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ComponentList" nillable="true" type="tns:ComponentList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfComponentList" nillable="true" type="tns:ArrayOfComponentList" />
+  <xs:complexType name="ComponentList">
+    <xs:sequence>
+      <xs:element name="_x003C_BackPaperRequestedBy_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_BuId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_CFrom_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CTo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Code_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CompDetailId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_ComponentRunnerId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_EmploymentType_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_GapDescription_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_GapFeedback_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_GapQuery_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_GapStatusActionBy_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_GapStatusActionComments_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_GapStatus_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_HFrom_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_HREmailId_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_HRMName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_HRPNo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_HTo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_InstitutionId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_InstitutionNameOthers_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_InstitutionName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_IsActive_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_IsGapIdentified_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_IsMismatchIdentifiedFrom_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_IsMismatchIdentifiedTo_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_IsOverLapIdentified_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_MOD_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_MismatchDescriptionFrom_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_MismatchDescriptionTo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_MismatchFeedbackFrom_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_MismatchFeedbackTo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_MismatchQueryFrom_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_MismatchQueryTo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_MismatchStatusActionByFrom_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_MismatchStatusActionByTo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_MismatchStatusActionCommentsFrom_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_MismatchStatusActionCommentsTo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_MismatchStatusFrom_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_MismatchStatusTo_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_OverLapDescription_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_OverLapFeedback_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_OverLapQuery_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_OverLapStatusActionBy_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_OverLapStatusActionComments_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_OverLapStatus_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_Percentage_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PrincipalCompany_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_School_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_SpecializationOthers_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Specialization_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_SuspectClearedBy_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_SuspectClearedTS_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_SuspectRaisedBy_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_SuspectRaisedTS_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_SuspectStatus_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_TypeGroup_x003E_k__BackingField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ComponentList" nillable="true" type="tns:ComponentList" />
+  <xs:complexType name="ArrayOfDocDataList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocDataList" nillable="true" type="tns:DocDataList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocDataList" nillable="true" type="tns:ArrayOfDocDataList" />
+  <xs:complexType name="DocDataList">
+    <xs:sequence>
+      <xs:element name="_x003C_CompDetailId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_CompRunnerId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_DocMatrixId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_DocumentValue_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_IsDefault_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_IsMandatory_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_Remarks_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocDataList" nillable="true" type="tns:DocDataList" />
+  <xs:complexType name="ArrayOfItemList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemList" nillable="true" type="tns:ItemList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItemList" nillable="true" type="tns:ArrayOfItemList" />
+  <xs:complexType name="ItemList">
+    <xs:sequence>
+      <xs:element name="_x003C_ItemId_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ItemVal_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_SChk_x003E_k__BackingField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemList" nillable="true" type="tns:ItemList" />
+  <xs:complexType name="Validation">
+    <xs:sequence>
+      <xs:element name="_x003C_CandidateId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_CompDetail_x003E_k__BackingField" nillable="true" type="tns:ArrayOfComponentList" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="_x003C_ReturnMessage_x003E_k__BackingField" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element name="_x003C_RoleGroupId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_Sessionid_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_TotalExp_x003E_k__BackingField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Validation" nillable="true" type="tns:Validation" />
+  <xs:complexType name="ValidatePersonalData">
+    <xs:sequence>
+      <xs:element name="_x003C_BasicInformationAccountName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationBU_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationCandidateID_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationCasePriority_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_BasicInformationComponentDetailId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_BasicInformationDOB_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationDesignation_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationEmailId_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationExpectedDateofJoining_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationFatherName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationFirstName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationHomePhone_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationJoiningLocation_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationLastName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationMiddleName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationMobile_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationOfferExtendedDate_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationOfferLocation_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationOwningDepartment_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BasicInformationTypeOfJoiner_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_CandidateId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_ComponentDesc_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CurrentAddressAddress_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CurrentAddressCity_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CurrentAddressComponentDetailId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_CurrentAddressCountry_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CurrentAddressDurationofstayFrom_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CurrentAddressDurationofstayTo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CurrentAddressPinCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CurrentAddressState_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_IsLongestStayAddressSame_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_IsPermanentAddressSame_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_LongestStayAddressAddress_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LongestStayAddressCity_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LongestStayAddressComponentDetailId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_LongestStayAddressCountry_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LongestStayAddressDurationofstayFrom_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LongestStayAddressDurationofstayTo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LongestStayAddressPinCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LongestStayAddressState_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Mode_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_PR1Address_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PR1Company_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PR1Designation_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PR1Email_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PR1Landline_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PR1Mobile_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PR1Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PR2Address_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PR2Company_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PR2Designation_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PR2Email_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PR2Landline_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PR2Mobile_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PR2Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PermanentAddressAddress_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PermanentAddressCity_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PermanentAddressComponentDetailId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_PermanentAddressCountry_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PermanentAddressDurationofstayFrom_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PermanentAddressDurationofstayTo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PermanentAddressPinCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PermanentAddressState_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="_x003C_ReturnMessage_x003E_k__BackingField" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element name="_x003C_RoleGroupId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_Sessionid_x003E_k__BackingField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidatePersonalData" nillable="true" type="tns:ValidatePersonalData" />
+</xs:schema>

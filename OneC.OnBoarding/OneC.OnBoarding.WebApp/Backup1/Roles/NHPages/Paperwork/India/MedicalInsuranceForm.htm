@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Medical Insurance Form</title>
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+   <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/India/MedicalInsuranceForm.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="baseContent">
+        <div id="pageMain">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer personalDataForm'>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        Personal Details</p>
+                                </div>
+                                <br />
+                                <li>
+                                    <label for="firstname_form">
+                                        <span></span>Candidate ID
+                                    </label>
+                                    <input type="text" id="Text1" jqxb-datasource="FormDetails" name="CandidateId" readonly="readonly"
+                                        jqxb-datamember="MedicalInsuranceForm.CandidateId" style="background: #f0f0f0;
+                                        color: #888 !important;" class="tbForm" maxlength="30" title="Candidate ID" />
+                                </li>
+                                <li>
+                                    <label for="firstname_form">
+                                        <span></span>Name
+                                    </label>
+                                    <input type="text" id="firstname_form" jqxb-datasource="FormDetails" jqxb-datamember="MedicalInsuranceForm.Name"
+                                        readonly="readonly" style="background: #f0f0f0; color: #888 !important;" class="tbForm"
+                                        maxlength="30" title="Name" />
+                                </li>
+                                <li>
+                                    <label for="sex_form">
+                                        <span></span>Gender</label>
+                                    <select class="tbForm dropdown" id="sex_form" name="Gender" jqxb-datasource="FormDetails"
+                                        disabled="disabled" style="background: #f0f0f0; color: #888 !important;" title="Gender"
+                                        jqxb-datamember="MedicalInsuranceForm.Gender" jqxb-listsource="GenderList" jqxb-listvalue="UserValue"
+                                        jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li class="date_box">
+                                    <label for="NInum_form">
+                                        <span></span>Date of Birth</label>
+                                    <input type="text" id="NInum_form" jqxb-datasource="FormDetails" jqxb-datamember="MedicalInsuranceForm.DOB"
+                                        readonly="readonly" style="background: #f0f0f0; color: #888 !important;" title="Date of Birth"
+                                        maxlength="45" class="tbForm" />
+                                </li>
+                                <li class="date_box">
+                                    <label for="NInum_form">
+                                        <span></span>Date of Marriage</label>
+                                    <input type="text" id="dom_form" jqxb-datasource="FormDetails" jqxb-datamember="MedicalInsuranceForm.DOM"
+                                        readonly="readonly" title="Date of Marriage" maxlength="45" class="tbForm domdate" />
+                                </li>
+                                <li class="date_box">
+                                    <label for="NInum_form">
+                                        <span></span>Date of Joining</label>
+                                    <input type="text" id="Text3" jqxb-datasource="FormDetails" jqxb-datamember="MedicalInsuranceForm.DOJ"
+                                        readonly="readonly" style="background: #f0f0f0; color: #888 !important;" title="Date of Joining"
+                                        maxlength="45" class="tbForm Alphanumeric" />
+                                </li>
+                                <li>
+                                    <label for="NInum_form">
+                                        <span></span>Email ID</label>
+                                    <input type="text" id="Text4" jqxb-datasource="FormDetails" jqxb-datamember="MedicalInsuranceForm.EmailId"
+                                        readonly="readonly" style="background: #f0f0f0; color: #888 !important;" title="Email ID"
+                                        maxlength="45" class="tbForm Alphanumeric" />
+                                </li>
+                            </ul>
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        Base Cover :   <label>
+                                        Policy Period :</label> 
+                                    <label  id="TopupPolicy_Period"" for="Policy_Period" style="font-size: small"></label></p>
+                                </div>
+                                <br />
+                                <div style="margin-left: 8px">
+                                    <p>
+                                        <label for="prefix_form" style="font-size: small">
+                                            <u>Base Coverage Option</u> : Company sponsored coverage for 3 dependents among
+                                            Spouse, Parents and Children.</label></p>
+                                </div>
+                                <br />
+                                <li></li>
+                                <li></li>
+                              
+                                <li>
+                                    <!-- <label  for="prefix_form">
+                                               <span></span> Policy Period</label> 
+                                               <label  class="inputText_Readonly tbForm" id="TopupPolicy_Period" style="font-size: small"></label>
+                                            <br />    
+                                             <br />-->
+                                             
+                                    <label for="prefix_form">
+                                        <span></span>Entitled Base Coverage</label>
+                                    <input type="text" class="tbForm onlyAlp" jqxb-datamember="MedicalInsuranceForm.EntitledBaseCoverage"
+                                        jqxb-datasource="FormDetails" style="background: #f0f0f0; color: #888 !important;"
+                                        readonly="readonly" maxlength="30" id="Text22" title="Middle Name" />
+                                </li><br />
+                            </ul>
+
+                            <div  jqxb-templatecontainer="BaseCoverDependentsTemplate" jqxb-datasource="BaseCoverDependents">
+                                <div jqxb-template="BaseCoverDependentsTemplate" jqxb-templateitemidprfx="BaseCoverDependentsRow"
+                                    style="display: none">
+                                    <ul class="personalDetails">
+                                        <li style="width: 90%;">
+                                            <input type="button" id="btnDelete" value="Delete" class="btn_field deleteBaseCoverageDependents"
+                                                style="float: right" /></li>
+                                        <li>
+                                            <label for="prefix_form">
+                                                <span>*</span>Name</label>
+                                            <input  id="23"type="text" class="tbForm onlyAlp " jqxb-itemdatamember="Name"
+                                                maxlength="30" jqxb-templateitemdynamicid="Name" title="Name" />
+                                        </li>
+                                        <li>
+                                            <label for="prefix_form">
+                                                <span>*</span>Relationship</label>
+                                            <select id="maritalstatus_form" class="tbForm dropdown" name="Relationship" title="Relationship"
+                                                jqxb-templateitemdynamicid="Relationship" jqxb-itemdatamember="Relationship"
+                                                jqxb-listsource="BaseCoverRelationshipList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <label for="prefix_form">
+                                                <span>*</span>Email ID</label>
+                                            <input  id="24"type="text" class="tbForm " jqxb-itemdatamember="EmailID" maxlength="30"
+                                                jqxb-templateitemdynamicid="EmailID" title="Email Id" />
+                                        </li>
+                                        <li class="date_box">
+                                            <label for="firstname_form">
+                                                <span>*</span>Date of Birth
+                                            </label>
+                                            <input  type="text" class="tbForm jqrydatepicker textMandatory" jqxb-itemdatamember="DOB"
+                                                readonly="readonly" jqxb-templateitemdynamicid="DOB" maxlength="30" title="Date of Birth" />
+                                        </li>
+                                        <li>
+                                            <input  type="checkbox" jqxb-itemdatamember="IsAddressSameasEmployee" jqxb-bindedattribute="checked"
+                                                jqxb-templateitemdynamicid="chkAddress" class="chkAddress" />Address same as
+                                            Employee </li>
+                                        <li></li>
+                                        <li>
+                                            <label for="surname_form">
+                                                <span>*</span> Address</label>
+                                            <textarea  type="text" class="tbForm  Alphanumeric clsAddress textMandatory" jqxb-changeonevent=""
+                                                jqxb-templateitemdynamicid="Address" jqxb-itemdatamember="Address" title="Address"></textarea>
+                                        </li>
+                                        <li>
+                                            <label for="maritalstatus_form">
+                                                <span>*</span>Country</label>
+                                            <select class="tbForm dropdown onchangecountry countryobj" name="MaritalStatus" title="Country"
+                                                jqxb-changeonevent="" jqxb-itemdatamember="Country" jqxb-listsource="CountryList"
+                                                jqxb-dynamicchilddatasourcecountry="StateList" jqxb-templateitemdynamicid="Country"
+                                                jqxb-listvalue="ID" jqxb-listtext="Description">
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <label for="sex_form">
+                                                <span>*</span>State</label>
+                                            <select class="tbForm dropdown child stateobj" name="MaritalStatus" title="State"
+                                                jqxb-itemdatamember="State" jqxb-dynamicchilddatasourcecountry="StateList" jqxb-listsource="StateList"
+                                                jqxb-templateitemdynamicid="State" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <label for="phone_form">
+                                                <span>*</span>City</label>
+                                            <input type="text" jqxb-itemdatamember="City" title="City" maxlength="45" jqxb-templateitemdynamicid="City"
+                                                class="tbForm cityObj textMandatory" />
+                                        </li>
+                                        <li>
+                                            <label for="sortcode_form">
+                                                <span>*</span>Pin Code</label>
+                                            <input   type="text" jqxb-itemdatamember="Pincode" title="Pin Code" jqxb-templateitemdynamicid="Pincode"
+                                                maxlength="13" class="tbForm textAlphanumeric pincodeObj textMandatory" />
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form">
+                                                <span>*</span>Mobile</label>
+                                            <input  type="text" jqxb-itemdatamember="Mobile" title="Mobile" maxlength="14" jqxb-templateitemdynamicid="Mobile"  onkeydown= "onlyMedNum(event)"
+                                                class="tbForm OnlyNumeric mobileObj textMandatory" /> <!--onkeypress= "onlyMedNum(event)"-->
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form">
+                                                <span>*</span>Phone</label>
+                                            <input  type="text" jqxb-itemdatamember="Phone" title="Phone" maxlength="20" jqxb-templateitemdynamicid="Phone" onkeydown= "onlyMedNum(event)"
+                                                class="tbForm OnlyNumeric phoneObj textMandatory" /> <!--onkeypress= "onlyMedNum(event)"-->
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form">
+                                                <span></span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <ul class="personalDetails">
+                                <li>
+                                    <label for="NInum_form">
+                                        <span></span>Add base cover dependents</label>
+                                </li>
+                                <li>
+                                    <input type="button" id="btnAdddependents" value="Add Dependents" class="btn_field"
+                                        onclick="AddBaseCoverDependent();" />
+                                </li>
+                            </ul>
+                         
+                        </div>
+                        <div class="Signature" id="Sign_PageId_1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+  </div>
+</body>
+</html>

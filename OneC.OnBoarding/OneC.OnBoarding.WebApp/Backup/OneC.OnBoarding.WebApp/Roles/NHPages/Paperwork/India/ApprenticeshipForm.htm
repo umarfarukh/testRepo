@@ -1,0 +1,438 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Apprenticeship Form</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/India/ApprenticeshipForm.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+       <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <style type="text/css">
+       .pageData ul.personalDetails li
+        {
+            width: 46%;
+            padding:10px 0 10px 10px ;
+        }
+    </style>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id='pageMain'>
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="page_header1">
+                                <p class="pageText" style="text-align: center; font-family: Trebuchet MS; font-size: 15px;
+                                    border: 1px solid #000;">
+                                    APPRENTICESHIP CONTRACT REGISTRATION CARD
+                                </p>
+                            </div>
+                            <div style="width: 100%; height: 50px; padding-top: 5px; border-top: 1px solid #d4e7ef">
+                                <div class="inputText_Readonly " style="float: left; width: 20%; margin-right: 5px;
+                                    height: 25px; padding-top: 10px">
+                                    <input type="checkbox" id="Checkbox3" checked="checked" name="Pg_1_check_GraduateApprentice"
+                                        style="margin-top: -5px" />
+                                    GRADUATE APPRENTICE</div>
+                                <div class="inputText_Readonly" style="float: left; width: 20%; margin-right: 5px;
+                                    height: 25px; padding-top: 10px">
+                                    <input type="checkbox" id="Checkbox1"  name="Pg_1_check_GraduateApprentice"  disabled="disabled"
+                                        style="margin-top: -5px" />
+                                    TECHNICIAN APPRENTICE</div>
+                                <div class="inputText_Readonly" style="float: left; width: 30%; margin-right: 5px;
+                                    height: 25px; padding-top: 10px">
+                                    <input type="checkbox" id="Checkbox2"  name="Pg_1_check_GraduateApprentice" disabled="disabled"
+                                        style="margin-top: -5px" />
+                                    TECHNICIAN (VOCATIONAL) APPRENTICE</div>
+                            </div>
+                            <ul class="personalDetails" style="margin:0;">
+                                <li>
+                                    <label for="Course student">
+                                        1. Whether Sandwich course student or not, State:
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" style="vertical-align:middle;" id="coursey_form" name="CurrentCarrier" onclick="Course(0)" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.SandwichCourseYes" jqxb-bindedattribute="checked" />Yes
+                                    <input type="radio" style="vertical-align:middle;" id="coursen_form" name="CurrentCarrier" onclick="Course(1)" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.SandwichCourseNo" jqxb-bindedattribute="checked" />No </li>
+                                <li>
+                                    <label for="Name of Apprentice">
+                                        2. Name of Apprentice(In Capital Letters)<br />
+                                    </label>
+                                </li>
+                                <li>
+                                    <input class="inputText_Readonly" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.Name" readonly="readonly" id="Pg_1_text_Name" type="text" style="border: 1px solid #000" />
+                                </li>
+                                <li>
+                                    <label for="Name of Father">
+                                        3. Name of Father<br />
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="text" maxlength="45" class="textMandatory onlyAlp" style="border: 1px solid #000; width: 174px;" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.FatherName" id="Text2"/>
+                                </li>
+                                <li>
+                                    <label for="Date of Birth">
+                                        4. Date of Birth<br />
+                                    </label>
+                                </li>
+                                <li>
+                                    <input class="inputText_Readonly" jqxb-datasource="FormDetails" readonly="readonly"  jqxb-datamember="ApprenticeshipForm.DOB"  id="Pg_1_text_DOB" type="text" style="border: 1px solid #000" />(DD/MM/YYYY)
+                                </li>
+                                <li>
+                                    <label for="Sex">
+                                        5. Sex<br />
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio"  style="vertical-align:middle;"  jqxb-datasource="FormDetails"  disabled="disabled" jqxb-datamember="ApprenticeshipForm.Male" jqxb-bindedattribute="checked"  />Male
+                                    <input type="radio" style="vertical-align:middle;" jqxb-datasource="FormDetails" disabled="disabled" jqxb-datamember="ApprenticeshipForm.Female" jqxb-bindedattribute="checked"  />Female </li>
+                                <li>
+                                    <label for="Age">
+                                        6. Age<br />
+                                    </label>
+                                </li>
+                                <li>
+                                    <input class="inputText_Readonly" type="text" style="border: 1px solid #000" id="Text4"
+                                      jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.Age"   readonly="readonly" />
+                                </li>
+                                <li style="width: 97%;float:left;height:100%;">   
+                                    <label for="Contact Information" style="width:100%;margin-bottom:10px;">
+                                        7. Contact Information<br />
+                                    </label>
+                                    <div style="float:left;width:90%;margin-left:90px;">
+                                        <div class="flt_left " style="width:42%;border:1px solid #d4e7ef;border-bottom:none;border-right:none;padding-bottom:10px;">
+                                        <label for="Temporary Address" style="width:40%;float:left;margin-top:15px;margin-left:10px;">
+                                        Temporary Address<br />
+                                        </label>
+                                        <textarea class="inputText_Readonly" id="Textarea1" style="border: 1px solid #000;
+                                        float: left;margin-top: 15px"  jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.TempAddress" name="S1" rows="2" readonly="readonly">
+                                        </textarea>
+                                        </div>
+                                        <div class="flt_left" style="width:42%;border:1px solid #d4e7ef;border-bottom:none; padding-bottom:10px;">
+                                        <label for="Permanent Address" style="width:40%;float:left;margin-top:15px;margin-left:10px;">
+                                        Permanent Address<br />
+                                        </label>
+                                        <textarea class="inputText_Readonly" id="Textarea3" style="border: 1px solid #000;
+                                        float: left; margin-top: 15px" name="S1" rows="2"  jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.PermAddress" readonly="readonly">
+                                        </textarea>
+                                        </div>
+                                        <div  class="flt_left" style="width:42%;border:1px solid #d4e7ef;border-right:none;padding:10px 0">
+
+                                        <label for=" Pincode" style="width:40%;float:left;margin-left:10px;">
+                                        Pincode<br />
+                                        </label>
+                                        <input class="inputText_Readonly" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.TempPincode"  type="text" style="border: 1px solid #000; float: left;" id="Text5" readonly="readonly" />
+                                
+                                        </div>
+                                        <div class="flt_left" style="width:42%;border:1px solid #d4e7ef;padding:10px 0;">
+                                        <label for=" Pincode" style="width:40%;float:left;margin-left:10px;">
+                                        Pincode<br />
+                                        </label>
+                                        <input class="inputText_Readonly" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.PermPincode" type="text" style="border: 1px solid #000; float: left;" id="Text1" readonly="readonly" />
+                                        </div>       
+                                </div>                 
+                               </li>
+
+                                <li style="height: 100%;float:left; width: 97%">
+                                    <label for="Contact Information">
+                                        8. Whether He/She belongs to :<br />
+                                    </label>
+                                
+                                <div style="float:right;">
+                                    <input type="radio" style="vertical-align:middle;" onclick="Caste(0)" name="caste" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.SC" jqxb-bindedattribute="checked"  />Scheduled Caste
+                                    <input type="radio"  style="vertical-align:middle;" name="caste"  onclick="Caste(1)" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.ST" jqxb-bindedattribute="checked"  />Scheduled Tribe
+                                    <input type="radio" style="vertical-align:middle;" name="caste"  onclick="Caste(2)" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.Handicapped" jqxb-bindedattribute="checked"/>Physically Handicapped
+                                    <input type="radio" style="vertical-align:middle;"  name="caste"  onclick="Caste(3)" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.MinorityCommunity" jqxb-bindedattribute="checked" />Minority Community 
+                                    <input type="radio" style="vertical-align:middle;"  name="caste"  onclick="Caste(4)" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.NotApplicable" jqxb-bindedattribute="checked" />Not Applicable
+                                     <input type="text" id="minority_form" maxlength="45"   jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.MinorityDescription"/></div>
+                               </li>
+                                <li style="width: 97%;float:left;height:100%;">
+                                    <label for="Contact Information" style="width:100%;margin-bottom:10px;">
+                                        9.Educational Qualification considered for apprenticeship training under the Act:<br />
+                                    </label>
+                                <div style="width: 32%; border: 1px solid #d4e7ef; border-right:none;height: 70px;float:left;padding:0 2%;">
+                                    <label for=" Name of Institution " style="width: 90%;">
+                                        Name of Institution / College/ University/ Board<br />
+                                    </label>
+                                    <br />
+                                    <br />
+                                    <textarea class="inputText_Readonly" id="Textarea2" style="width: 50%; padding-bottom: 7px" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.Institution" 
+                                        name="S1" rows="1" readonly="readonly"></textarea>
+                                </div>
+                                <div style="width: 26%; border: 1px solid #d4e7ef; border-right:none; height: 70px;float:left;padding:0 2%;">
+                                    <label for="Qualification" style="height: 34px; width: 80%">
+                                        Qualification (Specify Subject Field)<br />
+                                    </label>
+                                    <br />
+                                    <br />
+                                    <input class="inputText_Readonly" type="text" name="Lastname" style="border: 1px solid #000;
+                                        width: 140px; padding-right: 10px" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.Qualification"   readonly="readonly" />
+                                </div>
+                                <div style="width: 18%; height: 70px;float:left;padding:0 2%;border: 1px solid #d4e7ef;">
+                                    <label for=" Year & Month of Passing">
+                                        Year & Month of Passing<br />
+                                    </label>
+                                    <br />
+                                    <br />
+                                    <input class="inputText_Readonly" type="text" name="Lastname" style="border: 1px solid #000;
+                                        width: 140px;"  jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.MOP" readonly="readonly" />
+                                </div>
+                                </li>
+                                <li style="width: 97%;float:left;height:100%;">
+                                    <label for="Contact Information" style="width:100%;margin-bottom:5px;">
+                                        10.
+                                    </label>
+                                <div style="width: 36%; height: 70px; float:left;border: 1px solid #d4e7ef; border-right:none;padding:0 2%;">
+                                    <label for=" Date of commencement of Training">
+                                        Date of commencement of Training<br />
+                                    </label>
+                                    <br />
+                                    <br />
+                                    <input class="inputText_Readonly" type="text"  jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.DOT" name="Lastname" style="border: 1px solid #000;
+                                        width: 140px; padding-right: 10px" readonly="readonly" />
+                                </div>
+                                <div style="width: 30%; float:left; height: 70px;border: 1px solid #d4e7ef; border-right:none;padding:0 2%;">
+                                    <label for="Period of Training">
+                                        Period of Training<br />
+                                    </label>
+                                    <br />
+                                    <br />
+                                    <input class="inputText_Readonly" type="text" name="Lastname"  jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.Period" style="border: 1px solid #000;
+                                        width: 140px;" readonly="readonly" />
+                                </div>
+                                <div style="width: 21%; float:left;border: 1px solid #d4e7ef; height:70px;padding:0 2%;">
+                                    <label for="Father/Husband Name">
+                                        Rate of Stipend Rs. Per Month<br />
+                                    </label>
+                                    <br />
+                                    <br />
+                                    <input class="inputText_Readonly" type="text" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.Stipend" name="Lastname" style="border: 1px solid #000;
+                                        width: 140px;" readonly="readonly" />
+                                </div>
+                                </li>
+                         </ul>
+                            <br />
+                            <br />
+                            <br />
+                            <div class="page_text">
+                                We, the Employer, Apprentice (the Guardian in the case of Minor Apprentices) and
+                                the surety hereby declare that we have read the contents of the apprenticeship contracts
+                                as per the Apprenticeship Rules, 1982, as amended from time to time and agree to
+                                abide by all the provisions made thereunder. We also declare that all the provisions
+                                of the Apprentices Act, 1961, as amended from time to time including those relating
+                                to Registration and Termination of contract are binding on us. (A certified Specimen
+                                of copy of contract entered into is enclosed).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 1st page-->
+                <!--Start of 2nd page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="page_header1">
+                                <p class="pageText" style="text-align: center; font-family: Trebuchet MS; font-size: 15px;
+                                    border: 1px solid #000; width: 100%;">
+                                    TERMS AND CONDITIONS OF THE CONTRACT OF APPRENTICESHIP FOR GRADUATE, TECHNICIAN
+                                    AND TECHNICIAN (VOCATIONAL) APPRENTICES.
+                                </p>
+                            </div>
+                            <div>
+                                <p class="pageText" style="font-family: Trebuchet MS; font-size: 15px; border-bottom: 1px solid #d4e7ef;
+                                    border-top: 1px solid #d4e7ef">
+                                    1) The period of training shall be one year (in the case of sandwich students the
+                                    period of training shall be as stipulated in curriculum).
+                                </p>
+                            </div>
+                            <br />
+                            <div>
+                                <p class="pageText" style="font-family: Trebuchet MS; font-size: 15px; border-bottom: 1px solid #d4e7ef;">
+                                    2) It shall be not be obligatory on the part of the employer to offer any employed
+                                    to the apprentice on completion of period of apprenticeship training in his establishment
+                                    nor shall it be obligatory on the part of the Apprentice to accept an employment
+                                    under the employer.<br />
+                                    NOTE: If, however, there is a condition in the contract of apprenticeship that the
+                                    apprentice shall after the successful completion of training serve the employer,
+                                    the employer shall, on such completion be bound to offer suitable employment to
+                                    the apprentice and the apprentice shall be bound to serve the employer in that capacity
+                                    for such period and for such remuneration as may be specified in the contract subject
+                                    to the approval of the Central Apprenticeship Adviser.
+                                </p>
+                            </div>
+                            <br />
+                            <div>
+                                <p class="pageText" style="font-family: Trebuchet MS; font-size: 15px; border-bottom: 1px solid #d4e7ef;">
+                                    3) Every apprentice undergoing apprenticeship training in an establishment shall
+                                    be a trainee and not a worker and such the provisions of any law with respect to
+                                    labour shall not apply to or in relation to such apprentice.
+                                </p>
+                            </div>
+                            <div>
+                                <p class="pageText" style="font-family: Trebuchet MS; font-size: 15px; border-bottom: 1px solid #d4e7ef;">
+                                    4)<br />
+                                    (i) The apprentice shall abide by the rules regulations of the establishment in
+                                    all the matters of conduct and discipline and safety and carry all lawful order
+                                    of the employer and superiors in the establishment.<br />
+                                    (ii) The apprentice shall learn his subject field conscientiously and diligently
+                                    and attend to practical and instructional classes regularly.<br />
+                                    (iii) The apprentice shall maintain a record of his work during the period of the
+                                    apprenticeship training in al proforma approved by the Apprenticeship Adviser.<br />
+                                    (iv) Where the contract of apprenticeship is terminated for failure on the part
+                                    of the apprentice to carryout terms of contract, the apprentice shall refund to
+                                    the employer as cost of training such amount as may be determined by the Apprenticeship
+                                    Adviser. In such event, the apprentice shall not be entitled to enter into another
+                                    contract of Apprenticeship under the Act with any other employer.<br />
+                                    (v)The contract of apprenticeship can be determined can be terminated without compensation
+                                    payable by the apprentice:<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a) If he/she secures gainful employment
+                                    (on production of copy of the appointment order) and<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b) If he/she is unable to continue
+                                    training on medical grounds (on production of a certificate to this effect from
+                                    a medical officer not below the rank of Civil surgeon).<br />
+                                    (vi)For breach of contract by the employer, the employer shall pay compensation
+                                    to the apprentice an amount equivalent to his three months last drawn stipend.<br />
+                                    (vii) Continuance of payment of stipend shall depend on satisfactory performance
+                                    of the apprentice during the training period.<br />
+                                </p>
+                            </div>
+                            <div>
+                                <p class="pageText" style="font-family: Trebuchet MS; font-size: 15px; border-bottom: 1px solid #d4e7ef;">
+                                    5)
+                                    <br />
+                                    (i) The employer shall make suitable arrangement in his establishment for imparting
+                                    a course of apprenticeship training period, to the apprentice in accordance with
+                                    the provisions of the Act and Rules made thereunder and with the approval of the
+                                    respective Regional Central Apprenticeship Adviser.<br />
+                                    (ii) Every employer is required to formulate a “Training Programme” for the training
+                                    of Graduate / Technician (Vocational) apprentices and get it approved by the respective
+                                    Regional Central Apprenticeship Adviser.<br />
+                                    (iii) The employer will arrange for suitable person in charge of training of apprentices
+                                    as laid down under the Act and Rules thereunder.<br />
+                                </p>
+                            </div>
+                            <div>
+                                <p class="pageText" style="font-family: Trebuchet MS; font-size: 15px; border-bottom: 1px solid #d4e7ef;">
+                                    6.
+                                    <br />
+                                    (i) A Graduate, Technician and Technician (Vocational) Apprentice shall work according
+                                    to the normal hours of work of the department in the establishment which he/she
+                                    is attached for training. They will be eligible for 12 days of casual leave and
+                                    15days of Medical Leave with payment of stipend. Extraordinary leave upto 10 days
+                                    with or without payment of stipend may be granted at the discretion of the establishment.<br />
+                                    (ii) The stipend for a particular month shall be paid before the 10th of the following
+                                    month<br />
+                                </p>
+                            </div>
+                            <div class="page_header1">
+                                <p class="pageText" style="text-align: center; font-family: Trebuchet MS; font-size: 15px;
+                                    border: 1px solid #000; width: 100%">
+                                    Declaration
+                                </p>
+                            </div>
+                            <div>
+                                <p class="pageText" style="font-family: Trebuchet MS; font-size: 15px; border-bottom: 1px solid #d4e7ef;">
+                                    A) I declare that I do not posses training or work experience for a year or more
+                                    after the attainment of my qualifications and at the date of joining for apprenticeship
+                                    training at <u>Cognizant Technology Solutions India Pvt Ltd</u>.
+                                </p>
+                            </div>
+                            <br />
+                            <div>
+                                <p class="pageText" style="font-family: Trebuchet MS; font-size: 15px; border-bottom: 1px solid #d4e7ef;">
+                                    B) I further declare that I have not joined for apprenticeship training and also
+                                    that I have not entered into a contract with any other employer before joining at
+                                    <u>Cognizant Technology Solutions India Pvt Ltd</u>.
+                                </p>
+                            </div>
+                            <br />
+                            <div>
+                                <p class="pageText" style="font-family: Trebuchet MS; font-size: 15px; border-bottom: 1px solid #d4e7ef;">
+                                    C) I hereby undertake to face any disciplinary action including the refund of the
+                                    entire stipend in case and of my above statements is found to be not true and any
+                                    information is will-fully suppressed.
+                                </p>
+                            </div>
+                            <ul class="personalDetails">
+                                <li style=" width:45%;border-right: 1px solid #d4e7ef; height:35px">
+                                    <label for=" Name" style=" margin-top:15px">
+                                        Name<br />
+                                    </label>
+                                    <input class="inputText_Readonly" type="text" id="Pg_1_text_Name1" readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.Name"  style=" margin-left:5px; " />
+                                </li>
+                                <li style=" width:49%">
+                                    <label for=" Date" style=" margin-top:17px">
+                                        Date<br />
+                                    </label>
+                                    <input class="inputText_Readonly" id="Pg_1_text_Date" type="text"  readonly="readonly" style=" margin-left:5px"  />
+                                </li>
+                            </ul>
+                            <ul class="personalDetails">
+                                <li style=" width:45%; border-right: 1px solid #d4e7ef; margin-top:-23px">
+                                    <label for="Name of Apprentice">
+                                        Address<br />
+                                    </label>
+                                </li>
+                                <li style=" width:49%; margin-top:-23px">
+                                    <input class="inputText_Readonly" type="text" style="border: 1px solid #000" id="Text8" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.PermAddress"
+                                        readonly="readonly" />
+                                </li>
+                                <li style=" width:45%;border-right: 1px solid #d4e7ef">
+                                    <label for="Name of Apprentice">
+                                        Institution Last Studied :<br />
+                                    </label>
+                                </li>
+                                <li style=" width:49%">
+                                    <input class="inputText_Readonly" type="text" style="border: 1px solid #000" id="Text9" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.Institution"
+                                        readonly="readonly" />
+                                </li>
+                                <li style=" width:45%; border-right: 1px solid #d4e7ef">
+                                    <label for="Name of Apprentice">
+                                        Percentage of Marks/GPA::<br />
+                                    </label>
+                                </li>
+                                <li style=" width:49%">
+                                    <input class="inputText_Readonly" type="text" style="border: 1px solid #000" id="Text10"
+                                       jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.Grade"  readonly="readonly" />
+                                </li>
+                                <li style=" width:45%; border-right: 1px solid #d4e7ef">
+                                    <label for="Name of Apprentice">
+                                        Field of Engineering/Technology :<br />
+                                    </label>
+                                </li>
+                                <li style=" width:49%">
+                                    <input class="inputText_Readonly" type="text" style="border: 1px solid #000" id="Text11"
+                                     jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.Qualification"    readonly="readonly" />
+                                </li>
+                                <li style=" width:45%; border-right: 1px solid #d4e7ef">
+                                    <label for="Name of Apprentice">
+                                        Year of passing: :<br />
+                                    </label>
+                                </li>
+                                <li style=" width:49%">
+                                    <input class="inputText_Readonly" type="text" style="border: 1px solid #000" id="Text12" jqxb-datasource="FormDetails" jqxb-datamember="ApprenticeshipForm.YOP"
+                                        readonly="readonly" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Signature" id="Sign_PageId_2">
+                    </div>
+                    <!--End of 2nd page-->
+                </div>
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

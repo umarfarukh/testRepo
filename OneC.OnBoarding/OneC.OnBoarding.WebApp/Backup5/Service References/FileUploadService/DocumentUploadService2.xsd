@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/OneC_GenericUploadMessageContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OneC_GenericUploadMessageContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://onecdevintcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="MFileuploadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EncryptedFileUploadID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileContentId" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="FileException" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileExternalURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileUploadId" type="xs:int" />
+      <xs:element minOccurs="0" name="Filestatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OutgoingFile" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MFileuploadResponse" nillable="true" type="tns:MFileuploadResponse" />
+  <xs:complexType name="FileUploadDetailsRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppId" type="xs:int" />
+      <xs:element minOccurs="0" name="AppTemplateId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AssociateId" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EncryptedFileUploadID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileContentId" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileSaveName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileUploadId" type="xs:int" />
+      <xs:element minOccurs="0" name="IncomingFile" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileUploadDetailsRequest" nillable="true" type="tns:FileUploadDetailsRequest" />
+</xs:schema>

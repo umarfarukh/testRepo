@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+	<title>Start Date And Work Address</title>
+	<link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+	<link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+	<link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+	<link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+	<link href="../../../../Styles/jquery.multiselect.css" rel="stylesheet" type="text/css" />
+	<link href="../../../../Styles/reset.css" rel="stylesheet" type="text/css" />
+	<link href="../../../../Styles/stylesNa.css" rel="stylesheet" type="text/css" />
+	<link href="../../../../Styles/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+	<script src="../../../../Scripts/JQuery/jqueryNA-ui.js" type="text/javascript"></script>
+	<script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+	<script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+	<script src="../../../../Scripts/Forms/US/StartDateAndLocationCand.js" type="text/javascript"></script>
+	<script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+	<!--<link href="../ExperianModule/qas.css" rel="stylesheet" type="text/css" />-->
+	<!--<link rel="stylesheet" type="text/css" href="../ExperianModule/jquery/css/qas/jquery-ui-1.8.6.custom.css" />-->
+	<!--<link href="../../../../Styles/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />-->
+	<!--<script src="../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>-->
+	<!--<script src="../../../../Scripts/JQuery/jQuery.ui.js" type="text/javascript"></script>-->
+	<!--<script src="../../../../Scripts/JQuery/jquery-1.11.1.min.js" type="text/javascript"></script>-->
+	<!--<script src="../Scripts/JQuery/jquery-ui.js" type="text/javascript"></script>-->
+	<!--<script src="../Scripts/JQuery/jqueryNA-ui.js" type="text/javascript"></script>-->
+	<!--<script src="../Scripts/JQuery/jquery.multiselect.min.js" type="text/javascript"></script>-->
+	<!--<script src="../ExperianModule/onPremise.js" type="text/javascript"></script>
+	<script src="../ExperianModule/qasConfig.js" type="text/javascript"></script>-->
+	<!--<script type="text/javascript" src="../../../../ExperianModule/jquery/js/jquery-ui-1.8.6.custom.min.js"></script>-->
+	<!--<script type="text/javascript" src="../ExperianModule/jquery/js/jquery.jsonp-2.4.0.js"></script>
+	<script type="text/javascript" src="../ExperianModule/jState.js"></script>-->
+	<!-- <script type="text/javascript" src="../ExperianModule/jquery/js/jquery-1.4.2.min.js"></script>  -->
+	<script type="text/javascript">
+    //<![CDATA[
+
+	    $('.ui-widget-overlay').hide();
+
+    //]]>
+	</script>
+	<style type="text/css">
+		.ui-dialog-titlebar .ui-widget-header .na_popup .warning_popup
+		{
+				background-color: #4ea4ef;
+				height: 50.188;
+				padding-top: 0px;
+				padding-bottom: 0px;
+				padding-left: 0px;
+				padding-right: 0px;
+		}
+		.work_location_type label.alert_f_text
+		{
+			float: right;
+			margin-left: -190px;
+		}
+		.alert_f
+		{
+			float: left;
+		}
+		label.alert_f_text
+		{
+			width: 180px;
+		}
+		.form_row
+		{
+			color:Black;
+		}
+	</style>
+
+	<script type="text/javascript">
+        //<![CDATA[
+		var Modifyflag = 0;
+		function popupPro() {
+			faddress = "";
+			// DEBUG: specify the initial country in DataId & function to call in Callback
+			if (Modifyflag == 1) {
+				faddress = $('#req_Address1')[0].value + ','+ $('#req_City')[0].value + ',' + $('#req_State')[0].value + ',' + $('#req_Zip')[0].value;
+						}
+		   
+		   // var addr = faddress;
+		  // alert(faddress);
+		   var ProPopup = window.open(
+					"../../../../Experian/Typedown/RapidSearch.aspx?DataID=USA&Callback=handleProClose&Origin=StartDate&Modifyflag=" + Modifyflag + "&addr=" + faddress + "",
+					"ProPopup",
+					"scrollbars=no,resizable=yes,width=725,height=560");
+
+
+		}
+
+		function handleProClose(asAddress) {
+			document.getElementById("req_Address1").value = asAddress[0];
+			document.getElementById("req_Address2").value = asAddress[1];
+			document.getElementById("req_City").value = asAddress[2];
+			document.getElementById("req_State").value = asAddress[3];
+			document.getElementById("req_Zip").value = asAddress[4];
+			document.getElementById("req_County").value = asAddress[5];
+			document.getElementById("req_Country").value = asAddress[6];
+            document.getElementById("WorkLocationType").value = asAddress[7];
+
+		   Modifyflag = 1;
+		}
+
+
+    //]]>
+	</script>
+
+</head>
+<body>
+	<div class="wrapper" style="width: 550px; height:690px;">
+		<div id="startDateConfirmPopup"  class="start_date_selector display_none na_popup"
+			style="width: 564px;">
+			<div class="address_header" style="width: 485px;">
+				Start Date and Work Address</div>
+			<div class="start_date_wrapper">
+				<label style="margin-top: 5px;">
+					Start Date</label>
+				<input type="text" id="Txt_ExpStatDt" name="startDate" title="" class="jQrydatepickerForNA" readonly="readonly"
+					jqxb-datasource="FormDetails" jqxb-datamember="NAPayRoll.DOJ" style="margin-top: 18px; margin-bottom: 20px; margin-left: 10px;"
+/>
+			</div>
+			<div id="modfied_date_wrapper" style="margin-top: 10px; margin-bottom: 20px;">
+				<label style="margin-left: 25px;">
+					Actual Start date:</label>
+				<input type="text" id="txt_ModStatDt"  title="" readonly="readonly" class="jQrydatepickerForNA" jqxb-datasource="FormDetails"
+					jqxb-datamember="NAPayRoll.EDOJ" style="margin-bottom: 10px;" />
+				<p id="NormalNote"style="margin-left: 25px; margin-top: 10px;width: 500px; font-size:12px;">
+					If you are joining on a future date please navigate to Expected Date of Joining/Change Request</p>
+                    <p id="SMnote" style="margin-left: 25px; margin-top: 10px;width: 500px; font-size:12px;margin-bottom: -10px;">
+					If you are joining on a future date please contact your Recruiter / RC for the change of Date.  If you want to change the date of Induction, Please navigate to Expected Date of Induction / Change Request.</p>
+			</div>
+			<div class="clearfix button_wrapper" id="datebutton" style="width: 160px; height: 35px;
+				padding-top: 1px; padding-bottom: 1px; margin-right: 54px;margin-top: -72px;
+				border-left-width: 100px; float: right;">
+				<button type="button" name="confirm" id="dateConfirm" class="btnImg" style="cursor:pointer;margin-top: 7px;
+					margin-right: 5px; margin-bottom: 0px; float: right; height: 20px;">
+					Confirm</button>
+				<button type="button" name="modify" id="dateModify" class="btnImg confirm_button" style="cursor:pointer; margin-top: 7px; margin-left: 0px; margin-right: -10px;
+					margin-bottom: 0px; float: right; height: 20px;margin-right: 10px;" onclick="forDateModify();">
+					Modify</button>
+			</div>
+			<div class="clearfix address_wrapper display_none" id="addressContent">
+				<div class="address_header" style="width: 485px;">
+					Address Details</div>
+				<div class="address_details">
+					<ul>
+						<li id="wrkAddli" class="active"><a href="#" data-attr="#primaryWorkAddress">Primary Work Address</a></li>
+						<li id="prsntAddli"><a href="#" data-attr="#presentResidanceAddress">Present Residence Address</a></li>
+					</ul>
+					<div class="tab_content_wrapper">
+						<div class="tab_content" id="primaryWorkAddress">
+							<div class="form_wrapper">
+								<form action="StartDateExperianNAPayroll.htm">
+								<!-- Tab Content  primary work address with ACTUAL ADDRESS starts here -->
+								<div id="Wrk_Address">
+									<div class="form_row">
+										<label>
+											<span style="color: red;"> * </span>Country</label>
+										<div class="form_field">
+											<input type="text" id="req_Country" name="country" runat="server" title="" readonly="readonly" disabled="disabled" style="font-size:13px;width:200px;background-color:rgb(247, 247, 247)"/> <!-- jqxb-datasource="FormDetails"
+												jqxb-datamember="NAPayRoll.Country" -->
+										</div>
+									</div>
+									<div class="form_row">
+										<label>
+											<span style="color: red;"> * </span>Address 1</label>
+										<div class="form_field">
+											<input type="text" id="req_Address1" title="" readonly="readonly" runat="server" name="address1" disabled="disabled" style="width:200px;background-color:rgb(247, 247, 247)"/> <!--jqxb-datasource="FormDetails"
+												jqxb-datamember="NAPayRoll.Address1"--> 
+										</div>
+									</div>
+									<div class="form_row">
+										<label>
+											<span > &nbsp; </span>Address 2</label>
+										<div class="form_field">
+											<input type="text" id="req_Address2" title="" readonly="readonly" runat="server" name="address2" disabled="disabled" style="width:200px;background-color:rgb(247, 247, 247)" /><!--jqxb-datasource="FormDetails"
+												jqxb-datamember="NAPayRoll.Address2"-->
+										</div>
+									</div>
+									<div class="form_row">
+										<label>
+											<span style="color: red;"> * </span>City</label>
+										<div class="form_field">
+											<input type="text" id="req_City" title="" name="City" readonly="readonly" runat="server" disabled="disabled" style="width:200px;background-color:rgb(247, 247, 247)"/><!-- jqxb-datasource="FormDetails" jqxb-datamember="NAPayRoll.City" -->
+										</div>
+									</div>
+									<div class="form_row">
+										<label>
+											<span style="color: red;"> * </span>State</label>
+										<div class="form_field">
+											<input type="text" id="req_State" title="" name="State" readonly="readonly" runat="server" disabled="disabled" style="width:200px;background-color:rgb(247, 247, 247)" /><!--jqxb-datasource="FormDetails" jqxb-datamember="NAPayRoll.State"-->
+										</div>
+									</div>
+									<div class="form_row">
+										<label>
+											County</label>
+										<div class="form_field">
+											<input type="text" id="req_County" name="County" readonly="readonly" runat="server" disabled="disabled"  style="width:200px;background-color:rgb(247, 247, 247)" readonly="readonly"   /><!--jqxb-datasource="FormDetails"
+												jqxb-datamember="NAPayRoll.County"-->
+										</div>
+									</div>
+									
+									<div class="form_row">
+										<label>
+											<span style="color: red;"> * </span>Zip</label>
+										<div class="form_field">
+											<input type="text" id="req_Zip" title="" name="Zip" readonly="readonly" runat="server" disabled="disabled" style="width:200px;background-color:rgb(247, 247, 247)" /><!-- jqxb-datasource="FormDetails" jqxb-datamember="NAPayRoll.Zip"-->
+										</div>
+									</div>
+
+								   <div class="form_row">
+									<label>
+										<span style="color: red;"> * </span>Work Location Type</label>
+									<div class="form_field">
+									<input type="text" id="WorkLocationType" title="Work Location type" name="work_location_type" runat="server" disabled = "disabled" class="textMandatory" style="background-color:rgb(247, 247, 247)" value="" />
+										<!--<select name="work_location_type" id="WorkLocationType" class="custom_select dropdown"
+											jqxb-datasource="FormDetails" jqxb-datamember="NAPayRoll.LocationType" jqxb-listsource="NAPayRollLocationType"
+											jqxb-listvalue="ID" jqxb-listtext="Description">-->
+										<!--</select>-->
+									   <!-- <select name="work_location_type" id="WorkLocationType" class="custom_select dropdown">-->
+
+										<br />
+										<!--                  <p style="margin-left:10px;">If you are joining on a future date please navigate to Expected Date of Joining/Change Request</p>-->
+									</div>
+								</div>
+                                								<div class="form_row button_wrapper">
+									<!--	<label><button  type="button" name="confirm" id="confrimAdrees" class="confirm_button">Confirm</button></label>-->
+									<div class="form_field label_only" style="width: 480px;">
+										If you do not know your Primary Work Address, Please record your home Address.
+                                        </div>
+								</div>
+								</div>
+								<div class="button_wrapper">
+									<button type="button" name="confirm" class="modify_address" id="addressModify" style="cursor:pointer;margin-left: 10px;"
+										onclick="popupPro()">
+										Modify</button>
+								</div>
+								</form>
+							</div>
+						</div>
+						<div class="tab_content display_none" id="presentResidanceAddress">
+							<div class="form_wrapper" id="prsntResidanceAddress">
+								<form action="StartDateExperianNAPayroll.htm">
+								<div class="form_row">
+									<label>
+										Country</label>
+									<div class="form_field">
+										<input type="text" readonly="readonly" id='PrstCountry' title="" name="country" style="width:200px;background-color:rgb(247, 247, 247)" disabled = "disabled" jqxb-datasource='FormDetails'
+											jqxb-datamember='NAPayRoll.PrstCountry' />
+									</div>
+								</div>
+								<div class="form_row">
+									<label>
+										Address 1</label>
+									<div class="form_field">
+										<input type="text" readonly="readonly" id='PrstAddress1' title="" name="address1" style="width:200px;background-color:rgb(247, 247, 247)" disabled = "disabled" jqxb-datasource='FormDetails'
+											jqxb-datamember='NAPayRoll.PrstAddress1' />
+									</div>
+								</div>
+								<div class="form_row">
+									<label>
+										Address 2</label>
+									<div class="form_field">
+										<input type="text" readonly="readonly" id='PrstAddress2' title="" name="address1" style="width:200px;background-color:rgb(247, 247, 247)" disabled = "disabled" jqxb-datasource='FormDetails'
+											jqxb-datamember='NAPayRoll.PrstAddress2' />
+									</div>
+								</div>
+								<div class="form_row">
+									<label>
+										State</label>
+									<div class="form_field">
+										<input type="text" readonly="readonly" id='PrstState' title="" style="width:200px;background-color:rgb(247, 247, 247)" name="address1" disabled = "disabled" jqxb-datasource='FormDetails'
+											jqxb-datamember='NAPayRoll.PrstState' />
+									</div>
+								</div>
+								<div class="form_row">
+									<label>
+										County</label>
+									<div class="form_field">
+										<input type="text" readonly="readonly" id='PrstCountry1' title="" name="address1" style="width:200px;background-color:rgb(247, 247, 247)" disabled = "disabled" jqxb-datasource='FormDetails'
+											jqxb-datamember='NAPayRoll.PrstCounty' />
+									</div>
+								</div>
+								<div class="form_row">
+									<label>
+										City</label>
+									<div class="form_field">
+										<input type="text" readonly="readonly" id='PrstCity' title="" name="address1" style="width:200px;background-color:rgb(247, 247, 247)" disabled = "disabled" jqxb-datasource='FormDetails'
+											jqxb-datamember='NAPayRoll.PrstCity' />
+									</div>
+								</div>
+								<div class="form_row">
+									<label>
+										Zip</label>
+									<div class="form_field">
+										<input type="text" readonly="readonly" id='PrstZip' class="onlyNumeric" title="" name="address1" style="width:200px;background-color:rgb(247, 247, 247)" disabled = "disabled" jqxb-datasource='FormDetails'
+											jqxb-datamember='NAPayRoll.PrstZip' />
+									</div>
+								</div>
+								<div class="form_row button_wrapper">
+									<!--	<label><button  type="button" name="confirm" id="confrimAdrees" class="confirm_button">Confirm</button></label>-->
+									<div class="form_field label_only" style="width: 484px; font-weight: bold;font-size:12px;">
+										To edit the present residence address please go in to the pre-joining section and edit the personal details form.</div>
+								</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<br/><br/><br/><br/><br/><br/><br/>                 <!-- for google chrome-->
+					<div class="submit_button_wrapper">
+						<button type="button" name="confirm" id="addressSubmit" class="custom_button submit_button btnImg"
+							style="cursor:pointer; margin-right: 18px;">
+							Submit</button>
+					</div>
+				</div>
+			</div>
+            <!-- Message Popup Starts Here -->
+			<div id="warningMessagePopup" title="Primary Work Address" class="display_none">
+				<p>
+					Please click on Modify to select Work Location type</p>
+			</div>
+			<!-- Message Popup Ends Here -->
+			<!-- Message Popup Starts Here -->
+			<div id="warningMessagePopup1" title="Present Residence Address" class="display_none">
+				<p>
+					You have not clicked on present residence address tab to review it. Its very important that you ensure that this address is accurate since you will be receiving your paychecks at this address till your direct deposit gets started.</p>
+			</div>
+			<!-- Message Popup Ends Here -->
+            <!-- Message Popup Starts Here -->
+			<div id="warningMessagePopup2" title="Primary Work Address" class="display_none">
+				<p>
+					You selected location type as ‘Home’ but your primary work address is not matching with your present residence address. Please make sure to update your residence address in Personal Data Form after raising this confirmation request. </p>
+			</div>
+			<!-- Message Popup Ends Here -->
+			<!-- Message Popup Starts Here -->
+			<div id="confrimationMessagePopup" title="Confirmation" class="display_none">
+				<p>
+					Your employment confirmation details have been successfully submitted to your hiring manager for approval.
+You will be notified when s/he acts on it.</p>
+			</div>
+			<!-- Message Popup Ends Here -->
+		</div>
+	</div>
+</body>
+</html>

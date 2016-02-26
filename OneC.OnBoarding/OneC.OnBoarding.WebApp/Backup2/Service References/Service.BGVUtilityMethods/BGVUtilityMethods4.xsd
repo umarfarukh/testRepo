@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" elementFormDefault="qualified" targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/BGVDC/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:51555/ServiceHost/BGVUtilityMethods.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" />
+  <xs:complexType name="VendorDashboard">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SessionId" type="xs:long" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:long" />
+      <xs:element minOccurs="0" name="AssociateId" type="xs:int" />
+      <xs:element minOccurs="0" name="CanStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="ReportStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="From" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="SpMode" type="xs:int" />
+      <xs:element minOccurs="0" name="To" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VendorDashboard" nillable="true" type="tns:VendorDashboard" />
+  <xs:complexType name="CandidateBGVData">
+    <xs:sequence>
+      <xs:element name="CandidateId" type="xs:long" />
+      <xs:element name="CandidateName" nillable="true" type="xs:string" />
+      <xs:element name="SessionId" type="xs:long" />
+      <xs:element name="CountryId" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComponentDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentRunnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="SpMode" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" minOccurs="0" name="AssignVendorBoxList" nillable="true" type="q1:ArrayOfAssignVendorVerificationData" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" minOccurs="0" name="AssignVendorComponentList" nillable="true" type="q2:ArrayOfAssignVendorComponentData" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" minOccurs="0" name="AssignVendorDocList" nillable="true" type="q3:ArrayOfAssignVendorDocumentData" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CandidateBGVData" nillable="true" type="tns:CandidateBGVData" />
+  <xs:complexType name="BackPapersDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SessionId" type="xs:int" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:int" />
+      <xs:element minOccurs="0" name="SpMode" type="xs:int" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" minOccurs="0" name="ManDocConfig" nillable="true" type="q4:ArrayOfManDocConfig" />
+      <xs:element minOccurs="0" name="RetStatus" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="BPNoGoTxt" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BackPapersDC" nillable="true" type="tns:BackPapersDC" />
+  <xs:complexType name="DocListInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SessionId" type="xs:int" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleGroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="SpMode" type="xs:int" />
+      <xs:element minOccurs="0" name="UpId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpRunnerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocListInfo" nillable="true" type="tns:DocListInfo" />
+  <xs:complexType name="ComponentData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SessionId" type="xs:int" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleGroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="SpMode" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComponentRunnerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ComponentData" nillable="true" type="tns:ComponentData" />
+  <xs:complexType name="SaveComponent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SessionId" type="xs:int" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleGroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="SpMode" type="xs:int" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" minOccurs="0" name="CompDetail" nillable="true" type="q5:ArrayOfComponentList" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" minOccurs="0" name="DocDataList" nillable="true" type="q6:ArrayOfDocDataList" />
+      <xs:element minOccurs="0" name="TotalExp" type="xs:int" />
+      <xs:element minOccurs="0" name="CompDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentRunnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="VerifyType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaveComponent" nillable="true" type="tns:SaveComponent" />
+  <xs:complexType name="Autocomplete">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeGroup" type="xs:int" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.BGVDC" minOccurs="0" name="Items" nillable="true" type="q7:ArrayOfItemList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Autocomplete" nillable="true" type="tns:Autocomplete" />
+  <xs:complexType name="CandidateInformationDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SessionId" type="xs:int" />
+      <xs:element minOccurs="0" name="BasicInformationComponentDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:int" />
+      <xs:element minOccurs="0" name="BasicInformationAccountName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComponentDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentAddressComponentDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="BasicInformationOwningDepartment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsPermanentAddressSame" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BasicInformationBU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentAddressComponentDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleGroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="BasicInformationCasePriority" type="xs:int" />
+      <xs:element minOccurs="0" name="IsLongestStayAddressSame" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BasicInformationHomePhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LongestStayAddressComponentDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="PermanentAddressCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasicInformationCandidateID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasicInformationMobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentAddressState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasicInformationEmailId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasicInformationFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentAddressCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasicInformationMiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentAddressAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentAddressPinCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasicInformationDOB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasicInformationFatherName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasicInformationLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentAddressCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentAddressDurationofstayFrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasicInformationDesignation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentAddressState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mode" type="xs:int" />
+      <xs:element minOccurs="0" name="PermanentAddressDurationofstayTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasicInformationExpectedDateofJoining" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentAddressCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LongestStayAddressAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasicInformationTypeOfJoiner" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentAddressPinCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LongestStayAddressCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasicInformationOfferExtendedDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentAddressDurationofstayFrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LongestStayAddressState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasicInformationOfferLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentAddressDurationofstayTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LongestStayAddressCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LongestStayAddressDurationofstayFrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BasicInformationJoiningLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LongestStayAddressDurationofstayTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LongestStayAddressPinCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR1Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR1Company" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR1Designation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR1Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR1Landline" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR1Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR1Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR2Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR2Company" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR2Designation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR2Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR2Landline" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR2Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR2Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermanentAddressAddress" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CandidateInformationDC" nillable="true" type="tns:CandidateInformationDC" />
+  <xs:complexType name="PageNavigationDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SessionId" type="xs:int" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleGroupId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageNavigationDC" nillable="true" type="tns:PageNavigationDC" />
+  <xs:complexType name="PageNotifications">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SessionId" type="xs:int" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleGroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="BgvPageId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageNotifications" nillable="true" type="tns:PageNotifications" />
+  <xs:complexType name="CompareDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CandidateId" type="xs:int" />
+      <xs:element minOccurs="0" name="PageId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleGroupId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompareDC" nillable="true" type="tns:CompareDC" />
+</xs:schema>

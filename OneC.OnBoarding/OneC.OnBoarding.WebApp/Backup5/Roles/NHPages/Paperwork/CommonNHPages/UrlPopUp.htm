@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        //    var popupURL = GetPopupURLString("PopUpURL");
+        //    if (popupURL != null && popupURL != '')
+        //        document.getElementById("PopUp").src = popupURL;
+
+        function GetPopupURLString(strKey) {
+
+            var urlFull = window.location.search.substring(1);
+            var urlQStr = urlFull.split(strKey + "=");
+            return urlQStr[1];
+        }
+        function test() {
+            var popupURL = GetPopupURLString("PopUp");
+            if (popupURL != null && popupURL != '')
+                document.getElementById("PopUp").src = popupURL;
+        }
+        </script>
+</head>
+<body onload="test()">
+    <iframe id="PopUp" width="99%" height="700px;" scrolling="auto">
+                                Hiii</iframe>
+</body>
+</html>
+<!--<script type="text/javascript">
+//    var popupURL = GetPopupURLString("PopUpURL");
+//    if (popupURL != null && popupURL != '')
+//        document.getElementById("PopUp").src = popupURL;
+
+    function GetPopupURLString(strKey) {
+
+        var urlFull = window.location.search.substring(1);
+        var urlQStr = urlFull.split(strKey + "=");
+        return urlQStr[1];
+    }
+    function test() {
+        alert('hi');
+        var popupURL = GetPopupURLString("PopUpURL");
+        if (popupURL != null && popupURL != '')
+            document.getElementById("PopUp").src = popupURL;
+    }
+        </script>-->

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OBUtilityMethods" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IOBUtilityMethods_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/" location="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_IOBUtilityMethods" type="i0:IOBUtilityMethods">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IOBUtilityMethods_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveSANUploadDetails">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SaveSANUploadDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LogException">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/LogException" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetSession">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SetSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LogEventData">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/LogEventData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchRoles">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/FetchRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemKey">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetSystemKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IsPageAllowed">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/IsPageAllowed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IsSessionActive">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/IsSessionActive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessage">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetExternalUserInfo">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetExternalUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendNotificationMail">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SendNotificationMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SendMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendMailWithConfirmBoolStatus">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SendMailWithConfirmBoolStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAttachment">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UploadAttachment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMckinleyCategories">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetMckinleyCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilterDate">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetFilterDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSurveyData">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetSurveyData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateECMFileUploadStatus">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UpdateECMFileUploadStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIDMRegistartionforRetry">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UpdateIDMRegistartionforRetry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventMailContent">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetEventMailContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUploadedDocName">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SaveUploadedDocName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPageMenuMappings">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetPageMenuMappings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchUserAssignRoles">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/FetchUserAssignRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchActiveUsers">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/FetchActiveUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetRoleToAssociate">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SetRoleToAssociate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCandidateStateAndLocationDetails">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UpdateCandidateStateAndLocationDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadList">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetUploadList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUploadResponse">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SaveUploadResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetECMUploadURL">
+      <soap:operation soapAction="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetECMUploadURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="OBFaultContractFCFault">
+        <soap:fault use="literal" name="OBFaultContractFCFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OBUtilityMethods">
+    <wsdl:port name="BasicHttpBinding_IOBUtilityMethods" binding="tns:BasicHttpBinding_IOBUtilityMethods">
+      <soap:address location="http://localhost:51555/ServiceHost/OBUtilityMethods.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

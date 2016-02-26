@@ -1,0 +1,42 @@
+﻿.blueTextBold { color: #0095db; font-size: 13px; font-weight: bold; }
+.blueText { color: #0095db; font-size: 13px; }
+.inputText_Readonly { background-color: InactiveCaptionText; font-size: 13px; padding: 3px 5px 2px; border: 1px solid #ccc !important; background: #f0f0f0; color: #888 !important; width: 160px; margin: 3px; }
+.inputText_Readonly1 { font-size: 13px; border: 1px solid #ccc !important; padding: 3px 5px 2px; width: 160px; margin: 3px; }
+.details { width: 100%; display: inline-block; float: left; text-decoration: none; height: auto; }
+.details li { height: 43px; float: left; font-size: 13px; font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif; text-align: center; width: 33.25%; padding-top:5px;border-top: 1px solid #d4e7ef; }
+.tbForm { float: right; height: 20px; width: 115px; border: 1px solid #000; padding: 0; margin: 5px 0 0 0;}
+.persons .persons3 div.tbForm { line-height:0;}/*IE7 bug fix*/
+.details .tbForm { height: 20px; width: 180px; border: 1px solid #000; padding: 0; margin: 5px 40px 0 0; float: right; }
+.persons { border-top: 1px solid #d4e7ef;border-left: 1px solid #d4e7ef; width: 100%; display: inline; 
+           float: left; text-decoration: none; height: auto; position: static; text-align: center;  }
+.persons div li {height:35px; font-size: 13px;font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;padding-top:5px; border-top: 1px solid #d4e7ef;}
+.persons1 { height: 35px; float: left; font-size: 1.4em; font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif; color: #4a4a4a; padding-bottom: 14px; width: 5%; }
+.persons2 { height: 35px; float: left; font-size: 1.4em; font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif; color: #4a4a4a; padding-bottom: 14px; width: 18%;  }
+.persons3 { height: 35px; float: left; font-size: 1.4em; font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif; color: #4a4a4a; padding-bottom: 14px; width: 20%;padding-right:20px; }
+.persons1,.persons2,.persons3{border-right: 1px solid #d4e7ef;border-bottom: 1px solid #d4e7ef;}
+.persons2 span, .persons3 span { color: Red; margin-top: 10px; padding-left: 2px; }
+.details span { color: Red; margin-left: 30px; margin-top: 10px;float:left;}
+.persons3 input { float: left; margin-left: 4px; }
+.tbForms { height: 20px; width: 40%; border: 1px solid #000; padding: 0; margin: 5px 0 0 0; }
+.header { font-weight: bolder; font-size: 13px; padding: 7px 0 7px 0; color: Black; }
+.clear { clear: both; height: 10px; }
+.brColor { border-right: 1px solid #d4e7ef; }
+.bColor { border-bottom: 1px solid #d4e7ef; }
+.pageDetails ul.personalDetails{width:60%;margin:0 0 0 235px;border:none;border-left: 1px solid #d4e7ef;}
+.pageDetails .personalDetails li { font-size: 13px; border-bottom: 1px solid #d4e7ef;border-right: 1px solid #d4e7ef; width: 40%; padding:10px 25px;font-family: 'Trebuchet MS' , Verdana, Arial, Helvetica, sans-serif; }
+.pageDetails .personalDetails li .personalDetails{margin-left:75px;width:90%;margin-top:15px;}
+.pageDetails .personalDetails li .personalDetails li { padding:10px 3px;}
+.pageDetails .personalDetails li .personalDetails li label{ margin-left:0;}
+.pageDetails .personalDetails li .personalDetails li input,
+.pageDetails .personalDetails li .personalDetails li textarea,
+.pageDetails .personalDetails li .personalDetails li select{width:150px;margin-left:5px;}
+.personalDetails li input, .personalDetails li textarea, .personalDetails li select { margin-left: -20px; }
+.personalDetails li label { margin-left: -20px; padding: 5px 5px 0 0; }
+.pageDetails .personalDetails li .tbForm { margin-left: -20px; margin-top: 3px; }
+h1 { font-size: 18px; color: #044b68; }
+h2 { font-size: 16px; color: #3a3a3a; }
+h3 { font-size: 14px; color: #898989; }
+h4 { font-size: 13px; color: #757575; }
+body { font-family: "Trebuchet MS" ,Verdana, Arial, Helvetica, sans-serif; margin: 0px; }
+.alert_f_text { float: right; height: 10px; margin: 0; padding: 0 0 0 170px; text-align: right; width: 250px; font-size: 0.8em; color: #ff0000; display: none; }
+.alert_f { height: 12px; width: 13px; margin: 6px; float: right; background: url('../../Images/formredalert.png') no-repeat; display: none; }

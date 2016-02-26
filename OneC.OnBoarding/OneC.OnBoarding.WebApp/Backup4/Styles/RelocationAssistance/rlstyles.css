@@ -1,0 +1,205 @@
+@charset "utf-8";
+* { color: #FFF; border: 0px; margin: 0px; padding: 0px; list-style: none; outline: none; font-family: "Kozuka Gothic Pro EL", Arial, Helvetica, sans-serif; font-weight: normal; }
+.clear { clear:both;}
+.nodisp { display:none; }
+.disp { display:block; }
+.nobrd { border:none;}
+.wrapper { background: url(../../Images/RelocationAssistance/bg_wrapper.jpg) no-repeat; position: relative; height: 610px; width: 962px;}
+
+
+/* Top Wrapper Starts */
+.topwlft { float: left; position: relative; height: 40px; width: 270px; margin-top: 10px; margin-left: 16px;}
+.topwlft img { float: left;margin-right: 10px; }
+.topwlft h2 { float: left; font-size: 22px; font-weight: normal; color: #FFF; margin-top: 3px; }
+
+.topwrgt { float: right; position: relative; height: 40px; width: 270px;  margin-top: 10px; margin-right: 16px;}
+.topwrgt ul { margin-top:25px; float: right; }
+.topwrgt li { float: left; font-size: 12px; color: #a9a9a9; border-right:1px solid #a9a9a9; padding-right:10px; padding-left:10px; }
+
+
+/* Top Wrapper Ends */
+
+/* Middle Wrapper Starts */
+
+.middle_wrapper { /*border: 1px solid #900;*/ position: relative; height: 510px; width: 920px; margin-right: auto; margin-left: auto;margin-top: 1.54em; }
+
+.s1_wraptrigger {}
+.s1_wraptrigger h1 { font-size: 40px; color: #ced700; text-align: center; }
+.s1_txtpic { margin-left:14em;margin-top: 2em; }
+.s1_mapwrap { background: url(../../Images/RelocationAssistance/s1_map.png) no-repeat; position: relative; height: 381px; width: 652px; margin-right: auto; margin-left: auto; margin-top: 3em;}
+.s1_mapwrap .s1_navigator { position: absolute; right: 143px; top: 11px; cursor: pointer; }
+
+
+.headwrap { background: url(../../Images/RelocationAssistance/bg_midhead.png) repeat-x; position: relative; height: 41px; -moz-border-radius-topleft: 7px; -moz-border-radius-topright: 7px; 
+-webkit-border-top-left-radius: 7px; -webkit-border-top-right-radius: 7px;
+ border-top-left-radius: 7px; border-top-right-radius: 7px; }
+/*top margin changed to 10*/
+.headlft { float:left; margin-top: 10px; margin-left: 5px;}
+.headrgt { float:right; margin-top: 10px; margin-right: 5px;}
+.headrgt .searchwrap { position: relative; height: 21px; width: 190px; background: #dedede; }
+.headrgt .searchwrap input[type=text] { position: relative; height: 19px; width: 166px; font-size: 12px; color: #737373; float: left; margin-top: 1px;margin-left: 2px;}
+.headrgt .searchwrap input[type=submit] { position: relative; height: 19px; width: 21px; background: url(../../Images/RelocationAssistance/btn_search.jpg) no-repeat; float: left;margin-top: 1px; cursor:pointer; }
+
+.headwrap h3 { font-size: 16px; color: #ffffff; float:left; margin-right:7px; }
+.cityName { font-size: 16px; color: #ffffff; float:left; margin-right:7px; }
+.changeCityName { font-size: 12px; color: #0186ff; float:left; text-decoration:underline; cursor:pointer;margin-top: 3px; }
+.popclose {margin-right: 10px; margin-top: 5px;}
+.s2_midwrap { height: 455px; width: 890px; margin-right: auto; margin-left: auto; position: relative; }
+.s2_detwrap { float: left; width: 270px; height: 451px; position: relative; }
+.s2_detwrap h4 { font-size: 14px; color: #FFF; margin-bottom:10px; margin-top:10px; }
+.s2_detwrap p { font-size: 12px; color: #FFF;line-height: 17px; margin-bottom:5px; }
+.s2_mapwrap { float: left; width: 398px; position: relative; background: url(../../Images/RelocationAssistance/map_india.png) no-repeat; height: 451px; }
+.s2_mapwrap li { height: 53px; width: 34px; display:block; }
+.s2_mapwrap span { position:absolute; background: url(../../Images/RelocationAssistance/s2_navigation.png) no-repeat; height: 53px; width: 34px; display:block; }
+.s2_mapwrap li:hover span { position:absolute; background: url(../../Images/RelocationAssistance/s2_navigation_hover.png) no-repeat; height: 53px; width: 36px; display:block; }
+.s2_mapwrap li.regselected {position:absolute; background: url(../../Images/RelocationAssistance/s2_navigation_hover.png) no-repeat; height: 53px; width: 36px; display:block; }
+.hyd {left: 8.5em; top: 16em; }
+.che {left: 8.9em; top: 20em; }
+.cbe {left: 7em; top: 22em; }
+.kch {left: 5.5em; top: 22.1em; }
+.kol {left: 16.5em; top:11em; }
+.pune {left: 4em; top: 14.5em; }
+.bengaluru {left: 6.7em; top: 19.5em; }
+.dispNone{display:none;}
+.s2_iconwrap { float: right; width: 165px; height: 451px; position: relative;}
+.s2_wraptrigger { position: absolute; left: -1px; top: -0px;  background: url(../../Images/RelocationAssistance/bg_inner.jpg) no-repeat;  height: 512px; width: 920px;z-index: 600; display: none;  }
+
+/* Tooltip */
+
+.s2_mapwrap li .info { display: none; }
+
+.qtip-wrapper { background:  ; 
+height: 27px; }
+.qtip .qtip-tip, .qtip .qtip-tip .qtip-vml { background: url(../../Images/RelocationAssistance/s2_pointer_left.png) no-repeat !important; height: 27px; width: 24px; border:none !important; }
+.qtip .qtip-tip canvas, .qtip-canvas { background: url(../../Images/RelocationAssistance/s2_pointer_left.png) no-repeat !important; height: 27px; width: 24px; border:none !important; }
+
+.qtip-contentWrapper { float:left; background: url('../../Images/RelocationAssistance/s2_pointer_mid.png') repeat-x !important; 
+height: 27px; }
+.qtip-content { background: url('../../Images/RelocationAssistance/s2_pointer_mid.png') repeat-x !important; 
+height: 27px; }
+.qtip-content-begin { background: url(../../Images/RelocationAssistance/s2_pointer_left.png) no-repeat; float: left; height: 27px; width: 35px; }
+.qtip-content-end { background: url(../../Images/RelocationAssistance/s2_pointer_rgt.png) no-repeat; float: left; height: 27px; width: 10px; }
+
+
+/* tabcontentwrap Starts */
+.tabcontentwrap { position: relative; height: 450px; width: 905px; margin-right: auto; margin-left: auto; margin-top: 14px;}
+.tablftwrap { float:left;}
+.tabrftwrap { float:left;}
+.tabheaderlist { position: relative; height: 450px; width: 260px;}
+.tabheaderlist li { background: url(../../Images/RelocationAssistance/tab_left.png) no-repeat; position: relative; height: 49px; width: 260px;margin-bottom: 6px; }
+.tabheaderlist li a { display:block; position: relative; height: 49px; width: 260px; }
+.tabtoplist { background: url(../../Images/RelocationAssistance/tab_lefttop.png) no-repeat !important; position: relative; height: 49px; width: 260px; }
+.tabheaderlist li a img { float: left; width: 34px; height: 34px; position: relative; margin-right: 5px; margin-top: 5px; margin-left: 5px; }
+.tabheaderlist li a h5 { float: left; font-size: 12px; color: #e2e2e2;  margin-top: 15px;}
+.tabcontent { display:none; width:641px; height:200px;}
+.tabcont_head { background: url(../../Images/RelocationAssistance/tab_righttop.png) no-repeat; position: relative; height: 49px; width: 641px;margin-bottom: 10px; }
+.tabcontainer { background: url(../../Images/RelocationAssistance/bg_contentwrp.png) no-repeat; position: relative; height: 383px; width: 641px; }
+.contheadlist { padding-top: 13px;}
+.contheadlist li { float:left; padding-left: 7px; padding-right: 7px;padding-bottom: 5px;border-right: 1px solid #73B3EB;border-left: 1px solid #081d31;}
+.contheadlist li a span { float:left; margin-right:3px; width:38px; height:26px; position:relative; display:block;}
+.contheadlist li a h5 { float: left; font-size: 14px; color: #e2e2e2;  margin-top: 7px;}
+.contheadlist li:hover a h5, .contheadlist li.selected a h5 { color:#000;}
+.contheadlist li:hover, .contheadlist li.selected { background: #FFF; color: #000000;-moz-border-radius-topleft: 7px; -moz-border-radius-topright: 7px; 
+-webkit-border-top-left-radius: 7px; -webkit-border-top-right-radius: 7px;
+ border-top-left-radius: 7px; border-top-right-radius: 7px;}
+
+.ictab_writeup { background: url(../../Images/RelocationAssistance/lcontab_writeup.png) no-repeat; }
+.contheadlist li:hover .ictab_writeup, .contheadlist li.selected .ictab_writeup { background: url(../../Images/RelocationAssistance/lcontab_writeup_hover.png) no-repeat; }
+.ictab_loclimate { background: url(../../Images/RelocationAssistance/lcontab_loclimate.png) no-repeat; }
+.contheadlist li:hover .ictab_loclimate, .contheadlist li.selected .ictab_loclimate { background: url(../../Images/RelocationAssistance/lcontab_loclimate_hover.png) no-repeat; }
+.ictab_season { background: url(../../Images/RelocationAssistance/lcontab_season.png) no-repeat; }
+.contheadlist li:hover .ictab_season,.contheadlist li.selected .ictab_season { background: url(../../Images/RelocationAssistance/lcontab_season_hover.png) no-repeat; }
+
+.ictab_accommodation { background: url(../../Images/RelocationAssistance/lcontab_accod.png) no-repeat; }
+.contheadlist li:hover .ictab_accommodation,.contheadlist li.selected .ictab_accommodation { background: url(../../Images/RelocationAssistance/lcontab_accod_hover.png) no-repeat; }
+.ictab_language { background: url(../../Images/RelocationAssistance/lcontab_lang.png) no-repeat; }
+.contheadlist li:hover .ictab_language,.contheadlist li.selected .ictab_language { background: url(../../Images/RelocationAssistance/lcontab_lang_hover.png) no-repeat; }
+
+
+.ictab_byair { background: url(../../Images/RelocationAssistance/lcontab_byair.png) no-repeat; }
+.contheadlist li:hover .ictab_byair,.contheadlist li.selected .ictab_byair { background: url(../../Images/RelocationAssistance/lcontab_byair_hover.png) no-repeat; }
+.ictab_bytrain { background: url(../../Images/RelocationAssistance/lcontab_bytrain.png) no-repeat; }
+.contheadlist li:hover .ictab_bytrain,.contheadlist li.selected .ictab_bytrain { background: url(../../Images/RelocationAssistance/lcontab_bytrain_hover.png) no-repeat; }
+.ictab_byroad { background: url(../../Images/RelocationAssistance/lcontab_byroad.png) no-repeat; }
+.contheadlist li:hover .ictab_byroad,.contheadlist li.selected .ictab_byroad { background: url(../../Images/RelocationAssistance/lcontab_byroad_hover.png) no-repeat; }
+.ictab_bysea { background: url(../../Images/RelocationAssistance/lcontab_bysea.png) no-repeat; }
+.contheadlist li:hover .ictab_bysea,.contheadlist li.selected .ictab_bysea { background: url(../../Images/RelocationAssistance/lcontab_bysea_hover.png) no-repeat; }
+
+.ictab_cogloc { background: url(../../Images/RelocationAssistance/lcontab_cogloc.png) no-repeat; }
+.contheadlist li:hover .ictab_cogloc,.contheadlist li.selected .ictab_cogloc { background: url(../../Images/RelocationAssistance/lcontab_cogloc_hover.png) no-repeat; }
+.ictab_traloc { background: url(../../Images/RelocationAssistance/lcontab_trainingloc.png) no-repeat; }
+.contheadlist li:hover .ictab_traloc,.contheadlist li.selected .ictab_traloc { background: url(../../Images/RelocationAssistance/lcontab_trainingloc_hover.png) no-repeat; }
+.ictab_cogtran{background: url(../../Images/RelocationAssistance/lcontab_byroad.png) no-repeat;}
+.contheadlist li:hover .ictab_cogtran,.contheadlist li.selected .ictab_cogtran { background: url(../../Images/RelocationAssistance/lcontab_byroad_hover.png) no-repeat; }
+
+
+
+/*298015 top padding added*/
+.continner { display: none; position:relative; width: 610px; height: 360px; /*border: 1px solid #900;*/ margin-right: auto; margin-left: auto; color: #3f3f3f; overflow: auto; padding-top:5px; }
+.cont_tabwrap { padding-top: 10px; height: 355px; width: 620px; position: relative; margin-right: auto; margin-left: auto; }
+
+.conttable { border: 1px solid #b1b1b1; }
+/*298015- removed text-intent 10px n left padding added instead
+.conttable th { background: #e0e0e0; font-size: 12px; color: #3f3f3f; text-align: left; text-indent: 10px; border-right: 1px solid #f2f2f2; border-left: 1px solid #b1b1b1;  border-bottom: 1px solid #b1b1b1;padding-top: 10px;padding-bottom: 10px; }
+.conttable td {font-size: 12px; color: #3f3f3f; text-align: left; text-indent: 10px; border-right: 1px solid #f2f2f2; border-left: 1px solid #b1b1b1;padding-top: 10px;padding-bottom: 10px;}
+*/
+.conttable th { background: #e0e0e0; font-size: 12px; color: #3f3f3f; text-align: left; border-right: 1px solid #f2f2f2; border-left: 1px solid #b1b1b1;  border-bottom: 1px solid #b1b1b1;padding-top: 10px;padding-bottom: 10px; padding-left:10px; }
+.conttable td {font-size: 12px; color: #3f3f3f; text-align: left; border-right: 1px solid #f2f2f2; border-left: 1px solid #b1b1b1;padding-top: 10px;padding-bottom: 10px; padding-left:10px; }
+.conttable td a { color:#0186ff; text-decoration:underline;}
+.tableodd {}
+.tableeven {}
+/*298015 alignment issue for hotel services*/
+.topcont li {width:100%; float:left;}
+.topcont li h4 { font-size: 12px; font-weight: bold; color: #3f3f3f; float: left; width: 35%; margin-bottom:12px; }
+.topcont li p { font-size: 12px; color: #3f3f3f; float: left; width: 63%;margin-bottom: 12px; }
+.rightList { font-size: 12px; color: #3f3f3f; float: right; width:100%; margin-left:0px; margin-bottom: 12px; }
+.rightList p { font-size: 12px; color: #3f3f3f; float: left; width:100%; margin-left:205px; margin-bottom: 12px; }
+.rightList h4 { margin-left:205px;}
+/*298105- highlight added*/
+.highlighted { background:rgb(0, 102, 204); }
+.firstHighlighted {border-width: 3px 1px; border-style: solid; border-color: #990099;}
+/* Popup Starts */
+
+
+.popupwrapper { position: absolute; left: 15%; top: 15%; min-height: 100px; width: 522px;z-index: 600; display: none;  }
+.overlay{ position: absolute; width: 100%; background-color: #000; filter: alpha(opacity=80); -moz-opacity: 0.8; -khtml-opacity: 0.8; opacity: 0.8; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; top: 0px; height: 100%; }
+.popupbtm { background: url(../../Images/RelocationAssistance/popup_btm.png) no-repeat; position: relative; height: 11px; width: 522px; }
+.popup_contwrap { background: #f5f5f5; position: relative; width: 500px; margin: 0 auto; padding-top: 10px; padding-left:20px; }
+.popupwrapper .headlft h3 {margin-top: 5px; margin-left:5px;}
+.popupwrapper .txtarea { color: #6f6f6f; height: 102px; width: 480px; margin-right: auto; margin-left: auto; border: 1px solid #b8b8b8; position: relative; background: #FFF; font-size: 12px; padding:3px; }
+.popbtn { clear:both; width:200px; margin: 25px auto 0;}
+.popupwrapper .btnblue { background: url(../../Images/RelocationAssistance/btn_blue.png) repeat-x; position: relative; height: 27px; width: 63px;  font-size: 12px; color: #FFF; cursor: pointer; text-align:center; }
+.popupwrapper .btnblueCancel { background: url(../../Images/RelocationAssistance/btn_blue.png) repeat-x; position: relative; height: 27px; width: 63px;  font-size: 12px; color: #FFF; cursor: pointer; text-align:center; }
+.popup_contwrap p { font-size: 12px; line-height: 18px; color: #202020; padding:10px; }
+.txtarea { height: 150px; width:418px; overflow-y: scroll; border: 1px solid #DDDDDD; color:#000000;}
+.submit_btn{ background:url(../../Images/RelocationAssistance/btn_image.png) repeat-x;cursor:pointer;width:50px; height:23px; border:none;color:#fff;font-weight:bold;}
+.btnblue { background: url(../../Images/RelocationAssistance/btn_blue.png) no-repeat; position: absolute; height: 27px; width: 63px; right: 10px; bottom: 10px; margin-left:180px; margin-top:20px; font-size: 12px; color: #FFF; cursor: pointer; }
+.btnblueCancel { background: url(../../Images/RelocationAssistance/btn_blue.png) no-repeat; position: absolute; height: 27px; width: 63px;bottom: 10px; float:right; margin-right:180px; margin-top:20px; font-size: 12px; color: #FFF; cursor: pointer; }
+
+
+/* error popup */
+.error_popup{left: 250px; position: absolute; top: 140px; z-index: 300; display:none;}
+.error_popup_close{cursor: pointer; float: right; margin: 6px 2px 0 0;}
+.error_popup .info_screen_details{padding-right: 40px; padding-top: 10px; width: 488px;}
+.error_popup .info_screen_details p img { position: relative; top: 6px;}
+.error_popup .info_screen_details p{color: #000000; font: 14px Segoe UI; margin: 0 0 5px 38px;}
+
+.hiddenDiv{display:none;}
+.clear:after{clear:both;display:block;content:" ";height:0;}
+.contact_card_header{width: 522px; height: 74px; background:url(../../Images/RelocationAssistance/contact_header.png) no-repeat; margin-left: 1px;}
+.contact_card_header p{color:#004050; float: left; font: lighter 29px Segoe UI,Arial; margin: 19px 0 0 40px;}
+.contact_details{width: 522px; background:url(../../Images/RelocationAssistance/contact_bg.png) repeat-y; padding-bottom: 10px;}
+.contact_card_footer{background: url(../../Images/RelocationAssistance/contact_footer.png) no-repeat scroll 0 0 transparent; height: 26px; margin-left: 1px; width: 522px;}
+.confirmation_popup_btn{display: block; float: right; font: lighter 18px/43px Segoe UI,Arial; height: 45px; text-align: center; text-decoration: none;width: 180px;}
+.ok_btn{background-color: #1C9F50; float: none; margin: 25px auto 0;}
+.ok_btn:hover{background-color: #0C7636;}
+
+/*.tabheaderlist li.tabheadselected { background: url(../../Images/RelocationAssistance/tab_left_seleted.png) no-repeat; position: relative; height: 49px; width: 260px;margin-bottom: 6px; } */
+
+/*.tabheaderlist li.tabheadselected { background: url(../../Images/RelocationAssistance/tab_left_seletedbrow.png) no-repeat; position: relative; height: 49px; width: 260px;margin-bottom: 6px; }*/
+
+.tabheaderlist li.tabheadselected { background: url(../../Images/RelocationAssistance/tab_left_seletedbrowfirst.png) no-repeat; position: relative; height: 49px; width: 260px;margin-bottom: 6px; }
+
+.tabtoplist { background: url(../../Images/RelocationAssistance/tab_lefttop.png) no-repeat !important; position: relative; height: 49px; width: 260px; }
+
+.tabheaderlist li.tabheadselected.tabtoplist { background: url(../../Images/RelocationAssistance/tab_lefttop_selected.png) no-repeat !important ; position: relative; height: 49px; width: 260px; }

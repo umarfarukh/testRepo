@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Direct Deposit</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/jquery.min.js" type="text/javascript"></script>
+<!--     <script src="../../../../Scripts/Forms/CoreScripts/jQXB.1.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/JSON.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>-->
+    <script src="../../../../Scripts/Forms/India/DirectDeposit.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <style type="text/css">
+        input[type="checkbox"]
+        {
+            vertical-align:middle;
+            }
+        div.pageDetails ul.personalDetails div.pageHeader
+        {
+            width: 98%;
+        }
+         div.pageDetails ul.personalDetails div.pageHeader span
+        {
+            font-size:0.8em;
+            padding-left:2px;
+        }
+         div.pageDetails img.routerImage
+        {
+            margin:25px 0px 0px 20px;
+            float:left;
+            height:181px;
+            width:34%;
+            display:inline;
+        }
+        div.pageDetails ul.personalDetails
+        {
+            width: 540px;
+        }
+        div.pageDetails ul.personalDetails li
+        {
+            width: 98%;
+            margin-left: -20px;
+            padding-top: 8px;
+        }
+       div.pageDetails ul.personalDetails li select.ddForm
+        {
+            border: 1px solid #000;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id='pageMain'>
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <ul class="personalDetails" id="depositTypeBalance">
+                                <div class="pageHeader">
+                                    <p>
+                                        Deposit Type: Balance
+                                    </p>
+                                </div>
+                                <li>
+                                    <label class="notMandatory">
+                                        Routing Number:</label>
+                                    <input type="text" class="tbForm OnlyNumeric" id="balanceRoutingNumber" maxlength="9" jqxb-datasource="FormDetails" jqxb-datamember=""/>
+                                </li>
+                                <li>
+                                    <label class="notMandatory">
+                                        Account Number:</label>
+                                    <input type="text" class="tbForm" jqxb-datasource="FormDetails" jqxb-datamember=""/>
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Account Type:</label>
+                                    <select class="tbForm ddForm" jqxb-datasource="FormDetails" jqxb-datamember="" jqxb-listsource=""
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        <option value="-1"></option>
+                                        <option value="1">Checking</option>
+                                        <option value="2">Savings</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            
+                            <img src="" class="routerImage" alt="check example"/>
+                        
+                            <ul class="personalDetails" id="depositTypeAmount">
+                                <div class="pageHeader">
+                                    <p>
+                                       <input type="checkbox" id="depositType" jqxb-datasource="FormDetails" jqxb-datamember=""/> Deposit Type: Amount <span>(Check the box if the want to enter)</span>
+                                    </p>
+                                </div>
+                                <li>
+                                    <label class="notMandatory">
+                                        Routing Number:</label>
+                                    <input type="text" class="tbForm OnlyNumeric" id="amountRoutingNumber" maxlength="9" jqxb-datasource="FormDetails" jqxb-datamember=""/>
+                                </li>
+                                <li>
+                                    <label class="notMandatory">
+                                        Account Number:</label>
+                                    <input type="text" class="tbForm " jqxb-datasource="FormDetails" jqxb-datamember=""/>
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Account Type:</label>
+                                    <select class="tbForm ddForm" jqxb-datasource="FormDetails" jqxb-datamember="" jqxb-listsource=""
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        <option value="-1"></option>
+                                        <option value="1">Checking</option>
+                                        <option value="2">Savings</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label class="notMandatory">
+                                        Amount:</label>
+                                    <input type="text" class="tbForm"  jqxb-datasource="FormDetails" jqxb-datamember=""/>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="Signature" id="Sign_PageId_1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='footerContent'>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

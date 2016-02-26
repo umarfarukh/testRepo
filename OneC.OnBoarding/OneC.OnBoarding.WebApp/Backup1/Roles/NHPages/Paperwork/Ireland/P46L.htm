@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+</head>
+<script language="javascript" type="text/javascript">
+
+    function click_here() {
+        window.open('P46LocalHireForm1.pdf', '_blank', 'fullscreen=no')
+    }
+
+    $().ready(function () {
+        OBPager.ShowPage(1);
+    });
+   
+</script>
+<body>
+    <div id='baseContent'>
+        <div id="pageMain">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails" />
+                        <a class="pageText" href="#" onclick="click_here();">Click here to download the P46 form</a>
+                        <p class="pageText" />
+                        Dear associate,<br />
+                        <br />
+                        Welcome from the Ireland Payroll Team!<br />
+                        <br />
+                        Please ensure that you update the following in PeopleSoft via the link:<a class="pageText" href="https://peoplesoft.cognizant.com"  target="_blank" style="font-weight:100">https://peoplesoft.cognizant.com</a>as soon as you can<br />
+                        access the system.<br />
+                        <br />
+                        <p class="pageText">
+                        <ul class="pageText" style="margin-left: 30px; list-style-type: disc;">
+                        <li><b style="font-weight:bold;">Bank Details: </b><u>SelfService/Payroll&Compensation/BankPanelUK&Ireland</u><br /></li>
+                        <br />
+                        <li><b style="font-weight:bold;">Address: </b><u>SelfService/PesonalInformation/Permanent&PresentAddress</u><br /></li>
+                        <br />
+                        <li><b style="font-weight:bold;">PPS Number: </b><u>SelfService/PesonalInformation/NationalID&EthnicGroup</u><br /></li>
+                        </ul>
+                        </p>
+                        <br />
+                        <p class="pageText">
+                        Please send your P45 to the PayrollTeam, if you do not have a P45 or you are waiting to receive this you can<br />
+                        complete a P46.Please ensure you write your <u>CTS ID at the top of the form.</u><br />
+                        Once the form has been received Payroll will send you a conformation e-mail.<br />
+                        </p>
+
+                      <!--  <p class="pageText">
+                        All UK Associates need to complete and send form P46 (Short) to the Payroll Team. You can download a <br />
+                        copy of this form by clicking on the link above. If you have a P45 from your previous employer please <br />
+                        forward this as well along with your completed P46 (Short). Please ensure you <u>write your CTS ID at the top of </u><br />
+                        <u>all forms you send to Payroll.</u><br />
+                        Once the form(s) have been received Payroll will send you a confirmation e-mail.
+                        </p>
+-->
+                        <br />
+                        <p class="pageText">
+                        PayrollTeam Ireland<br />
+                        Cognizant Technology Solutions<br />
+                        2nd Floor<br />
+                        1 Kingdom Street<br />
+                        Paddinton Central<br />
+                        London<br />
+                        W2 6BD<br/>
+                        </p>
+
+                    </div>
+                </div>
+                <!--End of 1st Page-->
+            </div> 
+    </div>
+    </div>  
+</body>
+</html>

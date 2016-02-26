@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.CandidateDC" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.CandidateDC" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfELMDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ELMDC" nillable="true" type="tns:ELMDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfELMDC" nillable="true" type="tns:ArrayOfELMDC" />
+  <xs:complexType name="ELMDC">
+    <xs:sequence>
+      <xs:element name="_x003C_ActivityID_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CandidateId_x003E_k__BackingField" type="xs:long" />
+      <xs:element name="_x003C_CompletedDate_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ELMCourseCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ELMStatus_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_SessionId_x003E_k__BackingField" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELMDC" nillable="true" type="tns:ELMDC" />
+  <xs:complexType name="ArrayOfCandidateTypeDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CandidateTypeDC" nillable="true" type="tns:CandidateTypeDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCandidateTypeDC" nillable="true" type="tns:ArrayOfCandidateTypeDC" />
+  <xs:complexType name="CandidateTypeDC">
+    <xs:sequence>
+      <xs:element name="_x003C_CandidateTypeCode_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_CandidateTypeDesc_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_parentId_x003E_k__BackingField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CandidateTypeDC" nillable="true" type="tns:CandidateTypeDC" />
+  <xs:complexType name="FaqSearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuId" type="xs:int" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:long" />
+      <xs:element minOccurs="0" name="CountryId" type="xs:int" />
+      <xs:element minOccurs="0" name="ProcessId" type="xs:int" />
+      <xs:element minOccurs="0" name="TaskId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FaqSearch" nillable="true" type="tns:FaqSearch" />
+</xs:schema>

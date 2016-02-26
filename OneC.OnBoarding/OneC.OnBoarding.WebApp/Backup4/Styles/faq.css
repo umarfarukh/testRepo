@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+body{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;  font-size:62.5%; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	/*content: '';*/
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{font-size:62.5%; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+
+#faq_main{ height:1070px;width:960px; background:url(../Images/Bgv/bg.png) repeat-x;}  /*298015 - path error corrected*/
+.header{width:100%;height:65px;}
+.content{background-color:#ffffff;margin:0 10px; border:1px solid #bfbfbf;}
+.faq_header{height:70px;width:100%; /* removed backgorund image as it is not being used and for fixing validation logs*/ -moz-box-shadow: 0 4px 6px -2px #c2c2c2;-webkit-box-shadow: 0 4px 7px -2px #c2c2c2;-o-box-shadow: 0 4px 7px -2px #c2c2c2;-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=180, Color='#c2c2c2')";
+/* For IE 5.5 - 7 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=180, Color='#c2c2c2');
+}
+.faq_header p{font-size:1.8em;color:#044b68;padding:24px;}
+.form img{cursor:pointer;}
+.questions{ border-bottom:#c5c5c5 1px solid;}
+.questions p{font-size:1.5em; font-weight:bold; background-color:#ededed;margin-top: 10px;padding: 3px 0 4px 23px;}
+.questions ul{ list-style:decimal inside none ;font-size: 1.3em;line-height: 20px;padding: 23px; color:#4a4a4a;}
+.ques{color:#0379ce;cursor:pointer;}
+.ans{color:#4a4a4a;display:none}
+.none{list-style:none;}
+.paddingL22{padding-left:22px;}
+.form{height:380px;color:#7a7a7a;font-size:1.5em;}
+.form_title{ margin-bottom:30px;}
+.paddingT30{padding-top:30px;}
+.paddingT20{padding-top:20px;}
+.form .form_con span{ width:110px; display:inline-block;}
+.marginL415{margin-left:415px;}
+.marginT5{margin-top:5px;}
+.marginT15{margin-top:15px;}
+.fleft{float:left;}
+.vbottom{padding-top: 2px;
+	vertical-align: top;}
+#browse_txtbx{
+cursor: pointer !important;
+	height: 22px !important;
+/*    margin: 21px 0 0 13px;
+*/    opacity:0;
+	position: absolute;
+	width: 60px;
+	/*margin-left:260px; removed for fixing validation logs*/
+	margin-left:300px;
+	/*margin-left:300px\9; removed for fixing validation logs*/
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; 
+	filter: alpha(opacity=0);}
+	@media screen and (-webkit-min-device-pixel-ratio:0) { #browse_txtbx { margin-left:300px;}}
+
+

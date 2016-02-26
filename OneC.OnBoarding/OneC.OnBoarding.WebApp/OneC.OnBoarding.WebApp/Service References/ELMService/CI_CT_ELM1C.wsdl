@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:M293766.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M293766.V1" xmlns:M635219.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M635219.V1" xmlns:tns="ELM91DEV" xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy" xmlns:M817211.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M817211.V1" xmlns:M893395.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M893395.V1" xmlns:M167858.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M167858.V1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:M448620.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M448620.V1" xmlns:M378176.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M378176.V1" xmlns:M771058.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M771058.V1" xmlns:M599317.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M599317.V1" xmlns:M479654.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M479654.V1" xmlns:M993015.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M993015.V1" xmlns:M1088920.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M1088920.V1" xmlns:M1032904.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M1032904.V1" xmlns:M488680.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M488680.V1" xmlns:M890659.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M890659.V1" name="CI_CT_ELM1C.1" targetNamespace="ELM91DEV" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:UsagePolicy wsdl:Required="true" />
+  <plnk:partnerLinkType name="CI_CT_ELM1C_PartnerLinkType">
+    <plnk:role name="CI_CT_ELM1C_Provider">
+      <plnk:portType name="tns:CI_CT_ELM1C_PortType" />
+    </plnk:role>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="M599317.V1.xsd" namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M599317.V1" />
+      <xsd:import schemaLocation="M890659.V1.xsd" namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M890659.V1" />
+      <xsd:import schemaLocation="M488680.V1.xsd" namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M488680.V1" />
+      <xsd:import schemaLocation="M448620.V1.xsd" namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M448620.V1" />
+      <xsd:import schemaLocation="M293766.V1.xsd" namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M293766.V1" />
+      <xsd:import schemaLocation="M817211.V1.xsd" namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M817211.V1" />
+      <xsd:import schemaLocation="M893395.V1.xsd" namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M893395.V1" />
+      <xsd:import schemaLocation="M378176.V1.xsd" namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M378176.V1" />
+      <xsd:import schemaLocation="M479654.V1.xsd" namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M479654.V1" />
+      <xsd:import schemaLocation="M635219.V1.xsd" namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M635219.V1" />
+      <xsd:import schemaLocation="M993015.V1.xsd" namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M993015.V1" />
+      <xsd:import schemaLocation="M167858.V1.xsd" namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M167858.V1" />
+      <xsd:import schemaLocation="M771058.V1.xsd" namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M771058.V1" />
+      <xsd:import schemaLocation="M1032904.V1.xsd" namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M1032904.V1" />
+      <xsd:import schemaLocation="M1088920.V1.xsd" namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M1088920.V1" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="M599317.V1">
+    <wsdl:documentation>M599317</wsdl:documentation>
+    <wsdl:part name="parameter" element="M599317.V1:Create__CompIntfc__CT_ELM1C" />
+  </wsdl:message>
+  <wsdl:message name="M890659.V1">
+    <wsdl:documentation>M890659</wsdl:documentation>
+    <wsdl:part name="parameter" element="M890659.V1:Create__CompIntfc__CT_ELM1CResponse" />
+  </wsdl:message>
+  <wsdl:message name="M488680.V1">
+    <wsdl:documentation>M488680</wsdl:documentation>
+    <wsdl:part name="parameter" element="M488680.V1:CIFault" />
+  </wsdl:message>
+  <wsdl:message name="M448620.V1">
+    <wsdl:documentation>M448620</wsdl:documentation>
+    <wsdl:part name="parameter" element="M448620.V1:Find__CompIntfc__CT_ELM1C" />
+  </wsdl:message>
+  <wsdl:message name="M293766.V1">
+    <wsdl:documentation>M293766</wsdl:documentation>
+    <wsdl:part name="parameter" element="M293766.V1:Find__CompIntfc__CT_ELM1CResponse" />
+  </wsdl:message>
+  <wsdl:message name="M817211.V1">
+    <wsdl:documentation>M817211</wsdl:documentation>
+    <wsdl:part name="parameter" element="M817211.V1:CIFault" />
+  </wsdl:message>
+  <wsdl:message name="M893395.V1">
+    <wsdl:documentation>M893395</wsdl:documentation>
+    <wsdl:part name="parameter" element="M893395.V1:Get__CompIntfc__CT_ELM1C" />
+  </wsdl:message>
+  <wsdl:message name="M378176.V1">
+    <wsdl:documentation>M378176</wsdl:documentation>
+    <wsdl:part name="parameter" element="M378176.V1:Get__CompIntfc__CT_ELM1CResponse" />
+  </wsdl:message>
+  <wsdl:message name="M479654.V1">
+    <wsdl:documentation>M479654</wsdl:documentation>
+    <wsdl:part name="parameter" element="M479654.V1:CIFault" />
+  </wsdl:message>
+  <wsdl:message name="M635219.V1">
+    <wsdl:documentation>M635219</wsdl:documentation>
+    <wsdl:part name="parameter" element="M635219.V1:Updatedata__CompIntfc__CT_ELM1C" />
+  </wsdl:message>
+  <wsdl:message name="M993015.V1">
+    <wsdl:documentation>M993015</wsdl:documentation>
+    <wsdl:part name="parameter" element="M993015.V1:Updatedata__CompIntfc__CT_ELM1CResponse" />
+  </wsdl:message>
+  <wsdl:message name="M167858.V1">
+    <wsdl:documentation>M167858</wsdl:documentation>
+    <wsdl:part name="parameter" element="M167858.V1:CIFault" />
+  </wsdl:message>
+  <wsdl:message name="M771058.V1">
+    <wsdl:documentation>M771058</wsdl:documentation>
+    <wsdl:part name="parameter" element="M771058.V1:Update__CompIntfc__CT_ELM1C" />
+  </wsdl:message>
+  <wsdl:message name="M1032904.V1">
+    <wsdl:documentation>M1032904</wsdl:documentation>
+    <wsdl:part name="parameter" element="M1032904.V1:Update__CompIntfc__CT_ELM1CResponse" />
+  </wsdl:message>
+  <wsdl:message name="M1088920.V1">
+    <wsdl:documentation>M1088920</wsdl:documentation>
+    <wsdl:part name="parameter" element="M1088920.V1:CIFault" />
+  </wsdl:message>
+  <wsdl:portType name="CI_CT_ELM1C_PortType">
+    <wsdl:operation name="CI_CT_ELM1C_C">
+      <wsdl:documentation>CI_CT_ELM1C_C</wsdl:documentation>
+      <wsdl:input name="M599317.V1" message="tns:M599317.V1" />
+      <wsdl:output name="M890659.V1" message="tns:M890659.V1" />
+      <wsdl:fault name="M488680.V1" message="tns:M488680.V1" />
+    </wsdl:operation>
+    <wsdl:operation name="CI_CT_ELM1C_F">
+      <wsdl:documentation>CI_CT_ELM1C_F</wsdl:documentation>
+      <wsdl:input name="M448620.V1" message="tns:M448620.V1" />
+      <wsdl:output name="M293766.V1" message="tns:M293766.V1" />
+      <wsdl:fault name="M817211.V1" message="tns:M817211.V1" />
+    </wsdl:operation>
+    <wsdl:operation name="CI_CT_ELM1C_G">
+      <wsdl:documentation>CI_CT_ELM1C_G</wsdl:documentation>
+      <wsdl:input name="M893395.V1" message="tns:M893395.V1" />
+      <wsdl:output name="M378176.V1" message="tns:M378176.V1" />
+      <wsdl:fault name="M479654.V1" message="tns:M479654.V1" />
+    </wsdl:operation>
+    <wsdl:operation name="CI_CT_ELM1C_UD">
+      <wsdl:documentation>CI_CT_ELM1C_UD</wsdl:documentation>
+      <wsdl:input name="M635219.V1" message="tns:M635219.V1" />
+      <wsdl:output name="M993015.V1" message="tns:M993015.V1" />
+      <wsdl:fault name="M167858.V1" message="tns:M167858.V1" />
+    </wsdl:operation>
+    <wsdl:operation name="CI_CT_ELM1C_UP">
+      <wsdl:documentation>CI_CT_ELM1C_UP</wsdl:documentation>
+      <wsdl:input name="M771058.V1" message="tns:M771058.V1" />
+      <wsdl:output name="M1032904.V1" message="tns:M1032904.V1" />
+      <wsdl:fault name="M1088920.V1" message="tns:M1088920.V1" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CI_CT_ELM1C_Binding" type="tns:CI_CT_ELM1C_PortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CI_CT_ELM1C_C">
+      <soap:operation soapAction="CI_CT_ELM1C_C.V1" style="document" />
+      <wsp:Policy wsu:Id="UsernameTokenSecurityPolicyPasswordOptional" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsp:ExactlyOne>
+          <wsp:All>
+            <wsse:SecurityToken wsp:Usage="wsp:Required" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+              <wsse:TokenType>wsse:UserNameToken</wsse:TokenType>
+              <Claims>
+                <SubjectName MatchType="wsse:Exact" />
+                <UsePassword wsp:Usage="wsp:Optional" />
+              </Claims>
+            </wsse:SecurityToken>
+          </wsp:All>
+        </wsp:ExactlyOne>
+      </wsp:Policy>
+      <wsdl:input name="M599317.V1">
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="M890659.V1">
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="M488680.V1">
+        <soap:fault use="literal" name="M488680.V1" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CI_CT_ELM1C_F">
+      <soap:operation soapAction="CI_CT_ELM1C_F.V1" style="document" />
+      <wsp:Policy wsu:Id="UsernameTokenSecurityPolicyPasswordOptional" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsp:ExactlyOne>
+          <wsp:All>
+            <wsse:SecurityToken wsp:Usage="wsp:Required" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+              <wsse:TokenType>wsse:UserNameToken</wsse:TokenType>
+              <Claims>
+                <SubjectName MatchType="wsse:Exact" />
+                <UsePassword wsp:Usage="wsp:Optional" />
+              </Claims>
+            </wsse:SecurityToken>
+          </wsp:All>
+        </wsp:ExactlyOne>
+      </wsp:Policy>
+      <wsdl:input name="M448620.V1">
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="M293766.V1">
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="M817211.V1">
+        <soap:fault use="literal" name="M817211.V1" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CI_CT_ELM1C_G">
+      <soap:operation soapAction="CI_CT_ELM1C_G.V1" style="document" />
+      <wsp:Policy wsu:Id="UsernameTokenSecurityPolicyPasswordOptional" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsp:ExactlyOne>
+          <wsp:All>
+            <wsse:SecurityToken wsp:Usage="wsp:Required" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+              <wsse:TokenType>wsse:UserNameToken</wsse:TokenType>
+              <Claims>
+                <SubjectName MatchType="wsse:Exact" />
+                <UsePassword wsp:Usage="wsp:Optional" />
+              </Claims>
+            </wsse:SecurityToken>
+          </wsp:All>
+        </wsp:ExactlyOne>
+      </wsp:Policy>
+      <wsdl:input name="M893395.V1">
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="M378176.V1">
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="M479654.V1">
+        <soap:fault use="literal" name="M479654.V1" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CI_CT_ELM1C_UD">
+      <soap:operation soapAction="CI_CT_ELM1C_UD.V1" style="document" />
+      <wsp:Policy wsu:Id="UsernameTokenSecurityPolicyPasswordOptional" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsp:ExactlyOne>
+          <wsp:All>
+            <wsse:SecurityToken wsp:Usage="wsp:Required" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+              <wsse:TokenType>wsse:UserNameToken</wsse:TokenType>
+              <Claims>
+                <SubjectName MatchType="wsse:Exact" />
+                <UsePassword wsp:Usage="wsp:Optional" />
+              </Claims>
+            </wsse:SecurityToken>
+          </wsp:All>
+        </wsp:ExactlyOne>
+      </wsp:Policy>
+      <wsdl:input name="M635219.V1">
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="M993015.V1">
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="M167858.V1">
+        <soap:fault use="literal" name="M167858.V1" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CI_CT_ELM1C_UP">
+      <soap:operation soapAction="CI_CT_ELM1C_UP.V1" style="document" />
+      <wsp:Policy wsu:Id="UsernameTokenSecurityPolicyPasswordOptional" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsp:ExactlyOne>
+          <wsp:All>
+            <wsse:SecurityToken wsp:Usage="wsp:Required" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+              <wsse:TokenType>wsse:UserNameToken</wsse:TokenType>
+              <Claims>
+                <SubjectName MatchType="wsse:Exact" />
+                <UsePassword wsp:Usage="wsp:Optional" />
+              </Claims>
+            </wsse:SecurityToken>
+          </wsp:All>
+        </wsp:ExactlyOne>
+      </wsp:Policy>
+      <wsdl:input name="M771058.V1">
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="M1032904.V1">
+        <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="M1088920.V1">
+        <soap:fault use="literal" name="M1088920.V1" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CI_CT_ELM1C">
+    <wsdl:documentation>CI_CT_ELM1C</wsdl:documentation>
+    <wsdl:port name="CI_CT_ELM1C_Port" binding="tns:CI_CT_ELM1C_Binding">
+      <soap:address location="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

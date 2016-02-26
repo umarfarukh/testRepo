@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Exhibit C</title>
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+   <!-- <script src="../../../../Scripts/JQuery/jquery.alerts.js" type="text/javascript"></script>-->
+    <script type="text/javascript">
+        //Preparing form
+        $().ready(function () {
+            $("#Pg_text_1_NameConsultant").val(TaskPrefillValues.PrefillValues.Set1.Name);
+            $("#Pg_1_text_Date").val(TaskPrefillValues.PrefillValues.Set2.SignatureTS);
+            OBPager.ShowPage(1);
+
+        });
+        function SaveTaskData(saveMode) {
+            if (saveMode == 1) {
+                if (OBPager.ValidateTaskData(saveMode) == true) {
+                    try {
+                        if (OBPager.SaveTaskData(saveMode) == true) {
+                            return true;
+                        }
+                        else {
+                            return false;
+                        }
+                    }
+                    catch (e) { }
+                }
+                else {
+
+                    MsgboxInfo(OBPager.ValidationMessage);
+                }
+            }
+            else {
+
+                try {
+                    if (OBPager.SaveTaskData(saveMode) == true) {
+                        return true;
+                    }
+                    else {
+                        alert('Error occured while saving the task');
+                        return false;
+                    }
+                }
+                catch (e) {
+                    alert(e.Message);
+                }
+            }
+        }
+        function ResetTaskData() {
+            OBPager.ResetTaskContent();
+            $("#Pg_text_1_NameConsultant").val(TaskPrefillValues.PrefillValues.Set1.Name);
+        }
+    </script>
+    <style type="text/css">
+        .inputText_Readonly
+        {
+            background-color: InactiveCaptionText;
+            font-size: 15px;
+            padding: 3px 5px 2px;
+            border: 1px solid #ccc !important;
+            background: #f0f0f0;
+            color: #888 !important;
+            cursor: default;
+        }
+        .border_bottom
+        {
+            border-bottom: 1px solid #000;
+        }
+        .pagesContainer .pageContent div.pageDetails div.signBlock
+        {
+            border: 0;
+            width: 45%;
+            float: right;
+            margin-left: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id='pageMain' class="canadaForm">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div style="width: 100%; height: 50px;">
+                                <div style="width: 20%" class="flt_left">
+                                    <img style="height: 50px" alt="quebec" src="../../../../Images/Cognizant_Logo.jpg" />
+                                </div>
+                                <div style="width: 20%; border: 1px; border-style: solid;" class="flt_right">
+                                    <p style="text-align: left; height: 45px">
+                                        <span style="font-weight: bold"><b><u>For CTS Office Use Only</u></b></span>
+                                        <br />
+                                        <span style="font-style: italic"><i>Revised 8/3/11</i></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div style="width: 50%; text-align: center; margin-left: 200px;">
+                                <h2 class="blueText space_b10">
+                                    <span><u>Exhibit C</u></span>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <span><u>Background Screenings</u></span>
+                                </h2>
+                            </div>
+                            <br />
+                            <br />
+                            <p class="pageText">
+                                As a contractor for Cognizant US Corporation, you are required to successfully complete
+                                and pass a background check. Cognizant has partnered with HireRight (<a href="http://www.hireright.com"
+                                    target="_blank">http://www.hireright.com</a>) to complete background checks
+                                on our behalf. In accordance with this partnership, all contractors will receive
+                                an email at their personal email address from HireRight. The email will contain
+                                personalized login credentials requesting you to visit the HireRight website, and
+                                complete an online application.
+                            </p>
+                            <br />
+                            <div class="pageText">
+                                Mandatory screening for all U.S. contractors includes:
+                                <ul style="margin-left: 30px; list-style-type: disc">
+                                    <li>Social Security Number verification;</li>
+                                    <li>7 year criminal screen; and</li>
+                                    <li>In the event required by a Cognizant customer, additional background screens, including
+                                        but not limited to, education, employment, industry fraud databases, sex offender
+                                        registries, terrorist watch lists,credit checks and/or drug testing.</li>
+                                </ul>
+                            </div>
+                            <br />
+                            <p class="pageText">
+                                <span style="font-weight: bold; font-style: italic">Additional Background Checks:</span>
+                            </p>
+                            <p class="pageText">
+                                Additionally, over the course of your contract with Cognizant, you may be subject
+                                to additional background checks & drug screening, depending on client requirements.
+                                When joining a new project, you may receive an email in your Cognizant email account
+                                from HireRight, requesting you complete an additional online application. Your project
+                                manager will coordinate with Human Resources to coordinate any additional background
+                                checks which may be required. If necessary, you may be requested to provide additional
+                                information for background checks or drug testing.
+                            </p>
+                            <br />
+                            <p class="pageText">
+                                If you have any question on the background check process, please contact integration@cognizant.com.
+                                If you have any technical issues with the HireRight website, please contact HireRight
+                                directly at 1-866-521-6995.
+                            </p>
+                            <br />
+                            <br />
+                            <p class="page_text">
+                                Name of Consultant:
+                                <input class="inputText_Readonly" type="text" id="Pg_text_1_NameConsultant" style="border: 1px solid #000;"
+                                    readonly="readonly" title="Name of Consultant" /><br />
+                            </p>
+                            <p class="pageText">
+                                Date:<input type="text" class="inputText_Readonly" unselectable="on" style="border: 1px solid #000;
+                                    width: 15%;" id="Pg_1_text_Date" readonly="readonly" /><br />
+                                <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date<a class="cont_red">*</a>-->
+                            </p>
+                            <br />
+                            <p class="flt_left" style="padding-left: 10px; font-size: 10px">
+                                Cognizant Technology solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of 1st page-->
+            <div class="Signature" id="Sign_PageId_1">
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

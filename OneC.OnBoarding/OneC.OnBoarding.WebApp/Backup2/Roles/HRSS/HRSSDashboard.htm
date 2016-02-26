@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>HRSS Dashboard</title>
+    <input type="hidden" id="hdnPId" value="5" />
+    <script type="text/javascript" src="../../Scripts/JQuery/1.8/jquery.js"></script>
+    <script type="text/javascript" src="../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js"></script>
+    <link href="../../Styles/styles.css" rel="stylesheet" type="text/css" />
+    <script src="HRSSDashboard.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../Scripts/script.js"></script>
+    <script type="text/javascript" src="../../Scripts/JQuery/jquery.ui.datepicker.js"></script>
+    <link href="../../Styles/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/Calender.Css" rel="stylesheet" type="text/css" />    
+   </head>
+<body style="overflow: hidden;">
+    <div id="smFrame" style="display: none;">
+        <iframe id="sm" frameborder="0" width="0" height="0" runat="server" src="../../CommonPages/SessionMaintainer.aspx">
+        </iframe>
+    </div>
+    <div class="inner_wrapper_search">
+        <div id="utility" class="flrt" style="margin-top: 1px;">
+
+            <img src="../../Images/XL.png" id="btnSwizExcel" alt="Candidate Detail Report" title="Candidate Detail Report"
+                style="height: 22px; margin-right: 40px; cursor: pointer;" />
+            <img src="../../Images/XL.png" id="btnExcel" alt="Excel Report" title="Excel" style="height: 22px;
+                cursor: pointer;" />
+        </div>
+        <div id="divParent" class="flrt top_menu" style="width: 470px;">
+            <div id="div_menu_item_bg">
+            </div>
+        </div>
+        <div id="divheader" class="title">
+            <span style="font-weight: bold">On Boarding&nbsp; </span>
+            <!--Pre Joining :<label id="lblPreJoiningStats"></label>| Post Joining :<label id="lblPostJoiningStats"></label>-->
+        </div>
+        <div class="clear">
+        </div>
+        <div id="divdashboardBase" class="content_wrapper">
+            <div class="candidate_details">
+                <div class="header">
+                    <div class="flft" style="margin-left: 4px;">
+                        Search by</div>
+                    <!--    <li id="Inductionurl" style="width:250px;">-->
+                    <!-- <a  style=" float: right; text-decoration: underline; cursor: pointer;color:White; font-weight:bold; margin-right: 0px; width:350px;" id="corponduction" onclick="OpenPopInductionTracker();"> Launch Corp. Induction Attendance Tracker</a>-->
+                    <!--  </li>-->
+                </div>
+                <div class="clear">
+                </div>
+                <div id="divsearchfilter" class="content">
+                    <ul class="flft">
+                        <li id="lilblcandidateid" class="width85">
+                            <label id="lblCandidateInputBox">
+                                Candidate ID:</label>
+                        </li>
+                        <li id="litxtcandiateid">
+                            <input type="text" class="txtbx" id="CandidateInputBox" onkeypress="javascript:return ValidateOnlyInteger(event);"
+                                maxlength="15" tabindex="1" />
+                        </li>
+                        <li id="lilblAssociateId" class="width85" style="display: none;">
+                            <label id="lblAssociateId">
+                                Associate ID:</label>
+                        </li>
+                        <li id="litxtAssociateId" style="display: none;">
+                            <input type="text" class="txtbx" id="AssociateInputBox" onkeypress="javascript:return ValidateOnlyInteger(event);"
+                                maxlength="6" tabindex="2" />
+                        </li>
+                        <li id="lilblName" class="width85">
+                            <label id="name">
+                                Name:</label>
+                        </li>
+                        <li id="litxtName">
+                            <input type="text" class="txtbx" id="CandidateNameInputBox" maxlength="250" tabindex="3"
+                                ac-enabled="true" ac-url="../../../DashboardService.aspx/FetchCandidatessearchForDashboard"
+                                ac-length="3" ac-width="250" ac-oncomplete="Onentertext();" ac-onsuccess="" ac-onfailure="" />
+                        </li>
+                        <li id="lilblEmail" class="width60">
+                            <label id="email_id">
+                                Email ID:</label>
+                        </li>
+                        <li id="litxtEmail">
+                            <input type="text" class="txtbx" id="CandidateEmailIdInputBox" tabindex="4" />
+                        </li>
+                        <li id="lilblCountry" class="width60">
+                            <label id="country">
+                                Country:</label>
+                        </li>
+                        <li id="litxtCountry">
+                            <select class="styled" id="countrySelectBox" name="SELECT_COUNTRY" tabindex="5">
+                            </select>
+                        </li>
+                        <div class="clear">
+                        </div>
+                        <li id="lilblRequisition" class="width85">
+                            <label id="lblRequisitionIdInputBox">
+                                Requisition ID:</label>
+                        </li>
+                        <li id="litxtRequisition">
+                            <input type="text" class="txtbx" id="RequisitionIdInputBox" maxlength="15" tabindex="6" />
+                        </li>
+                        <li id="lilblRecruiterId" class="width85">
+                            <label id="lblRecruiterIdInputBox">
+                                Recruiter ID:</label>
+                        </li>
+                        <li id="litxtRecruiterId">
+                            <input type="text" class="txtbx" onkeypress="javascript:return ValidateOnlyInteger(event);"
+                                id="RecruiterIdInputBox" maxlength="6" tabindex="7" />
+                        </li>
+                        <li id="lilblFromDate" class="width60">
+                            <label id="lblfrom">
+                                From:</label>
+                        </li>
+                        <li id="litxtFromDate">
+                            <input type="text" class="txtbxdate" id="DOJFromInputBox" value="From Date" tabindex="8"
+                                readonly="readonly" />
+                        </li>
+                        <li id="lilblToDate" class="width60">
+                            <label id="lblto">
+                                To Date:</label>
+                        </li>
+                        <li id="litxtToDate">
+                            <input type="text" class="txtbxdate" id="DOJToInputBox" value="To Date" tabindex="9"
+                                readonly="readonly" />
+                        </li>
+                        <li id="lilblvendorname" class="width60" style="display: none;">
+                            <label id="lblvendorname">
+                                Vendor Name:</label>
+                        </li>
+                        <li id="litxtvendorname" style="display: none;">
+                            <select class="styled" id="VendorNameSelectBox" name="SELECT_VENDOR" tabindex="10">
+                            </select>
+                        </li>
+                        <li id="lilblcisstatus" class="width60" style="display: none;">
+                            <label id="lblcisstatus">
+                                Candidate Status:</label>
+                        </li>
+                        <li id="litxtcisstatus" style="display: none;">
+                            <select class="styled" id="CisStatusSelectBox" name="SELECT_CISSTATUS" tabindex="11">
+                            </select>
+                        </li>
+                           <li id="lilblOfferstatus" class="width60" style="display: none;">
+                            <label id="lblofferstatus">
+                                Offer Status:</label>
+                        </li>
+                        <li id="litxtOfferstatus" style="display:none;">
+                            <select class="styled" id="OfferStatusSelectBox" name="SELECT_OFFERSTATUS" tabindex="17">
+                            </select>
+                        </li>
+                        <div class="clear">
+                        </div>
+                        <li id="lilblbgvfinalstatus" class="width85" style="display: none;">
+                            <label id="lblbgvfinalstatus">
+                                BGV Final Status:</label>
+                        </li>
+                        <li id="litxtbgvfinalstatus" style="display: none;">
+                            <select class="styled" id="BgvFinalStatusSelectBox" name="SELECT_BGVFINALSTATUS" tabindex="12">
+                            </select>
+                        </li>
+                        <li id="lilblType" class="width85">
+                            <label id="lblType">
+                                Type:</label>
+                        </li>
+                        <li id="licmbType">
+                            <select class="styled" id="candidateTypeSelectBox" name="SELECT_CANDIDATETYPE" tabindex="13">
+                            </select>
+                        </li>
+                        <li id="lilblHireType" class="width85">
+                            <label id="lblHireType" for="hiretype">
+                                Hire Type:</label>
+                        </li>
+                        <li id="licmbHireType">
+                            <select class="styled" id="candidateHireTypeSelectBox" name="SELECT_HIRETYPE" tabindex="16">
+                            </select>
+                        </li>
+                            <li id="liblUploadStatus" class="width60" style="display: none;">
+                            <label id="lilblUploadStatus">
+                              Candidate Document Upload Status:</label>
+                        </li>
+                        <li id="licmbUploadStatus" style="display: none;">
+                            <select class="styled" id="candidateDocUploadStatus" name="SELECT_DOCUMENTUPLOADSTATUS" tabindex="17" style="width: auto;">
+                            </select>
+                    </li>
+                     <li id="liblMngrUploadStatus" class="width60" style="display: none;">
+                            <label id="lilblMngrUploadStatus">
+                              Manager Letter<br />Upload Status:</label>
+                        </li>
+                        <li id="licmbMngrUploadStatus" style="display: none;">
+                            <select class="styled" id="MngrDocUploadStatus" name="SELECT_MNGRDOCUMENTUPLOADSTATUS" tabindex="18" style="width: auto;">
+                            </select>
+                    </li>
+                         <!-- <li id="liExtendedDate" class="width60">
+                            <label id="lilExtendedDate">
+                                ExtendedDate:</label>
+                        </li>
+                        <li id="litxtExtendedDate">
+                            <input type="text" class="txtbxdate" id="ExtenedeDateInputBox"tabindex="18"
+                                readonly="readonly" />
+                        </li>-->
+                    </ul>
+                    <div class="clear">
+                    </div>
+                    <div class="btns flrt">
+                          <input id="btnUploadeExcel" type="submit" style="height:25px; margin-bottom:01px; font-weight:normal"  class="_btn"  value="Candidate ID Bulk Upload"title="Upload candidate ID list for Lateral ID Generation" onclick="OpenPopForUploadExcel();" /> 
+                         <!--<input id="erprocess" type="submit" style="width:auto;" class="search_btn" onclick="OpenERProcessView();" value="ER Process View" tabindex="14" />-->
+                        <input id="apply_nh" type="submit" class="search_btn" value="Apply" tabindex="14" />
+                        <input id="clear_nh" type="reset" class=" search_btn" value="Clear" tabindex="15" />
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+            <div id="divDashboardSearch" class="candidate_details">
+                <table id="tblDashboardData" class="paper_wrk" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                    </tr>
+                </table>
+            </div>
+            <div id="divPagination" class="pagination flrt">
+            </div>
+        </div>
+        <div id="divLoadOther" style="display: none;" class="content_wrapper">
+            <iframe id="ifLoadOtherPage" height="550px" width="940px" style="overflow:hidden;" allowtransparency="true"  scrolling="no" frameborder="0" runat="server"></iframe>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+    <div id="LoadingImage" style="position: absolute; z-index: 99999; top: 220px; left: 400px;
+        display: none">
+        <img alt="" src="../../Images/spinner.gif" />
+    </div>
+    <iframe id="iframeExcel" height="10px" width="100px" frameborder="0" scrolling="no">
+    </iframe>
+    <input type="hidden" id="hdnProcessId" />
+    <input type="hidden" id="hdnCandidateType" />
+    <input type="hidden" id="hdnPageNo" />
+    <input type="hidden" id="hdnTotalRecord" />
+    <input type="hidden" id="hdnCandidateId" />
+    <input type="hidden" id="hdnCountryId" />
+    <input type="hidden" id="hdnSessionId" />
+    <input type="hidden" id="hdnRoleId" />
+     <input type="hidden" id="hdnBulkUpoladbuttonStatus" />
+    <input type="hidden" id="hdnCandidateName" />
+</body>
+</html>

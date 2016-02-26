@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> Equipment Request Form </title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/Belgium/EquipmentRequest.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../../../Scripts/Validations.js"></script>
+    <style type="text/css">
+    .pageText tr td{padding:3px 0px 3px 20px; }
+    .EquipmentHeader{font-weight:bold;text-decoration:underline;}
+    </style> 
+  
+
+</head>
+<body>
+       <div id='baseContent'>
+           <div id="pageMain" class="equipmentForm">
+                <div id='headerContent'>
+                    <div id="pagingControls">
+                    </div>
+                </div>
+                <div id='PageContent' class='pagesContainer'>
+                    <div class="pageData">
+                        <div class="pageContent">
+                            <div class="pageDetails">
+                                <div class="pageHeader">
+                                         <p class="pageText">Equipment Request-Instructions</p>
+                                </div>
+                                <br />
+                                <p class="pageText">Dear
+                                <input type="text" style="width: 262px;" id="Pg_1_label_Name" readonly="readonly" />
+                                </p>
+                                <br />
+                                <p class="pageText">
+                                    Please read the instructions for request equipment.</p>
+                                <br />
+                               <p class="pageText EquipmentHeader">
+                               Laptop:
+                               </p>
+                                <br />
+                                <p class="pageText">
+                                Laptops will not be issued to the associates if the Associates ID is not active in the system.<br />
+                                The project would be charged back 100 Dollars/month for the laptop for a period of 36 months.<br />
+                                The laptops would be standard laptops decided by the NSS teams, so that they meet our operating/technical and standardization requirements.<br />
+                                Special language keyboards for laptops would be provided only if they are mentioned specifically in the request template.<br />
+                                Laptop will be provided with the Standard set of software which include MS Office suite, Anti Virus Software, Adobe reader, VPN client, Office Communicator.<br />
+                                The SLA for provisioning the laptops would be 14 days from the approval date in the CEAsset System.<br />
+                                Laptops should be returned to NSS once the requirement is over or upon separation from Cognizant.<br />
+                                Associates are advised not to handover their laptop to their teammates when the requirement is over as it is their responsibility to ensure that the laptop is returned to NSS.<br />
+                                </p>
+                                <br />
+                                 <p class="pageText EquipmentHeader">
+                               Cellphones:
+                               </p>
+                                <br />
+                                <p class="pageText">
+                                Cell Phones will not be issued to the associates if the Associates ID is not active in the system.<br />
+                                The project would be charged back on actual billing incurred every month.<br />
+                                Personal Cell Phone numbers cannot be ported to Cognizant subscription. Incase of exception, we need an approval from BU Head.<br />
+                                The cellphones would be standard cellphone instruments decided by the NSS teams, so that they meet our operating/technical and standardization requirements.<br />
+                                Data would not be enabled on the voice connection.<br />
+                                The SLA for provisioning the Cell Phones would be 14 days from the approval date in the CEAsset System.<br />
+                                Cellphones should be returned to NSS once the requirement is over or upon separation from Cognizant.<br />
+                                Associates are advised not to handover their cellphone to their teammates when the requirement is over as it is their responsibility to ensure that the cellphone is returned to NSS.<br />
+                                </p>
+                                <br />
+                                 <p class="pageText EquipmentHeader">
+                               Blackberry:
+                               </p>
+                                <br />
+                                <p class="pageText">
+                                Blackberry Devices will not be issued to the associates if the Associates ID is not active in the system.<br />
+                                The project would be charged back on actual billing incurred every month.<br />
+                                Personal Phone numbers cannot be ported to Cognizant subscription. Incase of exception, we need an approval from BU Head.<br />
+                                The Blackberry Devices would be standard Blackberry devices decided by the NSS teams, so that they meet our operating/technical and standardization requirements.<br />
+                                Blackberry Data will be enabled with the voice connection.<br />
+                                The SLA for provisioning the Blackberry Devices would be 14 days from the approval date in the CEAsset System.<br />
+                                Blackberry Devices should be returned to NSS once the requirement is over or upon separation from Cognizant.<br />
+                                Associates are advised not to handover their Blackberry Device to their teammates when the requirement is over as it is their responsibility to ensure that the Blackberry Device is returned to NSS.<br />
+
+                                </p>
+                                <br />
+                                 <p class="pageText EquipmentHeader">
+                                Datacards:
+                               </p>
+                                <br />
+                                <p class="pageText">
+                                Datacard will not be issued to the associates if the Associates ID is not active in the system.<br />
+                                The project would be charged back on actual billing incurred every month.<br />
+                                The SLA for provisioning the Datacard would be 14 days from the approval date in the CEAsset System.<br />
+                                Datacard should be returned to NSS once the requirement is over or upon separation from Cognizant.<br />
+                                Associates are advised not to handover their Datacard to their teammates when the requirement is over as it is their responsibility to ensure that the Datacard is returned to NSS.<br />
+                                </p>
+
+                                <p class="pageText" style="text-align:center;font-weight: bold;color: #3f678f;">
+                                 <input type="checkbox" jqxb-datasource="FormDetails" style='vertical-align: middle;'
+                          jqxb-datamember="Equipment.Accept" jqxb-bindedattribute="checked"
+                          id="Instruction" onchange="Instructions()" />  I have read and understood all the above instructions. </p>
+                       
+
+                                <div id="Details">
+
+                                <p class="pageText" style="font-weight: bold; text-decoration: underline; color: #3f678f;
+                                font-size: 13px; padding-left: 15px">
+                                Equipment Request Form</p>
+                                <br />
+                                <table class="pageText" style="margin-left: 60px; border:1px thin black;">
+                                    <tr>
+                                        <td>
+                                           <label style="padding: 0 0 0 20px">
+                                           Candidate Id
+                                           </label>
+                                        </td>
+                                        <td>
+                                         <input type="text" class="tbForm" id="Pg_1_text_CandidateId" jqxb-datasource='FormDetails' jqxb-datamember='Equipment.CandidateId' readonly="readonly" />
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label style="padding: 0 0 0 20px">
+                                                Candidate First Name
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="tbForm" id="Pg_1_text_CandidateFName" jqxb-datasource='FormDetails' jqxb-datamember='Equipment.CandidateFName' readonly="readonly"/>
+                                        </td>
+                                    </tr>
+                                    <tr >
+                                        <td>
+                                            <label style="padding: 0 0 0 20px">
+                                                Candidate Last Name
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <input type="text" id="Pg_1_text_CandidateLName"  class="tbForm"  jqxb-datasource='FormDetails' jqxb-datamember='Equipment.CandidateLName' readonly="readonly"/>
+                                        </td>
+                                    </tr>
+                                    <tr id="Equipment1">
+                                        <td>
+                                            <label style="padding:0 0 0 20px">
+                                                <font color="red">*</font>Equipment Name
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <select id="Pg_1_text_Equipment1" class="tbForm" name="Equipment" title="Equipment" jqxb-datasource="FormDetails" jqxb-datamember="Equipment.Equipment1" jqxb-listsource="Equipment"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description" title="Equipment" name="Equipment" onchange="changeEquipment(1);"></select>
+                                            
+                                        </td>
+                                        <td>&emsp;<img src="../../../../Images/add_linkicon.png" title="Add Another Equipment"  onclick="addEquipment(1);" id="add_1" style="float:right;cursor: hand;"/></td>
+                                        
+                                    </tr>
+                                    <tr id="LTKeyboard1">
+                                        <td>
+                                            <label style="padding:0 0 0 20px">
+                                                <font color="red">*</font>Keyboard Language
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <select id="Pg_1_text_LTKeyboard1" class="tbForm"  jqxb-datasource="FormDetails" jqxb-datamember="Equipment.LTKeyboard1" jqxb-listsource="LaptopKeyboardLanguage"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description"></select>
+                                           
+                                        </td>
+                                        
+                                    </tr>
+                                      <tr id="Equipment2">
+                                        <td>
+                                            <label style="padding:0 0 0 20px">
+                                                Equipment Name
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <select id="Pg_1_text_Equipment2" class="tbForm" name="Equipment" title="Equipment" jqxb-datasource="FormDetails" jqxb-datamember="Equipment.Equipment2" jqxb-listsource="Equipment"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description" onchange="changeEquipment(2);"></select>                                            
+                                        </td>
+                                        <td><p><img src="../../../../Images/add_linkicon.png" title="Add Another Equipment"  onclick="addEquipment(2);" id="add_2" style="float:right;cursor:hand;"/></p></td>
+                                        <td><p><img src="../../../../Images/closesmall.png" title="Remove this Equipment"  onclick="removeEquipment(1);" id="remove_1" style="float:right;cursor:hand;" /></p></td>
+                                    </tr>
+                                     <tr id="LTKeyboard2">
+                                        <td>
+                                            <label style="padding:0 0 0 20px">
+                                                <font color="red">*</font>Keyboard Language
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <select id="Pg_1_text_LTKeyboard2" class="tbForm " jqxb-datasource="FormDetails" jqxb-datamember="Equipment.LTKeyboard2" jqxb-listsource="LaptopKeyboardLanguage"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description"></select>
+                                           
+                                        </td>
+                                        
+                                    </tr>
+                                      <tr id="Equipment3">
+                                        <td>
+                                            <label style="padding:0 0 0 20px">
+                                                Equipment Name
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <select id="Pg_1_text_Equipment3" class="tbForm " name="Equipment" title="Equipment" jqxb-datasource="FormDetails" jqxb-datamember="Equipment.Equipment3" jqxb-listsource="Equipment"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description" onchange="changeEquipment(3);"></select>                                          
+                                        </td>
+                                        <td><p><img src="../../../../Images/add_linkicon.png" title="Add Another Equipment" onclick="addEquipment(3);" id="add_3" style="float:right;cursor: hand;"/></p></td>
+                                         <td><p><img src="../../../../Images/closesmall.png" title="Remove this Equipment" onclick="removeEquipment(2);" id="remove_2" style="float:right;cursor:hand;" /></p></td>
+                                    </tr>
+                                     <tr id="LTKeyboard3">
+                                        <td>
+                                            <label style="padding:0 0 0 20px">
+                                                <font color="red">*</font>Keyboard Language
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <select id="Pg_1_text_LTKeyboard3" class="tbForm " jqxb-datasource="FormDetails" jqxb-datamember="Equipment.LTKeyboard3" jqxb-listsource="LaptopKeyboardLanguage"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description"></select>
+                                           
+                                        </td>
+                                        
+                                    </tr>
+                                      <tr id="Equipment4">
+                                        <td>
+                                            <label style="padding:0 0 0 20px">
+                                                Equipment Name
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <select id="Pg_1_text_Equipment4" class="tbForm " name="Equipment" title="Equipment" jqxb-datasource="FormDetails" jqxb-datamember="Equipment.Equipment4" jqxb-listsource="Equipment"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description" onchange="changeEquipment(4);"></select>    
+                                                                                  
+                                        </td>
+                                         <td><p><img src="../../../../Images/closesmall.png" title="Remove this Equipment" onclick="removeEquipment(3);" id="remove_3" style="float:right;cursor:hand;" /></p></td>  
+                                       
+                                    </tr>
+                                     <tr id="LTKeyboard4">
+                                        <td>
+                                            <label style="padding:0 0 0 20px">
+                                                <font color="red">*</font>Keyboard Language
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <select id="Pg_1_text_LTKeyboard4" class="tbForm " jqxb-datasource="FormDetails" jqxb-datamember="Equipment.LTKeyboard4" jqxb-listsource="LaptopKeyboardLanguage"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description"></select>
+                                           
+                                        </td>
+                                        
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <label style="padding:0 0 0 20px">
+                                                Designation
+                                            </label>
+                                        </td>
+                                        <td>
+                                           <input type="text" id="Pg_1_text_Designation"  class="tbForm" jqxb-datasource="FormDetails" jqxb-datamember="Equipment.Designation"  readonly="readonly"/>
+                                        </td>
+                                    </tr>  
+                                    <tr>
+                                        <td>
+                                            <label style="padding:0 0 0 20px">
+                                                <font color="red">*</font>Shipping Location
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <select id="Pg_1_dd_shippinglocation" class="tbForm" jqxb-datasource="FormDetails" jqxb-datamember="Equipment.ShippingLocation" jqxb-listsource="CEShippingLocation"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description"></select>
+                                           
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label style="padding:0 0 0 20px">
+                                                Joining Location
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <input type="text"  class="tbForm"   id="Pg_1_text_joiningLocation" jqxb-datasource="FormDetails" jqxb-datamember="Equipment.JoiningLocation" readonly="readonly"/>
+                                           
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <label style="padding:0 0 0 20px">
+                                                Request Initiation Date
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <input type="text"  class="tbForm"   id="Pg_1_text_Requestdate" jqxb-datasource="FormDetails" jqxb-datamember="Equipment.RequestDate" readonly="readonly"/>
+                                           
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+
+                 </div>
+                 <div class="Signature" id="Sign_PageId_1">
+                  </div>
+               </div>
+              </div>
+              <div class="pageData">
+              </div>
+             </div>
+                <div  id="footerContent">
+                  </div>
+        </div>
+        </div>
+</body>
+</html>

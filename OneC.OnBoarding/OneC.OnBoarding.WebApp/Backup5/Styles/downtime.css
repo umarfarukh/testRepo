@@ -1,0 +1,61 @@
+body{font-family: "Segoe UI", "Trebuchet MS", Verdana, Arial,Helvetica,sans-serif; margin:0px; padding:0px; background:url(../images/bg-main-content.gif) repeat-x top;}
+
+.mart10{ margin-top:-10px;}
+
+a, a:visited {
+    color: #0379B4;
+    text-decoration: none;
+}
+a:hover {
+    color: #575757;
+    text-decoration: none;
+}
+
+.div-main{ background:url(../images/bg-main.gif) no-repeat; width:999px; margin:0px auto; padding-top:150px; padding-bottom:10px; }
+.div-content{ background:url(../images/bg-sub-content.png) no-repeat; margin:0px auto; width:815px; height:378px; padding-top:15px;}
+.logo{ text-align:center; padding-top:10px;}
+
+
+
+
+
+
+
+
+/*.outerDiv {
+    background-color: #FAFCFF;
+    border-color: #E3E8EE #D9DDE3 #BEC2C7;
+    border-style: solid;
+    border-width: 1px 2px 2px;
+    color: #4a4a4a;
+    margin: 100px auto;
+    padding: 20px;
+    width: 600px;
+}*/
+.gotoSite {
+    margin: 0 auto;
+    width: 130px;
+	padding-bottom:20px;
+}
+.gotoSite A{ color:#666;}
+.backarrow {
+    border: 0 none;
+    float: left;
+    margin-right: 5px;
+}
+.flt_left{ float:left;}
+.flt_right{ float:right;}
+.clear{ clear:both; font-size:0px; height:0px;}
+.content{padding:0px 160px 0px 270px;}
+.content p{ color:#2f5265; font-size:15px;}
+.wd-content{width:500px;}
+.txt-center{text-align:center;}
+ p.sub-title{font-size: 13px; text-align:center; padding-top:30px; color:#2f5265;}
+.downtime-grid{ border:1px solid #ccdcea; margin:0px auto; width:690px;}
+.downtime-grid th{ padding:5px 0px; background: url(../images/bg-grid-hdr.gif) repeat-x; font-size:13px; color:#2c4958; font-size:14px; font-weight:normal;}
+.bor-right-td{border-right:1px solid #b3cae0;}
+.bor-right-grid{border-right:1px solid #e7e9e9;}
+.downtime-grid tr.odd{ background:#ffffff; height:30px;}
+.downtime-grid tr.even{ background:#f3f4f4; height:30px;}
+.downtime-grid td{ padding:2px;font-size:12px; text-align:center; color:#474747;}
+.downtime-grid td.lastcol,.downtime-grid th.lastcol{ border-right:0px;}

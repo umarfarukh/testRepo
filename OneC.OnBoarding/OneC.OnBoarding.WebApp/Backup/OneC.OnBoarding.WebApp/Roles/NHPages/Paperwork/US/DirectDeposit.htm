@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Direct Deposit</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+   
+    <script src="../../../../Scripts/Forms/US/DirectDeposit.js" type="text/javascript"></script>
+     <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <!--<script src="../../../../Scripts/JQuery/jquery.alerts.js" type="text/javascript"></script>-->
+    <style type="text/css">
+        input[type="checkbox"] {
+            vertical-align: middle;
+        }
+        div.pageDetails ul.personalDetails div.pageHeader {
+            width: 98%;
+        }
+        div.pageDetails ul.personalDetails div.pageHeader span {
+            font-size: 0.8em;
+            padding-left: 2px;
+        }
+        div.pageDetails img.routerImage {
+            margin: 25px 0px 0px 20px;
+            float: left;
+            height: 181px;
+            width: 34%;
+            display: inline;
+        }
+        div.pageDetails ul.personalDetails {
+            width: 540px;
+        }
+        div.pageDetails ul.personalDetails li {
+            width: 98%;
+            margin-left: -20px;
+            padding-top: 8px;
+        }
+        div.pageDetails ul.personalDetails li select.ddForm {
+            border: 1px solid #000;
+        }
+        .alert_f_text {
+            float: right;
+            height: 10px;
+            margin: 0;
+            padding: 0 0 0 170px;
+            text-align: right;
+            width: 250px;
+            font-size: 0.8em;
+            color: #ff0000;
+            display: none;
+        }
+        .alert_f {
+            height: 12px;
+            width: 13px;
+            margin: 6px;
+            float: right;
+            background: url('../../../../Images/formredalert.png') no-repeat;
+            display: none;
+        }
+       
+    </style>
+</head>
+<body oncontextmenu="return false;">
+    <div id='baseContent'>
+        <div id='pageMain'>
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                        <label style="font-size:1.2em;margin-left:10px;margin-bottom:-5px;">If you need any clarifications regarding routing number, account number please refer the image.</label>
+                            <ul class="personalDetails" id="depositTypeBalance">
+                                <div class="pageHeader">
+                                    <p>
+                                        Deposit Type: Balance
+                                    </p>
+                                </div>
+                                <li>
+                                    <label>
+                                        <span>*</span>Routing Number:</label>
+                                  
+                                    <input type="text" class="tbForm OnlyNumeric  balMandatory textMandatory ccpDisabled" title="Routing Number"
+                                        id="balanceRoutingNumber" maxlength="9" jqxb-datasource="FormDetails" jqxb-datamember="DirectDeposit.DepositTypeBalance.RoutingNumber" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Account Number:</label>
+                                    <input type="text" class="tbForm OnlyNumeric balMandatory textMandatory ccpDisabled" maxlength="17"
+                                        title="Account Number" id="balanceAccountNumber" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="DirectDeposit.DepositTypeBalance.AccountNumber" />
+                                </li>
+                                <li>
+                                    <label>
+                                        <span>*</span>Account Type:</label>
+                                    <select class="tbForm ddForm  balMandatory dropdown" title="Account Type" id="balanceAccountType"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="DirectDeposit.DepositTypeBalance.AccountType">
+                                        <option value="-1">--Select--</option>
+                                        <option value="C">Checking</option>
+                                        <option value="S">Savings</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <img src="../../../../Images/INGimg.png" class="routerImage" alt="check example" />
+                             <ul class="personalDetails" id="depositTypeAmount" style="display:none;">
+                                <div class="pageHeader">
+                                    <p>
+                                      <input type="checkbox" name="DepositTypeAccountCheckBox" id="depositType"   jqxb-datasource="FormDetails" jqxb-datamember="DirectDeposit.DepositTypeAccount.DepositTypeAccountCheckBox" jqxb-bindedattribute="checked" /> Deposit Type: Amount
+
+                                    </p>
+                                </div>
+                                <li>
+                                    <label class="optMandatory">
+                                        <span>*</span>Routing Number:</label>
+                                    <input type="text" class="tbForm OnlyNumeric depositType ccpDisabled" id="amountRoutingNumber"
+                                        title="Routing Number" maxlength="9" jqxb-datasource="FormDetails" jqxb-datamember="DirectDeposit.DepositTypeAccount.RoutingNumber" />
+                                </li>
+                                <li>
+                                    <label class="optMandatory">
+                                        <span>*</span>Account Number:</label>
+                                    <input type="text" class="tbForm OnlyNumeric depositType ccpDisabled" id="depositAccountNumber"
+                                        maxlength="17" title="Account Number" jqxb-datasource="FormDetails" jqxb-datamember="DirectDeposit.DepositTypeAccount.AccountNumber" />
+                                </li>
+                                <li>
+                                    <label class="optMandatory">
+                                        <span>*</span>Account Type:</label>
+                                    <select class="tbForm ddForm depositType" id="depositAccountType" title="Account Type"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="DirectDeposit.DepositTypeAccount.AccountType">
+                                        <option value="-1">--Select--</option>
+                                        <option value="C">Checking</option>
+                                        <option value="S">Savings</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label class="optMandatory">
+                                        <span>*</span>Amount:</label>
+                                    <input type="text" class="tbForm onlyFloating depositType ccpDisabled" id="depositAmount" maxlength="11"
+                                        title="Amount" jqxb-datasource="FormDetails" jqxb-datamember="DirectDeposit.DepositTypeAccount.Amount" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='footerContent'>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

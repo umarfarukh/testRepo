@@ -1,0 +1,1128 @@
+/* layout CSS*/
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0 none;
+}
+.wrapper {
+    width: 960px;
+    font-family: Trebuchet MS;
+    font-size: 12px;
+    margin-left: 1px;
+}
+
+/* font-color CSS*/
+.black {
+    color: #000;
+}
+.white {
+    color: #fff;
+}
+.blue {
+    color: #037ab4;
+}
+.gray {
+    color: #474747;
+}
+.green {
+    color: #559316;
+}
+
+/* common CSS*/
+a {
+    text-decoration: none;
+    color: #037ab4;
+    font-weight: bold;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+/* header css*/
+.breadcrumb {
+    background: url(../../Images/Bgv/select_bg.png) bottom no-repeat;   /*298015 - wrong path old-../../Images/AppSpot/select_bg.png */
+    padding: 8px 0;
+}
+.breadcrumb ul {
+    padding-left: 5px;
+}
+.breadcrumb li {
+    display: inline;
+    list-style-type: none;
+    padding-left: 2px;
+}
+
+.app-view {
+    background-color: #c7d9e3;
+    padding: 9px 8px 0;
+}
+.tabbedcontent {
+    position: relative;
+    overflow: hidden;
+    height: 454px;
+}
+#tabthumb {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 7;
+}
+.tabs {
+    float: left;
+    width: 189px;
+    height: 438px;
+    padding: 7px 0 0 4px;
+    background: url(../../Images/AppSpot/left-nav.png) no-repeat 0 0;
+}
+.tabs li {
+    position: relative;
+    padding: 6px 0 6px 55px;
+    cursor: pointer;
+    z-index: 5;
+}
+@media all and (min-width:0) /* IE9 specific */ {
+    .tabs li {
+        padding: 8px 0 8px 55px \0/;
+    }
+}
+.tabs li.selected {
+    background: url(../../Images/AppSpot/selected-tab.png) no-repeat 0 3px;
+}
+.tabs .desc {
+    font-weight: bold;
+}
+.tabs .ttip {
+    position: absolute;
+    display: none;
+    text-align: center;
+    padding: 3px;
+    color: #fff;
+    background-color: #333;
+    top: 4px;
+    left: 93%;
+    z-index: 50;
+    white-space: nowrap;
+}
+/* Tooltip arrow */
+#arr {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 170px;
+    background: url("../../Images/AppSpot/tooltip-arrow.png") no-repeat 0 0 transparent;
+    width: 9px;
+    height: 11px;
+    z-index: 50;
+}
+
+#landing, #tabcontainer {
+    float: left;
+    overflow: hidden;
+    background: url(../../Images/AppSpot/right-content.png) no-repeat 0 0;
+}
+
+#home-btn {
+    position: absolute;
+    top: -1px;
+    right: 25px;
+    border: none;
+    height: 26px;
+    width: 39px;
+    background: url(../../Images/AppSpot/home_active.png) no-repeat 0 0;
+    cursor: pointer;
+    z-index: 50;
+}
+#home-btn.selected {
+    background: url(../../Images/AppSpot/home_inactive.png) no-repeat 0 0;
+    cursor: default;
+}
+
+#landing div {
+    height: 404px;
+    width: 710px;
+    padding: 20px;
+}
+#landing p {
+    margin: 20px;
+    font-weight: bold;
+}
+#landing .green {
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+#tabcontainer .content {
+    position: relative;
+    display: none;
+    height: 444px;
+    width: 750px;
+}
+.pg1, .pg2 {
+    height: 100%;
+    width: 100%;
+}
+#tabcontainer .content.selected {
+    display: block;
+}
+
+.bubble {
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+}
+.bubble a {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: normal;
+    margin-top: 11px;
+    width: 100px;
+    z-index: 2;
+    color: #fff;
+}
+#tabcontainer .bubble.nobg {
+    background: none;
+}
+#tabcontainer .bubble.nobg a {
+    color: #000;
+    z-index: 25;
+}
+
+#launchpad {
+    background: url("../../Images/AppSpot/pers-details-bg.png") no-repeat -228px -250px transparent;
+}
+#launchpad .bubble {
+    background-image: url("../../Images/AppSpot/pers-details-bubble.png");
+    background-repeat: no-repeat;
+}
+#l1 {
+    background-position: -86px -194px;
+    top: 96px;
+    left: 10px;
+    width: 120px;
+    height: 85px;
+    padding-top: 15px;
+}
+#l2 {
+    background-position: -80px -22px;
+    top: 30px;
+    left: 118px;
+    width: 132px;
+    height: 125px;
+}
+#l3 {
+    background-position: -257px -190px;
+    top: 90px;
+    left: 240px;
+    width: 108px;
+    height: 100px;
+}
+#l4 {
+    background-position: -406px -193px;
+    top: 85px;
+    left: 357px;
+    width: 125px;
+    height: 109px;
+}
+#l5 {
+    background-position: -257px -34px;
+    top: 85px;
+    left: 487px;
+    width: 117px;
+    height: 94px;
+}
+#l6 {
+    background-position: -417px -42px;
+    height: 80px;
+    left: 595px;
+    padding-left: 11px;
+    top: 115px;
+    width: 126px;
+}
+#l5 a {
+    margin-top: 16px;
+}
+#l2 a {
+    margin-top: 20px;
+}
+
+#jumpstart .pg1, #jumpstart .pg2 {
+    background: url(../../Images/AppSpot/jumpstart-bg.png) no-repeat -238px -245px;
+}
+#jumpstart a {
+    margin-top: 4px;
+}
+#j1, #j2, #j3, #j4, #j5, #j6, #j7 {
+    background-image: url("../../Images/AppSpot/jumpstart-bubble1.png");
+    background-repeat: no-repeat;
+}
+#j1 {
+    left: 55px;
+    top: 140px;
+    background-position: -45px -197px;
+    width: 115px;
+    height: 69px;
+}
+#j2 {
+    top: 60px;
+    left: 60px;
+    background-position: -28px -73px;
+    width: 118px;
+    height: 84px;
+}
+#j3 {
+    top: 40px;
+    left: 185px;
+    background-position: -174px -72px;
+    width: 114px;
+    height: 88px;
+}
+#j4 {
+    top: 65px;
+    left: 310px;
+    background-position: -195px -184px;
+    width: 112px;
+    height: 73px;
+}
+#j5 {
+    left: 420px;
+    top: 30px;
+    background-position: -451px -77px;
+    width: 120px;
+    height: 85px;
+}
+#j6 {
+    left: 542px;
+    top: 35px;
+    background-position: -195px -184px;
+    width: 120px;
+    height: 85px;
+}
+#j7 {
+    left: 565px;
+    top: 100px;
+    background-position: -350px -184px;
+    width: 116px;
+    height: 82px;
+}
+#j2 a, #j4 a, #j5 a {
+    margin-top: 8px;
+}
+#j6 a, #j7 a {
+    margin-top: 16px;
+}
+
+#j8, #j9, #j10, #j11, #j12, #j13, #j14 {
+    background-image: url("../../Images/AppSpot/jumpstart-bubble2.png");
+    background-repeat: no-repeat;
+}
+#j8 {
+    left: 20px;
+    top: 140px;
+    background-position: -22px -101px;
+    width: 145px;
+    height: 73px;
+}
+#j9 {
+    top: 70px;
+    left: 100px;
+    background-position: -183px -102px;
+    width: 105px;
+    height: 80px;
+}
+#j10 {
+    top: 40px;
+    left: 200px;
+    background-position: -305px -103px;
+    width: 117px;
+    height: 83px;
+}
+#j11 {
+    top: 70px;
+    left: 310px;
+    background-position: -461px -107px;
+    width: 115px;
+    height: 75px;
+}
+#j12 {
+    left: 425px;
+    top: 30px;
+    background-position: -37px -210px;
+    width: 114px;
+    height: 68px;
+}
+#j13 {
+    left: 520px;
+    top: 70px;
+    background-position: -192px -203px;
+    width: 133px;
+    height: 98px;
+}
+#j14 {
+    left: 570px;
+    top: 150px;
+    background-position: -373px -211px;
+    width: 122px;
+    height: 60px;
+}
+#j8 a {
+    margin-right: 20px;
+    margin-top: 8px;
+    width: 125px;
+}
+#j9 a {
+    margin-top: 19px;
+    width: 90px;
+}
+#j10 a, #j12 a {
+    margin-top: 10px;
+}
+#j11 a {
+    margin-top: 12px;
+}
+#j13 a {
+    width: 115px;
+}
+#j14 a {
+    width: 80px;
+    margin-left: 15px;
+}
+
+.pg2 {
+    display: none;
+}
+.next {
+    position: absolute;
+    bottom: 35px;
+    right: 40px;
+    background: url(../../Images/AppSpot/next_active.png) no-repeat 0 0;
+    border: none;
+    width: 33px;
+    height: 33px;
+}
+.pg1 .next, .pg2 .prev {
+    cursor: pointer;
+}
+.pg2 .next {
+    background: url(../../Images/AppSpot/next_grey.png) no-repeat 0 0;
+}
+.prev {
+    position: absolute;
+    bottom: 35px;
+    right: 80px;
+    background: url(../../Images/AppSpot/prev_active.png) no-repeat 0 0;
+    border: none;
+    width: 33px;
+    height: 33px;
+}
+.pg1 .prev {
+    background: url(../../Images/AppSpot/prev_grey.png) no-repeat 0 0;
+}
+
+#next-tt, #prev-tt {
+    position: absolute;
+    bottom: 70px;
+    height: 30px;
+    display: inline-block;
+}
+#next-tt {
+    background: url(../../Images/AppSpot/next.png) no-repeat 0 0;
+    right: 35px;
+    width: 48px;
+}
+#prev-tt {
+    background: url(../../Images/AppSpot/previous.png) no-repeat 0 0;
+    right: 68px;
+    width: 59px;
+}
+
+#benefits {
+    background: url("../../Images/AppSpot/benefits-bg.png") no-repeat -232px -240px transparent;
+}
+#b1, #b2, #b3, #b4, #b5 {
+    background-image: url("../../Images/AppSpot/benefits-bubble1.png");
+    background-repeat: no-repeat;
+}
+#b1 {
+    background-position: -49px -316px;
+    top: 150px;
+    left: 100px;
+    width: 160px;
+    height: 83px;
+}
+#b2 {
+    background-position: -61px -187px;
+    top: 50px;
+    left: 120px;
+    width: 160px;
+    height: 122px;
+}
+#b3 {
+    background-position: -221px -194px;
+    top: 25px;
+    left: 250px;
+    width: 130px;
+    height: 118px;
+}
+#b4 {
+    background-position: -400px -187px;
+    top: 35px;
+    left: 405px;
+    width: 127px;
+    height: 113px;
+}
+#b5 {
+    background-position: -445px -329px;
+    top: 135px;
+    left: 500px;
+    width: 86px;
+    height: 82px;
+}
+#b1 a {
+    margin-right: 28px;
+    margin-top: 8px;
+}
+#b2 a {
+    margin-right: 28px;
+    margin-top: 15px;
+}
+#b3 a {
+    width: 125px;
+}
+#b4 a {
+    margin-top: 20px;
+}
+#b5 a {
+    margin-top: 16px;
+    width: 80px;
+}
+
+#b6, #b7, #b8, #b9 {
+    background-image: url("../../Images/AppSpot/benefits-bubble2.png");
+    background-repeat: no-repeat;
+}
+#b6 {
+    background-position: -68px -233px;
+    top: 70px;
+    left: 200px;
+    width: 100px;
+    height: 84px;
+}
+#b7 {
+    background-position: -221px -229px;
+    top: 35px;
+    left: 350px;
+    width: 118px;
+    height: 96px;
+}
+#b8 {
+    background-position: -378px -239px;
+    top: 75px;
+    left: 485px;
+    width: 128px;
+    height: 97px;
+}
+#b9 {
+    background-position: -202px -379px;
+    top: 180px;
+    left: 500px;
+    width: 140px;
+    height: 72px;
+}
+#b6 a, #b7 a {
+    margin-top: 15px;
+}
+#b8 a {
+    width: 110px;
+}
+#b9 a {
+    margin-left: 25px;
+    margin-top: 22px;
+}
+
+#salary {
+    background: url("../../Images/AppSpot/salary-bg.png") no-repeat -232px -250px transparent;
+}
+#salary .bubble {
+    background-image: url("../../Images/AppSpot/salary-bubble.png");
+    background-repeat: no-repeat;
+}
+#sl1 {
+    background-position: -32px -44px;
+    top: 65px;
+    left: 140px;
+    width: 146px;
+    height: 72px;
+}
+#sl2 {
+    background-position: -234px -44px;
+    top: 70px;
+    left: 345px;
+    width: 108px;
+    height: 84px;
+}
+#sl1 a {
+    margin-right: 28px;
+    margin-top: 16px;
+}
+#sl2 a {
+    margin-top: 16px;
+}
+
+#timesheet {
+    background: url("../../Images/AppSpot/timesheet-bg.png") no-repeat -232px -250px transparent;
+}
+#timesheet .bubble {
+    background-image: url("../../Images/AppSpot/timesheet-bubble.png");
+    background-repeat: no-repeat;
+}
+#tm1 {
+    background-position: -174px -455px;
+    top: 40px;
+    left: 190px;
+    width: 112px;
+    height: 93px;
+}
+#tm2 {
+    background-position: -345px -451px;
+    top: 110px;
+    left: 460px;
+    width: 101px;
+    height: 93px;
+}
+#tm1 a, #tm2 a {
+    width: 80px;
+}
+
+#learning .pg1, #learning .pg2 {
+    background: url("../../Images/AppSpot/learning-bg.png") no-repeat -232px -260px transparent;
+}
+#learning .bubble {
+    background-image: url("../../Images/AppSpot/learning-bubble.png");
+    background-repeat: no-repeat;
+}
+#ln1 {
+    background-position: -165px -406px;
+    top: 150px;
+    left: 15px;
+    width: 117px;
+    height: 100px;
+}
+#ln2 {
+    background-position: -138px -253px;
+    top: 25px;
+    left: 7px;
+    width: 140px;
+    height: 102px;
+}
+#ln3 {
+    background-position: -310px -263px;
+    top: 15px;
+    left: 510px;
+    width: 118px;
+    height: 98px;
+}
+#ln4 {
+    background-position: -454px -265px;
+    top: 110px;
+    left: 620px;
+    width: 110px;
+    height: 96px;
+}
+#ln5 {
+    background-position: -339px -406px;
+    top: 235px;
+    left: 360px;
+    width: 171px;
+    height: 90px;
+}
+#ln6 {
+    background-position: -165px -406px;
+    top: 150px;
+    left: 15px;
+    width: 117px;
+    height: 100px;
+}
+#ln7 {
+    background-position: -138px -253px;
+    top: 25px;
+    left: 7px;
+    width: 140px;
+    height: 102px;
+}
+#ln8 {
+    background-position: -310px -263px;
+    top: 15px;
+    left: 510px;
+    width: 118px;
+    height: 98px;
+}
+#ln9 {
+    background-position: -454px -265px;
+    top: 110px;
+    left: 620px;
+    width: 110px;
+    height: 96px;
+}
+#learning a {
+    margin-top: 18px;
+}
+#ln5 a {
+    margin-right: 25px;
+    margin-top: 28px;
+    width: 110px;
+}
+#ln7 a, #ln9 a {
+    width: 110px;
+    margin-top: 11px;
+}
+
+#leave {
+    background: url("../../Images/AppSpot/leave-bg.png") no-repeat -230px -260px transparent;
+}
+#leave .bubble {
+    background-image: url("../../Images/AppSpot/leave-bubble.png");
+    background-repeat: no-repeat;
+}
+#lv1 {
+    background-position: -144px -265px;
+    top: 35px;
+    left: 215px;
+    width: 100px;
+    height: 93px;
+}
+#lv2 {
+    background-position: -340px -310px;
+    top: 75px;
+    left: 410px;
+    width: 113px;
+    height: 93px;
+}
+#lv1 a, #lv2 a {
+    width: 90px;
+    margin-top: 20px;
+}
+
+#policy {
+    background: url("../../Images/AppSpot/policy-bg.png") no-repeat -230px -250px transparent;
+}
+#policy .bubble {
+    background-image: url("../../Images/AppSpot/policy-bubble.png");
+    background-repeat: no-repeat;
+}
+#cp1 {
+    background-position: -251px -268px;
+    top: 35px;
+    left: 215px;
+    width: 140px;
+    height: 92px;
+}
+
+#workplace {
+    background: url("../../Images/AppSpot/workplace-bg.png") no-repeat -218px -245px transparent;
+}
+#workplace .bubble {
+    background-image: url("../../Images/AppSpot/workplace-bubble.png");
+    background-repeat: no-repeat;
+}
+#wp1 {
+    background-position: -70px -180px;
+    top: 50px;
+    left: 90px;
+    width: 165px;
+    height: 88px;
+}
+#wp2 {
+    background-position: -79px -329px;
+    top: 35px;
+    left: 290px;
+    width: 113px;
+    height: 112px;
+}
+#wp3 {
+    background-position: -322px -346px;
+    top: 30px;
+    left: 420px;
+    width: 112px;
+    height: 105px;
+}
+#wp4 {
+    background-position: -293px -185px;
+    top: 40px;
+    left: 540px;
+    width: 151px;
+    height: 92px;
+}
+#wp1 a {
+    margin-right: 23px;
+}
+#wp2 a {
+    margin-top: 17px;
+}
+#wp3 a {
+    margin-top: 26px;
+}
+#wp4 a {
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 110px;
+}
+
+#competency {
+    background: url("../../Images/AppSpot/competency-bg.png") no-repeat -230px -245px transparent;
+}
+#competency .bubble {
+    background-image: url("../../Images/AppSpot/competency-bubble.png");
+    background-repeat: no-repeat;
+}
+#ct1 {
+    background-position: -235px -234px;
+    top: 40px;
+    left: 325px;
+    width: 109px;
+    height: 77px;
+}
+#ct1 a {
+    margin-top: 17px;
+}
+
+#career {
+    background: url("../../Images/AppSpot/career-bg.png") no-repeat -240px -255px transparent;
+}
+#career .bubble {
+    background-image: url("../../Images/AppSpot/career-bubble.png");
+    background-repeat: no-repeat;
+}
+#cr1 {
+    background-position: -110px -180px;
+    top: 30px;
+    left: 200px;
+    width: 143px;
+    height: 105px;
+}
+#cr2 {
+    background-position: -322px -191px;
+    top: 60px;
+    left: 375px;
+    width: 130px;
+    height: 95px;
+}
+#cr1 a, #cr2 a {
+    width: 120px;
+    margin-top: 17px;
+}
+
+#know {
+    background: url("../../Images/AppSpot/know-bg.png") no-repeat -230px -230px transparent;
+}
+#know .bubble {
+    background-image: url("../../Images/AppSpot/know-bubble.png");
+    background-repeat: no-repeat;
+}
+#kn1 {
+    background-position: -421px -263px;
+    top: 105px;
+    left: 425px;
+    width: 130px;
+    height: 95px;
+}
+#kn1 a {
+    margin-top: 7px;
+}
+
+#community {
+    background: url("../../Images/AppSpot/community-bg.png") no-repeat -245px -230px transparent;
+}
+#community .bubble {
+    background-image: url("../../Images/AppSpot/community-bubble.png");
+    background-repeat: no-repeat;
+}
+#cm1 {
+    background-position: -83px -192px;
+    top: 145px;
+    left: 145px;
+    width: 112px;
+    height: 83px;
+}
+#cm2 {
+    background-position: -64px -329px;
+    top: 65px;
+    left: 210px;
+    width: 112px;
+    height: 86px;
+}
+#cm3 {
+    background-position: -411px -198px;
+    top: 120px;
+    left: 330px;
+    width: 108px;
+    height: 85px;
+}
+#cm4 {
+    background-position: -418px -352px;
+    top: 195px;
+    left: 420px;
+    width: 131px;
+    height: 68px;
+}
+#cm1 a {
+    margin-top: 17px;
+}
+#cm2 a {
+    margin-top: 13px;
+}
+#cm3 a {
+    margin-top: 18px;
+    width: 75px;
+}
+#cm4 a {
+    margin-left: 20px;
+    margin-top: 18px;
+    width: 85px;
+}
+
+#helpdesk .pg1, #helpdesk .pg2 {
+    background: url("../../Images/AppSpot/helpdesk-bg.png") no-repeat -220px -250px transparent;
+}
+#hd1, #hd2, #hd3, #hd4, #hd5, #hd6 {
+    background-image: url("../../Images/AppSpot/helpdesk-bubble1.png");
+    background-repeat: no-repeat;
+}
+#hd1 {
+    background-position: -75px -106px;
+    top: 56px;
+    left: 135px;
+    width: 128px;
+    height: 115px;
+}
+#hd2 {
+    background-position: -271px -107px;
+    top: 48px;
+    left: 300px;
+    width: 127px;
+    height: 123px;
+}
+#hd3 {
+    background-position: -82px -304px;
+    top: 175px;
+    left: 345px;
+    width: 116px;
+    height: 94px;
+}
+#hd4 {
+    background-position: -300px -312px;
+    top: 90px;
+    left: 565px;
+    width: 150px;
+    height: 86px;
+}
+#hd5 {
+    background-position: -538px -304px;
+    top: 195px;
+    left: 585px;
+    width: 116px;
+    height: 94px;
+}
+#hd6 {
+    background-position: -517px -103px;
+    top: 55px;
+    left: 435px;
+    width: 137px;
+    height: 130px;
+}
+#hd1 a {
+    width: 118px;
+}
+#hd2 a {
+    width: 95px;
+}
+#hd4 a {
+    margin-left: 8px;
+    margin-top: 17px;
+}
+#hd3 a, #hd5 a {
+    margin-left: 20px;
+    margin-top: 26px;
+    width: 90px;
+}
+#hd5 a {
+    margin-top: 32px;
+}
+#hd6 a {
+    width: 95px;
+    margin-top: 26px;
+}
+
+#hd7, #hd8, #hd9, #hd10 {
+    background-image: url("../../Images/AppSpot/helpdesk-bubble2.png");
+    background-repeat: no-repeat;
+}
+#hd7 {
+    background-position: -65px -85px;
+    top: 56px;
+    left: 135px;
+    width: 126px;
+    height: 115px;
+}
+#hd8 {
+    background-position: -294px -82px;
+    top: 75px;
+    left: 306px;
+    width: 139px;
+    height: 91px;
+}
+#hd9 {
+    background-position: -90px -247px;
+    top: 40px;
+    left: 445px;
+    width: 137px;
+    height: 130px;
+}
+#hd10 {
+    background-position: -269px -230px;
+    top: 80px;
+    left: 578px;
+    width: 146px;
+    height: 127px;
+}
+#hd7 a {
+    width: 120px;
+}
+#hd8 a {
+    margin-left: 5px;
+    margin-top: 2px;
+}
+#hd9 a {
+    width: 90px;
+    margin-top: 18px;
+}
+#hd10 a {
+    width: 130px;
+    margin-top: 4px;
+}
+
+/* Overlay - Popup background */
+#overlay {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    z-index: 500;
+}
+.popup {
+    position: absolute;
+    left: 22%;
+    top: 18%;
+    background: url(../../Images/AppSpot/popup-bg.png) no-repeat -219px -301px transparent;
+    z-index: 600;
+    width: 536px;
+    height: 196px;
+    padding: 24px 24px 14px 14px;
+    display: none;
+}
+.close {
+    height: 24px;
+    position: relative;
+    right: -24px;
+    top: -25px;
+    width: 24px;
+}
+.popup p {
+    padding: 6px 15px;
+}
+.popup .blue {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 16px;
+}
+.popup a {
+    color: #474747;
+    text-decoration: underline;
+}
+
+#hd8-pop .blue {
+    margin-top: 6px;
+}
+
+/* Added for Survey */
+#survey-btn {
+    position: absolute;
+    top: -1px;
+    right: 70px;
+    border: none;
+    height: 26px;
+    width: 75px;
+    background: url(../../Images/Survey/survey.png) no-repeat 0 0;
+    cursor: pointer;
+    z-index: 50;
+    display: none;
+}
+
+#overLay {
+    display: none;
+    position: fixed;
+    _position: absolute; /* hack for internet explorer 6*/
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    border: 1px solid #cecece;
+    z-index: 9999;
+}
+.popupContactwrapper {
+    background: none repeat scroll 0 0 #51aad8;
+    border: 1px solid #CECECE;
+    display: none;
+    font-size: 13px;
+    z-index: 111111;
+    width: 500px;
+    height: 300px;
+    margin: 0px auto;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF51aad8',  endColorstr='#FF01537e');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF51aad8, endColorstr=#FF01537e)";
+    background: -webkit-gradient(linear,  left top, left bottom, from(#51aad8), to( #01537e));
+    background: -moz-linear-gradient(top,  #51aad8,   #01537e);
+    background: -o-linear-gradient (top, #51aad8, #01537e);
+}
+.popupContactwrapper1 {
+    border: 1px solid #CECECE;
+    display: none;
+    font-size: 13px;
+    z-index: 111111;
+    width: 325px;
+    height: 215px;
+    margin: 0px auto;
+}
+.popupContactwrapper2 {
+    border: 1px solid #CECECE;
+    display: none;
+    font-size: 13px;
+    z-index: 111111;
+    width: 335px;
+    height: 215px;
+    margin: 0px auto;
+}
+
+.popupContactwrapper #video_demo {
+    margin: 30px 0 0 50px;
+    float: left;
+}
+.popupContactwrapper p {
+    float: right;
+}
+
+.popup_btn{
+    background:url(../../images/Survey/popup_btn.png) repeat-x;
+    }
+    .popup_btn:hover{
+    background:url(../../images/Survey/popup_btn_hover.png) repeat-x;
+    }

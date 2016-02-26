@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//Dli XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/Dli/xhtml1-transitional.dli">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Pre Employment Physical Exam</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script> 
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/Philippines/PreEmploymentExam.js" type="text/javascript"></script>
+    
+<!--    <style type="text/css">
+   .pageDetails ul li li
+   {
+       width:25%;
+       }
+    </style>-->
+
+    <style type="text/css">
+    .textareaMCA
+    {
+      height:40px;
+	width:168px;
+	border:1px solid #000;
+	float:right;
+	padding:0;
+	margin:0;
+        }
+        
+         .ul1border
+       {
+           border-color:Aqua;
+           width:98%;
+           padding-left:5px;
+           
+           } 
+             .pageContent ul tr li.liwidth
+           {
+              
+               height:40px;
+               }
+       .PEE_Phil .pageContent ul li.MCA_box img.alert_f
+       {
+           float:left;
+           margin:6px;
+           width:13px;          
+           height:12px;
+           }
+          .PEE_Phil .pageContent ul li.MCA_box label.alert_f_text{
+            text-align:left;
+           
+            height:20px;
+            margin-left:-480px;
+            margin-right:0px;
+            padding:22px 110px 0px 0px;
+            }
+            
+           .personalDataForm .personalDetails LI BUTTON.ui-datepicker-trigger
+            {
+                 float: left;
+            }
+            
+             .personalDataForm .personalDetails LI .Param_Check
+            {
+                 float: left;
+                 margin-left:0px;
+            }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+ <div id='baseContent'>
+           <div id="pageMain" class="equipmentForm">
+             <div id='headerContent'>
+                    <div id="pagingControls">
+                    </div>
+                </div>
+             <div id='PageContent' class='pagesContainer PEE_Phil personalDataForm'>
+                    <div class="pageData">
+                        <div class="pageContent">
+                            <div class="pageDetails">
+                                <div class="pageHeader">
+                                         <p>Pre-Employment Physical Exam</p>
+                                </div>
+                              
+                                <ul class="personalDetails">
+                                    
+                               
+                               
+                                    <li style="width:25%"><label>Medical Center<span>*</span>:</label></li>
+                                    <li class="MCA_box"><input type="text" id="PPE_MC_txtbx" class="tbForm textMandatory" title="Medical Center" jqxb-datasource="FormDetails" jqxb-datamember="PreEmploymentExam.MedicalCenter"  style="float:left;" /></li>
+                                  
+                              
+                                    <li style="width:25%"><label id="MCA_lbl">Medical Center Address:</label></li>
+                                    <li><textarea id="PPE_MCA_txtarea" class="textareaMCA"  title="Medical Center Address" style="float:left;" jqxb-datasource="FormDetails" jqxb-datamember="PreEmploymentExam.MedicalCenterAddress" ></textarea></li>
+                                    <li>&emsp;</li> <li>&emsp;</li>
+                                    <li style="width:25%"><label id="Label1">Pre-Employment Examinations<span style="color:Red;">*</span>:</label></li>
+                                    <li style="height:105px;"><input type="checkbox" id="PEE_Complete_chkbx" jqxb-datasource="FormDetails" jqxb-datamember="PreEmploymentExam.PComplete" jqxb-bindedattribute="checked" class="Param_Check FormChkBx"  /><label>History and complete Physical Exam</label> <br /><br />
+                                    <input type="checkbox" id="PPE_Urinalysis_chkbx" jqxb-datasource="FormDetails" jqxb-datamember="PreEmploymentExam.PUrinalysis" jqxb-bindedattribute="checked" class="Param_Check FormChkBx"  /><label>Urinalysis</label> <br /><br />
+                                     <input type="checkbox" id="PPE_Fecalysis_chkbx" jqxb-datasource="FormDetails" jqxb-datamember="PreEmploymentExam.PFecalysis" jqxb-bindedattribute="checked"class="Param_Check FormChkBx"   /><label>Fecalysis</label> <br /><br />
+                                    <input type="checkbox" id="PPE_Blood_chkbx" jqxb-datasource="FormDetails" jqxb-datamember="PreEmploymentExam.PBloodCount" jqxb-bindedattribute="checked" class="Param_Check FormChkBx"  /><label>Complete Blood Count</label><br /><br />
+                                    <input type="checkbox" id="PPE_Chest_chkbx" jqxb-datasource="FormDetails" jqxb-datamember="PreEmploymentExam.PChestXRay" jqxb-bindedattribute="checked" class="Param_Check FormChkBx"   /><label>Chest x-ray</label><br /></li>
+                                      
+                                    <li>&emsp;</li>
+                                    <li >&emsp;</li>
+                                    <li>&emsp;</li>       
+                                    <li>&emsp;</li>
+                                    <li>&emsp;</li>
+                                    <li>&emsp;</li>
+                               
+                                    <li style="width:25%"><label>Exam Taken Date<span style="color:Red;">*</span>:</label></li>
+                                    <li class="MCA_box">
+                                    
+                                    
+                                    <input type="text" readonly="readonly" id="PPE_ExamDate_txtbx" jqxb-datasource="FormDetails" jqxb-datamember="PreEmploymentExam.TestTakenDate"  class="tbForm textMandatory date_field_from jqrydatepicker" title="Exam Taken Date"  style="float:left;margin-left:0px" /></li>
+                                  
+                                </ul>
+                              
+                             </div>
+                    </div>
+                    <div class="Signature" id="Sign_PageId_1">
+                    </div>
+                </div>
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+    <input type="hidden" runat="server" id="hdnMigrateCandidate" />
+</body>
+</html>
+

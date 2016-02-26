@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/" elementFormDefault="qualified" targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd2" namespace="http://onecognizant.cognizant.com/OnBoardingService/IntegrationServices/DataContracts/" />
+  <xs:import schemaLocation="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd3" namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" />
+  <xs:import schemaLocation="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd4" namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/" />
+  <xs:import schemaLocation="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" />
+  <xs:element name="SaveSANUploadDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://onecognizant.cognizant.com/OnBoardingService/IntegrationServices/DataContracts/" minOccurs="0" name="fileUpload" nillable="true" type="q1:SANUploadDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSANUploadDetailsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogException">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="errDetail" nillable="true" type="q2:ErrorDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogExceptionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/" minOccurs="0" name="sessionDetail" nillable="true" type="q3:SessionDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSessionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/" minOccurs="0" name="SetSessionResult" nillable="true" type="q4:SessionDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogEventData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="evntLog" nillable="true" type="q5:EventLog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogEventDataResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/" minOccurs="0" name="sessionDetail" nillable="true" type="q6:SessionDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="FetchRolesResult" nillable="true" type="q7:UserRolesContainer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="sysKey" nillable="true" type="q8:SystemKey" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemKeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="GetSystemKeyResult" nillable="true" type="q9:SystemKey" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPageAllowed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="pageAccess" nillable="true" type="q10:PageAccess" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPageAllowedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="IsPageAllowedResult" nillable="true" type="q11:PageAccess" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsSessionActive">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/" minOccurs="0" name="sessionDetail" nillable="true" type="q12:SessionDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsSessionActiveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsSessionActiveResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="messages" nillable="true" type="q13:Messages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="GetMessageResult" nillable="true" type="q14:Messages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExternalUserInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/" minOccurs="0" name="sessionDetail" nillable="true" type="q15:SessionDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExternalUserInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="GetExternalUserInfoResult" nillable="true" type="q16:UserInfoDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendNotificationMail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="objMail" nillable="true" type="q17:MailData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendNotificationMailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendNotificationMailResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="maildata" nillable="true" type="q18:MailData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendMailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailWithConfirmBoolStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="maildata" nillable="true" type="q19:MailData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailWithConfirmBoolStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendMailWithConfirmBoolStatusResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadAttachment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="objAttachments" nillable="true" type="q20:MailAttachment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadAttachmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UploadAttachmentResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMckinleyCategories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="mckinleyCategories" nillable="true" type="q21:MCkinleyDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMckinleyCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="GetMckinleyCategoriesResult" nillable="true" type="q22:MCkinleyDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFilterDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="sysKey" nillable="true" type="q23:SystemKey" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFilterDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="GetFilterDateResult" nillable="true" type="q24:SystemKey" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSurveyData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="surveyData" nillable="true" type="q25:SurveyDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSurveyDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="GetSurveyDataResult" nillable="true" type="q26:SurveyDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateECMFileUploadStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" minOccurs="0" name="objDocumentDetail" nillable="true" type="q27:VirtualDocumentDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateECMFileUploadStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateECMFileUploadStatusResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIDMRegistartionforRetry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/" minOccurs="0" name="sessionDetail" nillable="true" type="q28:SessionDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIDMRegistartionforRetryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateIDMRegistartionforRetryResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventMailContent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="getMailContent" nillable="true" type="q29:SendMail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventMailContentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="GetEventMailContentResult" nillable="true" type="q30:SendMail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUploadedDocName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="objDocName" nillable="true" type="q31:ECMDocument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUploadedDocNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveUploadedDocNameResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageMenuMappings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="objPageMenuMappingContract" nillable="true" type="q32:PageMenuMappingContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageMenuMappingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="GetPageMenuMappingsResult" nillable="true" type="q33:PageMenuMappingContainer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchUserAssignRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" minOccurs="0" name="objRoleAccessDC" nillable="true" type="q34:RoleAccessDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchUserAssignRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="FetchUserAssignRolesResult" nillable="true" type="q35:UserRolesAccessContainer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchActiveUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" minOccurs="0" name="objRoleAccessDC" nillable="true" type="q36:RoleAccessDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchActiveUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="FetchActiveUsersResult" nillable="true" type="q37:UserRolesAccessContainer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetRoleToAssociate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" minOccurs="0" name="objRoleAccessDC" nillable="true" type="q38:RoleAccessDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetRoleToAssociateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetRoleToAssociateResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCandidateStateAndLocationDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" minOccurs="0" name="candDetail" nillable="true" type="q39:StartDateAndLocationDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCandidateStateAndLocationDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateCandidateStateAndLocationDetailsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUploadList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="fileUpload" nillable="true" type="q40:UploadUtiltiyDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUploadListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUploadListResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUploadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="fileUpload" nillable="true" type="q41:UploadUtiltiyDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUploadResponseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveUploadResponseResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetECMUploadURL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="fileUpload" nillable="true" type="q42:UploadUtiltiyDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetECMUploadURLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetECMUploadURLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

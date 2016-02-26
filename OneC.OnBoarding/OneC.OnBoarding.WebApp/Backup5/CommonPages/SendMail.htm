@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../Styles/NHStyles.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../Scripts/Forms/CoreScripts/JSON.js" type="text/javascript"></script>
+    <script src="../Scripts/SendMail.js" type="text/javascript"></script>
+    <style type="text/css">
+        body {
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+            font-size: 72.5%;
+        }
+        input {
+            border: 1px solid grey;
+        }
+        .mailId label.mailType {
+            width: 60px;
+            display: table-cell;
+            float: left;
+            color: #fefefe;
+        }
+        .mailContent {
+            background-color: #3A3838;
+            margin: 6px 0 0 10px;
+            padding: 5px 0 0 5px;
+            width: 880px;
+            height: 560px;
+            line-height: 1.2;
+        }
+        .mailId {
+            height: 20px;
+        }
+        .mailId label.inputId {
+            width: 300px;
+            height: 20px;
+        }
+        textarea {
+            border: 1px solid #c2c5ba;
+            overflow: hidden;
+        }
+        #mailDescription {
+            width: 98%;
+            height: 350px;
+            overflow-y: scroll;
+            background-color: White;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        blockquote {
+            color: #fefefe;
+        }
+        div#mailFooter input {
+            height: 20px;
+            margin: 10px 0 10px 0;
+            width: 50px;
+            text-align: center;
+        }
+        .mailContent div#leftFrame {
+            width: 96.5%;
+            float: left;
+            background-color: #7F7C7C;
+            padding: 10px 0 0 10px;
+        }
+        .mailContent div#rightFrame {
+            display: none;
+        }
+        .btn_ {
+            height: 24px;
+            min-width: 42px;
+            cursor: pointer;
+            margin: 2px 0 4px 0;
+            padding: 0 4px 0 4px;
+            border: 1px solid #585555;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 2px;
+            background-color: #888888;
+        }
+    </style>
+    <style type="text/css">
+        .flt_lft {
+            float: left;
+        }
+        .clear {
+            clear: both;
+            width: 10px;
+            position: relative;
+        }
+        .underLine {
+            text-decoration: underline;
+        }
+        .numberList li {
+            list-style-type: decimal;
+            line-height: 1.5;
+        }
+        .width98 {
+            width: 98%;
+            position: relative;
+        }
+        .txtBold {
+            font-weight: bold;
+        }
+        ol,ul{
+            list-style-type:disc;
+            list-style-position:inside;
+            }
+    </style>    
+</head>
+<body>
+    <div class="mailContent">
+        <div id="leftFrame">
+            <div class="mailId">
+                <label for="from" class="mailType">
+                    From :&nbsp;&nbsp;</label><blockquote id="from" class="inputId">
+                        </blockquote>
+            </div>
+            <div class="mailId">
+                <label for="to" class="mailType">
+                    To :&nbsp;&nbsp;</label>
+                <blockquote id="to" class="inputId">
+                    </blockquote>
+            </div>
+            <div class="mailId">
+                <label for="to" class="mailType">
+                    Cc :&nbsp;&nbsp;</label>
+                <blockquote id="cc" class="inputId">
+                    </blockquote>
+            </div>
+            <div class="mailId" style="display:none;">
+                <label for="bcc" class="mailType">
+                    Bcc :&nbsp;&nbsp;</label>
+                <blockquote id="bcc" class="inputId">
+                    </blockquote>
+            </div>
+            <div class="mailId">
+                <label for="subject" class="mailType">
+                    Subject :&nbsp;&nbsp;</label>
+                <blockquote id="subject" class="inputId">
+                    </blockquote>
+            </div>
+            <div id="mailDescription" style = "position:relative;">
+            </div>
+            <div id="mailFooter">
+                <input type="submit" class="btn_" value="Send" id="PostSend" onclick="SendMail.PostQuery(0)" />
+                <input type="submit" class="btn_" value="Discard" onclick="SendMail.CloseWindow()" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

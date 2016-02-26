@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <!-- <script src="../Scripts/Forms/UK/PDFFormPopUp.js" type="text/javascript"></script>-->
+</head>
+<body>
+    <div id='baseContent'>
+        <div id="pageMain">
+            <br />
+            <div id='PageContent' class='contentF'>
+                <!--Start of 1st page-->
+                <div class="pageData" style="overflow: hidden; height: 750px;">
+                    <div class="pageContent" style="overflow: hidden; height: 650px;">
+                        <div class="pageHeader">
+                            <p id="Pg_1_p_headerName" />
+                        </div>
+                        <div class="pageDetails" style="overflow: hidden; height: 99%;">
+                             <div id="Manila_message1" style="font-size:10pt;color:Red;display: none;width:100%;height:20px;">
+                             *Please download the form, Print it on a hard copy, fill the required information and submit it to the HR Team on your Day of Joining with Cognizant.<br /> 
+                             </div>
+                             
+                            <input type="checkbox" style="float: left;" id="Pg_1_check_chkOffice" onclick="SaveTaskData(1);" />
+                            <div id="checkMsgState" style="display: none; font-size: 10pt;">
+                                Please check the box if you have submitted the form; or if a form is not required
+                                for the state in which you will work. Close the window to return to OneCognizant.
+                            </div>
+                            <div id="I9Msg" style="display: none; font-size: 10pt;">
+                                I acknowledge that I have reviewed the instructions form and will submit my I9 within
+                                3 days after my date of joining; if not, I understand I will be placed on LOP. Close
+                                the window to return to OneCognizant.
+                            </div>
+                            <div id="checkMsg" style="display: none; font-size: 10pt;">
+                                Please check the box if you have submitted the form. Close the window to return
+                                to OneCognizant.<br />
+                            </div>
+                            <div id="Manila_message2" style="display: none; font-size: 10pt;">
+                             Please check the box once you download it and close the window to return to the other Tasks.<br />
+                            </div>
+                            <iframe id="ifPopUp" width="99%" height="92%" scrolling="auto" style="z-index: -1000;">
+                                Hiii</iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/PDFMaster.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        try {
+            window.onbeforeunload = closeIt;
+            function closeIt() {
+                if (window.parent.opener != null) {
+                    window.parent.opener.disablePopup();
+                }
+                window.close();
+                if (openMode != 1) {
+                    if (window.opener != null) {
+                        window.opener.updateWithNewData();
+                    }
+                }
+            }
+            function disablePopup() {
+                //disables popup only if it is enabled
+
+                $("#overLay").hide();
+                $(".popupContactwrapper").hide();
+                popupStatus = 0;
+
+            }
+        }
+        catch (e)
+        { }
+    </script>
+</body>
+</html>

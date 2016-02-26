@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Default User Rights Form</title>
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+     <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/India/DefaultUserRights.js" type="text/javascript"></script>
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/BlueThemeGov.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div id="baseContent">
+        <div id="pageMain">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id="PageContent" class="pagesContainer">
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div style="margin-left: 21px;">
+                            <div class="page_text1" style="font-weight: bold; text-align: center; text-decoration: underline;">
+                                <br />
+                                <p>
+                                    DEFAULT USER RIGHTS ON COGNIZANT NETWORK
+                                </p>
+                            </div>
+                            <br />
+                            <p style="text-align: justify; color: #4a4a4a; font-size: 1.3em;">
+                                The high level guidelines for implementing desktop policy are outlined as follows.
+                                The associate is required to go through the below mentioned points and
+                            </p>
+                            <br />
+                            <p style="text-align: justify; color: #4a4a4a; font-size: 1.3em;">
+                                sign the rights document failing which a user id will not be provided:</p>
+                            <br />
+                            <p class="blueText space_b10" style="font-weight: bold; font-size: 1.6em; text-decoration: underline;">
+                                <span>Physical Access:</span>
+                            </p>
+                            <p style="text-align: justify; color: #4a4a4a; font-size: 1.3em;">
+                                Associates shall not be allowed to open or move the Computer System, for any reason.
+                            </p>
+                            <br />
+                            <p class="blueText space_b10" style="font-weight: bold; font-size: 1.6em; text-decoration: underline;">
+                                <span>Desktop BIOS settings:</span>
+                            </p>
+                            <br />
+                            <ol class="page_text1" style="margin-left: 30px; list-style-type: disc;">
+                                <li>
+                                    <p style="font-weight: bold;">
+                                        BIOS Setup Password:</p>
+                                    The BIOS Setup password shall be enforced on all desktop and only known to NSS personnel.
+                                </li>
+                                <li>
+                                    <p style="font-weight: bold;">
+                                        Power On /Boot Password:</p>
+                                    The Power-on password shall be enforced on all desktops. This will serve as a first
+                                    level access security for the desktops. </li>
+                                <li>
+                                    <p style="font-weight: bold;">
+                                        Booting process:</p>
+                                    <p>
+                                        Booting from active devices like CD-ROM, Floppy Drive, Boot ROM etc. shall be disabled.</p>
+                                </li>
+                            </ol>
+                            <p class="blueText space_b10" style="font-weight: bold; font-size: 1.6em; text-decoration: underline;">
+                                <span>User Level Access Rights:</span>
+                            </p>
+                            <ol class="page_text1" style="margin-left: 30px; list-style-type: disc;">
+                                <li>The Associate shall not be a part of the local Administrators/Power Users group.
+                                    Administrator access shall be removed from the desktop so that the Associate cannot
+                                    install any software or make any changes to the system settings.</li>
+                                <li>Associates shall not be permitted to share any folders in their machines.</li>
+                                <li>Associates shall be advised not to download technical literature / white papers,
+                                    shareware / freeware software tools etc. from the Internet.</li>
+                                <li>Associates shall not be allowed to change the basic settings like default IP Address,
+                                    Service Pack, System Partition, and Default Services etc.</li>
+                            </ol>
+                            <p class="blueText space_b10" style="font-weight: bold; font-size: 1.6em; text-decoration: underline;">
+                                <span>Standard Wallpaper & Screen Saver Implementation:</span>
+                            </p>
+                            <p style="text-align: justify; color: #4a4a4a; font-size: 1.3em;">
+                                The standard wallpaper & screen saver [designed by Cognizant] shall be enabled with
+                                password protection and an idle timeout of 5 minutes, to prevent
+                            </p>
+                            <br />
+                            <p style="text-align: justify; color: #4a4a4a; font-size: 1.3em;">
+                                unauthorized access.</p>
+                            <br />
+                            <p class="blueText space_b10" style="font-weight: bold; font-size: 1.6em; text-decoration: underline;">
+                                <span>Operating System Level Security:</span>
+                            </p>
+                            <p style="text-align: justify; color: #4a4a4a; font-size: 1.3em;">
+                                To avoid any misuse or unauthorized access, the following OS level restrictions
+                                shall be implemented by changing the appropriate registry values:
+                            </p>
+                            <br />
+                            <ol class="page_text1" style="margin-left: 30px; list-style-type: disc;">
+                                <li>Issuance of Anonymous User Accounts shall be restricted.</li>
+                                <li>Only Administrators shall be allowed to change/configure NT Base objects such as
+                                    files, printers and processes.</li>
+                                <li>Only Associates having valid user ID & password shall be allowed to log on to the
+                                    system.</li>
+                                <li>Automatic Logon shall be disabled.</li>
+                                <li>Caching of logon credentials shall be disabled.</li>
+                                <li>Names of previously logged-on users shall not be displayed in order to protect the
+                                    secrecy of user names.</li>
+                                <li>Only Administrators shall be allowed to use the scheduler service with the AT Command.</li>
+                                <li>The NT Page file shall be cleared on system shutdown to prevent a publicized attack
+                                    to use any information saved on the paging file.</li>
+                            </ol>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                <!--End of 1st page-->
+                <!--Start of 2nd page-->
+                <div class="pageData">
+                    <br />
+                    <div class="pageContent">
+                        <div style="margin-left: 21px;">
+                            <p class="blueText space_b10" style="font-weight: bold; font-size: 1.6em; text-decoration: underline;">
+                                <span>Protecting Floppies and CD-ROM Drives:</span>
+                            </p>
+                            <p style="text-align: justify; color: #4a4a4a; font-size: 1.3em;">
+                                Access to floppy disk or CD-ROM Drive shall be restricted to authorized users only.
+                            </p>
+                            <br />
+                            <p class="blueText space_b10" style="font-weight: bold; font-size: 1.6em; text-decoration: underline;">
+                                <span>Remote Access Services:</span>
+                            </p>
+                            <ol class="page_text1" style="margin-left: 30px; list-style-type: disc;">
+                                <li>Remote Access Services & Dial In Modem port shall be disabled to avoid any possibility
+                                    of remote access to the desktop from the network.</li>
+                                <li>Remote access tools like PCAnywhere, VNC, Damewhere etc. shall not be installed
+                                    on the desktops.</li>
+                            </ol>
+                            <p class="blueText space_b10" style="font-weight: bold; font-size: 1.6em; text-decoration: underline;">
+                                <u>Restricted Access for Shutdown:</u></p>
+                            <p style="text-align: justify; color: #4a4a4a; font-size: 1.3em;">
+                                Only the currently logged-in user and Administrators can shut down a workstation.</p>
+                            <br />
+                            <p class="blueText space_b10" style="font-weight: bold; font-size: 1.6em; text-decoration: underline;">
+                                <span>Remote Registry Access:</span>
+                            </p>
+                            <p style="text-align: justify; color: #4a4a4a; font-size: 1.3em;">
+                                Remote access to a workstation registry shall be restricted to Administrators only.</p>
+                            <br />
+                            <p class="blueText space_b10" style="font-weight: bold; font-size: 1.6em; text-decoration: underline;">
+                                <span>Internet Explorer Security Zone Settings:</span>
+                            </p>
+                            <p style="text-align: justify; color: #4a4a4a; font-size: 1.3em;">
+                                The IE Security Customization Package, which sets optimized security levels for
+                                all security zones and disables users from changing these settings,
+                            </p>
+                            <br />
+                            <p style="text-align: justify; color: #4a4a4a; font-size: 1.3em;">
+                                implemented.</p>
+                            <br />
+                            <p class="blueText space_b10" style="font-weight: bold; font-size: 1.6em; text-decoration: underline;">
+                                <span>Anti Virus:</span>
+                            </p>
+                            <p style="text-align: justify; color: #4a4a4a; font-size: 1.3em;">
+                                Anti-virus software shall be installed on all desktops by default and updated automatically
+                                on a regular basis.
+                            </p>
+                            <br />
+                            <p class="blueText space_b10" style="font-weight: bold; font-size: 1.6em; text-decoration: underline;">
+                                <span>Logon Message, Welcome Message and Announcements:</span>
+                            </p>
+                            <p style="text-align: justify; color: #4a4a4a; font-size: 1.3em;">
+                                The logon and welcome messages shall not contain any information that could aid
+                                unauthorized persons in gaining access to the system.
+                            </p>
+                            <br />
+                            <br />
+                            <p class="pageText">
+                                <label id="Pg_2_lbl_Name" style="padding-left: 5px">
+                                    Name :</label>
+                                <input class="inputText_Readonly" type="text" style="border: 1px solid #000" readonly="readonly"
+                                    id="Pg_2_text_Name" readonly="readonly" />
+                                <label id="Pg_2_lbl_Date" style="padding-left: 70px">
+                                    Date of Joining :</label>
+                                <input class="inputText_Readonly" type="text" style="border: 1px solid #000" readonly="readonly"
+                                    id="Pg_2_text_Date" readonly="readonly" />
+                            </p>
+                        </div>
+                        <div class="Signature" id="Sign_PageId_2">
+                        </div>
+                        <!--End of 2nd page-->
+                    </div>
+                </div>
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

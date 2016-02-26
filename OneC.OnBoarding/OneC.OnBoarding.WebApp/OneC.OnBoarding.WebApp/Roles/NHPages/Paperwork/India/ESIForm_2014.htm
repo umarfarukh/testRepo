@@ -1,0 +1,698 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/GratuityNominationForm.css" rel="stylesheet"
+        type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/India/ESIForm_2014.js" type="text/javascript"></script>
+    <style type="text/css">
+        .alert_f_text
+        {
+            width: 150px;
+            padding: 2px 0 0 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="baseContent">
+        <div id="pageMain" class="campusEsi">
+            <div id="headerContent">
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <!-- Start of 1st page -->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <ul style="width: 98%; float: left;">
+                            <li style="width: 270px; height: 90px; float: left; margin-left: 25px;">
+                                <img alt="ESIForm" width="97" height="90" src="../../../../Images/ESIForm_logo.JPG" />
+                            </li>
+                            <li style="width: 50%; height: 90px; float: left; font-size: 1.4em; font-weight: bold;
+                                text-align: center; padding-top: 20px;">
+                                <h1 style="color: #000; width: 100%; text-align: center;">
+                                    DECLARATION FORM</h1>
+                                
+                            </li>
+                            <li style="padding-top: 40px; width: 10%; float: right; font-weight: bold; text-align: center;">
+                                <h3 style="color: Black">
+                                    FORM – 1</h3>
+                            </li>
+                          
+                        </ul>
+                        <div class="pageDetails" style="width: 94%;">
+                        <ul style="font-size: 1.4em">
+                        <li>
+                        <p>To be filled by employee after reading instruction overleaf. Two Postcard Size phtographs to be attached with the</p>
+                            <p>form. This form is free of cost.</p></li>
+                        </ul>
+                            <ul class="header">
+                           
+                                <li>
+                                    <label>
+                                        &nbsp;A) Insured Persons Particulars</label></li>
+                            </ul>
+                            <ul class="personalDetails">
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <label for="insuranceForm">
+                                        1. Insurance Number :</label>
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <input type="text" id="insurance"  readonly="readonly" class="inputText_Readonly" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.InsuranceNo" />
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <label for="nameForm">
+                                        2. Name in block letters:</label>
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <input type="text" id="nameForm" readonly="readonly" class="inputText_Readonly" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="ESIForm.Name" />
+                                </li>
+                               
+                                <li >
+                                
+                                    <label for = "RelationShip_ForH">
+                                     3a. Father/Husband:
+                                     </label>
+                                     </li>
+                                    <li >
+                                     <select id="RelationShip_ForH" title="RelationShip_ForH" class="tbForm" name="RelationShip_ForH" style="margin-right: 60px; margin-left: 20px;" 
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.FatherOrHusband" jqxb-listsource="NewRelationshipList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                    </li>
+                                    <li>
+                                    <label for = "relationNameForm">
+                                     3b. Father/Husband Name:
+                                     </label>
+                                     </li>
+                                     <li>
+                                    <input type="text" id="relationNameForm"  class="tbForm" style="margin-right: 58px; "
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.RelationName" />
+                                       
+                                </li>
+                                
+                               
+                                <li>
+                                    <label for="dobForm">
+                                        4. Date Of Birth :</label>
+                                </li>
+                                <li>
+                                    <input type="text" class="inputText_Readonly" readonly="readonly" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="ESIForm.DateOfBirth" />
+                                </li>
+                                <li>
+                                    <label for="maritalStatusForm">
+                                        5. Marital Status</label>
+                                </li>
+                                <li>
+                                <input type="text" class="inputText_Readonly" readonly="readonly" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="ESIForm.MaritalStatus" />
+                        
+                        
+                                </li>
+                                <li>
+                                    <label>
+                                        6. Sex :</label>
+                                </li>
+                                <li>
+                                 <input type="text" class="inputText_Readonly" readonly="readonly" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="ESIForm.Gender" />
+                     
+                        
+                                </li>
+                                <li style="height: 40px;">
+                                    <label for="preAddressForm">
+                                        7. Present Address</label>
+                                </li>
+                                <li style="height: 40px;">
+                                    <textarea type="text" id="preAddressForm" readonly="readonly" class="inputText_Readonly"
+                                        style="height: 28px;" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.PresentAddress"></textarea>
+                                </li>
+
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <label for="insuranceForm">
+                                        7a. Pin Code :</label>
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+
+                                    <input type="text" title="Pin Code" id="Pin" class="tbForm textMandatory" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Pin1" style="border-right-width: 1px; margin-right: 60px;" />
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <label for="insuranceForm">
+                                        7b. Telephone :</label>
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <input type="text" id="telephone" class="inputText_Readonly1 OnlyNumeric" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Tel1" />
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <label for="insuranceForm">
+                                        7c. Mobile :</label>
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <input type="text" id="mobile" class="inputText_Readonly1 OnlyNumeric" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Mob1" maxlength="10" />
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <label for="insuranceForm">
+                                        7d. E-mail Address :</label>
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <input type="text" id="email" class="inputText_Readonly1" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Email1" />
+                                </li>
+
+                                <li style="height: 40px;">
+                                    <label>
+                                        8. Permanent Address</label>
+                                </li>
+                                <li style="height: 40px;">
+                                    <textarea type="text" class="inputText_Readonly" readonly="readonly" style="height: 28px;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.PermanentAddress"></textarea>
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <label for="insuranceForm">
+                                        8a. Pin Code:</label>
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <input type="text" title="Pin Code" id="pin2" class="tbForm textMandatory" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Pin2" style="border-right-width: 1px; margin-right: 60px;" />
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pageDetails" style="width: 94%;">
+                            <ul class="header">
+                                <li>
+                                    <label>
+                                        &nbsp;B) EMPLOYER’S PARTICULARS</label></li>
+                            </ul>
+                            <ul class="personalDetails">
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <label>
+                                        9. Employer’s Code No :
+                                    </label>
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <input type="text" class="inputText_Readonly" readonly="readonly" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="ESIForm.EmployersCode" />
+                                </li>
+                                <li>
+                                    <label>
+                                        10. Date of Appointment</label></li><li>
+                                            <input type="text" class="inputText_Readonly" readonly="readonly" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="ESIForm.DateOfApp" />
+                                        </li>
+                                <li style="height: 40px;">
+                                    <label>
+                                        11. Name & Address of the employer:</label></li><li style="height: 40px;">
+                                            <textarea class="tbForm" style="float: left; height: 30px;" type="text" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="ESIForm.AddressOfEmp"></textarea>
+                                        </li>
+
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <label for="insuranceForm">
+                                        11a. Pin Code :</label>
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <input type="text" title="Pin Code" id="pin3" class="inputText_Readonly1" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Pin3" />
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <label for="insuranceForm">
+                                        11b. Telephone :</label>
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <input type="text" id="telephone3" class="inputText_Readonly1 OnlyNumeric" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Tel2" />
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <label for="insuranceForm">
+                                        11c. Mobile :</label>
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <input type="text" id="mobile3" class="inputText_Readonly1 OnlyNumeric" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Mob2" maxlength="10" />
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <label for="insuranceForm">
+                                        11d. E-mail Address :</label>
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <input type="text" id="email3" class="inputText_Readonly1" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Email2" />
+                                </li>
+
+                                <li style="width: 89.7%; float: left; height: 100%;">
+                                    <label style="width: 100%; height: 100%;">
+                                        12. In case of any previous employment please fill up the details as under.
+                                    </label>
+                                    <ul class="personalDetails">
+                            
+                                        <li style="border-top: 1px solid #d4e7ef; height: 55px;"">
+                                            <label>
+                                                a. Previous Ins. No.:
+                                            </label>
+                                         
+                                        </li>
+                                        <li style="border-top: 1px solid #d4e7ef; height: 55px;">
+                                         <select id="PrvsInsNo" title="PreviousIDNo" class="tbForm " name="PreviousInsNo" style="margin-right: 15px; margin-left: 20px;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.PrvsInsYesorNo" jqxb-listsource="ApplicableorNo"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+
+                                            <input type="text" id="PrevsInsNo" class="tbForm OnlyNumeric" style="float: left; margin-right: 15px; margin-left: 3px; margin-top: 10px;" 
+                                            jqxb-datasource="FormDetails"
+                                                jqxb-datamember="ESIForm.PrevInsNo" />
+                                        </li>
+                                        <li style="border-top: 1px solid #d4e7ef; height: 55px;">
+                                            <label>
+                                                b. Empr’s Code No:
+                                            </label>
+                                        </li>
+                                         <li style="border-top: 1px solid #d4e7ef; height: 55px;">
+                                         <select id="EmpCodeNo" title="EmpCodeNo" class="tbForm" name="PreviousInsNo" style="margin-right: 15px; margin-left: 20px;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.EmpCodeYesorNo" jqxb-listsource="ApplicableorNo"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                        
+                                            <input type="text" class="tbForm OnlyNumeric" id="EmpCode"
+                                            style="float: left; margin-right: 15px; margin-left: 3px; margin-top: 10px;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="ESIForm.EmprsCode" />
+                                        </li>
+                                        <li style="height: 40px;">
+                                            <label>
+                                                c. Name & Address of the Employer</label></li><li style="height: 40px;">
+                                                    <textarea type="text" class="tbForm" style="float: left; height: 30px;" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="ESIForm.NameandAddress"></textarea>
+                                                </li>
+
+                                 <!--<li style="border-top: 1px solid #d4e7ef;">
+                                    <label for="insuranceForm">
+                                        d. Branch office :</label>
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <input type="text" id="Branchoffice" class="inputText_Readonly1" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Branch" />
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <label for="insuranceForm">
+                                        e. Dispensary :</label>
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef;">
+                                    <input type="text" id="dispansary" class="inputText_Readonly1" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Dispensary" />
+                                </li>-->
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>                       
+                    </div>
+                </div>
+                <!--End of 1st page-->
+                <!--Start of 2nd page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails" style="width: 94%; margin: 0 0 5px 5px;">
+                             <ul class="header">
+                                <li>
+                                    <label>
+                                        (C) Details of Nominee u/s 71 of ESI Act 1948/Rule-56(2) of ESI (Central) Rules, 1950 for payment of cash
+                                         benefit in the event of death.</label></li></ul>
+                            <ul class="details" style="border: 1px solid #d4e7ef; border-top: none; margin: 5px 0 5px 0;">
+                                <li class="brColor" style="height: 30px;">
+                                    <label>
+                                        Name</label></li>
+                                <li class="brColor" style="height: 30px;">
+                                    <label>
+                                        Relationship</label></li><li style="height: 30px; width: 33.27%">
+                                            <label>
+                                                Address, Mobile & Email</label></li>
+                                <li class="brColor" style="height: 50px;"><span>*</span><input id="NomineeName" type="text"
+                                    title='Name' class="tbForm textMandatory" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Details.Name" /></li>
+                                <li class="brColor" style="height: 50px;"><span>*</span><select id='RelationShip'
+                                    class="tbForm ddForm dropdown" title='Relation' jqxb-listsource="RelationshipList"
+                                    jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Details.Relation" jqxb-listvalue="ID"
+                                    jqxb-listtext="Description"></select></li><li style="width: 33.27%;"><span>*</span><textarea
+                                        id='Address' class="tbForm Alphanumeric onlyAlphanumeric" title='Address' onkeypress="RestrictCharCount(this.id,199)" allowchar="200"
+                                        style="height: 30px;" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Details.Address"></textarea></li>
+                            </ul>
+                            <br />
+                            <br />
+                               <div class="pageText">
+                               
+                        
+                               <ul>
+                               <li><p>I hereby declare that the particulars given by me are correct to the best of my knowledge and belief.</p>
+                        <p>I undertake to intimate the Corporation any changes in the membership of my family within 15 days of such change.</p>
+                         </li>
+                               <li>
+                            <p><img style="width: 330px; height: 50px; margin-top: 0px; margin-bottom: 0px; margin-left: 10px;
+                                                    " src="../../../../Images/Sign.png" />  </p> 
+                     
+                        <p>Counter signature by the employer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Signature/T.I. of IP</p>
+                        </li>
+                        <li></li>
+                        <br />
+                        <br />
+                        <li>
+                        <p>Seal : <img id="SealImgItaas" alt=""style="width: 120px; height: 80px;   margin-left: 10px;" />  </p> <br /></li>
+                        </ul>
+                        <br />
+                        </div>
+                            <ul class="header">
+                                <li>
+                                    <label>
+                                        (D) Family Particulars of Insured Person </label></li></ul>
+                            <ul class="persons">
+                                <li class="persons1">
+                                    <label>
+                                        Sl. No.</label></li>
+                                <li class="persons2">
+                                    <label>
+                                        Name
+                                    </label>
+                                </li>
+                                <li class="persons2">
+                                    <label>
+                                        Date of Birth/Age as on date of filling form</label>
+                                </li>
+                                <li class="persons2">
+                                    <label>
+                                        Relationship with the Employee
+                                    </label>
+                                </li>
+                                <li class="persons2">
+                                    <label>
+                                        Whether residing with him/her?</label>
+                                </li>
+                                <li class="persons3">
+                                    <label>
+                                        If 'No',state Place of Residence</label>
+                                    <div style="border: 1px solid #d4e7ef; height: 19px; margin-left: 5px;">
+                                        <div style="width: 40%; float: left; padding: 4px 0 0 20px; border-right: 1px solid #d4e7ef;">
+                                            TOWN</div>
+                                        <div style="padding: 4px 0 0 0px; width: 40%; float: left;">
+                                            STATE</div>
+                                    </div>
+                                </li>
+                                <li class="persons1">
+                                    <label>
+                                         1</label></li>
+                                <li class="persons2">
+                                    <!--    <input type="text" id="Name1" title="Name" class="tbForm textMandatory onlyAlp" style="margin-right: 4px;"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group1.Name" />
+                                                -->
+                                    <input type="text" id="Name1" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group1.Name"
+                                        class="tbForm  onlyAlp" maxlength="30" title="Name" style="margin-right: 4px;" />
+                                </li>
+                                <li class="persons2">
+                                    <div id="dobForm" class="tbForm" style="border: none; margin-bottom: 1px;">
+                                        <input type="text" title="Date Of Birth" id="date" class="tbForm " jqxb-datasource="FormDetails"
+                                            jqxb-datamember="ESIForm.Group1.DateOfBirth" style="float: left; width: 68%;
+                                            margin-right: 1%; margin-top: -1px;" readonly="readonly" />
+                                        <br />
+                                        <br />
+                                        <strong style="font-size: x-small; font-weight: bold; float: left;">(MM/DD/YYYY)</strong>
+                                    </div>
+                                </li>
+                                <li class="persons2">
+                                    <select id="fRelation1" title="Relation" class="tbForm ddForm " name="RelationShip"
+                                        style="margin-right: 4px;" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group1.RelationShip"  jqxb-listsource="RelationshipList"
+                                        jqxb-listvalue="Description" jqxb-listtext="Description">
+                                        
+                                    </select></li>
+                                <li class="persons2">
+                                    <p style="padding-top: 5px;">
+                                        <input type="radio" name="Residing" class="Residing1" id="Yes1" value="yes" style="vertical-align: bottom;"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group1.ResidingY" jqxb-bindedattribute="checked"
+                                            onclick="Residing(this,Residing1);" />
+                                        Yes &nbsp;
+                                        <input type="radio" name="Residing1" id="No1" class="Residing1" value="no" style="vertical-align: bottom;"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group1.ResidingN" jqxb-bindedattribute="checked"
+                                            onclick="Residing(this,Residing1);" />
+                                        No
+                                    </p>
+                                </li>
+                                <li class="persons3">&nbsp;<div id="Residing1" class="tbForm" style="border: none;
+                                    width: 80%; height: 25px; margin: -2px 0 -20px 0;">
+                                    <input type="text" id="Town1" title="Town" maxlength="45" class="tbForms onlyAlp Res "
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group1.Town" disabled="disabled" />&nbsp;&nbsp;
+                                    <input type="text" maxlength="45" id="State1" title="State" class="tbForms onlyAlp Res "
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group1.State" disabled="disabled" /></div>
+                                </li>
+                                <li class="persons1">
+                                    <label>
+                                        2</label></li>
+                                <li class="persons2">
+                                    <input type="text" id="Name2" title="Name" class="tbForm  onlyAlp" style="margin-right: 4px;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group2.Name" /></li>
+                                <li class="persons2">
+                                    <div id="Div3" class="tbForm" style="border: none; margin-bottom: 1px;">
+                                        <input type="text" title="Date Of Birth" id="Text6" class="tbForm " jqxb-datasource="FormDetails"
+                                            jqxb-datamember="ESIForm.Group2.DateOfBirth" readonly="readonly" style="float: left;
+                                            width: 68%; margin-right: 1%; margin-top: -1px;" />
+                                        <br />
+                                        <br />
+                                        <strong style="font-size: x-small; font-weight: bold; float: left;">(MM/DD/YYYY)</strong>
+                                    </div>
+                                </li>
+                                <li class="persons2">
+                                    <select id="Select2" title="Relation" class="tbForm ddForm" name="RelationShip"
+                                        style="margin-right: 4px;" jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group2.RelationShip"  jqxb-listsource="RelationshipList"
+                                        jqxb-listvalue="Description" jqxb-listtext="Description">
+                                        
+                                    </select></li>
+                                <li class="persons2">
+                                    <p style="padding-top: 5px;">
+                                        <input type="radio" name="Residing2" class="Residing2" id="Yes2" value="yes" style="vertical-align: bottom;"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group2.ResidingY" jqxb-bindedattribute="checked"
+                                            onclick="Residing(this,Residing2);" />
+                                        Yes &nbsp;
+                                        <input type="radio" name="Residing2" class="Residing2" id="No2" value="no" style="vertical-align: bottom;"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group2.ResidingN" jqxb-bindedattribute="checked"
+                                            onclick="Residing(this,Residing2);" />
+                                        No
+                                    </p>
+                                </li>
+                                <li class="persons3">&nbsp;<div id="Residing2" class="tbForm" style="border: none;
+                                    width: 80%; height: 25px; margin: -2px 0 -20px 0;">
+                                    <input type="text" id="Text9" title="Town" maxlength="45" class="tbForms onlyAlp Res "
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group2.Town" disabled="disabled" />&nbsp;&nbsp;<input
+                                            type="text" maxlength="45" id="Text10" class="tbForms onlyAlp Res " jqxb-datasource="FormDetails"
+                                            jqxb-datamember="ESIForm.Group2.State" disabled="disabled" /></div>
+                                </li>
+                                <li class="persons1">
+                                    <label>
+                                        3</label></li>
+                                <li class="persons2">
+                                    <input type="text" id="Name3" title="Name" class="tbForm  onlyAlp" style="margin-right: 4px;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group3.Name" /></li>
+                                <li class="persons2">
+                                    <div id="Div4" class="tbForm" style="border: none; margin-bottom: 1px;">
+                                        <input type="text" title="DateOfBirth" id="Text1" class="tbForm" readonly="readonly"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group3.DateOfBirth" style="float: left;
+                                            width: 68%; margin-right: 1%; margin-top: -1px;" />
+                                        <br />
+                                        <br />
+                                        <strong style="font-size: x-small; font-weight: bold; float: left;">(MM/DD/YYYY)</strong>
+                                    </div>
+                                </li>
+                                <li class="persons2">
+                                    <select id="Select1" title="Relation" class="tbForm ddForm" name="RelationShip" style="margin-right: 4px;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group3.RelationShip" jqxb-listsource="RelationshipList"
+                                        jqxb-listvalue="Description" jqxb-listtext="Description">
+                                    </select></li>
+                                <li class="persons2">
+                                    <p style="padding-top: 5px;">
+                                        <input type="radio" name="Residin3g" class="Residing3" id="Yes3" value="yes" style="vertical-align: bottom;"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group3.ResidingY" jqxb-bindedattribute="checked"
+                                            onclick="Residing(this,Residing3);" />
+                                        Yes &nbsp;
+                                        <input type="radio" name="Residing3" class="Residing3" id="No3" value="no" style="vertical-align: bottom;"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group3.ResidingN" jqxb-bindedattribute="checked"
+                                            onclick="Residing(this,Residing3);" />
+                                        No
+                                    </p>
+                                </li>
+                                <li class="persons3">&nbsp;<div id="Residing3" class="tbForm" style="border: none;
+                                    width: 80%; height: 25px; margin: -2px 0 -20px 0;">
+                                    <input type="text" id="Text7" title="Town" maxlength="45" class="tbForms onlyAlp Res"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group3.Town" disabled="disabled" />&nbsp;&nbsp;<input
+                                            type="text" maxlength="45" id="Text8" class="tbForms onlyAlp Res" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="ESIForm.Group3.State" disabled="disabled" /></div>
+                                </li>
+                                <li class="persons1">
+                                    <label>
+                                        4</label></li>
+                                <li class="persons2">
+                                    <input type="text" id="Name4" title="Name" class="tbForm  onlyAlp" style="margin-right: 4px;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group4.Name" /></li>
+                                <li class="persons2">
+                                    <div id="Div1" class="tbForm" style="border: none; margin-bottom: 1px;">
+                                        <input type="text" title="DateOfBirth" id="Text4" class="tbForm" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="ESIForm.Group4.DateOfBirth" style="float: left; width: 68%;
+                                            margin-right: 1%; margin-top: -1px;" readonly="readonly" />
+                                        <br />
+                                        <br />
+                                        <strong style="font-size: x-small; font-weight: bold; float: left;">(MM/DD/YYYY)</strong>
+                                    </div>
+                                </li>
+                                <li class="persons2">
+                                    <select id="Select3" title="Relation" class="tbForm ddForm" name="RelationShip" style="margin-right: 4px;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group4.RelationShip" jqxb-listsource="RelationshipList"
+                                        jqxb-listvalue="Description" jqxb-listtext="Description">
+                                    </select></li>
+                                <li class="persons2">
+                                    <p style="padding-top: 5px;">
+                                        <input type="radio" name="Residing4" class="Residing4" id="Yes4" value="yes" style="vertical-align: bottom;"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group4.ResidingY" jqxb-bindedattribute="checked"
+                                            onclick="Residing(this,Residing4);" />
+                                        Yes &nbsp;
+                                        <input type="radio" name="Residing4" class="Residing4" id="No4" value="no" style="vertical-align: bottom;"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group4.ResidingN" jqxb-bindedattribute="checked"
+                                            onclick="Residing(this,Residing4);" />
+                                        No
+                                    </p>
+                                </li>
+                                <li class="persons3">&nbsp;<div id="Residing4" class="tbForm" style="border: none;
+                                    width: 80%; height: 25px; margin: -2px 0 -20px 0;">
+                                    <input type="text" id="Textt4" title="Town" maxlength="45" class="tbForms onlyAlp Res"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group4.Town" disabled="disabled" />&nbsp;&nbsp;<input
+                                            type="text" maxlength="45" id="Text5" class="tbForms onlyAlp Res" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="ESIForm.Group4.State" disabled="disabled" /></div>
+                                </li>
+                                <li class="persons1">
+                                    <label>
+                                        5</label></li>
+                                <li class="persons2">
+                                    <input type="text" id="Text3" title="Name" class="tbForm  onlyAlp" style="margin-right: 4px;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group5.Name" /></li>
+                                <li class="persons2">
+                                    <div id="Div7" class="tbForm" style="border: none; margin-bottom: 1px;">
+                                        <input type="text" title="DateOfBirth" id="Text11" class="tbForm" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="ESIForm.Group5.DateOfBirth" style="float: left; width: 68%;
+                                            margin-right: 1%; margin-top: -1px;" readonly="readonly" />
+                                        <br />
+                                        <br />
+                                        <strong style="font-size: x-small; font-weight: bold; float: left;">(MM/DD/YYYY)</strong>
+                                    </div>
+                                </li>
+                                <li class="persons2">
+                                    <select id="Select4" title="Relation" class="tbForm ddForm" name="RelationShip" style="margin-right: 4px;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group5.RelationShip" jqxb-listsource="RelationshipList"
+                                        jqxb-listvalue="Description" jqxb-listtext="Description">
+                                    </select></li>
+                                <li class="persons2">
+                                    <p style="padding-top: 5px;">
+                                        <input type="radio" name="Residing5" class="Residing5" id="Yes5" value="yes" style="vertical-align: bottom;"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group5.ResidingY" jqxb-bindedattribute="checked"
+                                            onclick="Residing(this,Residing5);" />
+                                        Yes &nbsp;
+                                        <input type="radio" name="Residing5" class="Residing5" id="No5" value="no" style="vertical-align: bottom;"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group5.ResidingN" jqxb-bindedattribute="checked"
+                                            onclick="Residing(this,Residing5);" />
+                                        No
+                                    </p>
+                                </li>
+                                <li class="persons3">&nbsp;<div id="Residing5" class="tbForm" style="border: none;
+                                    width: 80%; height: 25px; margin: -2px 0 -20px 0;">
+                                    <input type="text" id="Text12" title="Town" maxlength="45" class="tbForms onlyAlp Res"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group5.Town" disabled="disabled" />&nbsp;&nbsp;<input
+                                            type="text" maxlength="45" id="Text13" class="tbForms onlyAlp Res" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="ESIForm.Group5.State" disabled="disabled" /></div>
+                                </li>
+                                <li class="persons1">
+                                    <label>
+                                        6</label></li>
+                                <li class="persons2">
+                                    <input type="text" id="Text14" title="Name" class="tbForm  onlyAlp" style="margin-right: 4px;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group6.Name" /></li>
+                                <li class="persons2">
+                                    <div id="Div9" class="tbForm" style="border: none; margin-bottom: 1px;">
+                                        <input type="text" title="DateOfBirth" id="Text15" class="tbForm" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="ESIForm.Group6.DateOfBirth" style="float: left; width: 68%;
+                                            margin-right: 1%; margin-top: -1px;" />
+                                        <strong style="font-size: x-small; font-weight: bold; float: left;">(MM/DD/YYYY)</strong>
+                                    </div>
+                                </li>
+                                <li class="persons2">
+                                    <select id="Select5" title="Relation" class="tbForm ddForm" name="RelationShip" style="margin-right: 4px;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group6.RelationShip" jqxb-listsource="RelationshipList"
+                                        jqxb-listvalue="Description" jqxb-listtext="Description">
+                                    </select></li>
+                                <li class="persons2">
+                                    <p style="padding-top: 5px;">
+                                        <input type="radio" name="Residing6" class="Residing6" id="Yes6" value="yes" style="vertical-align: bottom;"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group6.ResidingY" jqxb-bindedattribute="checked"
+                                            onclick="Residing(this,Residing6);" />
+                                        Yes &nbsp;
+                                        <input type="radio" name="6" class="Residing6" id="No6" value="no" style="vertical-align: bottom;"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group6.ResidingN" jqxb-bindedattribute="checked"
+                                            onclick="Residing(this,Residing6);" />
+                                        No
+                                    </p>
+                                </li>
+                                <li class="persons3">&nbsp;<div id="Residing6" class="tbForm" style="border: none;
+                                    width: 80%; height: 25px; margin: -2px 0 -20px 0;">
+                                    <input type="text" id="Text16" title="Town" maxlength="45" class="tbForms onlyAlp Res"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group6.Town" disabled="disabled" />&nbsp;&nbsp;<input
+                                            type="text" id="Text17" maxlength="45" title="State" class="tbForms onlyAlp Res"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="ESIForm.Group6.State" disabled="disabled" /></div>
+                                </li>
+                               
+                            </ul>
+                            <br />
+                            <br />
+                             <div class="pageText">
+                             
+                        <ul>
+                        <li>
+                        <center><h3 style="color: Black">
+                                    INSTRUCTIONS</h3></center></li>
+                        </ul>
+                        
+                        <br />
+
+                        <ol>
+                        <li>1) Submission of Form-I is governed by regulation 11 & 12 of ESI (General) Regulations, 1950</li>
+                        <br />
+                        <li>2)  Family means all or any of the following relatives of an Insured Person namely:-<br />
+                                (i) a spouse (ii) a minor legitimate or adopted child dependant upon the I.P.; (iii) a child who is wholly dependant on the
+                            earnings of the I.P.  and who is (a) receiving education, till he or she attains the age of 21 years (b) an unmarried daughter;
+                            (iv) a child who is infirm by reason of any physcial or mental abnormality or injury and is wholly dependant on the earnings
+                            of the I.P. so long as the infirmity continues; (v) dependant parents (Please see Section 2 clause 11 of the ESI Act 1948 for
+                               details.</li>
+                            <br />
+                        <li>3)  Identity Card is Non-Transferable.</li>
+                        <br />
+                        <li>4)  Loss of Identity Card be reported to Employer/Branch Manager immediately.</li>
+                        <br />
+                        <li>5)  Submission of false information attracts penal action Under Section 84 of ESI Act. 1948.</li>
+                        <br />
+                        <li>6)  This form duly filled in must reach the concerned Branch Office within 10 days of appointment of an Employee. Delay
+                                attracts penal action under Section 85 of the Act, against employer.</li>
+                            <br />
+                        <li>7) As an insured person you and your dependant family membes are entitled to full medical care. The other benefits in cash
+                                include<br />(1) Sickness Benefit (2) Temporary Disablement benefit (3) Permanent disablement Benefit (4) Dependants benefit
+                                and (5) Maternity Benefit (in case of woman  employees) subject of fulfillment of contributory cnditions.</li>
+                             <br />
+                        <li>8) For more details please contact website of ESIC at www. esic.org. in. or contact Regional Office or Branch Office.</li>
+                        </ol>
+                            
+
+                        </div>
+
+                        </div>
+
+                       
+
+                    </div>
+                </div>
+                <!--End of 2nd page-->
+            </div>
+            <div id='footerContent'>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

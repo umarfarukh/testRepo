@@ -1,0 +1,2753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BFD0A200-1830-4518-9D67-966EB70BCF08}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OneC.OnBoarding.WebApp</RootNamespace>
+    <AssemblyName>OneC.OnBoarding.WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CTS.OneC.PlatFormServiceWrapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=215eac86648239ea, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExternalReferences\CTS.OneC.PlatFormServiceWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="CTS.OneCognizant.Platform.CoreServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d22e7947834d2e0c, processorArchitecture=MSIL" />
+    <Reference Include="ECMSharedServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c2ab7723f49eee55, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp, Version=3.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Exchange.WebServices, Version=14.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="SANSharedServicesLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=923962cc37be725b, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\SAN Services\ECM SS\01_Development\Source\SANSharedServicesLibrary\SANSharedLib\DLLsForSAN\Latest DLL\SANSharedServicesLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="wnvhtmlconvert, Version=6.1.0.0, Culture=neutral, PublicKeyToken=5b5f377bc08a4d32, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccessBlock.aspx" />
+    <Content Include="BGVService.aspx" />
+    <Content Include="CommonPages\DownTime.aspx" />
+    <Content Include="CommonPages\FAQ.htm" />
+    <Content Include="CommonPages\InterApp.aspx" />
+    <Content Include="CommonPages\IpAddressTracking.htm" />
+    <Content Include="CommonPages\PDFMaster.htm" />
+    <Content Include="CommonPages\PostQuery.htm" />
+    <Content Include="CommonPages\OnBoardingContent.aspx" />
+    <Content Include="CommonPages\PopUp.aspx" />
+    <Content Include="CommonPages\RoleAccessStyle.css" />
+    <Content Include="CommonPages\SendMail.htm" />
+    <Content Include="CommonPages\SessionMaintainer.aspx" />
+    <Content Include="CommonPages\UploadFile.aspx" />
+    <Content Include="CommonPages\UploadFileDashboard.aspx" />
+    <Content Include="CommonPages\UploadFileDashboardWithResponse.aspx" />
+    <Content Include="CommonPages\UploadUtility.aspx" />
+    <Content Include="DashboardService.aspx" />
+    <Content Include="ExperianModule\add_proxy.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExperianModule\jState.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExperianModule\onPremise.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExperianModule\qas.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExperianModule\qasConfig.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExperianModule\qas_proxy.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExperianModule\qas_test.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExperianModule\targus_proxy.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExperianModule\td_proxy.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Experian\Typedown\common.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Experian\Typedown\index.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Experian\Typedown\Qas.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Experian\Typedown\Qas.UI.MultiDPCtrl.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Experian\Typedown\rapid.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Experian\Typedown\RapidAddress.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Experian\Typedown\RapidPicklist.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Experian\Typedown\RapidSearch.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Experian\Typedown\style.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExternalReferences\CTS.OneC.PlatFormServiceWrapper.dll" />
+    <Content Include="ExternalReferences\CTS.OneCognizant.Platform.CoreServices.dll" />
+    <Content Include="ExternalReferences\ECMSharedServicesLib.dll" />
+    <Content Include="ExternalReferences\Microsoft.Exchange.WebServices.dll" />
+    <Content Include="ExternalReferences\SANSharedServicesLibrary.dll" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\1pxTransparent.gif" />
+    <Content Include="Images\2013year.png" />
+    <Content Include="Images\Alberta.png" />
+    <Content Include="Images\AtishMitra.jpg" />
+    <Content Include="Images\Bgv\add_btn.png" />
+    <Content Include="Images\Bgv\add_Component.png" />
+    <Content Include="Images\Bgv\add_Institution.png" />
+    <Content Include="Images\Bgv\add_NewComponent.png" />
+    <Content Include="Images\Bgv\add_qual.png" />
+    <Content Include="Images\Bgv\apply_btn.png" />
+    <Content Include="Images\Bgv\bg.png" />
+    <Content Include="Images\Bgv\bgvsettings.png" />
+    <Content Include="Images\Bgv\bg_midhead.png" />
+    <Content Include="Images\Bgv\bg_midwrapper.png" />
+    <Content Include="Images\Bgv\btn_blue.png" />
+    <Content Include="Images\Bgv\btn_image.png" />
+    <Content Include="Images\Bgv\button_bg.png" />
+    <Content Include="Images\Bgv\calendar.png" />
+    <Content Include="Images\Bgv\Cancel_button.png" />
+    <Content Include="Images\Bgv\cand_nav_sprite.jpg" />
+    <Content Include="Images\Bgv\checked.png" />
+    <Content Include="Images\Bgv\clear_btn.png" />
+    <Content Include="Images\Bgv\collapse.png" />
+    <Content Include="Images\Bgv\completed.png" />
+    <Content Include="Images\Bgv\complete_verification.png" />
+    <Content Include="Images\Bgv\delete_button.png" />
+    <Content Include="Images\Bgv\download_btn.png" />
+    <Content Include="Images\Bgv\Edit_button.png" />
+    <Content Include="Images\Bgv\expand.png" />
+    <Content Include="Images\Bgv\header_1.png" />
+    <Content Include="Images\Bgv\header_bg.png" />
+    <Content Include="Images\Bgv\incomplete.png" />
+    <Content Include="Images\Bgv\inner_bg.png" />
+    <Content Include="Images\Bgv\in_progress.png" />
+    <Content Include="Images\Bgv\left_brd.png" />
+    <Content Include="Images\Bgv\menu_bg.png" />
+    <Content Include="Images\Bgv\menu_bg_left.png" />
+    <Content Include="Images\Bgv\menu_bg_normal.png" />
+    <Content Include="Images\Bgv\menu_bg_right.png" />
+    <Content Include="Images\Bgv\menu_bg_selected.png" />
+    <Content Include="Images\Bgv\menu_nav.png" />
+    <Content Include="Images\Bgv\mid_brd.png" />
+    <Content Include="Images\Bgv\nav_bg_selected.png" />
+    <Content Include="Images\Bgv\pointer.png" />
+    <Content Include="Images\Bgv\popup_btm.png" />
+    <Content Include="Images\Bgv\proceed_btn.png" />
+    <Content Include="Images\Bgv\request_docs.png" />
+    <Content Include="Images\Bgv\required.png" />
+    <Content Include="Images\Bgv\right_brd.png" />
+    <Content Include="Images\Bgv\save_proceed.png" />
+    <Content Include="Images\Bgv\search_inner_bg.png" />
+    <Content Include="Images\Bgv\selected_menu_bg.png" />
+    <Content Include="Images\Bgv\select_bg.png" />
+    <Content Include="Images\Bgv\select_bx.png" />
+    <Content Include="Images\Bgv\select_bx_bg.png" />
+    <Content Include="Images\Bgv\select_page.png" />
+    <Content Include="Images\Bgv\txt_bx_bg.png" />
+    <Content Include="Images\Bgv\unchecked.png" />
+    <Content Include="Images\Bgv\upload.png" />
+    <Content Include="Images\Bgv\uploadutility.png" />
+    <Content Include="Images\Bgv\verification.png" />
+    <Content Include="Images\Bgv\verification_small.png" />
+    <Content Include="Images\bg_Tab.jpg" />
+    <Content Include="Images\BlueLine.png" />
+    <Content Include="Images\brunswick.png" />
+    <Content Include="Images\btn1.png" />
+    <Content Include="Images\btnAdd.jpeg" />
+    <Content Include="Images\btnRemove.jpeg" />
+    <Content Include="Images\Calender_NAPayRoll.png" />
+    <Content Include="Images\Call-outApproved.gif" />
+    <Content Include="Images\Call-outPending.gif" />
+    <Content Include="Images\Call_out.gif" />
+    <Content Include="Images\CalPrev.png" />
+    <Content Include="Images\CognizantLogo_USOfferEXempt.jpg" />
+    <Content Include="Images\Cognizant_Cmm_Pract.jpg" />
+    <Content Include="Images\Cognizant_IME.jpg" />
+    <Content Include="Images\Cognizant_IT_Infra_Servs.png" />
+    <Content Include="Images\Cognizant_Logo.jpg" />
+    <Content Include="Images\Cognizant_Logo_INDIA_Candidate_Details_Sheet.jpg" />
+    <Content Include="Images\cognizant_logo_ndas.gif" />
+    <Content Include="Images\Cog_Logo_Canada.jpg" />
+    <Content Include="Images\ctslogo1.jpg" />
+    <Content Include="Images\Deactivate.png" />
+    <Content Include="Images\Download_Buton.png" />
+    <Content Include="Images\EDOJ2.jpg" />
+    <Content Include="Images\EDOJ2_new.jpg" />
+    <Content Include="Images\Excel2.jpg" />
+    <Content Include="Images\ExcelNew.jpg" />
+    <Content Include="Images\formbackground.png" />
+    <Content Include="Images\formheader.png" />
+    <Content Include="Images\home-bg-MandA.png" />
+    <Content Include="Images\home.png" />
+    <Content Include="Images\icon-downtime.png" />
+    <Content Include="Images\Img_Post_query-Absenden.png" />
+    <Content Include="Images\Indlogos\CorelogicSeal.png" />
+    <Content Include="Images\Indlogos\EDRSEAL.png" />
+    <Content Include="Images\Indlogos\ItaasSEAL.png" />
+    <Content Include="Images\Indlogos\UBS_SEAL.png" />
+    <Content Include="Images\Indlogos\VSISEAL.png" />
+    <Content Include="Images\Itaas_LOGO.JPG" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logo_1c.png" />
+    <Content Include="Images\logo_ctsonboardingform.gif" />
+    <Content Include="Images\logo_ctsonboardingform.jpg" />
+    <Content Include="Images\logo_ctsonboarding_form_new.png" />
+    <Content Include="Images\logo_revenue_quebec.PNG" />
+    <Content Include="Images\logo_NoticeMedicalElection.png" />
+    <Content Include="Images\NACall-out.gif" />
+    <Content Include="Images\NAEDOJInfoImg.jpg" />
+    <Content Include="Images\navi-banner.jpg" />
+    <Content Include="Images\NewNACall-out.gif" />
+    <Content Include="Images\NHView.JPG" />
+    <Content Include="Images\Novasco.png" />
+    <Content Include="Images\OBMailer_Cognizant_Logo_Footer_CAS.png" />
+    <Content Include="Images\OBMailer_Cognizant_Logo_Header.png" />
+    <Content Include="Images\PFDeclarationIndia.jpg" />
+    <Content Include="Images\popup_close.png" />
+    <Content Include="Images\post_query_btn.png" />
+    <Content Include="Images\QuickLinks.png" />
+    <Content Include="Images\RelocationAssistance\bg_contentwrp.png" />
+    <Content Include="Images\RelocationAssistance\bg_inner.jpg" />
+    <Content Include="Images\RelocationAssistance\bg_midhead.png" />
+    <Content Include="Images\RelocationAssistance\bg_midwrapper.png" />
+    <Content Include="Images\RelocationAssistance\bg_wrapper.jpg" />
+    <Content Include="Images\RelocationAssistance\bg_wrapper222.jpg" />
+    <Content Include="Images\RelocationAssistance\btn_blue.png" />
+    <Content Include="Images\RelocationAssistance\btn_image.png" />
+    <Content Include="Images\RelocationAssistance\btn_search.jpg" />
+    <Content Include="Images\RelocationAssistance\close_btn.png" />
+    <Content Include="Images\RelocationAssistance\contact_bg.png" />
+    <Content Include="Images\RelocationAssistance\contact_close.png" />
+    <Content Include="Images\RelocationAssistance\contact_footer.png" />
+    <Content Include="Images\RelocationAssistance\contact_header.png" />
+    <Content Include="Images\RelocationAssistance\icon.png" />
+    <Content Include="Images\RelocationAssistance\icontab_abtcity.png" />
+    <Content Include="Images\RelocationAssistance\icon_abtcity.png" />
+    <Content Include="Images\RelocationAssistance\icon_addinfo.png" />
+    <Content Include="Images\RelocationAssistance\icon_close.png" />
+    <Content Include="Images\RelocationAssistance\icon_coginurcity.png" />
+    <Content Include="Images\RelocationAssistance\icon_entercity.png" />
+    <Content Include="Images\RelocationAssistance\icon_impononser.png" />
+    <Content Include="Images\RelocationAssistance\icon_reachingthere.png" />
+    <Content Include="Images\RelocationAssistance\icon_setlingdown.png" />
+    <Content Include="Images\RelocationAssistance\icon_travelwithin.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_accod.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_accod_hover.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_byair.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_byair_hover.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_byroad.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_byroad_hover.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_bysea.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_bysea_hover.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_bytrain.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_bytrain_hover.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_cogloc.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_cogloc_hover.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_lang.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_lang_hover.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_loclimate.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_loclimate_hover.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_season.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_season_hover.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_trainingloc.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_trainingloc_hover.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_writeup.png" />
+    <Content Include="Images\RelocationAssistance\lcontab_writeup_hover.png" />
+    <Content Include="Images\RelocationAssistance\logo_top.png" />
+    <Content Include="Images\RelocationAssistance\logo_top_icon.png" />
+    <Content Include="Images\RelocationAssistance\map_india.png" />
+    <Content Include="Images\RelocationAssistance\next.png" />
+    <Content Include="Images\RelocationAssistance\popup_btm.png" />
+    <Content Include="Images\RelocationAssistance\popup_content_bg.png" />
+    <Content Include="Images\RelocationAssistance\popup_head.png" />
+    <Content Include="Images\RelocationAssistance\pop_bg1.png" />
+    <Content Include="Images\RelocationAssistance\prev.png" />
+    <Content Include="Images\RelocationAssistance\s1_map.png" />
+    <Content Include="Images\RelocationAssistance\s1_navigation.png" />
+    <Content Include="Images\RelocationAssistance\s1_txt_triggeronboard.png" />
+    <Content Include="Images\RelocationAssistance\s2_navigation - Copy.png" />
+    <Content Include="Images\RelocationAssistance\s2_navigation.png" />
+    <Content Include="Images\RelocationAssistance\s2_navigation_hover.png" />
+    <Content Include="Images\RelocationAssistance\s2_pointer_left - Copy.png" />
+    <Content Include="Images\RelocationAssistance\s2_pointer_left.png" />
+    <Content Include="Images\RelocationAssistance\s2_pointer_mid.png" />
+    <Content Include="Images\RelocationAssistance\s2_pointer_rgt.png" />
+    <Content Include="Images\RelocationAssistance\tab_left.png" />
+    <Content Include="Images\RelocationAssistance\tab_lefttop - Copy.png" />
+    <Content Include="Images\RelocationAssistance\tab_lefttop.png" />
+    <Content Include="Images\RelocationAssistance\tab_lefttop_selected.png" />
+    <Content Include="Images\RelocationAssistance\tab_left_seletedbrow.png" />
+    <Content Include="Images\RelocationAssistance\tab_left_seletedbrowfirst.png" />
+    <Content Include="Images\RelocationAssistance\tab_righttop.png" />
+    <Content Include="Images\RelocationAssistance\textarea-bg.jpg" />
+    <Content Include="Images\RelocationAssistance\track.png" />
+    <Content Include="Images\RelocationAssistance\trackBall.png" />
+    <Content Include="Images\RelocationAssistance\Untitled-1_01.jpg" />
+    <Content Include="Images\RelocationAssistance\Untitled-1_02.jpg" />
+    <Content Include="Images\RelocationAssistance\Untitled-1_04.jpg" />
+    <Content Include="Images\RelocationAssistance\Untitled-1_05.jpg" />
+    <Content Include="Images\RelocationAssistance\~icon_setlingdown.png" />
+    <Content Include="Images\remove_btn.PNG" />
+    <Content Include="Images\roleaccess_btn.png" />
+    <Content Include="Images\roundseal.png" />
+    <Content Include="Images\roundsealUBIND.png" />
+    <Content Include="Images\SameerSignature.png" />
+    <Content Include="Images\Seal_ESI.png" />
+    <Content Include="Images\search_btn.png" />
+    <Content Include="Images\setting.png" />
+    <Content Include="Images\settings1.jpg" />
+    <Content Include="Images\settings2.jpg" />
+    <Content Include="Images\Sign.png" />
+    <Content Include="Images\spinner.gif" />
+    <Content Include="Images\spinner1.gif" />
+    <Content Include="Images\spinner_1.gif" />
+    <Content Include="Images\Sprt_NHD_Icons.png" />
+    <Content Include="Images\Sprt_NHD_Popup.png" />
+    <Content Include="Images\Sprt_NHD_thumbnailc.png" />
+    <Content Include="Images\StatusSquare.png" />
+    <Content Include="Images\Survey\request.gif" />
+    <Content Include="Images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Images\ui-icons_222222_256x240.png" />
+    <Content Include="Images\ui-icons_454545_256x240.png" />
+    <Content Include="Images\ui-icons_888888_256x240.png" />
+    <Content Include="Images\unregister.png" />
+    <Content Include="Images\Update.png" />
+    <Content Include="Images\welcomeMailerImg.jpg" />
+    <Content Include="Images\XL.png" />
+    <Content Include="RelocationAssistance\CityInfo.htm" />
+    <Content Include="RelocationAssistance\HomePage.htm" />
+    <Content Include="Roles\BGV\BGVAssignVendor.css" />
+    <Content Include="Roles\BGV\BGVAssignVendor.htm" />
+    <Content Include="Roles\BGV\BGVAssignVendor.js" />
+    <Content Include="Roles\BGV\BgvComponentInfo.css" />
+    <Content Include="Roles\BGV\BgvComponentInfo.htm" />
+    <Content Include="Roles\BGV\BgvComponentInfo.js" />
+    <Content Include="Roles\BGV\BgvCustomMessage.htm" />
+    <Content Include="Roles\BGV\BgvPersonalInfo.css" />
+    <Content Include="Roles\BGV\BgvPersonalInfo.htm" />
+    <Content Include="Roles\BGV\BgvPersonalInfo.js" />
+    <Content Include="Roles\Candidate\Australia\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Australia\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Australia\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Australia\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\Hongkong\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Hongkong\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Hongkong\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Hongkong\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\NewZealand\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\NewZealand\ActionInfo.js" />
+    <Content Include="Roles\Candidate\NewZealand\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\NewZealand\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\SaudiArabia\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\SaudiArabia\ActionInfo.js" />
+    <Content Include="Roles\Candidate\SaudiArabia\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\SaudiArabia\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\Thailand\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Thailand\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Thailand\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Thailand\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\UnitedArabEmirates\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\UnitedArabEmirates\ActionInfo.js" />
+    <Content Include="Roles\Candidate\UnitedArabEmirates\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\UnitedArabEmirates\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\UnitedStates\StartDateAndLocation.htm" />
+    <Content Include="Roles\Candidate\UnitedStates\StartDateAndLocation.js" />
+    <Content Include="Roles\Candidate\UnitedStates\USActionInfo.htm" />
+    <Content Include="Roles\Candidate\UnitedStates\USActionInfo.js" />
+    <Content Include="Roles\NHPages\NHDashboard.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Australia\DependentDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Australia\EducationalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Australia\EIPAA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Australia\EmployeeDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Australia\PersonalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Australia\PhotoUpload.aspx" />
+    <Content Include="Roles\NHPages\Paperwork\Australia\ProhibitionOfDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Australia\ProprietaryRightsNDA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Australia\SecurityResponsibilities.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\ContractorERF.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\OfferLetterCanada.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\PersonalDetails_Contractors.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\ExhibitB_AgencyAgreement.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Hongkong\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Hongkong\DependentDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Hongkong\EducationalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Hongkong\EIPAA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Hongkong\EmployeeDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Hongkong\PersonalDetails.htm" />
+    <Content Include="Roles\SANRedirectionPage.aspx" />
+    <Content Include="Roles\NHPages\Paperwork\Hongkong\PhotoUpload.aspx" />
+    <Content Include="Roles\NHPages\Paperwork\Hongkong\ProhibitionOfDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Hongkong\ProprietaryRightsNDA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Hongkong\SecurityResponsibilities.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\CandidateDetailsSheet.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\COCForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\ESIForm_2014.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\FDLetter.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\GratuityNominationForm_2014.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\LetterofUndertaking.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\PFDeclarationCampus.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\PFDeclarationForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Ireland\DrivingPolicy.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Australia\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Newzealand\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Newzealand\DependentDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Newzealand\EducationalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Newzealand\EIPAA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Newzealand\EmployeeDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Newzealand\PersonalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Newzealand\PhotoUpload.aspx" />
+    <Content Include="Roles\NHPages\Paperwork\Newzealand\ProhibitionOfDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Newzealand\ProprietaryRightsNDA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Newzealand\SecurityResponsibilities.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Philippines\PIF.htm" />
+    <Content Include="Roles\NHPages\Paperwork\SaudiArabia\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\SaudiArabia\DependentDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\SaudiArabia\EducationalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\SaudiArabia\EIPAA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\SaudiArabia\EmployeeDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\SaudiArabia\PersonalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\SaudiArabia\PhotoUpload.aspx" />
+    <Content Include="Roles\NHPages\Paperwork\SaudiArabia\ProhibitionOfDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\SaudiArabia\ProprietaryRightsNDA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\SaudiArabia\SecurityResponsibilities.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Singapore\AssociatePrivacyNotice.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Thailand\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Thailand\DependentDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Thailand\EducationalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Thailand\EIPAA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Thailand\EmployeeDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Thailand\PersonalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Thailand\PhotoUpload.aspx" />
+    <Content Include="Roles\NHPages\Paperwork\Thailand\ProhibitionOfDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Thailand\ProprietaryRightsNDA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Thailand\SecurityResponsibilities.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\DrivingPolicy.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\PhotoUploadPostJoining.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UnitedArab\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UnitedArab\DependentDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UnitedArab\EducationalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UnitedArab\EIPAA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UnitedArab\EmployeeDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UnitedArab\PersonalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UnitedArab\PhotoUpload.aspx" />
+    <Content Include="Roles\NHPages\Paperwork\UnitedArab\ProhibitionOfDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UnitedArab\ProprietaryRightsNDA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UnitedArab\SecurityResponsibilities.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\ContractorERF.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\CPERF_SM_US.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\EDOJForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\EEO1_Gender.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\EEO2_Ethnicity.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\EEO3_Veteran.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\EEO4_VeteranProfile.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\EEO5_Disability.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\ExpectedDateofJoiningConfirmation_Change.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\NDAHealthNet.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\OfferLetter_Exempt.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\PersonalDetails_Contractors.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\ExhibitB.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\ExhibitB1.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\ExhibitC.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\Offer_Letter_Non-Exempt.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\StartDateExperianNAPayroll.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\USPersonalDetails.htm" />
+    <Content Include="Roles\NHPages\Testfile1.aspx" />
+    <Content Include="Roles\Vendor\BgvVendor.css" />
+    <Content Include="Roles\Vendor\VendorDashboard.css" />
+    <Content Include="Roles\Vendor\VendorPopUp.css" />
+    <Content Include="Roles\Vendor\VendorPopUp.htm" />
+    <Content Include="Roles\Vendor\VendorPopUp.js" />
+    <Content Include="Scripts\Forms\Australia\CodeOfethics.js" />
+    <Content Include="Scripts\Forms\Australia\DependentDetails.js" />
+    <Content Include="Scripts\Forms\Australia\EducationalDetails.js" />
+    <Content Include="Scripts\Forms\Australia\EIPAA.js" />
+    <Content Include="Scripts\Forms\Australia\EmployeeDetails.js" />
+    <Content Include="Scripts\Forms\Australia\PersonalDetails.js" />
+    <Content Include="Scripts\Forms\Australia\PhotoUpload.js" />
+    <Content Include="Scripts\Forms\Australia\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\Australia\ProprietaryRightsNDA.js" />
+    <Content Include="Scripts\Forms\Australia\SecurityResponsibilities.js" />
+    <Content Include="Scripts\Forms\Canada\ContractorERF.js" />
+    <Content Include="Scripts\Forms\Canada\OfferLetterCanada.js" />
+    <Content Include="Scripts\Forms\CoreScripts\UploadUtility.js" />
+    <Content Include="Scripts\Forms\Hongkong\CodeOfethics.js" />
+    <Content Include="Scripts\Forms\Hongkong\DependentDetails.js" />
+    <Content Include="Scripts\Forms\Hongkong\EducationalDetails.js" />
+    <Content Include="Scripts\Forms\Hongkong\EIPAA.js" />
+    <Content Include="Scripts\Forms\Hongkong\EmployeeDetails.js" />
+    <Content Include="Scripts\Forms\Hongkong\PersonalDetails.js" />
+    <Content Include="Scripts\Forms\Hongkong\PhotoUpload.js" />
+    <Content Include="Scripts\Forms\Hongkong\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\Hongkong\ProprietaryRightsNDA.js" />
+    <Content Include="Scripts\Forms\Hongkong\SecurityResponsibilities.js" />
+    <Content Include="Scripts\Forms\India\CandidateDetailsSheet.js" />
+    <Content Include="Scripts\Forms\India\COCForm.js" />
+    <Content Include="Scripts\Forms\India\ESIForm_2014.js" />
+    <Content Include="Scripts\Forms\India\FDLetter.js" />
+    <Content Include="Scripts\Forms\India\GratuityNominationForm_2014.js" />
+    <Content Include="Scripts\Forms\India\LetterofUndertaking.js" />
+    <Content Include="Scripts\Forms\India\PFDeclaration.js" />
+    <Content Include="Scripts\Forms\India\PFDeclaration_Campus.js" />
+    <Content Include="Scripts\Forms\Newzealand\CodeOfethics.js" />
+    <Content Include="Scripts\Forms\Newzealand\DependentDetails.js" />
+    <Content Include="Scripts\Forms\Newzealand\EducationalDetails.js" />
+    <Content Include="Scripts\Forms\Newzealand\EIPAA.js" />
+    <Content Include="Scripts\Forms\Newzealand\EmployeeDetails.js" />
+    <Content Include="Scripts\Forms\Newzealand\PersonalDetails.js" />
+    <Content Include="Scripts\Forms\Newzealand\PhotoUpload.js" />
+    <Content Include="Scripts\Forms\Newzealand\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\Newzealand\ProprietaryRightsNDA.js" />
+    <Content Include="Scripts\Forms\Newzealand\SecurityResponsibilities.js" />
+    <Content Include="Scripts\Forms\SaudiArabia\CodeOfethics.js" />
+    <Content Include="Scripts\Forms\SaudiArabia\DependentDetails.js" />
+    <Content Include="Scripts\Forms\SaudiArabia\EducationalDetails.js" />
+    <Content Include="Scripts\Forms\SaudiArabia\EIPAA.js" />
+    <Content Include="Scripts\Forms\SaudiArabia\EmployeeDetails.js" />
+    <Content Include="Scripts\Forms\SaudiArabia\PersonalDetails.js" />
+    <Content Include="Scripts\Forms\SaudiArabia\PhotoUpload.js" />
+    <Content Include="Scripts\Forms\SaudiArabia\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\SaudiArabia\ProprietaryRightsNDA.js" />
+    <Content Include="Scripts\Forms\SaudiArabia\SecurityResponsibilities.js" />
+    <Content Include="Scripts\Forms\Thailand\CodeOfethics.js" />
+    <Content Include="Scripts\Forms\Thailand\DependentDetails.js" />
+    <Content Include="Scripts\Forms\Thailand\EducationalDetails.js" />
+    <Content Include="Scripts\Forms\Thailand\EIPAA.js" />
+    <Content Include="Scripts\Forms\Thailand\EmployeeDetails.js" />
+    <Content Include="Scripts\Forms\Thailand\PersonalDetails.js" />
+    <Content Include="Scripts\Forms\Thailand\PhotoUpload.js" />
+    <Content Include="Scripts\Forms\Thailand\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\Thailand\ProprietaryRightsNDA.js" />
+    <Content Include="Scripts\Forms\Thailand\SecurityResponsibilities.js" />
+    <Content Include="Scripts\Forms\UnitedArab\CodeOfethics.js" />
+    <Content Include="Scripts\Forms\UnitedArab\DependentDetails.js" />
+    <Content Include="Scripts\Forms\UnitedArab\EducationalDetails.js" />
+    <Content Include="Scripts\Forms\UnitedArab\EIPAA.js" />
+    <Content Include="Scripts\Forms\UnitedArab\EmployeeDetails.js" />
+    <Content Include="Scripts\Forms\UnitedArab\PersonalDetails.js" />
+    <Content Include="Scripts\Forms\UnitedArab\PhotoUpload.js" />
+    <Content Include="Scripts\Forms\UnitedArab\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\UnitedArab\ProprietaryRightsNDA.js" />
+    <Content Include="Scripts\Forms\UnitedArab\SecurityResponsibilities.js" />
+    <Content Include="Scripts\Forms\US\ContractorERF.js" />
+    <Content Include="Scripts\Forms\US\EDOJForm.js" />
+    <Content Include="Scripts\Forms\US\CPERF_SM_US.js" />
+    <Content Include="Scripts\Forms\US\EEO1_Gender.js" />
+    <Content Include="Scripts\Forms\US\EEO2_Ethnicity.js" />
+    <Content Include="Scripts\Forms\US\EEO3_Veteran.js" />
+    <Content Include="Scripts\Forms\US\EEO4_VeteranProfile.js" />
+    <Content Include="Scripts\Forms\US\EEO5_Disability.js" />
+    <Content Include="Scripts\Forms\US\ExpectedDateofJoiningConfirmation_Change.js" />
+    <Content Include="Scripts\Forms\US\OfferLetter_Exempt.js" />
+    <Content Include="Scripts\Forms\US\Offer_Letter_Non-Exempt.js" />
+    <Content Include="Scripts\Forms\US\StartDateAndLocationCand.js" />
+    <Content Include="Scripts\Forms\US\USPersonalDetails.js" />
+    <Content Include="Scripts\JQuery\jqueryNA-ui.js" />
+    <Content Include="Roles\BGV\TemplateContainer.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Roles\NHPages\Paperwork\US\Cognizant New Hire Handbook_updated.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\India\Guidelines_to_fill_DeclarationForm_Candidate.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\US\I-9_instructions_2015.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\US\I-9_instructions_2015_1.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\EquipmentRequestforSMplus.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\EquipmentRequestSMPlus_updated.pdf" />
+    <None Include="Service References\Service.BGVUtilityMethods\BGVUtilityMethods.disco" />
+    <None Include="Service References\Service.BGVUtilityMethods\configuration91.svcinfo" />
+    <None Include="Service References\Service.BGVUtilityMethods\configuration.svcinfo" />
+    <None Include="Service References\Service.BGVUtilityMethods\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Styles\downtime.css" />
+    <Content Include="Styles\jquery-ui.css" />
+    <Content Include="Styles\jquery.multiselect.css" />
+    <Content Include="Styles\reset.css" />
+    <Content Include="Styles\stylesNa.css" />
+    <Content Include="Templates\ReportDefaultStyle.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Roles\BGV\BGVBackPapers.css" />
+    <Content Include="Roles\BGV\BGVBackPapers.htm" />
+    <Content Include="Roles\BGV\BGVBackPapers.js" />
+    <Content Include="Roles\BGV\BgvCandidateDrillDown.htm" />
+    <Content Include="Roles\BGV\BgvCandidateDrillDown.js" />
+    <Content Include="Roles\BGV\BgvCandidateEduInfo.css" />
+    <Content Include="Roles\BGV\BgvCandidateEduInfo.htm" />
+    <Content Include="Roles\BGV\BgvCandidateEduInfo.js" />
+    <Content Include="Roles\BGV\BgvCandidateInfo.css" />
+    <Content Include="Roles\BGV\BgvCandidateInfo.htm" />
+    <Content Include="Roles\BGV\BgvCandidateInfo.js" />
+    <Content Include="Roles\BGV\BgvComponentHandler.js" />
+    <Content Include="Roles\BGV\BgvDocListInfo.css" />
+    <Content Include="Roles\BGV\BgvDocListInfo.htm" />
+    <Content Include="Roles\BGV\BgvDocListInfo.js" />
+    <Content Include="Roles\BGV\BgvExperienceInfo.css" />
+    <Content Include="Roles\BGV\BgvExperienceInfo.htm" />
+    <Content Include="Roles\BGV\BgvExperienceInfo.js" />
+    <Content Include="Roles\BGV\BgvScript.js" />
+    <Content Include="Roles\BGV\BGVStyle.css" />
+    <Content Include="Roles\BGV\BgvValidation.js" />
+    <Content Include="Roles\Candidate\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Belgium\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Belgium\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Belgium\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Belgium\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\Canada\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Canada\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Canada\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Canada\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\Denmark\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Denmark\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Denmark\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Denmark\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\DrillDown.htm" />
+    <Content Include="Roles\Candidate\DrillDown.js" />
+    <Content Include="Roles\Candidate\France\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\France\ActionInfo.js" />
+    <Content Include="Roles\Candidate\France\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\France\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\Germany\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Germany\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Germany\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Germany\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\Hungary\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Hungary\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Hungary\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Hungary\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\India\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\India\ActionInfo.js" />
+    <Content Include="Roles\Candidate\India\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\India\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\Ireland\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Ireland\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Ireland\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Ireland\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\LogInfo.htm" />
+    <Content Include="Roles\Candidate\LogInfo.js" />
+    <Content Include="Roles\Candidate\Malaysia\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Malaysia\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Malaysia\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Malaysia\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\Netherlands\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Netherlands\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Netherlands\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Netherlands\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\Norway\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Norway\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Norway\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Norway\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\Philippines\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Philippines\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Philippines\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Philippines\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\Singapore\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Singapore\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Singapore\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Singapore\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\Sweden\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Sweden\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Sweden\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Sweden\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\Switzerland\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\Switzerland\ActionInfo.js" />
+    <Content Include="Roles\Candidate\Switzerland\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\Switzerland\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\TaskInfo.htm" />
+    <Content Include="Roles\Candidate\TaskInfo.js" />
+    <Content Include="Roles\Candidate\UnitedKingdom\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\UnitedKingdom\ActionInfo.js" />
+    <Content Include="Roles\Candidate\UnitedKingdom\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\UnitedKingdom\CandidateInfo.js" />
+    <Content Include="Roles\Candidate\UnitedStates\ActionInfo.htm" />
+    <Content Include="Roles\Candidate\UnitedStates\ActionInfo.js" />
+    <Content Include="Roles\Candidate\UnitedStates\CandidateInfo.htm" />
+    <Content Include="Roles\Candidate\UnitedStates\CandidateInfo.js" />
+    <Content Include="Roles\HRSS\ERProcessView.htm" />
+    <Content Include="Roles\HRSS\ERProcessView.js" />
+    <Content Include="Roles\HRSS\HRSSDashboard.htm" />
+    <Content Include="Roles\HRSS\HRSSDashboard.js" />
+    <Content Include="Roles\HRSS\HRSSDrillDownTemplate.xslt" />
+    <Content Include="Roles\HRSS\InductionAttendancUpdate.alerts.js" />
+    <Content Include="Roles\HRSS\InductionDownloadAttendance.htm" />
+    <Content Include="Roles\HRSS\InductionDownloadAttendance.js" />
+    <Content Include="Roles\HRSS\InductionTracker.htm" />
+    <Content Include="Roles\HRSS\InductionTracker.js" />
+    <Content Include="Roles\HRSS\UploadAttendance.aspx" />
+    <Content Include="Roles\HTransfer\HTransferDocs.css" />
+    <Content Include="Roles\HTransfer\HTransferDocs.htm" />
+    <Content Include="Roles\HTransfer\HTransferDocs.js" />
+    <Content Include="Roles\NHPages\Paperwork\Belgium\AcceptDecline.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Belgium\AmexCard.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Belgium\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Belgium\EquipmentRequest.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Belgium\PersonalData.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Belgium\ProhibitionOnDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\BritishColumbiaPersonalTax2014.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\BrunswickPersonalTax.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\CanadianFederalTaxCanada.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\ManitobaPersonalTax2014.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\NovaScotiaPersonalTax.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\ProvincialTaxFormsALBERTA2014.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\ProvincialTaxFormsOntario2014.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\ProvincialTax_QuebecSourceDeduction2014.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\SECRules.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Denmark\AcceptDecline.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Denmark\AmexCard.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Denmark\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Denmark\EquipmentRequest.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Denmark\PersonalData.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Denmark\ProhibitionOnDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\France\AcceptDecline.htm" />
+    <Content Include="Roles\NHPages\Paperwork\France\AmexCard.htm" />
+    <Content Include="Roles\NHPages\Paperwork\France\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\France\EquipmentRequest.htm" />
+    <Content Include="Roles\NHPages\Paperwork\France\PersonalData.htm" />
+    <Content Include="Roles\NHPages\Paperwork\France\ProhibitionOnDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Germany\InformationPortal_MandA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Hungary\AcceptDecline.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Hungary\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Hungary\EquipmentRequest.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Hungary\PersonalData.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Hungary\ProhibitionOnDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\Form11.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\RelocationAssistant.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\NDA_Malaysia.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\PhotoUploadIndia.aspx" />
+    <Content Include="Roles\NHPages\Paperwork\Ireland\AcceptDecline.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Ireland\BusinessCardTemplate.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Ireland\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Ireland\EquipmentRequest.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Ireland\NewHireInduction.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Ireland\P46L.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Ireland\PersonalDataForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Ireland\PhotoUpload.aspx" />
+    <Content Include="Roles\NHPages\Paperwork\Ireland\ProhibitionOfDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Ireland\WelcomeMailer.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Malaysia\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Malaysia\DependentDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Malaysia\EducationalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Malaysia\EIPAA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Malaysia\EmployeeDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Malaysia\EquipmentRequest.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Malaysia\PersonalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Malaysia\PhotoUpload.aspx" />
+    <Content Include="Roles\NHPages\Paperwork\Malaysia\ProhibitionOfDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Malaysia\ProprietaryRightsNDA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Malaysia\SecurityResponsibilities.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Norway\AcceptDecline.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Norway\AmexCard.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Norway\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Norway\EquipmentRequest.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Norway\PersonalData.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Norway\ProhibitionOnDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Philippines\DependentDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Philippines\DrugScreening.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Philippines\PhilippineHealthInsuranceCorporation.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Philippines\PhotoUpload.aspx" />
+    <Content Include="Roles\NHPages\Paperwork\Philippines\PreEmploymentExam.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Philippines\ProhibitionOfDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Singapore\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Singapore\DependentDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Singapore\EducationalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Singapore\EIPAA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Singapore\EmployeeDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Singapore\EquipmentRequest.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Singapore\PersonalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Singapore\PhotoUpload.aspx" />
+    <Content Include="Roles\NHPages\Paperwork\Singapore\ProhibitionOfDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Singapore\ProprietaryRightsNDA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Singapore\SecurityResponsibilities.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Sweden\AcceptDecline.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Sweden\AmexCard.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Sweden\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Sweden\EquipmentRequest.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Sweden\PersonalData.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Sweden\ProhibitionOnDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\SECRules.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\FD Letter to Associates.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\CTSS LLC,CBS NDA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\I9Instructions.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\NDAforDeal.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\NDAITBPusaForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\SECRules.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\test.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\W4.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\W4MarketRX2014.htm" />
+    <Content Include="Roles\RC\RCDashboard.htm" />
+    <Content Include="Roles\RC\RCDashboard.js" />
+    <Content Include="Roles\Vendor\VendorDashboard.htm" />
+    <Content Include="Roles\Vendor\VendorDashboard.js" />
+    <Content Include="Roles\VideoViewer.htm" />
+    <Content Include="ExternalReferences\itextsharp.dll" />
+    <Content Include="ExternalReferences\Newtonsoft.Json.dll" />
+    <Content Include="ExternalReferences\wnvhtmlconvert.dll" />
+    <Content Include="FormPDF.aspx" />
+    <Content Include="FormsService.aspx" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\add_linkicon.png" />
+    <Content Include="Images\AlbertaProvincialTaxForm.png" />
+    <Content Include="Images\alerticon_mqrquee.jpg" />
+    <Content Include="Images\allow_lang.gif" />
+    <Content Include="Images\AmexCardAgreement.png" />
+    <Content Include="Images\AmexCardmemberAgreementCanada.png" />
+    <Content Include="Images\Ammendment.jpg" />
+    <Content Include="Images\Approvals Menu with Mark.png" />
+    <Content Include="Images\approvalsmenu.png" />
+    <Content Include="Images\AppSpot\add_linkicon.png" />
+    <Content Include="Images\AppSpot\alerticon_mqrquee.jpg" />
+    <Content Include="Images\AppSpot\allow_lang.gif" />
+    <Content Include="Images\AppSpot\arrow_brdcm_next.gif" />
+    <Content Include="Images\AppSpot\arrow_brdcm_prev.gif" />
+    <Content Include="Images\AppSpot\arrow_toplink.gif" />
+    <Content Include="Images\AppSpot\badge-icon.png" />
+    <Content Include="Images\AppSpot\banner_btm.png" />
+    <Content Include="Images\AppSpot\banner_collsboxbg.jpg" />
+    <Content Include="Images\AppSpot\banner_contentbg.png" />
+    <Content Include="Images\AppSpot\banner_photo_franks.jpg" />
+    <Content Include="Images\AppSpot\banner_top.png" />
+    <Content Include="Images\AppSpot\benefits-bg.PNG" />
+    <Content Include="Images\AppSpot\benefits-bubble1.png" />
+    <Content Include="Images\AppSpot\benefits-bubble2.png" />
+    <Content Include="Images\AppSpot\bg-vcarrow.gif" />
+    <Content Include="Images\AppSpot\bg-vcarrow.png" />
+    <Content Include="Images\AppSpot\bg-vcpanel-left.gif" />
+    <Content Include="Images\AppSpot\bg-vcpanel-rt.gif" />
+    <Content Include="Images\AppSpot\bg-vcpanel.gif" />
+    <Content Include="Images\AppSpot\bgappstore_link.png" />
+    <Content Include="Images\AppSpot\bgWrapper.png" />
+    <Content Include="Images\AppSpot\bg_bannerbtn.gif" />
+    <Content Include="Images\AppSpot\bg_brownbtn.jpg" />
+    <Content Include="Images\AppSpot\bg_brown_heading.jpg" />
+    <Content Include="Images\AppSpot\bg_dropdown.png" />
+    <Content Include="Images\AppSpot\bg_formfield.gif" />
+    <Content Include="Images\AppSpot\bg_navdropmenu.png" />
+    <Content Include="Images\AppSpot\bg_navdropmenusettings.png" />
+    <Content Include="Images\AppSpot\bg_navgradient.gif" />
+    <Content Include="Images\AppSpot\bg_popup_heading.jpg" />
+    <Content Include="Images\AppSpot\bg_rightSectionHeading.jpg" />
+    <Content Include="Images\AppSpot\bg_search.gif" />
+    <Content Include="Images\AppSpot\bg_searchbtn.gif" />
+    <Content Include="Images\AppSpot\bg_topnav.gif" />
+    <Content Include="Images\AppSpot\bodybg.jpg" />
+    <Content Include="Images\AppSpot\bottom_shadow_topmenu.png" />
+    <Content Include="Images\AppSpot\box_btm168.jpg" />
+    <Content Include="Images\AppSpot\box_btm624.jpg" />
+    <Content Include="Images\AppSpot\box_btm795.gif" />
+    <Content Include="Images\AppSpot\btm_shadow_settingsmenu.png" />
+    <Content Include="Images\AppSpot\btn_brdcrumb.jpg" />
+    <Content Include="Images\AppSpot\btn_brdcrumb_h.jpg" />
+    <Content Include="Images\AppSpot\career-bg.PNG" />
+    <Content Include="Images\AppSpot\career-bubble.png" />
+    <Content Include="Images\AppSpot\community-bg.PNG" />
+    <Content Include="Images\AppSpot\community-bubble.png" />
+    <Content Include="Images\AppSpot\competency-bg.PNG" />
+    <Content Include="Images\AppSpot\competency-bubble.png" />
+    <Content Include="Images\AppSpot\date_next.gif" />
+    <Content Include="Images\AppSpot\date_prev.gif" />
+    <Content Include="Images\AppSpot\dropdown_bgsettings.png" />
+    <Content Include="Images\AppSpot\footer-note.png" />
+    <Content Include="Images\AppSpot\gray-barbg.gif" />
+    <Content Include="Images\AppSpot\grid_heading.png" />
+    <Content Include="Images\AppSpot\headerbg.jpg" />
+    <Content Include="Images\AppSpot\helpdesk-bg.PNG" />
+    <Content Include="Images\AppSpot\helpdesk-bubble1.png" />
+    <Content Include="Images\AppSpot\helpdesk-bubble2.png" />
+    <Content Include="Images\AppSpot\help_arrow.gif" />
+    <Content Include="Images\AppSpot\home_active.png" />
+    <Content Include="Images\AppSpot\home_inactive.png" />
+    <Content Include="Images\AppSpot\icon-MyApps-active.gif" />
+    <Content Include="Images\AppSpot\icon-MyApps-deactive.gif" />
+    <Content Include="Images\AppSpot\icon-notification-dnarrow.gif" />
+    <Content Include="Images\AppSpot\icon-notification-uparrow.gif" />
+    <Content Include="Images\AppSpot\icon-notification.gif" />
+    <Content Include="Images\AppSpot\icon-runs.png" />
+    <Content Include="Images\AppSpot\ico_bay.gif" />
+    <Content Include="Images\AppSpot\ico_bay_big.gif" />
+    <Content Include="Images\AppSpot\ico_bay_child.gif" />
+    <Content Include="Images\AppSpot\ico_greeninitiative.gif" />
+    <Content Include="Images\AppSpot\ico_green_big.gif" />
+    <Content Include="Images\AppSpot\ico_watch.gif" />
+    <Content Include="Images\AppSpot\jumpstart-bg.PNG" />
+    <Content Include="Images\AppSpot\jumpstart-bubble1.png" />
+    <Content Include="Images\AppSpot\jumpstart-bubble2.png" />
+    <Content Include="Images\AppSpot\know-bg.PNG" />
+    <Content Include="Images\AppSpot\know-bubble.png" />
+    <Content Include="Images\AppSpot\languagedropdown.png" />
+    <Content Include="Images\AppSpot\learning-bg.PNG" />
+    <Content Include="Images\AppSpot\learning-bubble.png" />
+    <Content Include="Images\AppSpot\leave-bg.PNG" />
+    <Content Include="Images\AppSpot\leave-bubble.png" />
+    <Content Include="Images\AppSpot\left-nav.png" />
+    <Content Include="Images\AppSpot\leftNavTabBg.jpg" />
+    <Content Include="Images\AppSpot\logo_1c.png" />
+    <Content Include="Images\AppSpot\logo_1c_beta.png" />
+    <Content Include="Images\AppSpot\next.png" />
+    <Content Include="Images\AppSpot\next_active.png" />
+    <Content Include="Images\AppSpot\next_grey.png" />
+    <Content Include="Images\AppSpot\notification-bg.gif" />
+    <Content Include="Images\AppSpot\overlay.png" />
+    <Content Include="Images\AppSpot\pers-details-bg.PNG" />
+    <Content Include="Images\AppSpot\pers-details-bubble.png" />
+    <Content Include="Images\AppSpot\points-icon.png" />
+    <Content Include="Images\AppSpot\policy-bg.PNG" />
+    <Content Include="Images\AppSpot\policy-bubble.png" />
+    <Content Include="Images\AppSpot\popup-bg.png" />
+    <Content Include="Images\AppSpot\previous.png" />
+    <Content Include="Images\AppSpot\prev_active.png" />
+    <Content Include="Images\AppSpot\prev_grey.png" />
+    <Content Include="Images\AppSpot\Rbox_headingbg.jpg" />
+    <Content Include="Images\AppSpot\right-content.png" />
+    <Content Include="Images\AppSpot\Runs-icon.png" />
+    <Content Include="Images\AppSpot\salary-bg.PNG" />
+    <Content Include="Images\AppSpot\salary-bubble.png" />
+    <Content Include="Images\AppSpot\search_inputbg.jpg" />
+    <Content Include="Images\AppSpot\selected-tab.png" />
+    <Content Include="Images\AppSpot\sep_gridheading.gif" />
+    <Content Include="Images\AppSpot\sep_left_column.png" />
+    <Content Include="Images\AppSpot\sh_downarrow.gif" />
+    <Content Include="Images\AppSpot\tab-thumb.PNG" />
+    <Content Include="Images\AppSpot\timesheet-bg.PNG" />
+    <Content Include="Images\AppSpot\timesheet-bubble.png" />
+    <Content Include="Images\AppSpot\tooltip-arrow.gif" />
+    <Content Include="Images\AppSpot\tooltip-arrow.png" />
+    <Content Include="Images\AppSpot\workplace-bg.PNG" />
+    <Content Include="Images\AppSpot\workplace-bubble.png" />
+    <Content Include="Images\bg_popup_heading.jpg" />
+    <Content Include="Images\bg_rightSectionHeading.jpg" />
+    <Content Include="Images\bg_search.gif" />
+    <Content Include="Images\BritishColumbiaProvincialTaxForm.png" />
+    <Content Include="Images\btnprint.png" />
+    <Content Include="Images\C-Guide_Logo.jpg" />
+    <Content Include="Images\calender_icon.jpg" />
+    <Content Include="Images\COECertification.png" />
+    <Content Include="Images\Cognizant_Life_Sciences.jpg" />
+    <Content Include="Images\CommissionTaxCanada.png" />
+    <Content Include="Images\EEO.png" />
+    <Content Include="Images\Equipment-RequestForm-Canada.png" />
+    <Content Include="Images\EquipmentRequestForm.png" />
+    <Content Include="Images\ESIForm_logo.JPG" />
+    <Content Include="Images\FederalTaxForm.png" />
+    <Content Include="Images\FionaWoods_Signature.jpg" />
+    <Content Include="Images\ico_alert2.gif" />
+    <Content Include="Images\img_sampleForm.gif" />
+    <Content Include="Images\INGimg.png" />
+    <Content Include="Images\lock_image.jpg" />
+    <Content Include="Images\lock_image.png" />
+    <Content Include="Images\ManitobaProvincialTaxForm.png" />
+    <Content Include="Images\MarketRxNDA-US.png" />
+    <Content Include="Images\NDA-Canada.png" />
+    <Content Include="Images\NDA-US.png" />
+    <Content Include="Images\NJLD.jpg" />
+    <Content Include="Images\nofitication.png" />
+    <Content Include="Images\NoticeMedicalElection.png" />
+    <Content Include="Images\ontario.jpg" />
+    <Content Include="Images\OntarioProvincialTaxForm.png" />
+    <Content Include="Images\p462.jpg" />
+    <Content Include="Images\Page Preview.gif" />
+    <Content Include="Images\pdf_ico.gif" />
+    <Content Include="Images\PersonalDataFormCanada.png" />
+    <Content Include="Images\PersonalDetailsForm.png" />
+    <Content Include="Images\PFSign.JPG" />
+    <Content Include="Images\pop_btnclose.gif" />
+    <Content Include="Images\print_ico.gif" />
+    <Content Include="Images\QuebecSourceDeductionProvincialTaxForm.png" />
+    <Content Include="Images\ROUTING_IMAGE.gif" />
+    <Content Include="Images\sample-person.jpg" />
+    <Content Include="Images\2012_year.gif" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\albertalogo.gif" />
+    <Content Include="Images\apply.png" />
+    <Content Include="Images\approve.png" />
+    <Content Include="Images\approve_pu.png" />
+    <Content Include="Images\ArrowDown.JPG" />
+    <Content Include="Images\ArrowUp.JPG" />
+    <Content Include="Images\arrow_brdcm_next.gif" />
+    <Content Include="Images\arrow_brdcm_next.jpg" />
+    <Content Include="Images\arrow_brdcm_prev.gif" />
+    <Content Include="Images\arrow_PersonalTax.gif" />
+    <Content Include="Images\banner_photo_franks.jpg" />
+    <Content Include="Images\bgWrapper.gif" />
+    <Content Include="Images\Bg_Img_new.png" />
+    <Content Include="Images\bg_searchbtn.gif" />
+    <Content Include="Images\blue_headingbg.jpg" />
+    <Content Include="Images\bookb.png" />
+    <Content Include="Images\bookg.png" />
+    <Content Include="Images\bracetleft.gif" />
+    <Content Include="Images\bracketsright.gif" />
+    <Content Include="Images\browse.png" />
+    <Content Include="Images\browse_pu.png" />
+    <Content Include="Images\btn.png" />
+    <Content Include="Images\btn_brdcrumb.jpg" />
+    <Content Include="Images\btn_brdcrumb_h.jpg" />
+    <Content Include="Images\button.png" />
+    <Content Include="Images\calendar.png" />
+    <Content Include="Images\CanadaLogo.jpg" />
+    <Content Include="Images\canada_logo_pertaxform.jpg" />
+    <Content Include="Images\centerroundcorner.png" />
+    <Content Include="Images\centerroundcornercomplete.png" />
+    <Content Include="Images\centerroundcornerpending.png" />
+    <Content Include="Images\centerroundcornerstart.png" />
+    <Content Include="Images\clear.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\closebtn.png" />
+    <Content Include="Images\closesmall.png" />
+    <Content Include="Images\closesmall_pu.png" />
+    <Content Include="Images\close_pu.png" />
+    <Content Include="Images\collapse.png" />
+    <Content Include="Images\confirmstatus.png" />
+    <Content Include="Images\contactus.png" />
+    <Content Include="Images\correct.png" />
+    <Content Include="Images\crop.png" />
+    <Content Include="Images\crop_pu.png" />
+    <Content Include="Images\demo.png" />
+    <Content Include="Images\done.png" />
+    <Content Include="Images\done_pu.png" />
+    <Content Include="Images\error.png" />
+    <Content Include="Images\excel.png" />
+    <Content Include="Images\Expand.png" />
+    <Content Include="Images\faq2.jpg" />
+    <Content Include="Images\first_nh.png" />
+    <Content Include="Images\flag_canada.jpg" />
+    <Content Include="Images\formblueball.png" />
+    <Content Include="Images\formblueballsmall.png" />
+    <Content Include="Images\formgreyball.png" />
+    <Content Include="Images\formleftscroll.png" />
+    <Content Include="Images\formpagninationborder.png" />
+    <Content Include="Images\formpdf.png" />
+    <Content Include="Images\formpen.png" />
+    <Content Include="Images\formpreview.png" />
+    <Content Include="Images\formprinter.png" />
+    <Content Include="Images\formredalert.png" />
+    <Content Include="Images\formredball.png" />
+    <Content Include="Images\formredballsmall.png" />
+    <Content Include="Images\formreset.png" />
+    <Content Include="Images\formrightscroll.png" />
+    <Content Include="Images\formsave.png" />
+    <Content Include="Images\formsubmit.png" />
+    <Content Include="Images\graph.png" />
+    <Content Include="Images\greenball.png" />
+    <Content Include="Images\greentri.png" />
+    <Content Include="Images\greyalert.png" />
+    <Content Include="Images\greyball.png" />
+    <Content Include="Images\greytri.png" />
+    <Content Include="Images\grid.png" />
+    <Content Include="Images\help.gif" />
+    <Content Include="Images\Logomarketrx.gif" />
+    <Content Include="Images\LogomarketrxSmall.gif" />
+    <Content Include="Images\logo_manitoba.jpg" />
+    <Content Include="Images\NYWagelogo.png" />
+    <Content Include="Images\reject.png" />
+    <Content Include="Images\reject_pu.png" />
+    <Content Include="Images\Sanjiv Gossain.jpg" />
+    <Content Include="Images\search_inputbg.jpg" />
+    <Content Include="Images\select-source.png" />
+    <Content Include="Images\select-source_pu.png" />
+    <Content Include="Images\SGSignature.png" />
+    <Content Include="Images\submit_offer.png" />
+    <Content Include="Images\submit_pu.png" />
+    <Content Include="Images\Survey\background.png" />
+    <Content Include="Images\Survey\btn_image.png" />
+    <Content Include="Images\Survey\chk.png" />
+    <Content Include="Images\Survey\close.png" />
+    <Content Include="Images\Survey\icon_bg.png" />
+    <Content Include="Images\Survey\popup_btn.png" />
+    <Content Include="Images\Survey\popup_btn_hover.png" />
+    <Content Include="Images\Survey\popup_content_bg.png" />
+    <Content Include="Images\Survey\pop_bg.png" />
+    <Content Include="Images\Survey\pop_bg1.png" />
+    <Content Include="Images\Survey\rad.png" />
+    <Content Include="Images\Survey\rad_chk.png" />
+    <Content Include="Images\Survey\status_bg.png" />
+    <Content Include="Images\Survey\survey.png" />
+    <Content Include="Images\Survey\tab_bg.png" />
+    <Content Include="Images\Survey\tab_header_bg.png" />
+    <Content Include="Images\Survey\textarea-bg.jpg" />
+    <Content Include="Images\Survey\txtbxbg.jpg" />
+    <Content Include="Images\Survey\unchk.png" />
+    <Content Include="Images\tickli.png" />
+    <Content Include="Images\resumecircle.png" />
+    <Content Include="Images\submitcircle.png" />
+    <Content Include="Images\ico_tabBlack.png" />
+    <Content Include="Images\Img_Browse.png" />
+    <Content Include="Images\Img_Post_query.png" />
+    <Content Include="Images\important.gif" />
+    <Content Include="Images\info.png" />
+    <Content Include="Images\joining.png" />
+    <Content Include="Images\last.png" />
+    <Content Include="Images\leftgreen.png" />
+    <Content Include="Images\lefthide.png" />
+    <Content Include="Images\leftscroll.png" />
+    <Content Include="Images\list.png" />
+    <Content Include="Images\listg.png" />
+    <Content Include="Images\listgreentri.png" />
+    <Content Include="Images\listgreynotstarted.png" />
+    <Content Include="Images\listgreystarted.png" />
+    <Content Include="Images\logo_british_columbia.gif" />
+    <Content Include="Images\logo_manitoba.gif" />
+    <Content Include="Images\logo_revenue_quebec.gif" />
+    <Content Include="Images\next.png" />
+    <Content Include="Images\nextButton.jpg" />
+    <Content Include="Images\nextButtonOnHover.jpg" />
+    <Content Include="Images\notes.png" />
+    <Content Include="Images\OneCOnboarding.png" />
+    <Content Include="Images\one_btn.png" />
+    <Content Include="Images\ontario.gif" />
+    <Content Include="Images\pageButtonActive.jpg" />
+    <Content Include="Images\pageButtonBackGround.jpg" />
+    <Content Include="Images\pageButtonOnHover.jpg" />
+    <Content Include="Images\pagefourheader.png" />
+    <Content Include="Images\person.png" />
+    <Content Include="Images\PersonalTax_Canada.jpg" />
+    <Content Include="Images\PFFormheader.JPG" />
+    <Content Include="Images\PFFormLogo.JPG" />
+    <Content Include="Images\Photo.jpg" />
+    <Content Include="Images\pie.png" />
+    <Content Include="Images\popup_contentbg.jpg" />
+    <Content Include="Images\postjoinin.png" />
+    <Content Include="Images\postjoining.png" />
+    <Content Include="Images\PostQuery.jpg" />
+    <Content Include="Images\prejoinbluetab.png" />
+    <Content Include="Images\prejoingreytab.png" />
+    <Content Include="Images\prejoinin.png" />
+    <Content Include="Images\prejoiningb.png" />
+    <Content Include="Images\prejoining_blueshadow.png" />
+    <Content Include="Images\prejoining_greentick.png" />
+    <Content Include="Images\prejoining_greyshadow.png" />
+    <Content Include="Images\prejoining_greytick.png" />
+    <Content Include="Images\prev.png" />
+    <Content Include="Images\previousButton.jpg" />
+    <Content Include="Images\previousButtonOnHover.jpg" />
+    <Content Include="Images\progressbar.png" />
+    <Content Include="Images\progress_imgconcierge.gif" />
+    <Content Include="Images\redalert.png" />
+    <Content Include="Images\refresh.png" />
+    <Content Include="Images\remainder.png" />
+    <Content Include="Images\resume.png" />
+    <Content Include="Images\resumecircleold.png" />
+    <Content Include="Images\rightgreen.png" />
+    <Content Include="Images\righthide.png" />
+    <Content Include="Images\rightscroll.png" />
+    <Content Include="Images\right_arrow.gif" />
+    <Content Include="Images\roundbackground.png" />
+    <Content Include="Images\roundbackground1.png" />
+    <Content Include="Images\roundbackgroundgreen.png" />
+    <Content Include="Images\roundbackgroundstart.png" />
+    <Content Include="Images\sampleform.jpg" />
+    <Content Include="Images\SampleForm1.jpg" />
+    <Content Include="Images\searchby.png" />
+    <Content Include="Images\shadow.png" />
+    <Content Include="Images\submit.png" />
+    <Content Include="Images\submitcircleold.png" />
+    <Content Include="Images\success.png" />
+    <Content Include="Images\tableheader.png" />
+    <Content Include="Images\icon_gridView_cirGreen1.png" />
+    <Content Include="Images\thumbg.png" />
+    <Content Include="Images\thumbnailb.png" />
+    <Content Include="Images\thumbnailc.png" />
+    <Content Include="Images\thumbnailcontainer.png" />
+    <Content Include="Images\thumbnailcontainergreen.png" />
+    <Content Include="Images\thumbnailcontainerstart.png" />
+    <Content Include="Images\tick-icon.png" />
+    <Content Include="Images\tick.png" />
+    <Content Include="Images\tickliold.png" />
+    <Content Include="Images\titlebar.png" />
+    <Content Include="Images\ToolTipShade.jpg" />
+    <Content Include="Images\Transperant.gif" />
+    <Content Include="Images\Transperant.png" />
+    <Content Include="Images\transtick.png" />
+    <Content Include="Images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Images\unlockbtn.png" />
+    <Content Include="Images\updatebtn.png" />
+    <Content Include="Images\upload.png" />
+    <Content Include="Images\upload_pu.png" />
+    <Content Include="Images\W11.png" />
+    <Content Include="Images\W4.png" />
+    <Content Include="Images\warning.png" />
+    <Content Include="Images\Welcome to_Cog_IT_IS.png" />
+    <Content Include="Images\WelcomeMailer.jpg" />
+    <Content Include="Images\whitebtn.png" />
+    <Content Include="Roles\ADMIN\ADMINDashBoard.aspx" />
+    <Content Include="Roles\ADMIN\ADMINDashBoardGrid.xslt" />
+    <Content Include="Roles\IM\IMDashBoard.aspx" />
+    <Content Include="Roles\IM\IMDashBoardGrid.xslt" />
+    <Content Include="Roles\IM\IMDrillDownTemplate.xslt" />
+    <Content Include="Roles\IM\NHOTraining1.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\COECanada.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\HTMLPage1.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\sample.htm" />
+    <Content Include="Roles\NHPages\Paperwork\CommonNHPages\appspot.html" />
+    <Content Include="Roles\NHPages\Paperwork\CommonNHPages\index.html" />
+    <Content Include="Roles\NHPages\Paperwork\CommonNHPages\InternalSiteMaster.htm" />
+    <Content Include="Roles\NHPages\Paperwork\CommonNHPages\ISS Onboarding.htm" />
+    <Content Include="Roles\NHPages\Paperwork\CommonNHPages\Survey.htm" />
+    <Content Include="Roles\NHPages\Paperwork\CommonNHPages\UrlPopUp.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Germany\AcceptDecline.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Germany\AmexCard.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Germany\BlockConferenceBridge.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Germany\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Germany\DataProtectionAgreement.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Germany\EquipmentRequest.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Germany\IDCardRequestForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Germany\NDA_Contractors.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Germany\PersonalData.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Germany\ProhibitionOnDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\DirectDeposit.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\EIPAA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\NDAUBS.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Netherland\AcceptDecline.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Netherland\AmexCard.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Netherland\BlockConferenceBridge.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Netherland\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Netherland\EquipmentRequest.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Netherland\NDA_Contractors.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Netherland\PersonalData.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Netherland\ProhibitionOnDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Netherland\TaxD.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Philippines\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Philippines\EducationalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Philippines\EmployeeDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Philippines\PersonalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Switzerland\AcceptDecline.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Switzerland\AmexCard.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Switzerland\BlockConferenceBridge.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Switzerland\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Switzerland\DependentDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Switzerland\EquipmentRequest.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Switzerland\NDA_Contractors.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Switzerland\PersonalData.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Switzerland\ProhibitionOfDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\BusinessCardTemplate.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\Induction.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\P46L.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\EducationDetailsForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\OfferAcceptReject.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\PersonalDetailsForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\PhotoUpload.aspx" />
+    <Content Include="Roles\NHPages\Paperwork\India\PhotoUpload.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\StudentProfileQuestionnaire.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\AcceptDecline.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\AmexCard.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\BlockConferenceBridge.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\WelcomeMailerFromSanjeev.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\WelcomeMailer.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\Amendment_to_Offer_of_Employment_Letter.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\CodeofEthics_Certification.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\DirectDeposit.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\Equipment Transfer Acknowledgement.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\PMCForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\NOTICETOEMPLOYEE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\ProhibitionOnDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\StateW4Form.aspx" />
+    <Content Include="Roles\NHPages\ProcessTour\intro_new.swf" />
+    <Content Include="Roles\NHPages\ProcessTour\ProhibitionOnDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\CperfCanada.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\PostJoinRefDocs.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\PreJoinRefDocs.htm" />
+    <Content Include="Roles\NHPages\Paperwork\CommonNHPages\PDFMaster.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\ApplicationForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\DependentDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\PFNominationForm.htm" />
+    <Content Include="Roles\NHPages\BookView_Template.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Roles\NHPages\FormPopup.aspx" />
+    <Content Include="Roles\NHPages\NHDashBoard.aspx" />
+    <Content Include="Roles\NHPages\NHTemplate.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Roles\NHPages\Paperwork\Canada\AmexCardCan.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\BritishColumbiaPersonalTax.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\CommissionTax.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\ManitobaPersonalTax.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\NDAForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\PersonalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\PersonalTax.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\ProvincialTaxForms_ALBERTA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\ProvincialTaxForms_Ontario.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\ProvincialTax_QuebecSourceDeduction.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\AnnexureB.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\ApprenticeshipForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\CampusESIForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\CampusUserManual.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\India\CATPForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\CodeOfethics.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\DefaultUserRights.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\EmployeeDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\GratuityNominationForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\MedicalInsuranceForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\NDAForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\PAIForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\SunLifeExtendedHealthCareBeneficiaryForm.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\SunLifeExtendedHealthCareEnrollmentForm.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\SunLifeInpatriateHealthPlanEnrollment.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\UK\AmexCreditCard.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\UK\COBE.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\EEO.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\NDA_Contractors.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\NewHireInduction.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\PersonalDataForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\India\SampleForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\ProhibitionOfDisclosure.htm" />
+    <Content Include="Roles\NHPages\Paperwork\UK\Sample.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\AccelerateForm_Manager_SrManager.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\AccelerateForm_SrAssociate_AsstManager.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\AccelerateProgram_DirectorPlus.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\AmexCard.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\COECertification.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\COE_Revised.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\CPERF.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\CPERF_US.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\EEOForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\I9NotaryForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\NDAForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\NJDWDEV.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\NoticeMedicalElection.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\NYExemptWageServiceForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\NYNonExemptWageServiceForm.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\PersonalDetails.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\MarketRxNDA.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\PostJoinRefDocs.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\PreJoinRefDocs.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\StateW4Form.htm" />
+    <Content Include="Roles\NHPages\Paperwork\US\W42014.htm" />
+    <Content Include="Roles\NHPages\ProcessTour\slide.swf" />
+    <Content Include="Roles\NHPages\ProcessTour\intro_default1.swf" />
+    <Content Include="Roles\NHPages\ProcessTour\UK Onboarding Process Tour.htm" />
+    <Content Include="Roles\NHPages\ProcessTour\UK Onboarding Process Tour.swf" />
+    <Content Include="Roles\NHPages\ThumbNail_Template.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Roles\NSSPages\DashBoardBindGrid.xslt" />
+    <Content Include="Roles\NSSPages\ForecastDashBoard.aspx" />
+    <Content Include="Roles\NSSPages\NSSDashboard.aspx" />
+    <Content Include="Roles\NSSPages\NSSDashBoardGrid.xslt" />
+    <Content Include="Roles\NSSPages\NSSDrillDownTemplate.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Roles\NSSPages\NssReport.htm" />
+    <Content Include="Roles\TM\TMDashBoard.aspx" />
+    <Content Include="Roles\TM\TMDashBoardGrid.xslt" />
+    <Content Include="Roles\TM\TMDrillDownTemplate.xslt" />
+    <Content Include="Scripts\AppSpot\appspot.js" />
+    <Content Include="Scripts\AppSpot\jquery-1.7.min.js" />
+    <Content Include="Scripts\AppSpot\jquery.js" />
+    <Content Include="Scripts\AppSpot\jquery.qtip.js" />
+    <Content Include="Scripts\AppSpot\jquery.qtip.min.js" />
+    <Content Include="Scripts\AppSpot\jquery.tools.min.js" />
+    <Content Include="Scripts\AppSpot\pageScript.js" />
+    <Content Include="Scripts\ECM.js" />
+    <Content Include="Scripts\FAQ.js" />
+    <Content Include="Scripts\Forms\Belgium\AcceptDecline.js" />
+    <Content Include="Scripts\Forms\Belgium\COBE.js" />
+    <Content Include="Scripts\Forms\Belgium\EquipmentRequest.js" />
+    <Content Include="Scripts\Forms\Belgium\PersonalData.js" />
+    <Content Include="Scripts\Forms\Belgium\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\Canada\AmexCardCan.js" />
+    <Content Include="Scripts\Forms\Canada\BritishColumbiaPersonalTax.js" />
+    <Content Include="Scripts\Forms\Canada\BritishColumbiaPersonalTax2014.js" />
+    <Content Include="Scripts\Forms\Canada\BrunswickPersonalTax.js" />
+    <Content Include="Scripts\Forms\Canada\COECanada.js" />
+    <Content Include="Scripts\Forms\Canada\CanadianFederalTaxCanada.js" />
+    <Content Include="Scripts\Forms\Canada\ManitobaPersonalTax2014.js" />
+    <Content Include="Scripts\Forms\Canada\NovaScotiaPersonalTax.js" />
+    <Content Include="Scripts\Forms\Canada\ProvincialTaxFormsALBERTA2014.js" />
+    <Content Include="Scripts\Forms\Canada\ProvincialTaxFormsOntario2014.js" />
+    <Content Include="Scripts\Forms\Canada\ProvincialTax_QuebecSourceDeduction2014.js" />
+    <Content Include="Scripts\Forms\CoreScripts\Autocomplete.js" />
+    <Content Include="Scripts\Forms\CoreScripts\OBUtilityScripts.js" />
+    <Content Include="Scripts\Forms\Denmark\AcceptDecline.js" />
+    <Content Include="Scripts\Forms\Denmark\COBE.js" />
+    <Content Include="Scripts\Forms\Denmark\EquipmentRequest.js" />
+    <Content Include="Scripts\Forms\Denmark\PersonalData.js" />
+    <Content Include="Scripts\Forms\Denmark\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\France\AcceptDecline.js" />
+    <Content Include="Scripts\Forms\France\COBE.js" />
+    <Content Include="Scripts\Forms\France\EquipmentRequest.js" />
+    <Content Include="Scripts\Forms\France\PersonalData.js" />
+    <Content Include="Scripts\Forms\France\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\Germany\AcceptDecline.js" />
+    <Content Include="Scripts\Forms\Germany\BlockConferenceBridge.js" />
+    <Content Include="Scripts\Forms\Germany\COBE.js" />
+    <Content Include="Scripts\Forms\Germany\EmploymentContract.js" />
+    <Content Include="Scripts\Forms\Germany\EquipmentRequest.js" />
+    <Content Include="Scripts\Forms\Germany\IDCardRequestForm.js" />
+    <Content Include="Scripts\Forms\Germany\NDA_Contractors.js" />
+    <Content Include="Scripts\Forms\Germany\PersonalData.js" />
+    <Content Include="Scripts\Forms\Germany\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\Hungary\AcceptDecline.js" />
+    <Content Include="Scripts\Forms\Hungary\COBE.js" />
+    <Content Include="Scripts\Forms\Hungary\EquipmentRequest.js" />
+    <Content Include="Scripts\Forms\Hungary\PersonalData.js" />
+    <Content Include="Scripts\Forms\Hungary\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\India\Form11.js" />
+    <Content Include="Scripts\Forms\India\JqueryMedicalPremium.alerts.js" />
+    <Content Include="Scripts\Forms\CoreScripts\Survey.js" />
+    <Content Include="Scripts\Forms\India\EducationDetails.js" />
+    <Content Include="Scripts\Forms\India\EIPAA.js" />
+    <Content Include="Scripts\Forms\India\NDAUBS.js" />
+    <Content Include="Scripts\Forms\India\OfferAcceptRejectForm.js" />
+    <Content Include="Scripts\Forms\India\PersonalDetailsForm.js" />
+    <Content Include="Scripts\Forms\India\PhotoUpload.js" />
+    <Content Include="Scripts\Forms\India\PhotoUploadIndia.js" />
+    <Content Include="Scripts\Forms\India\RelocationAssistant.js" />
+    <Content Include="Scripts\Forms\India\StudentProfileQuestionnaire.js" />
+    <Content Include="Scripts\Forms\CoreScripts\InternalSiteMaster.js" />
+    <Content Include="Scripts\Forms\Ireland\AcceptDecline.js" />
+    <Content Include="Scripts\Forms\Ireland\BusinessCardTemplate.js" />
+    <Content Include="Scripts\Forms\Ireland\COBE.js" />
+    <Content Include="Scripts\Forms\Ireland\EquipmentRequest.js" />
+    <Content Include="Scripts\Forms\Ireland\NewHireInduction.js" />
+    <Content Include="Scripts\Forms\Ireland\PersonalDataForm.js" />
+    <Content Include="Scripts\Forms\Ireland\PhotoUpload.js" />
+    <Content Include="Scripts\Forms\Ireland\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\Ireland\WelcomeMailer.js" />
+    <Content Include="Scripts\Forms\Malaysia\CodeOfethics.js" />
+    <Content Include="Scripts\Forms\Malaysia\DependentDetails.js" />
+    <Content Include="Scripts\Forms\Malaysia\EducationalDetails.js" />
+    <Content Include="Scripts\Forms\Malaysia\EIPAA.js" />
+    <Content Include="Scripts\Forms\Malaysia\EmployeeDetails.js" />
+    <Content Include="Scripts\Forms\Malaysia\EquipmentRequest.js" />
+    <Content Include="Scripts\Forms\Malaysia\PhotoUpload.js" />
+    <Content Include="Scripts\Forms\Malaysia\PersonalDetails.js" />
+    <Content Include="Scripts\Forms\Malaysia\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\Malaysia\ProprietaryRightsNDA.js" />
+    <Content Include="Scripts\Forms\Malaysia\SecurityResponsibilities.js" />
+    <Content Include="Scripts\Forms\Netherland\AcceptDecline.js" />
+    <Content Include="Scripts\Forms\Netherland\BlockConferenceBridge.js" />
+    <Content Include="Scripts\Forms\Netherland\COBE.js" />
+    <Content Include="Scripts\Forms\Netherland\EquipmentRequest.js" />
+    <Content Include="Scripts\Forms\Netherland\NDA_Contractors.js" />
+    <Content Include="Scripts\Forms\Netherland\PersonalData.js" />
+    <Content Include="Scripts\Forms\Netherland\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\Norway\AcceptDecline.js" />
+    <Content Include="Scripts\Forms\Norway\COBE.js" />
+    <Content Include="Scripts\Forms\Norway\EquipmentRequest.js" />
+    <Content Include="Scripts\Forms\Norway\PersonalData.js" />
+    <Content Include="Scripts\Forms\Norway\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\Philippines\CodeOfethics.js" />
+    <Content Include="Scripts\Forms\Philippines\DependentDetails.js" />
+    <Content Include="Scripts\Forms\Philippines\DrugScreening.js" />
+    <Content Include="Scripts\Forms\Philippines\EducationalDetails.js" />
+    <Content Include="Scripts\Forms\Philippines\EmployeeDetails.js" />
+    <Content Include="Scripts\Forms\Philippines\PersonalDetails.js" />
+    <Content Include="Scripts\Forms\Philippines\PhotoUpload.js" />
+    <Content Include="Scripts\Forms\Philippines\PreEmploymentExam.js" />
+    <Content Include="Scripts\Forms\Philippines\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\Philippines\Requesttransferofdetails.js" />
+    <Content Include="Scripts\Forms\Singapore\CodeOfethics.js" />
+    <Content Include="Scripts\Forms\Singapore\DependentDetails.js" />
+    <Content Include="Scripts\Forms\Singapore\EducationalDetails.js" />
+    <Content Include="Scripts\Forms\Singapore\EIPAA.js" />
+    <Content Include="Scripts\Forms\Singapore\EmployeeDetails.js" />
+    <Content Include="Scripts\Forms\Singapore\EquipmentRequest.js" />
+    <Content Include="Scripts\Forms\Singapore\PersonalDetails.js" />
+    <Content Include="Scripts\Forms\Singapore\PhotoUpload.js" />
+    <Content Include="Scripts\Forms\Singapore\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\Singapore\ProprietaryRightsNDA.js" />
+    <Content Include="Scripts\Forms\Singapore\SecurityResponsibilities.js" />
+    <Content Include="Scripts\Forms\Sweden\AcceptDecline.js" />
+    <Content Include="Scripts\Forms\Sweden\COBE.js" />
+    <Content Include="Scripts\Forms\Sweden\EquipmentRequest.js" />
+    <Content Include="Scripts\Forms\Sweden\PersonalData.js" />
+    <Content Include="Scripts\Forms\Sweden\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\Switzerland\AcceptDecline.js" />
+    <Content Include="Scripts\Forms\Switzerland\BlockConferenceBridge.js" />
+    <Content Include="Scripts\Forms\Switzerland\COBE.js" />
+    <Content Include="Scripts\Forms\Switzerland\DependentDetails.js" />
+    <Content Include="Scripts\Forms\Switzerland\EquipmentRequest.js" />
+    <Content Include="Scripts\Forms\Switzerland\NDA_Contractors.js" />
+    <Content Include="Scripts\Forms\Switzerland\PersonalData.js" />
+    <Content Include="Scripts\Forms\Switzerland\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\UK\AcceptDecline.js" />
+    <Content Include="Scripts\Forms\UK\BusinessCardTemplate.js" />
+    <Content Include="Scripts\Forms\UK\Induction.js" />
+    <Content Include="Scripts\Forms\UK\WelcomeMailer.js" />
+    <Content Include="Scripts\Forms\UK\WelcomeMailerFromSanjeev.js" />
+    <Content Include="Scripts\Forms\US\AccelerateForm_Manager_SrManager.js" />
+    <Content Include="Scripts\Forms\US\AccelerateForm_SrAssociate_AsstManager.js" />
+    <Content Include="Scripts\Forms\US\AccelerateProgram_DirectorPlus.js" />
+    <Content Include="Scripts\Forms\US\Amendment_to_Offer_of_Employment_Letter.js" />
+    <Content Include="Scripts\Forms\US\CodeofEthics_Certification.js" />
+    <Content Include="Scripts\Forms\US\COE_Revised.js" />
+    <Content Include="Scripts\Forms\US\CTSS,CBSNDA.js" />
+    <Content Include="Scripts\Forms\US\DirectDeposit.js" />
+    <Content Include="Scripts\Forms\US\Equipment Transfer.js" />
+    <Content Include="Scripts\Forms\US\FD Letter to associates.js" />
+    <Content Include="Scripts\Forms\US\I9Instructions.js" />
+    <Content Include="Scripts\Forms\US\NDAITBP.js" />
+    <Content Include="Scripts\Forms\US\PMC.js" />
+    <Content Include="Scripts\Forms\US\NOTICETEMPLOYEE.js" />
+    <Content Include="Scripts\Forms\US\ProhibitionOnDisclosure.js" />
+    <Content Include="Scripts\Forms\Canada\CommissionTax.js" />
+    <Content Include="Scripts\Forms\Canada\CperfCanada.js" />
+    <Content Include="Scripts\Forms\Canada\ManitobaPersonalTax.js" />
+    <Content Include="Scripts\Forms\Canada\NDAForm.js" />
+    <Content Include="Scripts\Forms\Canada\PersonalDetails.js" />
+    <Content Include="Scripts\Forms\Canada\PersonalTax.js" />
+    <Content Include="Scripts\Forms\Canada\PostJoinRefDocs.js" />
+    <Content Include="Scripts\Forms\Canada\PreJoinRefDocs.js" />
+    <Content Include="Scripts\Forms\Canada\ProvincialTaxForms_ALBERTA.js" />
+    <Content Include="Scripts\Forms\Canada\ProvincialTaxForms_Ontario.js" />
+    <Content Include="Scripts\Forms\Canada\ProvincialTax_QuebecSourceDeduction.js" />
+    <Content Include="Scripts\Forms\CoreScripts\Authenticate.js" />
+    <Content Include="Scripts\Forms\CoreScripts\jQXB.1.1.js" />
+    <Content Include="Scripts\Forms\CoreScripts\JSON.js" />
+    <Content Include="Scripts\Forms\CoreScripts\OBPaging.js" />
+    <Content Include="Scripts\Forms\India\DependentDetails.js" />
+    <Content Include="Scripts\Forms\UK\NewHireInduction.js" />
+    <Content Include="Scripts\HRSSTaskData.js" />
+    <Content Include="Scripts\JQuery\Autocomplete.js" />
+    <Content Include="Scripts\JQuery\jQuery.ui.js" />
+    <Content Include="Scripts\NHDashboard.js" />
+    <Content Include="Scripts\NHOTraining.js" />
+    <Content Include="Scripts\RelocationAssistance\angular.js" />
+    <Content Include="Scripts\RelocationAssistance\angular.min.js" />
+    <Content Include="Scripts\RelocationAssistance\CityInfo.js" />
+    <Content Include="Scripts\RelocationAssistance\FeedbackAndAboutUs.js" />
+    <Content Include="Scripts\RelocationAssistance\HomePage.js" />
+    <Content Include="Scripts\RelocationAssistance\jquery-1.8.3.js" />
+    <Content Include="Scripts\RelocationAssistance\jquery-ui-1.10.0.custom.js" />
+    <Content Include="Scripts\RelocationAssistance\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="Scripts\RelocationAssistance\jquery.jscrollpane.js" />
+    <Content Include="Scripts\RelocationAssistance\jquery.livequery.js" />
+    <Content Include="Scripts\RelocationAssistance\jquery.mousewheel.js" />
+    <Content Include="Scripts\RelocationAssistance\jquery.qtip.js" />
+    <Content Include="Scripts\RelocationAssistance\rascripts.js" />
+    <Content Include="Scripts\RelocationAssistance\scroll.js" />
+    <Content Include="Scripts\RelocationAssistance\SearchFeature.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Scripts\SendMail.js" />
+    <Content Include="Scripts\Forms\FormsValidation.js" />
+    <Content Include="Scripts\Forms\India\AnnexureB.js" />
+    <Content Include="Scripts\Forms\India\ApplicationForm.js" />
+    <Content Include="Scripts\Forms\India\ApprenticeshipForm.js" />
+    <Content Include="Scripts\Forms\India\CampusESIForm.js" />
+    <Content Include="Scripts\Forms\India\CodeOfethics.js" />
+    <Content Include="Scripts\Forms\India\DefaultUserRights.js" />
+    <Content Include="Scripts\Forms\India\EmployeeDetails.js" />
+    <Content Include="Scripts\Forms\India\GratuityNominationForm.js" />
+    <Content Include="Scripts\Forms\India\MedicalInsuranceForm.js" />
+    <Content Include="Scripts\Forms\India\PFNominationForm.js" />
+    <Content Include="Scripts\Forms\India\SampleForm.js" />
+    <Content Include="Scripts\Forms\India\CATPForm.js" />
+    <Content Include="Scripts\Forms\India\NDAForm.js" />
+    <Content Include="Scripts\Forms\India\PAIForm.js" />
+    <Content Include="Scripts\Forms\CoreScripts\PDFMaster.js" />
+    <Content Include="Scripts\Forms\UK\COBE.js" />
+    <Content Include="Roles\NHPages\Paperwork\UK\EquipmentRequest.htm" />
+    <Content Include="Scripts\Forms\UK\EquipmentRequest.js" />
+    <Content Include="Scripts\Forms\UK\NDA_Contractors.js" />
+    <Content Include="Scripts\Forms\UK\PersonalDataForm.js" />
+    <Content Include="Scripts\Forms\UK\ProhibitionOfDisclosure.js" />
+    <Content Include="Scripts\Forms\US\AmexCard.js" />
+    <Content Include="Scripts\Forms\US\COECertification.js" />
+    <Content Include="Scripts\Forms\US\CPERF.js" />
+    <Content Include="Scripts\Forms\US\CPERF_US.js" />
+    <Content Include="Scripts\Forms\US\EEOForm.js" />
+    <Content Include="Scripts\Forms\US\I9NotaryForm.js" />
+    <Content Include="Scripts\Forms\US\MarketRxNDA.js" />
+    <Content Include="Scripts\Forms\US\NDAForm.js" />
+    <Content Include="Scripts\Forms\US\NJDWDEV.js" />
+    <Content Include="Scripts\Forms\US\NoticeMedicalElection.js" />
+    <Content Include="Scripts\Forms\US\NYExemptWageServiceForm.js" />
+    <Content Include="Scripts\Forms\US\NYNonExemptWageServiceForm.js" />
+    <Content Include="Scripts\Forms\US\PersonalDetails.js" />
+    <Content Include="Scripts\Forms\US\PostJoinRefDocs.js" />
+    <Content Include="Scripts\Forms\US\PreJoinRefDocs.js" />
+    <Content Include="Scripts\Forms\US\StateW4Form.js" />
+    <Content Include="Scripts\Forms\US\W4.js" />
+    <Content Include="Scripts\JQuery\1.8\indiaonboarding.js" />
+    <Content Include="Scripts\JQuery\1.8\Jquery-1.7.1.js" />
+    <Content Include="Scripts\JQuery\1.8\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="Scripts\JQuery\1.8\jquery.js" />
+    <Content Include="Scripts\JQuery\1.8\OfferAcceptReject.js" />
+    <Content Include="Scripts\JQuery\head.load.min.js" />
+    <Content Include="Scripts\JQuery\jquery-ui.min.js" />
+    <Content Include="Scripts\JQuery\jquery.alerts.js" />
+    <Content Include="Scripts\JQuery\jquery.min.js" />
+    <Content Include="Scripts\JQuery\jquery.ui.datepicker.js" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="OneC.OnBoarding.UI.suo" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.BgvNHDashboardData.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.CandidateDetails1.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.CandidateTrainingDC.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.CandidateTrainingDetails.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.Faq.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.FaqData.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.FileUploadDC.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.NewHireTrainingDC.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.SaveCisDC.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.SaveTaskDCSource.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.AdminDashBoard.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.ApprovalDetails.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.AssetRequestStatus.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.BgvCandidateData.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.BgvComponent.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.BGVDocumentUploadDetail.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.BgvPageNotificationData.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.CandidateApproveListDataSource.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.CandidateDocumentForApproval.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.DashboardDataDC.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.DocumentApprovalStatusDC.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.InstitutionDC.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.DashboardDataDC.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.TimelineFilter.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.TMDashboardData.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.UtilityDC.City1.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.UtilityDC.GetMailContent.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.UtilityDC.MCkinleyDC.datasource" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\2012_Benefit_Guide_V3.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\A2 Nonresident Alien W4 Instructions - 2011.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\Cognizant US Associate Handbook 2010 v2 02Dec10.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\CTS eI-9 Process Flow V3.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\G Prohibition on Disclosure - Insider Trading Policy.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\H3 I-9 Form.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\J 2011 Benefits Overview.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\J3 2011 Benefits Brochure.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\L ESPP.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\M PeopleLINE-12-2.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\N Direct Deposit Procedures V2.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\Notaries.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\O ADP iPay Online Pay Statement 12-10.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\P AMEX Corporate Card Procedures v7.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\R BCD Travel.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\SunLifeExtendedHealthCareBeneficiaryForm.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\SunLifeExtendedHealthCareEnrollmentForm.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\SunLifeInpatriateHealthPlanEnrollment.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\T Travel and Expense Reporting-12-2.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\U Cognizant US Time Off Policy-2011.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\V Employment Verification Requests-12-2.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Canada\X Technical Assistance  Network Systems  Support V2.pdf" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.CandidateTask.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.CandidateTypeDC.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.DashBoardDataPagination.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.MasterList.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.MasterListSource.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.SaveTaskDC.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.SaveTaskSource.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DashBoardDC.NssDashboardData.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.UtilityDC.Country.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.UtilityDC.CountryListSource.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.UtilityDC.Messages.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.UtilityDC.PageAccess.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.UtilityDC.PageMenuMappingContainer.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.UtilityDC.SessionDetails.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.UtilityDC.SurveyDC.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.UtilityDC.UserInfoDC.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.UtilityDC.UserRolesAccessContainer.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.UtilityDC.UserRolesContainer.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.CandidateDetail.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.CandidateDC.TaskDetail.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.DataContracts.CandidateDC.CandidateDetail.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.UtilityDC.SystemKey.datasource" />
+    <None Include="Properties\DataSources\OneC.OnBoarding.DC.UtilityDC.UserRoles.datasource" />
+    <Content Include="Scripts\JQuery\thickbox.js" />
+    <Content Include="Scripts\SessionTimer.js" />
+    <Content Include="Scripts\standard.js" />
+    <Content Include="Scripts\Survey\jquery.screwdefaultbuttons.js" />
+    <Content Include="Scripts\Survey\Survey.js" />
+    <Content Include="Scripts\Validations.js" />
+    <Content Include="Roles\NHPages\SampleForms\Canada\AmexCorporateCardCardmemberAgreement.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Canada\CodeCanada.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Canada\CommissionTaxForm.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Canada\Equipment-RequestForm.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Canada\FederalTaxForms.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Canada\NDA-Canada.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Canada\PersonalInformationSheet-Canada.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Canada\ProvincialTaxForms_ALBERTA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Canada\ProvincialTaxForms_BRITISH COLUMBIA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Canada\ProvincialTaxForms_Manitoba.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Canada\ProvincialTaxForms_Ontario.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\India\Code-of-ethics.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\India\DefaultUserRights.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\India\EducationDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\India\EmployeeDetailsForm.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\India\GratuityNominationform.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\India\NDA_IND.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\India\PersonalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\India\PFNomination.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\AmexCorporateCardCardmemberAgreement.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\COE - VP.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\COECertification.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\EqualEmploymentOpportunity.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\EquipmentRequestForm.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\NDA-US.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\NoticeofMedicalElectionPeriod.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\Personal.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\PersonalInformationSheet.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\Prohibitionofdisclosure.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\W11.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\W4.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\US\Replicon Timesheet Approval Guide for Supervisors of Non-Exempt Employees.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\US\Replicon Timesheet Guide for Non-Exempt Employees.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\MarketRxNDA-US.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\NYExemptWageServiceForm.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\Acceptable use policy.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\Amex Code test.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\Bussiness Card request.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\Cognizant quality policy.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\Conference Bridge request.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\Core Values and Standard.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\form-Personal Data form.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\form-Prohibition of disclosure.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\New Hire induction.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\Employee Self service.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\Equipment request form.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\ESA Associate.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\Welcome Mailer.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Germany\AmexCard.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Netherland\AmexCard.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Netherland\Model voor Loonheffingen.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Netherland\TaxDeclaration.Pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Switzerland\AmexCard.pdf" />
+    <None Include="Roles\NHPages\Paperwork\Belgium\AmexCreditCard.pdf" />
+    <None Include="Roles\NHPages\Paperwork\Denmark\AmexCreditCard.pdf" />
+    <None Include="Roles\NHPages\Paperwork\France\AmexCreditCard.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\India\Competency_UpdateFAQ.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Ireland\P46LocalHireForm1.pdf" />
+    <None Include="Roles\NHPages\Paperwork\Norway\AmexCreditCard.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Philippines\BIR1905.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Philippines\BIR2305.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\Philippines\Requesttransferofdetails.pdf" />
+    <None Include="Roles\NHPages\Paperwork\Sweden\AmexCreditCard.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\NDA_Contractors.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Roles\NHPages\Paperwork\US\51273-QDIA 2013.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Germany\PersonalDataForm.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Netherland\PersonalDataForm.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Netherland\TaxDeclaration.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Switzerland\PersonalDataForm.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Germany\DataProtectionAgreement.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\US\AssociateSecurityHandbook.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\US\i9_General_Instructions_21_CURRENT_080612.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\US\ParticipantFeesDisclosureStatement2012.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\US\PMSecurityHandbook.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\US\California_PDF.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Philippines\BIR1905.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Philippines\BIR2305.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Philippines\COBE.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Philippines\DependentDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Philippines\DrugScreeningExam.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Philippines\EducationalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Philippines\EmployeeDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Philippines\PersonalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Philippines\PhilippinesHealthInsuranceCorp.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Philippines\PreEmploymentExam.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Philippines\ProhibitionOfDisclosure.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Philippines\RequestforTransfer.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\US\cog_values_book_v02_02_lr_130422.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Belgium\PersonalDataForm.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Denmark\PersonalDataForm.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\France\PersonalDataForm.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Hungary\PersonalDataForm.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Norway\PersonalDataForm.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Sweden\PersonalDataForm.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\UK\P46LocalHireForm.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\India\AnnexureB.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\US\Cognizant New Hire Handbook.pdf" />
+    <Content Include="Roles\NHPages\Paperwork\US\I-9 instruction.pdf" />
+    <None Include="Roles\NHPages\Paperwork\US\ListOfAcceptableDocs.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Australia\COBE.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Australia\DependentDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Australia\EducationalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Australia\EIPAA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Australia\EmployeeDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Australia\PersonalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Australia\ProhibitionOfDisclosure.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Australia\ProprietaryRightsNDA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Australia\SecurityResponsibilities.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\India\Competency_Update_FAQ.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\India\Form11__faq.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Hongkong\COBE.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Hongkong\DependentDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Hongkong\EducationalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Hongkong\EIPAA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Hongkong\EmployeeDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Hongkong\PersonalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Hongkong\ProhibitionOfDisclosure.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Hongkong\ProprietaryRightsNDA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Hongkong\SecurityResponsibilities.pdf" />
+    <None Include="Roles\NHPages\SampleForms\India\Relocation_FAQ.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\India\ResumeUploadFAQ.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Switzerland\EquipmentRequestForm.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\P46 Local hire form1.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Singapore\COBE.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Singapore\DependentDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Singapore\EIPAA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Singapore\ProhibitionOfDisclosure.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Singapore\ProprietaryRightsNDA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Singapore\SecurityResponsibilities.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Malaysia\COBE.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Malaysia\DependentDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Malaysia\EIPAA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Malaysia\ProhibitionOfDisclosure.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Malaysia\ProprietaryRightsNDA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Malaysia\SecurityResponsibilities.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Singapore\EducationalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Singapore\EmployeeDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Singapore\PersonalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Malaysia\EducationalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Malaysia\EmployeeDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Malaysia\PersonalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Ireland\P46 Local hire form.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Ireland\Equipment request form.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\SECRules.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Ireland\WorkRelatedDrivingPolicyIreland.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UK\WorkRelatedDrivingPolicyUK.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\ExhibitB1.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\US\ExhibitC.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Newzealand\COBE.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Newzealand\DependentDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Newzealand\EducationalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Newzealand\EIPAA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Newzealand\EmployeeDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Newzealand\PersonalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Newzealand\ProhibitionOfDisclosure.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Newzealand\ProprietaryRightsNDA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Newzealand\SecurityResponsibilities.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UnitedArab\COBE.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UnitedArab\DependentDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UnitedArab\EducationalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UnitedArab\EIPAA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UnitedArab\EmployeeDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UnitedArab\PersonalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UnitedArab\ProhibitionOfDisclosure.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UnitedArab\ProprietaryRightsNDA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\UnitedArab\SecurityResponsibilities.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\SaudiArabia\COBE.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\SaudiArabia\EIPAA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\SaudiArabia\ProprietaryRightsNDA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\SaudiArabia\ProhibitionOfDisclosure.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\SaudiArabia\SecurityResponsibilities.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\SaudiArabia\DependentDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\SaudiArabia\EducationalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\SaudiArabia\EmployeeDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\SaudiArabia\PersonalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Thailand\COBE.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Thailand\DependentDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Thailand\EducationalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Thailand\EIPAA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Thailand\EmployeeDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Thailand\PersonalDetails.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Thailand\ProhibitionOfDisclosure.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Thailand\ProprietaryRightsNDA.pdf" />
+    <Content Include="Roles\NHPages\SampleForms\Thailand\SecurityResponsibilities.pdf" />
+    <None Include="Service References\ELMService\CI_CT_ELM1C.wsdl" />
+    <None Include="Service References\ELMService\M1032904.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ELMService\M1088920.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ELMService\M167858.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ELMService\M293766.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ELMService\M378176.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ELMService\M448620.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ELMService\M479654.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ELMService\M488680.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ELMService\M599317.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ELMService\M635219.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ELMService\M771058.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ELMService\M817211.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ELMService\M890659.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ELMService\M893395.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ELMService\M993015.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ELMService\OneC.OnBoarding.WebApp.ELMService.Create__CompIntfc__CT_ELM1CResponseTypeShape.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ELMService\OneC.OnBoarding.WebApp.ELMService.CT_ELM1CComplexTypeShape1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ELMService\OneC.OnBoarding.WebApp.ELMService.Get__CompIntfc__CT_ELM1CResponseTypeShape.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ELMService\OneC.OnBoarding.WebApp.ELMService.Updatedata__CompIntfc__CT_ELM1CResponseTypeShape.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ELMService\OneC.OnBoarding.WebApp.ELMService.Update__CompIntfc__CT_ELM1CResponseTypeShape.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FileUploadService\DocumentUploadService.wsdl" />
+    <None Include="Service References\FileUploadService\DocumentUploadService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileUploadService\DocumentUploadService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileUploadService\DocumentUploadService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileUploadService\DocumentUploadService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileUploadService\DocumentUploadService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileUploadService\OneC.OnBoarding.WebApp.FileUploadService.AppTemplateCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FileUploadService\OneC.OnBoarding.WebApp.FileUploadService.FileUploadDC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FileUploadService\OneC.OnBoarding.WebApp.FileUploadService.MFileuploadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FileUploadService\DocumentUploadService.disco" />
+    <None Include="Service References\FileUploadService\configuration91.svcinfo" />
+    <None Include="Service References\FileUploadService\configuration.svcinfo" />
+    <None Include="Service References\FileUploadService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\IDMSvcRefFromIDM\Service_EUMS.wsdl" />
+    <None Include="Service References\IDMSvcRefFromIDM\Service_EUMS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IDMSvcRefFromIDM\Service_EUMS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IDMSvcRefFromIDM\Service_EUMS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IDMSvcRefFromIDM\Service_EUMS3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.BGVUtilityMethods\BGVUtilityMethods.wsdl" />
+    <None Include="Service References\Service.BGVUtilityMethods\BGVUtilityMethods.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.BGVUtilityMethods\BGVUtilityMethods1.wsdl" />
+    <None Include="Service References\Service.BGVUtilityMethods\BGVUtilityMethods1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.BGVUtilityMethods\BGVUtilityMethods2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.BGVUtilityMethods\BGVUtilityMethods3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.BGVUtilityMethods\BGVUtilityMethods4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.BGVUtilityMethods\BGVUtilityMethods5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.CandidateServices\configuration91.svcinfo" />
+    <None Include="Service References\Service.CandidateServices\configuration.svcinfo" />
+    <None Include="Service References\Service.CandidateServices\OneC.OnBoarding.DC.CandidateDC.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.CandidateServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Service.CandidateServices\service.wsdl" />
+    <None Include="Service References\Service.CandidateServices\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.CandidateServices\service1.wsdl" />
+    <None Include="Service References\Service.CandidateServices\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.CandidateServices\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.CandidateServices\service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.CandidateServices\service4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.CandidateServices\service5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\configuration91.svcinfo" />
+    <None Include="Service References\Service.DashBoardServices\configuration.svcinfo" />
+    <None Include="Service References\Service.DashBoardServices\DashBoardServices24.wsdl" />
+    <None Include="Service References\Service.DashBoardServices\DashBoardServices25.wsdl" />
+    <None Include="Service References\Service.DashBoardServices\DashBoardServices7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\DashBoardServices714.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\DashBoardServices715.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\DashBoardServices716.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\DashBoardServices717.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\DashBoardServices718.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\DashBoardServices719.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\DashBoardServices720.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\DashBoardServices8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.AdminDashBoard.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.AssetRequestStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.BgvCandidateData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.BgvComponent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.BGVDocumentUploadDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.CandidateDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.CandidateDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.CandidateTask.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.CandidateTrainingDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.City.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.DashboardDataDC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.DashBoardDataPagination.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.DocumentApprovalStatusDC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.InstitutionDC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.NssDashboardData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.TimelineFilter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\OneC.OnBoarding.WebApp.Service.DashBoardServices.TMDashboardData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Service.DashBoardServices\DashBoardServices12.disco" />
+    <None Include="Service References\Service.OBUtilityMethods\OBUtilityMethods.disco" />
+    <None Include="Service References\Service.OBUtilityMethods\configuration91.svcinfo" />
+    <None Include="Service References\Service.OBUtilityMethods\configuration.svcinfo" />
+    <None Include="Service References\Service.OBUtilityMethods\OBUtilityMethods5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.OBUtilityMethods\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\IDMSvcRefFromIDM\Service_EUMS.disco" />
+    <None Include="Service References\IDMSvcRefFromIDM\configuration91.svcinfo" />
+    <None Include="Service References\IDMSvcRefFromIDM\configuration.svcinfo" />
+    <None Include="Service References\IDMSvcRefFromIDM\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ELMService\configuration91.svcinfo" />
+    <None Include="Service References\ELMService\configuration.svcinfo" />
+    <None Include="Service References\ELMService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Styles\Appspot\appspot.css" />
+    <Content Include="Styles\Appspot\banner.css" />
+    <Content Include="Styles\Appspot\base.css" />
+    <Content Include="Styles\Appspot\default.css" />
+    <Content Include="Styles\Appspot\jquery.qtip.css" />
+    <Content Include="Styles\Appspot\jquery.qtip.min.css" />
+    <Content Include="Styles\Autocomplete.css" />
+    <Content Include="Styles\Calender.Css" />
+    <Content Include="Styles\drilldown.css" />
+    <Content Include="Styles\faq.css" />
+    <Content Include="Styles\Forms\BlueTheme.css" />
+    <Content Include="Styles\Forms\BlueThemeGov.css" />
+    <Content Include="Styles\Forms\Canada\Quebec.css" />
+    <Content Include="Styles\Forms\form.css" />
+    <Content Include="Styles\Forms\FormSpecific.css" />
+    <Content Include="Styles\Forms\GratuityNominationForm.css" />
+    <Content Include="Styles\Forms\India\offerscreen.css" />
+    <Content Include="Styles\Forms\photoupload.css" />
+    <Content Include="Styles\Forms\StandardForms.css" />
+    <Content Include="Styles\Forms\US\W4.css" />
+    <Content Include="Styles\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Styles\jquery.alerts.css" />
+    <Content Include="Styles\jquery.ui.all.css" />
+    <Content Include="Styles\jquery.ui.base.css" />
+    <Content Include="Styles\jquery.ui.core.css" />
+    <Content Include="Styles\jquery.ui.datepicker.css" />
+    <Content Include="Styles\jquery.ui.theme.css" />
+    <Content Include="Styles\NHStyles.css" />
+    <Content Include="Styles\RelocationAssistance\content.css" />
+    <Content Include="Styles\RelocationAssistance\jquery.jscrollpane.css" />
+    <Content Include="Styles\RelocationAssistance\jquery.qtip.css" />
+    <Content Include="Styles\RelocationAssistance\rlstyles.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Scripts\JQuery\1.4.1\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\JQuery\1.4.1\jquery-1.4.1.js" />
+    <Content Include="Scripts\JQuery\1.4.1\jquery-1.4.1.min.js" />
+    <Content Include="Styles\styles.css" />
+    <Content Include="Styles\Survey\checkStyle.css" />
+    <Content Include="Styles\Survey\style.css" />
+    <Content Include="Styles\thickbox.css" />
+    <Content Include="Templates\CandidateidBulkUpload\CandidateIDBulkUpload.xml" />
+    <Content Include="Templates\InductionAttendanceTemplates\InductionAttendanceTemplate.xml" />
+    <Content Include="Templates\NSSTemplates\FedExTemplate.xml" />
+    <Content Include="Temp\Readme.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Service References\Service.OBUtilityMethods\OBUtilityMethods.wsdl" />
+    <None Include="Service References\Service.OBUtilityMethods\OBUtilityMethods.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.OBUtilityMethods\OBUtilityMethods1.wsdl" />
+    <None Include="Service References\Service.OBUtilityMethods\OBUtilityMethods1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.OBUtilityMethods\OBUtilityMethods2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.OBUtilityMethods\OBUtilityMethods3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service.OBUtilityMethods\OBUtilityMethods4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessBlock.aspx.cs">
+      <DependentUpon>AccessBlock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccessBlock.aspx.designer.cs">
+      <DependentUpon>AccessBlock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BGVService.aspx.cs">
+      <DependentUpon>BGVService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BGVService.aspx.designer.cs">
+      <DependentUpon>BGVService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPages\DownTime.aspx.cs">
+      <DependentUpon>DownTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPages\DownTime.aspx.designer.cs">
+      <DependentUpon>DownTime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPages\InterApp.aspx.cs">
+      <DependentUpon>InterApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPages\InterApp.aspx.designer.cs">
+      <DependentUpon>InterApp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPages\OnBoardingContent.aspx.cs">
+      <DependentUpon>OnBoardingContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPages\OnBoardingContent.aspx.designer.cs">
+      <DependentUpon>OnBoardingContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPages\PopUp.aspx.cs">
+      <DependentUpon>PopUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPages\PopUp.aspx.designer.cs">
+      <DependentUpon>PopUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPages\SessionMaintainer.aspx.cs">
+      <DependentUpon>SessionMaintainer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPages\SessionMaintainer.aspx.designer.cs">
+      <DependentUpon>SessionMaintainer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPages\UploadFile.aspx.cs">
+      <DependentUpon>UploadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPages\UploadFile.aspx.designer.cs">
+      <DependentUpon>UploadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPages\UploadFileDashboard.aspx.cs">
+      <DependentUpon>UploadFileDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPages\UploadFileDashboard.aspx.designer.cs">
+      <DependentUpon>UploadFileDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPages\UploadFileDashboardWithResponse.aspx.cs">
+      <DependentUpon>UploadFileDashboardWithResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPages\UploadFileDashboardWithResponse.aspx.designer.cs">
+      <DependentUpon>UploadFileDashboardWithResponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPages\UploadUtility.aspx.cs">
+      <DependentUpon>UploadUtility.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPages\UploadUtility.aspx.designer.cs">
+      <DependentUpon>UploadUtility.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardService.aspx.cs">
+      <DependentUpon>DashboardService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashboardService.aspx.designer.cs">
+      <DependentUpon>DashboardService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\BulkBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\AddressLine.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\BulkSearchItem.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\BulkSearchResult.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\CanSearch.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\Dataset.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\ExampleAddress.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\FormattedAddress.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\Layout.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\LicensedSet.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\Picklist.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\PicklistItem.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\PromptLine.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\PromptSet.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\ProWeb.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\QuickAddress.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\com.qas.proweb\SearchResult.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\Constants.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\FlatBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\Global.asax.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\HierBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\KeyBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\RapidBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\App_Code\VerifyBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\RapidAddress.aspx.cs">
+      <DependentUpon>RapidAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\RapidAddress.aspx.designer.cs">
+      <DependentUpon>RapidAddress.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\RapidPicklist.aspx.cs">
+      <DependentUpon>RapidPicklist.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Experian\Typedown\RapidPicklist.aspx.designer.cs">
+      <DependentUpon>RapidPicklist.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\RapidSearch.aspx.cs">
+      <DependentUpon>RapidSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Experian\Typedown\RapidSearch.aspx.designer.cs">
+      <DependentUpon>RapidSearch.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="FormPDF.aspx.cs">
+      <DependentUpon>FormPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormPDF.aspx.designer.cs">
+      <DependentUpon>FormPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsService.aspx.cs">
+      <DependentUpon>FormsService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsService.aspx.designer.cs">
+      <DependentUpon>FormsService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roles\ADMIN\ADMINDashBoard.aspx.cs">
+      <DependentUpon>ADMINDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\ADMIN\ADMINDashBoard.aspx.designer.cs">
+      <DependentUpon>ADMINDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\HRSS\UploadAttendance.aspx.cs">
+      <DependentUpon>UploadAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\HRSS\UploadAttendance.aspx.designer.cs">
+      <DependentUpon>UploadAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\IM\IMDashBoard.aspx.cs">
+      <DependentUpon>IMDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\IM\IMDashBoard.aspx.designer.cs">
+      <DependentUpon>IMDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\FormPopup.aspx.cs">
+      <DependentUpon>FormPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NHPages\FormPopup.aspx.designer.cs">
+      <DependentUpon>FormPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\NHDashBoard.aspx.cs">
+      <DependentUpon>NHDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NHPages\NHDashBoard.aspx.designer.cs">
+      <DependentUpon>NHDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Australia\PhotoUpload.aspx.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Australia\PhotoUpload.aspx.designer.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\SANRedirectionPage.aspx.cs">
+      <DependentUpon>SANRedirectionPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\SANRedirectionPage.aspx.designer.cs">
+      <DependentUpon>SANRedirectionPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Hongkong\PhotoUpload.aspx.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Hongkong\PhotoUpload.aspx.designer.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\India\PhotoUpload.aspx.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\India\PhotoUpload.aspx.designer.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\India\PhotoUploadIndia.aspx.cs">
+      <DependentUpon>PhotoUploadIndia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\India\PhotoUploadIndia.aspx.designer.cs">
+      <DependentUpon>PhotoUploadIndia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Ireland\PhotoUpload.aspx.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Ireland\PhotoUpload.aspx.designer.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Malaysia\PhotoUpload.aspx.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Malaysia\PhotoUpload.aspx.designer.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Newzealand\PhotoUpload.aspx.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Newzealand\PhotoUpload.aspx.designer.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Philippines\PhotoUpload.aspx.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Philippines\PhotoUpload.aspx.designer.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\SaudiArabia\PhotoUpload.aspx.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\SaudiArabia\PhotoUpload.aspx.designer.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Singapore\PhotoUpload.aspx.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Singapore\PhotoUpload.aspx.designer.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Thailand\PhotoUpload.aspx.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\Thailand\PhotoUpload.aspx.designer.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\UnitedArab\PhotoUpload.aspx.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\UnitedArab\PhotoUpload.aspx.designer.cs">
+      <DependentUpon>PhotoUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\US\StateW4Form.aspx.cs">
+      <DependentUpon>StateW4Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NHPages\Paperwork\US\StateW4Form.aspx.designer.cs">
+      <DependentUpon>StateW4Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NHPages\Testfile1.aspx.cs">
+      <DependentUpon>Testfile1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NHPages\Testfile1.aspx.designer.cs">
+      <DependentUpon>Testfile1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NSSPages\ForecastDashBoard.aspx.cs">
+      <DependentUpon>ForecastDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NSSPages\ForecastDashBoard.aspx.designer.cs">
+      <DependentUpon>ForecastDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\NSSPages\NSSDashboard.aspx.cs">
+      <DependentUpon>NSSDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles\NSSPages\NSSDashboard.aspx.designer.cs">
+      <DependentUpon>NSSDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\TM\TMDashBoard.aspx.cs">
+      <DependentUpon>TMDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Roles\TM\TMDashBoard.aspx.designer.cs">
+      <DependentUpon>TMDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ELMService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FileUploadService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\IDMSvcRefFromIDM\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service.BGVUtilityMethods\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service.CandidateServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service.DashBoardServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Service.OBUtilityMethods\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\DashboardUtility.cs" />
+    <Compile Include="Utility\ErrorLogger.cs" />
+    <Compile Include="Utility\ExcelReader.cs" />
+    <Compile Include="Utility\ExportToExcel.cs" />
+    <Compile Include="Utility\SAN.cs" />
+    <Compile Include="Utility\SessionHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\UserInfo.cs" />
+    <Compile Include="Utility\Utility.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Roles\ADMIN\App_Data\" />
+    <Folder Include="Roles\NHPages\Paperwork Forms\UK Forms\" />
+    <Folder Include="Roles\NHPages\Paperwork\UKForms\" />
+    <Folder Include="Scripts\Forms\UK Scripts\" />
+    <Folder Include="Styles\Forms\UK\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ELMService\" />
+    <WCFMetadataStorage Include="Service References\FileUploadService\" />
+    <WCFMetadataStorage Include="Service References\IDMSvcRefFromIDM\" />
+    <WCFMetadataStorage Include="Service References\Service.BGVUtilityMethods\" />
+    <WCFMetadataStorage Include="Service References\Service.CandidateServices\" />
+    <WCFMetadataStorage Include="Service References\Service.DashBoardServices\" />
+    <WCFMetadataStorage Include="Service References\Service.OBUtilityMethods\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\OneC.OnBoarding.Services\OneC.OnBoarding.BAL\OneC.OnBoarding.BAL.csproj">
+      <Project>{41863588-39AC-45A5-B5EF-1F00C2235E3C}</Project>
+      <Name>OneC.OnBoarding.BAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OneC.OnBoarding.Services\OneC.OnBoarding.DC\OneC.OnBoarding.DC.csproj">
+      <Project>{40537469-2DCF-4109-9E44-83B9CB145526}</Project>
+      <Name>OneC.OnBoarding.DC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Experian\Typedown\RapidAddress.aspx.resx">
+      <DependentUpon>RapidAddress.aspx.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Experian\Typedown\RapidPicklist.aspx.resx">
+      <DependentUpon>RapidPicklist.aspx.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Experian\Typedown\RapidSearch.aspx.resx">
+      <DependentUpon>RapidSearch.aspx.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>50029</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/OnBoarding</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

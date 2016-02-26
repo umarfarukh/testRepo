@@ -1,0 +1,284 @@
+﻿@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,* {
+margin: 0;
+padding: 0;
+border: 0;
+font: inherit;
+vertical-align: baseline;
+overflow:visible;
+}
+body{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;  font-size:72.5%; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+input[type="button"]{
+*border-style :none;
+}
+._upload{
+height:20px;
+line-height:20px;
+width:60px;
+cursor:pointer;
+border-radius:4px;
+*font-size:1em;
+} 
+.btn_{
+height:24px;
+min-width:42px;
+cursor:pointer;
+margin:2px 0 4px 0;
+padding:0 4px 0 4px;   
+border: 1px solid #5482a3;  
+color:#fff;
+font-weight:bold;
+text-align:center;
+vertical-align:middle;                      
+border-radius:2px;
+background-image:url("../../Images/Bgv/header_bg.png");
+}
+.allcontent
+{
+    height: 475px;
+    overflow: scroll;
+    overflow-x: scroll;
+}
+
+.btn_ar{
+height:22px;
+min-width:24px;
+cursor:pointer;
+margin:2px 0 4px 0;
+padding:0 4px 0 4px;   
+border: 1px solid #5482a3;  
+color:#fff;
+font-weight:bold;
+text-align:center;
+vertical-align:middle;                      
+border-radius:2px;
+font-size:20px;
+background-image:url("../../Images/Bgv/header_bg.png");
+}
+.AddDoc
+{
+ margin-right:2px;   
+}
+                            
+.doc_upload_content{display:none;font-size:11px; color:#393939;}
+.edu_info_inner_content ul li label span{color:#ff003a; padding: 5px 10px 5px 10px;}
+.exp_info_inner_content{margin: 0 33px 10px; float:left; width: 824px; position:relative;}
+.exp_info_inner_content ul li{ margin: 6px 0; float:left; clear:both;}
+
+.exp_info_inner_content ul li label span{color:#ff003a; padding: 5px 10px 5px 10px;}
+.doc_details_upload{ /*margin: 0 12px;*/border:1px solid #b5c1ca; margin: 10px 26px 0 26px;}
+.doc_details_upload tr th{	background: url(../../Images/Bgv/header_bg.png) repeat-x; height:30px; color:#ffffff;}
+.doc_details_upload tr td{height:26px; padding: 5px; }
+.doc_details_upload tr td img{ margin: 0 4px 0 0;  vertical-align: sub; *vertical-align: middle;}
+
+.doc_details_upload tr td{
+padding:0;                        
+}    
+ .exp_info_inner_content{                  
+margin: 0 0 0 5px;
+width:910px;
+}    
+.doc_details_upload{
+margin:5px 5px 5px 5px;
+
+}                   
+
+.pending_documents td:hover
+{
+    border-top-color: #000000;
+    
+    font-size:12px;
+    font-weight:bold;
+}
+.pending_documents td:active
+{
+    border-top-color: #1b435e;   
+    color: #000000;
+}
+
+                       
+#overLay { display:none; position:fixed; _position:absolute; /* hack for internet explorer 6*/ height:100%; width:100%; top:0; 
+left:0;background-color:#000000; border:1px solid #cecece; z-index:9999;}
+.showContent
+{    
+cursor:default;
+}
+
+
+._feedback
+{
+width:150px;
+}
+table th {
+border-right-color: rgb(16, 43, 59);
+border-right-width: 1px;
+border-right-style: solid;
+vertical-align:middle;
+text-align:center;
+}
+#_responseContent{
+height: 100px;
+z-index: 99999;
+background-color: #000;
+opacity: 0.8;
+color: #fff;
+padding: 5px 5px 5px 5px;
+border: 1px solid #000;
+word-wrap: break-word;
+border-radius: 4px;
+font-weight: bold;
+font-size : 1.1em;
+width: 400px;
+letter-spacing:1px
+}
+
+
+.insufficiency{
+width: 96%;
+margin:5px 0 10px 5px;
+}
+.insufficiency .inner_header_sub{
+width: 100%;
+}
+
+a[href="#."]
+{
+text-decoration:underline;
+}
+
+.instHeight{
+width:100px;
+}
+.instHeight center{
+line-height:normal;
+}         
+   
+tr td.actions{
+width:170px;
+}
+#_docList{
+z-index: 99999;
+background-color: #000;
+opacity: 0.8;
+color: #fff;
+padding: 5px 5px 5px 5px;
+border: 1px solid #000;
+word-wrap: break-word;
+border-radius: 4px;
+font-weight: bold;
+font-size : 1.1em;
+width: 300px;
+letter-spacing:1px;
+list-style-type:decimal;
+}
+
+.styledStatus{
+        margin:5px 5px 5px 0;
+        border:1px solid #5f8296;
+        border-radius:2px;
+        height:26px;
+        width:120px;
+}
+.styledSubStatus{
+        margin:5px 0 5px -3px;      
+        border:1px solid #5f8296;
+        border-radius:2px;
+        height:26px;
+        width:120px;
+}
+table.pending_documents tr td.tdlabel{
+    border-right-color: rgb(153, 163, 167);
+    border-bottom-color: rgb(153, 163, 167); 
+    border-right-width: 1px; 
+    border-bottom-width: 1px;
+    border-right-style: solid; 
+    border-bottom-style: solid; 
+    background-color: rgb(255, 255, 255);
+    vertical-align:middle;
+    text-align:center;
+    }
+ table.pending_documents tr td.design{   
+    border-right-color: rgb(153, 163, 167); 
+    border-bottom-color: rgb(153, 163, 167); 
+    border-right-width: 1px; 
+    border-bottom-width: 1px; 
+    border-right-style: solid; 
+    border-bottom-style: solid; 
+    vertical-align:middle;
+    text-align:center;
+ }
+ .width98{
+     width:98%;
+     height:30px;
+     }
+ .width98 label{
+     width: 20%;
+     text-align:left;
+	margin-left:10px;
+ }
+ .doc_details_upload tr.hide_header th{
+     height:0px;
+     
+     }
+.status{
+    color:#393939;
+    }
+
+input[type="radio"] {
+            vertical-align: middle;
+        }
+     
+ .wrapper_docs{
+            width:900px
+ }   
+
+ #footerContent{
+/*     margin-right:50px;*/
+        position: absolute;
+        left: 710px;
+        top: 550px;
+     }
+          
+#MessageContent          
+{
+    margin-top:12px;
+    color:Red;
+}
+.divQustn
+{
+    font-size:11px;
+    float:left;
+    width:850px;
+    margin-bottom:5px;
+}
+
+.tbForm
+{
+	height:20px;
+	width:250px;
+	border:1px solid #99a3a7;	
+	margin-left :12px;
+	padding:0;
+	margin:0; /*Styles reverted by Debasish */			
+}

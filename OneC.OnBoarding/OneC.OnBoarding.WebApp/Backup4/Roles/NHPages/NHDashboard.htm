@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="CACHE-CONTROL" content="private">
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <title>NH dashboard</title>
+     <link href="../../Styles/NHStyles.css" rel="stylesheet" type="text/css" />
+     <input type="hidden" id="hdnSmMode" runat="server" />    
+</head>
+<body>
+    <form id="Form1" >
+    <div id="smFrame" style="display: none;">
+        <iframe id="sm" frameborder="0" width="0" height="0" runat="server"></iframe>
+    </div>
+    <div class="header_nh">
+        <div class="photo_nh" id="Photo">
+            <img alt="Photo" id="NHPhoto" style="height: 122px; width: 118px;" />
+        </div>
+        <div class="text_nh">
+            <p class="welcome_text" style="font-weight: bold;">
+                Welcome Associate
+                <label id="Name" class="name_nh" runat="server">
+                </label>
+                ,</p>
+            <span id="Designation" runat="server" style="font-weight: bold;" >Programmer Analyst</Span>
+            <div id="NextTaskPrgBar" style="width: 400px; height: 60px;">
+                <blink><p id="next_task" class="next_task"> 
+            <label id="NextTask" class="next_label"></label></p></blink>
+            </div>
+            <p id="dateofjoining" class="next_task" style="float: left; width: 300px;">
+                <label id="DateOfJoin" class="next_label" style="font-weight: bold;">
+                    Date Of Joining: </label>
+                <label id="Date_Of_Joining" class="next_label">08/27/2014
+                </label>
+            </p>
+        </div>
+        <div class="tasks_nh">
+            <div class="onboarding_nh">
+                <p>
+                    On Boarding
+                </p>
+                <p class="completed_nh">
+                    <span style="display: block; float: left; width: 100%;">
+               <span id="completedSquare"></span>
+                        Completed:
+                        <label id="CompletedCount"> 5
+                        </label>
+                    </span><span style="display: block; float: left; width: 100%;">
+                    <span id="pendingSquare"></span>
+                        Pending:<label id="PendingCount"> 7</label>
+                    </span>
+                </p>
+               
+            </div>
+                    
+        </div>
+    </div>
+    <div class="content_nh" style="height: 50%">
+       
+          <img src="../../Images/NHView.JPG" alt="List View" title="List View" 
+                id="list" />       
+            
+           
+        </div> 
+        
+    </div>
+    
+   
+    <!--299080 - Commented-navigator banner-->
+    <!-- <div id="nav1" onclick="redirectToRAapp();">
+        <a href="#." target="_blank"><img src="../../Images/Welcome to_Cog_IT_IS.png" /> </a>         
+    </div>     
+    <!---->        
+   
+
+    </form>
+</body>
+
+
+</html>

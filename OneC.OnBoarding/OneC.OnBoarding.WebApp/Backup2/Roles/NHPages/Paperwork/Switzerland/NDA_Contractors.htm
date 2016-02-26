@@ -1,0 +1,400 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/Switzerland/NDA_Contractors.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id='baseContent'>
+        <div id="pageMain">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div style="font-weight: bold; text-decoration: underline; color: #3f678f; font-size: 13px;
+                            padding-left: 15px">
+                            <p>
+                                AGREEMENT</p>
+                        </div>
+                        <br />
+                        <p class="pageText">
+                            This Agreement (the “Agreement”), dated
+                            <input type="text" style="font-weight: bolder;" id="Pg_1_text_Date" readonly="readonly"
+                                disabled="disabled" />, is by and between Cognizant Technology Solutions Switzerland
+                            Limited (“Cognizant”), and</p>
+                        <p class="pageText" style="display: block; height: 80px;">
+                            <span style="width: 290px; display: block; float: left; height: 40px; text-decoration: none;
+                                font-weight: normal;">
+                                <input type="text" style="border: 1px solid #000; width: 262px; float: right; text-decoration: none;
+                                    font-weight: normal;" id="Pg_1_text_AgencyName" jqxb-datasource="FormDetails"
+                                    maxlength="45" title="Agency Name" class="textMandatory onlyAlp" onmousedown="ClearDefaultAgencyName()"
+                                    jqxb-datamember="NDAForm.AgencyName" />
+                            </span><span style="width: auto; display: block; float: left; height: 40px; padding: 0 5px;
+                                text-decoration: none; font-weight: normal;">of</span> <span style="width: 290px;
+                                    display: block; float: left; height: 40px; text-decoration: none; font-weight: normal;">
+                                    <input type="text" style="border: 1px solid #000; width: 262px; float: right;" id="Pg_1_text_AgencyAddress"
+                                        jqxb-datasource="FormDetails" maxlength="100" title="Agency Address" class="textMandatory onlyAlphanumeric"
+                                        onkeydown="RestrictCharCount(this.id,100)," jqxb-datamember="NDAForm.AgencyAddress"
+                                        onmousedown="ClearDefaultAgencyAddress()" />
+                                </span><span style="width: auto; display: block; float: left; height: 40px; padding: 0 5px;
+                                    text-decoration: none; font-weight: normal;">and</span> <span style="width: 250px;
+                                        display: block; float: left; height: 40px; text-decoration: none; font-weight: normal;">
+                                        <input type="text" style="width: 250px; font-weight: bolder" id="Pg_1_text_Name"
+                                            disabled="true" /></span> <span style="width: auto; display: block; float: left;
+                                                height: 40px; padding: 0 5px; text-decoration: none; font-weight: normal;">of</span>
+                            <span style="width: 400px; display: block; float: left; height: 40px; text-decoration: none;
+                                font-weight: normal;">
+                                <input type="text" style="width: 400px; font-weight: bolder" id="Pg_1_text_CandidateAddress"
+                                    disabled="true" />
+                            </span>
+                        </p>
+                        <br />
+                        <p class="pageText">
+                            By this Agreement:
+                        </p>
+                        <br />
+                        <!--   <p class="pageText" style="margin-left: 20px">-->
+                        <ol style="list-style-type: decimal; margin-left: 60px;" class="pageText">
+                            <li>
+                                <p>
+                                    For the purposes of this agreement, the following words shall have the meanings
+                                    set out below:
+                                </p>
+                                <br />
+                                <p>
+                                    “Affiliate” means in relation to a company its subsidiaries, its parent company
+                                    and its parent company’s subsidiaries (each as defined in the Companies Act 2006)
+                                    from time to time;
+                                </p>
+                                <br />
+                                <p>
+                                    “Agency” means [name and registered address of the agency]
+                                </p>
+                                <br />
+                                <p>
+                                    “Agency Agreement” means the agreement between Cognizant and the Agency dated [
+                                    <input type="text" style="font-weight: bolder;" id="Pg_1_text_Date1" readonly="readonly"
+                                        disabled="disabled" />]
+                                </p>
+                                <br />
+                                <p>
+                                    “Cognizant Client” means any person or entity to whom or which the Consultant or
+                                    the Company or any of their employees or agents is introduced or to whom or which
+                                    the Company or the Consultant or any of their employees or agents provide services
+                                    in the 12 months immediately before the Termination Date or in respect of whom the
+                                    Company or the Consultant have been given Confidential Information and who or which
+                                    is a client of Cognizant or any of its Affiliates.
+                                </p>
+                                <br />
+                                <p>
+                                    “Confidential Information” means (i) any information or material designated as confidential
+                                    or proprietary by Cognizant or that by its nature should be deemed to be confidential
+                                    or proprietary; and (ii) any information relating to the financial affairs or position
+                                    of Cognizant, any negotiations, agreements, contracts, or transactions of Cognizant,
+                                    any of Cognizant's trade secrets, including secret processes, equipment, plans,
+                                    specifications, drawings, designs, formulae, software, customer agreements, and
+                                    data, and any of Cognizant's processes, equipment, specifications, drawings, designs,
+                                    formulae, software, customer agreements, and data whether trade secrets or not and
+                                    (iii) the aforementioned matters in respect of any Affiliate or any licensor, licensee
+                                    or customers or clients of Cognizant or any of its Affiliates or any firm or company
+                                    collaborating with Cognizant or any of its Affiliates in business or acting as a
+                                    subcontractor except that information that has become known to the public generally
+                                    through no breach of any obligations owed to Cognizant or its Affiliates on the
+                                    part of the Company or the Consultant or the Company or information that Cognizant
+                                    or its Affiliates regularly gives to third parties without restriction on use or
+                                    disclosure shall, subject to the terms of paragraph 9 not be regarded as confidential.
+                                </p>
+                                <br />
+                                <p>
+                                    "Intellectual Property Rights" means patents, rights to Inventions, copyright and
+                                    related rights, trade marks, trade names and domain names, rights in get-up, rights
+                                    in goodwill or to sue for passing off, rights in designs, rights in computer software,
+                                    database rights, rights in confidential information (including know-how and trade
+                                    secrets) and any other intellectual property rights, in each case whether registered
+                                    or unregistered and including all applications (or rights to apply) for, and renewals
+                                    or extensions of, such rights and all similar or equivalent rights or forms of protection
+                                    which may now or in the future subsist in any part of the world.
+                                </p>
+                                <br />
+                                <p>
+                                    "Inventions" means inventions, ideas and improvements, whether or not patentable,
+                                    and whether or not recorded in any medium.
+                                </p>
+                                <br />
+                                <p>
+                                    “Restricted Business” means the goods or services provided by Cognizant or its Affiliates
+                                    to its clients or customers but limited to goods or services with which the Company
+                                    or Consultant were concerned or for which the Company or Consultant were responsible
+                                    or regarding which the Company or the Consultant were in receipt of Confidential
+                                    Information during the 12 month period immediately prior to the Termination Date.
+                                </p>
+                                <br />
+                                <p>
+                                    Restricted Employee" shall mean any senior employee, worker or consultant of Cognizant
+                                    or its Affiliates employed or engaged at the Termination Date in the capacity of
+                                    director or in any research, technical, IT, financial, marketing or sales function
+                                    or other managerial role with whom the Company or the Consultant have worked at
+                                    any time during the period of [12] months preceding the Termination Date, and shall
+                                    not include any employee worker or consultant employed or engaged in an administrative,
+                                    clerical, manual or secretarial capacity;
+                                </p>
+                                <br />
+                                <p>
+                                    “Restricted Services” means goods or services that are the same as or similar to
+                                    the Restricted Business</p>
+                                <br />
+                                <p>
+                                    “Termination Date” means the date of the termination of this agreement;</p>
+                                <br />
+                                <p>
+                                    “Work” means the provision of certain consulting and other services by the Company
+                                    or the Consultant under the direction and control of Cognizant or any of its Affiliates
+                                    which shall include any work carried out for the purposes of preparing a proposal
+                                    to be placed before Cognizant for the provision of further services on the part
+                                    of the Consultant and the Company;</p>
+                                <br />
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!--End of 1st page-->
+                <!--Start of 2nd page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <ol style="list-style-type: decimal; margin-left: 60px;" start="2" class="pageText">
+                            <li><u>Engagement</u>. Cognizant, in accordance with the terms of the Agency Agreement
+                                engages the Company, acting as an independent contractor, to carry out the Work
+                                through the services of its employee and / or director, the Consultant.</li>
+                            <li><u>Compensation</u>.<p>
+                                In full consideration of all services rendered by the Company and the Consultant
+                                and for all rights granted or relinquished by the Company and the Consultant under
+                                this Agreement, Cognizant shall (a) provide certain Confidential Information to
+                                the Company and the Consultant for the sole purpose of enabling the Company and
+                                Consultant to prepare a proposal to put before Cognizant for the provision of further
+                                services on the part of the Consultant and the Company and for the provision of
+                                such further Work as the Company may require and (b) pay certain fees to Agency
+                                to be agreed with the Company and the Consultant and in accordance with the terms
+                                of the Agency Agreement.
+                            </p>
+                                <p>
+                                    All taxes, national insurance contributions, social security payments and any other
+                                    sums due to be withheld on any and all amounts paid under this Agreement shall be
+                                    the responsibility of the Company and the Consultant. The Company and the Consultant
+                                    agree to jointly and severally indemnify and keep Cognizant and its Affiliates employees
+                                    officers and agents indemnified against any judgments, fines, costs, or fees associated
+                                    with such payments or withheld sums.</p>
+                            </li>
+                            <li><u>Obligations during term</u>. During the term of this Agreement the Company and
+                                the Consultant should act in the best interests of Cognizant and its Affiliates
+                                and may not be without the express written authorisation of Cognizant be employed
+                                or engaged by any customer or client of Cognizant or any other party in competition
+                                with Cognizant or any of its Affiliates and may not whether on their behalf or for
+                                or on behalf of anybody else whether directly or indirectly solicit entice away
+                                or employ or attempt to solicit entice away or employ any senior employee, worker
+                                or consultant of Cognizant or its Affiliates who are employed or engaged in the
+                                capacity of director or in any research technical IT financial marketing or sales
+                                function or other managerial role. For the avoidance of doubt during the term of
+                                this agreement the Company and the Consultant may be employed or engaged by a third
+                                party who or which is not a customer or client of Cognizant provided that in doing
+                                so they do not breach their obligations under this Agreement.</li>
+                            <li><u>Non-Solicitation/Non-Compete</u>. For one (1) year after the Termination Date
+                                the Company and Consultant will not without the express written consent of Cognizant
+                                directly or indirectly whether on its or his own account or for or on behalf of
+                                anybody else:
+                                <ul style="list-style-type: lower-alpha">
+                                    <li>in competition with Cognizant or any of its Affiliates solicit or attempt to solicit
+                                        or accept any engagement or employment with a Cognizant Client in connection with
+                                        the provision of Restricted Services; </li>
+                                    <li>In connection with the provision of Restricted Services and in competition with
+                                        Cognizant or any of its Affiliates set up, carry on, be employed by, provide services
+                                        to, be associated with or be engaged or interested in whether as director, employee,
+                                        principal, agent, member, consultant or otherwise any business which is or is intended
+                                        or about to be in competition with Cognizant or its Affiliates save as a shareholder
+                                        of not more than 3% of any public company whose stock or shares are quoted or dealt
+                                        in any recognised investment exchange. </li>
+                                    <li>solicit or entice away, or attempt to entice away from Cognizant or any of its Affiliates
+                                        any Restricted Employee or employ, offer to employ or enter into partnership with
+                                        any Restricted Employee whether or not the termination of such Restricted Employee’s
+                                        engagement or employment with Cognizant or any of its Affiliates would amount to
+                                        a breach of that Restricted Employee’s obligations towards Cognizant or any of its
+                                        Affiliates. </li>
+                                    <p>
+                                </ul>
+                                • Nothing in this paragraph 5 shall stop the Company or the Consultant from (i)
+                                being employed or engaged by or interested in any person or entity to the extent
+                                that its or his activities shall relate solely to (a) geographical locations in
+                                which the person or entity does not compete or seek to compete with Cognizant or
+                                its Affiliates in the Restricted Business and (b) matters of a type with which the
+                                Company or the Consultant were not materially concerned in the 12 months immediately
+                                preceding the Termination Date. </p>
+                                <br />
+                                <p>
+                                    If the Company or the Consultant breaches or threatens to breach any of the provisions
+                                    of this Paragraph 5, the Company and the Consultant agree that Cognizant’s remedy
+                                    at law will be inadequate, and accordingly, Cognizant shall be entitled to injunctive
+                                    relief in any action or proceeding brought to enforce the terms of this Paragraph
+                                    5.
+                                </p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!--End of 2nd page-->
+                <!--Start of 3rd page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <ol style="list-style-type: decimal; margin-left: 60px;" start="6" class="pageText">
+                            <li><u>Cognizant Property</u>. The Company and the Consultant shall give Cognizant full written
+                                details of all Inventions and of all works embodying Intellectual Property Rights
+                                made wholly or partially by the Company or the Consultant at any time during the
+                                course of the provision of the Work. The Company and the Consultant acknowledge
+                                that all Intellectual Property Rights subsisting (or which may in the future subsist)
+                                in all such Inventions and works shall automatically, on creation, vest in Cognizant
+                                absolutely or such third party as Cognizant may nominate. To the extent that they
+                                do not vest automatically the Consultant holds them on trust for Cognizant. The
+                                Company and the Consultant agree to promptly execute all documents and do all acts
+                                as may, in the opinion of Cognizant, be necessary to give effect to this clause.
+                                The Company and the Consultant hereby irrevocably waive all moral rights under the
+                                Copyright, Designs and Patents Act 1988 (and all similar rights in other jurisdictions)
+                                which they have or will have in any existing or future works referred to in this
+                                Agreement. </li>
+                            <li><u>Power of Attorney</u>. If Cognizant is unable for any reason to secure the Consultant's
+                                signature on any document needed in connection with the actions specified in paragraph
+                                6, the Consultant hereby irrevocably designates and appoints Cognizant and its duly
+                                authorized officers and agents as the Consultant's agent and attorney in fact, to
+                                act for and in the Consultant's behalf to execute, verify, and file any such documents
+                                and to do all other lawfully permitted acts to further the purposes of this agreement
+                                with the same legal force and effect as if executed by the Consultant. The Company
+                                and Consultant hereby waive any and all claims, of any nature whatsoever, that the
+                                Company or Consultant now or may hereafter have for infringement of any rights assigned
+                                to Cognizant under this Agreement. </li>
+                            <li><u>Confidentiality</u>. The Company and the Consultant acknowledge that both or either
+                                of them will receive Confidential Information for the purposes of carrying out the
+                                Work. Except for the purpose of carrying out the Company’s or Consultant’s duties
+                                with Cognizant and only with Cognizant's authorization, subject to paragraph 9 of
+                                this Agreement neither the Company nor the Consultant shall communicate or disclose
+                                or allow the communication or disclosure to any person of Confidential Information.
+                            </li>
+                            <li><u>Compelled Disclosure</u>. If the Company or the Consultant is requested or required
+                                (by oral questions, interrogatories, requests for information or documents, subpoena,
+                                civil investigative demand or similar process) to disclose any of the Confidential
+                                Information, it is agreed that the Consultant or the Company or their representatives,
+                                as the case may be, will provide Cognizant with prompt notice of such request(s)
+                                so that Cognizant may seek an appropriate protective order or other appropriate
+                                remedy and/or waive compliance with the confidentiality provisions of this Agreement.
+                                If such protective order or other remedy is not obtained, or Cognizant grants a
+                                waiver hereunder, the Company or the Consultant or their representatives may furnish
+                                that portion (and only that portion) of the Confidential Information which they
+                                or their representatives are legally compelled to disclose and will exercise their
+                                best efforts to obtain reliable assurance that confidential treatment will be accorded
+                                any Confidential Information so furnished. Save in respect of disclosure to any
+                                Court or other authority where compelled to do so, the fact of such compulsion does
+                                not relieve either the Consultant or the Company of their obligations regarding
+                                Confidential Information as set out in paragraph 8. </li>
+                            <li><u>Return of Confidential Information and other property</u>. Promptly following the earlier
+                                of (i) the termination of this Agreement and (ii) the written request of Cognizant,
+                                the Company or the Consultant will deliver to Cognizant all documents or other materials
+                                furnished by Cognizant to the Company or the Consultant together with all copies
+                                thereof, including computer disks, memory sticks and any other type of storage device
+                                in the possession of the Company or the Consultant. In the event of such request,
+                                all other documents or other materials constituting or containing Confidential Information,
+                                together with all copies thereof in the possession of the Company or the Consultant,
+                                will be destroyed or irretrievably deleted with any such destruction or deletion
+                                confirmed by the Consultant or the Company in writing to Cognizant. </li>
+                            <li><u>Independent Contractor</u>. The Company is an independent contractor and the Consultant
+                                is not an employee of Cognizant or any of its Affiliates, and the Company and the
+                                Consultant are not the legal representatives or agents of, nor do they have the
+                                power to bind Cognizant or any of its Affiliates for any purpose whatsoever. The
+                                scope of the Company’s and the Consultant’s engagement does not include any supervisory
+                                responsibilities with respect to Cognizant personnel or that of any of its Affiliates.
+                                The Company and the Consultant expressly acknowledge that the relationship intended
+                                to be created by this Agreement is a business relationship based entirely on and
+                                circumscribed by the express provisions of this Agreement and the Agency Agreement
+                                and that no partnership, joint venture, agency, fiduciary or employment relationship
+                                is intended or created by reason of this Agreement. Cognizant shall carry no worker's
+                                compensation insurance or any health or accident insurance to cover the Consultant.
+                                Cognizant shall not pay contributions to social security, national insurance fund,
+                                or national, federal or state withholding taxes, nor provide any other contributions
+                                or benefits which might be expected in an employer-employee relationship. </li>
+                        </ol>
+                        <div class="Signature" id="Sign_PageId_3">
+                        </div>
+                    </div>
+                </div>
+                <!--End of 3rd page-->
+                <!--Start of 4th page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <ol style="list-style-type: decimal; margin-left: 60px;" start="12" class="pageText">
+                            <li><u>Scope; Termination</u>. This Agreement is intended to cover Confidential Information
+                                disclosed by Cognizant both prior and subsequent to the date hereof. This Agreement
+                                may be terminated by any party by giving the other parties no less than thirty (30)
+                                days prior written notice; provided, however, that, notwithstanding anything herein
+                                to the contrary, the Company’s and the Consultant’s obligations with respect to
+                                each item of Confidential Information and their obligations in paragraphs 3 and
+                                5to 10 inclusive of this Agreement will survive the termination of this Agreement
+                                or the Agency Agreement. </li>
+                            <li><u>Entire Agreement; Amendment; Waiver; Invalidity</u>. This Agreement, together with its
+                                schedules and exhibits (if any), constitutes the entire agreement between the parties
+                                as to the subject matter hereof, and shall supersede all prior understandings, letters,
+                                agreements, contracts and other documents. This Agreement may not be amended except
+                                by an instrument in writing signed on behalf of the parties hereto. Either party
+                                hereto may extend the time for the performance of any of the obligations or other
+                                acts of the other party hereto or waive compliance by the other party hereto with
+                                any of the agreements or conditions contained herein; provided, that the waiver
+                                by either party hereto of any condition or of a breach of any other provision of
+                                this Agreement shall not operate or be construed as a waiver of any other condition
+                                or any other provision or subsequent breach. The invalidity or unenforceability
+                                of any provision of this Agreement shall not affect the validity or enforceability
+                                of any other provisions of this Agreement, all of which shall remain in full force
+                                and effect. </li>
+                            <li><u>Governing Law; Construction</u>. This Agreement shall be governed by and construed in
+                                accordance with the laws of England, without giving effect to conflict of law provisions
+                                and the parties shall be subject to the non-exclusive jurisdiction of the Courts
+                                of England and Wales. The construction and interpretation of this Agreement shall
+                                not be strictly construed against the drafter. </li>
+                            <li><u>Successors and Assigns; No Third Party Beneficiaries; Assignment</u>. This Agreement
+                                shall be binding upon and inure to the benefit of the parties and their respective
+                                successors, permitted assigns and legal representatives. Nothing in this Agreement
+                                is intended to confer any rights or remedies on any person or entity that is not
+                                a party to this Agreement. Neither this Agreement nor any right or obligation hereunder
+                                may be assigned, transferred or delegated, voluntarily or by operation of law, by
+                                any party without the prior written consent of the other parties; provided, that
+                                no such consent shall be necessary for such an assignment, transfer or delegation
+                                by any party to any entity controlling it, controlled by it, or under common control
+                                with it, or to any entity that succeeds to the Cognizant business by purchase, merger,
+                                consolidation or other corporate transfer. </li>
+                            <li><u>Counterparts</u>. This Agreement may be executed by the parties in separate counterparts,
+                                each of which when so executed and delivered shall be an original, but all such
+                                counterparts shall together constitute one and the same instrument. Each counterpart
+                                may consist of a number of copies hereof each signed by less than all, but together
+                                signed by all of the parties. </li>
+                            <li><u>Headings</u>. The headings and subheadings in this Agreement are for reference only,
+                                and shall not affect the interpretation of this Agreement. </li>
+                        </ol>
+                        <!-- </p>-->
+                               
+                        <br />
+                    </div>
+                </div>
+                <!--End of 4th page-->
+            </div>
+     
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

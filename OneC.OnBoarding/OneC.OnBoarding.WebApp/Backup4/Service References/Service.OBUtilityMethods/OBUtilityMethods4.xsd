@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://onecognizant.cognizant.com/OnBoardingService/IntegrationServices/DataContracts/" elementFormDefault="qualified" targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/IntegrationServices/DataContracts/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SANUploadDetails">
+    <xs:sequence>
+      <xs:element name="CandidateId" type="xs:int" />
+      <xs:element minOccurs="0" name="AssociateId" type="xs:int" />
+      <xs:element name="FileUploadId" type="xs:int" />
+      <xs:element minOccurs="0" name="AppTemplateId" type="xs:int" />
+      <xs:element name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileSaveName" nillable="true" type="xs:string" />
+      <xs:element name="FileURL" nillable="true" type="xs:string" />
+      <xs:element name="FileExternalURL" nillable="true" type="xs:string" />
+      <xs:element name="FileLocation" nillable="true" type="xs:string" />
+      <xs:element name="FileContentId" nillable="true" type="xs:string" />
+      <xs:element name="KeyId" type="xs:int" />
+      <xs:element name="SessionId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SANUploadDetails" nillable="true" type="tns:SANUploadDetails" />
+</xs:schema>

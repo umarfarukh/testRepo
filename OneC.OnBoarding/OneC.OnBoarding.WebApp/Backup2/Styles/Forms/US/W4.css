@@ -1,0 +1,105 @@
+﻿
+.BorderBox
+{
+    border: 1px;
+    border-color: Black;
+    border-style: solid;
+}
+
+.formw4page1
+{
+    border-top-style: solid;
+    border-color: #000000;
+    border-top-width: 1px;
+}
+.formw4page1 p
+{
+    margin: 5px 0px 6px;
+}
+
+.UnderLineValues
+{
+    border-bottom-style: solid;
+   /* width: 95%;*/
+    border-bottom-width: 1px;
+    border-bottom-color: #000000;
+    width: 98%;
+    text-align: center;
+}
+.tblBtmBdr td
+{
+    border-bottom: 1px solid #000;
+}
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+.table1, .table2
+{
+    float: left;
+    width: 251px;
+    border:1px solid #000;
+    
+}
+.title1, .title2
+{
+    font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    padding: 3px;
+}
+.table1_1, .table1_2, .table2_1, .table2_2
+{
+    float: left;
+    width: 223px;
+    border: 1px solid #000;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: "Trebuchet MS" ,Verdana, Arial, Helvetica, sans-serif;
+    color: #4a4a4a;
+}
+
+.table1_1_1, .table1_2_1, .table2_1_1, .table2_2_1
+{
+    float: left;
+    width: 129px;
+    border: 1px solid #000;
+    font-size: 13px;
+    font-family: "Trebuchet MS" ,Verdana, Arial, Helvetica, sans-serif;
+    color: #4a4a4a;
+}
+
+.table2_2_2, .table2_1_2, .table1_1_2, .table1_2_2
+{
+    border: 1px solid #000;
+    float: left;
+    width: 89px;
+    font-size: 13px;
+    font-family: "Trebuchet MS" ,Verdana, Arial, Helvetica, sans-serif;
+    color: #4a4a4a;
+}
+.table1_1_1_title
+{
+    height: 50px;
+    border-bottom: 1px solid #000;
+    padding: 0 0 3px 7px;
+}
+.li
+{
+    height: 25px;
+    border-bottom: 1px solid #000;
+    list-style-type: none;
+}
+ .h2
+{
+  font-size: 1.5em;
+   margin: .83em 0;
+   font-weight: bolder;
+   color: #000;
+   }
+ 
+  

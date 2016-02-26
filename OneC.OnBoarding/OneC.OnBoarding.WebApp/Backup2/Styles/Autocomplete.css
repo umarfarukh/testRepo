@@ -1,0 +1,6 @@
+﻿#_content { position: absolute; border: 1px solid #57C2FB; background: #C9E7F7; z-index: 999999;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;  font-size:72.5%;  }
+#_content ul li { word-wrap: break-word; border-bottom: 1px solid #fff; font-weight: bold; padding: 0 0 4px 10px; }
+#_content ul li i { display: block; font-weight: normal; }
+#_content ul { padding-left: 0px; margin: 0; height: 100%; }
+._default_li { list-style: none; cursor: pointer; position: relative; margin: 10px 0 5px 0; background-color: #C9E7F7; }
+._active_li { list-style: none; cursor: pointer; position: relative; margin: 10px 0 5px 0; background-color: #DDDBD6; }

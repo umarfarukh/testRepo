@@ -1,0 +1,533 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ISS</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+            line-height: 20px;
+        }
+        #baseContent {
+            width: 940px;
+        }
+        #headerContent {
+            height: 100px;
+            width: 96%;
+            position: relative;
+        }
+        #pageContent {
+            height: 360px;
+            width: 96%;
+            margin-left: 5px;
+            border: 1px solid #000;
+            padding: 5px;
+            overflow-y: scroll;
+            position: relative;
+        }
+        #pageData div label {
+            margin: 5px 5px 0 0;
+        }
+        #footerContent {
+            width: 96%;
+            height: 60px;
+            position: relative;
+        }
+        #skip label {
+            float: left;
+            font-size: 0.8em;
+            font-weight: bold;
+            width: 75px;
+            margin-top: 5px;
+            margin-left: 5px;
+            color: #fff;
+            text-align: center;
+            background: url(../../../../Images/btn.png) no-repeat;
+        }
+        #pagination label {
+            float: right;
+            font-size: 0.8em;
+            font-weight: bold;
+            width: 75px;
+            margin-top: 5px;
+            margin-left: 5px;
+            color: #fff;
+            text-align: center;
+            background: url(../../../../Images/btn.png) no-repeat;
+        }
+        #skip label:hover, #pagination label:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        input[type="radio"] {
+            vertical-align: middle;
+        }
+        ul li {
+            list-style-type: lower-alpha;
+        }
+        #prograssBar {
+            float: right;
+            width: 264px;
+            height: 40px;
+            margin: 5px;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFbdbdbd', endColorstr='#FFf2f2f2' ,GradientType=1);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFbdbdbd, endColorstr=#FFf2f2f2  GradientType=1 )";
+            background: -webkit-gradient(linear, left top, right top, from(#bdbdbd), to( #f2f2f2));
+            background: -moz-linear-gradient(left,  #bdbdbd,   #f2f2f2);
+            background: -o-linear-gradient(left,  #bdbdbd,   #f2f2f2);
+            color: #4b4f4e;
+            padding-left: 10px;
+        }
+        #meter {
+            width: 240px;
+            height: 10px;
+            border: 1px solid #000;
+            position: relative;
+            background: #fff;
+        }
+        #prograss {
+            width: 99%;
+            position: absolute;
+        }
+        #prograss #complete {
+            background: #008000;
+            height: 8px;
+            margin: 1px;
+            position: absolute;
+        }
+    </style>
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+     <script src="../../../../Scripts/Forms/CoreScripts/JSON.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/jQXB.1.1.js" type="text/javascript"></script>
+   
+   <script type="text/javascript">
+       // jPaginate Plugin for jQuery - Version 0.3
+       // by Angel Grablev for Enavu Web Development network (enavu.com)
+       // Dual license under MIT and GPL :) enjoy
+       /*
+
+       To use simply call .paginate() on the element you wish like so:
+       $("#content").jPaginate(); 
+
+       you can specify the following options:
+       items = number of items to have per page on pagination
+       next = the text you want to have inside the text button
+       previous = the text you want in the previous button
+       active = the class you want the active paginaiton link to have
+       pagination_class = the class of the pagination element that is being generated for you to style
+       minimize = minimizing will limit the overall number of elements in the pagination links
+       nav_items = when minimize is set to true you can specify how many items to show
+       cookies = if you want to use cookies to remember which page the user is on, true by default
+       position = specify the position of the pagination, possible options: "before", "after", or "both"
+       equal = implements an equal height main element by using the highest possible element use true false
+       offset = unfortunately calculating heights with javascript isn't always 100% accurate, so please use this value to make it perfect :) its defaultly set to 50
+       */
+       (function ($) {
+           $.fn.jPaginate = function (options) {
+               var defaults = {
+                   items: 1,
+                   next: "Next",
+                   previous: "Previous",
+                   last: "Last",
+                   first: "First",
+                   active: "pgbtn active_point",
+                   deactive: "hide",
+                   pagination_class: "pagination",
+                   minimize: false,
+                   nav_items: 6,
+                   position: "after",
+                   equal: false,
+                   offset: 50
+               };
+               var options = $.extend(defaults, options);
+               return this.each(function () {
+                   // object is the selected pagination element list
+                   obj = $(this);
+                   // this is how you call the option passed in by plugin of items
+                   var show_per_page = options.items;
+                   //getting the amount of elements inside parent element
+                   var number_of_items = obj.children().size();
+                   //calculate the number of pages we are going to have
+                   var number_of_pages = Math.ceil(number_of_items / show_per_page);
+                   //create the pages of the pagination
+                   var array_of_elements = [];
+                   var numP = 0;
+                   var nexP = show_per_page;
+                   var height = 0;
+                   var max_height = 0;
+                   //loop through all pages and assign elements into array
+                   for (i = 1; i <= number_of_pages; i++) {
+                       array_of_elements[i] = obj.children().slice(numP, nexP);
+
+                       if (options.equal) {
+                           obj.children().slice(numP, nexP).each(function () {
+                               height += $(this).outerHeight();
+                           });
+                           if (height > max_height) max_height = height;
+                           height = 0;
+                       }
+                       numP += show_per_page;
+                       nexP += show_per_page;
+                   }
+                   if (options.equal) {
+                       max_height += options.offset;
+                       obj.css({ "height": max_height });
+                   }
+                   // display first page
+                   showPage(1);
+                   createPagination(1);
+                   //show selected page
+                   function showPage(page) {
+                       obj.children().hide();
+                       array_of_elements[page].show();
+                   }
+                   // create the navigation for the pagination 
+                   function createPagination(curr) {
+                       $(".pagination").remove();
+                       var start, items = "", end, nav = "";
+                       start = "<div class='pagination'><div class='btn_pagination'><div id='flt_right' class='" + options.pagination_class + " flt_right'>";
+                       var total = "<span class='flt_left pag-text'>Total Items (" + number_of_items + "):</span>";
+                       var first = "<a href='#' class='pgbtn_first'>" + options.first + "</a>";
+                       var first_inactive = "<a  unselectable='on' onclick='return false' style='border-bottom-color:#ccc;filter:alpha(opacity=40);BoRDER-TOP-COLOR:#e2e0e1;border-right-color:#e2e0e1;border-left-color:#e2e0e1;cursor:default;opacity:0.4;'>" + options.first + "</a>";
+                       var previous = "<a href='#' class='pgbtn_previous'><span unselectable='on' class='prev_point'>" + options.previous + "</span></a>";
+                       var next = "<a class='pgbtn_next' href='#'><span unselectable='on' class='next_point'>" + options.next + "</span></a>";
+                       var previous_inactive = "<a onclick='return false' style='border-bottom-color:#ccc;filter:alpha(opacity=40);BoRDER-TOP-COLOR:#e2e0e1;border-right-color:#e2e0e1;border-left-color:#e2e0e1;cursor:default;opacity:0.4;'><span unselectable='on' class='prev_point'>" + options.previous + "</span></a>";
+                       var next_inactive = "<a  unselectable='on' onclick='return false' style='border-bottom-color:#ccc;filter:alpha(opacity=40);BoRDER-TOP-COLOR:#e2e0e1;border-right-color:#e2e0e1;border-left-color:#e2e0e1;cursor:default;opacity:0.4;'><span unselectable='on' class='next_point'>" + options.next + "</span></a>";
+                       var last = "<a href='#' class='pgbtn_last'>" + options.last + "</a>";
+                       var last_inactive = "<a unselectable='on' onclick='return false' style='border-bottom-color:#ccc;filter:alpha(opacity=40);BoRDER-TOP-COLOR:#e2e0e1;border-right-color:#e2e0e1;border-left-color:#e2e0e1;cursor:default;opacity:0.4;'>" + options.last + "</a>";
+                       end = "</div></div><div class='clear'></div></div>";
+                       var after = number_of_pages - options.after + 1;
+                       var pagi_range = paginationCalculator(curr);
+                       for (i = 1; i <= number_of_pages; i++) {
+                           if (i <= 5) {
+                               if (i == curr) { items += '<a href="#"class="' + options.active + '" id="' + i + '">' + i + '</a>'; }
+                               else { items += '<a href="#" class="pgbtn" id="' + i + '">' + i + '</a>'; }
+                           }
+                           else if (i >= 6) {
+                               if (i == curr) { items += '<a href="#" class="' + options.active + '" id="' + i + '">' + i + '</a>'; }
+                               if (i < curr) { items += '<a href="#" class="pgbtn" id="' + i + '">' + i + '</a>'; }
+                               else { items += '<a href="#" class="pgbtn hide" id="' + i + '" style="display:none">' + i + '</a>'; }
+                           }
+                       }
+                       if (curr != 1 && curr != number_of_pages) {
+                           nav = start + total + first + previous + items + next + last + end;
+                       } else if (number_of_pages == 1) {
+                           nav = start + total + first_inactive + previous_inactive + items + next_inactive + last_inactive + end;
+                       } else if (curr == number_of_pages) {
+                           nav = start + total + first + previous + items + next_inactive + last_inactive + end;
+                       } else if (curr == 1) {
+                           nav = start + total + first_inactive + previous_inactive + items + next + last + end;
+                       }
+                       if (options.position == "before") {
+                           obj.before(nav);
+                       } else if (options.position == "after") {
+                           obj.after(nav);
+                       } else {
+                           obj.after(nav);
+                           obj.before(nav)
+                       }
+                   }
+                   function paginationCalculator(curr) {
+                       var half = Math.floor(options.nav_items / 2);
+                       var upper_limit = number_of_pages - options.nav_items;
+                       var start = curr > half ? Math.max(Math.min(curr - half, upper_limit), 0) : 0;
+                       var end = curr > half ? Math.min(curr + half + (options.nav_items % 2), number_of_pages) : Math.min(options.nav_items, number_of_pages);
+                       return { start: start, end: end };
+                   }
+                   // handle click on pagination 
+                   $(".pgbtn").live("click", function (e) {
+                       e.preventDefault();
+                       var newcurr = parseInt($(this).attr("id"));
+                       var newbeg = parseInt($(".pagination").find(".pgbtn").attr("id"));
+                       createPagination(newcurr);
+                       if (number_of_pages <= 5) {
+                           showPage(newcurr);
+                       }
+                       else if (number_of_pages <= 6 && number_of_pages > 5) {
+
+                           if (newcurr < 5) {
+                               showPage(newcurr);
+                           }
+                           else if (newcurr == 5) {
+                               $('.pgbtn:first').hide();
+                               $('.pgbtn:last').show();
+                               showPage(newcurr);
+                           }
+                           else {
+                               last();
+                           }
+                       }
+                       else {
+                           if (newcurr == (number_of_pages - 1)) {
+                               for (var j = (newcurr + 1); j < (newcurr + 2); j++) {
+                                   $(".pgbtn").eq(j).show();
+                               }
+                               for (var n = (newbeg - 1); n < (newcurr - 4); n++) {
+                                   $(".pgbtn").eq(n).hide();
+                               }
+                               showPage(newcurr);
+                           }
+                           else if (newcurr == number_of_pages) {
+                               last();
+                           }
+                           else if (newcurr == 5) {
+                               for (var j = (newcurr); j < (newcurr + 2); j++) {
+                                   $(".pgbtn").eq(j).show();
+                               }
+                               for (var n = (newbeg - 1); n < (newcurr - 3); n++) {
+                                   $(".pgbtn").eq(n).hide();
+                               }
+                               showPage(newcurr);
+                           }
+                           else if (newcurr >= 6 && newcurr < (number_of_pages - 1)) {
+                               for (var j = (newcurr + 1); j < (newcurr + 3); j++) {
+                                   $(".pgbtn").eq(j).show();
+                               }
+                               for (var n = (newbeg - 1); n < (newcurr - 3); n++) {
+                                   $(".pgbtn").eq(n).hide();
+                               }
+                               showPage(newcurr);
+                           }
+                           else {
+                               showPage(newcurr);
+                           }
+                       }
+                   });
+                   $(".pgbtn_next").live("mouseover", function (e) {
+                       e.preventDefault();
+                       var newcurr = parseInt($(".pagination").find(".active_point").attr("id")) + 1;
+                       $(".pgbtn_next").bind("click", function () {
+                           createPagination(newcurr);
+                           if (number_of_pages < 7) {
+                               if (newcurr == 6) {
+                                   last();
+                               }
+                               else {
+                                   showPage(newcurr);
+                               }
+                           }
+                           else {
+                               if (newcurr <= 3) {
+                                   showPage(newcurr);
+                               }
+                               else if ((newcurr >= 4) && (newcurr < 6)) {
+                                   for (var i = 0; i <= (newcurr - 4); i++) {
+                                       $(".pgbtn").eq(i).hide();
+                                   }
+                                   for (var j = (newcurr); j <= (newcurr + 1); j++) {
+                                       $(".pgbtn").eq(j).show();
+                                   }
+
+                                   showPage(newcurr);
+
+                               }
+                               else if ((newcurr >= 6) && (newcurr < (number_of_pages - 1))) {
+                                   for (var i = 0; i <= (newcurr - 4); i++) {
+                                       $(".pgbtn").eq(i).hide();
+                                   }
+                                   for (var j = (newcurr + 1); j <= (newcurr + 2); j++) {
+                                       $(".pgbtn").eq(j).show();
+                                   }
+
+                                   showPage(newcurr);
+                               }
+                               else if (newcurr == (number_of_pages - 1)) {
+                                   for (var i = 0; i <= (newcurr - 5); i++) {
+                                       $(".pgbtn").eq(i).hide();
+                                   }
+                                   for (var j = (newcurr + 1); j < (newcurr + 2); j++) {
+                                       $(".pgbtn").eq(j).show();
+                                   }
+                                   showPage(newcurr);
+                               }
+                               else {
+                                   last();
+                               }
+                           }
+                       });
+                   });
+                   $(".pgbtn_previous").live("mouseover", function (e) {
+                       e.preventDefault();
+                       var newcurr = parseInt($(".pagination").find(".active_point").attr("id")) - 1;
+                       var newbeg = parseInt($(".pagination").find(".pgbtn").attr("id"));
+                       $(".pgbtn_previous").bind("click", function () {
+                           createPagination(newcurr);
+                           if (number_of_pages <= 7) {
+                               if (newcurr == 7) {
+                                   last();
+                               }
+                               else if (newcurr == 6) {
+                                   $('.pgbtn:first').hide();
+                                   $('.pgbtn:last').hide();
+                                   showPage(newcurr);
+                               }
+                               else {
+
+                                   showPage(newcurr);
+                               }
+                           }
+                           else {
+                               if (newcurr > (number_of_pages - 3)) {
+                                   for (var q = number_of_pages; q > newcurr; q--) {
+                                       $(".pgbtn").eq(q).show();
+                                   }
+                                   for (var z = newbeg; z <= (number_of_pages - 5); z++) {
+                                       $(".pgbtn").eq(z - 1).hide();
+                                   }
+                                   showPage(newcurr);
+
+                               }
+                               else if (newcurr <= (number_of_pages - 3) && newcurr >= 6) {
+                                   for (var q = (newcurr + 1); q < (newcurr + 3); q++) {
+                                       $(".pgbtn").eq(q).show();
+                                   }
+                                   for (var z = newbeg; z < (newcurr - 2); z++) {
+                                       $(".pgbtn").eq(z - 1).hide();
+                                   }
+                                   showPage(newcurr);
+                               }
+                               else if (newcurr >= 5 && newcurr < 6) {
+                                   for (var q = (newcurr); q < (newcurr + 2); q++) {
+                                       $(".pgbtn").eq(q).show();
+                                   }
+                                   for (var z = newbeg; z < (newcurr - 2); z++) {
+                                       $(".pgbtn").eq(z - 1).hide();
+                                   }
+                                   showPage(newcurr);
+
+                               }
+                               else if (newcurr <= 4) {
+                                   showPage(newcurr);
+                               }
+                               else {
+                                   first();
+                               }
+                           }
+                       });
+                   });
+                   $(".pgbtn_first").live("click", function (e) {
+                       e.preventDefault();
+                       first();
+                   });
+                   function first() {
+                       showPage(1);
+                       $(".pagination").remove();
+                       createPagination(1);
+                   }
+                   function last() {
+                       var e = number_of_pages;
+                       $(".pagination").remove();
+                       createPagination(e);
+                       $(".pgbtn").hide();
+                       for (var s = 5; s >= 1; s--) {
+                           $(".pgbtn").eq(e - s).show();
+                       }
+                       showPage(e);
+                   }
+                   $(".pgbtn_last").live("click", function (e) {
+                       e.preventDefault();
+                       last();
+                   });
+               });
+           };
+       })(jQuery);
+   </script>
+    <script type="text/javascript">
+        var count = 1;
+        var paginationXml = { "Survey": { "SurveyName": "Post Offer Survey", "SurveyId": "ISS000001", "QuestionsPerPage": "2", "TotalQuestions": "21"} };
+        //  var surveyXml = { "SurveyDetail": { "SurveyId": "ISS000001", "QAClassification": { "QAClassifyHeader": "About your Interview Process", "QASet": { "QA": { "Question": { "QId": "Q0001", "QType": "Radio\/Feedback\/Check", "Qdescription": "What is your rating about interview process?" }, "Answer": [{ "AId": "A0001", "AOrder": "1", "ADescription": "Dissatisfied", "AHint": "If you are dissatisfied with the interview process please choose", "AType": "Radio", "AValue": "1", "ARules": "" }, { "AId": "A0002", "AOrder": "2", "ADescription": "Satisfied", "AHint": "If you are satisfied with the interview process please choose", "AType": "Radio", "AValue": "2", "ARules": "" }, { "AId": "A0003", "AOrder": "3", "ADescription": "Very Satisfied", "AHint": "If you are very much satisfied with the interview process please choose", "AType": "Radio", "AValue": "3", "ARules": "" }, { "AId": "A0004", "AOrder": "4", "ADescription": "Other", "AHint": "If you want to provide a feedback please choose this and provide your feedback", "AType": "RadioFeedback", "AValue": "4", "ARules": ""}]}}}} };
+        var surveyXml = { "SurveyDetail": { "SurveyId": "ISS000001", "QAClassification": [{ "QAClassifyHeader": "About your Interview Process", "QASet": { "QA": [{ "Question": { "QId": "Q0001", "QType": "Radio\/Feedback\/Check", "Qdescription": "What is your rating about interview process?" }, "Answer": [{ "AId": "A0001", "AOrder": "1", "ADescription": "Dissatisfied", "AHint": "If you are dissatisfied with the interview process please choose", "AType": "Radio", "AValue": "1", "ARules": "" }, { "AId": "A0002", "AOrder": "2", "ADescription": "Satisfied", "AHint": "If you are satisfied with the interview process please choose", "AType": "Radio", "AValue": "2", "ARules": "" }, { "AId": "A0003", "AOrder": "3", "ADescription": "Very Satisfied", "AHint": "If you are very much satisfied with the interview process please choose", "AType": "Radio", "AValue": "3", "ARules": "" }, { "AId": "A0004", "AOrder": "4", "ADescription": "Other", "AHint": "If you want to provide a feedback please choose this and provide your feedback", "AType": "RadioFeedback", "AValue": "4", "ARules": ""}] }, { "Question": { "QId": "Q0001", "QType": "Radio\/Feedback\/Check", "Qdescription": "What is your rating about interview process?" }, "Answer": [{ "AId": "A0001", "AOrder": "1", "ADescription": "Dissatisfied", "AHint": "If you are dissatisfied with the interview process please choose", "AType": "Radio", "AValue": "1", "ARules": "" }, { "AId": "A0002", "AOrder": "2", "ADescription": "Satisfied", "AHint": "If you are satisfied with the interview process please choose", "AType": "Radio", "AValue": "2", "ARules": "" }, { "AId": "A0003", "AOrder": "3", "ADescription": "Very Satisfied", "AHint": "If you are very much satisfied with the interview process please choose", "AType": "Radio", "AValue": "3", "ARules": "" }, { "AId": "A0004", "AOrder": "4", "ADescription": "Other", "AHint": "If you want to provide a feedback please choose this and provide your feedback", "AType": "RadioFeedback", "AValue": "4", "ARules": ""}] }, { "Question": { "QId": "Q0001", "QType": "Radio\/Feedback\/Check", "Qdescription": "What is your rating about interview process?" }, "Answer": [{ "AId": "A0001", "AOrder": "1", "ADescription": "Dissatisfied", "AHint": "If you are dissatisfied with the interview process please choose", "AType": "Radio", "AValue": "1", "ARules": "" }, { "AId": "A0002", "AOrder": "2", "ADescription": "Satisfied", "AHint": "If you are satisfied with the interview process please choose", "AType": "Radio", "AValue": "2", "ARules": "" }, { "AId": "A0003", "AOrder": "3", "ADescription": "Very Satisfied", "AHint": "If you are very much satisfied with the interview process please choose", "AType": "Radio", "AValue": "3", "ARules": "" }, { "AId": "A0004", "AOrder": "4", "ADescription": "Other", "AHint": "If you want to provide a feedback please choose this and provide your feedback", "AType": "RadioFeedback", "AValue": "4", "ARules": ""}] }, { "Question": { "QId": "Q0001", "QType": "Radio\/Feedback\/Check", "Qdescription": "What is your rating about interview process?" }, "Answer": [{ "AId": "A0001", "AOrder": "1", "ADescription": "Dissatisfied", "AHint": "If you are dissatisfied with the interview process please choose", "AType": "Radio", "AValue": "1", "ARules": "" }, { "AId": "A0002", "AOrder": "2", "ADescription": "Satisfied", "AHint": "If you are satisfied with the interview process please choose", "AType": "Radio", "AValue": "2", "ARules": "" }, { "AId": "A0003", "AOrder": "3", "ADescription": "Very Satisfied", "AHint": "If you are very much satisfied with the interview process please choose", "AType": "Radio", "AValue": "3", "ARules": "" }, { "AId": "A0004", "AOrder": "4", "ADescription": "Other", "AHint": "If you want to provide a feedback please choose this and provide your feedback", "AType": "RadioFeedback", "AValue": "4", "ARules": ""}] }, { "Question": { "QId": "Q0001", "QType": "Radio\/Feedback\/Check", "Qdescription": "What is your rating about interview process?" }, "Answer": [{ "AId": "A0001", "AOrder": "1", "ADescription": "Dissatisfied", "AHint": "If you are dissatisfied with the interview process please choose", "AType": "Radio", "AValue": "1", "ARules": "" }, { "AId": "A0002", "AOrder": "2", "ADescription": "Satisfied", "AHint": "If you are satisfied with the interview process please choose", "AType": "Radio", "AValue": "2", "ARules": "" }, { "AId": "A0003", "AOrder": "3", "ADescription": "Very Satisfied", "AHint": "If you are very much satisfied with the interview process please choose", "AType": "Radio", "AValue": "3", "ARules": "" }, { "AId": "A0004", "AOrder": "4", "ADescription": "Other", "AHint": "If you want to provide a feedback please choose this and provide your feedback", "AType": "RadioFeedback", "AValue": "4", "ARules": ""}] }, { "Question": { "QId": "Q0001", "QType": "Radio\/Feedback\/Check", "Qdescription": "What is your rating about interview process?" }, "Answer": [{ "AId": "A0001", "AOrder": "1", "ADescription": "Dissatisfied", "AHint": "If you are dissatisfied with the interview process please choose", "AType": "Radio", "AValue": "1", "ARules": "" }, { "AId": "A0002", "AOrder": "2", "ADescription": "Satisfied", "AHint": "If you are satisfied with the interview process please choose", "AType": "Radio", "AValue": "2", "ARules": "" }, { "AId": "A0003", "AOrder": "3", "ADescription": "Very Satisfied", "AHint": "If you are very much satisfied with the interview process please choose", "AType": "Radio", "AValue": "3", "ARules": "" }, { "AId": "A0004", "AOrder": "4", "ADescription": "Other", "AHint": "If you want to provide a feedback please choose this and provide your feedback", "AType": "RadioFeedback", "AValue": "4", "ARules": ""}]}]} }, { "QAClassifyHeader": "About your Interview Process", "QASet": { "QA": [{ "Question": { "QId": "Q0001", "QType": "Radio\/Feedback\/Check", "Qdescription": "What is your rating about interview process?" }, "Answer": [{ "AId": "A0001", "AOrder": "1", "ADescription": "Dissatisfied", "AHint": "If you are dissatisfied with the interview process please choose", "AType": "Radio", "AValue": "1", "ARules": "" }, { "AId": "A0002", "AOrder": "2", "ADescription": "Satisfied", "AHint": "If you are satisfied with the interview process please choose", "AType": "Radio", "AValue": "2", "ARules": "" }, { "AId": "A0003", "AOrder": "3", "ADescription": "Very Satisfied", "AHint": "If you are very much satisfied with the interview process please choose", "AType": "Radio", "AValue": "3", "ARules": "" }, { "AId": "A0004", "AOrder": "4", "ADescription": "Other", "AHint": "If you want to provide a feedback please choose this and provide your feedback", "AType": "RadioFeedback", "AValue": "4", "ARules": ""}] }, { "Question": { "QId": "Q0001", "QType": "Radio\/Feedback\/Check", "Qdescription": "What is your rating about interview process?" }, "Answer": [{ "AId": "A0001", "AOrder": "1", "ADescription": "Dissatisfied", "AHint": "If you are dissatisfied with the interview process please choose", "AType": "Radio", "AValue": "1", "ARules": "" }, { "AId": "A0002", "AOrder": "2", "ADescription": "Satisfied", "AHint": "If you are satisfied with the interview process please choose", "AType": "Radio", "AValue": "2", "ARules": "" }, { "AId": "A0003", "AOrder": "3", "ADescription": "Very Satisfied", "AHint": "If you are very much satisfied with the interview process please choose", "AType": "Radio", "AValue": "3", "ARules": "" }, { "AId": "A0004", "AOrder": "4", "ADescription": "Other", "AHint": "If you want to provide a feedback please choose this and provide your feedback", "AType": "RadioFeedback", "AValue": "4", "ARules": ""}] }, { "Question": { "QId": "Q0001", "QType": "Radio\/Feedback\/Check", "Qdescription": "What is your rating about interview process?" }, "Answer": [{ "AId": "A0001", "AOrder": "1", "ADescription": "Dissatisfied", "AHint": "If you are dissatisfied with the interview process please choose", "AType": "Radio", "AValue": "1", "ARules": "" }, { "AId": "A0002", "AOrder": "2", "ADescription": "Satisfied", "AHint": "If you are satisfied with the interview process please choose", "AType": "Radio", "AValue": "2", "ARules": "" }, { "AId": "A0003", "AOrder": "3", "ADescription": "Very Satisfied", "AHint": "If you are very much satisfied with the interview process please choose", "AType": "Radio", "AValue": "3", "ARules": "" }, { "AId": "A0004", "AOrder": "4", "ADescription": "Other", "AHint": "If you want to provide a feedback please choose this and provide your feedback", "AType": "RadioFeedback", "AValue": "4", "ARules": ""}] }, { "Question": { "QId": "Q0001", "QType": "Radio\/Feedback\/Check", "Qdescription": "What is your rating about interview process?" }, "Answer": [{ "AId": "A0001", "AOrder": "1", "ADescription": "Dissatisfied", "AHint": "If you are dissatisfied with the interview process please choose", "AType": "Radio", "AValue": "1", "ARules": "" }, { "AId": "A0002", "AOrder": "2", "ADescription": "Satisfied", "AHint": "If you are satisfied with the interview process please choose", "AType": "Radio", "AValue": "2", "ARules": "" }, { "AId": "A0003", "AOrder": "3", "ADescription": "Very Satisfied", "AHint": "If you are very much satisfied with the interview process please choose", "AType": "Radio", "AValue": "3", "ARules": "" }, { "AId": "A0004", "AOrder": "4", "ADescription": "Other", "AHint": "If you want to provide a feedback please choose this and provide your feedback", "AType": "RadioFeedback", "AValue": "4", "ARules": ""}] }, { "Question": { "QId": "Q0001", "QType": "Radio\/Feedback\/Check", "Qdescription": "What is your rating about interview process?" }, "Answer": [{ "AId": "A0001", "AOrder": "1", "ADescription": "Dissatisfied", "AHint": "If you are dissatisfied with the interview process please choose", "AType": "Radio", "AValue": "1", "ARules": "" }, { "AId": "A0002", "AOrder": "2", "ADescription": "Satisfied", "AHint": "If you are satisfied with the interview process please choose", "AType": "Radio", "AValue": "2", "ARules": "" }, { "AId": "A0003", "AOrder": "3", "ADescription": "Very Satisfied", "AHint": "If you are very much satisfied with the interview process please choose", "AType": "Radio", "AValue": "3", "ARules": "" }, { "AId": "A0004", "AOrder": "4", "ADescription": "Other", "AHint": "If you want to provide a feedback please choose this and provide your feedback", "AType": "RadioFeedback", "AValue": "4", "ARules": ""}] }, { "Question": { "QId": "Q0001", "QType": "Radio\/Feedback\/Check", "Qdescription": "What is your rating about interview process?" }, "Answer": [{ "AId": "A0001", "AOrder": "1", "ADescription": "Dissatisfied", "AHint": "If you are dissatisfied with the interview process please choose", "AType": "Radio", "AValue": "1", "ARules": "" }, { "AId": "A0002", "AOrder": "2", "ADescription": "Satisfied", "AHint": "If you are satisfied with the interview process please choose", "AType": "Radio", "AValue": "2", "ARules": "" }, { "AId": "A0003", "AOrder": "3", "ADescription": "Very Satisfied", "AHint": "If you are very much satisfied with the interview process please choose", "AType": "Radio", "AValue": "3", "ARules": "" }, { "AId": "A0004", "AOrder": "4", "ADescription": "Other", "AHint": "If you want to provide a feedback please choose this and provide your feedback", "AType": "RadioFeedback", "AValue": "4", "ARules": ""}]}]}}]} };
+      
+        var meter = function () {
+            var a = parseInt($('input[type="radio"]:checked').length);
+            //var totalQues = paginationXml.Survey.TotalQuestions;
+            var totalQues = 12;
+            var b = (a / totalQues);
+            $('#complete').css('width', (b * 100).toFixed(0) + '%');
+            $('#prograssBar >label').text(a + ' out of ' + totalQues + ' is selected');
+
+        }
+        var blink = function () {
+            $('#prograssBar >label').animate({ opacity: 0 }, 2000);
+            $('#prograssBar >label').animate({ opacity: 1 }, 1000, blink);
+        }
+        $(document).ready(function () {
+
+            meter();
+            //  for (var i = 1; i <= paginationXml.Survey.TotalQuestions; i++) {
+            for (var k = 0; k < surveyXml.SurveyDetail.QAClassification.length; k++) {
+                var data = '';
+                for (var i = 0; i < 6; i++) {
+                    data += '<div class="Question">';
+                    if (k == i) {
+                        data += '<br/><div id="category"><label>' + surveyXml.SurveyDetail.QAClassification[k].QAClassifyHeader + '</label></div><br/>';
+                    }
+                    data += '<label>' + count + '.&nbsp;'
+                    data += '' + surveyXml.SurveyDetail.QAClassification[k].QASet.QA[i].Question.Qdescription + '</label>';
+                    for (var j = 0; j < surveyXml.SurveyDetail.QAClassification[k].QASet.QA[i].Answer.length; j++) {
+                        data += '<br/><input type="' + surveyXml.SurveyDetail.QAClassification[k].QASet.QA[i].Answer[j].AType + '" name="surveyAns' + k + i + '"  jqxb-datasource="mydata" jqxb-datamember="surveyAns' + k + i + '"/>&nbsp;<label>' + surveyXml.SurveyDetail.QAClassification[k].QASet.QA[i].Answer[j].ADescription + '</label>';
+                    }
+
+                    data += '</div>';
+                    count++;
+                }
+                $("#pageData").append(data);
+            }
+          $("#pageData").jPaginate({items:parseInt(paginationXml.Survey.QuestionsPerPage)});
+            blink();
+        });
+
+        $('#skip').live("click", function () {
+
+        });
+
+
+
+        $('#pageData div input[type="radio"]').live("click", function () {
+            meter();
+        });
+    </script>
+    <script type="text/javascript">
+        var taskdata = JSON.stringify(jQXB.getDataSource('mydata')).toString();
+        alert(taskdata);
+    </script>
+</head>
+<body>
+    <div id="baseContent">
+        <div id="headerContent">
+            <div id="prograssBar">
+                <label>
+                </label>
+                <div id="meter">
+                    <div id="prograss">
+                        <div id="complete">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pageContent">
+            <!--<div id="pagination">
+            </div>-->
+            <div id="pageData">
+            </div>
+        </div>
+        <div id="footerContent">
+            <div id="skip">
+                <label>
+                    Skip&gt;&gt;</label>
+            </div>
+            <div id="pagination">
+                <label>
+                    Next&gt;&gt;</label>
+                <label>
+                    Save</label>
+                <label>
+                    &lt;&lt;Prev</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <!--<script src="../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>-->
+     <script type="text/javascript" language="javascript">
+      
+
+    var qs = (function (a) {
+    if (a == "") return {};
+    var b = {};
+    for (var i = 0; i < a.length; ++i) {
+        var p = a[i].split('=');
+        if (p.length != 2) continue;
+        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+   })(window.location.search.substr(1).split('&'));
+
+  function AttachScript(src) {
+    var script = document.createElement("SCRIPT");
+    script.type = "text/javascript";
+    document.getElementsByTagName("body")[0].appendChild(script);
+    script.src = src;
+  }
+
+    var flag = 0;
+    flag = qs["flag"];
+
+    alert(flag);
+//    $("#ifPopUp").attr('src', 'www.google.com');
+//    var PopUpUrl='';
+//    PopUpUrl = qs["PopUp"];
+//    alert(PopUpUrl);
+//    document.getElementById("ifPopUp").src = 'https://onecdevint.cognizant.com/sharedstorage/filedownload/BB425517-24A3-E111-9608-A4BADB39AC71/_00000000-0000-0000-0000-000000000000_16_12_2012_12_49_23_536_634751021635367197.pdf';
+
+</script>
+ <script type="text/javascript" language="javascript">
+     if (flag == 0) {
+         alert('TRUE');
+         AttachScript("../Scripts/Forms/CoreScripts/OBPaging.js");
+         AttachScript("../Scripts/Forms/CoreScripts/PDFMaster.js");
+         document.getElementById("Pg_1_check_chkOffice").style.display = "block";
+     }
+     else {
+         alert('false');
+         //document.getElementById("Pg_1_check_chkOffice").style.display = "none";
+     }
+
+     function Test() {
+         alert('Hi');
+         if (flag == 1) {
+             document.getElementById("ifPopUp").src = "https://onecdevint.cognizant.com/sharedstorage/filedownload/BB425517-24A3-E111-9608-A4BADB39AC71/_00000000-0000-0000-0000-000000000000_16_12_2012_12_49_23_536_634751021635367197.pdf";
+//             document.getElementById("ifPopUp").src = "http://www.google.co.in";
+             document.getElementById("Pg_1_check_chkOffice").style.display = "none";
+         } 
+     }
+   
+    </script>
+
+   <!-- <script src="../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../Scripts/Forms/CoreScripts/PDFMaster.js" type="text/javascript"></script>-->
+    <link href="../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+
+    
+</head>
+<body onload="Test()">
+    <div id='baseContent'>
+        <div id="pageMain">
+            <br />
+            <div id='PageContent' class='contentF'>
+                <!--Start of 1st page-->
+                <div class="pageData" style="overflow: hidden; height: 750px;">
+                    <div class="pageContent" style="overflow: hidden; height: 650px;">
+                        <div class="pageHeader">
+                            <p id="Pg_1_p_headerName" />
+                        </div>
+                        <div class="pageDetails" style="overflow: hidden; height: 98%;">
+                            <input type="checkbox"  id="Pg_1_check_chkOffice" onclick="SaveTaskData(1);" />
+                            Please check the box if you have submitted the form; or if a form is not required
+                            for the state in which you will work. Close the window to return to OneCognizant.<br />
+                            <iframe id="ifPopUp" width="99%" height="92%" scrolling="auto" style="z-index: -1000;">
+                                </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

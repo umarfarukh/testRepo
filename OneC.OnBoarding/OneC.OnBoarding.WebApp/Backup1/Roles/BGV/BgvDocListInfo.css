@@ -1,0 +1,114 @@
+﻿/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,* {
+margin: 0;
+padding: 0;
+border: 0;
+font: inherit;
+vertical-align: baseline;
+overflow:visible;
+}
+body{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;  font-size:72.5%; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+       .div_container { width: 945px; height: 485px; padding: 2px; border: 1px solid #b5c1ca; }
+        .div_header { height: 87%; width: 99%; border: 1px solid #b5c1ca; margin: 2px; }
+        .div_footer { height: 7%; width: 96.5%; border: 1px solid #b5c1ca; margin: 2px; position:absolute;}
+        .doc_upload_content{display:none;font-size:11px; color:#393939; border-collapse:collapse;height: 200px;}                
+.doc_details_upload{ margin: 0 12px;border:1px solid #b5c1ca; margin: 0px 26px 0 5px;}
+.doc_details_upload thead tr { position : fixed ; border-collapse : collapse ; margin:0 0 10px 0}
+.doc_details_upload tbody tr { position : relative ; border-collapse : collapse ;}
+.doc_details_upload tr th{	background: url(../../Images/Bgv/header_bg.png) repeat-x; height:25px; color:#ffffff;text-align:center ;padding-top:10px;}
+.doc_details_upload tr td{height:26px; padding: 5px;text-align:center ;  border-left: 1px solid #b5c1ca; border-bottom: 1px solid #b5c1ca;vertical-align: middle;}
+.doc_details_upload tr td img{ margin: 0 4px 0 0;  vertical-align: middle; *vertical-align: middle;}
+.clear {clear:both ;}
+.div_doc_data { height : 90% ; overflow-y:scroll;}
+    input[type="button"] {
+            height: 25px;
+            line-height: 20px;
+            min-width: 60px;
+            cursor: pointer;
+            border-radius:4px;
+            *font-size:1em;
+            background-image: url("../../Images/Bgv/header_bg.png");
+            color: #fff;
+            margin:3px 0 3px 0;
+            width : auto;
+            padding:0  5px 0 5px;
+        }
+        .div_btn{
+            float:right;
+            width: 95%;
+            padding : 5px 10px 0 0;
+            }
+            .div_btn input[type="button"]{
+                float: right;
+            }
+            #overLay { display:none; position:fixed; _position:absolute; /* hack for internet explorer 6*/ height:100%; width:100%; top:0; 
+left:0;background-color:#000000; border:1px solid #cecece; z-index:9999;}
+        
+#divBgvNoticeBar {position:absolute; _position:absolute; top:435px; display: none; width:660px; float:left; margin-left:20px; border-color:Red; border-width:1px; border-style:solid; background-color: #FAF49B; height:50px;font-size: 10px; color: red;}
+#divBgvNoticeBar ul{border-style:none;margin:0 0 0 0;}
+
+#popup_container {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	min-width:300px; /* Dialog will be no smaller than this */
+	max-width:600px; /* Dialog will wrap after this width */
+	border: solid 5px #999;
+	color: #000;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 1px;
+}
+.uploadContainer a img { height:25px;  }
+#_responseContent{
+height: 100px;
+z-index: 99999;
+background-color: #000;
+opacity: 0.8;
+color: #fff;
+padding: 5px 5px 5px 5px;
+border: 1px solid #000;
+word-wrap: break-word;
+border-radius: 4px;
+font-weight: bold;
+font-size : 1.1em;
+width: 400px;
+letter-spacing:1px
+}
+.div_instructions{
+         height: 25px;
+            line-height: 20px;            
+            cursor: pointer;            
+            font-size:1em;
+            background-image: url("../../Images/Bgv/header_bg.png");
+            color: #fff;
+            margin:3px 0 3px 0;
+            width : 99%;
+            padding:0  5px 0 5px;
+    }
+    .instructions_txt{        
+        width: 100%;
+        border:  1px solid #b5c1ca;
+        position: absolute;
+        display: none;
+        background-color: #ebe4e4;
+        }

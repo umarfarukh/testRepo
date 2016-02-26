@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c0ae4472-1d4e-4968-9cef-31e452c3be52" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/CI_CT_ELM1C.1.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="M293766.xsd" MetadataType="Schema" ID="dfa530c7-a8a3-4b70-8e73-9e4a5fcb7bb3" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/M293766.V1.xsd" />
+    <MetadataFile FileName="M167858.xsd" MetadataType="Schema" ID="bfd58bdb-36fa-49ec-add6-777c60b6bcbe" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/M167858.V1.xsd" />
+    <MetadataFile FileName="M599317.xsd" MetadataType="Schema" ID="6b2f3ae7-d9e5-4df4-95a2-b09675c485b2" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/M599317.V1.xsd" />
+    <MetadataFile FileName="M488680.xsd" MetadataType="Schema" ID="887a67d8-10e2-47aa-8173-2bd716788ba7" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/M488680.V1.xsd" />
+    <MetadataFile FileName="CI_CT_ELM1C.wsdl" MetadataType="Wsdl" ID="9e0f1e66-e386-456d-85e1-35ba65c45b5c" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/CI_CT_ELM1C.1.wsdl" />
+    <MetadataFile FileName="M448620.xsd" MetadataType="Schema" ID="71d95865-00c5-4fff-9c44-01afcedd9ee4" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/M448620.V1.xsd" />
+    <MetadataFile FileName="M378176.xsd" MetadataType="Schema" ID="010cd62e-8a09-47b2-a058-5d295d438bc8" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/M378176.V1.xsd" />
+    <MetadataFile FileName="M890659.xsd" MetadataType="Schema" ID="a146200b-9ee9-4a64-99fc-3df339d12d27" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/M890659.V1.xsd" />
+    <MetadataFile FileName="M1032904.xsd" MetadataType="Schema" ID="ae445a74-6c00-4367-85dd-786550ff7139" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/M1032904.V1.xsd" />
+    <MetadataFile FileName="M893395.xsd" MetadataType="Schema" ID="87dd8f8b-82b7-4269-9947-3f309f26bd2b" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/M893395.V1.xsd" />
+    <MetadataFile FileName="M993015.xsd" MetadataType="Schema" ID="621c58d7-02ac-4b3b-8c2f-b4f4f82721d1" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/M993015.V1.xsd" />
+    <MetadataFile FileName="M1088920.xsd" MetadataType="Schema" ID="c780eae7-d749-491a-ad52-0b2778a6c4a4" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/M1088920.V1.xsd" />
+    <MetadataFile FileName="M635219.xsd" MetadataType="Schema" ID="1473133d-248e-4559-928b-88f54b9f4142" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/M635219.V1.xsd" />
+    <MetadataFile FileName="M817211.xsd" MetadataType="Schema" ID="73364b25-3477-4045-a15d-9982176adf21" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/M817211.V1.xsd" />
+    <MetadataFile FileName="M479654.xsd" MetadataType="Schema" ID="994a88e4-f251-4e75-94d9-4b9b2682c07b" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/M479654.V1.xsd" />
+    <MetadataFile FileName="M771058.xsd" MetadataType="Schema" ID="5cfbe49f-8970-44cb-952a-c140286d8e33" SourceId="1" SourceUrl="http://10.237.71.106:7050/PSIGW/PeopleSoftServiceListeningConnector/M771058.V1.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

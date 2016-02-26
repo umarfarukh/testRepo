@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Equipment Request</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/Malaysia/EquipmentRequest.js" type="text/javascript"></script>
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../../../Scripts/Validations.js"></script>
+</head>
+<body>
+    <div id="baseContent">
+        <div id="pageMain" class="equipmentForm">
+            <div id="headerContent">
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id="PageContent" class="pagesContainer">
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <p class="pageText" style="font-weight: bold; text-decoration: underline; color: #3f678f;
+                            font-size: 13px; padding-left: 15px">
+                            Equipment - Eligibility
+                        </p>
+                        <p class="pageText">
+                            Dear
+                            <input type="text" style="width: 262px;" id="Pg_1_label_Name" readonly="readonly" />
+                            <!--  <label id="Pg_1_label_Name"  style=" padding-right:292px; padding-left:10px" />-->
+                        </p>
+                        <p class="pageText">
+                            While the majority of our associates use client-provided equipment to perform their
+                            daily activities, we do have certain associates who require Cognizant provided equipment
+                            to perform their role. Depending on your role/level, you may be automatically eligible
+                            for Cognizant provided equipment. Please review the table below to determine your
+                            eligibility for equipment.
+                        </p>
+                        <p class="pageText" style="font-weight: bold; text-decoration: underline; color: #3f678f;
+                            font-size: 13px; padding-left: 15px">
+                            ELIGIBILITY
+                        </p>
+                        <table border="solid" style="margin-left: 60px">
+                            <tr>
+                                <td class="pageText" style="border: 1px solid #3f678f">
+                                    Director, Senior Director, Assistant Vice President, Vice President, Senior Vice
+                                    President
+                                </td>
+                                <td class="pageText" style="border: 1px solid #3f678f">
+                                    Laptop and Blackberry (No additional approval required)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="pageText" style="border: 1px solid #3f678f">
+                                    Associate Director, Senior Manager
+                                </td>
+                                <td class="pageText" style="border: 1px solid #3f678f">
+                                    Laptop and Mobile phone (Approval required from the Hiring Manager),<br />Blackberry (Approval
+                                    required from the Malaysia BU Head with a complete justification on why the asset is required)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="pageText" style="border: 1px solid #3f678f">
+                                    Manager and below
+                                </td>
+                                <td class="pageText" style="border: 1px solid #3f678f">
+                                    Malaysia BU Head approval required for all assets, along with a complete justification on why the asset is required
+                                </td>
+                            </tr>
+                        </table>
+                        <p class="pageText">
+                            In case you are receiving client equipment, you would not be entitled to any Cognizant
+                            asset.<br />
+                            * Director must be from within same BU as associate requesting equipment
+                        </p>
+                        <p class="pageText">
+                            If Director or Department approval is required, we will seek approval on your behalf
+                            upon receipt of this form and processing of your associate ID. If as per the table
+                            above, no additional approval is required, and we receive your form at least 5 business
+                            days before your start date, we will have equipment ready for you on your first
+                            day.
+                        </p>
+                        <div class="pageText" style="width: 94%">
+                            <p class="pageText" style="font-weight: bold; text-decoration: underline; color: #3f678f;
+                                font-size: 13px; padding-left: 15px">
+                                Equipment request form</p>
+                            <!--  <p class="pageText">-->
+                            <table>
+                                <tr style="height: 30px">
+                                    <td>
+                                        <label style="padding: 0 20px">
+                                            Associate Name
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <input type="text" style="width: 262px;" id="Pg_1_text_Name" readonly="readonly"
+                                            class="tbForm" disabled="disabled" />
+                                    </td>
+                                </tr>
+                                <tr style="height: 30px">
+                                    <td>
+                                        <label style="padding: 0 20px">
+                                            Level
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <input type="text" style="width: 262px;" id="Pg_1_text_Level" readonly="readonly"
+                                            class="tbForm" disabled="disabled" />
+                                    </td>
+                                </tr>
+                                <tr style="height: 30px">
+                                    <td>
+                                        <label style="padding: 0 20px">
+                                            Personal Email ID
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <input type="text" style="width: 262px;" id="Pg_1_text_Emailid" readonly="readonly"
+                                            class="tbForm" disabled="disabled" />
+                                    </td>
+                                </tr>
+                                <tr style="height: 30px">
+                                    <td>
+                                        <label style="padding: 0 20px">
+                                            Contact No
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <input type="text" style="width: 262px;" id="Pg_1_text_Telephone" readonly="readonly"
+                                            class="tbForm" disabled="disabled" />
+                                    </td>
+                                </tr>
+                                <tr style="height: 30px">
+                                    <td>
+                                        <label style="padding: 0 20px">
+                                            Shipping Location (Office /Shipping location)
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="aaa" id="Pg_1_check_chkOffice" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="Equipment.OfficeLocation" jqxb-bindedattribute="checked" />Office
+                                        <input type="radio" name="aaa" id="Pg_1_check_chkShipping" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="Equipment.ShippingLocation" jqxb-bindedattribute="checked" />Shipping<br />
+                                        <!--   <input type="checkbox" id="chkOffice"  />Office<br />-->
+                                        <!-- <input type="checkbox" id="chkShipping"  />Shipping<br />-->
+                                        <!--<input type="text" style="border: 1px solid #000; width: 262px;" id="Text3" 
+                                       jqxb-datasource="FormDetails" jqxb-datamember="Equipment.Telephone" />-->
+                                    </td>
+                                </tr>
+                                <tr id="trOfficeLocation" style="height: 30px">
+                                    <td>
+                                        <label style="padding: 0 20px">
+                                            Office Location:</label>
+                                    </td>
+                                    <td>
+                                        <select class="tbForm ddForm" style="width: 262px;" title="OfficeAddress" id="Pg_1_check_OfficeAddress"
+                                            jqxb-datamember="Equipment.OfficeAddress" jqxb-datasource="FormDetails" jqxb-listsource="OfficeAddress"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr id="shippingNote">
+                                    <td>
+                                        <p class="pageText" style="text-align: justify; font-size: small; font-weight: bold">
+                                            The address you specify here will be used to deliver your asset and the ID card</p>
+                                    </td>
+                                </tr>
+                                <tr id="ShippingNotePaddington">
+                                    <td>
+                                        <p class="pageText" style="text-align: justify; font-size: small;">
+                                            Corporate Induction will be conducted in the Paddington office. So if you happen
+                                            to be in Paddington on your day of joining, you can collect your equipment from
+                                            there. You can select your delivery location accordingly.</p>
+                                    </td>
+                                </tr>
+                                <tr id="shippingDetails" style="height: 30px;">
+                                    <td>
+                                        <label style="padding: 0 20px">
+                                            Shipping Address
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <input type="text" style="width: 262px;" class="tbForm" id="Pg_1_text_ShippingAddress"
+                                            title="Shipping Address" jqxb-datasource="FormDetails" maxlength="45" jqxb-datamember="Equipment.ShippingAddress" />
+                                    </td>
+                                </tr>
+                                <tr id="shippingDetails1" style="height: 30px">
+                                    <td>
+                                        <label style="padding: 0 20px">
+                                            Shipping Postcode
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <input type="text" style="width: 262px;" class="tbForm" id="Pg_1_text_ShippingPostCode"
+                                            maxlength="8" jqxb-datasource="FormDetails" class="onlyAlphanumeric" jqxb-datamember="Equipment.ShippingPostCode" />
+                                    </td>
+                                </tr>
+                                <tr style="height: 30px">
+                                    <td colspan="3">
+                                    </td>
+                                </tr>
+                                <tr style="display: none">
+                                    <td>
+                                        <input type="checkbox" name="Equipment" id="Pg_1_check_chkClientEquipment" jqxb-datasource="FormDetails"
+                                            style="display: none" jqxb-datamember="Equipment.ClientEquipment" jqxb-bindedattribute="checked"
+                                            onclick="ClientEquipment();" />Will be using Client provided Equipment<br />
+                                    </td>
+                                </tr>
+                                <tr style="display: none">
+                                    <td>
+                                        <input type="checkbox" name="Equipment" id="Pg_1_check_chkLaptop" jqxb-datasource="FormDetails"
+                                            style="display: none" jqxb-datamember="Equipment.Laptop" jqxb-bindedattribute="checked"
+                                            onclick="Laptop()" />-Cognizant issued Laptop<br />
+                                    </td>
+                                </tr>
+                                <tr style="display: none">
+                                    <td>
+                                        <input type="checkbox" name="Equipment" id="Pg_1_check_chkClientCellPhone" jqxb-datasource="FormDetails"
+                                            style="display: none" jqxb-datamember="Equipment.CellPhone" jqxb-bindedattribute="checked"
+                                            onclick="CellPhone()" />- Cognizant issued Mobile phone<br />
+                                    </td>
+                                </tr>
+                                <tr style="display: none" id="Pg_9_tr_Equipment">
+                                    <td>
+                                        <input type="checkbox" name="Equipment" id="Pg_1_check_chkClientBlackBerry" jqxb-datasource="FormDetails"
+                                            style="display: none" jqxb-datamember="Equipment.BlackBerry" jqxb-bindedattribute="checked"
+                                            onclick="BlackBerry()" />- Cognizant issued Blackberry
+                                        <br />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="Signature" id="Sign_PageId_1">
+                        </div>
+                    </div>
+                    <!--End of 1st page-->
+                </div>
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

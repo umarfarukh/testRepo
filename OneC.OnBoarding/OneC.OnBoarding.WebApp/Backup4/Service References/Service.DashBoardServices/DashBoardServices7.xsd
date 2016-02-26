@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.CandidateDC" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.CandidateDC" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:51555/ServiceHost/DashBoardServices.svc?xsd=xsd4" namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" />
+  <xs:complexType name="CandidateDetails">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" name="_x003C_CandidateDetailList_x003E_k__BackingField" nillable="true" type="q1:ArrayOfCandidateDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CandidateDetails" nillable="true" type="tns:CandidateDetails" />
+  <xs:complexType name="CandidateTrainingDetails">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" name="_x003C_CandidateDetailList_x003E_k__BackingField" nillable="true" type="q2:ArrayOfCandidateTrainingDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CandidateTrainingDetails" nillable="true" type="tns:CandidateTrainingDetails" />
+  <xs:complexType name="ArrayOfOfferStatusDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OfferStatusDC" nillable="true" type="tns:OfferStatusDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOfferStatusDC" nillable="true" type="tns:ArrayOfOfferStatusDC" />
+  <xs:complexType name="OfferStatusDC">
+    <xs:sequence>
+      <xs:element name="_x003C_OfferStatusCode_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_OfferStatusDesc_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OfferStatusDC" nillable="true" type="tns:OfferStatusDC" />
+  <xs:complexType name="ArrayOfJoiningStatusDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JoiningStatusDC" nillable="true" type="tns:JoiningStatusDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJoiningStatusDC" nillable="true" type="tns:ArrayOfJoiningStatusDC" />
+  <xs:complexType name="JoiningStatusDC">
+    <xs:sequence>
+      <xs:element name="_x003C_JoiningStatusCodeNA_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_JoiningStatusCode_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_JoiningStatusDescNA_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_JoiningStatusDesc_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JoiningStatusDC" nillable="true" type="tns:JoiningStatusDC" />
+  <xs:complexType name="ArrayOfAssetStatusDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssetStatusDC" nillable="true" type="tns:AssetStatusDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAssetStatusDC" nillable="true" type="tns:ArrayOfAssetStatusDC" />
+  <xs:complexType name="AssetStatusDC">
+    <xs:sequence>
+      <xs:element name="_x003C_AssetStatusCode_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_AssetStatusDesc_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AssetType_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BBCommentsLog_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CPCommentsLog_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Comments_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_IrelandCommentsFlag_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_LTCommentsLog_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AssetStatusDC" nillable="true" type="tns:AssetStatusDC" />
+  <xs:complexType name="ArrayOfCandAssetStatusDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CandAssetStatusDC" nillable="true" type="tns:CandAssetStatusDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCandAssetStatusDC" nillable="true" type="tns:ArrayOfCandAssetStatusDC" />
+  <xs:complexType name="CandAssetStatusDC">
+    <xs:sequence>
+      <xs:element name="_x003C_AssetStatusCode_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_AssetStatusDesc_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AssetTrackingID_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_AssetType_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Comments_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_DeliveryDate_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_FedEx_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_SessionId_x003E_k__BackingField" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CandAssetStatusDC" nillable="true" type="tns:CandAssetStatusDC" />
+  <xs:complexType name="ArrayOfDimStatusDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DimStatusDC" nillable="true" type="tns:DimStatusDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDimStatusDC" nillable="true" type="tns:ArrayOfDimStatusDC" />
+  <xs:complexType name="DimStatusDC">
+    <xs:sequence>
+      <xs:element name="_x003C_DimStatusCode_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_DimStatusDesc_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DimStatusDC" nillable="true" type="tns:DimStatusDC" />
+  <xs:complexType name="ArrayOfLocationDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LocationDC" nillable="true" type="tns:LocationDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLocationDC" nillable="true" type="tns:ArrayOfLocationDC" />
+  <xs:complexType name="LocationDC">
+    <xs:sequence>
+      <xs:element name="_x003C_LocationCode_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_LocationDesc_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LocationDC" nillable="true" type="tns:LocationDC" />
+  <xs:complexType name="ArrayOfCampusReportingTimeDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CampusReportingTimeDC" nillable="true" type="tns:CampusReportingTimeDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCampusReportingTimeDC" nillable="true" type="tns:ArrayOfCampusReportingTimeDC" />
+  <xs:complexType name="CampusReportingTimeDC">
+    <xs:sequence>
+      <xs:element name="_x003C_ReportingTimeCode_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_ReportingTimeDesc_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CampusReportingTimeDC" nillable="true" type="tns:CampusReportingTimeDC" />
+</xs:schema>

@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/" elementFormDefault="qualified" targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/DashBoardServices/ServiceContracts/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50555/ServiceHost/DashBoardServices.svc?xsd=xsd2" namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" />
+  <xs:import schemaLocation="http://localhost:50555/ServiceHost/DashBoardServices.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.CandidateDC" />
+  <xs:import schemaLocation="http://localhost:50555/ServiceHost/DashBoardServices.svc?xsd=xsd3" namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" />
+  <xs:import schemaLocation="http://localhost:50555/ServiceHost/DashBoardServices.svc?xsd=xsd5" namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" />
+  <xs:element name="FetchADMINDataDashboardExcel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q1:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchADMINDataDashboardExcelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.CandidateDC" minOccurs="0" name="FetchADMINDataDashboardExcelResult" nillable="true" type="q2:CandidateDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocationList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" minOccurs="0" name="objadmin" nillable="true" type="q3:AdminDashBoard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocationListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" minOccurs="0" name="GetLocationListResult" nillable="true" type="q4:ArrayOfCity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepartment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candidateDetail" nillable="true" type="q5:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepartmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" minOccurs="0" name="GetDepartmentResult" nillable="true" type="q6:TMDashboardData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchDashboardDataForExcel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q7:CandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchDashboardDataForExcelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchDashboardDataForExcelResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchNSSDashBoardAssetReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q8:CandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchNSSDashBoardAssetReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchNSSDashBoardAssetReportResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchNSSDashboardDataForExcel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q9:CandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchNSSDashboardDataForExcelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchNSSDashboardDataForExcelResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ForcasteDashboardExcelReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q10:CandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ForcasteDashboardExcelReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ForcasteDashboardExcelReportResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadExcelDetailsData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q11:ArrayOfCandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadExcelDetailsDataResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePhotoStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q12:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePhotoStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveApprovalRequestData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" minOccurs="0" name="appDetail" nillable="true" type="q13:ApprovalDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveApprovalRequestDataResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchAssetApprovalRequestData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" minOccurs="0" name="appDetail" nillable="true" type="q14:ApprovalDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchAssetApprovalRequestDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchAssetApprovalRequestDataResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAssetApprovalStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q15:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAssetApprovalStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchRCData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q16:CandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchRCDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="FetchRCDataResult" nillable="true" type="q17:ArrayOfCandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchTrainingExcelData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.CandidateDC" minOccurs="0" name="candDetail" nillable="true" type="q18:CandidateTrainingDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchTrainingExcelDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.CandidateDC" minOccurs="0" name="FetchTrainingExcelDataResult" nillable="true" type="q19:CandidateTrainingDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchCandidateData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q20:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchCandidateDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="FetchCandidateDataResult" nillable="true" type="q21:CandidateTask" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCandidateDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q22:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCandidateDetailsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DashBoardProcessCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candidateDetail" nillable="true" type="q23:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DashBoardProcessCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" minOccurs="0" name="DashBoardProcessCountResult" nillable="true" type="q24:DashBoardDataPagination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candidateDetail" nillable="true" type="q25:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="GetWorkLocationResult" nillable="true" type="q26:ArrayOfCandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlockCandidateAccess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q27:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlockCandidateAccessResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHRSSMappedCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candidateDetail" nillable="true" type="q28:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHRSSMappedCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="GetHRSSMappedCountryResult" nillable="true" type="q29:ArrayOfCandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLevel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candidateDetail" nillable="true" type="q30:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLevelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" minOccurs="0" name="GetLevelResult" nillable="true" type="q31:NssDashboardData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candidateDetail" nillable="true" type="q32:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="GetCityResult" nillable="true" type="q33:ArrayOfCandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LapTopBlackpBerryCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q34:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LapTopBlackpBerryCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="LapTopBlackpBerryCountResult" nillable="true" type="q35:ArrayOfCandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Equipment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candidateDetail" nillable="true" type="q36:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EquipmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="EquipmentResult" nillable="true" type="q37:ArrayOfCandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BindWorklocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candidateDetail" nillable="true" type="q38:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BindWorklocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" minOccurs="0" name="BindWorklocationResult" nillable="true" type="q39:NssDashboardData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchNSSData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q40:CandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchNSSDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="FetchNSSDataResult" nillable="true" type="q41:ArrayOfCandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchHRSSData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q42:CandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchHRSSDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="FetchHRSSDataResult" nillable="true" type="q43:ArrayOfCandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCandidateJoiningStatusDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q44:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCandidateJoiningStatusDetailsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DashBoardProcessCountForHRSS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candidateDetail" nillable="true" type="q45:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DashBoardProcessCountForHRSSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" minOccurs="0" name="DashBoardProcessCountForHRSSResult" nillable="true" type="q46:DashBoardDataPagination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchNSSDataDashboard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q47:CandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchNSSDataDashboardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="FetchNSSDataDashboardResult" nillable="true" type="q48:ArrayOfCandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIMMappedCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candidateDetail" nillable="true" type="q49:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIMMappedCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="GetIMMappedCountryResult" nillable="true" type="q50:ArrayOfCandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimelineFilters">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimelineFiltersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" minOccurs="0" name="GetTimelineFiltersResult" nillable="true" type="q51:ArrayOfTimelineFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetRequestTimelineStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" minOccurs="0" name="TimelineFilterId" nillable="true" type="q52:TimelineFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssetRequestTimelineStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" minOccurs="0" name="GetAssetRequestTimelineStatusResult" nillable="true" type="q53:ArrayOfAssetRequestStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchNSSDashBoardData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q54:CandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchNSSDashBoardDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="FetchNSSDashBoardDataResult" nillable="true" type="q55:ArrayOfCandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchNSSCandidateData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q56:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchNSSCandidateDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="FetchNSSCandidateDataResult" nillable="true" type="q57:CandidateTask" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNSSAssetDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.CandidateDC" minOccurs="0" name="CandAssetList" nillable="true" type="q58:ArrayOfCandAssetStatusDC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNSSAssetDetailsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DashBoardAssetCountForNSS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candidateDetail" nillable="true" type="q59:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DashBoardAssetCountForNSSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" minOccurs="0" name="DashBoardAssetCountForNSSResult" nillable="true" type="q60:DashBoardDataPagination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileUploadDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" minOccurs="0" name="adminDashBoard" nillable="true" type="q61:AdminDashBoard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileUploadDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" minOccurs="0" name="GetFileUploadDetailsResult" nillable="true" type="q62:AdminDashBoard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchADMINDataDashboard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q63:CandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchADMINDataDashboardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="FetchADMINDataDashboardResult" nillable="true" type="q64:ArrayOfCandidateDetail" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatusList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="candDetail" nillable="true" type="q65:CandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatusListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" minOccurs="0" name="GetStatusListResult" nillable="true" type="q66:ArrayOfCandidateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

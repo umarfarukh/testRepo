@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.DashBoardDC" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.DashBoardDC" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="HTransferDocumentUploadDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HtmlContent" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HTransferDocumentUploadDetail" nillable="true" type="tns:HTransferDocumentUploadDetail" />
+  <xs:complexType name="HTransferDocumentDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdditionalDocumentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:long" />
+      <xs:element minOccurs="0" name="DocumentId" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="ECMDocumentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Filename" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupUploadedCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Pk_CandidateDocumentUploadDetail" type="xs:long" />
+      <xs:element minOccurs="0" name="QuestionGroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="ResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleGroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:long" />
+      <xs:element minOccurs="0" name="SpMode" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusFlag" type="xs:int" />
+      <xs:element minOccurs="0" name="UploadSrc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YNFlag" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HTransferDocumentDC" nillable="true" type="tns:HTransferDocumentDC" />
+  <xs:complexType name="HTransferCandidateDocInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CanBeSubmitted" type="xs:short" />
+      <xs:element minOccurs="0" name="DocumentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsMandatory" type="xs:short" />
+      <xs:element minOccurs="0" name="Pk_CandidateDocumentUploadDetail" type="xs:long" />
+      <xs:element minOccurs="0" name="QuestionGroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="UploadURL" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HTransferCandidateDocInfo" nillable="true" type="tns:HTransferCandidateDocInfo" />
+  <xs:complexType name="ArrayOfComponentDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ComponentDC" nillable="true" type="tns:ComponentDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfComponentDC" nillable="true" type="tns:ArrayOfComponentDC" />
+  <xs:complexType name="ComponentDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ComponentCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComponentDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComponentDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentHtml" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComponentId" type="xs:int" />
+      <xs:element minOccurs="0" name="IsComponentSelected" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ComponentDC" nillable="true" type="tns:ComponentDC" />
+  <xs:complexType name="ArrayOfReqDocList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReqDocList" nillable="true" type="tns:ReqDocList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReqDocList" nillable="true" type="tns:ArrayOfReqDocList" />
+  <xs:complexType name="ReqDocList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReqDocName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReqDocList" nillable="true" type="tns:ReqDocList" />
+  <xs:complexType name="ArrayOfMenuTabContent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MenuTabContent" nillable="true" type="tns:MenuTabContent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMenuTabContent" nillable="true" type="tns:ArrayOfMenuTabContent" />
+  <xs:complexType name="MenuTabContent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrentPage" type="xs:int" />
+      <xs:element minOccurs="0" name="IsBgvEnabled" type="xs:int" />
+      <xs:element minOccurs="0" name="IsUrlAllowed" type="xs:int" />
+      <xs:element minOccurs="0" name="MenuName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageUrl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MenuTabContent" nillable="true" type="tns:MenuTabContent" />
+  <xs:complexType name="ArrayOfInstitutionDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InstitutionDC" nillable="true" type="tns:InstitutionDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInstitutionDC" nillable="true" type="tns:ArrayOfInstitutionDC" />
+  <xs:complexType name="InstitutionDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BackPaperRequestedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentConfig" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EffectiveDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstitutionAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstitutionAddress2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstitutionCountryId" type="xs:int" />
+      <xs:element minOccurs="0" name="InstitutionId" type="xs:int" />
+      <xs:element minOccurs="0" name="InstitutionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstitutionStateId" type="xs:int" />
+      <xs:element minOccurs="0" name="InstitutionTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:int" />
+      <xs:element minOccurs="0" name="Mode" type="xs:int" />
+      <xs:element minOccurs="0" name="SearchInstitution" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:long" />
+      <xs:element minOccurs="0" name="SuspectDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuspectRating" type="xs:int" />
+      <xs:element minOccurs="0" name="SuspectSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuspectStatus" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InstitutionDC" nillable="true" type="tns:InstitutionDC" />
+  <xs:complexType name="ArrayOfBgvPageNotification">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BgvPageNotification" nillable="true" type="tns:BgvPageNotification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBgvPageNotification" nillable="true" type="tns:ArrayOfBgvPageNotification" />
+  <xs:complexType name="BgvPageNotification">
+    <xs:sequence>
+      <xs:element name="_x003C_MessageOrder_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_Message_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BgvPageNotification" nillable="true" type="tns:BgvPageNotification" />
+  <xs:complexType name="BGVDocumentUploadDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HtmlContent" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BGVDocumentUploadDetail" nillable="true" type="tns:BGVDocumentUploadDetail" />
+  <xs:complexType name="DocumentApprovalStatusDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovalBtnEnable" type="xs:int" />
+      <xs:element minOccurs="0" name="ApprovalStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="Approve" type="xs:int" />
+      <xs:element minOccurs="0" name="BGvSpecStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="CandidateBgvComponentDetail" type="xs:long" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:long" />
+      <xs:element minOccurs="0" name="CisDocDataFlag" type="xs:int" />
+      <xs:element minOccurs="0" name="CisStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocUploadedTS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocView" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentMatrixId" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="ECMDocumentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InfoMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManDocConfigXML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MandatoryAlert" type="xs:int" />
+      <xs:element minOccurs="0" name="MandatoryApproved" type="xs:int" />
+      <xs:element minOccurs="0" name="MandatoryDocUploaded" type="xs:int" />
+      <xs:element minOccurs="0" name="Mode" type="xs:int" />
+      <xs:element minOccurs="0" name="NotificationMappingId" type="xs:long" />
+      <xs:element minOccurs="0" name="Reject" type="xs:int" />
+      <xs:element minOccurs="0" name="RequestDoc" type="xs:int" />
+      <xs:element minOccurs="0" name="Response" type="xs:int" />
+      <xs:element minOccurs="0" name="RetStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleGroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:long" />
+      <xs:element minOccurs="0" name="StatusTxt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubmitBtnEnabled" type="xs:int" />
+      <xs:element minOccurs="0" name="Upload" type="xs:int" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VendorEnabled" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentApprovalStatusDC" nillable="true" type="tns:DocumentApprovalStatusDC" />
+</xs:schema>

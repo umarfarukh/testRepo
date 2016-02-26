@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" elementFormDefault="qualified" targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:51555/ServiceHost/DashBoardServices.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.DashBoardDC" />
+  <xs:import schemaLocation="http://localhost:51555/ServiceHost/DashBoardServices.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" />
+  <xs:complexType name="DashboardDataDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StartDate" type="xs:int" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:int" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:long" />
+      <xs:element minOccurs="0" name="Role" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecruiterID" type="xs:int" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:long" />
+      <xs:element minOccurs="0" name="CandidateEmailId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Requisition" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CandidateType" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProcessID" type="xs:int" />
+      <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+      <xs:element minOccurs="0" name="FromDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ToDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CandidateFName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageNo" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+      <xs:element minOccurs="0" name="Item1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AssociateId" type="xs:int" />
+      <xs:element minOccurs="0" name="JoiningLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InductionLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InductionStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CandidateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOJ" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InductionMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OfferStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InductionCandidateType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InductinDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CandidateStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AtteandanceUpdateCandiadatelist" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSingle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BGVInitiationDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="VendorId" type="xs:int" />
+      <xs:element minOccurs="0" name="BGVInitiationToDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CityId" type="xs:int" />
+      <xs:element minOccurs="0" name="StateId" type="xs:int" />
+      <xs:element minOccurs="0" name="CisStatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="BgvFinalStatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeOfJoining" type="xs:int" />
+      <xs:element minOccurs="0" name="VendorLoginID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CasePriority" type="xs:int" />
+      <xs:element minOccurs="0" name="BGVInitiationFromDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BGVSpecificationStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="HireType" type="xs:int" />
+      <xs:element minOccurs="0" name="ParentId" type="xs:int" />
+      <xs:element minOccurs="0" name="CandidateTypeDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CandidateTypeCode" type="xs:int" />
+      <xs:element minOccurs="0" name="SwizExcel" type="xs:int" />
+      <xs:element minOccurs="0" name="CountryCityDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaskId" type="xs:int" />
+      <xs:element minOccurs="0" name="SaveMode" type="xs:int" />
+      <xs:element minOccurs="0" name="ERProcess" type="xs:int" />
+      <xs:element minOccurs="0" name="ERSubmitted" type="xs:int" />
+      <xs:element minOccurs="0" name="ERConfirmation" type="xs:int" />
+      <xs:element minOccurs="0" name="AssetStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="CandidateDocUploadStatus" type="xs:short" />
+      <xs:element minOccurs="0" name="MngrDocUploadStatus" type="xs:short" />
+      <xs:element minOccurs="0" name="ProcessType" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DashboardDataDC" nillable="true" type="tns:DashboardDataDC" />
+  <xs:complexType name="TotalCountDC">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="TotalCountDC" nillable="true" type="tns:TotalCountDC" />
+  <xs:complexType name="DashBoardDataPagination">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ApprovalDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PageSize" type="xs:long" />
+          <xs:element minOccurs="0" name="PageNo" type="xs:long" />
+          <xs:element minOccurs="0" name="RowNumber" type="xs:long" />
+          <xs:element minOccurs="0" name="TotalRecords" type="xs:long" />
+          <xs:element minOccurs="0" name="Excel" type="xs:long" />
+          <xs:element minOccurs="0" name="PreJoiningCount" type="xs:long" />
+          <xs:element minOccurs="0" name="PostJoiningCount" type="xs:long" />
+          <xs:element minOccurs="0" name="ProcessId" type="xs:long" />
+          <xs:element minOccurs="0" name="LaptopCount" type="xs:long" />
+          <xs:element minOccurs="0" name="CellPhoneCount" type="xs:long" />
+          <xs:element minOccurs="0" name="BlackberryCount" type="xs:long" />
+          <xs:element minOccurs="0" name="ClientEquipmentCount" type="xs:long" />
+          <xs:element minOccurs="0" name="CheckCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DataCardCount" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DashBoardDataPagination" nillable="true" type="tns:DashBoardDataPagination" />
+  <xs:complexType name="ApprovalDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RequestId" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="GroupType" type="xs:int" />
+      <xs:element minOccurs="0" name="TrackingInfo" type="xs:int" />
+      <xs:element minOccurs="0" name="RequestStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" type="xs:int" />
+      <xs:element minOccurs="0" name="RequestApprovedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PendingTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestStatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="RequestStatusDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Laptop" type="xs:int" />
+      <xs:element minOccurs="0" name="Cellphone" type="xs:int" />
+      <xs:element minOccurs="0" name="Blackberry" type="xs:int" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:long" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:long" />
+      <xs:element minOccurs="0" name="LaptopApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="CellphoneApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="BlackberryApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="ContractorEquipment" type="xs:int" />
+      <xs:element minOccurs="0" name="ContractorEquipmentApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="BlackberryZ10" type="xs:int" />
+      <xs:element minOccurs="0" name="Samsungs3" type="xs:int" />
+      <xs:element minOccurs="0" name="Samsungs4" type="xs:int" />
+      <xs:element minOccurs="0" name="Samsungs5" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungNote3" type="xs:int" />
+      <xs:element minOccurs="0" name="Iphone4S" type="xs:int" />
+      <xs:element minOccurs="0" name="IPhone5C" type="xs:int" />
+      <xs:element minOccurs="0" name="IPhone5S" type="xs:int" />
+      <xs:element minOccurs="0" name="BlackberryZ10ApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungS3ApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungS4ApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungS5ApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungNote3ApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="IPhone4SApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="IPhone5SApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="IPhone5CApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="LGG2ApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="LGG2" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungNote4" type="xs:int" />
+      <xs:element minOccurs="0" name="Iphone6" type="xs:int" />
+      <xs:element minOccurs="0" name="IPhone6p" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungNote4ApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="IPhone6ApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="IPhone6PApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="LGG3" type="xs:int" />
+      <xs:element minOccurs="0" name="LGG3ApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungS632GB" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungS632GBApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungS664GB" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungS664GBApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungS6128GB" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungS6128GBApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungS6Edge32GB" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungS6Edge32GBApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungS6Edge64GB" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungS6Edge64GBApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungS6Edge128GB" type="xs:int" />
+      <xs:element minOccurs="0" name="SamsungS6Edge128GBApproverId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApprovalDetails" nillable="true" type="tns:ApprovalDetails" />
+  <xs:complexType name="HTransferCandidateData">
+    <xs:sequence>
+      <xs:element name="CandidateId" type="xs:long" />
+      <xs:element name="SessionId" type="xs:long" />
+      <xs:element name="CountryId" type="xs:int" />
+      <xs:element name="SpMode" type="xs:int" />
+      <xs:element name="RoleGroupId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HTransferCandidateData" nillable="true" type="tns:HTransferCandidateData" />
+  <xs:complexType name="BgvCandidateData">
+    <xs:sequence>
+      <xs:element name="CandidateId" type="xs:long" />
+      <xs:element name="CandidateName" nillable="true" type="xs:string" />
+      <xs:element name="CisPersonalDataXML" nillable="true" type="xs:string" />
+      <xs:element name="SessionId" type="xs:long" />
+      <xs:element name="CountryId" type="xs:int" />
+      <xs:element name="CisPrefillData" nillable="true" type="xs:string" />
+      <xs:element name="IsCisStarted" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeGroup" type="xs:int" />
+      <xs:element minOccurs="0" name="CisComponentData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComponentDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentHtml" nillable="true" type="xs:string" />
+      <xs:element name="IsCisComponentStarted" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="IsPrefill" type="xs:int" />
+      <xs:element name="SpMode" type="xs:int" />
+      <xs:element minOccurs="0" name="DashboardMode" type="xs:int" />
+      <xs:element minOccurs="0" name="CisPersonalDataLogXML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CisStatus" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.DashBoardDC" minOccurs="0" name="ComponentList" nillable="true" type="q1:ArrayOfComponentDC" />
+      <xs:element minOccurs="0" name="CisExpDataXML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CisExpDataLogXML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CisEduDataXML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CisEduDataLogXML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmploymentType" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RedirectMode" type="xs:int" />
+      <xs:element minOccurs="0" name="RedirectTo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComponentType" type="xs:int" />
+      <xs:element minOccurs="0" name="CisComponentDataXML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.DashBoardDC" minOccurs="0" name="InSufficientDocument" nillable="true" type="q2:ArrayOfReqDocList" />
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element name="RoleGroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="CisDocumentListXml" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SaveMode" type="xs:int" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.DashBoardDC" minOccurs="0" name="MenuTab" nillable="true" type="q3:ArrayOfMenuTabContent" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.DashBoardDC" minOccurs="0" name="InstitutionList" nillable="true" type="q4:ArrayOfInstitutionDC" />
+      <xs:element minOccurs="0" name="IsCisSaved" type="xs:int" />
+      <xs:element minOccurs="0" name="IsCisSubmitted" type="xs:int" />
+      <xs:element minOccurs="0" name="CisComponentDataLog" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CisComponentDataLogXML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelevantExp" type="xs:int" />
+      <xs:element minOccurs="0" name="HrssSaveStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="IsAssignedToVendor" type="xs:int" />
+      <xs:element minOccurs="0" name="CandidateSaveStatus" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BgvCandidateData" nillable="true" type="tns:BgvCandidateData" />
+  <xs:complexType name="BgvComponent">
+    <xs:sequence>
+      <xs:element name="CandidateId" type="xs:long" />
+      <xs:element minOccurs="0" name="ComponentId" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="CountryId" type="xs:int" />
+      <xs:element minOccurs="0" name="BUId" type="xs:int" />
+      <xs:element minOccurs="0" name="HTMLTemplate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLTemplate" nillable="true" type="xs:string" />
+      <xs:element name="DisplayOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="IsRepeatable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RunnerId" type="xs:int" />
+      <xs:element name="SessionId" type="xs:long" />
+      <xs:element name="ComponentType" type="xs:int" />
+      <xs:element name="ComponentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstitutionId" type="xs:int" />
+      <xs:element name="ComponentCode" nillable="true" type="xs:string" />
+      <xs:element name="SuspectRaisedSession" type="xs:long" />
+      <xs:element minOccurs="0" name="CanDelete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Mode" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxRunnerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BgvComponent" nillable="true" type="tns:BgvComponent" />
+  <xs:complexType name="BgvPageNotificationData">
+    <xs:sequence>
+      <xs:element name="CandidateId" type="xs:long" />
+      <xs:element name="SessionId" type="xs:long" />
+      <xs:element name="RoleGroupId" type="xs:int" />
+      <xs:element name="BgvPageId" type="xs:int" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.DashBoardDC" minOccurs="0" name="BgvPageNoticationList" nillable="true" type="q5:ArrayOfBgvPageNotification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BgvPageNotificationData" nillable="true" type="tns:BgvPageNotificationData" />
+  <xs:complexType name="BgvComponentMapping">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ComponentId" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="BUId" type="xs:int" />
+      <xs:element minOccurs="0" name="CountryId" type="xs:int" />
+      <xs:element minOccurs="0" name="IsRepeatable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Mode" type="xs:int" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:long" />
+      <xs:element minOccurs="0" name="ComponentDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="HTMLTemplate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLTemplate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CanDelete" type="xs:int" />
+      <xs:element minOccurs="0" name="CanAssignToVendor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentId" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentMatrixId" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDefault" type="xs:int" />
+      <xs:element minOccurs="0" name="IsMandatory" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentConfigXml" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BgvComponentMapping" nillable="true" type="tns:BgvComponentMapping" />
+  <xs:complexType name="AdminDashBoard">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CandidateId" type="xs:int" />
+      <xs:element minOccurs="0" name="TaskId" type="xs:int" />
+      <xs:element minOccurs="0" name="FileUploadId" type="xs:int" />
+      <xs:element minOccurs="0" name="FileUploadStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="FileUploadURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileUploadStatusDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RejectionDate" nillable="true" type="xs:string" />
+      <xs:element name="SessionId" type="xs:long" />
+      <xs:element minOccurs="0" name="Role" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileScanStatus" nillable="true" type="xs:string" />
+      <xs:element name="TaskStatus" type="xs:int" />
+      <xs:element name="CountryId" type="xs:int" />
+      <xs:element name="Photostatusdescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdminDashBoard" nillable="true" type="tns:AdminDashBoard" />
+  <xs:complexType name="TMDashboardData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DepartmentDataList" nillable="true" type="tns:ArrayOfDepartmentData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TMDashboardData" nillable="true" type="tns:TMDashboardData" />
+  <xs:complexType name="ArrayOfDepartmentData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DepartmentData" nillable="true" type="tns:DepartmentData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDepartmentData" nillable="true" type="tns:ArrayOfDepartmentData" />
+  <xs:complexType name="DepartmentData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DepartmentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DepartmentCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DepartmentData" nillable="true" type="tns:DepartmentData" />
+  <xs:complexType name="ArrayOfDashboardDataDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DashboardDataDC" nillable="true" type="tns:DashboardDataDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDashboardDataDC" nillable="true" type="tns:ArrayOfDashboardDataDC" />
+  <xs:complexType name="DashboardFilters">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" name="RoleGroupId" type="q6:RoleGroup" />
+      <xs:element name="DashboardFilterList" nillable="true" type="tns:ArrayOfDashboardFilter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DashboardFilters" nillable="true" type="tns:DashboardFilters" />
+  <xs:complexType name="ArrayOfDashboardFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DashboardFilter" nillable="true" type="tns:DashboardFilter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDashboardFilter" nillable="true" type="tns:ArrayOfDashboardFilter" />
+  <xs:complexType name="DashboardFilter">
+    <xs:sequence>
+      <xs:element name="FilterName" nillable="true" type="xs:string" />
+      <xs:element name="FilterId" nillable="true" type="xs:string" />
+      <xs:element name="FilterDesc" nillable="true" type="xs:string" />
+      <xs:element name="FilterOrder" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DashboardFilter" nillable="true" type="tns:DashboardFilter" />
+  <xs:complexType name="NssDashboardData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DesignationDescList" nillable="true" type="tns:ArrayOfDesignationData" />
+      <xs:element minOccurs="0" name="LocationDescList" nillable="true" type="tns:ArrayOfDesignationData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NssDashboardData" nillable="true" type="tns:NssDashboardData" />
+  <xs:complexType name="ArrayOfDesignationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DesignationData" nillable="true" type="tns:DesignationData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDesignationData" nillable="true" type="tns:ArrayOfDesignationData" />
+  <xs:complexType name="DesignationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DesignationDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Jobcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DesignationData" nillable="true" type="tns:DesignationData" />
+  <xs:complexType name="ArrayOfTimelineFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimelineFilter" nillable="true" type="tns:TimelineFilter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimelineFilter" nillable="true" type="tns:ArrayOfTimelineFilter" />
+  <xs:complexType name="TimelineFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TimelineFilterId" type="xs:int" />
+      <xs:element minOccurs="0" name="TimelineDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:long" />
+      <xs:element minOccurs="0" name="Role" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimelineFilter" nillable="true" type="tns:TimelineFilter" />
+  <xs:complexType name="ArrayOfAssetRequestStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssetRequestStatus" nillable="true" type="tns:AssetRequestStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAssetRequestStatus" nillable="true" type="tns:ArrayOfAssetRequestStatus" />
+  <xs:complexType name="AssetRequestStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssetStatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusDescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AssetRequestStatus" nillable="true" type="tns:AssetRequestStatus" />
+</xs:schema>

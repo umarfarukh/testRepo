@@ -1,0 +1,429 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/India/EmployeeDetails.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <style type="text/css">
+        .pageData .personalDataForm li.date_box label
+        {
+            margin-right: 25px;
+        }
+        
+        .pageData .pageContent b, .pageData .pageContent .bold_text
+        {
+            font-weight: bold;
+        }
+        div.personalDataForm ul.personalDetails li.date_box button.ui-datepicker-trigger
+        {
+            margin-right: 0px;
+        }
+        div.personalDataForm ul.personalDetails li.date_box input.tbForm
+        {
+            margin-left: 3px;
+        }
+        
+        .clsreadonly
+        {
+            background: #f0f0f0;
+        }
+        
+        .bgvLabel {color:Black;float: right; margin: 2px 0 0 50px; display:none; color : Gray;}
+        label.tbForm
+        {
+            color:Gray;
+        }
+    </style>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id="pageMain">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails personalDataForm">
+                            <div jqxb-templatecontainer="EmployerTemplate" jqxb-datasource="EmployersDetails">
+                                <div jqxb-template="EmployerTemplate" jqxb-templateitemidprfx="EmployersRow" style="display: none">
+                                    <ul class="personalDetails">
+                                        <div class="pageHeader">
+                                            <input type="button" id="btnDelete" value="Delete" class="btn_field deleteEmployer BgvSyncBtn"
+                                                style="float: right; width: 100px; margin: 5px 5px 0 0;" />
+                                            <p class="employerRecord">
+                                            </p>
+                                        </div>
+                                        <br />
+                                        <li>
+                                            <label for="prefix_form">
+                                                <span>*</span>Name of the Company</label>
+                                            <input type="text" class="tbForm Alphanumeric textMandatory BgvSync" jqxb-itemdatamember="CompanyName"
+                                                maxlength="30" jqxb-templateitemdynamicid="Name" title="Name of the Company" />
+                                            <label jqxb-itemdatamember="CompanyName" jqxb-templateitemdynamicid="Name_bgvlbl" class="tbForm bgvLabel"></label>
+                                        </li>
+                                        <li>
+                                            <label for="firstname_form" jqxb-itemdatamember="EmployeeID" jqxb-templateitemdynamicid="EmployeeIDlbl" >
+                                                <span jqxb-itemdatamember="EmployeeID" jqxb-templateitemdynamicid="EmployeeIDspan">*</span>Employee ID
+                                            </label>
+                                            <input type="text" class="tbForm Alphanumeric textMandatory BgvSync" jqxb-itemdatamember="EmployeeID"
+                                                maxlength="45" jqxb-templateitemdynamicid="EmployeeID" title="Employee ID" />
+                                            <label jqxb-itemdatamember="EmployeeID" jqxb-templateitemdynamicid="EmployeeID_bgvlbl" class="tbForm bgvLabel"></label>
+                                        </li>
+                                        <li>
+                                            <label for="JobTitle_form">
+                                                <span>*</span>Job Title</label>
+                                            <input type="text" class="tbForm onlyAlp textMandatory" jqxb-itemdatamember="JobTitle"
+                                                maxlength="30" jqxb-templateitemdynamicid="Title" title="Job Title" />
+                                        </li>
+                                        <li>
+                                            <label for="surname_form">
+                                                <span>*</span>Street Address</label>
+                                            <textarea type="text" jqxb-templateitemdynamicid="Address" jqxb-itemdatamember="Address"
+                                                title="Street Address" class="tbForm Alphanumeric textMandatory streetAddress"></textarea>
+                                        </li>
+                                        <li>
+                                            <label for="maritalstatus_form">
+                                                <span>*</span>City</label>
+                                            <input type="text" jqxb-itemdatamember="City" maxlength="45" jqxb-templateitemdynamicid="City"
+                                                title="City" class="tbForm onlyAlp textMandatory" />
+                                        </li>
+                                        <li>
+                                            <label for="sex_form">
+                                                <span>*</span>State</label>
+                                            <input type="text" jqxb-itemdatamember="State" maxlength="45" jqxb-templateitemdynamicid="State"
+                                                title="State" class="tbForm onlyAlp textMandatory" />
+                                        </li>
+                                        <li>
+                                            <label for="phone_form">
+                                                <span>*</span>Country</label>
+                                            <input type="text" jqxb-itemdatamember="Country" jqxb-templateitemdynamicid="Country"
+                                                title="Country" maxlength="45" class="tbForm onlyAlp textMandatory" />
+                                        </li>
+                                        <li>
+                                            <label for="sortcode_form">
+                                                <span>*</span>Postal Code</label>
+                                            <input type="text" jqxb-itemdatamember="Postalcode" jqxb-templateitemdynamicid="PostalCode"
+                                                title="Postal Code" maxlength="12" class="tbForm Alphanumeric textMandatory" />
+                                        </li>
+                                        <li>
+                                            <label for="Duties_form">
+                                                <span>*</span>Description of Duties</label>
+                                            <textarea type="text" jqxb-itemdatamember="DescriptionOfDuties" jqxb-templateitemdynamicid="Duties"
+                                                title="Description of Duties" class="tbForm Alphanumeric textMandatory duties"></textarea>
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form">
+                                                <span>*</span>Employer's Phone</label>
+                                            <input type="text" jqxb-itemdatamember="EmployersPhone" jqxb-templateitemdynamicid="EmpPhone"
+                                                title="Employer's Phone" maxlength="13" class="tbForm OnlyNumeric textMandatory" />
+                                        </li>
+                                        <li class="date_box">
+                                            <label for="NInum_form">
+                                                <span>*</span>From Date</label>
+                                            <input type="text" jqxb-itemdatamember="FromDate" jqxb-templateitemdynamicid="FromDate"
+                                                readonly="readonly" title="From Date" maxlength="45" style="width: 140px;" class="tbForm datePicker dateMandatory jQrydatepicker BgvSync" />
+                                            <label jqxb-itemdatamember="FromDate" jqxb-templateitemdynamicid="FromDate_bgvlbl" class="tbForm bgvLabel" style="width: 168px;margin: -14px 0 0 50px;"></label>
+                                        </li>
+                                        <li class="date_box">
+                                            <label for="NInum_form">
+                                                <span>*</span>To Date</label>
+                                            <input type="text" jqxb-templateitemdynamicid="Todate" jqxb-itemdatamember="ToDate"
+                                                readonly="readonly" title="To Date" maxlength="45" style="width: 140px;" class="tbForm datePicker textMandatory BgvSync" />
+                                            <label jqxb-itemdatamember="ToDate" jqxb-templateitemdynamicid="Todate_bgvlbl" class="tbForm bgvLabel" style="width: 168px;margin: -14px 0 0 50px;"></label>
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form">
+                                                <span>&nbsp;</span>Fax</label>
+                                            <input type="text" id="Text4" jqxb-itemdatamember="Fax" jqxb-templateitemdynamicid="Fax"
+                                                title="Fax" maxlength="45" class="tbForm OnlyNumeric" />
+                                        </li>
+                                        <li class="date_box">
+                                            <label for="NInum_form" style="height: 40px; margin-right: 19px;">
+                                                <span>*</span>Employment Status</label>
+                                            <label style="float: right; width: 45%; margin: 0;">
+                                                <input type="checkbox" id="empStatusfulltime" class="empfulltimeStatus BgvSyncChkbx" jqxb-templateitemdynamicid="empstatusfull"
+                                                    jqxb-itemdatamember="EmployementFullTime" jqxb-bindedattribute="checked" name="EmployementStatus" />Full
+                                                Time</label>
+                                            <label style="float: right; width: 45%; margin: 0;">
+                                                <input type="checkbox" id="empStatuscontract" class="empcontractStatus BgvSyncChkbx" jqxb-templateitemdynamicid="empstatuscontract"
+                                                    jqxb-itemdatamember="EmployementContract" jqxb-bindedattribute="checked" name="EmployementStatus" />Contract/Through
+                                                Outsourcing Agency</label>
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form">
+                                                <span>*</span>Reason for leaving</label>
+                                            <textarea type="text" jqxb-itemdatamember="ReasonForLeaving" jqxb-templateitemdynamicid="ReasonforLeaving"
+                                                title="Reason for leaving" class="tbForm Alphanumeric textMandatory reasonleaving"></textarea>
+                                        </li>
+                                        <li></li>
+                                        <li style="border: #8fb9d0 1px solid; padding-left: 25px; width: 94%; font-family: Trebuchet MS;
+                                            color: #3f678f; font-weight: bold; padding-top: 10px; height: 15px; margin-left: 10px;
+                                            margin-bottom: 5px;">
+                                            <label for="NInum_form">
+                                                Supervisor Details</label>
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form">
+                                                <span>*</span>Name</label>
+                                            <input type="text" jqxb-itemdatamember="SupervisorDetailsName" jqxb-templateitemdynamicid="SupervName"
+                                                title="Name" maxlength="45" class="tbForm onlyAlp textMandatory" />
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form">
+                                                <span>*</span>Title</label>
+                                            <input type="text" jqxb-itemdatamember="SupervisorDetailsTitle" jqxb-templateitemdynamicid="SupervTitle"
+                                                title="Title" maxlength="45" class="tbForm onlyAlp textMandatory" />
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form">
+                                                <span>*</span>Phone No</label>
+                                            <input type="text" jqxb-itemdatamember="SupervisorDetailsPhoneNo" jqxb-templateitemdynamicid="Supervphone"
+                                                title="Phone no" maxlength="13" class="tbForm OnlyNumeric textMandatory" />
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form">
+                                                <span style="float: left;">*</span><p>
+                                                    Email ID(Preferably Official)</p>
+                                            </label>
+                                            <input type="text" jqxb-itemdatamember="SupervisorDetailsEmailID" jqxb-templateitemdynamicid="SupervEmailId"
+                                                title="Email Id" maxlength="45" class="tbForm Alphanumeric textMandatory" />
+                                        </li>
+                                        <li style="border: #8fb9d0 1px solid; padding-left: 25px; width: 94%; font-family: Trebuchet MS;
+                                            color: #3f678f; font-weight: bold; padding-top: 10px; height: 15px; margin-left: 10px;
+                                            margin-bottom: 5px;">
+                                            <label for="NInum_form" style="margin-left: -10px;">
+                                                <span jqxb-itemdatamember="HRManagerDetailsName" jqxb-templateitemdynamicid="HRspan" >*</span>HR Manager's Details</label>
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form" style="padding-left:18px;">
+                                                Name</label>
+                                            <input type="text" jqxb-itemdatamember="HRManagerDetailsName" jqxb-templateitemdynamicid="HRName"
+                                                title="Name" maxlength="45" class="tbForm onlyAlp BgvSyncHr" />
+                                            <label jqxb-itemdatamember="HRManagerDetailsName" jqxb-templateitemdynamicid="HRName_bgvlbl" class="tbForm bgvLabel"></label>
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form">
+                                                <!--<span>*</span>-->Phone No</label>
+                                            <input type="text" jqxb-itemdatamember="HRManagerDetailsPhoneNo" jqxb-templateitemdynamicid="HRPhone"
+                                                title="Phone no" maxlength="13" class="tbForm OnlyNumeric textMandatory BgvSyncHr" />
+                                            <label jqxb-itemdatamember="HRManagerDetailsPhoneNo" jqxb-templateitemdynamicid="HRPhone_bgvlbl" class="tbForm bgvLabel"></label>
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form"  style="padding-left:16px;">
+                                                <!--<span style="float: left;">*</span>-->
+                                                    Email ID(Preferably Official)
+                                            </label>
+                                            <input type="text" jqxb-itemdatamember="HRManagerDetailsEmailID" jqxb-templateitemdynamicid="HREmailID"
+                                                title="Email Id" maxlength="45" class="tbForm Alphanumeric textMandatory BgvSyncHr" />
+                                            <label jqxb-itemdatamember="HRManagerDetailsEmailID" jqxb-templateitemdynamicid="HREmailID_bgvlbl" class="tbForm bgvLabel"></label>
+                                        </li>
+                                        <li></li>
+                                        <div>
+                                        </div>
+                                        <li style="border: #8fb9d0 1px solid; padding-left: 25px; width: 94%; font-family: Trebuchet MS;
+                                            color: #3f678f; font-weight: bold; padding-top: 10px; height: 15px; margin-left: 10px;
+                                            margin-bottom: 5px;">
+                                            <label for="NInum_form">
+                                                Outsourcing Agency Details</label>
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form">
+                                                <span class="span" jqxb-templateitemdynamicid="mrkOutsrcName"></span>Name</label>
+                                            <input type="text" jqxb-itemdatamember="OutsourcingAgencyName" jqxb-templateitemdynamicid="OutsrcName"
+                                                title="Name" maxlength="45" class="tbForm agencyDetails onlyAlp textMandatory" />
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form">
+                                                <span class="span" jqxb-templateitemdynamicid="mrkOutsrcAddress"></span>Address</label>
+                                            <textarea type="text" jqxb-itemdatamember="OutsourcingAgencyAddress" jqxb-templateitemdynamicid="OutsrcAddress"
+                                                title="Address" class="tbForm agencyDetails Alphanumeric textMandatory outsrcaddress"></textarea>
+                                        </li>
+                                        <li>
+                                            <label for="NInum_form">
+                                                <span class="span" jqxb-templateitemdynamicid="mrkOutsrcPhone"></span>Telephone
+                                                No</label>
+                                            <input type="text" jqxb-itemdatamember="OutsourcingAgencyPhoneNo" jqxb-templateitemdynamicid="OutsrcPhone"
+                                                title="Telephone No" maxlength="45" class="tbForm agencyDetails OnlyNumeric" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <ul class="personalDetails">
+                                <li class="ismigrated">
+                                    <label for="NInum_form">
+                                        <span>*</span>Are you currently employed?&nbsp;</label>
+                                    <input type="checkbox" id="curryes_form" class="BgvSyncChkbx" onclick="IsDisabled(1)" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="EmployersData.CurrentlyEmployed.Yes" jqxb-bindedattribute="checked"
+                                        name="isdisabled">Yes&nbsp;</input>
+                                    <input type="checkbox" id="currno_form" class="BgvSyncChkbx" onclick="IsDisabled(0)" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="EmployersData.CurrentlyEmployed.No" jqxb-bindedattribute="checked"
+                                        name="isdisabled">No&nbsp;</input></li>
+                                <li class="ismigrated">
+                                    <label for="NInum_form">
+                                       <!-- <span></span>-->Relevant Experience(in months)&nbsp;</label>
+                                    <input type="text" id="Text21" jqxb-datasource="FormDetails" jqxb-datamember="EmployersData.RelavantExperience"
+                                        style="background: #f0f0f0; float: right" readonly="readonly" maxlength="45"
+                                        class="tbForm textAlphanumeric BgvSyncStatic" />
+                                    <label  id="Text21_bgvlbl" class="tbForm bgvLabel"></label>
+                                     </li>
+                                    
+                                <li>
+                                    <label for="sex_form">
+                                        <span></span>Do you have breaks in Employment?&nbsp;</label>
+                                    <input type="checkbox" id="chky_form" onclick="IsBreakEmployers(1)" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="EmployersData.IfBreaksinEmployers.Yes" jqxb-bindedattribute="checked"
+                                        name="isbreak">Yes&nbsp;</input>
+                                    <input type="checkbox" id="chkn_form" onclick="IsBreakEmployers(0)" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="EmployersData.IfBreaksinEmployers.No" jqxb-bindedattribute="checked"
+                                        name="isbreak">No&nbsp;</input></li>
+                               <!-- </li>-->
+                                <li>
+                                    <label for="NInum_form">
+                                       <!-- <span style="float: left;"></span>-->
+                                        <p>
+                                            Reason for Breaks in<br />
+                                            Employment</p>
+                                    </label>
+                                    <textarea type="text" id="reason_form" jqxb-datasource="FormDetails" jqxb-datamember="EmployersData.ReasonForBreak"
+                                        style="float: rights; height: 40px;" onkeydown="RestrictCharCount(this.id,150)" allowchar="150"
+                                        class="tbForm textAlphanumeric"></textarea></li>
+                                <li>
+                                    <label for="NInum_form">
+                                        <span></span>Add the number of employers worked for till date</label>
+                                </li>
+                                <li>
+                                    <input type="button" id="btnAdddependents" value="Add" class="btn_field BgvSyncBtn" onclick="AddEmployerRecord();" />
+                                </li>
+                            </ul>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <ul class="personalDetails ismigrated">
+                                <div class="pageHeader" >
+                                    <p>
+                                        Current Salary Details</p>
+                                </div>
+                                <br />
+                                <li>
+                                    <label for="prefix_form">
+                                        <span></span>Basic</label>
+                                    <input type="text" class="tbForm OnlyNumeric" jqxb-datasource="FormDetails" jqxb-datamember="EmployersData.CurrentSalaryBasic"
+                                        maxlength="45" id="Text22" title="Basic" />
+                                </li>
+                                <li>
+                                    <label for="prefix_form">
+                                        <span></span>HRA</label>
+                                    <input type="text" class="tbForm OnlyNumeric" jqxb-datasource="FormDetails" jqxb-datamember="EmployersData.CurrentSalaryHRA"
+                                        maxlength="45" id="Text24" title="HRA" />
+                                </li>
+                                <li>
+                                    <label for="prefix_form">
+                                        <span></span>PF</label>
+                                    <input type="text" class="tbForm OnlyNumeric BgvSyncStatic" jqxb-datasource="FormDetails" jqxb-datamember="EmployersData.CurrentSalaryPF"
+                                        maxlength="45" id="Text25" title="PF" />
+                                    <label  id="Text25_bgvlbl" class="tbForm bgvLabel"></label>
+                                </li>
+                                <li>
+                                    <label for="prefix_form">
+                                        <span></span>LTA</label>
+                                    <input type="text" class="tbForm OnlyNumeric" jqxb-datasource="FormDetails" jqxb-datamember="EmployersData.CurrentSalaryLTA"
+                                        maxlength="45" id="Text26" title="LTA" />
+                                </li>
+                                <li>
+                                    <label for="prefix_form">
+                                        <span></span>Other Allowances</label>
+                                    <input type="text" class="tbForm OnlyNumeric" jqxb-datasource="FormDetails" jqxb-datamember="EmployersData.CurrentSalaryOtherAllowances"
+                                        maxlength="45" id="Text27" title="Other Allowances" />
+                                </li>
+                                <li>
+                                    <label for="prefix_form">
+                                        <span></span>Medical</label>
+                                    <input type="text" class="tbForm OnlyNumeric" jqxb-datasource="FormDetails" jqxb-datamember="EmployersData.CurrentSalaryMedical"
+                                        maxlength="45" id="Text28" title="Medical" />
+                                </li>
+                                <li>
+                                    <label for="prefix_form">
+                                        <span></span>Conveyance</label>
+                                    <input type="text" class="tbForm OnlyNumeric" jqxb-datasource="FormDetails" jqxb-datamember="EmployersData.CurrentSalaryConveyance"
+                                        maxlength="45" id="Text29" title="Conveyance" />
+                                </li>
+                                <li>
+                                    <label for="prefix_form">
+                                        <span></span>Total Monthly</label>
+                                    <input type="text" class="tbForm OnlyNumeric" jqxb-datasource="FormDetails" jqxb-datamember="EmployersData.CurrentSalaryTotalMonthly"
+                                        maxlength="45" id="Text30" title="Total Monthly" />
+                                </li>
+                                <li>
+                                    <label for="prefix_form">
+                                        <span></span>Total Annual Package</label>
+                                    <input type="text" class="tbForm OnlyNumeric" jqxb-datasource="FormDetails" jqxb-datamember="EmployersData.CurrentSalaryTotalAnnualPackage"
+                                        maxlength="45" id="Text31" title="Total Annual Package" />
+                                </li>
+                                <li>
+                                    <label for="prefix_form">
+                                        <span></span>Expected salary (in INR)</label>
+                                    <input type="text" class="tbForm OnlyNumeric" jqxb-datasource="FormDetails" jqxb-datamember="EmployersData.CurrentSalaryExpectedSalaryAtCognizant"
+                                        maxlength="45" id="Text32" title="Expected salary in Cognizant(INR)" />
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="pageDetails">
+                                <div class="pageHeader" style="padding-right: 10px; margin-left: 0px;">
+                                    <p>
+                                        AFFIDAVIT</p>
+                                </div>
+                                <p class="pageText">
+                                    I certify that the statements made in this application are valid and complete to
+                                    the best of my knowledge. I understand that <strong><em><u>Cognizant Technology Solutions</u></em></strong>
+                                    is an at will employer, false or misleading information may result in termination
+                                    of employment, with or without cause and with or without notice.
+                                </p>
+                                <p class="pageText">
+                                    &nbsp;I understand that <strong><em><u>Cognizant Technology Solutions</u></em></strong>
+                                    may request a credit and/or background check from a credit reporting agency or related
+                                    service. I understand that I have a right to make a written request within a reasonable
+                                    time for the disclosure of the name and address of the credit-reporting agency so
+                                    that I may obtain a complete disclosure of the nature and scope of any investigation.
+                                </p>
+                                <p class="pageText">
+                                    I understand that the records will be used for employment purposes only and will
+                                    not be given to unauthorized persons.</p>
+                                <p class="pageText">
+                                    &nbsp; I authorize <strong><em><u>Cognizant Technology Solutions</u></em></strong>,
+                                    and/or its agents to conduct a reference check so that a hiring decision may be
+                                    made. In the event that <strong><em><u>Cognizant Technology Solutions</u></em></strong>
+                                    is unable to verify any reference stated in this application, it is my responsibility
+                                    to furnish the necessary documentation.</p>
+                                <p class="pageText">
+                                    &nbsp;I understand that this application or subsequent employment does not create
+                                    a contract of employment nor guarantee employment for any definite period of time.
+                                </p>
+                            </div>
+                            <div class="Signature" id="Sign_PageId_2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

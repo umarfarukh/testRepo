@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" elementFormDefault="qualified" targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="OBFaultContractFC">
+    <xs:sequence>
+      <xs:element name="FaultSource" nillable="true" type="xs:string" />
+      <xs:element name="FaultMessage" nillable="true" type="xs:string" />
+      <xs:element name="FaultStack" nillable="true" type="xs:string" />
+      <xs:element name="FaultInnerException" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OBFaultContractFC" nillable="true" type="tns:OBFaultContractFC" />
+</xs:schema>

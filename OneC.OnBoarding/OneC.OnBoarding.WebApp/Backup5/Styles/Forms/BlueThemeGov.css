@@ -1,0 +1,496 @@
+﻿ * {
+padding:0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+}
+
+body {
+	margin: 0px;
+	font-size: 13px;
+	font-family: Arial,Verdana, Helvetica, sans-serif;
+	color: #000;
+	
+}
+
+
+td{border-collapse:separate;} 
+
+.clear {clear:both;}
+  
+
+h1 {font-size:18px;	color: #000; margin:2px 0px 10px 0px;}
+h2 {font-size: 16px;color: #000; margin:3px 0px 8px 0px;}
+h3{	font-size: 14px;color:#000;}
+h4{	font-size: 13px;color:#000;}
+h5{	font-size: 23px;color:#000;}
+
+a{	color: #0379b4;text-decoration: none;}
+
+a:focus{outline:none;}
+
+a:hover {text-decoration: underline;color: #666;}
+
+a img{border:0px;}
+
+.flt_right{float:right;}
+
+.flt_left{float:left;}
+
+.space_t5 {margin-top:5px;}
+.space_t7 {margin-top:7px;}
+.space_t10 {margin-top:10px;}
+
+.space_b5 {margin-bottom:5px;}
+.space_b10 {margin-bottom:10px;}
+.space_R5 {margin-right:5px;}
+.space_L20{margin-left:20px;}
+.space_L5{margin-left:5px;}
+.space_L3{margin-left:3px;}
+.space_L24{margin-left:24px;}
+
+p {margin:5px 0 10px;}
+.cont_red{color:#ff0000;}
+.txt_10{font-size:10px;} 
+.txt_11{font-size:11px;} 
+.txt_12{font-size:12px;}
+.txt_14{font-size:14px;}
+
+.txt_24{font-size:24px;font-weight:bold;}
+.txt_28{font-size:28px;font-weight:bold;}
+.txt_32{font-size:32px;font-weight:bold;}
+.border_right{border-right:1px solid #000;}
+.border_left{border-left:1px solid #000;}
+.border_bottom{border-bottom:1px solid #000; }
+.border_top{border-top:1px solid #000;}
+.border_top_dark{border-top:2px solid #000;}
+.pdfpage .print_row{display:none;}        
+		
+		.inputTextLarge{border:1px solid #000;background:#fff;color:#000;}
+		.inputText {
+			background:#fdfdfd;
+			border:1px solid #000;
+			color:#000;
+			font-size:15px;
+			padding:3px 5px 2px;            
+		}
+		.inputText_Readonly  {
+			background-color:InactiveCaptionText;       
+			font-size:15px;
+			padding:3px 5px 2px;           
+			border:1px solid #ccc !important;
+			background:#f0f0f0;
+			color:#888 !important;
+		}
+	   
+		
+		
+		td.v_bottom{ vertical-align:bottom;}
+		
+		td.border_btm{border-bottom:1px solid #000;}
+
+/* W11 */
+		#SecondPage
+		{
+			display: block;
+		}
+		
+   
+		.form_box
+		{
+			margin: 0px auto;
+			width: 100%;
+		}
+		
+		.form_grid
+		{
+			border: 2px solid #000;
+		}
+		.row_first
+		{
+			border-bottom: 2px solid #000;
+		}
+		.row_first table td
+		{
+			padding: 2px 5px;
+			border-bottom: 1px solid #333;
+			border-right: 1px solid #333;
+		}
+		
+		.second_row div
+		{
+			border-bottom: 1px solid #000;
+		}
+		
+		
+	 
+		.form_gov1 td
+		{
+			border-bottom: 1px solid #000;
+		}
+		
+		.form_gov1 .no_border
+		{
+			border: 0px !important;
+		}
+		
+		
+		.font_strong
+		{
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.LineSpan
+		{
+		background-color: Blue; font-size: large; color: White; padding:1px 5px 1px 5px;
+		}
+		
+	 /* British columbia */
+	 
+	   
+		
+		
+	 
+		
+		.form_box
+		{
+			margin: 0px auto;
+			width: 100%;
+		}
+		
+		.form_grid
+		{
+			border: 2px solid #000;
+		}
+		
+		.form_grid table td
+		{
+			padding: 4px;
+		}
+		.row_first
+		{
+			border-bottom: 2px solid #000;
+		}
+		.row_first table td
+		{
+			padding: 2px 5px;
+			border-bottom: 1px solid #333;
+			border-right: 1px solid #333;
+		}
+		
+		.second_row div
+		{
+			border-bottom: 1px solid #000;
+		}
+		
+		
+	   
+		.form_gov1 td
+		{
+			border-bottom: 1px solid #000;
+		}
+		
+		.form_gov1 .no_border
+		{
+			border: 0px !important;
+		}
+		
+		
+		.font_strong
+		{
+			font-size: 16px;
+			font-weight: bold;
+		}
+		
+		.popup_contentwrapper .contentArea
+		{
+			background: #fff;
+			padding:20px 15px 0px 15px;
+		}
+		
+		.popup_content
+		{
+			border: 0px solid #CCCCCC;
+			height: 100%;
+			padding: 15px 10px;
+		}
+		.popup_contentwrapper
+		{
+			background: #f4f9fd url(../../Images/popup_contentbg.jpg) repeat-x;    /*298015 wrong path old- ../Images/popup_contentbg.jpg*/
+			border: 0px;
+		}
+ 
+		
+		.no_border, .no_border td
+		{
+			border: 0px solid #000 !important;
+		}
+		
+		input
+		{
+			padding: 2px;
+		}
+		
+		legend
+		{
+			font-size: 20px;
+		}
+		fieldset
+		{
+			border: 2px solid #000;
+		}
+		
+		.space_t60
+		{
+			margin-top: 60px;
+		}
+		
+		.form_gov1 td
+		{
+			padding: 4px;
+		}
+		
+		.inputText_Quebec
+		{
+			background:url("../../Images/search_inputbg.jpg") repeat-x scroll 0 0 transparent;  /*298015 wrong path old ../Images/search_inputbg.jpg*/
+
+		border:0px transparent;
+		color:#4A4A4A;
+		font-size:12px;
+		padding:3px 5px 2px;
+		width:120px;
+		height:90%;
+			
+		}
+		
+		.table_formfield{
+			border:0px;
+			margin-top:10px;   
+		}
+
+		.table_formfield td{
+			padding:5px;
+		}
+
+		.space_leftnone{
+			margin-left:0px;
+			padding-left:0px;
+		}
+
+		
+/* pagination style property
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+	   
+.pagination {
+	padding-bottom:20px;
+	padding-top:15px;
+	text-align:right;
+}
+
+.pagination {text-align:right;}
+
+.pagination .btn_pagination a {
+	background:url("../../Images/btn_brdcrumb.jpg") repeat-x scroll left bottom #FFFFFF;    /*298015 wrong path old- ../Images/btn_brdcrumb.jpg */
+	border-color:#D7D7D7 #CDCDCD #AAAAAA;
+	border-style:solid;
+	border-width:1px;
+	color:#6D6D6D;
+	float:left;
+	font-size:10px;
+	margin-right:2px;
+	padding:3px 8px;
+	text-decoration:none;
+}
+.pagination .btn_pagination a:hover{text-decoration:none;}
+
+.pagination .btn_pagination .active_point {
+	background:url("../../Images/btn_brdcrumb_h.jpg") repeat-x scroll left bottom #C9C9C9;  /*298015 wrong path old- ../Images/btn_brdcrumb_h.jpg */
+	border:1px solid #B2B2B2;
+	color:#FFFFFF;
+	float:left;
+	font-size:10px;
+	margin-right:2px;
+	padding:3px 8px;
+	text-decoration:none;
+}
+.pagination .btn_pagination .disabledBtn{
+	opacity:0.4;
+	filter:alpha(opacity=40);
+ }
+
+h1.bluetext{color:#0060a9; font-size:18px; font-weight:normal; margin-bottom:12px;}
+
+.light_bluebg{background:#d9e7f2; padding:8px}
+
+.black_border{border:1px solid #000;}
+
+.black_border td{vertical-align:top;}
+
+.width_per80{width:80%;}
+.width_per18{width:18%;}
+
+
+
+.vtopCell td{ vertical-align:top;}
+
+
+.sdr_form h1{color:#0060ac;font-size:24px; font-weight:bold;}
+.sdr_form h2.blueText{color:#0060ac;font-size:20px; font-weight:bold;}
+
+.sdr_form .Calculationgrid .inputText{
+	background:#fff;
+	border:1px solid #000;
+	color:#000;
+	font-size:12px;
+	padding:3px 5px 2px;
+	width:130px;
+}
+.sdr_form .form_box{background:#d9e7f2; padding:10px;width:auto;}
+.sdr_form .form_box table{background:#fff;}
+.sdr_form .form_box .form_grid {border:0px; border-top:1px solid #000; border-left:1px solid #000;}
+.sdr_form .form_box .form_grid .row_first{border:0px;}
+.Calculationgrid td{padding-top:4px;}
+.Calculationgrid a{font-weight:bold;color:#0000ff;}
+.Calculationgrid a:hover{font-weight:bold;color:#4a4a4a;}
+
+.sdr_form h1{color:#0060ac;font-size:24px; font-weight:bold;}
+.sdr_form h2.blueText{color:#0060ac;font-size:18px; font-weight:bold;}
+.sdr_form .inputText {
+	background:#fff;
+	border:1px solid #000;
+	color:#000;
+	font-size:12px;
+	padding:3px 5px 2px;
+	width:160px;
+}
+.sdr_form .Calculationgrid .inputText{
+	background:#fff;
+	border:1px solid #333;
+	color:#000;
+	font-size:12px;
+	padding:3px 5px 2px;
+	width:130px;
+}
+
+.row_first .inputText{border:1px solid #000;}
+
+.sdr_form .form_box{background:#d9e7f2; padding:10px;width:auto;}
+.sdr_form .form_box table{background:#fff;}
+.sdr_form .form_box .form_grid {border:0px; border-top:1px solid #000; border-left:1px solid #000;}
+.sdr_form .form_box .form_grid .row_first{border:0px;}
+.Calculationgrid td{padding-top:4px;}
+.Calculationgrid a{font-weight:bold;color:#0000ff; text-decoration:underline;}
+.Calculationgrid a:hover{font-weight:bold;color:#4a4a4a;}
+hr.border_btm{color:#000; width:100%;text-align:center; background-color:#000; border:0px; height:1px;}
+
+.border_btm{border-bottom:1px solid #000;}
+
+.input_fullwidth{width:94% !important;}
+
+.line_bluebox{float:left;padding:2px 10px; background:#0060a9;color:#fff;margin-right:8px; font-weight:bold;}
+.protaxform_borderbox{border:1px solid #0060a9;padding:10px;}
+
+.Deductioncode_table{
+	border-top:1px solid #000;border-left:1px solid #000;
+}
+.Deductioncode_table td{padding:5px; border-bottom:1px solid #000; border-right:1px solid #000;}
+
+ 
+ 
+input.btn_field {
+	background:url("../../Images/bg_searchbtn.gif") repeat-x scroll 0 0 transparent;    /*298015 wrong path old- ../Images/bg_searchbtn.gif */
+	border:medium none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:12px;
+	padding:5px 5px 7px;
+	width:55px;
+}
+
+.print_row{
+	padding:5px 0px;
+	border:1px solid #cac9c9;
+	background:#fff; /*removed as per performance engg rules as it is not being used url(../Images/popup_printrowbg.gif) repeat-x bottom left*/
+	position:fixed;
+	top:0;
+	width:100%;
+	 height:20px;
+}
+
+.popup_print li{
+	list-style:none;
+	display:inline;
+	padding-right:5px;
+	padding-top:4px;
+
+}
+ 
+ 
+/* w4 gov form
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.govform{
+	font-size: 13px;
+	font-family: Arial,Verdana, Helvetica, sans-serif;
+	color: #000;
+}
+
+.col133{float:left;width:33%;}
+
+.col132{float:left;width:32%;margin-left:1%;}
+.bold{font-weight:bold;}
+
+.font24{font-size:24px;}
+
+.table2w4 td{padding:5px;}
+
+
+table.table_grid  {
+	border:0px;
+	margin-top:10px;
+}
+
+table.table_grid td {
+	border:0px;
+	padding:5px;
+	vertical-align:top;
+}
+
+.margin_none{margin:0px;}
+.w4lastgrid .table_grid{ }
+.w4lastgrid .table_grid td{border-top:1px solid #000; border-right:1px solid #000;}
+
+.border_box{border:1px solid #000;}
+
+/* Added By Priyanka*/
+.PrintDisplay
+{
+}
+
+.Chkbx_bg{ background:#fdf4b3; border:1px solid #fcba56; padding-top:10;} 
+.textCenter
+{
+	text-align:center;
+}
+.bdrRt
+		{
+			border-right: 1px solid #000;
+		}
+		
+.BottomPadding 
+{
+   
+	padding:10px 10px 10px 10px ; 
+}
+
+.textboxPadding
+{
+	margin-top:10px ; 
+	margin-right : 5px; 
+}
+
+/*Footer input styles*/
+.cgovForm .footerF .btnImg
+{
+	font-size:1em;
+}

@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/Imports">
+      <xsd:import schemaLocation="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd0" namespace="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/" />
+      <xsd:import schemaLocation="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd3" namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" />
+      <xsd:import schemaLocation="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd2" namespace="http://onecognizant.cognizant.com/OnBoardingService/IntegrationServices/DataContracts/" />
+      <xsd:import schemaLocation="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd4" namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/" />
+      <xsd:import schemaLocation="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOBUtilityMethods_SaveSANUploadDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSANUploadDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SaveSANUploadDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSANUploadDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SaveSANUploadDetails_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q1:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_LogException_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogException" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_LogException_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogExceptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_LogException_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q2:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SetSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSession" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SetSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SetSession_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q3:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_LogEventData_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogEventData" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_LogEventData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogEventDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_LogEventData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q4:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_FetchRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchRoles" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_FetchRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_FetchRoles_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q5:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetSystemKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemKey" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetSystemKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetSystemKey_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q6:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_IsPageAllowed_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsPageAllowed" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_IsPageAllowed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsPageAllowedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_IsPageAllowed_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q7:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_IsSessionActive_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsSessionActive" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_IsSessionActive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsSessionActiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_IsSessionActive_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q8:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessage" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetMessage_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q9:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetExternalUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExternalUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetExternalUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExternalUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetExternalUserInfo_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q10:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SendNotificationMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendNotificationMail" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SendNotificationMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendNotificationMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SendNotificationMail_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q11:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SendMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMail" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SendMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SendMail_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q12:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SendMailWithConfirmBoolStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithConfirmBoolStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SendMailWithConfirmBoolStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithConfirmBoolStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SendMailWithConfirmBoolStatus_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q13:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_UploadAttachment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadAttachment" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_UploadAttachment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_UploadAttachment_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q14:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetMckinleyCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMckinleyCategories" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetMckinleyCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMckinleyCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetMckinleyCategories_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q15:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetFilterDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilterDate" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetFilterDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilterDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetFilterDate_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q16:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetSurveyData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurveyData" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetSurveyData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurveyDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetSurveyData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q17:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_UpdateECMFileUploadStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateECMFileUploadStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_UpdateECMFileUploadStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateECMFileUploadStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_UpdateECMFileUploadStatus_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q18:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_UpdateIDMRegistartionforRetry_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIDMRegistartionforRetry" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_UpdateIDMRegistartionforRetry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIDMRegistartionforRetryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_UpdateIDMRegistartionforRetry_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q19:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetEventMailContent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventMailContent" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetEventMailContent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventMailContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetEventMailContent_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q20:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SaveUploadedDocName_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUploadedDocName" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SaveUploadedDocName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUploadedDocNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SaveUploadedDocName_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q21:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetPageMenuMappings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageMenuMappings" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetPageMenuMappings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageMenuMappingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetPageMenuMappings_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q22:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_FetchUserAssignRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchUserAssignRoles" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_FetchUserAssignRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchUserAssignRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_FetchUserAssignRoles_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q23:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_FetchActiveUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchActiveUsers" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_FetchActiveUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchActiveUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_FetchActiveUsers_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q24:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SetRoleToAssociate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRoleToAssociate" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SetRoleToAssociate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRoleToAssociateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SetRoleToAssociate_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q25:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_UpdateCandidateStateAndLocationDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCandidateStateAndLocationDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_UpdateCandidateStateAndLocationDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCandidateStateAndLocationDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_UpdateCandidateStateAndLocationDetails_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q26:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetUploadList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUploadList" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetUploadList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUploadListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetUploadList_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q27:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SaveUploadResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SaveUploadResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUploadResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_SaveUploadResponse_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q28:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetECMUploadURL_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetECMUploadURL" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetECMUploadURL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetECMUploadURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOBUtilityMethods_GetECMUploadURL_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q29:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:portType name="IOBUtilityMethods">
+    <wsdl:operation name="SaveSANUploadDetails">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SaveSANUploadDetails" message="tns:IOBUtilityMethods_SaveSANUploadDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SaveSANUploadDetailsResponse" message="tns:IOBUtilityMethods_SaveSANUploadDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SaveSANUploadDetailsOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_SaveSANUploadDetails_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogException">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/LogException" message="tns:IOBUtilityMethods_LogException_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/LogExceptionResponse" message="tns:IOBUtilityMethods_LogException_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/LogExceptionOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_LogException_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSession">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SetSession" message="tns:IOBUtilityMethods_SetSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SetSessionResponse" message="tns:IOBUtilityMethods_SetSession_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SetSessionOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_SetSession_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogEventData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/LogEventData" message="tns:IOBUtilityMethods_LogEventData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/LogEventDataResponse" message="tns:IOBUtilityMethods_LogEventData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/LogEventDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_LogEventData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchRoles">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/FetchRoles" message="tns:IOBUtilityMethods_FetchRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/FetchRolesResponse" message="tns:IOBUtilityMethods_FetchRoles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/FetchRolesOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_FetchRoles_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemKey">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetSystemKey" message="tns:IOBUtilityMethods_GetSystemKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetSystemKeyResponse" message="tns:IOBUtilityMethods_GetSystemKey_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetSystemKeyOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_GetSystemKey_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsPageAllowed">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/IsPageAllowed" message="tns:IOBUtilityMethods_IsPageAllowed_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/IsPageAllowedResponse" message="tns:IOBUtilityMethods_IsPageAllowed_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/IsPageAllowedOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_IsPageAllowed_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsSessionActive">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/IsSessionActive" message="tns:IOBUtilityMethods_IsSessionActive_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/IsSessionActiveResponse" message="tns:IOBUtilityMethods_IsSessionActive_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/IsSessionActiveOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_IsSessionActive_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessage">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetMessage" message="tns:IOBUtilityMethods_GetMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetMessageResponse" message="tns:IOBUtilityMethods_GetMessage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetMessageOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_GetMessage_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExternalUserInfo">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetExternalUserInfo" message="tns:IOBUtilityMethods_GetExternalUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetExternalUserInfoResponse" message="tns:IOBUtilityMethods_GetExternalUserInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetExternalUserInfoOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_GetExternalUserInfo_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendNotificationMail">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SendNotificationMail" message="tns:IOBUtilityMethods_SendNotificationMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SendNotificationMailResponse" message="tns:IOBUtilityMethods_SendNotificationMail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SendNotificationMailOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_SendNotificationMail_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SendMail" message="tns:IOBUtilityMethods_SendMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SendMailResponse" message="tns:IOBUtilityMethods_SendMail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SendMailOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_SendMail_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMailWithConfirmBoolStatus">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SendMailWithConfirmBoolStatus" message="tns:IOBUtilityMethods_SendMailWithConfirmBoolStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SendMailWithConfirmBoolStatusResponse" message="tns:IOBUtilityMethods_SendMailWithConfirmBoolStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SendMailWithConfirmBoolStatusOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_SendMailWithConfirmBoolStatus_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadAttachment">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UploadAttachment" message="tns:IOBUtilityMethods_UploadAttachment_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UploadAttachmentResponse" message="tns:IOBUtilityMethods_UploadAttachment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UploadAttachmentOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_UploadAttachment_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMckinleyCategories">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetMckinleyCategories" message="tns:IOBUtilityMethods_GetMckinleyCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetMckinleyCategoriesResponse" message="tns:IOBUtilityMethods_GetMckinleyCategories_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetMckinleyCategoriesOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_GetMckinleyCategories_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilterDate">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetFilterDate" message="tns:IOBUtilityMethods_GetFilterDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetFilterDateResponse" message="tns:IOBUtilityMethods_GetFilterDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetFilterDateOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_GetFilterDate_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurveyData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetSurveyData" message="tns:IOBUtilityMethods_GetSurveyData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetSurveyDataResponse" message="tns:IOBUtilityMethods_GetSurveyData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetSurveyDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_GetSurveyData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateECMFileUploadStatus">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UpdateECMFileUploadStatus" message="tns:IOBUtilityMethods_UpdateECMFileUploadStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UpdateECMFileUploadStatusResponse" message="tns:IOBUtilityMethods_UpdateECMFileUploadStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UpdateECMFileUploadStatusOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_UpdateECMFileUploadStatus_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIDMRegistartionforRetry">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UpdateIDMRegistartionforRetry" message="tns:IOBUtilityMethods_UpdateIDMRegistartionforRetry_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UpdateIDMRegistartionforRetryResponse" message="tns:IOBUtilityMethods_UpdateIDMRegistartionforRetry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UpdateIDMRegistartionforRetryOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_UpdateIDMRegistartionforRetry_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventMailContent">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetEventMailContent" message="tns:IOBUtilityMethods_GetEventMailContent_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetEventMailContentResponse" message="tns:IOBUtilityMethods_GetEventMailContent_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetEventMailContentOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_GetEventMailContent_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUploadedDocName">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SaveUploadedDocName" message="tns:IOBUtilityMethods_SaveUploadedDocName_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SaveUploadedDocNameResponse" message="tns:IOBUtilityMethods_SaveUploadedDocName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SaveUploadedDocNameOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_SaveUploadedDocName_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPageMenuMappings">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetPageMenuMappings" message="tns:IOBUtilityMethods_GetPageMenuMappings_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetPageMenuMappingsResponse" message="tns:IOBUtilityMethods_GetPageMenuMappings_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetPageMenuMappingsOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_GetPageMenuMappings_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchUserAssignRoles">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/FetchUserAssignRoles" message="tns:IOBUtilityMethods_FetchUserAssignRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/FetchUserAssignRolesResponse" message="tns:IOBUtilityMethods_FetchUserAssignRoles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/FetchUserAssignRolesOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_FetchUserAssignRoles_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchActiveUsers">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/FetchActiveUsers" message="tns:IOBUtilityMethods_FetchActiveUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/FetchActiveUsersResponse" message="tns:IOBUtilityMethods_FetchActiveUsers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/FetchActiveUsersOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_FetchActiveUsers_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRoleToAssociate">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SetRoleToAssociate" message="tns:IOBUtilityMethods_SetRoleToAssociate_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SetRoleToAssociateResponse" message="tns:IOBUtilityMethods_SetRoleToAssociate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SetRoleToAssociateOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_SetRoleToAssociate_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCandidateStateAndLocationDetails">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UpdateCandidateStateAndLocationDetails" message="tns:IOBUtilityMethods_UpdateCandidateStateAndLocationDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UpdateCandidateStateAndLocationDetailsResponse" message="tns:IOBUtilityMethods_UpdateCandidateStateAndLocationDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/UpdateCandidateStateAndLocationDetailsOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_UpdateCandidateStateAndLocationDetails_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadList">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetUploadList" message="tns:IOBUtilityMethods_GetUploadList_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetUploadListResponse" message="tns:IOBUtilityMethods_GetUploadList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetUploadListOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_GetUploadList_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUploadResponse">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SaveUploadResponse" message="tns:IOBUtilityMethods_SaveUploadResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SaveUploadResponseResponse" message="tns:IOBUtilityMethods_SaveUploadResponse_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/SaveUploadResponseOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_SaveUploadResponse_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetECMUploadURL">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetECMUploadURL" message="tns:IOBUtilityMethods_GetECMUploadURL_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetECMUploadURLResponse" message="tns:IOBUtilityMethods_GetECMUploadURL_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/OBUtilityMethods/ServiceContracts/IOBUtilityMethods/GetECMUploadURLOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:IOBUtilityMethods_GetECMUploadURL_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

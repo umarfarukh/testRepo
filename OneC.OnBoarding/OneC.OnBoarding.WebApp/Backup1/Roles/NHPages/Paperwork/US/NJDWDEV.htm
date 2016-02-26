@@ -1,0 +1,641 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>New Jersey DOL Workforce Development MW 400 Form</title>
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/US/NJDWDEV.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body
+        {
+            font-family: Arial,Verdana,Helvetica, sans-serif;
+            font-size: 0.6em;
+            line-height: 16px;
+            color: #000;
+        }
+        .pagesContainer div, .pagesContainer p, .pagesContainer .flt_left, .pagesContainer .flt_right, .pagesContainer table, .pagesContainer tr, .pagesContainer td, .pagesContainer span, .pagesContainer input, .pagesContainer select, .pagesContainer textarea, .pagesContainer h1, .pagesContainer h2, .pagesContainer h3, .pagesContainer h4, .pagesContainer h5, .pagesContainer h6, .pagesContainer ul, .pagesContainer li, .pagesContainer ol
+        {
+            font-family: "Times New Roman";
+            color: #000;
+        }
+        
+        .page_header_black h2
+        {
+            float: left;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            line-height: 1.4em;
+        }
+        .inputText_Readonly
+        {
+            background-color: InactiveCaptionText;
+            font-size: 15px;
+            padding: 3px 5px 2px;
+            border: 1px solid #ccc !important;
+            background: #f0f0f0;
+            color: #888 !important;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id='pageMain'>
+            <div id='headerContent'>
+                <div id='pagingControls'>
+                </div>
+            </div>
+            <div id='PageContent' class="pagesContainer">
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="page_header_black">
+                                <h2>
+                                    New Jersey Department of Labor and Workforce Development</h2>
+                            </div>
+                            <br />
+                            <p style="font-size: larger; color: #808080">
+                                Chapter 194, Laws of New Jersey, 2009, Relating to</p>
+                            <br />
+                            <p style="font-size: 23px; text-align: center; font-weight: bold;" class="page_text_black">
+                                Employer Obligation to Maintain and Report Records</p>
+                            <br />
+                            <p class="page_text_black" style="font-weight: bold; font-size: 14px">
+                                Regarding Wages, Benefits, Taxes and Other Contributions and Assessments Pursuant
+                                to State Wage, Benefit and Tax Laws</p>
+                            <br />
+                            <div class="page_text_black">
+                                <span style="font-size: 14px; font-weight: bold">Wage Payment Law </span>(N.J.S.A.
+                                34:11-4.1 et seq.) and</div>
+                            <br />
+                            <p class="page_text_black">
+                                <span style="font-size: 14px; font-weight: bold">Wage and Hour Law </span>(N.J.S.A.
+                                34:11-56a et seq.)</p>
+                            <p class="page_text_black">
+                                Each employer must keep a record of each employee which contains the following information:</p>
+                            <br />
+                            <p class="page_text_black">
+                                1. The name of the employee;</p>
+                            <p class="page_text_black">
+                                2. The address of the employee;</p>
+                            <p class="page_text_black">
+                                3. The birth date of the employee if the employee is under the age of 18;</p>
+                            <p class="page_text_black">
+                                4. The total hours worked by the employee each day and each workweek*;</p>
+                            <p class="page_text_black">
+                                5. The earnings of each employee, including the regular hourly wage, gross to net
+                                amounts with itemized deductions, and the basis on which wages are paid;</p>
+                            <p class="page_text_black">
+                                6. Regarding each employee who receives gratuities, the total gratuities received
+                                by the employee during the payroll week;</p>
+                            <p class="page_text_black">
+                                7. Regarding each employee who receives gratuities, daily or weekly reports completed
+                                by the employee containing the following information:</p>
+                            <p style="margin-left: 50px;" class="page_text_black">
+                                (a) the employee’s name,</p>
+                            <p style="margin-left: 50px;" class="page_text_black">
+                                (b) the employee’s address,</p>
+                            <p style="margin-left: 50px;" class="page_text_black">
+                                (c) the employee’s social security number,</p>
+                            <p style="margin-left: 50px;" class="page_text_black">
+                                (d) the name and address of the employer,</p>
+                            <p style="margin-left: 50px;" class="page_text_black">
+                                (e) the calendar day or week covered by the report, and</p>
+                            <p style="margin-left: 50px;" class="page_text_black">
+                                (f) the total amount of gratuities received; and</p>
+                            <p class="page_text_black">
+                                8. Regarding each employee for whom the employer claims credit for food or lodging
+                                as a cash substitute for the employee who receives food or lodging supplied by the
+                                employer, information substantiating the cost of furnishing such food or lodgings,
+                                including but not limited to the nature and amount of any expenditures entering
+                                into the computation of the fair value of the food or lodging and the date required
+                                to compute the amount of the depreciated investment in any assets allocable to the
+                                furnishing of the lodgings, including the date of acquisition or construction, the
+                                original cost, the rate of depreciation and the total amount of accumulated depreciation
+                                on such assets.</p>
+                            <br />
+                            <p class="page_text_black">
+                                The employer may use any system of time keeping provided that it is a complete,
+                                true and accurate record.</p>
+                            <br />
+                            <p class="page_text_black">
+                                The employer must keep the wage and hour records described above for a period of
+                                six years.</p>
+                            <br />
+                            <p class="page_text_black">
+                                The employer must keep the wage and hour records described above at the place of
+                                employment or in a central office in New Jersey.</p>
+                            <br />
+                            <p>
+                                _____________________________
+                            </p>
+                            <br />
+                            <p class="page_text_black" style="font-size: 13px">
+                                *This requirement does not apply with regard to those employees who are covered
+                                by the exceptions set forth at N.J.S.A. 34:11-­4.6e. and 34:11-­56a20, which includes
+                                but is not limited to individuals employed in a bona fide executive,administrative,professional
+                                or outside sales capacity.
+                            </p>
+                            <br />
+                            <div width="100%" class="page_text_black">
+                                <span style="width: 200px">MW-400 (11-11)</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 1st page-->
+                <!--Start of 2nd page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="page_text_black">
+                                <span style="font-size: 14px; font-weight: bold">Prevailing Wage Act </span>(N.J.S.A.
+                                34:11-56.25 et seq.)</div>
+                            <br />
+                            <div class="page_text_black">
+                                The Prevailing Wage Act applies to employers only under certain circumstances.</div>
+                            <br />
+                            <div class="page_text_black">
+                                Specifically, it applies only when an employer enters into a contract in excess
+                                of the prevailing wage contract threshold amount for any public work (as the term
+                                “public work” is defined at N.J.S.A. 34:11-56.26) to which any public body is a
+                                party or for public work to be done on a property or premises owned by a public
+                                body or leased or to be leased by a public body.</div>
+                            <br />
+                            <p class="page_text_black">
+                                Each public works contractor must submit to the public body or lessor which contracted
+                                for the public works project a certified payroll record containing the following
+                                employee information:
+                            </p>
+                            <p class="page_text_black">
+                                1. Name;</p>
+                            <p class="page_text_black">
+                                2. Address;</p>
+                            <p class="page_text_black">
+                                3. Social security number;</p>
+                            <p class="page_text_black">
+                                4. Craft or trade;</p>
+                            <p class="page_text_black">
+                                5. Actual hourly rate of pay;</p>
+                            <p class="page_text_black">
+                                6. Actual daily, overtime and weekly hours worked in each craft or trade;</p>
+                            <p class="page_text_black">
+                                7. Gross pay;</p>
+                            <p class="page_text_black">
+                                8. Itemized deductions;</p>
+                            <p class="page_text_black">
+                                9. Net pay paid to the employee;</p>
+                            <p class="page_text_black">
+                                10. Any fringe benefits paid to approved plans, funds or programs on behalf of the
+                                employee; and</p>
+                            <p class="page_text_black">
+                                11. Fringe benefits paid in cash to the employee.</p>
+                            <p class="page_text_black">
+                                Each public works contractor must, within 10 days of payment of wages, submit the
+                                certified payroll record to the public body or the lessor which contracted for the
+                                public works project.</p>
+                            <p class="page_text_black">
+                                Each public works contractor which employs one or more apprentices on a public works
+                                project must maintain with its records written evidence that the apprentice or apprentices
+                                are registered in an approved apprenticeship program while performing work on the
+                                project.</p>
+                            <p class="page_text_black">
+                                <span style="font-size: 14px; font-weight: bold">Unemployment Compensation Law </span>
+                                (N.J.S.A. 43:21-1 et seq.),</p>
+                            <p class="page_text_black">
+                                <span style="font-size: 14px; font-weight: bold">Temporary Disability Benefits Law</span>
+                                (N.J.S.A. 43:21-25 et seq.) and</p>
+                            <p class="page_text_black">
+                                <span style="font-size: 14px; font-weight: bold">Family Leave Insurance Benefits Law
+                                </span>,P.L. 2008, c. 17.</p>
+                            <p class="page_text_black">
+                                <u>Payroll records:</u> Each employing unit must maintain a record for each worker
+                                engaged in employment, which record must contain the following information about
+                                the worker:</p>
+                            <p class="page_text_black">
+                                1. Full name, address and social security number;</p>
+                            <p class="page_text_black">
+                                2. Total remuneration paid in each pay period showing separately cash, including
+                                commissions and bonuses; the cash value of all compensation in any medium other
+                                than cash; gratuities received regularly in the course of employment if reported
+                                by the employee, or if not so reported, the minimum wage rate prescribed under applicable
+                                laws of this State or of the United States, or the amount of remuneration actually
+                                received by the employee, whichever is higher, and service charges collected by
+                                the employer and distributed to workers in lieu of gratuities and tips;</p>
+                            <p class="page_text_black">
+                                3. An entry under the heading “special payments” of the amount of any special payments,
+                                such as bonuses and gifts, which have been paid during the pay period but which
+                                relate to employment in a prior period. The following shall be shown separately
+                                under this heading: cash payments, cash value of other remuneration, the nature
+                                of such payments, the period during which the services were performed for which
+                                special payments were payable;</p>
+                            <p class="page_text_black">
+                                4. The date hired, rehired and returned to work after temporary layoff;</p>
+                            <p class="page_text_black">
+                                5. The date separated from employment and the reason for separation;</p>
+                            <br />
+                            <br />
+                            <div class="page_text_black">
+                                <span style="width: 200px">MW-400 (11-11)</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 2nd page-->
+                <!--Start of 3rd page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="page_text_black">
+                                <p class="page_text_black">
+                                    6. Such information as may be necessary to determine remuneration on a calendar
+                                    week basis; and</p>
+                                <p class="page_text_black">
+                                    7. The number of base weeks (as the term “base week” is defined in N.J.S.A. 43:21-19(t))
+                                    and wages.</p>
+                                <p class="page_text_black">
+                                    All records referred to in 1. through 7. above must be kept safe and readily accessible
+                                    at the New Jersey place of business of the employing unit.</p>
+                                <p class="page_text_black">
+                                    All records referred to in 1. through 7. above must be retained for the current
+                                    calendar year and for the four preceding calendar years.</p>
+                                <p class="page_text_black">
+                                    Once an employer becomes inactive, the employer must keep all records referred to
+                                    in 1. through 7. above for the subsequent six quarters.</p>
+                                <p class="page_text_black">
+                                    <u>Wage reporting:</u> Each employer (other than employers of domestic service workers)
+                                    must electronically file a WR-30, “Employer Report of Wages Paid,” with the Division
+                                    of Revenue, within the Department of the Treasury, within 30 days after the end
+                                    of each quarter. The WR-30 lists the name, social security number and wages paid
+                                    to each employee and the number of base weeks worked by the employee during the
+                                    calendar quarter.</p>
+                                <p class="page_text_black">
+                                    Each employer of domestic service workers (as the term “domestic service worker”
+                                    is defined at N.J.A.C. 12:16- 13.7(b)) must file an annual, rather than quarterly,
+                                    WR-30 with the Division of Revenue, within the Department of the Treasury.</p>
+                                <p class="page_text_black">
+                                    <u>Contribution reporting:</u> Each employer (other than employers of domestic service
+                                    workers) must electronically file an NJ-927, “Employer’s Quarterly Report,” with
+                                    the Division of Revenue, within the Department of the Treasury, and remit the corresponding
+                                    unemployment insurance, supplemental workforce fund, workforce development partnership
+                                    fund, temporary disability insurance and family leave insurance contribution payments,
+                                    within 30 days after the end of each quarter. The NJ-927 lists the total of all
+                                    wages paid, the wages paid in excess of the taxable maximum, the taxable wages on
+                                    which contributions are due, the number of workers employed during the pay period,
+                                    the number of workers insured under a “private plan” for temporary disability insurance
+                                    and the number of workers insured under a “private plan” for family leave insurance.</p>
+                                <p class="page_text_black">
+                                    Each employer of domestic service workers (as the term “domestic service worker”
+                                    is defined in N.J.A.C. 12:16- 13.11(c)) must file an annual, rather than quarterly,
+                                    NJ-927H, “Domestic Employer’s Annual Report,” with the Division of Revenue, within
+                                    the Department of the Treasury.</p>
+                                <p class="page_text_black">
+                                    <u>Temporary Disability Insurance and Family Leave Insurance information:</u>Each
+                                    employer must retain all records pertaining to any election to discontinue a private
+                                    plan for temporary disability insurance and/or family leave insurance benefits and
+                                    must make such records available for inspection by the Division of Temporary Disability
+                                    Insurance for a one-year period from the date that the private plan is terminated..</p>
+                                <p class="page_text_black">
+                                    Each employer having a private plan for temporary disability insurance and/or family
+                                    leave insurance must, within 10 days after the Division of Temporary Disability
+                                    Insurance has mailed the employer a request for information with respect to a period
+                                    of disability, furnish the Division with any information requested or known to the
+                                    employer which may bear upon the eligibility of the claimant.</p>
+                                <p class="page_text_black">
+                                    Each employer having two or more approved private plans in effect during a calendar
+                                    half-year or any portion thereof must, on or before the 30th day following the close
+                                    of the calendar half-year, file a report showing the amount of taxable wages paid
+                                    during such calendar half-year to employees while covered under each such private
+                                    plan.</p>
+                                <p class="page_text_black">
+                                    Each employer who provides temporary disability insurance to its employees through
+                                    a self-insured private plan must, for the six-month periods ending June 30 and December
+                                    31 of each calendar year during which the selfinsured private plan is in effect,
+                                    file a statement with the Division of Temporary Disability Insurance, on or before
+                                    the 30th day following the end of the respective six-month period showing:</p>
+                                <br />
+                                <br />
+                                <div style="width=100%;" class="page_text_black">
+                                    <span style="width: 200px">MW-400 (11-11)</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 3rd page-->
+                <!--Start of 4th page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="page_text_black">
+                                <p class="page_text_black">
+                                    1. The number of claims received during the six-month period,</p>
+                                <p class="page_text_black">
+                                    2. The number of claims accepted during the six-month period,</p>
+                                <p class="page_text_black">
+                                    3. The amount of benefits paid during the six-month period, and</p>
+                                <p class="page_text_black">
+                                    4. Such other information as the Division of Temporary Disability Insurance may
+                                    require with respect to the financial ability of the self-insurer to meet the self-insured’s
+                                    obligations under the plan.</p>
+                                <p class="page_text_black">
+                                    On or before the 30th day following the close of each calendar year during which
+                                    a self-insured private plan for temporary disability insurance is in effect, the
+                                    employer must file a report with the Division of Temporary Disability Insurance
+                                    showing:</p>
+                                <p class="page_text_black">
+                                    1. The amount of funds available at the beginning of that year for payment of disability
+                                    benefits,</p>
+                                <p class="page_text_black">
+                                    2. The amount contributed by workers during that year,</p>
+                                <p class="page_text_black">
+                                    3. The amount contributed by the employer during that year,</p>
+                                <p class="page_text_black">
+                                    4. The amount of disability benefits paid during that year,</p>
+                                <p class="page_text_black">
+                                    5. Direct cost of administration of the plan during that year, and</p>
+                                <p class="page_text_black">
+                                    6. The number of employees covered by the plan as of December 31.</p>
+                                <p class="page_text_black">
+                                    Each employer who provides family leave insurance to its employees through a self-insured
+                                    private plan must for the one-year period ending December 31 of each calendar year
+                                    during which a self-insured private plan is in effect file a statement with the
+                                    Division of Temporary Disability Insurance, on or before the 30th day following
+                                    the end of the one-year period showing the following information with regard to
+                                    each of the following types of claims: care of a sick child, care of a sick spouse,
+                                    care of a sick domestic partner, care of a sick civil union partner, care of a sick
+                                    parent, bonding by biological parent with a newborn child, bonding by domestic partner
+                                    or civil union partner of biological parent with a newborn child, bonding by individual
+                                    with newly adopted child:</p>
+                                <p class="page_text_black">
+                                    1. The number of claims for family leave insurance benefits received during the
+                                    one-year period,</p>
+                                <p class="page_text_black">
+                                    2. The number of claims for family leave insurance benefits accepted during the
+                                    one-year period,</p>
+                                <p class="page_text_black">
+                                    3. The number of workers who received family leave insurance benefits during the
+                                    one-year period,</p>
+                                <p class="page_text_black">
+                                    4. The amount of family leave insurance benefits paid during the one-year period,</p>
+                                <p class="page_text_black">
+                                    5. The average weekly family leave insurance benefit during the one-year period,</p>
+                                <p class="page_text_black">
+                                    6. The amount of sick leave, vacation leave or other fully paid time, which resulted
+                                    in reduced benefit duration during the one-year period,</p>
+                                <p class="page_text_black">
+                                    7. With regard solely to family leave insurance benefit claims to care for sick
+                                    family members, the amount of intermittent family leave insurance benefits paid
+                                    during the one-year period, and</p>
+                                <p class="page_text_black">
+                                    8. The average duration of family leave insurance benefits, in days, during the
+                                    one-year period.</p>
+                                <p class="page_text_black">
+                                    The information reported in 1. through 8. above must be broken down by sex and by
+                                    age group, beginning at 25 years and under and increasing in increments of 10.</p>
+                                <p class="page_text_black">
+                                    On or before the 30th day following the close of each calendar year during which
+                                    a self-insured private plan for family leave insurance is in effect, the employer
+                                    must file a report with the Division of Temporary Disability Insurance showing:.</p>
+                                <p class="page_text_black">
+                                    1. The amount of funds available at the beginning of that year for payment of family
+                                    leave insurance benefits,</p>
+                                <p class="page_text_black">
+                                    2. The amount contributed by workers during that year,</p>
+                                <p class="page_text_black">
+                                    3. The direct cost of administration of the plan during that year,</p>
+                                <p class="page_text_black">
+                                    4. The number of employees covered by the plan as of December 31, and</p>
+                                <p class="page_text_black">
+                                    5. Such other information as the Division of Temporary Disability Insurance may
+                                    require with respect to the financial ability of the self-insurer to meet the self-insured’s
+                                    obligation under the plan.</p>
+                                <br />
+                                <br />
+                                <div style="width: 100%;" align="left" class="page_text_black">
+                                    <span style="width: 200px">MW-400 (11-11)</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 4th  page-->
+                <!--Start of 5th page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="page_text_black">
+                                <p class="page_text_black">
+                                    <b>Workers’ Compensation Law </b>(N.J.S.A. 34:15-1 et seq.)</p>
+                                <p class="page_text_black">
+                                    Upon the happening of an accident or the occurrence of any occupational disease,
+                                    an employer who has insurance coverage or utilizes a third-party administrator shall
+                                    promptly furnish the insurance carrier or the third-party administrator with accident
+                                    or occupational disease information.</p>
+                                <p class="page_text_black">
+                                    Within three weeks after an accident or upon knowledge of the occurrence of an occupational
+                                    disease, every insurance carrier, third-party administrator, statutory non-insured
+                                    employer, including the State, counties, municipalities and school districts, and
+                                    duly authorized self-insured employer not utilizing a third-party administrator
+                                    must file a report designated as “first notice of accident” in electronic data interchange
+                                    media with the Division of Workers’ Compensation through the Compensation Rating
+                                    and Inspection Bureau in a format prescribed by the Compensation Rating and Inspection
+                                    Bureau. When filed by an insurance carrier or third-party administrator, the report
+                                    must also be sent to the employer. If the employer disagrees with the report, the
+                                    employer may prepare and sign an amended report and file the amended report with
+                                    the insurance carrier or third-party administrator. The amended report must then
+                                    be filed electronically with the Division through the Compensation Rating and Inspection
+                                    Bureau.</p>
+                                <p class="page_text_black">
+                                    Every insurance carrier providing workers’ compensation insurance and every workers’
+                                    compensation self-insured employer shall designate a contact person who is responsible
+                                    for responding to issues concerning medical and temporary disability benefits where
+                                    no claim petition has been filed or where a claim petition has not been answered.
+                                    The full name, telephone number, mailing address, email address and fax number of
+                                    the contact person must be submitted to the Division of Workers’ Compensation utilizing
+                                    the Division’s contact person form in the manner instructed on the form.</p>
+                                <p class="page_text_black">
+                                    Each employer, when directed to do so by the Division of Workers’ Compensation,
+                                    must submit to the Division of Workers’ Compensation copies of such medical certificates
+                                    and reports as it may have on file.</p>
+                                <br />
+                                <p class="page_text_black">
+                                    <b>Gross Income Tax Act </b>(N.J.S.A. 54A:1-1 et seq.)</p>
+                                <p class="page_text_black">
+                                    <u>Employer’s Quarterly Report:</u> The Employer’s Quarterly Report, NJ-927, reports
+                                    New Jersey Gross Income Tax withheld, unemployment insurance, supplemental workforce
+                                    fund, workforce development partnership fund, family leave insurance and temporary
+                                    disability insurance wage and withholding information.</p>
+                                <p class="page_text_black">
+                                    Each employer is required to electronically file an Employer’s Quarterly Report,
+                                    NJ-927, for each calendar quarter, regardless of the amount of tax actually due
+                                    for a particular quarter. Quarterly reports are due on the 30th day of the month
+                                    following the end of each quarter.</p>
+                                <p class="page_text_black">
+                                    Employers of “domestic service workers” may report and pay New Jersey Gross Income
+                                    Tax withheld on an annual, rather than quarterly, basis on an NJ-927H.</p>
+                                <p class="page_text_black">
+                                    <u>Records to be kept: </u>Every employer is required to keep all pertinent records
+                                    available for inspection by authorized representatives of the New Jersey Division
+                                    of Taxation. Such records must include the following:</p>
+                                <p class="page_text_black">
+                                    1. The amounts and dates of all wage payments subject to New Jersey Gross Income
+                                    Tax;</p>
+                                <p class="page_text_black">
+                                    2. The names, addresses and occupations of employees receiving such payments;</p>
+                                <p class="page_text_black">
+                                    3. The periods of their employment;</p>
+                                <p class="page_text_black">
+                                    4. Their social security numbers;</p>
+                                <p class="page_text_black">
+                                    5. Their withholding exemption certificates;</p>
+                                <p class="page_text_black">
+                                    6. The employer’s New Jersey Taxpayer Identification Number;</p>
+                                <p class="page_text_black">
+                                    7. Record of weekly, monthly, quarterly remittances and/or returns and annual returns
+                                    filed;</p>
+                                <p class="page_text_black">
+                                    8. The dates and amounts of payments made; and</p>
+                                <p class="page_text_black">
+                                    9. Days worked inside and outside of New Jersey for all nonresident employees.</p>
+                                <br />
+                                <br />
+                                <br />
+                                <div width="100%" align="left" class="page_text_black">
+                                    <span style="width: 200px">MW-400 (11-11)</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 5th page-->
+                <!--Start of 6th page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <p class="page_text_black" style="font-size: 23px; text-align: center">
+                                <span style="font-size: 23px; font-weight: bold">Contact Information</span></p>
+                            <br />
+                            <p class="page_text_black">
+                                If an employee or an employee’s authorized representative wishes to contact a State
+                                representative in order to provide information to or file a complaint with the representative
+                                regarding an employer’s possible failure to meet any of the requirements set forth
+                                above, he or she may use the following contact information:</p>
+                            <div class="page_text_black">
+                                <p class="page_text_black">
+                                    For possible failure to meet the record keeping or reporting requirements of the
+                                    <span class="page_text_black" style="font-size: 14px; font-weight: bold">> Wage Payment
+                                        Law, Wage and Hour Law or Prevailing Wage Act:</span></p>
+                                <span class="page_text_black" style="font-size: 12px">Phone:</span><span class="page_text_black"
+                                    style="font-size: 12px; padding-left: 76px"> 609-292-2305</span><br />
+                                <span class="page_text_black" style="font-size: 12px">E-mail:</span> <span class="page_text_black"
+                                    style="font-size: 12px; padding-left: 75px">wagehour@dol.state.nj.us</span><br />
+                                <span class="page_text_black" style="font-size: 12px">Mail:</span><span class="page_text_black"
+                                    style="font-size: 12px; padding-left: 87px">New Jersey Department of Labor and Workforce
+                                    Development</span><br />
+                                <span class="page_text_black" style="font-size: 12px; padding-left: 112px">Division
+                                    of Wage and Hour Compliance</span><br />
+                                <span class="page_text_black" style="font-size: 12px; padding-left: 112px">P.O. Box
+                                    389</span><br />
+                                <span class="page_text_black" style="font-size: 12px; padding-left: 112px">Trenton,
+                                    NJ 08625-0389</span><br />
+                            </div>
+                            <div class="page_text_black">
+                                <p class="page_text_black">
+                                    For possible failure to meet the record keeping or reporting requirements of the
+                                    <span style="font-size: 14px; font-weight: bold">Unemployment Compensation Law, Temporary
+                                        Disability Benefits Law or Family Leave Insurance Benefits Law:</span>
+                                </p>
+                                <span class="page_text_black" style="font-size: 12px">Phone:</span><span class="page_text_black"
+                                    style="font-size: 12px; padding-left: 76px"> 609-292-2810</span><br />
+                                <span class="page_text_black" style="font-size: 12px">E-mail:</span> <span class="page_text_black"
+                                    style="font-size: 12px; padding-left: 75px">emplaccts@dol.state.nj.us</span><br />
+                                <span class="page_text_black" style="font-size: 12px">Mail:</span><span class="page_text_black"
+                                    style="font-size: 12px; padding-left: 87px">New Jersey Department of Labor and Workforce
+                                    Development</span><br />
+                                <span class="page_text_black" style="font-size: 12px; padding-left: 112px">Division
+                                    of Employer Accounts</span><br />
+                                <span class="page_text_black" style="font-size: 12px; padding-left: 112px">P.O. Box
+                                    947</span><br />
+                                <span class="page_text_black" style="font-size: 12px; padding-left: 112px">Trenton,
+                                    NJ 08625-0947</span><br />
+                            </div>
+                            <div class="page_text_black">
+                                <p class="page_text_black">
+                                    For possible failure to meet the record keeping or reporting requirements of the
+                                    <span style="font-size: 14px; font-weight: bold">Workers’ Compensation Law:</span></p>
+                                <span class="page_text_black" style="font-size: 12px">Phone:</span><span class="page_text_black"
+                                    style="font-size: 12px; padding-left: 76px"> 609-292-2515</span><br />
+                                <span class="page_text_black" style="font-size: 12px">E-mail:</span> <span class="page_text_black"
+                                    style="font-size: 12px; padding-left: 75px">dwc@dol.state.nj.us</span><br />
+                                <span class="page_text_black" style="font-size: 12px">Mail:</span><span class="page_text_black"
+                                    style="font-size: 12px; padding-left: 87px">New Jersey Department of Labor and Workforce
+                                    Development</span><br />
+                                <span class="page_text_black" style="font-size: 12px; padding-left: 112px">Division
+                                    of Workers’ Compensation</span><br />
+                                <span class="page_text_black" style="font-size: 12px; padding-left: 112px">P.O. Box
+                                    381</span><br />
+                                <span class="page_text_black" style="font-size: 12px; padding-left: 112px">Trenton,
+                                    NJ 08625-0381</span><br />
+                            </div>
+                            <div class="page_text_black">
+                                <p class="page_text_black">
+                                    For possible failure to meet the record keeping or reporting requirements of the
+                                    <span style="font-size: 14px; font-weight: bold">Gross Income Tax Act:</span></p>
+                                <span class="page_text_black" style="font-size: 12px">Phone:</span><span class="page_text_black"
+                                    style="font-size: 12px; padding-left: 76px"> 609-292-6400</span><br />
+                                <span class="page_text_black" style="font-size: 12px">E-mail:</span> <span class="page_text_black"
+                                    style="font-size: 12px; padding-left: 75px">nj.taxation@treas.state.nj.us</span><br />
+                                <span class="page_text_black" style="font-size: 12px">Mail:</span><span class="page_text_black"
+                                    style="font-size: 12px; padding-left: 87px">New Jersey Department of the Treasury</span><br />
+                                <span class="page_text_black" style="font-size: 12px; padding-left: 112px">Division
+                                    of Taxation</span><br />
+                                <span class="page_text_black" style="font-size: 12px; padding-left: 112px">Information
+                                    and Publications Branch</span><br />
+                                <span class="page_text_black" style="font-size: 12px; padding-left: 112px">P.O. Box
+                                    281</span><br />
+                                <span class="page_text_black" style="font-size: 12px; padding-left: 112px">Trenton,
+                                    NJ 08625-0281</span><br />
+                            </div>
+                            <br />
+                            <ul>
+                                <li>
+                                    <div style="width: 100%">
+                                        <div style="width: 14%">
+                                            <img width="175" height="85" style="float: left;" src="../../../../images/NJLD.jpg"
+                                                v:shapes="Picture_x0020_4" /></div>
+                                        <div style="width: 70%; text-align: left; margin-left: 25%; border: thin solid #000000;
+                                            height: 70px;" class="pageText">
+                                            <p style="float: left;">
+                                                This notice must be conspicuously posted. Not later than December 7,</p>
+                                            <span class='currentDate' style="display: block; float: left; height: 10px;"></span>
+                                            <p>
+                                                , each employee must also be provided a written copy of the notice or, for employees
+                                                hired after November 7, <span class='currentDate' style="display: block; float: left;
+                                                    height: 10px;"></span>, a written copy of the notice mustbe provided at the
+                                                time of the employee’s hiring. See N.J.A.C. 12:2-1.3 for alternate methods of posting
+                                                and distribution by electronic means.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <br />
+                        <br />
+                        <div style="width: 100%" align="left" class="page_text_black">
+                            <span style="width: 200px">MW-400 (11-11)</span></div>
+                        <input type="hidden" id="test" jqxb-datasource="FormDetails" jqxb-datamember="NJDWDEVForm.CurrentDate" />
+                        <!--<div class="Signature" id="Sign_PageId_6">
+                        </div>-->
+                    </div>
+                </div>
+                <!--End of 6th page-->
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

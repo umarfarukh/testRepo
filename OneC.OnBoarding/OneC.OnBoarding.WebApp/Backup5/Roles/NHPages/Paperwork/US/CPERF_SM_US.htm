@@ -1,0 +1,725 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <title>Equipment Request Form</title>
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .personalDetails
+        {
+            margin-top: 0px;
+        }
+        .pageDetails .personalDetails li
+        {
+            border-top: 1px solid #d4e7ef;
+            border-left: 1px solid #d4e7ef; 
+            padding-top: 5px;
+            padding-left: 21px;
+            width: 47%;
+        }
+        .pageDetails .personalDetails li.second
+        {
+            border-right: 1px solid #d4e7ef;
+            padding-left: 22px;
+        }
+        .details
+        {
+            width: 95.7%;
+            margin-bottom: 5px;
+        }
+        .alert_f_text
+        {
+            float: left;
+            padding: 0 0 0 0;
+            text-align: left;
+            width: 410px;
+        }
+        .alert_f
+        {
+            float: left;
+        }
+        .inputText_Readonly
+        {
+            background-color: InactiveCaptionText;
+            font-size: 15px;
+            padding: 3px 5px 2px;
+            border: 1px solid #ccc !important;
+            background: #f0f0f0;
+            color: #888 !important;
+            cursor: default;
+        }
+        .SMPlusShow
+        {
+            display: block;
+        }
+        .SMPlusHide
+        {
+            display: none;
+        }
+    </style>
+    <!--<script language="javascript" type="text/javascript"> 
+         window.onbeforeunload = closeIt;
+         function closeIt() {
+             //self.parent.location.reload();
+
+             // disablePopup();
+             window.parent.opener.disablePopup();
+             window.close();
+             window.opener.updateWithNewData();
+
+
+         }
+         function disablePopup() {
+             //disables popup only if it is enabled
+
+             $("#overLay").hide();
+             $(".popupContactwrapper").hide();
+             popupStatus = 0;
+
+         }
+</script>-->
+</head>
+<body>
+    <div id="baseContent">
+        <div id="pageMain">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <!-- -------First Page-------------->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails old">
+                            <h2 class="blueText space_b10">
+                                Request for Cognizant Equipment
+                            </h2>
+                        </div>
+                        <div class="pageDetails" style="border-top: none">
+                            <p class="pageText old">
+                                Only applicable for those who are eligible for equipment or with Manager approval.
+                                Any questions regarding eligibility should be directed to your Recruiter.
+                            </p>
+                            <ul class="personalDetails" style="margin-left: 2px">
+                                <li>
+                                    <label for="Pg_2_text_Name" class="notMandatory">
+                                        Associate Name</label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" class="inputText_Readonly" unselectable="on" id="Pg_2_text_Name"
+                                        readonly="readonly" />
+                                </li>
+                                <li>
+                                    <label for="Pg_2_text_AssociateId" class="notMandatory old">
+                                        AssociateID (If Available)</label>
+                                     <label class="notMandatory newer">
+                                        Employee ID (If Available)</label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" class="inputText_Readonly" unselectable="on" id="Pg_2_text_AssociateId"
+                                        readonly="readonly" />
+                                </li>
+                                <li>
+                                    <label for="Pg_2_text_level" class="notMandatory">
+                                        Level (From Offer Letter)</label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" class="inputText_Readonly" unselectable="on" id="Pg_2_text_level"
+                                        readonly="readonly" />
+                                </li>
+                                <li>
+                                    <label for="Pg_2_text_mailid" class="old">
+                                        <span>*</span>Personal Email ID</label>
+                                    <label class="newer">
+                                        <span>*</span>Personal email address</label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" id="Pg_2_text_mailid" class="inputText_Readonly" unselectable="on"
+                                        readonly="readonly" />
+                                </li>
+                                <li>
+                                    <label for="Pg_2_text_TelNo" class="old">
+                                        <span>*</span>Telephone Number</label>
+                                    <label class="newer">
+                                        <span>*</span>Phone Number</label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" id="Pg_2_text_TelNo" class="inputText_Readonly" unselectable="on"
+                                        maxlength="13" readonly="readonly" />
+                                </li>
+                                <li class="old">
+                                    <label for="Address" class="notMandatory">
+                                        Day ONE Program joining location</label>
+                                </li>
+                                <li class="second old">
+                                    <input type="radio" name="NJ" id="Teaneck_radio" style="vertical-align: middle;"
+                                        disabled="disabled" onclick="Address()" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Address.NJ"
+                                        jqxb-bindedattribute="checked" />&nbsp;Teaneck,NJ
+                                    <input type="radio" name="AZ" id="Phoenix_radio" style="vertical-align: middle;"
+                                        disabled="disabled" onclick="Address1()" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Address.AZ"
+                                        jqxb-bindedattribute="checked" />&nbsp;Phoenix,AZ </li>
+                                <!--    </div>-->
+                                <li style="height: 60px;">
+                                    <label class="old"><span>*</span> Home Address</label>
+                                    <label class="newer"><span>*</span> Mailing Address</label>
+                                </li>
+                                <li style="height: 60px;" class="second">
+                                    <textarea id="HomeAddress" style="width: 180px; height: 40px; float: left;" class="tbForm Alphanumeric onlyAlphanumeric txtare"
+                                        title="HomeAddress" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.HomeAddress"
+                                        cols="20" name="S1" rows="1" onkeypress="RestrictCharCount(this.id,399)" allowchar="400"></textarea>
+                                </li>
+                                <li>
+                                    <label for="Pg_2_text_Homecity">
+                                        <span>*</span>City/State/Zip</label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" class="tbForm textMandatory" title="Homecity"
+                                        id="Pg_2_text_Homecity" jqxb-datasource="FormDetails" style="float: left; width: 180px;"
+                                        jqxb-datamember="EquipmentRequestData.Homecity" maxlength="100" />
+                                </li>
+                                <li>
+                                    <label for="Pg_2_text_DOJ">
+                                        <span>*</span>Date Of Joining</label>
+                                </li>
+                                <li class="second">
+                                    <input type="text" id="Pg_2_text_DOJ" class="inputText_Readonly" maxlength="13" class="inputText_Readonly"
+                                        unselectable="on" />
+                                </li>
+                                <div class="old">
+                                <li style="border-bottom: 1px solid #d4e7ef">
+                                    <label for="Pg_2_text_DOJ">
+                                        <span>*</span>RecruiterId</label>
+                                </li>
+                                <li class="second" style="border-bottom: 1px solid #d4e7ef">
+                                    <input type="text" id="Pg_2_text_RecruiterId" class="inputText_Readonly" maxlength="13"
+                                        class="inputText_Readonly" unselectable="on" />
+                                </li>
+                                </div>
+                            </ul>
+                        </div>
+                       <!-- <div style="clear: both; height: 10px;">
+                        </div>-->
+                        <div class="pageDetails pageText">
+                            <p class="old">
+                                <label style="color: Red;">
+                                    *</label>
+                                If eligible, you will receive your equipment upon arrival at the Day ONE Program
+                                in Teaneck, NJ or Phoenix, AZ (depending on which location you selected). In the
+                                event that the Day ONE session is cancelled (i.e. due to inclement weather), we
+                                will send the equipment to your home address listed above. Please check this address
+                                to ensure its accuracy.
+                            </p>
+
+                             <p class="newer">
+                             <label style="color: Red;">*</label>
+                             All equipment is distributed during the Day ONE Onboarding Program. In the event that the Program is cancelled (due to inclement weather, etc.), we will send the equipment to your home address listed above. Please ensure that the address listed above is accurate.
+                             </p><br />
+                             <p class="newer">                             
+                             <font style="font-weight:bold; color:Red;">Submission of this form is only a request and not a guarantee that you will receive equipment from Cognizant.  Additional approvals may be required from your Manager prior to processing.</font>
+                             </p><br />
+                             <p class="newer" style="margin:0 0 10px 0; height:60px; font-weight:bold; color:Blue;">
+                             <u>Select the type of equipment required:</u>
+                             </p>                             
+
+                            <p class="old">
+                                <label>
+                                    Please select from the following Equipment options:</label>
+                            </p>
+                            <div style="width: 100%; margin: 10px 0 10px 0; height:200px;" id="Pg_2_Laptop" class="disablelaptop">
+                                <div style="width: 30%; float: left;">
+                                    <input type="checkbox" id="Pg_2_text_Laptop" class='equipment' value="Laptop" name="Laptop"
+                                        style="vertical-align: middle;" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Laptop"
+                                        jqxb-bindedattribute="checked" />&nbsp;<label class="newer" style="font-weight:bold; color:Blue;">Laptop</label>
+                                        <label class="old">Laptop</label>
+                                    <label id="lbl_LT_AutoAprvd" style="color: Gray;">
+                                        (Auto Approved)</label>
+                                </div>
+                                <div style="width: 70%; margin: 10px 0 10px 0;float: left;height: 200px;" id="Pg_2_LaptopOptions" class="disablelaptop">
+                                <div style="height: 50%;">
+                                <div style="border:1">
+                                <input type="checkbox" id="Pg_2_text_Laptop_X250" class='equipment' value="Laptop" name="Laptop" runat="server"
+                                        style="vertical-align: middle;" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.X250"/>
+                                        &nbsp;<label class="newer2015" style="font-weight:bold;">X-250</label>
+                                </div>
+                                <div style="border:1">
+                                <label class="newer2015" style="font-weight:bold; float: right;margin-top: -20px;margin-right: 70px;">Processor:Intel Core i5-5200U Processor (3MB Cache, up to 2.70GHz)<br />
+                                Memory: 4 GB<br />
+                                Storage: 256 GB Solid State Drive<br />
+                                Weight:2.8 lbs.<br />
+                                Display Screen : 12.5 inches Antiglare HD</label>
+                                </div>
+                                </div>
+                                <div style="height: 50%;">
+                                <div style="border:1">
+                                <input type="checkbox" id="Pg_2_text_Laptop_T450" class='equipment' value="Laptop" name="Laptop" runat="server"
+                                        style="vertical-align: middle;" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.T450"/>
+                                        &nbsp;<label class="newer2015" style="font-weight:bold;">T-450</label>
+                                </div>
+                                <div style="border:1">
+                                <label class="newer2015" style="font-weight:bold; float: right;margin-top: -20px;margin-right: 70px;">Processor:Intel Core i5-5200U Processor (3MB Cache, up to 2.70GHz)<br />
+                                Memory: 4 GB<br />
+                                Storage: 256 GB Solid State Drive<br />
+                                Weight:4.0 lbs.<br />
+                                Display Screen : 14 inches Antiglare HD</label>
+                                </div>
+                                </div>
+                                </div>
+                                <div style="width: 100%; float: left; margin-bottom: 10px;">
+                                    <div style="padding-bottom: 5px;">
+                                        <input id="Latop" class="collapses" type="image" src="../../../../Images/collapse.png"
+                                            alt="(Show Details...)" style="vertical-align: top" />&nbsp;Laptop Policies</div>
+                                    <div style="clear: both;">
+                                    </div>
+                                    <div style="margin-left: 5%; display: none;" class="Latop">
+                                        <ul style="list-style-type: disc;">
+                                            <li>Laptops will not be issued without associate ID – NO EXCEPTIONS.</li>
+                                            <li>Any exceptions to eligibility policy require Director/Dept Head approval &amp; an
+                                                expected date of return of the laptop. </li>
+                                            <li>Contractors can be issued laptops only with approval of the Talent Manager &amp;
+                                                Director. An NDA needs to be signed prior to issue.</li>
+                                            <li>User is required to return laptop to NSS (IT Department) upon separation from Cognizant
+                                                or completion of project.</li>
+                                        </ul>
+                                    </div>
+                                </div>                                
+                            </div>
+                            <br /><br />
+                            <div id="Port_chk" style="height:160px;">
+                            <input type="checkbox" id="Port_DPlus_chkbx" name="PortNumber" style="vertical-align: middle;
+                             font-weight: bold;" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.PortStatus" />
+                             &nbsp;
+                             <span class="old">Port your own number:</span>
+                             <span style="font-weight:bold; color:Blue; text-decoration:none;" class="newer" id="relative">
+                             Use your own personal smartphone device and transfer/port your current 
+                             number to Cognizant (<font class="atandt">AT&T and</font> Verizon is Cognizant’s only preferred wireless carriers)
+                             </span>                                                                                                                      
+                             <p class="newer">
+                             <label style="color: Red;">*</label>
+                             Personal cell phone bills cannot be expensed as per Company Policy.  The phone line must be moved to 
+                             Cognizant’s corporate account.  If you select this option, your contract with your current service provider 
+                             will stay the same when moving the line to Cognizant.  The device upgrade eligibility of your current 
+                             contract will be dependent on whether you are qualified for a new phone.    
+                             </p>
+                            </div>
+                            <br />
+                            <!--<div style="clear: both; height: 10px;"></div>                            -->
+                            <div id="Port_div" style="padding: 5px 0 5px 10px; height:360px; display: none;" class="pageDetails">                            
+                                <ul class="personalDetails" style="margin-left: 2px;">
+                                    <li>
+                                        <label for="BillingName">
+                                            <label style="color: Red;">
+                                                *</label>
+                                            Billing name :
+                                        </label>
+                                    </li>
+                                    <li class="second">
+                                        <input type="text" title="BillingName" id="Porting_Billing_Name" style="float: left;"
+                                            class="tbForm onlyAlphanumeric" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.PortBillingName"
+                                            maxlength="55" />
+                                    </li>
+                                    <li style="height: 50px;">
+                                        <label for="BillingName">
+                                            <label style="color: Red;">
+                                                *</label>
+                                            Billing address :
+                                        </label>
+                                    </li>
+                                    <li class="second" style="height: 50px;">
+                                        <textarea id="Porting_Billing_Address" style="width: 180px; height: 40px; float: left;"
+                                            class="tbForm txtare" title="BillingAddress" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.PortBillingAddress"
+                                            cols="20" name="BillingAddress" rows="1" onkeypress="RestrictCharCount(this.id,199)"
+                                            allowchar="200"></textarea>
+                                    </li>
+                                    <li>                                       
+                                        <label class="old" for="BillingName"><font style="color:Red;">*</font>Phone Number :</label>
+                                        <label class="newer"><font style="color:Red;">*</font>Phone # :</label>
+
+                                    </li>
+                                    <li class="second">
+                                        <input type="text" title="PhoneNUmber" id="Porting_PhoneNumber" style="float: left;"
+                                            class="tbForm OnlyNumeric Mobile" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.PortPortingNumber"
+                                            maxlength="55" />
+                                    </li>
+                                    <li>
+                                        <label for="BillingName">
+                                            <label style="color: Red;">
+                                                *</label>
+                                            Wireless Provider :
+                                        </label>
+                                    </li>
+                                    <li class="second">
+                                        <input type="text" title="WirelessProvider" id="Porting_Wireless_provider" style="float: left;"
+                                            class="tbForm old ver_txtbox" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.PortWirelessProvider"
+                                            maxlength="55" />
+                                        <select class="tbForm newer ver_drpdwn" id="PortWirelessProvider_new" name="WirelessProvider" 
+                                        style="margin-left:0px; float:left;" 
+                                        jqxb-datasource="FormDetails" title="WirelessProvider" jqxb-datamember="EquipmentRequestData.PortWirelessProvider_new"
+                                        jqxb-listsource="PortWirelessProviderList" jqxb-listvalue="UserValue" jqxb-listtext="Description">
+                                        </select>
+                                    </li>
+                                    <li>                                       
+                                        <label class="old" for="BillingName"><font style="color:Red;">*</font>Password if any :</label>
+                                        <label class="newer"><font style="color:Red;">*</font>Password (if any) :</label> 
+                                    </li>
+                                    <li class="second">
+                                        <input type="text" title="Password" id="Porting_Password" style="float: left;" class="tbForm"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.PortPassword"
+                                            maxlength="55" />
+                                    </li>
+                                    <li style="border-bottom: 1px solid #d4e7ef;">
+                                        <label class="old" for="BillingName"><font style="color:Red;">*</font>Account Number :</label>
+                                        <label class="newer"><font style="color:Red;">*</font>Account # :</label>                                                                                 
+                                    </li>
+                                    <li class="second" style="border-bottom: 1px solid #d4e7ef;">
+                                        <input type="text" title="AccountNumber" id="Porting_AccountNumber" style="float: left;"
+                                            class="tbForm" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.PortAccountNumber"
+                                            maxlength="55" />
+                                    </li>
+                                </ul>
+                                <p class="old">
+                                    <label style="color: Red;">
+                                        *</label>
+                                    Please note your number will be transferred within 1-2 weeks from the date the request
+                                    is received by NSS (IT Department)
+                                </p>
+                                <p class="newer" style="margin-left: 3px;">
+                                <label style="color: Red;">*</label>
+                                Please note your number will be transferred within 1-2 weeks from the date the request is received by the 
+                                NSS/IT Department so it’s likely that <br />this activity may not be completed by the time you join the 
+                                organization. You will be notified by NSS once the transfer has been completed.  
+                                </p>
+                            </div>
+
+                            <div style="width: 100%; margin: 10px 0 5px 0;" id="SmartPhones_Div">
+                                <label id="lbl_smartphones" style="font-weight: bold;">
+                                    Smart Phones :
+                                </label>
+                                <label id="lbl_SP_AutoAprvd" style="color: Gray;">
+                                    (Auto Approved)</label>
+                                <!--<h2> Smart Phone options:</h2>-->
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left; display: none;">
+                                    <input type="radio" name="Pg_2_rdbtn_Blackberry_Z10" class='equipment' id="BB_Z10_rdb"
+                                        onchange="Smartphone(1)" value="BlackberryZ10" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="EquipmentRequestData.BlackberryZ10" jqxb-bindedattribute="checked" />&nbsp;BlackBerry
+                                    Z10 - Free
+                                </div>
+                                <!-- <li class="second">
+                                        </li>-->
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                    <input type="radio" name="Pg_2_rdbtn_iPhone_4S" class='equipment' id="iPhone_4S_rdb"
+                                        onchange="Smartphone(2)" value="iPhone4S" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.iPhone4S"
+                                        jqxb-bindedattribute="checked" />&nbsp;iPhone 4S – Free
+                                </div>
+                                <!--<li class="second">
+                                          </li>-->
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left; display: none;">
+                                    <input type="radio" name="Pg_2_rdbtn_Samsung_S3" class='equipment' id="Samsung_S3_rdb"
+                                        value="SamsungS3" onchange="Smartphone(3)" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.SamsungS3"
+                                        jqxb-bindedattribute="checked" />&nbsp;Samsung S3 - Free
+                                </div>
+                                <!--<li class="second">
+                                          </li>-->
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                    <input type="radio" name="Pg_2_rdbtn_LG_G2" class='equipment' id="LG_G2_rdb" value="LG_G2"
+                                        onchange="Smartphone(9)" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.LGG2"
+                                        jqxb-bindedattribute="checked" />&nbsp;LG G2 - $99.99
+                                </div>
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                    <input type="radio" name="Pg_2_rdbtn_Samsung_S4" class='equipment' id="Samsung_S4_rdb"
+                                        value="SamsungS4" onchange="Smartphone(4)" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.SamsungS4"
+                                        jqxb-bindedattribute="checked" />&nbsp;Samsung S4 - Free
+                                </div>
+                                <!--<li class="second">
+                                          </li>-->
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                    <input type="radio" name="Pg_2_rdbtn_iPhone_5C" class='equipment' id="iPhone_5C_rdb"
+                                        value="iPhone5C" onchange="Smartphone(5)" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.iPhone5C"
+                                        jqxb-bindedattribute="checked" />&nbsp;iPhone 5C – $99.99
+                                </div>
+                                <!-- <li class="second">
+                                          </li>-->
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                    <input type="radio" name="Pg_2_rdbtn_iPhone_5S" class='equipment' id="iPhone_5S_rdb"
+                                        value="iPhone5S" onchange="Smartphone(6)" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.iPhone5S"
+                                        jqxb-bindedattribute="checked" />&nbsp;iPhone 5S – $199.99
+                                </div>
+                                <!--    <li class="second">
+                                          </li>-->
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                    <input type="radio" name="Pg_2_rdbtn_Samsung_S5" class='equipment' id="Samsung_S5_rdb"
+                                        value="SamsungS5" onchange="Smartphone(7)" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.SamsungS5"
+                                        jqxb-bindedattribute="checked" />&nbsp;Samsung S5 - $199.99
+                                </div>
+                                <!-- <li class="second">
+                                          </li>-->
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                    <input type="radio" name="Pg_2_rdbtn_Samsung_Note3" class='equipment' id="Samsung_Note3_rdb"
+                                        value="SamsungNote3" onchange="Smartphone(8)" jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.SamsungNote3"
+                                        jqxb-bindedattribute="checked" />&nbsp;Samsung Note 3 - $ 199.99
+                                </div>
+                            </div>
+                            <br/>
+                             <p class="newer">                             
+                             <font style="font-weight:bold; color:Blue;">Cognizant issued cell phone options:</font>
+                             </p><br />
+                             <p class="newer">
+                             <label style="color: Red;">*</label>
+                             <u>If you select this option, you will not be able to move your personal phone line into the corporate account 
+                             and Cognizant will provide you with a new phone number.</u> If there is a price associated with the phone you 
+                             select, the amount will be deducted from your first paycheck.  If you choose an Android/IPhone and the 
+                             device is broken/lost, the cost to replace the equipment will be at your own expense.  Cognizant does not 
+                             provide mobile device insurance, therefore, if interested; we recommend that you purchase insurance at 
+                             <a href="https://www.squaretrade.com" target="_blank">www.squaretrade.com</a>.  
+                             The insurance must be obtained within 30 days of the purchase date.  
+                             </p>
+
+                             <div id="Carrier" class="newer">
+                             <br />
+                             <span runat="server" class="new2015">
+                             <p style="text-align:left; font-weight:bold;"><b>Please select your preferred wireless carrier/phone 
+                             selection:</b></p><br />
+                             <ul>
+                             <li class="atandt">                          
+                             <input type="radio" id="atandt" style="vertical-align: middle;" jqxb-datasource="FormDetails" 
+                             jqxb-datamember="EquipmentRequestData.atandt" jqxb-bindedattribute="checked" onchange="EnableCarrier(1);" />  
+                             AT&T                              
+                             </li>                            
+                             <li>                          
+                             <input type="radio" id="verizon" style="vertical-align: middle;" jqxb-datasource="FormDetails" 
+                             jqxb-datamember="EquipmentRequestData.verizon" jqxb-bindedattribute="checked" onchange="EnableCarrier(2);" />  
+                             Verizon                              
+                             </li>                                                       
+                             </ul>
+                            </span>
+                             </div>
+
+
+                             <div style="width: 100%; margin: 10px 0 5px 0;" id="SmartPhones_2">
+
+                                <label style="font-weight: bold;">Smart Phones :</label>
+                                <label style="color: Gray;">(Auto Approved)</label>
+                                
+                                <div class="oldphone_model newPrice2015" style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                <input type="radio" class='equipment' id="Radio1" onchange="Phone(1)" value="iPhone5C_2" 
+                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.iPhone5C_2"
+                                jqxb-bindedattribute="checked" />&nbsp;IPhone 5C (8GB)<font class="att"> - $ 0</font><font class="ver"> - $ 0</font><font class="ver_new newPrice2015"> - $0 </font>
+                                </div>
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                <input type="radio" class='equipment' id="Radio2" onchange="Phone(2)" value="iPhone5S_2" 
+                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.iPhone5S_2"
+                                jqxb-bindedattribute="checked" />&nbsp;IPhone 5S (16GB)<font class="att"> - $ 0</font><font class="ver"> - $ 99.99</font><font class="ver_new newPrice2015"> - $0 </font>
+                                </div>
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                <input type="radio" class='equipment' id="Radio3" onchange="Phone(3)" value="iPhone6_2" 
+                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.iPhone6_2"
+                                jqxb-bindedattribute="checked" />&nbsp;IPhone 6 (16GB)<font class="att"> - $ 199.99</font><font class="ver"> - $ 199.99</font><font class="ver_new  newPrice2015"> - $99.99</font>
+                                </div>
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                <input type="radio" class='equipment' id="Radio4" onchange="Phone(4)" value="iPhone6P_2" 
+                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.iPhone6P_2"
+                                jqxb-bindedattribute="checked" />&nbsp;IPhone 6+ (16GB)<font class="att"> - $ 299.99</font><font class="ver"> - $ 299.99</font><font class="ver_new  newPrice2015"> - $199.99 </font>
+                                </div>
+                                <div class='newPrice2015' style="width: 100%; margin: 10px 0 0px 0; float: left;" id="Rd5">
+                                <input type="radio" class='equipment' id="Radio5" onchange="Phone(5)" value="SamsungS4_2" 
+                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.SamsungS4_2"
+                                jqxb-bindedattribute="checked" />&nbsp;Samsung S4 (16GB) - $ 0
+                                </div>
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                <input type="radio" class='equipment' id="Radio6" onchange="Phone(6)" value="SamsungS5_2" 
+                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.SamsungS5_2"
+                                jqxb-bindedattribute="checked" />&nbsp;Samsung S5 (16GB)<font class="att"> - $ 99.99</font><font class="ver"> - $ 199.99</font><font class="ver_new  newPrice2015"> - $49.99 </font>
+                                </div>
+                                <div class="oldphone_model" style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                <input type="radio" class='equipment' id="Radio7" onchange="Phone(7)" value="SamsungNote3_2" 
+                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.SamsungNote3_2"
+                                jqxb-bindedattribute="checked" />&nbsp;Samsung Note 3 (16GB)<font class="att"> - $ 149.99</font><font class="ver"> - $ 199.99</font><font class="ver_new  newPrice2015"></font>
+                                </div>
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                <input type="radio" class='equipment' id="Radio8" onchange="Phone(8)" value="SamsungNote4_2" 
+                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.SamsungNote4_2"
+                                jqxb-bindedattribute="checked" />&nbsp;Samsung Note 4 (16 GB)<font class="att"> - $ 199.99</font><font class="ver"> - $ 299.99</font><font class="ver_new  newPrice2015"> - $149.99</font>
+                                </div>   
+                                 <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                <input type="radio" class='equipment' id="Radio9" onchange="Phone(9)" value="LG_G3_16GB_2" 
+                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.LG_G3_16GB_2"
+                                jqxb-bindedattribute="checked" />&nbsp;LG G3(16GB)<font class="ver_new  newPrice2015">- $99.99</font>
+                                </div> 
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                <input type="radio" class='equipment' id="Radio10" onchange="Phone(10)" value="Samsung_S6_32GB_2" 
+                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Samsung_S6_32GB_2"
+                                jqxb-bindedattribute="checked" />&nbsp;Samsung S6 (32GB)<font class="ver_new  newPrice2015">- $199.99</font>
+                                </div>   
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                <input type="radio" class='equipment' id="Radio11" onchange="Phone(11)" value="Samsung_S6_64GB_2" 
+                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Samsung_S6_64GB_2"
+                                jqxb-bindedattribute="checked" />&nbsp;Samsung S6 (64GB)<font class="ver_new  newPrice2015">- $299.99</font>
+                                </div> 
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                <input type="radio" class='equipment' id="Radio12" onchange="Phone(12)" runat="server" value="Samsung_S6_128GB_2" 
+                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Samsung_S6_128GB_2"
+                                jqxb-bindedattribute="checked" />&nbsp;Samsung S6 (128GB)<font class="ver_new  newPrice2015">- $399.99</font>
+                                </div>                            
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                <input type="radio" class='equipment' id="Radio13" onchange="Phone(13)" value="Samsung_S6edge_32GB_2" 
+                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Samsung_S6edge_32GB_2"
+                                jqxb-bindedattribute="checked" />&nbsp;Samsung S6 edge (32GB)<font class="ver_new  newPrice2015">- $299.99</font>
+                                </div> 
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                <input type="radio" class='equipment' id="Radio14" onchange="Phone(14)" value="Samsung_S6edge_64GB_2" 
+                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Samsung_S6edge_64GB_2"
+                                jqxb-bindedattribute="checked" />&nbsp;Samsung S6 edge (64GB)<font class="ver_new  newPrice2015">- $399.99</font>
+                                </div> 
+                                <div style="width: 100%; margin: 10px 0 0px 0; float: left;">
+                                <input type="radio" class='equipment' id="Radio15" onchange="Phone(15)" value="Samsung_S6edge_128GB_2" 
+                                jqxb-datasource="FormDetails" jqxb-datamember="EquipmentRequestData.Samsung_S6edge_128GB_2"
+                                jqxb-bindedattribute="checked" />&nbsp;Samsung S6 edge (128GB)<font class="ver_new  newPrice2015">- $499.99</font>
+                                </div> 
+                             </div>
+
+                             <div style="clear:both;"></div>                                                          
+
+                             <div id="Color1">
+                             <br />
+                             <p style="text-align:left; font-weight:bold;"><b>Please select one of the color options :</b></p><br />
+                             <ul>
+                             <li>                          
+                             <input type="radio" id="White1_Part1" style="vertical-align: middle;" jqxb-datasource="FormDetails" 
+                             jqxb-datamember="EquipmentRequestData.White1" jqxb-bindedattribute="checked" onchange="EnableColor1(1);" />  
+                             White                             
+                             </li>                            
+                             <li>                          
+                             <input type="radio" id="Blue_Part1" style="vertical-align: middle;" jqxb-datasource="FormDetails" 
+                             jqxb-datamember="EquipmentRequestData.Blue" jqxb-bindedattribute="checked" onchange="EnableColor1(2);" />  
+                             Blue                             
+                             </li>                            
+                             <li>                          
+                             <input type="radio" id="Green_Part1" style="vertical-align: middle;" jqxb-datasource="FormDetails" 
+                             jqxb-datamember="EquipmentRequestData.Green" jqxb-bindedattribute="checked" onchange="EnableColor1(3);" />  
+                             Green                             
+                             </li>
+                             </ul>
+                             </div>
+
+                             <div id="Color2">
+                             <br />
+                             <p style="text-align:left; font-weight:bold;"><b>Please select one of the color options :</b></p><br />
+                             <ul>
+                             <li>                          
+                             <input type="radio" id="Gray_Part2" style="vertical-align: middle;" jqxb-datasource="FormDetails" 
+                             jqxb-datamember="EquipmentRequestData.Gray" jqxb-bindedattribute="checked" onchange="EnableColor2(1);" />  
+                             Gray                             
+                             </li>                            
+                             <li>                          
+                             <input type="radio" id="Silver_Part2" style="vertical-align: middle;" jqxb-datasource="FormDetails" 
+                             jqxb-datamember="EquipmentRequestData.Silver" jqxb-bindedattribute="checked" onchange="EnableColor2(2);" />  
+                             Silver                             
+                             </li>                            
+                             <li>                          
+                             <input type="radio" id="Gold_Part2" style="vertical-align: middle;" jqxb-datasource="FormDetails" 
+                             jqxb-datamember="EquipmentRequestData.Gold" jqxb-bindedattribute="checked" onchange="EnableColor2(3);" />  
+                             Gold                             
+                             </li>
+                             </ul>
+                             </div>
+
+                             <div id="Color3">
+                             <br />
+                             <p style="text-align:left; font-weight:bold;"><b>Please select one of the color options :</b></p><br />
+                             <ul>
+                             <li>  
+                             <div>                        
+                             <input type="radio" id="Black_Part3" style="vertical-align: middle;" jqxb-datasource="FormDetails" 
+                             jqxb-datamember="EquipmentRequestData.Black" jqxb-bindedattribute="checked" onchange="EnableColor3(1);" />  
+                             Black   
+                             </div>                          
+                             </li>                            
+                             <li>   
+                             <div>                       
+                             <input type="radio" id="White2_Part3" style="vertical-align: middle;" jqxb-datasource="FormDetails" 
+                             jqxb-datamember="EquipmentRequestData.White2" jqxb-bindedattribute="checked" onchange="EnableColor3(2);" />  
+                             White   
+                             </div>                          
+                             </li>                             
+                             </ul>
+                             </div>
+
+                            <div style="clear: both; height: 10px;">
+                            </div>
+                            <div id="NoteDiv" style="width: 100%; margin: 5px 0 5px 0;">
+                                <p class="old">
+                                    <label style="color: Red;">
+                                        *</label>
+                                    If there is a price associated with the phone you select, the amount will be deducted
+                                    from your first paycheck. If you select an Android/IPhone and the device is broken/lost,
+                                    the cost to replace the equipment will be at your own expense; therefore, it is
+                                    recommended that you purchase insurance for the device. Cognizant will not provide
+                                    mobile device insurance. Insurance can be purchased within 30 days of the purchase
+                                    date at <a href="https://www.squaretrade.com" target="_blank">www.squaretrade.com</a>.
+                                </p>
+                                <p class="newer">
+                                    <label style="color: Red;">*</label>
+                                   Please note that some newly released smartphone models may be on back-order with shipment delays of 2-6 weeks.  
+                                </p><br />
+                                <p class="newer">
+                                    <label style="color: Red;">*</label>
+                                  <font style="font-weight:bold;">The Smartphone cannot be exchanged for another model once you have received the device.</font>
+                                </p>
+                                <div class="page_header11 newer" style="text-align:center;">Maintenance and support</div>
+                                 <p class="newer">                                    
+                                   Cognizant issued Smartphone devices are purchased with a 2 year contract with the wireless carrier. 
+                                   It is the responsibility of the employee to ensure proper use and care of the device during the 2 
+                                   year contract. During the 1st year of the contract, if the device is not functioning at 100% and it 
+                                   is determined that the device needs to be replaced (no physical or liquid damage), the employee will 
+                                   be provided with a “Warranty Replacement” for the same device. During the 2nd year of the contract, 
+                                   if the device is not functioning at 100% and it is determined that the device needs to be replaced; 
+                                   it is the financial responsibility of the employee. 
+                                </p>
+                                <div class="page_header11 newer" style="text-align:center;">Employee Transfer, Resignation or Termination</div>
+                                 <p class="newer">                                    
+                                   In the case of a resignation, termination, or transfer to a new geography:<br />
+                                   - Corporate purchased devices must be returned back to the company <br />
+                                   - If you leave the company or transfer to new geography and you had paid for the device, you can choose to either <br />
+                                   move the phone number to your personal account (with the same wireless carrier) and take the device with you or <br />
+                                   pay the early termination fee on the line and take the device with you or return the equipment back to Cognizant <br />
+                                   with no refund. <br />
+                                   - Porting requests must be submitted via a GSD ticket at least 5 days in advance of the termination date.
+                                </p>                               
+                                <br /><br />
+                            </div>
+
+                        </div>
+
+                          <div style="clear: both; height: 10px;"></div>
+
+                         <div class="newer pageText">
+                         <label style="color: Red;">*</label>&nbsp;<input type="checkbox" id="Pg_1_check_ack" name="Pg_1_check_ack" jqxb-datasource="FormDetails" 
+                          jqxb-datamember="EquipmentRequestData.Acknowledge" onclick="EnableAck();" />
+                          <!--jqxb-bindedattribute="checked" -->
+                          I hereby accept the terms and conditions of the equipment request form.
+                         </div>
+
+                    </div>
+                    <div style="clear: both;">
+                    </div>
+                    <div class="pageText old" style="height: 40px; padding-left: 0px; width: 94%; margin-left: 10px;">
+                        <span style="color: Red; text-decoration: none; float: left; display: inline;">*&nbsp;</span>
+                        Please note: Submission of this form is not a guarantee you will receive equipment
+                        from Cognizant - it is only a request and may require additional approval from your
+                        manager prior to processing.
+                    </div>
+                </div>                 
+            </div>
+            <div class="Signature" id="Sign_PageId_1"></div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/US/CPERF_SM_US.js" type="text/javascript"></script>
+</body>
+</html>

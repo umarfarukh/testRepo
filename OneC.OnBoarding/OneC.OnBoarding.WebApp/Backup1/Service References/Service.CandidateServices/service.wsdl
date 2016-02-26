@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/Imports">
+      <xsd:import namespace="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/" />
+      <xsd:import namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.CandidateDC" />
+      <xsd:import namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/CandidateDC/" />
+      <xsd:import namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" />
+      <xsd:import namespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICandidateServices_UpdateELMStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateELMStatus" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_UpdateELMStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateELMStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_UpdateELMStatus_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q1:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchCandidateId_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCandidateId" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchCandidateId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCandidateIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchCandidateId_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q2:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchStateTaxFormList_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchStateTaxFormList" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchStateTaxFormList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchStateTaxFormListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchStateTaxFormList_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q3:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveSurveyData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSurveyData" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveSurveyData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSurveyDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveSurveyData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q4:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchFileUploadData_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchFileUploadData" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchFileUploadData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchFileUploadDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchFileUploadData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q5:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_UpdateStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStatus" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_UpdateStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_UpdateStatus_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q6:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_ValidateCisContent_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateCisContent" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_ValidateCisContent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateCisContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_ValidateCisContent_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q7:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveCandidateComponentData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCandidateComponentData" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveCandidateComponentData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCandidateComponentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveCandidateComponentData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q8:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_ValidateComponentData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateComponentData" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_ValidateComponentData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateComponentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_ValidateComponentData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q9:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveCisData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCisData" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveCisData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCisDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveCisData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q10:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetNHDashboardBgvStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNHDashboardBgvStatus" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetNHDashboardBgvStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNHDashboardBgvStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetNHDashboardBgvStatus_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q11:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveBpNoGo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBpNoGo" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveBpNoGo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBpNoGoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveBpNoGo_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q12:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_PendingBackPaperCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:PendingBackPaperCount" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_PendingBackPaperCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PendingBackPaperCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_PendingBackPaperCount_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q13:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_saveFeedback_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveFeedback" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_saveFeedback_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveFeedbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_saveFeedback_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q14:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchCandidateTracking_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCandidateTracking" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchCandidateTracking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCandidateTrackingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchCandidateTracking_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q15:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTaskList_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTaskList" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTaskList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTaskListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTaskList_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q16:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchCandidateType_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCandidateType" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchCandidateType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCandidateTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchCandidateType_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q17:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchCandidateHireType_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCandidateHireType" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchCandidateHireType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCandidateHireTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchCandidateHireType_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q18:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchMasterData_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchMasterData" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchMasterData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchMasterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchMasterData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q19:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetPrefillValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrefillValues" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetPrefillValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrefillValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetPrefillValues_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q20:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveTaskData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTaskData" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveTaskData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTaskDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveTaskData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q21:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_ValidateAuthenticationKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAuthenticationKey" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_ValidateAuthenticationKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAuthenticationKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_ValidateAuthenticationKey_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q22:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_ValidateTaskContent_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateTaskContent" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_ValidateTaskContent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateTaskContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_ValidateTaskContent_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q23:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetHtmlContentToGeneratePDF_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHtmlContentToGeneratePDF" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetHtmlContentToGeneratePDF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHtmlContentToGeneratePDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetHtmlContentToGeneratePDF_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q24:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetGeographyMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeographyMaster" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetGeographyMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeographyMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetGeographyMaster_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q25:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_ResetAuthenticationKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetAuthenticationKey" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_ResetAuthenticationKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetAuthenticationKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_ResetAuthenticationKey_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q26:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveMeetingID_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMeetingID" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveMeetingID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMeetingIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SaveMeetingID_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q27:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchFaq_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchFaq" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchFaq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchFaqResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchFaq_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q28:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTrainingMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTrainingMaster" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTrainingMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTrainingMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTrainingMaster_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q29:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTrainingStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTrainingStatus" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTrainingStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTrainingStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTrainingStatus_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q30:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTraningData_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTraningData" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTraningData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTraningDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTraningData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q31:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_UpdateTrainingDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTrainingDate" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_UpdateTrainingDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTrainingDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_UpdateTrainingDate_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q32:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTrainingDrillDownData_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTrainingDrillDownData" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTrainingDrillDownData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTrainingDrillDownDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTrainingDrillDownData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q33:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTrainingDates_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTrainingDates" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTrainingDates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTrainingDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTrainingDates_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q34:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTrainingDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTrainingDetails" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTrainingDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchTrainingDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_FetchTrainingDetails_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q35:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_PopulateCandidateTrainingDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:PopulateCandidateTrainingDetails" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_PopulateCandidateTrainingDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PopulateCandidateTrainingDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_PopulateCandidateTrainingDetails_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q36:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SendInductionDiaryInvites_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendInductionDiaryInvites" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SendInductionDiaryInvites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendInductionDiaryInvitesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_SendInductionDiaryInvites_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q37:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_RegisterCancelTrainingDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterCancelTrainingDetails" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_RegisterCancelTrainingDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterCancelTrainingDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_RegisterCancelTrainingDetails_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q38:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_UpdateCandidateTrainingDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCandidateTrainingDate" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_UpdateCandidateTrainingDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCandidateTrainingDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_UpdateCandidateTrainingDate_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q39:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetEmployersDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployersDetails" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetEmployersDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployersDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetEmployersDetails_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q40:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_UpdateNHOTrainingData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNHOTrainingData" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_UpdateNHOTrainingData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNHOTrainingDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_UpdateNHOTrainingData_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q41:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetMedicalTopupCover_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicalTopupCover" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetMedicalTopupCover_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicalTopupCoverResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICandidateServices_GetMedicalTopupCover_OBFaultContractFCFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" name="detail" element="q42:OBFaultContractFC" />
+  </wsdl:message>
+  <wsdl:portType name="ICandidateServices">
+    <wsdl:operation name="UpdateELMStatus">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/UpdateELMStatus" message="tns:ICandidateServices_UpdateELMStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/UpdateELMStatusResponse" message="tns:ICandidateServices_UpdateELMStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/UpdateELMStatusOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_UpdateELMStatus_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchCandidateId">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchCandidateId" message="tns:ICandidateServices_FetchCandidateId_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchCandidateIdResponse" message="tns:ICandidateServices_FetchCandidateId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchCandidateIdOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_FetchCandidateId_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchStateTaxFormList">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchStateTaxFormList" message="tns:ICandidateServices_FetchStateTaxFormList_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchStateTaxFormListResponse" message="tns:ICandidateServices_FetchStateTaxFormList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchStateTaxFormListOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_FetchStateTaxFormList_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSurveyData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveSurveyData" message="tns:ICandidateServices_SaveSurveyData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveSurveyDataResponse" message="tns:ICandidateServices_SaveSurveyData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveSurveyDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_SaveSurveyData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchFileUploadData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchFileUploadData" message="tns:ICandidateServices_FetchFileUploadData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchFileUploadDataResponse" message="tns:ICandidateServices_FetchFileUploadData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchFileUploadDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_FetchFileUploadData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatus">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/UpdateStatus" message="tns:ICandidateServices_UpdateStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/UpdateStatusResponse" message="tns:ICandidateServices_UpdateStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/UpdateStatusOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_UpdateStatus_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCisContent">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/ValidateCisContent" message="tns:ICandidateServices_ValidateCisContent_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/ValidateCisContentResponse" message="tns:ICandidateServices_ValidateCisContent_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/ValidateCisContentOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_ValidateCisContent_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCandidateComponentData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveCandidateComponentData" message="tns:ICandidateServices_SaveCandidateComponentData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveCandidateComponentDataResponse" message="tns:ICandidateServices_SaveCandidateComponentData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveCandidateComponentDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_SaveCandidateComponentData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateComponentData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/ValidateComponentData" message="tns:ICandidateServices_ValidateComponentData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/ValidateComponentDataResponse" message="tns:ICandidateServices_ValidateComponentData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/ValidateComponentDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_ValidateComponentData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCisData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveCisData" message="tns:ICandidateServices_SaveCisData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveCisDataResponse" message="tns:ICandidateServices_SaveCisData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveCisDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_SaveCisData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNHDashboardBgvStatus">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetNHDashboardBgvStatus" message="tns:ICandidateServices_GetNHDashboardBgvStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetNHDashboardBgvStatusResponse" message="tns:ICandidateServices_GetNHDashboardBgvStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetNHDashboardBgvStatusOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_GetNHDashboardBgvStatus_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveBpNoGo">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveBpNoGo" message="tns:ICandidateServices_SaveBpNoGo_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveBpNoGoResponse" message="tns:ICandidateServices_SaveBpNoGo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveBpNoGoOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_SaveBpNoGo_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PendingBackPaperCount">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/PendingBackPaperCount" message="tns:ICandidateServices_PendingBackPaperCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/PendingBackPaperCountResponse" message="tns:ICandidateServices_PendingBackPaperCount_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/PendingBackPaperCountOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_PendingBackPaperCount_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveFeedback">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/saveFeedback" message="tns:ICandidateServices_saveFeedback_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/saveFeedbackResponse" message="tns:ICandidateServices_saveFeedback_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/saveFeedbackOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_saveFeedback_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchCandidateTracking">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchCandidateTracking" message="tns:ICandidateServices_FetchCandidateTracking_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchCandidateTrackingResponse" message="tns:ICandidateServices_FetchCandidateTracking_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchCandidateTrackingOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_FetchCandidateTracking_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchTaskList">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTaskList" message="tns:ICandidateServices_FetchTaskList_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTaskListResponse" message="tns:ICandidateServices_FetchTaskList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTaskListOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_FetchTaskList_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchCandidateType">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchCandidateType" message="tns:ICandidateServices_FetchCandidateType_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchCandidateTypeResponse" message="tns:ICandidateServices_FetchCandidateType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchCandidateTypeOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_FetchCandidateType_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchCandidateHireType">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchCandidateHireType" message="tns:ICandidateServices_FetchCandidateHireType_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchCandidateHireTypeResponse" message="tns:ICandidateServices_FetchCandidateHireType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchCandidateHireTypeOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_FetchCandidateHireType_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchMasterData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchMasterData" message="tns:ICandidateServices_FetchMasterData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchMasterDataResponse" message="tns:ICandidateServices_FetchMasterData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchMasterDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_FetchMasterData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrefillValues">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetPrefillValues" message="tns:ICandidateServices_GetPrefillValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetPrefillValuesResponse" message="tns:ICandidateServices_GetPrefillValues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetPrefillValuesOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_GetPrefillValues_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTaskData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveTaskData" message="tns:ICandidateServices_SaveTaskData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveTaskDataResponse" message="tns:ICandidateServices_SaveTaskData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveTaskDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_SaveTaskData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAuthenticationKey">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/ValidateAuthenticationKey" message="tns:ICandidateServices_ValidateAuthenticationKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/ValidateAuthenticationKeyResponse" message="tns:ICandidateServices_ValidateAuthenticationKey_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/ValidateAuthenticationKeyOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_ValidateAuthenticationKey_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateTaskContent">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/ValidateTaskContent" message="tns:ICandidateServices_ValidateTaskContent_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/ValidateTaskContentResponse" message="tns:ICandidateServices_ValidateTaskContent_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/ValidateTaskContentOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_ValidateTaskContent_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHtmlContentToGeneratePDF">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetHtmlContentToGeneratePDF" message="tns:ICandidateServices_GetHtmlContentToGeneratePDF_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetHtmlContentToGeneratePDFResponse" message="tns:ICandidateServices_GetHtmlContentToGeneratePDF_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetHtmlContentToGeneratePDFOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_GetHtmlContentToGeneratePDF_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeographyMaster">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetGeographyMaster" message="tns:ICandidateServices_GetGeographyMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetGeographyMasterResponse" message="tns:ICandidateServices_GetGeographyMaster_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetGeographyMasterOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_GetGeographyMaster_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetAuthenticationKey">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/ResetAuthenticationKey" message="tns:ICandidateServices_ResetAuthenticationKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/ResetAuthenticationKeyResponse" message="tns:ICandidateServices_ResetAuthenticationKey_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/ResetAuthenticationKeyOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_ResetAuthenticationKey_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMeetingID">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveMeetingID" message="tns:ICandidateServices_SaveMeetingID_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveMeetingIDResponse" message="tns:ICandidateServices_SaveMeetingID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SaveMeetingIDOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_SaveMeetingID_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchFaq">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchFaq" message="tns:ICandidateServices_FetchFaq_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchFaqResponse" message="tns:ICandidateServices_FetchFaq_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchFaqOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_FetchFaq_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchTrainingMaster">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTrainingMaster" message="tns:ICandidateServices_FetchTrainingMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTrainingMasterResponse" message="tns:ICandidateServices_FetchTrainingMaster_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTrainingMasterOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_FetchTrainingMaster_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchTrainingStatus">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTrainingStatus" message="tns:ICandidateServices_FetchTrainingStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTrainingStatusResponse" message="tns:ICandidateServices_FetchTrainingStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTrainingStatusOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_FetchTrainingStatus_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchTraningData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTraningData" message="tns:ICandidateServices_FetchTraningData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTraningDataResponse" message="tns:ICandidateServices_FetchTraningData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTraningDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_FetchTraningData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTrainingDate">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/UpdateTrainingDate" message="tns:ICandidateServices_UpdateTrainingDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/UpdateTrainingDateResponse" message="tns:ICandidateServices_UpdateTrainingDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/UpdateTrainingDateOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_UpdateTrainingDate_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchTrainingDrillDownData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTrainingDrillDownData" message="tns:ICandidateServices_FetchTrainingDrillDownData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTrainingDrillDownDataResponse" message="tns:ICandidateServices_FetchTrainingDrillDownData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTrainingDrillDownDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_FetchTrainingDrillDownData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchTrainingDates">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTrainingDates" message="tns:ICandidateServices_FetchTrainingDates_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTrainingDatesResponse" message="tns:ICandidateServices_FetchTrainingDates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTrainingDatesOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_FetchTrainingDates_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchTrainingDetails">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTrainingDetails" message="tns:ICandidateServices_FetchTrainingDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTrainingDetailsResponse" message="tns:ICandidateServices_FetchTrainingDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/FetchTrainingDetailsOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_FetchTrainingDetails_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateCandidateTrainingDetails">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/PopulateCandidateTrainingDetails" message="tns:ICandidateServices_PopulateCandidateTrainingDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/PopulateCandidateTrainingDetailsResponse" message="tns:ICandidateServices_PopulateCandidateTrainingDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/PopulateCandidateTrainingDetailsOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_PopulateCandidateTrainingDetails_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendInductionDiaryInvites">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SendInductionDiaryInvites" message="tns:ICandidateServices_SendInductionDiaryInvites_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SendInductionDiaryInvitesResponse" message="tns:ICandidateServices_SendInductionDiaryInvites_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/SendInductionDiaryInvitesOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_SendInductionDiaryInvites_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterCancelTrainingDetails">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/RegisterCancelTrainingDetails" message="tns:ICandidateServices_RegisterCancelTrainingDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/RegisterCancelTrainingDetailsResponse" message="tns:ICandidateServices_RegisterCancelTrainingDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/RegisterCancelTrainingDetailsOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_RegisterCancelTrainingDetails_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCandidateTrainingDate">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/UpdateCandidateTrainingDate" message="tns:ICandidateServices_UpdateCandidateTrainingDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/UpdateCandidateTrainingDateResponse" message="tns:ICandidateServices_UpdateCandidateTrainingDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/UpdateCandidateTrainingDateOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_UpdateCandidateTrainingDate_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployersDetails">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetEmployersDetails" message="tns:ICandidateServices_GetEmployersDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetEmployersDetailsResponse" message="tns:ICandidateServices_GetEmployersDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetEmployersDetailsOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_GetEmployersDetails_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNHOTrainingData">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/UpdateNHOTrainingData" message="tns:ICandidateServices_UpdateNHOTrainingData_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/UpdateNHOTrainingDataResponse" message="tns:ICandidateServices_UpdateNHOTrainingData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/UpdateNHOTrainingDataOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_UpdateNHOTrainingData_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicalTopupCover">
+      <wsdl:input wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetMedicalTopupCover" message="tns:ICandidateServices_GetMedicalTopupCover_InputMessage" />
+      <wsdl:output wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetMedicalTopupCoverResponse" message="tns:ICandidateServices_GetMedicalTopupCover_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://onecognizant.cognizant.com/OnBoardingService/CandidateServices/ServiceContracts/ICandidateServices/GetMedicalTopupCoverOBFaultContractFCFault" name="OBFaultContractFCFault" message="tns:ICandidateServices_GetMedicalTopupCover_OBFaultContractFCFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

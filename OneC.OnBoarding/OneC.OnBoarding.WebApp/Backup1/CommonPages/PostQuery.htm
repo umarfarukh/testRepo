@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/jquery.ui.theme.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/NHStyles.css" rel="stylesheet" type="text/css" />
+    <!--<script src="../Scripts/JQuery/jquery.alerts.js" type="text/javascript"></script>
+    <script src="../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>-->
+  <!--  <link href="../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+   <script src="../Scripts/JQuery/jquery.alerts.js" type="text/javascript"></script>
+    <script src="../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>-->
+<!--    <script src="../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>-->
+    <script type="text/javascript" language="javascript">
+        function AttachScript(src) {
+            var script = document.createElement("SCRIPT");
+            script.type = "text/javascript";
+            document.getElementsByTagName("body")[0].appendChild(script);
+            script.src = src;
+        }
+    </script>
+    <style type="text/css">
+        label.alert_f_text
+        {
+            font-size: 1.2em;
+            padding-left:0px;
+            margin-left:-120px;
+            width:180px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="postQueryForm">
+        <div class="header">
+            <img src="../Images/logo.png" alt="Logo" />
+        </div>
+    </div>
+    <div style="text-align: center; width: 350px">
+        <p style="font-size: 1.8em; color: #044b68; padding: 24px;">
+            Please post your Queries here.</p>
+        <div style="margin: 0 auto; width: 300px;">
+            <p class="space_b10" style="width: 46%; float: left; text-align: right;">
+                <label for="subject" style="font-size: 12pt; font-weight: lighter">
+                    Subject:</label>
+            </p>
+            <p class="space_b10" style="width: 46%; float: left; text-align: left;">
+                <input type="text" title="Subject" maxlength="30" style="border: 1px solid #b9b9b9;
+                    height: 25px; width: 110px;" class="textMandatory inputText" id="subject" />
+            </p>
+        </div>
+        <div style="margin: 0 auto; width: 300px;">
+            <p class="space_b10" style="width: 46%; float: left; text-align: right;">
+                <label id="lblQry" for="comment" style="font-size: 12pt; font-weight: lighter">
+                    Query Description:</label>
+            </p>
+            <p class="space_b10" style="width: 46%; float: left; text-align: left;">
+                <textarea id="comment" title="Comment" class="textMandatory inputText" maxlength="100" style="border: 1px solid #b9b9b9;
+                    height: 40px; width: 110px; overflow: auto;"></textarea>
+            </p>
+        </div>
+        <img src="../Images/post_query_btn.png" id="postQuery" class="marginL415 marginT5" onclick="SendMail.PostQuery()" style="margin-top:30px;margin-left:150px;width:128px;"
+            alt="Post Query"  title="Post Query" />
+    </div>
+    <div id="Postqrycnfrm"></div>
+    <script language="javascript" type="text/javascript">
+        if (typeof window.jQuery == 'undefined') {
+            AttachScript("../Scripts/JQuery/1.8/Jquery-1.7.1.js");
+        }
+    </script>
+    <script type="text/javascript">
+        AttachScript("../Scripts/SendMail.js");
+        AttachScript("../Scripts/JQuery/jquery.alerts.js");
+    </script>
+</body>
+</html>

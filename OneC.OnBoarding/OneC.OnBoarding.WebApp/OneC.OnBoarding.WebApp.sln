@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneC.OnBoarding.WebApp", "OneC.OnBoarding.WebApp\OneC.OnBoarding.WebApp.csproj", "{BFD0A200-1830-4518-9D67-966EB70BCF08}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F76887F2-C99E-48E1-B275-67699E5F1903} = {F76887F2-C99E-48E1-B275-67699E5F1903}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneC.OnBoarding.BAL", "..\OneC.OnBoarding.Services\OneC.OnBoarding.BAL\OneC.OnBoarding.BAL.csproj", "{41863588-39AC-45A5-B5EF-1F00C2235E3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneC.OnBoarding.DAL", "..\OneC.OnBoarding.Services\OneC.OnBoarding.DAL\OneC.OnBoarding.DAL.csproj", "{6B823DFB-018B-4F1F-824A-79B2AD02B465}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneC.OnBoarding.DC", "..\OneC.OnBoarding.Services\OneC.OnBoarding.DC\OneC.OnBoarding.DC.csproj", "{40537469-2DCF-4109-9E44-83B9CB145526}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneC.OnBoarding.Services", "..\OneC.OnBoarding.Services\OneC.OnBoarding.Services\OneC.OnBoarding.Services.csproj", "{F76887F2-C99E-48E1-B275-67699E5F1903}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://ctsintcosetfs:8080/tfs/onecapplication
+		SccProjectUniqueName0 = ..\\OneC.OnBoarding.Services\\OneC.OnBoarding.DAL\\OneC.OnBoarding.DAL.csproj
+		SccProjectName0 = ../OneC.OnBoarding.Services/OneC.OnBoarding.DAL
+		SccLocalPath0 = ..\\OneC.OnBoarding.Services\\OneC.OnBoarding.DAL
+		SccProjectUniqueName1 = ..\\OneC.OnBoarding.Services\\OneC.OnBoarding.DC\\OneC.OnBoarding.DC.csproj
+		SccProjectName1 = ../OneC.OnBoarding.Services/OneC.OnBoarding.DC
+		SccLocalPath1 = ..\\OneC.OnBoarding.Services\\OneC.OnBoarding.DC
+		SccProjectUniqueName2 = ..\\OneC.OnBoarding.Services\\OneC.OnBoarding.Services\\OneC.OnBoarding.Services.csproj
+		SccProjectName2 = ../OneC.OnBoarding.Services/OneC.OnBoarding.Services
+		SccLocalPath2 = ..\\OneC.OnBoarding.Services\\OneC.OnBoarding.Services
+		SccLocalPath3 = .
+		SccProjectUniqueName4 = OneC.OnBoarding.WebApp\\OneC.OnBoarding.WebApp.csproj
+		SccProjectName4 = OneC.OnBoarding.WebApp
+		SccLocalPath4 = OneC.OnBoarding.WebApp
+		SccProjectUniqueName5 = ..\\OneC.OnBoarding.Services\\OneC.OnBoarding.BAL\\OneC.OnBoarding.BAL.csproj
+		SccProjectName5 = ../OneC.OnBoarding.Services/OneC.OnBoarding.BAL
+		SccLocalPath5 = ..\\OneC.OnBoarding.Services\\OneC.OnBoarding.BAL
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFD0A200-1830-4518-9D67-966EB70BCF08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD0A200-1830-4518-9D67-966EB70BCF08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFD0A200-1830-4518-9D67-966EB70BCF08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFD0A200-1830-4518-9D67-966EB70BCF08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41863588-39AC-45A5-B5EF-1F00C2235E3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41863588-39AC-45A5-B5EF-1F00C2235E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41863588-39AC-45A5-B5EF-1F00C2235E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41863588-39AC-45A5-B5EF-1F00C2235E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B823DFB-018B-4F1F-824A-79B2AD02B465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B823DFB-018B-4F1F-824A-79B2AD02B465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B823DFB-018B-4F1F-824A-79B2AD02B465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B823DFB-018B-4F1F-824A-79B2AD02B465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40537469-2DCF-4109-9E44-83B9CB145526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40537469-2DCF-4109-9E44-83B9CB145526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40537469-2DCF-4109-9E44-83B9CB145526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40537469-2DCF-4109-9E44-83B9CB145526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F76887F2-C99E-48E1-B275-67699E5F1903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F76887F2-C99E-48E1-B275-67699E5F1903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F76887F2-C99E-48E1-B275-67699E5F1903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F76887F2-C99E-48E1-B275-67699E5F1903}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

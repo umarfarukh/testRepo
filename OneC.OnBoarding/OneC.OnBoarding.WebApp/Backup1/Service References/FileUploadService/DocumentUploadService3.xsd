@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/OneC_GenericUploadDataContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OneC_GenericUploadDataContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://onecdevintcoresrvs.cognizant.com/SharedStorage/DocumentUploadService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="AppTemplateCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppId" type="xs:int" />
+      <xs:element minOccurs="0" name="AppTemplate" nillable="true" type="tns:ArrayOfAppTemplate" />
+      <xs:element minOccurs="0" name="DtAppTemplateCollection" nillable="true">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:appinfo>
+              <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="RequestedBy" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AppTemplateCollection" nillable="true" type="tns:AppTemplateCollection" />
+  <xs:complexType name="ArrayOfAppTemplate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AppTemplate" nillable="true" type="tns:AppTemplate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAppTemplate" nillable="true" type="tns:ArrayOfAppTemplate" />
+  <xs:complexType name="AppTemplate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppTemplateId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaxFileSize" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateId" type="xs:int" />
+      <xs:element minOccurs="0" name="ValidFileTypes" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AppTemplate" nillable="true" type="tns:AppTemplate" />
+  <xs:complexType name="FileUploadDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppTemplateId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileContentId" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="FileLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileSaveName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileScanStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileUploadId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileUploadDC" nillable="true" type="tns:FileUploadDC" />
+  <xs:complexType name="FileUploadCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppId" type="xs:int" />
+      <xs:element minOccurs="0" name="DtBulkUpdateScanStatus" nillable="true">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:appinfo>
+              <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="FileUpload" nillable="true" type="tns:ArrayOfFileUploadDC" />
+      <xs:element minOccurs="0" name="RequestedBy" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileUploadCollection" nillable="true" type="tns:FileUploadCollection" />
+  <xs:complexType name="ArrayOfFileUploadDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileUploadDC" nillable="true" type="tns:FileUploadDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFileUploadDC" nillable="true" type="tns:ArrayOfFileUploadDC" />
+</xs:schema>

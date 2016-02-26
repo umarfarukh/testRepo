@@ -1,0 +1,697 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=EDGE,IE=9,IE=8" />
+		<title>Personal Data Form</title>
+		<link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+		<link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+		<link type="text/css" rel="stylesheet" href="../../../../Styles/jquery.ui.all.css" />
+		<link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+		<link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+		<script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+        <script src="../../../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+        <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+		<script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>		
+		<script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+		<script src="../../../../Scripts/Forms/Switzerland/PersonalData.js" type="text/javascript"></script>		
+		<script type="text/javascript">
+			$(document).ready(function () {
+			$('#Pg_1_text_AHVNumber').bind('copy paste', function   {
+			e.preventDefault();
+			//alert("You cannot copy or paste text into this textbox!");
+			});
+			});
+
+
+
+
+		</script>
+
+
+		<style type="text/css">
+			.pd_india ul.personalDetails li.date_box LABEL.notMandatory {
+			margin-right: 0;
+			margin-left:50px;
+			}
+
+			.pd_india ul.personalDetails li.date_box label.alert_f_text{
+			float:left;
+			margin-left:-500px;
+			}
+			.pd_india ul.personalDetails li.date_box label.alert_f{
+			float:left;
+			margin-left:-500px;
+			}
+
+			.alignment ul.personalDetails li.align label.alert_f_text{
+			width:220px;
+			padding-left:0px;
+			}
+
+			.alignment1 ul.personalDetails li.align1 label.alert_f_text{
+			width:180px;
+			padding-left:0px;
+			}
+            .pd_india ul.personalDetails li.date_box1 label.alert_f_text{
+			    float: left; margin-top: 23px;
+			}
+			.pd_india ul.personalDetails li.date_box1 img.alert_f{
+			    float: left; margin-left: -170px;
+			}
+            .pd_india ul.personalDetails li.date_box1 input{
+			    width:145px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div id='baseContent'>
+			<div id="pageMain" class="personalDataForm">
+				<div id='headerContent'>
+					<div id="pagingControls">
+					</div>
+				</div>
+				<div id='PageContent' class='pagesContainer'>
+					<div class="pageData">
+						<div class="pageContent">
+							<div class="pageDetails pd_india alignment">
+								<ul class="personalDetails">
+									<div class="pageHeader">
+										<p>
+											Personal Details
+										</p>
+									</div>
+									<br />
+									<!--<p class="pageText" style="text-align:center;color:Red;">Please save your form periodically to avoid losing any data.</p>-->
+									<p class="pageText" style="text-align:justify">
+										In this section, we would like you to furnish your personal details. Please be informed that based on the information you provide, all important registrations pertaining to Tax, Social security, Pension Fund, Health Insurance etc will be initiated. Therefore, it is important that the information is furnished accurately.
+										This form can be modified until the Date of Joining. Once you join Cognizant, you can reach out to the HR team in Switzerland for any changes or clarifications.
+									</p>
+									<p class="pageText" style="text-align:justify">
+										All fields marked with an asterisk (<font color="red">*</font>) are mandatory. <font color="red">Please save your form periodically to avoid losing any data.</font>
+									</p>
+									<!--<p class="pageText" style="text-align:justify">Please be informed that based on the information you provide, all important registrations pertaining to Tax, Social security,
+                                Pension Fund, Health Insurance etc will be initiated. Therefore, it is important that the information is furnished accurately and in case of any changes, modified 
+                                in this form until the Date of Joining. For any additional information after you join Cognizant, you can reach out to HR Switzerland.</p>-->
+									<!--  <li>
+                                    <label>
+                                        Associate ID:</label>
+                                     <input type="text" id="Pg_1_assoid_tb" class="tbForm textMandatory OnlyNumeric" name="Assocaiate Id" title="Associate ID" 
+                                     jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.AssociateId" readonly="readonly" disabled="disabled" />
+                                </li>-->
+									<li>
+										<label for="FamilyName_form">
+											<span>*</span>
+											Family Name
+										</label>
+										<input type="text" id="Pg_1_familyname_tb" class="tbForm textMandatory onlyAlp" name="Family Name" readonly="readonly" disabled="disabled"
+										title="Famlily Name" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.LastName"    />
+									</li>
+									<li>
+										<label for="FirstName_form">
+											<span>*</span>
+											First Name
+										</label>
+										<input type="text" id="Pg_1_firstname_tb" class="tbForm textMandatory onlyAlp" readonly="readonly" disabled="disabled"
+										name="First Name" title="First Name" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.FirstName" readonly="readonly"  />
+									</li>
+
+									<li class="date_box">
+										<label>
+											<span>*</span>
+											Date of Birth
+										</label>
+										<input type="text" id="Pg_1_text_DateOfBirth" style="margin-right:0px"; jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.DOB"
+										 maxlength="30" readonly="readonly" title="Date of Birth" class="tbForm textMandatory jQryDOB"/>
+									</li>
+									<!--<li>
+                                    <label><span></span>
+                                        Gender</label>
+                                        <select class="tbForm dropdown" id="Pg_1_sex_ddl" name="Gender" unselectable="on" jqxb-datasource="FormDetails"
+                                        title="Gender" jqxb-datamember="PersonalData.Gender" jqxb-listsource="GenderList"
+                                        jqxb-listvalue="UserValue" jqxb-listtext="Description">
+                                    </select>                                        
+                                </li>-->								
+
+									<li>
+										<label>
+											<span>*</span>
+											Gender
+										</label>
+										<select class="tbForm dropdown" id="Select2" name="Gender" jqxb-datasource="FormDetails"
+                                        title="Gender" jqxb-datamember="PersonalData.Gender" jqxb-listsource="GenderList"
+                                        jqxb-listvalue="UserValue" jqxb-listtext="Description">
+										</select>
+									</li>
+
+
+
+									<li>
+										<label for="prefix_form">
+											<span>*</span>
+											Nationality
+										</label>
+										<select type="text" id="Pg_1_Nationality" class="tbForm dropdown" name="Nationality" title="Nationality" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Nationality"
+										jqxb-listsource="CountryList" jqxb-listvalue="ID" jqxb-listtext="Description" onchange="Nationality();countryhide();"></select>
+									</li>
+									<li id="Pg_2_MaritalStaus_list">
+										<label for="prefix_form" id="Pg_2_Marrital">
+											<span>*</span>
+											Marital Status:
+										</label>
+										<select id="Pg_1_maritalstatus_ddl" class="tbForm dropdown"  name="MaritalStatus" title="Marital Status"
+										 jqxb-datasource="FormDetails" jqxb-listsource="MaritalList" jqxb-datamember="PersonalData.Maritalstatus"
+										 jqxb-listvalue="ID" jqxb-listtext="Description" >
+											<!--onchange="marritalstatus()"-->
+
+										</select>
+									</li>
+									<li  class="date_box" id="Pg_2_Date_list" >
+										<label id="Pg_1_DOM_lbl" for="dateofissue" >
+											Effective Date
+										</label>
+
+										<input type="text" id="Pg_2_dom_tb"  jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.DOM"
+									 maxlength="30" readonly="readonly" title="Date of marriage" class="tbForm jQrydatepicker"/>
+									</li>
+									<li>
+										<label>
+											<span></span>
+											AHV Number(if available)
+										</label>
+										<input type="text" id="Pg_1_text_AHVNumber" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NationalID"
+										 title="AHV Number" onkeypress="RestrictCharCount(this.id,12)" allowchar="13" class="tbForm OnlyNumeric" />
+									</li>
+                                    <li>
+										<label>
+											Denomination/ConfessionNo <!--(To be filled in only for Swiss Nationals, if applicable)-->
+										</label>
+
+
+										<input type="text" id="Pg_1_denomination_tb" class="tbForm  Alphanumeric,notMandatory" title="Denomination"  onkeypress="RestrictCharCount(this.id,49)" allowchar="50"
+										jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Denomination" />
+									</li>                                    									
+									<li>
+										<label for="prefix_form" id="switz_permit">
+											Permit type for Switzerland:
+										</label>
+										<select class="tbForm" id="Pg_2_Permittype_ddl" jqxb-datasource="FormDetails" title="Permit type of Switzerland"  onchange="PermitType()"
+										jqxb-datamember="PersonalData.Permittype" jqxb-listsource="Permittype" jqxb-listvalue="UserValue" jqxb-listtext="Description"></select>
+										<!--onchange="PermitType();test();"-->
+
+									</li>
+									<li>
+										<label for="healthinsurance_form">
+											<span>*</span>
+											Do you have<br />Swiss Insurance:
+										</label>
+
+										<select class="tbForm dropdown" id="Pg_1_HealthInsurance_ddl" name="Swiss HealthInsurance" jqxb-datasource="FormDetails"
+						title="Swiss HealthInsurance" jqxb-datamember="PersonalData.SwissHealthInsurance" jqxb-listsource="YesOrNo"
+						jqxb-listvalue="UserValue" jqxb-listtext="Description" onchange="Insurance()">
+										</select>
+									</li>
+									<li class="align">
+										<label id="IfNo" style="font-size:0.8em;">
+											<span>*</span>
+											If yes, please provide name of <br />Swiss Health Insurance:
+										</label>
+										<input type="text" id="Pg_1_nameofswisshealthins_tb" class="tbForm"  onkeypress="RestrictCharCount(this.id,39)" allowchar="40"
+										name="The name of insurance" title="The name of insurance" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NameofSwissHealthInsurance"  />
+									</li>									
+                                    <li>
+										<label>
+											<span>*</span>Mobile Phone <br />
+											<p style="font-size: 0.8em;">
+												(Please enter your country code <br />followed by your mobile number <br />eg. 004178)
+											</p>
+										</label>
+										<!--   <input type="text" id="Pg_1_Mobile_txt" class="tbForm textMandatory OnlyNumeric" name="Mobile Number" title="MobileNumber" onkeypress="RestrictCharCount(this.id,14)" allowchar="15" 
+                               maxlength="15" jqxb-datamember="PersonalData.MobilePhone" jqxb-datasouce="FormDetails" />-->
+										<input type="text" id="Pg_1_Mobile_txt" class="tbForm textMandatory OnlyNumeric"   onkeypress="RestrictCharCount(this.id,23)" allowchar="24"
+												  name="Mobile Phone" title="Mobile Phone" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.MobilePhone"   />
+									</li>
+                                    <li></li>
+								</ul>
+								<ul class="personalDetails">
+									<div class="pageHeader">
+										<p>
+											Permanent Address
+										</p>
+									</div>
+									<br />
+									<li>
+										<label>
+											<span>*</span>
+											AddressLine1
+										</label>
+										<input type="text" id="Pg_1_text_PAddress1" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PermanentAddressLine1"
+										 class="tbForm textMandatory onlyAlphanumeric"
+										 maxlength="55" title="Please Enter the Addressline1" />
+									</li>
+									<li>
+										<label>
+											<span></span>
+											AddressLine2
+										</label>
+										<input type="text" id="Pg_1_text_PAddress2" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PermanentAddressLine2"
+										 class="tbForm onlyAlphanumeric"
+										 maxlength="55" title="Please Enter the Addressline2" />
+									</li>
+									<li>
+										<label>
+											<span>*</span>
+											City
+										</label>
+										<input type="text" id="Pg_1_text_PCity" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PermanentCity"
+										 class="tbForm textMandatory onlyAlp"
+										 maxlength="30" title="Please Enter the City" />
+									</li>
+									<li>
+										<label>
+											<span>*</span>
+											Zipcode
+										</label>
+										<input type="text" id="Pg_1_text_PZipcode" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PermanentPinCode"
+										 class="tbForm textMandatory AlphanumericOnly"  onkeypress="RestrictCharCount(this.id,12)" allowchar="12"
+										  title="Please Enter the ZIPcode" />
+									</li>
+									<li>
+										<label>
+											<span>*</span>
+											Country
+										</label>
+										<select class="tbForm dropdown" id="Pg_1_text_CurrentCountry" name="Gender" jqxb-datasource="FormDetails"
+											title="Country" jqxb-datamember="PersonalData.PermanentCountry" jqxb-listsource="CountryList"
+											jqxb-listvalue="ID" jqxb-listtext="Description">
+										</select>
+									</li>
+									<li >
+										<label>
+											<span>*</span>
+											Home Telephone
+										</label>
+										<input type="text" id="Pg_1_text_HomeTelephone" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.HomePhone"
+										 class="tbForm textMandatory OnlyNumeric" onkeypress="RestrictCharCount(this.id,14)" allowchar="15"
+										 title="Telephone" />
+									</li>
+								</ul>
+								<ul class="personalDetails">
+									<div class="pageHeader">
+										<p>
+											Present Address
+										</p>
+									</div>
+									<br />
+
+									<p class="pageText" style="text-align: justify">
+										In case you do not have a Swiss address as yet, kindly enter your current address as is. Once you have a
+										Swiss address, please be sure to notify the same to the HR team.
+									</p>
+									<li>
+										<input type="checkbox" jqxb-datasource="FormDetails" style='vertical-align: middle;'
+										 jqxb-datamember="PersonalData.IsSameCurrPermAddress" jqxb-bindedattribute="checked"
+										 onchange="ChkPemanentAddress()" id="chkpermAddress_form" />  Is Present Address same as Permanent Address?
+									</li>
+									<li></li>
+									<li>
+										<label>
+											<span>*</span>
+											AddressLine1
+										</label>
+										<input type="text" id="Pg_1_text_CAddress1" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.CurrentAddressLine1"
+										 class="tbForm textMandatory onlyAlphanumeric"
+										 maxlength="30" title="Please Enter the Addressline1" />
+									</li>
+									<li>
+										<label>
+											<span></span>
+											AddressLine2
+										</label>
+										<input type="text" id="Pg_1_text_CAddress2" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.CurrentAddressLine2"
+										 class="tbForm onlyAlphanumeric"
+										 maxlength="30" title="Please Enter the Addressline2" />
+									</li>
+									<li>
+										<label>
+											<span>*</span>
+											City
+										</label>
+										<input type="text" id="Pg_1_text_CCity" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.CurrentCity"
+										 class="tbForm textMandatory onlyAlp"
+										 maxlength="30" title="Please Enter the city" />
+									</li>
+									<li>
+										<label>
+											<span>*</span>
+											Zipcode
+										</label>
+										<input type="text" id="Pg_1_text_CZipcode" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.CurrentPinCode"
+										 class="tbForm textMandatory AlphanumericOnly"  onkeypress="RestrictCharCount(this.id,9)" allowchar="10"
+										  title="Please Enter the Zipcode" />
+									</li>
+									<li>
+										<label>
+											<span>*</span>
+											Country
+										</label>
+										<select class="tbForm dropdown" id="Pg_1_text_Country" name="Gender" jqxb-datasource="FormDetails"
+											title="Country" jqxb-datamember="PersonalData.CurrentCountry" jqxb-listsource="CountryList"
+											jqxb-listvalue="ID" jqxb-listtext="Description">
+										</select>
+									</li>
+								</ul>
+
+
+								<ul class="personalDetails">
+									<div class="pageHeader">
+										<p>
+											Emergency Contact Details
+										</p>
+									</div>
+									<br />
+									<li>
+										<label for="name">
+											<span>*</span>
+											Emergency Contact Name
+										</label>
+										<input type="text" id="Pg_2_text_Emergencyname" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.EmergencyContactName"
+										 class="tbForm textMandatory Alphaspecialchar"
+										 maxlength="30" title="Emename" />
+									</li>
+									<li>
+										<label for="relation">
+											<span>*</span>
+											Emergency Contact<br /> Relationship
+										</label>
+										<select class="tbForm dropdown" id="Pg_2_text_RelationShip" name="Relationship" jqxb-datasource="FormDetails"
+										 title="Emergency Contact Relation" jqxb-datamember="PersonalData.EmergencyContactRelationship"
+										 jqxb-listsource="RelationshipList" jqxb-listvalue="ID" jqxb-listtext="Description">
+										</select>
+									</li>
+									<li>
+										<label for="telefone">
+											<span>*</span>
+											Emergency Contact Phone
+										</label>
+										<input type="text" id="Pg_2_text_Emergencytelephone" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.EmergencyTelephone"
+										 class="tbForm textMandatory OnlyNumeric" onkeypress="RestrictCharCount(this.id,14)" allowchar="15"
+										  title="Emergency Contact Phone number" />
+									</li>
+									<li>
+										<label for="email">
+											Email address of<br /> Emergency Contact Person
+										</label>
+										<input type="text" id="Pg_3_text_EmergencyEmail" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.EmergencyEmail"
+									   class="tbForm"
+										title="Emergency Email Address" />
+									</li>
+								</ul>
+
+								<br />
+								<ul class="personalDetails">
+									<div class="pageHeader">
+										<p>
+											Passport Details
+										</p>
+									</div>
+									<br />
+									<li >
+										<label for="nameinpassport">
+											<span>*</span>
+											First Name
+										</label>
+										<input type="text" id="Pg_2_text_PassportName" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PassportName"
+										 class="tbForm textMandatory Alphaspecialchar"
+										 maxlength="30" title="Name as in passport" />
+									</li>
+
+									<li  class="pageText">
+										<label for="nameinpassport" class="notMandatory">
+											Middle Name
+										</label>
+										<input type="text" id="Text1" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PassportMiddleName"
+										 class="tbForm Alphaspecialchar"
+										 maxlength="30" title="Name as in Passport" />
+									</li>
+									<li>
+										<label for="nameinpassport">
+											<span>*</span>Last Name
+										</label>
+										<input type="text" id="Text2" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PassportLastName"
+										 class="tbForm textMandatory Alphaspecialchar"
+										 maxlength="30" title="Name as in Passport" />
+									</li>
+
+									<li>
+										<label for="number">
+											<span>*</span>
+											Passport Number
+										</label>
+										<input type="text" id="Pg_2_text_Number" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PassportNo"
+										 class="tbForm tbForm textMandatory"
+										 maxlength="30" title="Passport Number" />
+									</li>
+									<li class="date_box date_box1">
+										<label for="dateofissue">
+											<span>*</span>
+											Date Of Issue
+										</label>
+										<input type="text" id="Pg_1_text_Dateofissue" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PassportIssueDate"
+										 class="tbForm textMandatory jQrydatepicker"  readonly="readonly"
+										 title="Dateofissue" />
+									</li>
+									<li>
+										<label for="placeofissue">
+											<span>*</span>
+											Place Of Issue
+										</label>
+										<input type="text" id="Pg_2_text_Placeofissue" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PlaceOfIssue"
+										 class="tbForm textMandatory onlyAlp"
+										 maxlength="30" title="Placeofissue" />
+									</li>
+									<li class="date_box date_box1">
+										<label for="expirydate">
+											<span>*</span>
+											Expiry Date
+										</label>
+										<input type="text" id="Pg_1_text_Expirydate" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.PassportExpiryDate"
+										 class="tbForm textMandatory jQryExpdate" readonly="readonly"
+										  title="Expiry Date" />
+									</li>
+									<li>
+										<label for="countrylist">
+											<span>*</span>
+											Country of Issue
+										</label>
+										<select class="tbForm dropdown" id="PassportCountry" name="PassportCountry" jqxb-datasource="FormDetails"
+										  title="PassportCountry" jqxb-datamember="PersonalData.PassportCountry" jqxb-listsource="CountryList"
+										  jqxb-listvalue="ID" jqxb-listtext="Description">
+										</select>
+									</li>
+
+								</ul>
+
+
+							</div>
+						</div>
+					</div>
+					<!--  end of 1st page
+                        start of 2nd page-->
+					<div class="pageData">
+						<div class="pageContent">
+							<div class="pageDetails pd_india alignment1">
+								<ul class="personalDetails">
+									<div class="pageHeader">
+										<p>
+											Bank Details <br />
+										</p>
+									</div>
+									<p class="pageText" style="text-align: justify">Please enter your Swiss Bank account details only, as this will be used for salary processing. International bank details will not be considered valid</p>
+									<li>
+										<label for="account type">
+											Account Type
+										</label>
+										<select class="tbForm" id="Pg_2_text_accounttype_form" name="AccountType" jqxb-datasource="FormDetails"
+										 title="Account Type" jqxb-datamember="PersonalData.AccountType" jqxb-listsource="AccountTypeList"
+										 jqxb-listvalue="UserValue" jqxb-listtext="Description">
+										</select>
+									</li>
+									<li>
+										<label for="accountholder">
+											Name as on the Account
+										</label>
+										<input type="text" id="Pg_2_text_accountholder" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.BankAccountName"
+										 class="tbForm  Alphaspecialchar"
+										 maxlength="30" title="AccountName" />
+									</li>
+									<li>
+										<label for="nr">
+											IBAN Number
+										</label>
+										<input type="text" id="Pg_2_text_nr" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.BankAccountNo"
+										 class="tbForm" onkeypress="RestrictCharCount(this.id,35)" allowchar="35"
+										 title="IBAN Number" />
+									</li>
+
+
+									<li>
+										<label for="swiftcode">
+											SWIFT Code
+										</label>
+										<input type="text" id="Pg_2_text_swiftcode" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.SortCode"
+										 class="tbForm" onkeypress="RestrictCharCount(this.id,11)" allowchar="11"
+										 maxlength="11" title="SwiftCode" />
+									</li>
+									<li>
+										<label for="countrylist">
+											Country
+										</label>
+										<select class="tbForm" id="Pg_2_text_Country_form" name="BankCountry" jqxb-datasource="FormDetails"
+										  title="BankCountry" jqxb-datamember="PersonalData.BankCountry" jqxb-listsource="CountryList"
+										  jqxb-listvalue="ID" jqxb-listtext="Description">
+										</select>
+									</li>
+								</ul>
+								<div  id="Non_Swiz" class="alignment1">
+									<ul class="personalDetails">
+										<div class="pageHeader">
+											<p>Taxation Details (for non-Swiss Nationals only)</p>
+										</div>
+										<br />
+										<p class="pageText">
+											If you are a Swiss citizen or a Swiss C-permit holder, this section is not applicable.
+										</p>
+										<p class="pageText">
+											We would need the following additional information from you to determine your tax status. You can leave the fields which are not applicable to you as blank.
+										</p>
+										<!--                            <p class="pageText" style="font-weight:bold"><u>Employee</u>
+                            </p>-->
+										<li>
+											<label style="font-weight:bold">
+												<u>Employee</u>
+											</label>
+										</li>
+										<li></li>
+										<br />
+										<li id="Pg_2_CantonofResidence_list">
+											<label for="prefix_form">
+												Canton of Residence
+											</label>
+											<input type="text" id="Pg_2_Cantonofresidence_txt" class="tbForm onlyAlphanumeric" name="Canton of Residence" title="Canton of Residence" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.CantonofResidence" onkeypress="RestrictCharCount(this.id,29)" allowchar="30" />
+										</li>
+										<li id="Pg_2_NumberofChildren_list">
+											<label for="prefix_form">
+												Number of Children:
+											</label>
+											<input type="text" id="Pg_2_Numberofchildren_txt" class="tbForm OnlyNumeric " name="Number of Children" title="Number of Children" onkeypress="RestrictCharCount(this.id,1)" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NumberofChildren" />
+										</li>
+										<li id="Pg_2_Zar_list">
+											<label>
+												Zar/Zemis Number <br />(available on your Permit Card)
+											</label>
+											<input type="text" id="Pg_2_zar_txt"  class="tbForm onlyAlphanumeric" title="zar number" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Zarnumber" onkeypress="RestrictCharCount(this.id,19)"/>
+										</li>
+										<li id="Pg_2_Permit_list">
+											<label for="prefix_form" style="font-size: 0.8em;">
+												If you are G Permit Holder<br /> (Border Crosser)<br />please specify how often <br />do you return?
+											</label>
+											<select id="Pg_2_Permit_txt" class="tbForm" jqxb-datasource="FormDetails" title="Permitlist" jqxb-datamember="PersonalData.Permitlist" jqxb-listsource="Permitlist" jqxb-listvalue="UserValue" jqxb-listtext="Description">
+											</select>
+										</li>
+										<li></li>
+										<li></li>
+										<!--  <p class="pageText" style="font-weight:bold"><u>Spouse/Partner</u>
+                            </p>-->
+										<li>
+											<label style="font-weight:bold">
+												<u>Spouse/Partner</u>
+											</label>
+										</li>
+										<li></li>
+										<li id="Pg_2_NtionalityofSpouse_list">
+											<label for="prefix_form">
+												Nationality of spouse:
+											</label>
+											<select  id="Pg_2_Nationalityofspouse_txt" class="tbForm" jqxb-listsource="CountryList" jqxb-listvalue="ID" jqxb-listtext="Description" name="Nationality of spouse" title="Nationality of spouse" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.NationalityofSpouse">
+											</select>
+										</li>
+										<li id="Pg_2_CountryofSpouse_list">
+											<label for="prefix_form">
+												Country of residence of spouse:
+											</label>
+											<select id="Pg_2_Country_ddl" class="tbForm" name="Country of spouse" title="Country of spouse"  id="Pg_2_CountryofSpouse_txt" jqxb-datamember="PersonalData.Countryofspouse" jqxb-datasource="FormDetails"   jqxb-listsource="CountryList"
+			 jqxb-listvalue="ID" jqxb-listtext="Description" onchange="Country();">
+											</select>
+										</li>
+										<li id="Pg_2_SpousePermit   list" class="align1">
+											<label for="prefix_form" id="Pg_2_SpousePermitType_list">
+												Type of permit of spouse<br />
+												<p style="font-size: 0.8em;">
+													(Please select Permit type if
+													<br /> country of residence is switzerland)
+												</p>
+											</label>
+											<select class="tbForm" id="Pg_2_Typeofpermitofspouse_txt" jqxb-datasource="FormDetails" title="Permit type of Spouse" jqxb-datamember="PersonalData.TypeofPermitofSpouse" jqxb-listsource="Permittype" jqxb-listvalue="UserValue" jqxb-listtext="Description">
+											</select>
+										</li>
+										<li id="Pg_2_IsWorking_list">
+											<label for="prefix_form">
+												Is she/he employed in<br /> Switzerland?
+											</label>
+											<select class="tbForm" id="Pg_2_EmployeInfo_ddl"  jqxb-datasource="FormDetails" title="Working " jqxb-datamember="PersonalData.Working" jqxb-listsource="YesOrNo" onchange="EmployeeInfo();showhide();" jqxb-listvalue="UserValue" jqxb-listtext="Description">
+											</select>
+										</li>
+										<li id="Pg_2_Employer_list">
+											<label for="prefix_form" id="Pg_2_EmployerName_list">
+												Employer name:
+											</label>
+											<input type="text" id="Pg_2_employer_txt" class="tbForm  onlyAlphanumeric"  title="Employer name" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.EmployerName" onkeypress="RestrictCharCount(this.id,49)" allowchar="50"/>
+										</li>
+										<li id="Pg_2_Volumelist">
+											<label for="volume of work" id="Pg_2_Volume_list">
+												Volume of work (in %):
+											</label>
+											<input type="text" id="Pg_2_volumeofwork_txt" class="tbForm OnlyNumeric" name="Volume of work" title="Volume of work" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.VolumeofWork" onkeypress="RestrictCharCount(this.id,2)" allowchar="3"/>
+										</li>
+										<li id="Pg_2_Salarylist">
+											<label for="salry" id="Pg_2_Salary_list">
+												Yearly Base Salary(in CHF):
+											</label>
+											<input type="text" id="Pg_2_salry_txt" class="tbForm OnlyNumeric" name="yearly base salary" title="yearly base salary" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.BaseSalary" onkeypress="RestrictCharCount(this.id,14)" allowchar="15"/>
+										</li>
+										<li id="Pg_2_AHVNO">
+											<label id="Pg_2_AHV">
+												AHV No of Spouse
+											</label>
+											<input type='text' id="pg_2_AHVNo_txt" class="tbForm OnlyNumeric" title="AHV No" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.AHVNo" onkeypress="RestrictCharCount(this.id,12)" allowchar="13"/>
+										</li>
+										<li></li>
+										<li></li>
+									</ul>
+									<p class="pageText" style="text-align:justify">
+										<u>Important:</u>
+										Based on the above mentioned information, our payroll team  will initiate your tax registration. Any change to your family status – eg arrival or departure of any family member – or change in employment status of spouse, change in canton of residence etc. could lead to a tax tariff change. Hence, in case of changes once you join Cognizant, please be sure to notify the Payroll Team.
+									</p>
+								</div>
+								<br />
+							</div>
+							<div class="Signature" id="Sign_PageId_2">
+							</div>
+						</div>
+					</div>
+					<!-- END OF 2ND PAGE -->
+				</div>
+				<div id="footerContent">
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
+
+
+
+
+

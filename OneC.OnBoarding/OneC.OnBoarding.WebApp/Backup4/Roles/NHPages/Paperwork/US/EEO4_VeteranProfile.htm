@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Veteran Profile</title>
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .inputText_Readonly
+        {
+            background-color: InactiveCaptionText;
+            font-size: 15px;
+            padding: 3px 5px 2px;
+            border: 1px solid #ccc !important;
+            background: #f0f0f0;
+            color: #888 !important;
+            cursor: default;
+        }
+        .color .spanRed
+        {
+            color: Red;
+            text-decoration: none;
+            display: inline;
+            padding-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id='pageMain'>
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="page_header11">
+                                <img style="float: left; margin: 0 0 0 0; width: 170px; height: 50px;" src="../../../../Images/ctslogo1.jpg" />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <p style="text-align: center; font-family: Sans-Serif; font-size: 11pt;">
+                                    Voluntary Veteran Profile</p>
+                                <br />
+                            </div>
+                            <div>
+                                <p class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                    For Cognizant’s Veterans Initiative, we are collecting data on US Military Veterans
+                                    that have joined Cognizant. With your participation, we hope to strengthen our Veterans
+                                    in Technology Initiative by creating networks, mentorships, training, and development
+                                    opportunities for our veteran’s community at Cognizant.
+                                </p>
+                                <br />
+                                <p class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                    Please note that disclosure of this information is completely voluntary, and refusing
+                                    to provide it will not subject you to any adverse treatment. This information will
+                                    be used to keep you informed about networking events and other employee engagement/recognition
+                                    initiatives.
+                                </p>
+                                __________________________________________________________________________________________________________________________________________________________________________<br />
+                                <br />
+                                <div class="page_header11">
+                                    <p style="text-align: left; font-family: Sans-Serif; font-size: 11pt;">
+                                        General Information</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <label>
+                                                Name :</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input type="text" title="Name" id="Name" class="tbForm onlyAlp" style="width: 150px;"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="EEO4.Name" readonly="readonly"
+                                                disabled="disabled" />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <label>
+                                                Associate ID :</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input type="text" title="Associate ID" id="Assid" class="tbForm" readonly="readonly"
+                                                disabled="disabled" jqxb-datasource="FormDetails" jqxb-datamember="EEO4.Assid" />
+                                        </div>
+                                    </li>
+                                </ul>
+                                __________________________________________________________________________________________________________________________________________________________________________<br />
+                                <br />
+                                <div class="page_header11">
+                                    <p style="text-align: left; font-family: Sans-Serif; font-size: 11pt;">
+                                        What branch of the United States Military did you serve?</p>
+                                </div>
+                                <table class="pageText" width="900px" style="margin-left: 20px; font-family: Sans-Serif;
+                                    font-size: 11pt;">
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="BR1" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.branch1" jqxb-bindedattribute="checked" onclick="EnableBranch1();" />
+                                            Army
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="BR2" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.branch2" jqxb-bindedattribute="checked" onclick="EnableBranch2();" />
+                                            Marine Corps
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="BR3" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.branch3" jqxb-bindedattribute="checked" onclick="EnableBranch3();" />
+                                            Navy
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="BR4" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.branch4" jqxb-bindedattribute="checked" onclick="EnableBranch4();" />
+                                            Air Force
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="BR5" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.branch5" jqxb-bindedattribute="checked" onclick="EnableBranch5();" />
+                                            Coast Guard
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="BR6" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.branch6" jqxb-bindedattribute="checked" onclick="EnableBranch6();" />
+                                            Army Reserve
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="BR7" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.branch7" jqxb-bindedattribute="checked" onclick="EnableBranch7();" />
+                                            Marine Corps Reserve
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="BR8" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.branch8" jqxb-bindedattribute="checked" onclick="EnableBranch8();" />
+                                            Navy Reserve
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="BR9" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.branch9" jqxb-bindedattribute="checked" onclick="EnableBranch9();" />
+                                            Air Force Reserve
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="BR10" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.branch10" jqxb-bindedattribute="checked" onclick="EnableBranch10();" />
+                                            Coast Guard Reserve
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="BR11" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.branch11" jqxb-bindedattribute="checked" onclick="EnableBranch11();" />
+                                            Army National Guard
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="BR12" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.branch12" jqxb-bindedattribute="checked" onclick="EnableBranch12();" />
+                                            Air National Guard
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                </table>
+                                __________________________________________________________________________________________________________________________________________________________________________<br />
+                                <br />
+                                <div class="page_header11">
+                                    <p style="text-align: left; font-family: Sans-Serif; font-size: 11pt;">
+                                        How many years did you serve in the United States Military?</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="one" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.one" jqxb-bindedattribute="checked" onclick="EnableOne();" />
+                                            < 1 year
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="five" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.five" jqxb-bindedattribute="checked" onclick="EnableFive();" />
+                                            1 – 5 years
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="ten" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.ten" jqxb-bindedattribute="checked" onclick="EnableTen();" />
+                                            6 – 10 years</div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="fifteen" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.fifteen" jqxb-bindedattribute="checked" onclick="EnableFifteen();" />
+                                            11 – 15 years
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="tewnty" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.twenty" jqxb-bindedattribute="checked" onclick="EnableTwenty();" />
+                                            16 – 20 years
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="grttwenty" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.grttwenty" jqxb-bindedattribute="checked" onclick="EnableGrttwenty();" />
+                                            > 20</div>
+                                    </li>
+                                </ul>
+                                __________________________________________________________________________________________________________________________________________________________________________<br />
+                                <br />
+                                <div class="page_header11">
+                                    <p style="text-align: left; font-family: Sans-Serif; font-size: 11pt;">
+                                        Discharge Information</p>
+                                </div>
+                                <div class="page_header11">
+                                    <p style="text-align: left; font-family: Sans-Serif; font-size: 11pt;">
+                                        Please upload you DD214 form by clicking the “Go” button below</p>
+                                </div>
+                                <div fu-upid="789T00" fu-rnid="0" fu-ui="customUI">
+                                </div>
+                                <div class="page_header11">
+                                    <p style="text-align: left; font-family: Sans-Serif; font-size: 11pt;">
+                                        What was your final rank at the time of your discharge ?</p>
+                                </div>
+                                <ul style="font-family: Sans-Serif; font-size: 11pt;">
+                                    <li>
+                                        <div class="pageText">
+                                            <input type="text" id="rank" style="vertical-align: middle; border: 1px solid Black;"
+                                                jqxb-datasource="FormDetails" maxlength="150" jqxb-datamember="EEO4.rank" title="Rank in Discharge"
+                                                name="Rank in Discharge" onkeypress="RestrictCharCount(this.id,149)" allowchar="150" />
+                                        </div>
+                                    </li>
+                                </ul>
+                                __________________________________________________________________________________________________________________________________________________________________________<br />
+                                <br />
+                                <div class="page_header11">
+                                    <p style="text-align: left; font-family: Sans-Serif; font-size: 11pt;">
+                                        What was the discharge type?</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="Honorable" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.Honorable" jqxb-bindedattribute="checked" onclick="EnableHonorable();" />
+                                            Honorable
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="General" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.General" jqxb-bindedattribute="checked" onclick="EnableGeneral();" />
+                                            General
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="Others" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.Others" jqxb-bindedattribute="checked" onclick="EnableOthers();" />
+                                            Other</div>
+                                    </li>
+                                </ul>
+                                __________________________________________________________________________________________________________________________________________________________________________<br />
+                                <br />
+                                <div class="page_header11">
+                                    <p style="text-align: left; font-family: Sans-Serif; font-size: 11pt;">
+                                        Education / Experience</p>
+                                </div>
+                                <div class="page_header11">
+                                    <p style="text-align: left; font-family: Sans-Serif; font-size: 11pt;">
+                                        Please check your highest level of education</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="School" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.School" jqxb-bindedattribute="checked" onclick="EnableSchool();" />
+                                            High School
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="College" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.College" jqxb-bindedattribute="checked" onclick="EnableCollege();" />
+                                            Some College
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="Bachelor" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.Bachelor" jqxb-bindedattribute="checked" onclick="EnableBachelor();" />
+                                            Bachelor's</div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="Master" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.Master" jqxb-bindedattribute="checked" onclick="EnableMaster();" />
+                                            Master's
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="Doctorate" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.Doctorate" jqxb-bindedattribute="checked" onclick="EnableDoctorate();" />
+                                            Doctorate</div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <label>
+                                                Major/Concentration of any Degree(s) you hold:</label>
+                                            <input type="text" id="major" style="vertical-align: middle; border: 1px solid Black;"
+                                                jqxb-datasource="FormDetails" maxlength="300" jqxb-datamember="EEO4.major" title="Major Degree"
+                                                name="Major Degree" onkeypress="RestrictCharCount(this.id,299)" allowchar="300" />
+                                        </div>
+                                    </li>
+                                </ul>
+                                __________________________________________________________________________________________________________________________________________________________________________<br />
+                                <br />
+                                <div class="page_header11">
+                                    <p style="text-align: left; font-family: Sans-Serif; font-size: 11pt;">
+                                        How many years of relevant work experience do you have outside of your military
+                                        service?</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="Radio1" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.oneexp" jqxb-bindedattribute="checked" onclick="EnableOneExp();" />
+                                            < 1 year
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="Radio2" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.fiveexp" jqxb-bindedattribute="checked" onclick="EnableFiveExp();" />
+                                            1 – 5 years
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="Radio3" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.tenexp" jqxb-bindedattribute="checked" onclick="EnableTenExp();" />
+                                            6 – 10 years</div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="Radio4" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.fifteenexp" jqxb-bindedattribute="checked" onclick="EnableFifteenExp();" />
+                                            11 – 15 years
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="Radio5" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.twentyexp" jqxb-bindedattribute="checked" onclick="EnableTwentyExp();" />
+                                            16 – 20 years
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pageText" style="font-family: Sans-Serif; font-size: 11pt;">
+                                            <input type="radio" id="Radio6" style="vertical-align: middle;" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="EEO4.grttwentyexp" jqxb-bindedattribute="checked" onclick="EnableGrttwentyExp();" />
+                                            > 20</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End  of 1st Page-->
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/JSON.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/UploadUtility.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/US/EEO4_VeteranProfile.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var customUI = {
+            uploadBtnTxt: 'GO'
+            //,btnStyle: "height:24px;min-width:60px;cursor:pointer;margin:2px 0 4px 0;padding:0 4px 0 4px;border: 1px solid #5482a3;color:#fff;font-weight:bold;text-align:center;vertical-align:middle;border-radius:3px;background-color:#396584;"
+        }
+    </script>
+</body>
+</html>

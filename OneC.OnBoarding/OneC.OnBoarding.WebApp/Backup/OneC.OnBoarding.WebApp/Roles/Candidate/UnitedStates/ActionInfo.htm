@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title></title>
+    <script type="text/javascript" src="../../../Scripts/JQuery/1.8/jquery.js"></script>
+    <script type="text/javascript" src="../../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js"></script>
+    <script src="ActionInfo.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../../Scripts/JQuery/jquery.ui.datepicker.js"></script>
+    <script type="text/javascript" src="../../../Scripts/Validations.js"></script>
+<!--    <script type="text/javascript" src="../../../Scripts/JQuery/jquery.alerts.js"></script>-->
+    <link href="../../../Styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../../Styles/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Styles/Calender.Css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="mid_content">
+    <div class="personal_details_content test">
+        <div class="inner_header">
+            <div class="flft">Date of Joining</div>
+        </div>
+        <div id="dojactions"class="inner_mid_content_actionsdoj" style="width: 950px;" >
+          <ul class="flft">
+         <!-- <div id="divdoj">-->
+            <div id="normaljoiner">
+           <li style="width:36%;">
+            <label for="EDOJ">Expected date of joining(from Chire):</label>
+            <span><input type="text" class="txtbx_action" name="EDOJ"  id="EDOJInputBox" readonly="readonly"/></span>
+            </li> 
+            </div>
+            <div id="smabovejoiner">
+           <li style="width:350px;">
+            <label for="EDOJ">Expected date of joining(from Chire):</label>
+            <span><input type="text" class="txtbx_action" name="EDOJ"  id="smabovedoj"/></span>
+            </li> 
+            </div>
+            <div><input title="UpdateDoj" id="btn_UpdateDoj" onclick="UpdateDOJ();" style="background-color:#808080;color:#ffffff;font-size: 12px;text-align: left; margin-left:5px;margin-bottom:8px;margin-top:8px; width:76px;padding-left:3px;cursor:pointer;" type="button"alt="UpdateDOJ" value="Update DOJ"/></div>
+            <li style="margin-right: 0px;width: 350px;margin-left: 95px;margin-top:-30px; margin-top: -20px;">Candidate Comments:</label>
+                    <span><textarea id="pg2_CandComments" cols="25" rows="4" resize="none"></textarea></span>
+                    </li> 
+                    
+                  <div id="smbelow">
+                    <li>
+                        <label for="EDOJ">Requested date of joining:</label>
+                        <span>
+                            <input type="text" class="txtbx_action" name="EDOJ"  id="ReqDOJInputBox" readonly="readonly" style="margin-right:36px;"/>
+                        </span>
+                    </li> 
+                    </div>
+                  <div id="smabove">
+                     <li>
+                        <div><label>Orientation Date:</label> 
+                       <!-- <div>-->
+                       <span>
+                            <input type="text" class="txtbx_action"  id="txt_Orientatndte" readonly="readonly" disabled="disabled"/>
+                            </span>
+                           <!--<select style="text-align: left; margin-left:5px; margin-bottom:8px; width:90px; "id="EDOJ" name="EDOJ" 
+                            class="select"></select>-->
+                        </div>
+                    </li> 
+                    </div> 
+
+                    <li>
+                    
+                    </li>
+                    <li style="margin-left:50px;">
+                    <span id="mandsign"style="color:Red; margin-bottom:10px;float:left">*</span>
+                   <input title="Accept DOJ" class="btnAccpRej" id="btn_acceptDOJ" onclick="AcceptDOJ(candidateid,1);" style="background-color:#808080;color:#ffffff;font-size: 12px;text-align: left; margin-left:5px;margin-bottom:8px;margin-top:8px; width:100px;cursor:pointer;" type="button"alt="Accept DOJ" value="Accept"/>
+                   <input title="Reject DOJ" class="btnAccpRej" id="btn_rejectDOJ" onclick="DOJConfirm(candidateid,2);" style="background-color:#808080;color:#ffffff;font-size: 12px;text-align: left; margin-left:5px;margin-bottom:8px;margin-top:8px; width:100px;cursor:pointer;" type="button"alt="Reject DOJ" value="Reject"/> 
+                    </li> 
+                    <li id="reasonli" style="width:50%;margin-top: -10px;">
+                     <label for="reason" id="reason" style="margin-left:12px;">Reason for approval/rejection:</label>
+                     <label for="reason" id="reason1" style="margin-left:32px;">(applicable only if approval is required)</label>
+                     <span id="reasontxt" style="margin-right:60px;"><textarea id="txt_reason" cols="25" rows="4" name="reason" resize="none"></textarea> </span>
+                    </li>
+          <!-- </div>-->
+          </ul>
+          <div id="txt_Accept" style="color:red;font-weight:bold;font-size: 12px;height:20px;text-align:left;clear:both;">'Accept' and 'Reject' buttons will be enabled if approval is required.</div>
+        <div id="msgExpeDOJ" style="color:Green;font-weight:bold;font-size: 12px;height:20px;text-align:center;clear:both;Display:none;">Expected date of joining updated successfully!</div>
+        <div id="msgConfirmdoj" style="color:Green;font-weight:bold;font-size: 12px;height:20px;text-align:center;clear:both;Display:none">Confirmed successfully.</div>
+        </div>
+        <div class="clear"></div>
+        <div class="inner_header">
+            <div class="flft">Other Actions</div>
+        </div>
+        <div id="divactions" class="inner_mid_content_actions" style="width: 950px;">
+            <ul class="flft">
+                <div id="divLateral">
+                    <li>
+                        <div><label>E-mail</label></div>
+                        <div>
+                            <input type="text" id="emailid" class="txtbx5" />
+                            <input type="hidden" id="hdnEmailId" />
+                        </div>
+                    </li>
+              <!--      <div id="smbelow">
+                    <li style="width: 160px;padding-left: 0px;">
+                        <div><label>Expected date of joining</label></div> 
+                        <div>
+                            <input type="text" class="txtbx_action"  id="EDOJInputBoxPayRl" readonly="readonly"/>
+                        </div>
+                    </li>
+                    </div>-->
+
+
+                    <!--<div id="smabove">
+                     <li style="width: 300px;padding-left: 0px;">
+                        <div><label>Expected Date Of Joining Confirmation/Change</label></div> 
+                        <div>
+                            <!--<input type="text" class="txtbx_action"  id="Text1" readonly="readonly"/>-->
+                  <!--          <select style="text-align: left; margin-left:5px; margin-bottom:8px; width:90px; "id="EDOJ" name="EDOJ" 
+                            class="select"></select>
+                        </div>
+                    </li> 
+                    </div> -->
+                                      
+                    <li id="divapprovalflagbutton" style="display:none;width:135px">
+                        <div>&nbsp;</div>
+                        <div>
+                            <input type="button" style="background-color:#808080;color:#ffffff;font-size: 12px;cursor:pointer;" value="UnsetAssetApprovalFlag" id="btnUnsetapproval" title="Do you want to stop the processing of an exception asset for this candidate?" />
+                            <input type="button" style="background-color:#808080;color:#ffffff;font-size: 12px;cursor:pointer;" value="SetAssetApprovalFlag"  id="btnsetapproval" title="Do you want to process an asset for this candidate as an exception?" />
+                        </div>
+                    </li>
+                    
+                    <li id="divfileuploadlink" style="display:none;width:120px">
+                        <div>&nbsp;</div>
+                        <div>
+                            <p id="lnkfileuploadpopup" style="cursor:pointer;color: #0000FF;text-decoration: underline; width:180px; margin-left:20px;">Upload Asset Approval Mail</p>
+                        </div>
+                    </li>
+                    <li id="divContractorERlink" style="display:none;width:150px;">
+                        <div>&nbsp;</div>
+                        <div>
+                            <p id="ContractorERlink" style="cursor:pointer;color: #0000FF;text-decoration: underline">Update Equipment Details</p>
+                        </div>
+                    </li>
+                </div>
+                <div class="clear"></div>
+                <div id="ResendDiv">
+                    <li style="margin-left:4px; width:155px;height:10px">
+                        <div>
+                            <div class="cst_checkbox_container">
+                                <div>
+                                    <input type="checkbox" name="Resend" id="ResendCheckbox" />
+                                </div>
+                            </div>
+                        </div>
+                        <div> 
+                            <label style="text-align:left">Resend Welcome Mail</label>
+                        </div>
+                    </li>
+                     <li style="margin-left:4px; width:155px;height:10px">
+                        <div>
+                            <div class="cst_checkbox_container">
+                                <div>
+                                    <input type="checkbox" name="Resend" id="ResendI9Checkbox" />
+                                </div>
+                            </div>
+                        </div>
+                        <div> 
+                            <label style="text-align:left">Resend I9 Mail</label>
+                        </div>
+                    </li>
+                </div>
+                <div class="clear"></div>
+               <!--<div id="divjoiningstatusNA" style="width:100%; ">
+                  <li id="lblJoiningstatu" style="text-align: left; margin-left:5px; width:90px; height:15px;">Joining status</li>
+                  <li id="lblJoiningcomment" style="text-align: left; margin-left:10px; width:90px; height:15px;">Comment</li>
+                        <div class="clear"></div>
+                    <div style="width:100%">
+                        <select style="text-align: left; margin-left:5px; margin-bottom:8px; width:90px; "id="JoiningStatusNA"  onchange="SelectionJoiningStatus();" name="status" class="select"></select>
+                        <input style="text-align: left; margin-left: 5px; margin-bottom:8px; width:250px;" type="text" class="Comment"  id="txtDojconfirmComment"  maxlength="250" />
+                        <input title="Confirm DOJ" id="dojconfirm" style="background-color:#808080;color:#ffffff;font-size: 12px; margin-left:5px; margin-top:5px;cursor:pointer;"  onclick="DOJConfirm(candidateid);" type="button"alt="ConfirmDOJ" value="ConfirmDOJ"/>
+                        <!--<input title="Send a mail to Notify NSS to cancel ER request" id="cancelERRequest" style="background-color:#808080;color:#ffffff;font-size: 12px;text-align: left; margin-left:5px;margin-bottom:8px;margin-top:8px; width:130px;cursor:pointer;"  onclick="CancelERRequest(candidateid);" type="button"alt="CancelERRequest" value="CancelERRequest"/>-->
+                  <!--      </div>
+                </div>-->
+                <div id="divERRequestStatus">
+                 <input title="ER RequestHold" id="holdERProcess" style="background-color:#808080;color:#ffffff;font-size: 12px;text-align: left; margin-left:5px;margin-bottom:8px;margin-top:8px; width:130px;cursor:pointer;"  onclick="HoldERRequest(candidateid);" type="button"alt="HoldERRequest" value="HoldERRequest"/>
+                 <input title="ER RequestRelease" id="releaseERProcess" style="background-color:#808080;color:#ffffff;font-size: 12px;text-align: left; margin-left:5px;margin-bottom:8px;margin-top:8px; width:130px;cursor:pointer;"  onclick="ReleaseERRequest(candidateid);" type="button"alt="ReleaseERRequest" value="ReleaseERRequest"/>
+                </div>
+                <div>
+                        <img style="text-align: left; margin-left:5px;  margin-top: 5px;cursor:pointer;" src="../../../Images/updatebtn.png" title="Update" id="btnApplyLateral" alt="UpdateButton" />
+                </div>
+                <div id="msg" style="color:Green;font-weight:bold;font-size: 12px;height:20px;text-align:center;clear:both;Display:none">Updated Successfully</div>
+                <div id="msgunlock" style="color:Green;font-weight:bold;font-size: 12px;height:20px;text-align:center;clear:both;Display:none">Unlocked Successfully</div>
+                <div id="msgCancelERRequest" style="color:Green;font-weight:bold;font-size: 12px;height:20px;text-align:center;clear:both;Display:none">updated successfully.The mail will be triggered to NSS.</div>
+                
+                </ul>
+        </div>
+         </div>
+
+    </div> 
+</body>
+</html>

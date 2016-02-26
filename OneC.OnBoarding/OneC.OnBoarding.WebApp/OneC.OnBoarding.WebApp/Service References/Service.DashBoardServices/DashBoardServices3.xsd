@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" elementFormDefault="qualified" targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/DashBoardDC/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="DashBoardDataPagination">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ApprovalDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PageSize" type="xs:long" />
+          <xs:element minOccurs="0" name="PageNo" type="xs:long" />
+          <xs:element minOccurs="0" name="RowNumber" type="xs:long" />
+          <xs:element minOccurs="0" name="TotalRecords" type="xs:long" />
+          <xs:element minOccurs="0" name="Excel" type="xs:long" />
+          <xs:element minOccurs="0" name="PreJoiningCount" type="xs:long" />
+          <xs:element minOccurs="0" name="PostJoiningCount" type="xs:long" />
+          <xs:element minOccurs="0" name="ProcessId" type="xs:long" />
+          <xs:element minOccurs="0" name="LaptopCount" type="xs:long" />
+          <xs:element minOccurs="0" name="CellPhoneCount" type="xs:long" />
+          <xs:element minOccurs="0" name="BlackberryCount" type="xs:long" />
+          <xs:element minOccurs="0" name="ClientEquipmentCount" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DashBoardDataPagination" nillable="true" type="tns:DashBoardDataPagination" />
+  <xs:complexType name="ApprovalDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RequestId" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="GroupType" type="xs:int" />
+      <xs:element minOccurs="0" name="TrackingInfo" type="xs:int" />
+      <xs:element minOccurs="0" name="RequestStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" type="xs:int" />
+      <xs:element minOccurs="0" name="RequestApprovedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PendingTo" type="xs:int" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestStatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="RequestStatusDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Laptop" type="xs:int" />
+      <xs:element minOccurs="0" name="Cellphone" type="xs:int" />
+      <xs:element minOccurs="0" name="Blackberry" type="xs:int" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:long" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:long" />
+      <xs:element minOccurs="0" name="LaptopApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="CellphoneApproverId" type="xs:int" />
+      <xs:element minOccurs="0" name="BlackberryApproverId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApprovalDetails" nillable="true" type="tns:ApprovalDetails" />
+  <xs:complexType name="AdminDashBoard">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CandidateId" type="xs:int" />
+      <xs:element minOccurs="0" name="TaskId" type="xs:int" />
+      <xs:element minOccurs="0" name="FileUploadId" type="xs:int" />
+      <xs:element minOccurs="0" name="FileUploadStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="FileUploadURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileUploadStatusDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RejectionDate" nillable="true" type="xs:string" />
+      <xs:element name="SessionId" type="xs:long" />
+      <xs:element minOccurs="0" name="Role" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileScanStatus" nillable="true" type="xs:string" />
+      <xs:element name="TaskStatus" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdminDashBoard" nillable="true" type="tns:AdminDashBoard" />
+  <xs:complexType name="TMDashboardData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DepartmentDataList" nillable="true" type="tns:ArrayOfDepartmentData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TMDashboardData" nillable="true" type="tns:TMDashboardData" />
+  <xs:complexType name="ArrayOfDepartmentData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DepartmentData" nillable="true" type="tns:DepartmentData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDepartmentData" nillable="true" type="tns:ArrayOfDepartmentData" />
+  <xs:complexType name="DepartmentData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DepartmentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DepartmentCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DepartmentData" nillable="true" type="tns:DepartmentData" />
+  <xs:complexType name="NssDashboardData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DesignationDescList" nillable="true" type="tns:ArrayOfDesignationData" />
+      <xs:element minOccurs="0" name="LocationDescList" nillable="true" type="tns:ArrayOfDesignationData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NssDashboardData" nillable="true" type="tns:NssDashboardData" />
+  <xs:complexType name="ArrayOfDesignationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DesignationData" nillable="true" type="tns:DesignationData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDesignationData" nillable="true" type="tns:ArrayOfDesignationData" />
+  <xs:complexType name="DesignationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DesignationDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Jobcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DesignationData" nillable="true" type="tns:DesignationData" />
+  <xs:complexType name="ArrayOfTimelineFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimelineFilter" nillable="true" type="tns:TimelineFilter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimelineFilter" nillable="true" type="tns:ArrayOfTimelineFilter" />
+  <xs:complexType name="TimelineFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TimelineFilterId" type="xs:int" />
+      <xs:element minOccurs="0" name="TimelineDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:long" />
+      <xs:element minOccurs="0" name="Role" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimelineFilter" nillable="true" type="tns:TimelineFilter" />
+  <xs:complexType name="ArrayOfAssetRequestStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssetRequestStatus" nillable="true" type="tns:AssetRequestStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAssetRequestStatus" nillable="true" type="tns:ArrayOfAssetRequestStatus" />
+  <xs:complexType name="AssetRequestStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssetStatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusDescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AssetRequestStatus" nillable="true" type="tns:AssetRequestStatus" />
+</xs:schema>

@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/BlueThemeGov.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />    
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/India/GratuityNominationForm.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <style type="text/css">
+        .alert_f_text
+        {
+            padding-left: 0px;
+            width: 220px;
+        }
+        li.religion label.alert_f_text
+        {
+            padding-left: 170px;
+            width: 220px;
+        }
+        .pageDetails ul.personalDetails li
+        {
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="baseContent">
+        <div id="pageMain">
+            <div id="headerContent">
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <br />
+                            <p class="blueText" style="text-align: center; font-weight: bold;">
+                                GRATUITY NOMINATION FORM
+                            </p>
+                            <br />
+                            <div class="pageText">
+                                <p>
+                                    Dear Sir/Madam,<br />
+                                </p>
+                                <p>
+                                    I&nbsp;
+                                    <input type="text" id="Name" class="inputText_Readonly" readonly="readonly" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="GratutiyNominationForm.Name" />&nbsp;a member of the 
+                                    <font class="normal">Cognizant Technology Solutions India Private Ltd.</font> 
+                                    <font class="ubs">Cognizant Technology Services India Pvt Ltd.</font>
+                                    Group gratuity scheme hereby agree to abide
+                                    by the rules of the said scheme and do also hereby appoint in terms of Rule 19 of
+                                    the Rules, the nominee/s mentioned hereunder to receive the benefits payable under
+                                    the Scheme, in the event of my death before that amount becomes payable and having
+                                    become payable has not been paid.
+                                </p>
+                            </div>
+                            <p class="pageText">
+                                I hereby direct that the benefits under the Scheme, payable in respect of me, shall
+                                be paid to the said nominee/s in proportion indicated against their respective names
+                                as given below:
+                            </p>
+                            <ul class="personalDetails" style="margin: 0 0 0 8px; padding-bottom: 5px;">
+                                <li style="border: 1px solid #d4e7ef; margin-left: 10px; padding-left: 5px; width: 48%;">
+                                    <label class="blueText" style="width: 8%; border-right: 1px solid #d4e7ef; height: 40px;
+                                        padding-top: 2px;">
+                                        Sl.No</label>
+                                    <label class="blueText" style="width: 45%; text-align: center; border-right: 1px solid #d4e7ef;
+                                        height: 40px; padding-top: 2px;">
+                                        <p>
+                                            Name & address of the Nominee/s</p>
+                                    </label>
+                                    <label class="blueText" style="width: 46%; text-align: center; height: 40px; padding-top: 2px">
+                                        <p>
+                                            Relationship with the member</p>
+                                    </label>
+                                </li>
+                                <li style="border-right: 1px solid #d4e7ef; border-top: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    width: 44%;">
+                                    <label class="blueText" style="width: 42%; text-align: center; height: 40px; padding-top: 2px;
+                                        border-right: 1px solid #d4e7ef;">
+                                        <p>
+                                            Date of Birth</p>
+                                    </label>
+                                    <label class="blueText" style="width: 57%; text-align: center; height: 40px; padding-top: 2px;">
+                                        <p>
+                                            Proportion by which gratuity (Total Benefits) will be shared by the Nominee/s (100%
+                                            Max)</p>
+                                    </label>
+                                </li>
+                                <li style="border-bottom: 1px solid #d4e7ef; border-right: 1px solid #d4e7ef; border-left: 1px solid #d4e7ef;
+                                    margin-left: 10px; padding-left: 5px; width: 48%; height: 30px;">
+                                    <label style="width: 8%; border-right: 1px solid #d4e7ef; height: 45px; padding-top: 2px;">
+                                        1.</label>
+                                    <label style="width: 45%; text-align: center; border-right: 1px solid #d4e7ef; height: 45px;
+                                        padding-top: 2px;">
+                                        <span style="padding-right: 2px; float: left; margin-top: -5px;">*</span>
+                                        <textarea style="height: 30px; margin-right: 4px; width: 145px;" id="NomineeName1" title="Address"
+                                            class="tbForm Alphanumeric textMandatory" onkeydown="RestrictCharCount(this.id,150)" allowchar="150"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="GratutiyNominationForm.NomineeName1"></textarea>
+                                    </label>
+                                    <label style="width: 46%; text-align: center; height: 45px; padding-top: 2px">
+                                        <span style="padding-right: 2px; float: left; margin-top: -5px;">*</span>
+                                        <select id="NomineeRelation1" title="RelationShip" name="Relation" style="width: 142px;"
+                                            class="tbForm ddForm dropdown" jqxb-datasource="FormDetails" jqxb-datamember="GratutiyNominationForm.NomineeRelation1"
+                                            jqxb-listsource="RelationList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </label>
+                                </li>
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; width: 44%;
+                                    height: 30px;">
+                                    <label class="blueText" style="width: 42%; text-align: center; height: 45px; padding-top: 2px;
+                                        border-right: 1px solid #d4e7ef;">
+                                        <span style="padding-right: 2px; float: left; margin-top: -5px;">*</span>
+                                        <input id="NomineeAge1" style="width: 118px; margin-right: 5px;" title="Date of Birth" readonly="readonly"
+                                            class="tbForm textMandatory jqrydatepicker" jqxb-datasource="FormDetails" jqxb-datamember="GratutiyNominationForm.NomineeAge1" /></label>
+                                    <label class="blueText" style="width: 57%; text-align: center; height: 45px; padding-top: 2px;">
+                                        <span style="float: left;">*</span><input id="NomineeProportion1" title="Proportion"
+                                            maxlength="3" type="text" class="tbForm textMandatory OnlyNumeric" maxlength="3"
+                                            style="width: 149px; margin-right: 15px;" jqxb-datasource="FormDetails" jqxb-datamember="GratutiyNominationForm.NomineeProportion1" /></label>
+                                </li>
+                                <li style="border-bottom: 1px solid #d4e7ef; border-right: 1px solid #d4e7ef; border-left: 1px solid #d4e7ef;
+                                    margin-left: 10px; padding-left: 5px; width: 48%; height: 30px;">
+                                    <label style="width: 8%; border-right: 1px solid #d4e7ef; height: 45px; padding-top: 2px;">
+                                        2.</label>
+                                    <label style="width: 45%; text-align: center; border-right: 1px solid #d4e7ef; height: 45px;
+                                        padding-top: 2px;">
+                                        <textarea id="NomineeName2" style="height: 30px; margin-right: 4px; width: 145px;"
+                                            class="tbForm" onkeydown="RestrictCharCount(this.id,150)" allowchar="150"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="GratutiyNominationForm.NomineeName2"></textarea></label>
+                                    <label style="width: 46%; text-align: center; height: 45px; padding-top: 2px">
+                                        <span style="float: right;"></span>
+                                        <select id="NomineeRelation2" name="Relation" style="width: 142px; margin-right: -15px"
+                                            title="RelationShip" class="tbForm ddForm dropdown" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="GratutiyNominationForm.NomineeRelation2" jqxb-listsource="RelationList"
+                                            jqxb-listvalue="ID" jqxb-listtext="Description">
+                                        </select>
+                                    </label>
+                                </li>
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; width: 44%;
+                                    height: 30px;">
+                                    <label class="blueText" style="width: 42%; text-align: center; height: 45px; padding-top: 2px;
+                                        border-right: 1px solid #d4e7ef;">
+                                        <span style="float: right;"></span>
+                                        <input id="NomineeAge2" title="Date of Birth" style="width: 118px; margin-right: -10px" readonly="readonly" class="tbForm textMandatory jqrydatepicker"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="GratutiyNominationForm.NomineeAge2" /></label>
+                                    <label class="blueText" style="width: 57%; text-align: center; height: 45px; padding-top: 2px;">
+                                        <span style="float: right;"></span>
+                                        <input id="NomineeProportion2" title="Proportion" type="text" class="tbForm textMandatory OnlyNumeric"
+                                            maxlength="3" style="width: 149px;" jqxb-datasource="FormDetails" jqxb-datamember="GratutiyNominationForm.NomineeProportion2" /></label>
+                                </li>
+                            </ul>
+                            <div class="pageText">
+                                <div>
+                                    <p>
+                                        I hereby certify that the person(s) mentioned herein above is/are my wife/children/lawfully
+                                        adopted child/ dependent parents/ husband.</p>
+                                    <p>
+                                        I hereby declare that I have no family and should I acquire family hereafter the
+                                        appointment of nominee made here under should be deemed as canceled.</p>
+                                </div>
+                                <div>
+                                    My father / mother/ parents/ sister (s) minor brother (s) is / are / not dependent
+                                    on me.</div>
+                                <div>
+                                    My husband's father/ mother/ parents/ is/ are/ not dependent on me.</div>
+                                <div>
+                                    <p>
+                                        I also declare that this appointment of nominee/s made here in shall have the effect
+                                        of my revoking the appointment of nominee/s made by me earlier.
+                                    </p>
+                                </div>
+                            </div>
+                            <ul class="personalDetails" style="margin: 0;">
+                                <li style="padding-left: 20px;">
+                                    <label>
+                                        Date:</label>
+                                    <input type="text" id="Date" class="tbForm inputText_Readonly" readonly="readonly"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="GratutiyNominationForm.Date" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="pageText" style="font-weight: bold;">
+                                <label>
+                                    GIVE BELOW THE PARTICULARS ABOUT MYSELF</label>
+                            </div>
+                            <ul class="personalDetails" style="margin: 0 0 10px 18px;">
+                                <li style="border: 1px solid #d4e7ef;">
+                                    <label class="notMandatory" style="padding-top: 4px;">
+                                        Name of the Associate<br />
+                                        (in capitals)
+                                    </label>
+                                    <input type="text" id="AssosiateName" style="margin: 4px 2px 0 0;" class="tbForm inputText_Readonly"
+                                        readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="GratutiyNominationForm.AssosiateName" />
+                                </li>
+                                <li style="border-top: 1px solid #d4e7ef; border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;">
+                                    <label class="notMandatory" style="padding-top: 4px;">
+                                        Sex</label>
+                                    <select id="Gender" name="Gender" style="margin: 4px 2px 0 0;" class="tbForm ddForm inputText_Readonly"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="GratutiyNominationForm.Gender"
+                                        jqxb-listsource="GenderList" jqxb-listvalue="UserValue" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li class="religion" style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    border-left: 1px solid #d4e7ef;"><span style="padding-right: 2px; float: left; margin-top: -5px;">
+                                        *</span>
+                                    <label style="padding-top: 4px;">
+                                        Religion</label>
+                                    <input id="Religion" title="Religion" style="margin: 4px 2px 0 0;" type="text" class="tbForm textMandatory onlyAlp"
+                                        maxlength="45" jqxb-datasource="FormDetails" jqxb-datamember="GratutiyNominationForm.Religion" />
+                                </li>
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;">
+                                    <label class="notMandatory" style="padding-top: 4px;">
+                                        Date Of Birth</label>
+                                    <input type="text" id="DOB" style="margin: 4px 2px 0 0;" class="tbForm inputText_Readonly"
+                                        readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="GratutiyNominationForm.DOB" />
+                                </li>
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; border-left: 1px solid #d4e7ef;">
+                                    <label class="notMandatory" style="padding-top: 4px;">
+                                        Marital Status</label>
+                                    <select id="MaritalStatus" style="margin: 4px 2px 0 0;" class="tbForm ddForm inputText_Readonly"
+                                        readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="GratutiyNominationForm.MaritalStatus"
+                                        jqxb-listsource="MaritalStatusList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;">
+                                    <label style="padding-top: 4px;">
+                                        <span style="float: left;">*</span><p>
+                                            Father’s /Husband’s Name
+                                            <br />
+                                            (in case of married women)</p>
+                                    </label>
+                                    <input id="RelationName" type="text" title="Father’s /Husband’s Name" style="margin: 4px 2px 0 0;"
+                                        class="tbForm textMandatory" jqxb-datasource="FormDetails" jqxb-datamember="GratutiyNominationForm.RelationName" />
+                                </li>
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; border-left: 1px solid #d4e7ef;
+                                    height: 36px;">
+                                    <label class="notMandatory" style="padding-top: 4px;">
+                                        Permanent Address
+                                    </label>
+                                    <textarea id="Address" class="tbForm inputText_Readonly" style="margin: 4px 2px 0 0;
+                                        height: 38px;" readonly="readonly" style="height: 30px;" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="GratutiyNominationForm.Address1"></textarea>
+                                </li>
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; height: 36px;">
+                                </li>
+                            </ul>
+                            <p class="pageText">
+                                Certified that the above appointment of nominee/s has been signed by Shri/Shrimathi&nbsp;
+                                <input id="Name1" type="text" class="inputText_Readonly" readonly="readonly" jqxb-datasource="FormDetails"
+                                    jqxb-datamember="GratutiyNominationForm.Name1" />&nbsp;before me after he/she
+                                has read the entries have been read to him/her by me and that the said appointment
+                                of nominee is recorded under the scheme on&nbsp;
+                                <input id="Scheme" type="text" class="inputText_Readonly" readonly="readonly" jqxb-datasource="FormDetails"
+                                    jqxb-datamember="GratutiyNominationForm.Scheme" />
+                            </p>
+                            <ul class="personalDetails" style="margin-top: auto;">
+                                <p class="blueText pageText" style="font-weight: bold;">
+                                    Signature of Trustee/s
+                                </p>
+                                <br />
+                                <li>
+                                    <label>
+                                        Place:</label>
+                                    <input id="Place" type="text" class="tbForm onlyAlp" title="Place" jqxb-datasource="FormDetails"
+                                        maxlength="45" jqxb-datamember="GratutiyNominationForm.Place" />
+                                </li>
+                                <li style="margin-bottom: 7px;">
+                                    <label>
+                                        Date:</label>
+                                    <input id="Date1" type="text" class="tbForm inputText_Readonly" readonly="readonly"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="GratutiyNominationForm.Date1" /><br />
+                                    <br />
+                                    <label style="float: right;">
+                                        For Self & Co-Trustees ofGroup Gratuity Scheme
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="pageText" style="font-weight: bold;">
+                                <label>
+                                    NOTE:</label>
+                            </div>
+                            <ol class="pageText" style="list-style-type: decimal; margin-left: 30px; margin-bottom: 10px;">
+                                <li>Where an employee/ member has a family at the time of appointing a nominee the nomination
+                                    should be made in favor of members of his family only. Any nomination made by such
+                                    employee in favor of any other persons not belonging to his family shall be invalid.
+                                </li>
+                                <li>An appointment of nominee made by the member may be changed at an time. After giving
+                                    a written notice to the trustees of his intention to do so. If the nominee predeceases
+                                    the member (employee), the interest of the nominee shall revert to the member (employee)
+                                    or his estate.</li>
+                                <li>The appointment of nominee on any change thereof made from time to time shall take
+                                    effect to the extent it is valid on the date on which it is received by the trustees.</li>
+                                <li>For the purpose of the scheme "family" means member's (employees) spouse legitimate
+                                    children/step children, parents, sisters and minor brothers dependent upon him.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='footerContent'>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

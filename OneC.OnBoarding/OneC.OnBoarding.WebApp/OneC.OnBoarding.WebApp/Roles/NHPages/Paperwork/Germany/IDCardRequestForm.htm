@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+   <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/Germany/IDCardRequestForm.js" type="text/javascript"></script>
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../../../Scripts/Validations.js"></script>
+</head>
+<body>
+<div id='baseContent'>
+        <div id="pageMain" class="personalDataForm"">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                 <div class="pageData">
+                 <div class='pageContent'>
+                   <div class="page_details">
+                   <ul class="personalDetails">
+                   <div class="pageHeader">
+                            <p>
+                               IDCardRequestForm</p>
+                        </div>
+                         <li class="pageText">
+                                    <label for="CompanyName_Form">
+                                      Company Name&nbsp;&nbsp;&nbsp; :&nbsp;</label>
+                                    <label for="Cognizant Technology Solution Benelux BV_Form" >Cognizant Technology Solution Benelux BV</label>
+                                        </li>
+                                        <li class="pageText">
+                                        <label for="Street & Country">
+                                            Street &amp; Country&nbsp; :</label>
+                                        <label for="Address"><!-- style="margin-left:60px"--> 
+                                        &nbsp;WTC, H Tower, 6th floor, Zuidplein 54, 1077 XV, Amsterdam, Netherlands</label>
+                                        </li>
+                                        <li class="pageText">
+                                        <label for="Board - Number" >&nbsp; Board - Number&nbsp; :&nbsp;&nbsp;&nbsp;</label>
+                                        <label for="+ 31-205247700">+ 31-20-205247</label>
+                                        <label for="FAX" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FAX:</label>
+                                        <label for="FAXNumber" >+ 31 20 524 77 99</label>
+                                        </li>
+
+                                         </ul>  
+                                         <div class= "pageDetails">
+                                        <ul class="personalDetails">
+                                <div class="pageHeader">
+                                   <p class="pageText" style="font-weight: bold;color: #3f678f;text-align:center;
+                            font-size: 13px; padding-left: 15px">
+                            
+                            Associate Details
+                        </p>
+                         </div>
+                          <li>
+                                    <label for="Name_form_LBL">
+                                  Name to be displayed on Id card
+                                    </label>
+                                    <input type="text" id="Pg_1_text_Name"  readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="IDCardRequestForm.Name"
+                                        class="tbForm" maxlength="30" title="Name" disabled="disabled" />
+                                </li>
+
+                         <li>
+                                    <label for="CognizantID_form">
+                                        <span></span>CognizantID</label>
+                                    <input type="text" id="Pg_1_text_CognizantID" jqxb-datasource="FormDetails" jqxb-datamember="IDCardRequestForm.CognizantID"
+                                        title="CognizantID"  maxlength="13" class="tbForm" disabled="disabled" readonly="readonly" />
+                                </li>
+                                <li>
+                                    <label for="BloodGroup_form">
+                                        <span></span>BloodGroup</label>
+                                     <select class="tbForm dropdown" id="Pg_1_text_BloodGroup" name="BloodGroup" jqxb-datasource="FormDetails"
+                                        title="Blood group" jqxb-datamember="IDCardRequestForm.BloodGroup" jqxb-listsource="BloodGroupList"
+                                        jqxb-listvalue="UserValue" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                 <li>
+                                    <label for="EmergencyPhone_form">
+                                        <span></span>Emergency Contact #</label>
+                                    <input type="text" id="Pg_1_text_EmergencyPhone" jqxb-datasource="FormDetails" jqxb-datamember="IDCardRequestForm.EmergencyPhone"
+                                       maxlength="13"  title="Emergency Contact Number" class="tbForm OnlyNumeric"  />
+                                              
+                                </li>  </ul>
+                               
+                               
+                                <p class="pageText" style="text-align: justify; font-size:small ;">
+                                  Please sent a passport size photo together with the request (Preferred file name for photo associate ID/Display name)</p>
+                          
+                           
+                         
+                                 </div>     
+                               
+                                 <div class= "pageDetails">
+                                <ul class="personalDetails">
+                                <div class="pageHeader">
+                                   <p class="pageText" style="font-weight: bold;color: #3f678f;text-align:center;
+                            font-size: 13px; padding-left: 15px">
+                            
+                           Shipping Details
+                        </p>
+                        </div>
+                          <li>
+                                    <label for="ShippingAddress_form">
+                                        <span></span>ShippingAddress</label>
+                                   <!-- <textarea type="text" class="tbForm" jqxb-datasource="FormDetails"   jqxb-datamember="IDCardRequestForm.ShippingAddress"
+                                      onkeydown="RestrictCharCount(this.id,150)" style="height:25px"  readonly="readonly" title="Address" id="ShippingAddress_Form" disabled="disabled"></textarea>
+
+                                      >-->
+                                        <input type="text"  class="tbForm" id="Pg_1_text_ShippingAddress"
+                                            title="Shipping Address" jqxb-datasource="FormDetails" maxlength="45" jqxb-datamember="IDCardRequestForm.ShippingAddress" />
+                                      </li>
+                                      <li>
+                                       <p class="pageText" style="text-align: justify; font-size:small ;">(Required if associates is working from client location)</p>
+                                </li>
+                                  <li>
+                                    <label for="phone_form">
+                                        <span></span>Phone</label>
+                                    <input type="text" id="Pg_1_text_Phone" jqxb-datasource="FormDetails" jqxb-datamember="IDCardRequestForm.Phone"
+                                        title="Phone"  maxlength="13" class="tbForm OnlyNumeric"  />
+                                </li>
+                             
+                            </ul>
+                            </div>
+                            <div class="pageDetails">
+                           <ul class="personalDetails">
+                                <div class="pageHeader">
+                                   <p class="pageText" style="font-weight: bold;color: #3f678f;text-align:center;
+                            font-size: 13px; padding-left: 15px">
+                            
+                           Office use only
+                        </p>
+
+                        </div>
+                        </ul>
+                       </div>
+                       </div> <div class="Signature" id="Sign_PageId_1">
+                        </div>
+              </div>
+                      
+              </div>
+             
+               <div id="footerContent">
+            </div>
+              </div>
+              </div>
+              </div>
+                
+
+</body>
+</html>

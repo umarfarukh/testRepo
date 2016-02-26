@@ -1,0 +1,559 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Relocation Assistance</title>
+    <link href="../Styles/RelocationAssistance/rlstyles.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/RelocationAssistance/jquery.qtip.css" rel="stylesheet" type="text/css" />    
+    <link href="../Styles/RelocationAssistance/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .EmptyFieldName1{ height:13.8px;}
+        .EmptyFieldName2{ margin-top:-10px;}
+        .EmptyFieldName3{ height:13.8px;}
+        .EmptyFieldName4{ margin-bottom: 0px;}
+        .pagination{ color:#964300; font-size:12px;  position:absolute; top:5px; left:105px; display:none; height:12px;}
+        .pagination span{display:inline-block; float:left;color:#964300; font-size:12px; line-height:10px; height:10px;}
+        .prev{ background:url(../Images/RelocationAssistance/prev.png) no-repeat; width:9px; height:10px; margin-right:4px; cursor:pointer; *vertical-align:middle; }
+        .next{background:url(../Images/RelocationAssistance/next.png) no-repeat; width:9px; height:10px; margin-left:4px; cursor:pointer; *vertical-align:middle;}
+        :root .pagination span {  line-height:22px \0/IE9; }
+        .number{color:#964300; font-size:12px; }
+        .total{color:#964300; font-size:12px; }
+        .matches{ color:#dbcb13; font-size:12px; text-decoration:none; float:right; left:185px; top:28px; position:absolute; display:none;}
+        .contheadlist li .matches_tab{ color:#7a0000; font-size:12px; margin-left:3px;float:right; bottom: 0px; display:none;color:Red;}
+        .submit_btn{}
+        .dummyMainTab{}
+        .EmptyContent{ display:none;}
+    </style>        
+    <script src="../Scripts/RelocationAssistance/jquery-1.8.3.js" type="text/javascript"></script>    
+    <!--<script src="../Scripts/RelocationAssistance/jquery-1.7.2.min.js" type="text/javascript"></script>-->
+    <script src="../Scripts/RelocationAssistance/jquery.livequery.js" type="text/javascript"></script>        
+    <script src="../Scripts/RelocationAssistance/angular.min.js" type="text/javascript"></script>
+    <script src="../Scripts/RelocationAssistance/jquery.qtip.js" type="text/javascript"></script>
+    <script src="../Scripts/RelocationAssistance/jquery-ui-1.10.0.custom.js" type="text/javascript"></script>
+    <script src="../Scripts/RelocationAssistance/jquery-ui-1.9.2.custom.min.js " type="text/javascript"></script>   
+    <!--<script src="../Scripts/RelocationAssistance/scroll.js" type="text/javascript"></script>-->        
+    <script src="../Scripts/RelocationAssistance/CityInfo.js" type="text/javascript"></script>
+    <script src="../Scripts/RelocationAssistance/SearchFeature.js" type="text/javascript"></script>    
+    <script src="../Scripts/RelocationAssistance/rascripts.js" type="text/javascript"></script>
+    <script src="../Scripts/RelocationAssistance/jquery.jscrollpane.js" type="text/javascript"></script>
+    <script src="../Scripts/RelocationAssistance/jquery.mousewheel.js" type="text/javascript"></script>    
+    <script src="../Scripts/RelocationAssistance/FeedbackAndAboutUs.js" type="text/javascript"></script>    
+</head>
+<body ng-app="RelocationApp">
+    <!-- Wrapper Starts -->
+    <div class="wrapper" ng-controller="CtrlCityInfo" ng-model="City">
+        
+        <!-- Top Wrapper Starts -->
+        <div class="top_wrapper">
+        	<div class="topwlft">
+            	<img src="../Images/RelocationAssistance/logo_top.png" />
+                <h2>Relocation Assistance</h2>
+            </div>
+            <div class="topwrgt">
+            	<ul>
+                	<li class="feedback"><a id="feedback" href="#" onclick="feedback(1);">Feedback</a></li>
+                    <li class ="aboutus"><a id="aboutus" href="#" onclick="feedback(2);">About us</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Top Wrapper Ends -->        
+        <div class="clear"></div>
+
+        <!-- Screen 2 - Region Map Starts  -->
+        <div class="contentwrapper">
+        	<div class="headwrap">
+            	<div class="headlft">
+                	<div id="cityName" class = "cityName"></div><a href="#" id="changeCity" class = "changeCityName" onclick="changeCity();">Change city</a>                  
+                </div>
+                <div class="headrgt">
+                	<!--<img src="../Images/RelocationAssistance/icon_close.png" class="popclose" />-->
+                    <div class="searchwrap">
+                    	<input type="text" id="txtSearch" value="Search here" onblur="if(this.value == ''){ this.value = 'Search here'; }" onfocus="if(this.value == 'Search here'){ this.value = ''; }" />
+                        <input name="loginbtn" type="submit" runat="server" class="submit_btn" value=""/>
+                        <div class="pagination"><span class="prev"></span><span class="number"></span><span>/</span><span class="total"></span><span class="next"></span></div>
+                        <!--<button id="next" runat="server">next</button>
+                        <button id="previous" runat="server">previous</button>-->
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>            
+            <div class="tabcontentwrap">
+            	
+                 <!-- Content Tab Left Starts  -->
+                <div class="tablftwrap">
+                	<ul class="tabheaderlist">                    
+                        <li ng-class="{'EmptyContent': AboutCityHide}"><a href="javascript:;tabchange();" rel="mtab1"><img src="../Images/RelocationAssistance/icon_abtcity.png" alt="About City" /> <h5>About the City</h5><span class="matches" id="mtab1Count"></span></a></li>						
+                        <li ng-class="{'EmptyContent': SettlingDownHide}"><a href="javascript:;tabchange();" rel="mtab2"><img src="../Images/RelocationAssistance/icon_setlingdown.png" alt="Settling Down" /> <h5>Settling Down</h5><span class="matches" id="mtab2Count"></span></a></li>						
+                        <li ng-class="{'EmptyContent': ReachingThereHide}"><a href="javascript:;tabchange();" rel="mtab3"><img src="../Images/RelocationAssistance/icon_reachingthere.png" alt="Reaching There" /> <h5>Reaching There</h5><span class="matches" id="mtab3Count"></span></a></li>						
+                        <li ng-class="{'EmptyContent': CognizantInCityHide}"><a href="javascript:;tabchange();" rel="mtab4"><img src="../Images/RelocationAssistance/icon_coginurcity.png" alt="Cognizant in your city" /> <h5>Cognizant in your city</h5><span class="matches" id="mtab4Count"></span></a></li>						
+                        <li ng-class="{'EmptyContent': TravelWithinHide}"><a href="javascript:;tabchange();" rel="mtab5"><img src="../Images/RelocationAssistance/icon_travelwithin.png" alt="Travel Within" /> <h5>Travel Within</h5><span class="matches" id="mtab5Count"></span></a></li>
+                        <li ng-class="{'EmptyContent': ImpNosSrvcsHide}"><a href="javascript:;tabchange();" rel="mtab6"><img src="../Images/RelocationAssistance/icon_impononser.png" alt="Important Numbers and Services" /> <h5>Important Numbers and Services</h5><span class="matches" id="mtab6Count"></span></a></li>						
+                        <li ng-class="{'EmptyContent': EntertainmentHide}"><a href="javascript:;tabchange();" rel="mtab7"><img src="../Images/RelocationAssistance/icon_entercity.png" alt="Entertainment Around the city" /> <h5>Entertainment Around the city</h5><span class="matches" id="mtab7Count"></span></a></li>						
+                        <li ng-class="{'EmptyContent': AdditionalInfoHide}"><a href="javascript:;tabchange();" rel="mtab8"><img src="../Images/RelocationAssistance/icon_addinfo.png" alt="Additional Information" /> <h5>Additional Information</h5><span class="matches" id="mtab8Count"></span></a></li>	
+                    </ul>	
+                </div>
+                 <!-- Content Tab Left Ends -->
+                 
+                 <!-- Content Tab Right Starts -->
+                <div class="tabrftwrap">
+                
+                	<div class="holder">                   
+                    
+                    	<!-- About the city starts -->                        
+                        <div id="mtab1" class="tabcontent" style="display:block;">
+                        	<div class="contwrap">
+                                <div class="tabcont_head">
+                                    <ul class="contheadlist">                    
+                                        <li ng-class="{'EmptyContent': WriteUpInfoHide}"><a href="javascript:;tabchange();" rel="ac1"><span class="ictab_writeup"></span><h5>Write up</h5></a><span class="matches_tab" id="ac1Count"></span></li>						
+                                        <li ng-class="{'EmptyContent': ClimateInfoHide}"><a href="javascript:;tabchange();" rel="ac2"><span class="ictab_loclimate"></span><h5>Local Climate</h5></a><span class="matches_tab" id="ac2Count"></span></li>						
+                                        <li ng-class="{'EmptyContent': SeasonInfo.length == 0}"><a href="javascript:;tabchange();" rel="ac3"><span class="ictab_season"></span><h5>Seasons</h5></a><span class="matches_tab" id="ac3Count"></span></li>	
+                                    </ul>	
+                                </div>
+                                <div class="clear"></div>
+                                <div class="tabcontainer">
+                                    <div class="cont_tabwrap">
+                                       <div id="ac1" class="continner" style="display:block;">
+                                       	<div class="topcont">
+                                            <ul>
+                                                <li ng-repeat="Field in WriteUpInfo" style="text-align:justify;">
+                                                    <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4>
+                                                    <p>{{Field.FieldValue}}</p>
+                                                </li>                                                                                             
+                                            </ul>
+                                        </div>
+                                       </div>
+                                       <div id="ac2" class="continner">
+                                       	<div class="topcont">
+                                            <ul>
+                                                <li ng-repeat="Field in ClimateInfo" style="text-align:justify;">
+                                                    <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4>
+                                                    <p>{{Field.FieldValue}}</p>
+                                                </li>                                                
+                                            </ul>
+                                        </div>
+                                       </div> 
+                                       <div id="ac3" class="continner">
+                                       	<div class="topcont">
+                                            <ul>
+                                                <li ng-repeat="Field in SeasonInfo" style="text-align:justify;">
+                                                    <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4><p>{{Field.FieldValue}}</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                       </div>                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- About the city Ends -->
+                        
+                        <!-- Settling Down Starts -->
+                        <div id="mtab2" class="tabcontent">
+                        	<div class="contwrap">
+                                <div class="tabcont_head">
+                                    <ul class="contheadlist">                    
+                                        <li ng-class="{'EmptyContent': AccomodationHide}"><a href="javascript:;tabchange();" rel="sd1"><span class="ictab_accommodation"></span><h5>Accommodation</h5></a><span class="matches_tab" id="sd1Count"></span></li>						
+                                        <li ng-class="{'EmptyContent': LanguageInfoHide}"><a href="javascript:;tabchange();" rel="sd2"><span class="ictab_language"></span><h5>Language</h5></a><span class="matches_tab" id="sd2Count"></span></li>					                                        
+                                    </ul>	
+                                </div>
+                                <div class="clear"></div>
+                                <div class="tabcontainer">
+                                    <div class="cont_tabwrap">
+                                       <div id="sd1" class="continner">
+                                       <div class="topcont">
+                                            <ul>
+                                                <li ng-repeat="Field in AccomodationInfo" style="text-align:justify;">
+                                                    <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4><p ng-class="{'EmptyFieldName3': Field.FieldValue == ''}">{{Field.FieldValue}}</p>
+                                                </li>
+                                            </ul>  
+                                            <ul>
+                                                <li class="rightList" ng-repeat="Field in HotelServices" style="text-align:justify; margin-bottom:-8px;">
+                                                    <!--Binding as html, commented old code i.e. 1st line-->
+                                                    <!--<span><h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.name}}</h4><p style="margin-bottom:0px; margin-top:0px;">{{Field.tel}}</p><p style="margin-bottom:0px; margin-top:0px;" ng-bind-html="Field.desc"></p></span>-->
+                                                    <p ng-bind-html="Field.desc"></p>
+                                                </li>
+                                            </ul>                                           
+                                        </div>
+                                       </div>
+                                       <div id="sd2" class="continner">
+                                       	<div class="topcont">
+                                            <ul>
+                                                <li ng-repeat="Field in LanguageInfo" style="text-align:justify;">
+                                                    <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4><p>{{Field.FieldValue}}</p>
+                                                </li>                                                
+                                            </ul>
+                                        </div>
+                                       </div>                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Settling Down Ends -->
+                        
+                        <!-- Reaching There Starts -->
+                        <div id="mtab3" class="tabcontent">
+                        	<div class="contwrap">
+                                <div class="tabcont_head">
+                                    <ul class="contheadlist">                    
+                                        <li ng-class="{'EmptyContent': ByAirHide}"><a href="javascript:;tabchange();" rel="rt1"><span class="ictab_byair"></span><h5>By Air</h5></a><span class="matches_tab" id="rt1Count"></span></li>						
+                                        <li ng-class="{'EmptyContent': ByTrainHide}"><a href="javascript:;tabchange();" rel="rt2"><span class="ictab_bytrain"></span><h5>By Train</h5></a><span class="matches_tab" id="rt2Count"></span></li>						
+                                        <li ng-class="{'EmptyContent': ByRoadHide}"><a href="javascript:;tabchange();" rel="rt3"><span class="ictab_byroad"></span><h5>By Road</h5></a><span class="matches_tab" id="rt3Count"></span></li>	
+                                        <li ng-class="{'EmptyContent': BySeaHide}"><a href="javascript:;tabchange();" rel="rt4"><span class="ictab_bysea"></span><h5>By Sea</h5></a><span class="matches_tab" id="rt4Count"></span></li>	
+                                    </ul>	
+                                </div>
+                                <div class="clear"></div>
+                                <div class="tabcontainer">
+                                    <div class="cont_tabwrap">
+                                       <div id="rt1" class="continner" style="display:block;">
+                                       		<div >
+                                            	<div class="topcont">
+                                                	<ul>
+                                                    	<li ng-repeat="Field in AirTravelInfo" style="text-align:justify;">
+                                                            <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4><p>{{Field.FieldValue}}</p>
+                                                        </li> 
+                                                    </ul>
+                                                </div>
+                                            
+                                            	<div class="clear"></div>
+                                            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="conttable"  ng-class="{'EmptyContent': AirServiceProviders.length == 0}">
+                                                  <tr>
+                                                    <th style="width:30%;">Service Providers</th>
+                                                    <th style="width:40%;">Contact No.</th>
+                                                    <th style="width:30%;">Website</th>
+                                                  </tr>
+                                                  <tbody>
+                                                      <tr ng-repeat="Field in AirServiceProviders">
+                                                        <td>{{Field.name}}</td>
+                                                        <td>{{Field.tel}}</td>
+                                                        <td><a href="{{Field.site}}" runat="server" target="_blank" type="text/html">{{Field.site}}</a></td>
+                                                      </tr>                                                      
+                                                  </tbody>
+                                                </table>
+                                            </div>                                       
+                                       </div>
+                                       <div id="rt2" class="continner">
+                                       	<div >
+                                            	<div class="topcont">
+                                                	<ul>
+                                                    	<li ng-repeat="Field in TrainTravelInfo" style="text-align:justify;">
+                                                            <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4><p>{{Field.FieldValue}}</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            
+                                            	<div class="clear"></div>
+                                            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="conttable" ng-class="{'EmptyContent': TrainServiceProviders.length == 0}">
+                                                  <tr>
+                                                    <th width="30%">Service Providers</th>
+                                                    <th width="40%">Contact No.</th>
+                                                    <th width="30%">Website</th>
+                                                  </tr>
+                                                  <tbody>
+                                                      <tr ng-repeat="Field in TrainServiceProviders">
+                                                        <td>{{Field.name}}</td>
+                                                        <td>{{Field.tel}}</td>
+                                                        <td><a href="{{Field.site}}" runat="server" target="_blank" type="text/html">{{Field.site}}</a></td>
+                                                      </tr>                                                      
+                                                  </tbody>
+                                                </table>
+
+                                            </div>
+                                       </div> 
+                                       <div id="rt3" class="continner">
+                                       	<div>
+                                            	<div class="topcont">
+                                                	<ul>
+                                                    	<li ng-repeat="Field in RoadTravelInfo" style="text-align:justify;">
+                                                            <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4><p>{{Field.FieldValue}}</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            
+                                            	<div class="clear"></div>
+                                            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="conttable" ng-class="{'EmptyContent': RoadServiceProviders.length == 0}">
+                                                  <tr>
+                                                    <th width="30%">Service Providers</th>
+                                                    <th width="40%">Contact No.</th>
+                                                    <th width="30%">Website</th>
+                                                  </tr>
+                                                  <tbody>
+                                                      <tr ng-repeat="Field in RoadServiceProviders">
+                                                        <td>{{Field.name}}</td>
+                                                        <td>{{Field.tel}}</td>
+                                                        <td><a href="{{Field.site}}" runat="server" target="_blank" type="text/html">{{Field.site}}</a></td>
+                                                      </tr>                                                                                                           
+                                                  </tbody>
+                                                </table>
+
+                                            </div>
+                                       </div> 
+                                       <div id="rt4" class="continner">
+                                       	<div>
+                                            	<div class="topcont">
+                                                	<ul>
+                                                    	<li ng-repeat="Field in SeaTravelInfo" style="text-align:justify;">
+                                                            <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4><p>{{Field.FieldValue}}</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            
+                                            	<div class="clear"></div>
+                                            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="conttable" ng-class="{'EmptyContent': SeaServiceProviders.length == 0}">
+                                                  <tr>
+                                                    <th width="30%">Service Providers</th>
+                                                    <th width="40%">Contact No.</th>
+                                                    <th width="30%">Website</th>
+                                                  </tr>
+                                                  <tbody>
+                                                      <tr ng-repeat="Field in SeaServiceProviders">
+                                                        <td>{{Field.name}}</td>
+                                                        <td>{{Field.tel}}</td>
+                                                        <td><a href="{{Field.site}}" runat="server" target="_blank" type="text/html">{{Field.site}}</a></td>
+                                                      </tr>                                                      
+                                                  </tbody>
+                                                </table>
+                                            </div>
+                                       </div>                   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Reaching There Ends -->
+                        
+                        <!-- Cognizant in your city Starts -->
+                        <div id="mtab4" class="tabcontent">
+                        	<div class="contwrap">
+                                <div class="tabcont_head">
+                                    <ul class="contheadlist">                    
+                                        <li ng-class="{'EmptyContent': OfficesHide}"><a href="javascript:;tabchange();" rel="cc1"><span class="ictab_cogloc"></span><h5>Cognizant Locations</h5></a><span class="matches_tab" id="cc1Count"></span></li>						
+                                        <li ng-class="{'EmptyContent': TrainingCentersHide}"><a href="javascript:;tabchange();" rel="cc2"><span class="ictab_traloc"></span><h5>Training Locations</h5></a><span class="matches_tab" id="cc2Count"></span></li>					                                        
+                                    </ul>	
+                                </div>
+                                <div class="clear"></div>
+                                <div class="tabcontainer">
+                                    <div class="cont_tabwrap">
+                                       <div id="cc1" class="continner" style="display:block;">
+                                       <div class="topcont">
+                                            <ul>
+                                                <li ng-repeat="Field in Offices" style="text-align:justify;">
+                                                    <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4><p ng-bind-html="Field.FieldValue"></p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                       </div>
+                                       <div id="cc2" class="continner">
+                                       		<div class="topcont">
+                                            <ul>
+                                                <li ng-repeat="Field in TrainingCenters" style="text-align:justify;">
+                                                    <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4><p ng-bind-html="Field.FieldValue"></p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                       </div>                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cognizant in your city Ends -->
+                        
+                        <!-- Travel Within Starts -->
+                        <div id="mtab5" class="tabcontent">
+                        	<div class="contwrap">
+                                <div class="tabcont_head">
+                                    <ul class="contheadlist">               
+                                        <li ng-class="{'EmptyContent': CTransportServiceHide}"><a href="javascript:;tabchange();" rel="tw1"><span class="ictab_cogtran"></span><h5>Cognizant Transport Service Boundary</h5></a><span class="matches_tab" id="tw1Count"></span></li>		                                        
+                                        <li ng-class="{'EmptyContent': TransportModesHide}"><a href="javascript:;tabchange();" rel="tw2"><span class="ictab_cogloc"></span><h5>Transport Modes</h5></a><span class="matches_tab" id="tw2Count"></span></li>	                                        
+                                    </ul>	
+                                </div>
+                                <div class="clear"></div>
+                                <div class="tabcontainer">
+                                    <div class="cont_tabwrap">                                       
+                                         <div id="tw1" class="continner" style="display:block;">
+                                       		<div class="topcont">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="conttable" ng-class="{'EmptyContent':CTransportServiceHide}">                                             
+                                                    <tbody>
+                                                        <tr ng-repeat="Field in CTransportService">
+                                                            <td align="center" ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</td>
+                                                            <td align="center" ng-class="{'EmptyFieldName3': Field.FieldValue == ''}">{{Field.FieldValue}}</td>
+                                                             <!--<h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4><p ng-bind-html="Field.FieldValue"></p>-->
+                                                        </tr>                                                      
+                                                    </tbody>
+                                             </table>                                                            
+                                        </div>
+                                       </div>  
+                                       <div id="tw2" class="continner" style="display:block;" >
+                                       		<div class="topcont" >
+                                            <ul>
+                                                <li ng-repeat="Field in TransportModesAvailable" style="text-align:justify;">                                                    
+                                                    <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4><p ng-class="{'EmptyFieldName3': Field.FieldValue == ''}">{{Field.FieldValue}}</p>
+                                                </li>
+                                            </ul>
+                                             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="conttable" ng-class="{'EmptyContent':TransportModesHide.length==0}">
+                                                        <tr ng-repeat="Field in TransportModesHeader">
+                                                            <th align="center" ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</th>
+                                                            <th align="center" ng-class="{'EmptyFieldName3': Field.FieldValue == ''}">{{Field.FieldValue}}</th>
+                                                        </tr>
+                                                    <tbody>
+                                                        <tr ng-repeat="Field in TransportModes">
+                                                            <td align="center" ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</td>
+                                                            <td align="center" ng-class="{'EmptyFieldName3': Field.FieldValue == ''}">{{Field.FieldValue}}</td>
+                                                        </tr>                                                      
+                                                    </tbody>
+                                             </table>
+                                        </div>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Travel Within Ends -->
+                        
+                        <!-- Important Number of Sevices Starts -->
+                        <div id="mtab6" class="tabcontent">
+                        	<div class="contwrap">
+                                <div class="tabcont_head">
+                                    <ul class="contheadlist">                    
+                                        <li ng-class="{'EmptyContent': ImpSvcHide}"><a href="javascript:;tabchange();" rel="ins1"><span class="ictab_cogloc"></span><h5>Important Services</h5></a><span class="matches_tab" id="ins1Count"></span></li>						                                        
+                                    </ul>	
+                                </div>
+                                <div class="clear"></div>
+                                <div class="tabcontainer">
+                                    <div class="cont_tabwrap">
+                                       <div id="ins1" class="continner" style="display:block;">	
+                                       <div class="topcont">
+                                            <ul>
+                                                <li ng-repeat="Field in ImpServices" style="text-align:justify;">
+                                                    <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4><p>{{Field.FieldValue}}</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Important Number of Sevices Ends -->                         
+                         
+                         <!-- Entertainment aroung the city Starts -->
+                        <div id="mtab7" class="tabcontent">
+                        	<div class="contwrap">
+                                <div class="tabcont_head">
+                                    <ul class="contheadlist">                    
+                                        <li ng-class="{'EmptyContent': TouristPlacesHide}"><a href="javascript:;tabchange();" rel="erc1"><span class="ictab_cogloc"></span><h5>Tourist Places</h5></a><span class="matches_tab" id="erc1Count"></span></li>                                        
+                                        <li ng-class="{'EmptyContent': OtherPlacessHide}"><a href="javascript:;tabchange();" rel="erc2"><span class="ictab_cogloc"></span><h5>Other Places</h5></a><span class="matches_tab" id="erc2Count"></span></li>
+                                    </ul>	
+                                </div>
+                                <div class="clear"></div>
+                                <div class="tabcontainer">
+                                    <div class="cont_tabwrap">
+                                       <div id="erc1" class="continner" style="display:block;">
+                                        <div class="topcont">
+                                            <ul>
+                                                <li ng-repeat="Field in OtherTouristSpots" style="text-align:justify;">
+                                                    <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4><p>{{Field.FieldValue}}</p>
+                                                </li>                                             
+                                            </ul>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="conttable" ng-class="{'EmptyContent': TouristSpots.length == 0}">
+                                            <tr ng-repeat="Field in TouristHeader">
+                                            <th>{{Field.name}}</th>
+                                            <th align="center">{{Field.addInfo}}</th>
+                                            <th align="center">{{Field.desc}}</th>
+                                            </tr>
+                                            <tbody>
+                                                <tr ng-repeat="Field in TouristSpots">
+                                                <td>{{Field.name}}</td>
+                                                <td align="center">{{Field.distance}}</td>
+                                                <td align="left">{{Field.Description}}</td>
+                                                </tr>                                                      
+                                            </tbody>
+                                        </table>
+                                       </div>
+                                       <div id="erc2" class="continner" style="display:block;">
+                                        <div class="topcont">
+                                            <ul>
+                                                <li ng-repeat="Field in OtherPlaces" style="text-align:justify;">
+                                                    <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4><p>{{Field.FieldValue}}</p>
+                                                </li>                                             
+                                            </ul>
+                                        </div>                                        
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Entertainment aroung the city Ends -->
+                        
+                        <!-- Addotional Information Starts -->
+                        <div id="mtab8" class="tabcontent">                        
+                        	<div class="contwrap">
+                                <div class="tabcont_head">
+                                    <ul class="contheadlist">                    
+                                        <!--<li><a href="javascript:;tabchange();" rel="ai1"><span class="ictab_cogloc"></span><h5>Services</h5></a></li>-->
+                                        <li ng-repeat="Field in AdditionalSvcTabs"><a href="javascript:;tabchange();" rel="{{Field.Id}}"><span class="ictab_cogloc"></span><h5>{{Field.Name}}</h5></a><span class="matches_tab" id="{{Field.Id}}Count"></span></li>
+                                    </ul>	
+                                </div>
+                                <div class="clear"></div>
+                                <div class="tabcontainer">
+                                    <div class="cont_tabwrap">
+                                       <!--<div id="ai1" class="continner" style="display:block;">                                        
+                                       <div class="topcont">
+                                            <ul>
+                                                <li ng-repeat="Field in OtherServices" style="text-align:justify;">
+                                                    <h4 ng-class="{'EmptyFieldName1': Field.FieldName == ''}">{{Field.FieldName}}</h4><p class="rightList">{{Field.FieldValue}}</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                       </div>-->
+                                       <div ng-repeat="Field in AdditionalSvcTabsDetails" id="{{Field.Id}}" class="continner" style="display:block;">                                        
+                                       <div class="topcont">
+                                            <ul>
+                                                <li ng-repeat="SubField in Field.Details" style="text-align:left;">
+                                                    <h4 ng-class="{'EmptyFieldName1': SubField.FieldName == ''}">{{SubField.FieldName}}</h4>
+                                                    <p ng-class="{ 'EmptyFieldName2': (SubField.FieldLink == '' && SubField.FieldName == '') }">{{SubField.FieldValue}}</p>
+                                                    <p ng-class="{'EmptyFieldName2': SubField.FieldValue == ''}" ng-bind-html="SubField.FieldLink"></p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                       </div>
+
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        <!-- Addotional Information Ends -->                       
+                        
+                    </div>          
+                                                                  
+                </div>
+                 <!-- Content Tab Right Ends -->
+                
+            </div>          
+        </div>       
+        <!-- Screen 2 - Region Map Ends  -->     
+        
+        <!-- 298015 Overlay-->
+        <div class="overlay hiddenDiv"></div>   
+
+        <!-- 298015 Error Popup-->
+        <div class="error_popup hiddenDiv">
+            <div class="contact_card_header">
+                <p id="pErrorPopupHeader">Error!!!</p>
+                <img src="../Images/RelocationAssistance/contact_close.png" alt="Close" class="error_popup_close" onclick="CloseErrorPopup();"/>
+            </div>
+            <div class="info_screen_details contact_details clear">
+                <p>
+                    <span id="lblCommonInfoPopup" style="font-size:16px; color:#004050;"></span>
+                </p>                    
+            </div>
+            <div class="contact_card_footer"></div>
+        </div>       
+                
+    </div>
+    <!-- Wrapper Ends --> 
+    <input type="hidden" runat="server" id="CityId" value="" />
+</body>
+</html>

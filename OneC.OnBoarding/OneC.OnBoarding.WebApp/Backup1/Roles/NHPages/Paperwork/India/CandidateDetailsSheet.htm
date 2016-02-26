@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Candidate Details Sheet</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/India/CandidateDetailsSheet.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        .pd_india ul.personalDetails li.date_box LABEL.notMandatory
+        {
+            margin-right: 0;
+        }
+        .pd_india ul.personalDetails li.date_box label.alert_f_text
+        {
+            float: right;
+            margin-left: -190px;
+        }
+        
+        .pd_india ul.personalDetails li.Addres label.alert_f_text
+        {
+            width: 180px;
+        }
+    </style>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id="pageMain">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer personalDataForm pd_india'>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails" style="height: 420.93px;" >
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        Candidate Details</p>
+                                </div>
+                                <br />
+                                <li>
+                                    <label for="CandidateId_form">
+                                        <span></span>Candidate ID</label>
+                                    <input type="text" id="CandidateId_form" jqxb-datasource="FormDetails" jqxb-datamember="CandidateDetailsSheet.Candidateid"
+                                        readonly="readonly" style="background: #f0f0f0; color: #888 !important;" class="tbForm"
+                                        maxlength="30" title="Candidate ID" />
+                                </li>
+                                <!--<li>
+                                    <label for="prefix_form">
+                                        <span>*</span>Prefix</label>
+                                    <select id="Prefix" class="tbForm dropdown" title="Prefix" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="PersonalData.Prefix" jqxb-listsource="PrefixList" jqxb-listvalue="ID"
+                                        jqxb-listtext="Description">
+                                    </select>
+                                </li>-->
+                                <li>
+                                    <label for="firstname_form">
+                                        <span>*</span>First Name
+                                    </label>
+                                    <input type="text" id="firstname_form" jqxb-datasource="FormDetails" jqxb-datamember="CandidateDetailsSheet.FirstName"
+                                        class="tbForm textMandatory onlyAlp" readonly="readonly" style="background: #f0f0f0; color: #888 !important;" maxlength="30" title="First Name" />
+                                </li>
+                                <li>
+                                    <label class="notMandatory" for="middlename_form">
+                                        Middle Name</label>
+                                    <input type="text" class="tbForm onlyAlp" jqxb-datasource="FormDetails" jqxb-datamember="CandidateDetailsSheet.MiddleName"
+                                        maxlength="30" id="middlename_form" style="background: #f0f0f0; color: #888 !important;" readonly="readonly" title="Middle Name" />
+                                </li>
+                                <li>
+                                    <label for="lastname_form">
+                                        <span>*</span>Last Name
+                                    </label>
+                                    <input type="text" id="lastname_form" jqxb-datasource="FormDetails" jqxb-datamember="CandidateDetailsSheet.LastName"
+                                        class="tbForm textMandatory onlyAlp" style="background: #f0f0f0; color: #888 !important;" readonly="readonly" maxlength="30" title="Last Name" />
+                                </li>
+                                <li class="date_box">
+                                    <label for="doj_form">
+                                        <span>*</span>Date of Joining</label>
+                                    <input type="text" id="doj_form" style="margin-right: 0px; margin-left: 25px;" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="CandidateDetailsSheet.DateofJoining" maxlength="30" readonly="readonly"
+                                        title="Date of Joining" class="tbForm textMandatory jQrydatepicker" />
+                                </li>
+                                <li class="date_box">
+                                    <label for="dob_form">
+                                        <span>*</span>Date of Birth</label>
+                                    <input type="text" id="dob_form" style="margin-right: 0px; margin-left: 25px;" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="CandidateDetailsSheet.DateofBirth" maxlength="30" readonly="readonly" 
+                                        title="Date of Birth" class="tbForm textMandatory jQrydatepicker" />
+                                </li>
+                                <li>
+                                    <label for="designation_form">
+                                        <span>*</span>Designation
+                                    </label>
+                                    <input type="text" id="designation_form" jqxb-datasource="FormDetails" jqxb-datamember="CandidateDetailsSheet.Designation"
+                                        class="tbForm textMandatory onlyAlp" style="background: #f0f0f0; color: #888 !important;" readonly="readonly" maxlength="30" title="Designation" />
+                                </li>
+                                <li>
+                                    <label for="recruiter_form">
+                                        <span>*</span>Recruiter
+                                    </label>
+                                    <input type="text" id="recruiter_form" jqxb-datasource="FormDetails" jqxb-datamember="CandidateDetailsSheet.Recruiter"
+                                        class="tbForm textMandatory onlyAlp" style="background: #f0f0f0; color: #888 !important;" readonly="readonly" maxlength="30" title="Recruiter" />
+                                </li>
+                                <li>
+                               
+                                   <p style="height: 20px; color: #3f678f; padding-top: 5px; padding-left: 25px; font-family: Trebuchet MS; font-size: 1em; font-weight: bold; border-top-color: #8fb9d0; border-right-color: #8fb9d0; border-bottom-color: #8fb9d0; border-left-color: #8fb9d0; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; width: 573px;">
+                                                
+                                       Have you worked with Cognizant before? If yes, provide the below requested details</p>
+                               
+                                </li>
+                                <!--<li></li>-->
+                                <li></li>
+                                <li style="margin-top: 5px;">
+                                    <label for="FullTime_form">
+                                        <span>*</span><p style="margin-left: 20px; margin-top: -15px;">Have you worked as a Full Time employee?</p> 
+                                    </label>
+                                    <select class="tbForm dropdown" id="FullTime_form" name="FullTimeEmployee" jqxb-datasource="FormDetails"
+                                        title="Document" jqxb-datamember="CandidateDetailsSheet.FullTime" jqxb-listsource="YesOrNo"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description" style="margin-top: 1px;">
+                                    </select>
+                                </li>
+                                <li>
+                                    <label id="FullEmpID" style="margin-top: 10px;margin-left: -5px;">
+                                        <span>*</span>Employee ID
+                                    </label>
+                                    <input type="text" id="FullTime" jqxb-datasource="FormDetails" jqxb-datamember="CandidateDetailsSheet.FullTimeEmployeeID"
+                                       style="margin-top: 10px; margin-left: 0px; margin-right: 35px;" class="tbForm OnlyNumeric" maxlength="6" title="EmployeeID" />
+                                </li>
+                                <li style="margin-top: 5px; margin-right: 400px;">
+                                    <label for="Contract_form">
+                                        <span>*</span><p style="margin-left: 20px; margin-top: -15px;">Have you worked as a Contract employee?</p> 
+                                    </label>
+                                    <select class="tbForm dropdown" id="Contract_form" name="ContractEmployee" jqxb-datasource="FormDetails"
+                                        title="Document" jqxb-datamember="CandidateDetailsSheet.Contract" jqxb-listsource="YesOrNo"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description" style="margin-top: 1px;">
+                                    </select>
+                                </li>
+                                <li style="margin-right: 0px; margin-left: 420px; margin-top: -45px;">
+                                    <label id="ContractEmpID" style="margin-top: 5px;">
+                                        <span>*</span>Employee ID 
+                                    </label>
+                                    <input type="text" id="Contract" jqxb-datasource="FormDetails" jqxb-datamember="CandidateDetailsSheet.ContractEmployeeID"
+                                        style="margin-top: 5px;" class="tbForm OnlyNumeric" maxlength="6" title="EmployeeID" />
+                                </li>
+                                <li style="margin-top: -20px;">
+                                    <label for="Intern_form" style="margin-top: 30px;">
+                                        <span>*</span><p style="margin-left: 20px; margin-top: -15px;">Have you worked as an Intern?</p> 
+                                    </label>
+                                    <select class="tbForm dropdown" id="Intern_form" name="InternEmployee" jqxb-datasource="FormDetails"
+                                        title="Document" jqxb-datamember="CandidateDetailsSheet.Intern" jqxb-listsource="YesOrNo"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description" style="margin-top: 30px;">
+                                    </select>
+                                </li>
+                                <li style="margin-top: 10px;">
+                                    <label id="InternEmpID" style="margin-top: 5px; margin-right: 200px; margin-left: -5px;">
+                                        <span>*</span>Employee ID
+                                    </label>
+                                    <input type="text" id="Intern" jqxb-datasource="FormDetails" jqxb-datamember="CandidateDetailsSheet.InternEmployeeID"
+                                        style="margin-top: -15px;  margin-left: 0px; margin-right: 35px;"  class="tbForm OnlyNumeric" maxlength="6" title="EmployeeID" /></li>
+                            </ul>
+                        </div>
+                        <div class="Signature" id="Sign_PageId_1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+    <input type="hidden" runat="server" id="hdnMigrateCandidate" />
+</body>
+</html>

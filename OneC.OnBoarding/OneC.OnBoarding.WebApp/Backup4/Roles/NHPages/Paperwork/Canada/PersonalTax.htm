@@ -1,0 +1,641 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Personal Tax</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/BlueThemeGov.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/Canada/PersonalTax.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <style type="text/css">
+        body
+        {
+            font-family: Arial,Verdana,Helvetica, sans-serif;
+            font-size: 0.6em;
+            line-height: 16px;
+            color: #000;
+        }
+        .pagesContainer div, .pagesContainer p, .pagesContainer .flt_left, .pagesContainer .flt_right, .pagesContainer table, .pagesContainer tr, .pagesContainer td, .pagesContainer span, .pagesContainer input, .pagesContainer select, .pagesContainer textarea, .pagesContainer h1, .pagesContainer h2, .pagesContainer h3, .pagesContainer h4, .pagesContainer h5, .pagesContainer h6, .pagesContainer ul, .pagesContainer li, .pagesContainer ol
+        {
+            font-family: Arial,Verdana,Helvetica,sans-serif;
+            color: #000;
+        }
+        .pagesContainer table, .pagesContainer tr, .pagesContainer td, .pagesContainer p
+        {
+            font-size: 13px;
+        }
+        
+        #TextArea1
+        {
+            width: 222px;
+        }
+        strong, h3.space_t10
+        {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+    <div id='baseContent'>
+        <div id='pageMain'>
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="space_t10">
+                                <tr style="font-weight: bold;">
+                                    <td width="164" valign="top">
+                                        <img src="../../../../Images/flag_canada.JPG" alt="Logo" style="margin: 0px; float: left;" />
+                                    </td>
+                                    <td>
+                                        <h1 style="font-size: 20px; color: #000; float: left; width: 100%; line-height: 24px;">
+                                            Canada Revenue
+                                            <br />
+                                            Agency
+                                        </h1>
+                                    </td>
+                                    <td>
+                                        <h1 style="font-size: 20px; color: #000; float: left; width: 100%; line-height: 24px;">
+                                            Agence du Revenu
+                                            <br />
+                                            du Canada
+                                        </h1>
+                                    </td>
+                                    <td>
+                                        <h1 style="font-size: 20px; color: #000; float: left; width: 100%; line-height: 24px;
+                                            padding-bottom: 10px;">
+                                            <span class='currentDate'></span>&nbsp; PERSONAL TAX CREDITS RETURN</h1>
+                                    </td>
+                                    <td width="165" align="right">
+                                        <h2 style="font-weight: normal; float: right; padding-bottom: 25px;">
+                                            TD1</h2>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div style="margin-top: 15px; margin-left: 10px; font-weight: bold;">
+                                <h2>
+                                    Your employer or payer will use this form to determine the amount of your tax deductions.</h2>
+                                <h2>
+                                    Read the back before completing this form. <span style="font-weight: normal;">Complete
+                                        this form based on the best estimate of your circumstances.</span></h2>
+                            </div>
+                            <p>
+                                Please complete the form in its entirety, with the exception of your Employee ID
+                                which is not required at this time. Once you receive your Employee ID, you will
+                                be asked to enter the ID and sign the form. This notification/reminder will be sent
+                                to you as a post-joining action item.
+                            </p>
+                            <br />
+                            <div class="form_box" visible="true">
+                                <div class="form_grid">
+                                    <div class="row_first">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                                            <tr>
+                                                <td width="50%" style="padding-left: 0px;">
+                                                    <table cellpadding="2" cellspacing="0" width="100%" class="no_border">
+                                                        <tr>
+                                                            <td>
+                                                                Last name <span style="color: Red">&nbsp;*</span>
+                                                                <br />
+                                                                <input type="text" class="inputText_Readonly" unselectable="on" style="border: 1px solid #000;
+                                                                    width: 175px;" id="Pg_1_text_LastName" readonly="readonly" maxlength="15" />
+                                                            </td>
+                                                            <td>
+                                                                First name and initial(s) <span style="color: Red">&nbsp;*</span>
+                                                                <br />
+                                                                <input type="text" class="inputText_Readonly" unselectable="on" style="border: 1px solid #000;
+                                                                    width: 175px;" id="Pg_1_text_FirstName" readonly="readonly" maxlength="15" />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td width="20%">
+                                                    Date of birth (YYYY/MM/DD) <span style="color: Red">&nbsp;*</span>
+                                                    <br />
+                                                    <input type="text" class="inputText_Readonly" unselectable="on" style="border: 1px solid #000;
+                                                        width: 181px;" id="Pg_1_text_Date" readonly="readonly" maxlength="10" />
+                                                </td>
+                                                <td>
+                                                    Employee number 
+                                                    <br />
+                                                    <input type="text" class="inputText_Readonly" unselectable="on" style="border: 1px solid #000;
+                                                        width: 181px;" id="Pg_1_text_EmpNumber" readonly="readonly" maxlength="6" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Address including postal code <span style="color: Red">&nbsp;*</span>
+                                                    <br />
+                                                    <textarea id="Pg_1_text_Address" class="inputText_Readonly" unselectable="on" readonly="readonly"
+                                                        style="border: 1px solid #000; width: 66%;" name="S1" rows="2"></textarea>
+                                                </td>
+                                                <td>
+                                                    <span class="font_strong">For non-residents only - </span>
+                                                    <br />
+                                                    Country of permanent residence<br />
+                                                    <input type="text" class="nospace1 ccpDisabled" style="border: 1px solid #000; width: 181px;"
+                                                        id="Pg_1_text_NonResident" maxlength="20" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.Country" />
+                                                </td>
+                                                <td>
+                                                    Social insurance number
+                                                    <br />
+                                                    <input type="text" class="inputText_Readonly" unselectable="on" style="border: 1px solid #000;
+                                                        width: 181px;" id="Pg_1_text_SSN" readonly="readonly" maxlength="11" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="second_row">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="5" class="form_gov1">
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">1. Basic personal amount - </span>Every resident of Canada
+                                                    can claim this amount. If you will have more than one employer or payer at the same
+                                                    time in <span class='currentDate'></span>&nbsp;, see &quot;More than one employer
+                                                    or payer at the same time&quot; on the next page. If you are a non-resident, see
+                                                    &quot;Non-residents&quot; on the next page.
+                                                </td>
+                                                <td class="no_border" width="10">
+                                                    &nbsp;
+                                                </td>
+                                                <td width="180" valign="bottom">
+                                                    <input type="text" class="inputText_Readonly" style="border: 1px solid #000; width: 133px;
+                                                        font-weight: bold;" id="Pg_1_text_BasicAmt" unselectable="on" readonly="readonly"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.BasicPersonalamt"
+                                                        maxlength="12" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">2. Child amount – </span>Either parent (but not both),
+                                                    may claim $2,101 for each child born in 1993 or later that resides with both parents
+                                                    throughout the year. Any unused portion can be transferred to that parent's spouse
+                                                    or common-law partner. If the child does not reside with both parents throughout
+                                                    the year, the parent who is entitled to claim the &quot;Amount for an eligible dependant&quot;
+                                                    on line 8 may also claim $2,101 for that same child.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="nospace ccpDisabled" style="border: 1px solid #000; width: 133px;
+                                                        font-weight: bold;" id="Pg_1_text_ChildAmt" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.ChildAmt" maxlength="12" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">3. Age amount – </span>If you will be 65 or older on December
+                                                    31, <span class='currentDate'></span>&nbsp;, and your net income for the year from
+                                                    all sources will be $32,506 or less, enter $6,446. If your net income for the year
+                                                    will be between $32,506 and $75,480 and you want to calculate a partial claim, get
+                                                    the TD1-WS, Worksheet for the <span class='currentDate'></span>&nbsp; Personal Tax
+                                                    Credits Return, and complete the appropriate section.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="nospace ccpDisabled" style="border: 1px solid #000; width: 133px;
+                                                        font-weight: bold;" id="Pg_1_text_AgeAmt" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.AgeAmt" maxlength="12" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">4. Pension income amount – </span>If you will receive
+                                                    regular pension payments from a pension plan or fund (excluding Canada Pension Plan,
+                                                    Quebec Pension Plan, Old Age Security, or Guaranteed Income Supplement payments),
+                                                    enter $2,000 or your estimated annual pension income, whichever is less.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="nospace ccpDisabled" style="border: 1px solid #000; width: 133px;
+                                                        font-weight: bold;" id="Pg_1_text_PensionAmt" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        maxlength="12" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.PensionIncomeAmt" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">5. Tuition, education, and textbook amounts (full time and
+                                                        part time) – </span>If you are a student enrolled at a university or college,
+                                                    or an educational institution certified by Human Resources and Skills Development
+                                                    Canada, and you will pay more than $100 per institution in tuition fees, complete
+                                                    this section. If you are enrolled full time, or if you have a mental or physical
+                                                    disability and are enrolled part time, enter the total of the tuition fees you will
+                                                    pay, plus $400 for each month that you will be enrolled, plus $65 per month for
+                                                    textbooks. If you are enrolled part time and do not have a mental or physical disability,
+                                                    enter the total of the tuition fees you will pay, plus $120 for each month that
+                                                    you will be enrolled part time, plus $20 per month for textbooks.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="nospace ccpDisabled" style="border: 1px solid #000; width: 133px;
+                                                        font-weight: bold;" id="Pg_1_text_EducationAmt" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        maxlength="12" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.TuitionandEducationAmt" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">6. Disability amount – </span>If you will claim the disability
+                                                    amount on your income tax return by using Form T2201, Disability Tax Credit Certificate,
+                                                    enter $7,239.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="nospace ccpDisabled" style="border: 1px solid #000; width: 133px;
+                                                        font-weight: bold;" id="Pg_1_text_DisabilityAmt" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        maxlength="12" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.DisabilityAmt" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">7. Spouse or common-law partner amount – </span>If you
+                                                    are supporting your spouse or common-law partner who lives with you, and whose net
+                                                    income for the year will be less than $10,382, enter the difference between $10,382
+                                                    and his or her estimated net income for the year. If your spouse's or common-law
+                                                    partner's net income for the year will be more than $10,382, you cannot claim this
+                                                    amount.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="nospace ccpDisabled" style="border: 1px solid #000; width: 133px;
+                                                        font-weight: bold;" id="Pg_1_text_SpouseAmt" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        maxlength="12" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.SpouseAmt" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">8. Amount for an eligible dependant – </span>If you do
+                                                    not have a spouse or common-law partner and you support a dependent relative who
+                                                    lives with you, and whose net income for the year will be less than $10,382, enter
+                                                    the difference between $10,382 and his or her estimated net income. If your eligible
+                                                    dependant's net income for the year will be $10,382 or more, you cannot claim this
+                                                    amount.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="nospace ccpDisabled" style="border: 1px solid #000; width: 133px;
+                                                        font-weight: bold;" id="Pg_1_text_dependantAmt" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        maxlength="12" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.EligibleDependantAmt" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">9. Caregiver amount – </span>If you are taking care of
+                                                    a dependant who lives with you, whose net income for the year will be $14,422 or
+                                                    less, and who is either your or your spouse's or common-law partner's: 
+                                                    <ul style="margin-left: 24px; list-style-type: decimal">
+                                                        <li>parent or grandparent (aged 65 or older), or</li><li>relative (aged 18 or older)
+                                                            who is dependent on you because of an infirmity, enter $4,223.<br />
+                                                            If the dependant's net income for the year will be between $14,422 and $18,645 and
+                                                            you want to calculate a partial<br />
+                                                            claim, get the TD1-WS, and complete the appropriate section. </li>
+                                                    </ul>
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="nospace ccpDisabled" style="border: 1px solid #000; width: 133px;
+                                                        font-weight: bold;" id="Pg_1_text_CaregiverAmt" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        maxlength="12" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.CareGiverAmt" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">10. Amount for infirm dependants age 18 or older – </span>
+                                                    If you support an infirm dependant age 18 or older who is your or your spouse's
+                                                    or common-law partner's relative, who lives in Canada, and whose net income for
+                                                    the year will be $5,992 or less, enter $4,223. You cannot claim an amount for a
+                                                    dependant you claimed on line 9. If the dependant's net income for the year will
+                                                    be between $5,992 and $10,215 and you want to calculate a partial claim, get the
+                                                    TD1-WS, and complete the appropriate section.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="nospace ccpDisabled" style="border: 1px solid #000; width: 133px;
+                                                        font-weight: bold;" id="Pg_1_text_infirmdependant" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        maxlength="12" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.InfirmDependantAmt" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">11. Amounts transferred from your spouse or common-law partner
+                                                        – </span>If your spouse or common-law partner will not use all of his or her
+                                                    age amount, pension income amount, tuition, education and textbook amounts, disability
+                                                    amount or child amount on his or her income tax return, enter the unused amount.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="nospace ccpDisabled" style="border: 1px solid #000; width: 133px;
+                                                        font-weight: bold;" id="Pg_1_text_AmtTransferredFromSpouse" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        maxlength="12" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.SpouseTransferAmt" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">12. Amounts transferred from a dependant – </span>If your
+                                                    dependant will not use all of his or her <strong>disability amount </strong>on his
+                                                    or her income tax return, enter the unused amount. If your or your spouse's or common-law
+                                                    partner's dependent child or grandchild will not use all of his or her <strong>tuition,
+                                                        education, and textbook amounts </strong>on his or her income tax return, enter
+                                                    the unused amount.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="nospace ccpDisabled" style="border: 1px solid #000; width: 133px;
+                                                        font-weight: bold;" id="Pg_1_text_AmtTransferredFromDependant" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        maxlength="12" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.DependantTransferAmt" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>
+                                                        <span class="font_strong">13. TOTAL CLAIM AMOUNT – </span>Add lines 1 through 12.
+                                                        Your employer or payer will use this amount to determine the amount of your tax
+                                                        deductions.</p>
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="inputText_Readonly" style="border: 1px solid #000; width: 133px;
+                                                        font-weight: bold;" id="Pg_1_text_TotalClaimAmt" maxlength="12" readonly="readonly"
+                                                        unselectable="on" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.TotalClaimAmt" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="space_t10">
+                                    <tr>
+                                        <td width="12%" class="no_border" align="left" style="font-weight: bold;">
+                                            <strong>TD1 E (10)</strong>
+                                        </td>
+                                        <td width="75%" align="center" class="no_border">
+                                            (Vous pouvez obtenir ce formulaire en français à <a target="_blank" style="color: Black;
+                                                text-decoration: underline; font-weight: bold;" href="http://www.cra-arc.gc.ca/formulaires/">
+                                                <strong style="font-weight: bold;">www.arc.gc.ca/formulaires</strong> </a>ou
+                                            au <strong style="font-weight: bold;">1-800-959-3376.</strong>)
+                                        </td>
+                                        <td width="15%" align="right" valign="bottom" class="no_border">
+                                            <img src="../../../../Images/canada_logo_pertaxform.jpg" alt="Canada" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 1st page-->
+                <!--Start of 2nd page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="form_box" visible="true">
+                                <div class="form_grid space_t10">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                                        <tr>
+                                            <td>
+                                                <h1 class="space_t10">
+                                                    Completing Form TD1</h1>
+                                                <p>
+                                                    Complete this form <strong>only</strong> if:</p>
+                                                <ul style="margin-left: 24px; list-style-type: disc;">
+                                                    <li>you have a new employer or payer and you will receive salary, wages, commissions,
+                                                        pensions, Employment Insurance benefits, or any other remuneration; </li>
+                                                    <li>you want to change amounts you previously claimed (such as when the number of your
+                                                        eligible dependants has changed); </li>
+                                                    <li>you want to claim the deduction for living in a prescribed zone; or </li>
+                                                    <li>you want to increase the amount of tax deducted at source.</li>
+                                                </ul>
+                                                Sign and date it and give it to your employer or payer.
+                                                <br />
+                                                If you do not complete a TD1 form, your new employer or payer will deduct taxes
+                                                after allowing the basic personal amount <strong>only</strong>.
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <br />
+                                <h3 class="space_t10 space_b5">
+                                    More than one employer or payer at the same time</h3>
+                                <table width="96%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td class="no_border space_R5" valign="top">
+                                            <input id="Pg_2_check_NoEmployer" type="checkbox" value="chkNoEmployer" style="vertical-align: middle;
+                                                margin-right: 3px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.NumEmployer"
+                                                jqxb-bindedattribute="checked" />
+                                        </td>
+                                        <td class="no_border">
+                                            If you have more than one employer or payer at the same time and you have already
+                                            claimed personal tax credit amounts on another TD1 form, you <strong>cannot claim them
+                                                again.</strong> If your total income from all sources will be <strong>more</strong>
+                                            than the personal tax credits you claimed on another TD1 form, <strong>check</strong>
+                                            this box, enter "0" on line 13 on the front page and do not complete lines 2 to
+                                            12.
+                                            <br />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <h3 class="space_t10 space_b5">
+                                    Total income less than total claim amount</h3>
+                                <table width="96%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td class="no_border" class="no_border space_R5" valign="top">
+                                            <input id="Pg_2_check_Income" type="checkbox" value="chkIncome" style="vertical-align: middle;
+                                                margin-right: 3px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.IncomeCheck"
+                                                jqxb-bindedattribute="checked" />
+                                        </td>
+                                        <td class="no_border">
+                                            Check this box if your total income for the year from <strong>all</strong> employers
+                                            and payers will be <strong>less</strong> than your total claim amount on line 13.
+                                            Then your employer or payer will not deduct tax from your earnings.
+                                            <br />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <h3 class="space_t10">
+                                    Non-residents</h3>
+                                <p>
+                                    Are you a non-resident of Canada who will include 90% or more of your world income
+                                    when determining your taxable income earned in Canada in <span class='currentDate'>
+                                    </span>&nbsp;? If you are unsure of your residency status, call the International
+                                    Tax Services Office at <strong>1-800-267-5177</strong>.</p>
+                                <table width="96%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td class="no_border" class="no_border space_R5" valign="top">
+                                            <input id="Pg_2_check_NonResident" type="checkbox" value="chkNonResident" style="vertical-align: middle;
+                                                margin-right: 3px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.NonResident"
+                                                jqxb-bindedattribute="checked" />
+                                        </td>
+                                        <td class="no_border">
+                                            <ul style="margin-left: 24px; list-style-type: disc;">
+                                                <li>If <strong>yes</strong>, complete the previous page.</li>
+                                                <li>If <strong>no, check</strong> the box, enter &quot;0&quot; on line 13 and do not
+                                                    complete lines 2 to 12, as you are not entitled to the personal tax credits.<br />
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <h3 class="space_t10">
+                                    Provincial or territorial personal tax credits return</h3>
+                                <p>
+                                    If your claim amount on line 13 is more than $10,382, you also have to complete
+                                    a provincial or territorial personal tax credit return. If you are an employee,
+                                    use the TD1 form for your province or territory of employment. If you are a pensioner,
+                                    use the TD1 form for your province or territory of residence. Your employer or payer
+                                    will use both this federal form and your most recent provincial or territorial TD1
+                                    form to determine the amount of your tax deductions.
+                                    <br />
+                                    If you are claiming the basic personal amount only (your claim amount on line 13
+                                    is $10,382), your employer or payer will deduct provincial or territorial taxes
+                                    after allowing the provincial or territorial basic personal amount.
+                                </p>
+                                <p class="space_t10">
+                                    <strong>Note:</strong> If you are a Saskatchewan resident supporting children under
+                                    18 at any time during <span class='currentDate'></span>&nbsp;, you may be able to
+                                    claim the child amount on Form TD1SK, <span class='currentDate'></span>&nbsp; Saskatchewan
+                                    Personal Tax Credits Return. Therefore, you may want to complete Form TD1SK even
+                                    if you are <strong>only</strong> claiming the basic personal amount on this form.
+                                    <br />
+                                </p>
+                                <h3 class="space_t10">
+                                    Deduction for living in a prescribed zone</h3>
+                                <p>
+                                    If you live in the Northwest Territories, Nunavut, Yukon, or another prescribed
+                                    northern zone for more than six months in a row beginning or ending in <span class='currentDate'>
+                                    </span>&nbsp;, you can claim:
+                                </p>
+                                <table width="96%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td class="no_border">
+                                            <ul style="margin-left: 24px; list-style-type: disc;">
+                                                <li>$8.25 for each day that you live in the prescribed northern zone, or</li>
+                                                <li>$16.50 for each day that you live in the prescribed northern zone if, during that
+                                                    time, you live in a dwelling that you maintain, and you are the only person living
+                                                    in that dwelling who is claiming this deduction.</li>
+                                            </ul>
+                                        </td>
+                                        <td class="no_border">
+                                            <input type="text" class="nospace inputText_Readonly" style="border: 1px solid #000;
+                                                width: 133px; font-weight: bold;" id="Pg_2_text_Deduction" onkeyup="javascript:return CalculateClaimAmount();"
+                                                maxlength="12" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.Deduction" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <p>
+                                    Employees living in a prescribed <strong>intermediate</strong> zone can claim 50%
+                                    of the total of the above amounts.
+                                    <br />
+                                    For more information, get Form T2222, <i>Northern Residents Deductions</i>, and
+                                    the Publication T4039, <i>Northern Residents Deductions – Places in Prescribed Zones</i>.
+                                    <br />
+                                </p>
+                                <h3 class="space_t10">
+                                    Additional tax to be deducted</h3>
+                                <table width="96%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td class="no_border">
+                                            <p>
+                                                You may want to have more tax deducted from each payment, especially if you receive
+                                                other income, including non-employment income such as CPP or QPP benefits, or Old
+                                                Age Security pension. By doing this, you may not have to pay as much tax when you
+                                                file your income tax return. To choose this option, state the amount of additional
+                                                tax you want to have deducted from each payment. To change this deduction later,
+                                                complete a new Form TD1.<br />
+                                            </p>
+                                        </td>
+                                        <td class="no_border">
+                                            <input type="text" class="nospace inputText_Readonly" style="border: 1px solid #000;
+                                                width: 133px; font-weight: bold;" id="Pg_2_text_AdditionalTax" onkeyup="javascript:return CalculateClaimAmount();"
+                                                maxlength="12" jqxb-datasource="FormDetails" jqxb-datamember="PersonalTax.AdditionalTax" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <h3 class="space_t10">
+                                    Reduction in tax deductions</h3>
+                                <p>
+                                    You can ask to have less tax deducted if on your income tax return you are eligible
+                                    for deductions or non-refundable tax credits that are not listed on this form (for
+                                    example, periodic contributions to a Registered Retirement Savings Plan (RRSP),
+                                    child care or employment expenses, and charitable donations). To make this request,
+                                    complete Form T1213, Request to Reduce Tax Deductions at Source, to get a letter
+                                    of authority from your tax services office. Give the letter of authority to your
+                                    employer or payer. You do not need a letter of authority if your employer deducts
+                                    RRSP contributions from your salary.</p>
+                                <br />
+                                <fieldset class="space_t60">
+                                    <legend>Certification:</legend>
+                                    <div style="padding: 5px;">
+                                        <p>
+                                            I certify that the information given in this return is, to the best of my knowledge,
+                                            correct and complete.</p>
+                                    </div>
+                                    <table width="100%" cellspacing="0" cellpadding="4" class="no_border">
+                                        <tr>
+                                            <td width="15%">
+                                                Signature
+                                            </td>
+                                            <td width="35%">
+                                                <div style="border-bottom: 1px solid black; width: 95%">
+                                                </div>
+                                            </td>
+                                            <td width="15%" align="right">
+                                                Date &nbsp;
+                                            </td>
+                                            <td align="left" width="35%">
+                                                <input type="text" class="inputText_Readonly" unselectable="on" style="border: 1px solid #000;
+                                                    width: 130px;" id="Pg_2_text_SignatureDate" readonly="readonly" maxlength="10" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td colspan="3">
+                                                <div style="border-top: 1px solid #ccc; width: 350px;">
+                                                    <strong>It is a serious offence to make a false return.</strong></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="Signature" id="Sign_PageId_2"></div>-->
+                </div>
+                <!--End of 2nd page-->
+            </div>
+            <div id='footerContent'>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

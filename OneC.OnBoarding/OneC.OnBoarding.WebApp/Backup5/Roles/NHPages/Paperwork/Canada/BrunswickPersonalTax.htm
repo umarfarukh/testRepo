@@ -1,0 +1,505 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> New Brunswick Personal Tax</title>
+   <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="../../../../Styles/jquery.ui.all.css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/BlueThemeGov.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+   <!-- <script src="../../../../Scripts/JQuery/jquery.alerts.js" type="text/javascript"></script>-->
+    <script src="../../../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script> 
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Validations.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/Canada/BrunswickPersonalTax.js" type="text/javascript"></script>     
+    <style type="text/css">
+        body
+        {
+            font-family: Arial,Verdana,Helvetica, sans-serif;
+            font-size: 0.6em;
+            line-height: 16px;
+            color: #000;
+        }
+        .pagesContainer div, .pagesContainer p, .pagesContainer .flt_left, .pagesContainer .flt_right, .pagesContainer table, .pagesContainer tr, .pagesContainer td, .pagesContainer span, .pagesContainer input, .pagesContainer select, .pagesContainer textarea, .pagesContainer h1, .pagesContainer h2, .pagesContainer h3, .pagesContainer h4, .pagesContainer h5, .pagesContainer h6, .pagesContainer ul, .pagesContainer li, .pagesContainer ol
+        {
+            font-family: Arial,Verdana,Helvetica, sans-serif;
+            color: #000;
+        }
+        .pagesContainer table, .pagesContainer tr, .pagesContainer td, .pagesContainer p
+        {
+            font-size: 13px;
+        }
+        strong, h3.space_b10
+        {
+            font-weight: bold;
+        }
+        li
+        {
+            list-style-type: disc;
+        }
+        a
+        {
+            font-weight: bold;
+            color: Black;
+            text-decoration: underline;
+        }
+        
+        #TextArea1
+        {
+            width: 222px;
+        }
+    </style>
+    <style type="text/css">
+        .inputText_Readonly
+        {
+            background-color: InactiveCaptionText;
+            font-size: 15px;
+            padding: 3px 5px 2px;
+            border: 1px solid #ccc !important;
+            background: #f0f0f0;
+            color: #888 !important;
+            cursor: default;
+        }
+        
+        #TextArea1
+        {
+            width: 222px;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+    <div id='baseContent'>
+        <div id='pageMain'>
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="space_t10">
+                                <tr>
+                                    <td width="165">
+                                        <img src="../../../../Images/brunswick.png" alt="brunswick logo" style="height: 45px;" />
+                                    </td>
+                                    <td align="center">
+                                        <h1 style="font-size: 20px; color: #000; float: left; width: 100%; line-height: 24px;
+                                            font-weight: bold;">
+                                            2014 New Brunswick Personal Tax Credits Return</h1>
+                                    </td>
+                                    <td width="165" align="right">
+                                        <h2 style="font-weight: normal; float: right;">
+                                            TD1NB</h2>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div style="margin-top: 15px; padding-left: 5px; font-weight: bold;">
+                                <h2>
+                                    Your employer will use this form to determine the amount of your provincial tax deductions.</h2>
+                                <h2>
+                                    Read the back before completing this form.<span style="font-weight: normal;">Complete this form based on the best estimate of your circumstances.</span></h2>
+                            </div>
+                           <!-- <p>
+                                Please complete the form in its entirety, with the exception of your Employee ID
+                                which is not required at this time. Once you receive your Employee ID, you will
+                                be asked to enter the ID and sign the form. This notification/reminder will be sent
+                                to you as a post-joining action item.
+                            </p>-->
+                            <br />
+                            <div class="form_box" visible="true">
+                                <div class="form_grid">
+                                    <div class="row_first">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                                            <tr>
+                                                <td width="50%" style="padding-left: 0px;">
+                                                    <table cellpadding="2" cellspacing="0" width="100%" class="no_border">
+                                                        <tr>
+                                                            <td>
+                                                                Last name <span style="color: Red">&nbsp;*</span>
+                                                                <br />
+                                                                <input type="text" style="border: 1px solid #000; width: 175px;" class="inputText_Readonly"
+                                                                    unselectable="on" id="Pg_1_text_LastName" readonly="readonly" />
+                                                            </td>
+                                                            <td>
+                                                                First name and initial(s) <span style="color: Red">&nbsp;*</span>
+                                                                <br />
+                                                                <input type="text" class="inputText_Readonly" unselectable="on" style="border: 1px solid #000;
+                                                                    width: 174px;" id="Pg_1_text_FirstName" readonly="readonly" />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td width="20%">
+                                                    Date of birth (YYYY/MM/DD) <span style="color: Red">&nbsp;*</span>
+                                                    <br />
+                                                    <input type="text" class="inputText_Readonly" unselectable="on" style="border: 1px solid #000;
+                                                        width: 179px;" id="Pg_1_text_Date" readonly="readonly" />
+                                                </td>
+                                                <td>
+                                                    Employee number 
+                                                    <br />
+                                                    <input type="text" class="inputText_Readonly" unselectable="on" style="border: 1px solid #000;
+                                                        width: 181px;" id="Pg_1_text_EmpNumber" readonly="readonly" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Address including postal code <span style="color: Red">&nbsp;*</span>
+                                                    <br />
+                                                    <textarea id="Pg_1_text_Address" class="inputText_Readonly" unselectable="on" style="border: 1px solid #000;
+                                                        width: 66%;" name="S1" rows="2" cols="1" readonly="readonly"></textarea>
+                                                </td>
+                                                <td>
+                                                    <span class="font_strong">For non-residents only - </span>
+                                                    <br />
+                                                    Country of permanent residence<br />
+                                                    <input type="text" class="ccpDisabled" style="border: 1px solid #000; width: 181px;"
+                                                        id="Pg_1_text_NonResident" jqxb-datasource="FormDetails" jqxb-datamember="BrunswickPersonalTax.Country"
+                                                        maxlength="20" />
+                                                </td>
+                                                <td>
+                                                    Social insurance number
+                                                    <br />
+                                                    <input type="text" class="inputText_Readonly" unselectable="on" style="border: 1px solid #000;
+                                                        width: 181px;" id="Pg_1_text_SSN" readonly="readonly" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="second_row">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="5" class="form_gov1">
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">1. Basic personal amount - </span>Every person employed in New Brunswick and every pensioner residing in New Brunswick can claim this amount. If you will have more than one employer or payer at the same time in 2014, see "Will you have more than one employer or payer at the same time?" on the next page.
+                                                </td>
+                                                <td class="no_border" width="10">
+                                                    &nbsp;
+                                                </td>
+                                                <td width="180" valign="bottom">
+                                                    <input type="text" class="inputText_Readonly " unselectable="on" style="border: 1px solid #000;
+                                                        width: 133px; font-weight: bold;" id="Pg_1_text_BasicAmt" readonly="readonly"
+                                                        disabled="disabled" jqxb-datasource="FormDetails" jqxb-datamember="BrunswickPersonalTax.BasicPersonalamt"
+                                                        maxlength="12" />
+                                                </td>
+                                            </tr>
+                                            
+                                            
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">2. Age amount – </span>If you will be 65 or older on December 31, 2014, and your net income from all sources will be $34,431 or less, enter $4,625. If your net income for the year will be between $34,431 and $65,265 and you want to calculate a partial claim, get Form TD1NB-WS, <i>Worksheet for the 2014 New Brunswick Personal Tax Credits Return</i>, and complete the appropriate section.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="toDecimal OnlyNumeric ccpDisabled" style="border: 1px solid #000;
+                                                        width: 133px; font-weight: bold;" id="Pg_1_text_AgeAmt" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="BrunswickPersonalTax.AgeAmt" maxlength="12" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">3. Pension income amount – </span>If you will receive regular pension payments from a pension plan or fund (excluding Canada Pension Plan, Quebec Pension Plan, Old Age Security, or Guaranteed Income Supplement payments), enter $1,000, or your estimated annual pension income, whichever is less.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="toDecimal OnlyNumeric ccpDisabled" style="border: 1px solid #000;
+                                                        width: 133px; font-weight: bold;" id="Pg_1_text_PensionAmt" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="BrunswickPersonalTax.PensionIncomeAmt"
+                                                        maxlength="12" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">4. Tuition and education amounts (full time and part time)
+                                                        – </span>If you are a student enrolled at a university, college, or educational institution certified by Human Resources and Skills Development Canada, and you will pay more than $100 per institution in tuition fees, complete this section. If you are enrolled full time, or if you have a mental or physical disability and are enrolled part time, enter the total of the tuition fees you will pay, plus $400 for each month that you will be enrolled. If you are enrolled part time and do not have a mental or physical disability, enter the total of the tuition fees you will pay, plus $120 for each month that you will be enrolled part time.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="toDecimal OnlyNumeric ccpDisabled" style="border: 1px solid #000;
+                                                        width: 133px; font-weight: bold;" id="Pg_1_text_EducationAmt" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="BrunswickPersonalTax.TuitionandEducationAmt"
+                                                        maxlength="12" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">5. Disability amount – </span>If you will claim the disability amount on your income tax return by using Form T2201, <i>Disability Tax Credit Certificate</i>,
+                                                    enter $7,668.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="toDecimal OnlyNumeric ccpDisabled" style="border: 1px solid #000;
+                                                        width: 133px; font-weight: bold;" id="Pg_1_text_DisabilityAmt" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="BrunswickPersonalTax.DisabilityAmt" maxlength="12" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">6. Spouse or common-law partner amount – </span>If you are supporting your spouse or common-law partner who lives with you and whose net income for the year will be $805 or less, enter $8,043. If his or her net income for the year will be between $805 and $8,848 and you want to calculate a partial claim, get Form TD1NB-WS and complete the appropriate section.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" style="border: 1px solid #000; width: 133px; font-weight: bold;"
+                                                        id="Pg_1_text_SpouseAmt" class="OnlyNumeric ccpDisabled" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="BrunswickPersonalTax.SpouseAmt" maxlength="12" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">7. Amount for an eligible dependant – </span>If you do not have a spouse or common-law partner and you support a dependent relative who lives with you and whose net income for the year will be $805 or less, enter $8,043. If his or her net income for the year will be between $805 and $8,848 and you want to calculate a partial claim, get Form TD1NB-WS and complete the appropriate section.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="toDecimal OnlyNumeric ccpDisabled" style="border: 1px solid #000;
+                                                        width: 133px; font-weight: bold;" id="Pg_1_text_dependantAmt" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="BrunswickPersonalTax.EligibleDependantAmt"
+                                                        maxlength="12" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">8. Caregiver amount – </span>If you are taking care of a dependant who lives with you, whose net income for the year will be $15,277 or less, and who is either your or your spouse's or common-law partner's: 
+                                                    <ul style="margin-left: 24px; list-style-type:disc;">
+                                                        <li>parent or grandparent (aged 65 or older); or</li><li>relative (aged 18 or older) who is dependent on you because of an infirmity, enter $4,473.</ li>
+                                                            If the dependant's net income for the year will be between $15,277 and $19,750 and you want to calculate a partial claim, get Form TD1NB-WS and complete the appropriate section.
+                                                    </ul>
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="toDecimal OnlyNumeric ccpDisabled" style="border: 1px solid #000;
+                                                        width: 133px; font-weight: bold;" id="Pg_1_text_CaregiverAmt" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="BrunswickPersonalTax.CareGiverAmt" maxlength="12" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">9. Amount for infirm dependants age 18 or older</span> If you are supporting an infirm dependant aged 18 or older who is your or your spouse's or common-law partner's relative, who lives in Canada, and whose net income for the year will be $6,347 or less, enter $4,473. You cannot claim an amount for a dependant you claimed on line 8. If the dependant's net income for the year will be between $6,347 and $10,820 and you want to calculate a partial claim, get Form TD1NB-WS and complete the appropriate section.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="toDecimal OnlyNumeric ccpDisabled" style="border: 1px solid #000;
+                                                        width: 133px; font-weight: bold;" id="Pg_1_text_infirmdependant" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="BrunswickPersonalTax.InfirmDependantAmt"
+                                                        maxlength="12" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">10. Amounts transferred from your spouse or common-law partner</span> If your spouse or common-law partner will not use all of his or her age amount, pension income amount, tuition and education amounts, or disability amount on his or her income tax return, enter the unused amount.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" style="border: 1px solid #000; width: 133px; font-weight: bold;"
+                                                        id="Pg_1_text_AmtTransferredFromSpouse" class="OnlyNumeric ccpDisabled" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="BrunswickPersonalTax.SpouseTransferAmt"
+                                                        maxlength="12" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="font_strong">11. Amounts transferred from a dependant – </span>If your dependant will not use all of his or her <b>disability amount</b> on his or her income tax return, enter the unused amount. If your or your spouse's or common-law partner's dependent child or grandchild will not use all of his or her <b>tuition and education amounts</b> on his or her income tax return, enter the unused amount.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class='ccpDisabled OnlyNumeric' style="border: 1px solid #000;
+                                                        width: 133px; font-weight: bold;" id="Pg_1_text_AmtTransferredFromDependant"
+                                                        onkeyup="javascript:return CalculateClaimAmount();" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="BrunswickPersonalTax.DependantTransferAmt" maxlength="12" />
+                                                </td>
+                                            </tr>
+                                          <!--  <tr>
+                                                <td>
+                                                    <span class="font_strong">13. Manitoba Family Tax Benefit – </span>Get the TD1MB-WS
+                                                    and complete the appropriate section.
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" class="ccpDisabled OnlyNumeric" style="border: 1px solid #000;
+                                                        width: 133px; font-weight: bold;" id="Pg_1_text_FamilyTaxBenefit" onkeyup="javascript:return CalculateClaimAmount();"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="BrunswickPersonalTax.FamilyTaxBenifit"
+                                                        maxlength="12" />
+                                                </td>
+                                            </tr>-->
+                                            <tr>
+                                                <td>
+                                                    <p class="space_t10">
+                                                        <span class="font_strong">12. TOTAL CLAIM AMOUNT – </span>Add lines 1 to 11.<br />
+                                                        Your employer or payer will use this amount to determine the amount of your provincial tax deductions.</p>
+                                                </td>
+                                                <td class="no_border">
+                                                    &nbsp;
+                                                </td>
+                                                <td valign="bottom">
+                                                    <input type="text" style="border: 1px solid #000; width: 133px; font-weight: bold;"
+                                                        id="Pg_1_text_TotalClaimAmt" class="inputText_Readonly" disabled="disabled" unselectable="on"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="BrunswickPersonalTax.TotalClaimAmt" maxlength="12" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="space_t10">
+                                    <tr>
+                                        <td width="12%" class="no_border" align="left">
+                                            <strong>TD1NB E (14)</strong>
+                                        </td>
+                                        <td width="80%" align="center" class="no_border">
+                                            (Vous pouvez obtenir ce formulaire en français à <a target="_blank" href="http://www.arc.gc.ca/formulaires">
+                                                <strong>www.arc.gc.ca/formulaires</strong> </a>ou en composant le <strong>1-800-959-7775.</strong>)
+                                        </td>
+                                        <td width="15%" align="right" valign="bottom" class="no_border">
+                                            <img src="../../../../Images/canada_logo_pertaxform.jpg" alt="Canada Logo" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 1st page-->
+                <!--Start of 2nd page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="form_box" visible="true">
+                                <div class="form_grid space_t10">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                                        <tr>
+                                            <td>
+                                                <h1 class="space_t10">
+                                                    Completing Form TD1NB</h1>
+                                                <p>
+                                                    Complete this form <strong>only</strong> if you are an employee working in New Brunswick or a pensioner residing in New Brunswick and any of the following apply:</p>
+                                                <ul style="margin-left: 24px; list-style-type:disc;">
+                                                    <li>you have a new employer or payer and you will receive salary, wages, commissions, pensions, employment insurance benefits, or any other remuneration; </li>
+                                                    <li>you want to change amounts you previously claimed (for example, the number of your eligible dependants has changed); or</li>
+                                                    <li>you want to increase the amount of tax deducted at source.</li>
+                                                </ul>
+                                                <br />
+                                                Sign and date, it and give it to your employer or payer.
+                                                <br />
+                                                If you do not complete Form TD1NB, your employer or payer will deduct taxes after allowing the basic personal amount <strong>only</strong>.
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <br />
+                                <span class="font_strong">Will you have more than one employer or payer at the same time?</span>
+                                <p class="space_t10:">
+                                    If you have more than one employer or payer at the same time and you have already claimed personal tax credit amounts on another Form TD1NB for 2014,
+                                    you <b>cannot claim them again</b>. If your total income from all sources will be more than the personal tax credits you claimed on another Form TD1NB, enter "0"
+                                    on line 12 on the front page and do not complete lines 2 to 11.
+                                </p>
+                               <!-- <span class="font_strong">Why is there a Form TD1MB?</span>
+                                <br />-->
+                              <!--  <p class="space_t10:">
+                                    Your employer or payer uses the personal tax credit amounts you claim on Form TD1MB
+                                    to calculate how much <strong>provincial</strong> tax to deduct from each payment.</p>-->
+                                <span class="font_strong">Total income less than total claim amount</span>
+                                <br />
+                                <br />
+                                <table width="96%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td class="no_border">
+                                            <input id="Pg_2_check_Income" type="checkbox" value="chkIncome" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="BrunswickPersonalTax.IncomeCheck" jqxb-bindedattribute="checked" />
+                                        </td>
+                                        <td class="no_border">
+                                            Check this box if your total income for the year from <b>all</b> employers and payers will be <b>less</b> than your total claim amount on line 12. Your employer or
+                                                payer will not deduct tax from your earnings.
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br />
+                                <span class="font_strong">Additional tax to be deducted</span>
+                                <br />
+                                <p class="space_t10:">
+                                    If you wish to have more tax deducted, complete "Additional tax to be deducted" on the federal Form TD1.</p><br />
+                                <span class="font_strong">Reduction in tax deductions</span>
+                                <br />
+                                <p class="space_t10">
+                                   You can ask to have less tax deducted if on your income tax return you are eligible for deductions or non-refundable tax credits that are not listed on this form
+                                    (for example, periodic contributions to a registered retirement savings plan (RRSP), child care or employment expenses, and charitable donations). To make
+                                    this request, complete Form T1213, <i>Request to Reduce Tax Deductions at Source for Year(s)</i> ____, to get a letter of authority from your tax services office.
+                                    Give the letter of authority to your employer or payer. You do not need a letter of authority if your employer deducts RRSP contributions from your salary.</p><br />
+                                <span class="font_strong">Forms and publications</span>
+                                <p class="space_t10">
+                                    To get our forms and publications, go to<a target="_blank" href="http://www.cra.gc.ca/forms">
+                                        <strong>www.cra.gc.ca/forms</strong></a> or call <strong>1-800-959-5525</strong>.
+                                </p>
+                                <!--<fieldset class="space_t60">
+                                    <legend>Certification:</legend>
+                                    <div style="padding: 5px;">
+                                        <p>
+                                            I certify that the information given on this form is correct and complete.</p>
+                                        <table width="100%" cellspacing="0" cellpadding="4" class="no_border">
+                                            <tr>
+                                                <td width="15%">
+                                                    Signature
+                                                </td>
+                                                <td width="35%">
+                                                </td>
+                                                <td width="15%" align="right">
+                                                    Date <span style="color: Red">&nbsp;*</span>
+                                                </td>
+                                                <td align="left" width="35%">
+                                                    &nbsp; &nbsp; &nbsp;
+                                                    <input type="text" class="inputText_Readonly" unselectable="on" style="border: 1px solid #000;
+                                                        width: 130px;" id="Pg_2_text_SignatureDate" readonly="readonly" maxlength="10"
+                                                        minlength="6" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                </td>
+                                                <td colspan="3">
+                                                    <div style="border-top: 1px solid #ccc; width: 350px;">
+                                                        <strong>It is a serious offence to make a false return.</strong></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </fieldset>-->
+                                <div class="clear">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Signature" id="Sign_PageId_2">
+                    </div>
+                </div>
+                <!--End of 2nd page-->
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

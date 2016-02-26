@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="828f5ee8-d776-45bc-8fa7-020b599e1911" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51555/ServiceHost/DashBoardServices.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DashBoardServices714.xsd" MetadataType="Schema" ID="81df89ae-88d1-4190-9501-cc44908c7b9f" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/DashBoardServices.svc?xsd=xsd0" />
+    <MetadataFile FileName="DashBoardServices715.xsd" MetadataType="Schema" ID="4d472e83-12eb-4659-ad14-f2d2d5a70032" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/DashBoardServices.svc?xsd=xsd1" />
+    <MetadataFile FileName="DashBoardServices716.xsd" MetadataType="Schema" ID="64bec1b6-74d3-4300-bc0a-163c062eeda5" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/DashBoardServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="DashBoardServices7.xsd" MetadataType="Schema" ID="9c13add6-1054-4002-947b-4b1b1c7a962a" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/DashBoardServices.svc?xsd=xsd8" />
+    <MetadataFile FileName="DashBoardServices718.xsd" MetadataType="Schema" ID="669cbe5a-b47a-4722-a21b-b58d36f4e73e" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/DashBoardServices.svc?xsd=xsd4" />
+    <MetadataFile FileName="DashBoardServices719.xsd" MetadataType="Schema" ID="3fb5c1a2-7964-44b9-8df6-ab42dce0c259" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/DashBoardServices.svc?xsd=xsd5" />
+    <MetadataFile FileName="DashBoardServices720.xsd" MetadataType="Schema" ID="75fb6179-9d72-45c1-be02-b84b0f3381cb" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/DashBoardServices.svc?xsd=xsd6" />
+    <MetadataFile FileName="DashBoardServices8.xsd" MetadataType="Schema" ID="7c0235d9-e0b7-46ea-9f01-8370fefff71f" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/DashBoardServices.svc?xsd=xsd7" />
+    <MetadataFile FileName="DashBoardServices24.wsdl" MetadataType="Wsdl" ID="56255f6a-d2cd-426c-a7f1-a4d21e177197" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/DashBoardServices.svc?wsdl" />
+    <MetadataFile FileName="DashBoardServices25.wsdl" MetadataType="Wsdl" ID="69cce77d-3713-4672-bd65-b103519d49a0" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/DashBoardServices.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DashBoardServices12.disco" MetadataType="Disco" ID="1ccd0890-fef1-4434-bd82-98e60046e4b7" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/DashBoardServices.svc?disco" />
+    <MetadataFile FileName="DashBoardServices717.xsd" MetadataType="Schema" ID="2d5ac1e3-7ad4-41d1-a46f-5ecf28709249" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/DashBoardServices.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

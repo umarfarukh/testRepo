@@ -1,0 +1,1 @@
+This folder meant to save the html file temporarily which will  be coverted into PDF file.

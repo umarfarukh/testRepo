@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>M&A</title>
+    <!--298015 - Commented below style as no more being used
+    <link href="../CommonNHPages/Mckinley/employee-app-styles.css" rel="stylesheet" type="text/css" />-->
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+      <style type="text/css">
+        .alert_f_text
+        {
+            height: 10px;
+            margin: 0;
+            margin: 0px 0 -5px -30px;
+            *margin-bottom: 5px;
+            text-align: right;
+            float: left;
+            font-size: 0.8em;
+            color: #ff0000;
+            display: none;
+        }
+        .alert_f
+        {
+            height: 12px;
+            width: 13px;
+            margin: 6px;
+            background: url('../../../../Images/formredalert.png') no-repeat;
+            display: none;
+        }
+        a
+        {
+            cursor:pointer;
+            }
+            input,textarea
+            {
+               font-family:"Trebuchet MS", Arial, Helvetica, sans-serif
+                }
+    </style>
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.alerts.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/SendMail.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var qs = (function (a) {
+            if (a == "") return {};
+            var b = {};
+            for (var i = 0; i < a.length; ++i) {
+                var p = a[i].split('=');
+                if (p.length != 2) continue;
+                b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+            }
+            return b;
+        })(window.location.search.substr(1).split('&'));
+        //Initializing globally processing variables
+        emailId = qs["EmailId"];
+        candidateId = parseInt(qs["cand"]);
+        taskId = parseInt(qs["task"]);
+        countryId = parseInt(qs["cntry"]);
+        sessionId = parseInt(qs["ss"]);
+        ProcessID = parseInt(qs["processID"]);      
+        $().ready(function () {
+            $('input[type="checkbox"]').click(function () {
+                if ($(this).is(':checked') == true) {
+                    $('#Txt_EmailId').val('');
+                } else {
+
+                    $('#Txt_EmailId').val(emailId);
+                }
+            });
+            $('#Txt_EmailId').val(emailId);
+        });       
+
+       
+        var faq = function () {
+            var faqUrl = '../../../../CommonPages/FAQ.htm?cand=' + candidateId + '&task=0&cntry=' + countryId + '&ss=' + sessionId + '&processID=' + ProcessID;
+            window.open(faqUrl, '', '', '');
+            return false;
+        }
+
+    </script>
+  
+</head>
+<body>
+    <div class="wrapper-employee-home-MandA">
+        <table style="width: 84%; margin-left: 8%; margin-top: 2%;">
+            <tr>
+                <td style="float: right; margin-left: 280px; font-size: 11px; color: #727272; text-align: right;">
+                    <a href="http://www.cognizant.com" target="_blank">Know more about Cognizant / Erfahren
+                        Sie mehr über Cognizant.</a>
+                </td>
+            </tr>
+        </table>
+        <table style="width: 84%; margin-left: 8%;">
+            <tr>
+                <th class="header-content-welcome-MandA" style="float: none; margin: 0;">
+                    Welcome to the Cognizant Information Portal
+                    <br />
+                    Willkommen zum Informationsportal von Cognizant
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <p class="header-content-details-MandA" style="text-align: justify;">
+                        This portal provides you with Information around the C1 Partnership. Here you have
+                        another opportunity to raise questions.<br />
+                        These questions will be answered either via this portal (“Q&A document”) or –if
+                        you wish so- in a private email.<br />
+                        Dieses Portal bietet Ihnen Informationen rund um die C1 Partnerschaft. Sie haben
+                        die hier eine weitere Möglichkeit, Fragen stellen zu können. Diese werden wir entweder
+                        über dieses Portal (“Q&A Dokument”) oder –wenn Sie es wünschen- in einer persönlichen
+                        Email tun.
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <table style="width: 84%; background-color: White; margin-left: 8%;">
+            <tr>
+                  <td colspan="3"; style="text-align:right"class="header-content-details-link-MandA" >
+                   
+                  <a target="_blank" onclick="faq()">Link to the Q&A document / Klicken Sie hier um ein Dokument mit bereits gestellten und beantworteten Fragen zu öffnen.</a> 
+              
+                   
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <label style="font-size: small; margin-left: 22%;">
+                        My Query
+                    </label>
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 15%;">
+                    <label style="font-size: small;">
+                        Query title*<br />
+                        Titel der Frage</label>
+                </td>
+                <td style="width: 28%;">
+                    <input type="text" id="Querytitle" class="textMandatory inputText" title="Query title" maxlength="250"
+                        style="border: 1px solid #b9b9b9; height: 25px; width: 200px;" />
+                </td>
+                <td style="width: 50%;">
+                    <input id="chkbx_wish" type="checkbox" style="font-size: medium;" />
+                    <label style="font-size: small;">
+                        I wish to keep my Email Id anonymous</label><br />
+                    <label style="margin-left: 25px; font-size: small;">
+                        Ich möchte die Frage anonym stellen</label>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 18%;">
+                    <label style="font-size: small;">
+                        Query description*<br />
+                        Ihre Frage</label>
+                </td>
+                <td style="width: 25%;">
+                    <textarea id="Querydescription" title="Query description" class="textMandatory inputText" style="border: 1px solid #b9b9b9;
+                        height: 40px; width: 200px; overflow: auto;"></textarea>
+                </td>
+                <td style="width: 50%; padding-left:10px;" rowspan="2">
+                    <label class="header-content-details-MandA" style="word-wrap: break-word; text-align:justify";>
+                        Note:  Your Email Id would be kept confidential
+                        at all times and used only to respond to your query based on the response option selected by you.</label>
+                        <label class="header-content-details-MandA" style="word-wrap: break-word; text-align:justify";><br />Hinweis: Ihre Emailadresse wird vertraulich behandelt und nur verarbeitet, wenn Sie eine private Nachricht an Ihre Emailadresse wünschen.</label>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 15%;">
+                    <label style="font-size: small;">
+                        Email Id</label>
+                </td>
+                <td>
+                    <input id="Txt_EmailId" type="text" style="color: Gray; width: 200px;" readonly="readonly"
+                        maxlength="500" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div style="float: left; height: 40px; width: 140px;">
+                        <label style="font-size: small;">
+                            Response Options<br />
+                            Antwortmöglichkeiten</label>
+                    </div>
+                    <div>
+                        <input id="Rdbtn_Private" checked="checked" name="Response" type="radio" value="Private:" /><label
+                            class="header-content-details-MandA">Private-I prefer a response directly to my
+                            Email Id</label><br />
+                        <label class="header-content-details-MandA" style="margin-left: 20px;">
+                            Privat – Ich wünsche eine Anwort nur an meine Emailadresse</label><br />
+                        <input id="Rdbtn_Open" checked="checked" name="Response" type="radio" value="Open:"
+                            style="margin-left: 140px;" />
+                        <label class="header-content-details-MandA">
+                            Open-I would look up for the response in FAQ section</label><br />
+                        <label class="header-content-details-MandA" style="margin-left: 165px;">
+                            Öffentlich – Ich werde die Antwort im Dokument mit den Fragen/Antworten nachlesen</label><br />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <!--<div style="width:50%; 
+height:25px;float: left; margin-left:300px;""> -->
+                    <img src="../../../../Images/Img_Post_query-Absenden.png" id="postQuery" onclick="SendMail.PostQuery(1)"
+                        class="marginL415 marginT5" alt="Post Query" title="Post the Query" style="margin-left: 35%;" />
+                    <!-- </div>-->
+                </td>
+            </tr>
+        </table>
+    </div>
+    <input type="hidden" runat="server" id="hdnEmailId" />
+</body>
+</html>

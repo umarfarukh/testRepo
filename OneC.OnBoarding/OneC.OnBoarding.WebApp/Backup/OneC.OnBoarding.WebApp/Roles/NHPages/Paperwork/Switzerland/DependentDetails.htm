@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <title>Dependent Details Form</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/Switzerland/DependentDetails.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id="pageMain">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div> 
+            <div id='PageContent' class='pagesContainer'>           
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageHeader" style="height: 40px; width: 900px;">
+                            <p>  Please fill in the details with utmost attention, as these shall be verified by
+                                Cognizant Technology Solutions and/or by its
+                                <br />
+                                authorized representatives. All details are compulsory.
+                            </p>
+                        </div>
+                        <div class="pageDetails">
+                            <ul class="personalDetails">
+                                <li>Please check the check box if there are no dependents. </li>
+                                <li>
+                                    <input type="checkbox" id="chkNodependents" jqxb-datasource="FormDetails" jqxb-datamember="DepedentInfo.DependentStatus"
+                                        jqxb-bindedattribute="checked" onclick="SetCheckBoxValue();" />
+                                </li>
+                            </ul>
+                        <div jqxb-templatecontainer="DependentTemplate" jqxb-datasource="DependentDetail">
+                                <div jqxb-template="DependentTemplate" jqxb-templateitemidprfx="Dependentrow" id="Dependentrowitemtemplate">
+                                    <ul class="personalDetails">
+                                        <li class="pageHeader" style="width: 850px; margin-bottom: 5px;">
+                                            <input type="text" class="RecordNumber" style="float: left; color: #3f678f; font-size: 1em;
+                                                font-weight: bold; font-family: Trebuchet MS; padding: 10px 0 0 20px; background: url(../../Images/pagefourheader.png) repeat-x;" />
+                                            <input type="button" value="Delete" class="onDelRowClick btn_field" style="float: right;
+                                                margin-top: 5px; margin-right: 5px; width: 100px;" />
+                                        </li>
+                                        <li style="height: 25px; width: 850px; padding-left: 15px;">
+                                            <p style="color: #3f678f; font-weight: bold; font-size: 1em; height: 18px; padding-left: 25px;
+                                                padding-top: 5px; font-family: Trebuchet MS; border: 1px #8fb9d0 solid;">
+                                                Dependent Information</p>
+                                        </li>
+                                        <li>
+                                            <label for="prefix_form">
+                                                Dependent(s) Arrival Date<br /> in Switzerland: </label>
+                                            <input type="text" jqxb-itemdatamember="ArrivalDate" jqxb-templateitemdynamicid="ArrivalDate" style="background: #f0f0f0;"
+                                                class="tbForm dobForm"  />
+                                        </li>
+                                        <li></li>
+                                    
+                                        <li style="height: 25px; width: 850px; padding-left: 15px;">
+                                            <p style="color: #3f678f; font-weight: bold; font-size: 1em; height: 18px; padding-left: 25px;
+                                                padding-top: 5px; font-family: Trebuchet MS; border: 1px #8fb9d0 solid;">
+                                                Spouse Details</p>
+                                         </li>
+                                         <li>
+                                            <label for="Familyname_form">
+                                               Family Name (as per Passport): </label>
+                                            <input type="text" jqxb-itemdatamember="FamilyName" jqxb-templateitemdynamicid="FamilyName" style="background: #f0f0f0;"
+                                                class="tbForm onlyAlp" />
+                                        </li>
+
+                                        <li>
+                                            <label for="Firstname_form">
+                                               First Name (as per Passport): </label>
+                                            <input type="text" jqxb-itemdatamember="FirstName" jqxb-templateitemdynamicid="FirstName" style="background: #f0f0f0;"
+                                                class="tbForm"  />
+                                        </li>
+                                        <li>
+                                            <label for="Nationality_form">
+                                               Nationality: </label>
+                                            <input type="text" jqxb-itemdatamember="Nationality" jqxb-templateitemdynamicid="Nationality" style="background: #f0f0f0;"
+                                                class="tbForm"  />
+                                        </li>
+                                        <li>
+                                            <label for="DOB_form">
+                                               Date of Birth:  </label>
+                                            <input type="text" jqxb-itemdatamember="DOB" jqxb-templateitemdynamicid="DOB" style="background: #f0f0f0;"
+                                                class="tbForm dobForm"  />
+                                        </li>
+                                        <li>
+                                            <label for="DOM_form">
+                                              Date of Marriage: </label>
+                                            <input type="text" jqxb-itemdatamember="DOM" jqxb-templateitemdynamicid="DOM" style="background: #f0f0f0;"
+                                                class="tbForm dobForm" />
+                                        </li>
+
+                                        <li></li>
+                                        <li style="height: 25px; width: 850px; padding-left: 15px;">
+                                            <p style="color: #3f678f; font-weight: bold; font-size: 1em; height: 18px; padding-left: 25px;
+                                                padding-top: 5px; font-family: Trebuchet MS; border: 1px #8fb9d0 solid;">
+                                                Children</p>
+                                        </li>
+                                        <li>
+                                            <label for="Child1_form">
+                                              <u>Child1</u> </label>
+                                        </li>
+                                        <li>
+                                            <label for="Surname_form">
+                                               Surname (as per Passport): </label>
+                                            <input type="text" jqxb-itemdatamember="Ch1SurName" jqxb-templateitemdynamicid="Ch1SurName" style="background: #f0f0f0;"
+                                                class="tbForm"  />
+                                        </li>
+                                        <li>
+                                            <label for="ch1Givenname_form">
+                                              Given Name (as per Passport): </label>
+                                            <input type="text" jqxb-itemdatamember="Ch1GivenName" jqxb-templateitemdynamicid="Ch1GivenName" style="background: #f0f0f0;"
+                                                class="tbForm"  />
+                                        </li>
+                                        <li>
+                                            <label for="ch1Nationality_form">
+                                               Nationality: </label>
+                                            <input type="text" jqxb-itemdatamember="Ch1Nationality" jqxb-templateitemdynamicid="Ch1Nationality" style="background: #f0f0f0;"
+                                                class="tbForm" />
+                                        </li>
+                                        <li>
+                                            <label for="ch1DOB_form">
+                                               Date of Birth:  </label>
+                                            <input type="text" jqxb-itemdatamember="Ch1DOB" jqxb-templateitemdynamicid="Ch1DOB" style="background: #f0f0f0;"
+                                                class="tbForm dobForm" />
+                                        </li>
+                                        <li>
+                                            <label for="ch1Gender_form">
+                                               Sex:  </label>
+                                            <input type="checkbox" style="float: left;" jqxb-itemdatamember="Gender"
+                                                jqxb-bindedattribute="checked"/> 
+                                               Male  
+                                            <input type="checkbox" class="Gender" style="float: left;" jqxb-itemdatamember="Gender"
+                                                jqxb-bindedattribute="checked" /> 
+                                              Female 
+                                        </li>
+                                    </ul>
+                             </div>
+                            </div>
+                                 <ul class="personalDetails">
+                                     <li>Maximum of 3 child dependents can be added. </li>
+                                     <li>
+                                        <input type="button" id="btnAdddependents" value="Add Dependents" class="btn_field"
+                                        onclick="addItem();" />
+                                     </li>
+                                     
+                                 </ul>
+                                 
+                                  <p class="personalDetails"><b><u>Points to Note:</u></b></p>
+                                    <p class="personalDetails">Based on the information of this joining report, registration with AHV (Swiss Socical Security), BVG (Swiss Pension Fund) and - if applicable – Cognizant Health Insurance will be initiated.
+                                    Any changes on the above mentioned information or details need to be advised to HR Switzerland immediately.
+                                    </p> 
+                                
+                                   
+                     </div>
+                    </div>
+
+                                   
+                    <div class="Signature" id="Sign_PageId_1">
+                    </div>            
+                       
+                </div> 
+            </div>           
+            <div id="footerContent">
+            </div>
+        </div>
+ </div>
+ </body>
+      <script type="text/javascript" language="javascript">
+          $('#chkNodependents').click(function () {
+
+              if ($('#chkNodependents').is(':checked')) {
+                  $("#btnAdddependents").attr("disabled", true);
+
+              }
+              else {
+                  $("#btnAdddependents").removeAttr("disabled");
+              }
+          });
+</script>                              
+
+</html>

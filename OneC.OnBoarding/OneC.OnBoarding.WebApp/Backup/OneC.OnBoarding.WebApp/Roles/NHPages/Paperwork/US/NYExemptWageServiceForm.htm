@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NY Exempt Wage Service Form </title>
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/US/NYExemptWageServiceForm.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <link href="../../../../Styles/Forms/BlueThemeGov.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+           body
+        {
+            font-family: Arial, Verdana,Helvetica, sans-serif;
+            font-size:0.6em;
+            line-height:16px;
+            color:#000;
+            }
+        div,p,.flt_left,.flt_right,table,tr,td,span,input,select,textarea,h1,h2,h3,h4,h5,h6,ul,li,ol
+        {
+            font-family:Arial;
+            color:#000;
+            } 
+           
+    .inputText_Readonly  {
+            background-color:InactiveCaptionText;       
+            font-size:15px;
+            padding:3px 5px 2px;           
+            border:1px solid #ccc !important;
+            background:#f0f0f0;
+            color:#888 !important;
+            cursor:default;
+        }
+       .alert_f
+        {
+            float: left;
+          
+        }
+ .page_text label.alert_f_text{
+          width:150px;
+          float:left;
+          text-align:left;
+          margin-bottom:10px;
+          margin:0 0 10px -35px;
+          padding:0 45px 0 10px;
+            }
+            html>body .alert_f { *margin-top:-20px;,*margin-right:3px;float:left;}
+</style>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id='pageMain'>
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="flt_left" style="width: 20%">
+                                <img src="../../../../Images/NYWagelogo.png" alt="not found" style="height: 75px;" />
+                            </div>
+                            <h1 style="text-align: center; margin-bottom: 10px;">
+                                Notice and Acknowledgement of Pay Rate and Payday</h1>
+                            <h1 style="text-align: center; margin-bottom: 10px;">
+                                Under Section 195.1 of New York State Labor Law</h1>
+                            <h1 style="text-align: center; margin-bottom: 10px;">
+                                Notice for Exempt Employees.</h1>
+                            <div style="width: 100%; float: left; margin-top: 10px;">
+                                <div style="float: left; width: 33%">
+                                    <div style="border: 1px solid Black; padding: 0 10px;">
+                                        <p align="center" class="page_text" style="font-weight: bold">
+                                            Employer Information
+                                        </p>
+                                        <p class="page_text" style="font-weight: bold">
+                                            &nbsp; Name:</p>
+                                        <p class="page_text" style="border: 1px solid Black; margin-left: 0%">
+                                            &nbsp;Cognizant Technology Solutions,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            US Corporation</p>
+                                        &nbsp;<p class="page_text" style="font-weight: bold">
+                                            &nbsp; Doing Business As (DBA) Name(s):</p>
+                                        <p class="page_text" style="border: 1px solid Black;">
+                                            Cognizant Technology Solutions,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            US Corporation
+                                        </p>
+                                        <p class="page_text" style="font-weight: bold">
+                                            &nbsp; FEIN(optional):</p>
+                                        <p class="page_text" style="border: 1px solid Black;">
+                                            13-3924155</p>
+                                        <p class="page_text" style="font-weight: bold">
+                                            &nbsp; Physical Address:</p>
+                                        <p class="page_text" style="border: 1px solid Black;">
+                                            500 Frank W Burr Blvd,Suite 50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            Teaneck,NJ 07666</p>
+                                        <p class="page_text" style="font-weight: bold">
+                                            &nbsp; Mailing Address:</p>
+                                        <p class="page_text" style="border: 1px solid Black;">
+                                            500 Frank W Burr Blvd,Suite 50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Teaneck,NJ
+                                            07666</p>
+                                        &nbsp;&nbsp;
+                                        <p class="page_text" style="font-weight: bold">
+                                            Phone:</p>
+                                        <p class="page_text" style="border: 1px solid Black;">
+                                            201-801-0233</p>
+                                        <br />
+                                    </div>
+                                    <br />
+                                    <p class="page_text" style="font-weight: bold">
+                                        Notice
+                                        given:</p>
+                                    <p class="page_text">
+                                        <input type="checkbox" id="Pg_1_check_AtHiring" name="Pg_1_check_Notice" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="NewYorkCTSExemptWagesForm.NoticeGiven.AtHiring" jqxb-bindedattribute="checked" />
+                                        At hiring</p>
+                                    <p class="page_text">
+                                        <input type="checkbox" class="notice" id="Pg_1_check_BeforeFeb1" name="Pg_1_check_Notice" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="NewYorkCTSExemptWagesForm.NoticeGiven.BeforeFeb1" jqxb-bindedattribute="checked" />
+                                        On or before February 1</p>
+                                    <p class="page_text">
+                                        <input type="checkbox" class="notice" id="Pg_1_check_BeforeChangeInPay" name="Pg_1_check_Notice"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="NewYorkCTSExemptWagesForm.NoticeGiven.BeforeChangeInPayRates"
+                                            jqxb-bindedattribute="checked" />
+                                        Before a change in pay rate(s),<br />
+                                        allowances claimed or payday</p>
+                                </div>
+                                <div style="width: 33.5%; float: left;">
+                                    <div style="width: 100%; padding: 0 10px;">
+                                        <p class="page_text" style="font-weight: bold">
+                                            3. Employee's pay rate(s) :State if pay is based on hourly,salary,day rate,piece
+                                            rate or other basis.</p>
+                                        <p class="page_text" style="margin-bottom: 20px;">
+                                           $ <input type="text" id="Pg_1_text_RateOfPay1" class="inputText_Readonly tbForm" title="value"
+                                                style="border: 1px solid #000; margin-right: 10px; margin-left: 20px;" readonly="readonly" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="NewYorkCTSExemptWagesForm.EmployeePayRates" maxlength="15" /><br />
+                                            <span style="padding-bottom: 0px; float: right; text-decoration: none; margin-left: 50px;
+                                                width: 100%; text-align: right;">- per annum.</span>
+                                        </p>
+                                        <p class="page_text">
+                                            Employers may not pay a non-hourly rate to a non-exempt employee in the Hospitality
+                                            Industry,except for commissioned salespeople.
+                                        </p>
+                                        <p style="font-weight: bold" class="page_text">
+                                            Allowances
+                                            taken:</p>
+                                        <p class="page_text">
+                                            &nbsp;<input type="checkbox" id="Pg_1_check_None" class="none" name="Pg_1_check_Allowances" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="NewYorkCTSExemptWagesForm.AllowanceTaken.None" jqxb-bindedattribute="checked" />None</p>
+                                        <div class="page_text">
+                                            <div>
+                                                <input type="checkbox" id="Pg_1_check_Tips" name="Pg_1_check_Allowances" class="OnlyNumeric check"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="NewYorkCTSExemptWagesForm.AllowanceTaken.Tips"
+                                                    jqxb-bindedattribute="checked" />&nbsp;Tips &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                                                        type="text" style="border: 1px solid #000; width: 100px" id="Pg_1_text_Tips"
+                                                        class="OnlyNumeric employee" jqxb-datasource="FormDetails" jqxb-datamember="NewYorkCTSExemptWagesForm.AllowanceTaken.TipsText"
+                                                        maxlength="45" />&nbsp;per hour</div>
+                                            <br />
+                                            <div>
+                                                <input type="checkbox" id="Pg_1_check_Meals" name="Pg_1_check_Allowances" class="OnlyNumeric check"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="NewYorkCTSExemptWagesForm.AllowanceTaken.Meals"
+                                                    jqxb-bindedattribute="checked" />&nbsp;Meals &nbsp;&nbsp;&nbsp;<input type="text"
+                                                        style="border: 1px solid #000; width: 100px" id="Pg_1_text_Meals" class="OnlyNumeric employee"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="NewYorkCTSExemptWagesForm.AllowanceTaken.MealsText"
+                                                        maxlength="45" />&nbsp;per Meal</div>
+                                            <br />
+                                            <div>
+                                                <input type="checkbox" id="Pg_1_check_Lodging" name="Pg_1_check_Allowances" class="OnlyNumeric check"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="NewYorkCTSExemptWagesForm.AllowanceTaken.Lodging"
+                                                    jqxb-bindedattribute="checked" />&nbsp;Lodging &nbsp;<input type="text" style="border: 1px solid #000;
+                                                        width: 100px" id="Pg_1_text_Lodging" class="onlyAlphanumeric employee" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="NewYorkCTSExemptWagesForm.AllowanceTaken.LodgingText" maxlength="30" /></div>
+                                            <br />   
+                                            <div>
+                                                <input type="checkbox" id="Pg_1_check_Others" name="Pg_1_check_Allowances" class="OnlyNumeric "
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="NewYorkCTSExemptWagesForm.AllowanceTaken.Others"
+                                                    jqxb-bindedattribute="checked" />&nbsp;Others&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+                                                        style="border: 1px solid #000; width: 100px" id="Pg_1_text_Others" class="inputText_Readonly tbForm"
+                                                        jqxb-datasource="FormDetails" jqxb-datamember="NewYorkCTSExemptWagesForm.AllowanceTaken.OthersText"
+                                                        maxlength="30" readonly="readonly" /></div> 
+                                            <br />
+                                        </div>
+                                        <p class="page_text" style="font-weight: bold">
+                                            Regular payday :
+                                        </p>
+                                        <input type="text" style="border: 1px solid #000;margin-left:20px;
+                                                    width: 270px" readonly="readonly" unselectable="on" class="inputText_Readonly tbform page_text" id="Pg_1_text_RegularPay"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="NewYorkCTSExemptWagesForm.RegularPayDay"
+                                                    />
+                                        <p class="page_text" style="font-weight: bold">
+                                            Pay is :
+                                        </p>
+                                        <p class="page_text">
+                                            <input type="checkbox" id="Pg_1_check_PayWeekly" class="pay" name="Pg_1_check_Payment" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="NewYorkCTSExemptWagesForm.Payment.Weekly" jqxb-bindedattribute="checked" />&nbsp;Weekly
+                                            &nbsp;&nbsp;&nbsp;</p>
+                                        <p class="page_text">
+                                            <input type="checkbox" id="Pg_1_check_PayBiweekly" class="pay" name="Pg_1_check_Payment" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="NewYorkCTSExemptWagesForm.Payment.Bi-Weekly" jqxb-bindedattribute="checked" />&nbsp;Bi-Weekly
+                                            &nbsp;&nbsp;&nbsp;</p>
+                                        <p class="page_text">
+                                            <input type="checkbox" id="Pg_1_check_Other" name="Pg_1_check_Payment" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="NewYorkCTSExemptWagesForm.Payment.Other" jqxb-bindedattribute="checked" />&nbsp;Other
+                                            &nbsp;&nbsp;&nbsp;<input type="text" style="border: 1px solid #000; width: 100px"
+                                                id="Pg_1_text_OtherText" class="inputText_Readonly tbForm" readonly="readonly" unselectable="on" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="NewYorkCTSExemptWagesForm.Payment.OtherText" maxlength="30" /></p>
+                                        <p class="page_text" style="font-weight: bold">
+                                            Overtime pay rate:</p>
+                                        <p class="page_text">
+                                            Most workers in NYS must receive atleast 1 1/2 times their regular rate of pay for
+                                            all hours worked over 40 in a workweek, with few exceptions.A limited number of
+                                            employees must only be paid overtime at 1 1/2 times the minimum wage rate,or not
+                                            at all.</p>
+                                        <p class="page_text">
+                                            This employee is exempt from overtime under the following exemption(optional):</p>
+                                        <p class="page_text">
+                                            <input type="text" id="Pg_1_text_Overtime" readonly="readonly" unselectable="on" class="inputText_Readonly tbForm" style="border: 1px solid #000;"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="NewYorkCTSExemptWagesForm.OverTimePayRateText"
+                                                />
+                                        </p>
+                                    </div>
+                                </div>
+                                <div style="float: right; width: 33.3%;">
+                                    <div style="width: 100%; padding: 0 10px;">
+                                        <p class="page_text" style="font-weight: bold">
+                                            Employee Acknowledgement</p>
+                                        <p class="page_text">
+                                            On this day,I received notice of my pay rate, overtime rate (if eligible), allowances
+                                            and designated payday. I told my employer what my primary language is.</p>
+                                        <p class="page_text" style="font-weight: bold">
+                                            &nbsp;<span style="color: red; float: none; display: inline; padding-right: 2px;
+                                                text-decoration: none;">*</span> Check One:</p>
+                                        <p class="page_text">
+                                            <input type="checkbox" id="Pg_1_check_EnglishPrimary" name="Pg_1_check_CheckOne"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="NewYorkCTSExemptWagesForm.CheckOne.EnglishPrimaryLanguage"
+                                                jqxb-bindedattribute="checked" />
+                                            I have been given this pay notice in English,because it is my primary language.</p>
+                                        <p class="page_text">
+                                            <input type="checkbox" id="Pg_1_check_OtherLangPrimary" name="Pg_1_check_CheckOne"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="NewYorkCTSExemptWagesForm.CheckOne.NonEnglishPrimaryLanguage"
+                                                jqxb-bindedattribute="checked" />My primary language is<input type="text" class="onlyAlphanumeric"
+                                                    disabled="disabled" id="Pg_9_text_OtherLang" style="border: 1px solid #000" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="NewYorkCTSExemptWagesForm.CheckOne.NonEnglishPrimaryLanguageText"
+                                                    maxlength="30" disabled="disabled" />.I have been given this pay notice
+                                            in English only, because the Department of Labor does not yet offer a pay notice
+                                            form in my primary language.</p>
+                                        <p align="left" class="page_text">
+                                            <input type="text" class="inputText_Readonly" unselectable="on" style="border: 1px solid #000"
+                                                id="Pg_9_text_Name" class="tbForm" readonly="readonly" /></p>
+                                        <p class="page_text">
+                                            Print Employee Name</p>
+                                        <p align="left" class="page_text">
+                                            ________________________________<br />
+                                            Employee Signature</p>
+                                        <p align="left" class="page_text">
+                                            <input type="text" style="border: 1px solid #000" id="Pg_9_text_Date" class="inputText_Readonly"
+                                                unselectable="on" readonly="readonly" /><br />
+                                            Date</p>
+                                        <p align="left" class="page_text">
+                                            <input type="text" class="inputText_Readonly tbForm" unselectable="on" style="border: 1px solid #000;
+                                                width: 250px;" id="Pg_9_text_NameAndTitle" readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="NewYorkCTSExemptWagesForm.FullNameandTitle" /><br />
+                                            Preparer Name and Title</p>
+                                        <p class="page_text">
+                                            The employee must receive a copy of this signed form. The employee must keep the
+                                            original for 6 years</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Signature" id="Sign_PageId_1">
+                 </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

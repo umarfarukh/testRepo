@@ -1,0 +1,822 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <title>Form 11</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/India/Form11.js" type="text/javascript"></script>
+    <style type="text/css">
+        /* CSS Document */
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, *
+        {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        body
+        {
+            font-family: "Trebuchet MS" ,Verdana, Arial, Helvetica, sans-serif;
+            color: #4a4a4a;
+            font-size: 62.5%;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+        {
+            display: block;
+        }
+        body
+        {
+            line-height: 1;
+        }
+        ol, ul
+        {
+            list-style: none;
+        }
+        blockquote, q
+        {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after, q:before, q:after
+        {
+            content: '';
+            content: none;
+        }
+        table
+        {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        body
+        {
+            font-family: "Trebuchet MS" ,Verdana, Arial, Helvetica, sans-serif;
+            color: #4a4a4a;
+            font-size: 62.5%;
+        }
+        .font16
+        {
+            font-size: 1.6em;
+        }
+        .font14
+        {
+            font-size: 1.4em;
+        }
+        .font13
+        {
+            font-size: 1.3em;
+        }
+        .boldtext
+        {
+            font-weight: bold;
+        }
+        .textcenter
+        {
+            text-align: center;
+        }
+        .paddingTB10
+        {
+            padding: 10px 0;
+        }
+        .paddingTB8
+        {
+            padding: 8px 0;
+        }
+        .paddingT5
+        {
+            padding: 5px 0 0 0;
+        }
+        .paddingL5
+        {
+            padding-left: 5px;
+        }
+        .marginL20
+        {
+            margin-left: 20px;
+        }
+        .marginLMax
+        {
+            margin-left: 160px;
+        }
+        .marginT20
+        {
+            margin-top: 20px;
+        }
+        .marginB20
+        {
+            margin-bottom: 20px;
+        }
+        .marginR20
+        {
+            margin-right: 20px;
+        }
+        .epf
+        {
+            height: 310px;
+        }
+        .epf li
+        {
+            border: 1px solid #d4e7ef;
+        }
+        .fleft
+        {
+            float: left;
+        }
+        .lineht17
+        {
+            line-height: 17px;
+        }
+        .details_pf li
+        {
+            width: 48%;
+            border: 1px solid #d4e7ef;
+            height: 48px;
+        }
+        .borderTnone
+        {
+            border-top: none !important;
+        }
+        .borderRnone
+        {
+            border-right: none !important;
+        }
+        .width180
+        {
+            width: 180px;
+        }
+        .height100
+        {
+            height: 100px;
+        }
+        .height50
+        {
+            height: 50px;
+        }
+        .textright
+        {
+            text-align: right;
+        }
+        .fright
+        {
+            float: right;
+        }
+        .marginT40
+        {
+            margin-top: 40px;
+        }
+        
+        .boldtext
+        {
+            font-weight: bold;
+        }
+        .textcenter
+        {
+            text-align: center;
+        }
+        .paddingTB10
+        {
+            padding: 10px 0;
+        }
+        .paddingTB8
+        {
+            padding: 8px 0;
+        }
+        .paddingT5
+        {
+            padding: 5px 0 0 0;
+        }
+        .paddingL5
+        {
+            padding-left: 5px;
+        }
+        .marginL20
+        {
+            margin-left: 20px;
+        }
+        .marginT20
+        {
+            margin-top: 20px;
+        }
+        .marginB20
+        {
+            margin-bottom: 20px;
+        }
+        .marginR20
+        {
+            margin-right: 20px;
+        }
+        .epf
+        {
+            height: 355px;
+        }
+        .epf li, #pf_main ul li
+        {
+            border: 1px solid #d4e7ef;
+        }
+        .fleft
+        {
+            float: left;
+        }
+        .lineht17
+        {
+            line-height: 17px;
+        }
+        .details_pf li
+        {
+            width: 48%;
+            border: 1px solid #d4e7ef;
+            height: 41px;
+        }
+        .borderTnone
+        {
+            border-top: none !important;
+        }
+        .borderRnone
+        {
+            border-right: none !important;
+        }
+        .width180
+        {
+            width: 174px;
+        }
+        .height100
+        {
+            height: 100px;
+        }
+        .height50
+        {
+            height: 60px;
+        }
+        .textright
+        {
+            text-align: right;
+        }
+        .fright
+        {
+            float: right;
+        }
+        .marginT40
+        {
+            margin-top: 40px;
+            width: 70%;
+        }
+        .paddingL10
+        {
+            padding-left: 10px;
+            width: 923px;
+        }
+        .eps
+        {
+            height: 312px;
+            width: 914px;
+        }
+        .width275
+        {
+            width: 273px;
+        }
+        .width90
+        {
+            width: 57px;
+        }
+        .eps li
+        {
+            border: 1px solid #d4e7ef;
+        }
+        .width305
+        {
+            width: 260px;
+        }
+        .grey_color
+        {
+            color: #3a3a3a;
+        }
+        .paddingR20
+        {
+            padding-right: 20px;
+        }
+        .paddingL20
+        {
+            padding-left: 20px;
+        }
+        .valignT
+        {
+            vertical-align: top;
+        }
+        .ui-datepicker-trigger
+        {
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+        .alert_f_text
+        {
+            padding-left: 0px;
+            width: 220px;
+        }
+        .alert_f
+        {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="baseContent">
+        <div id="pageMain">
+            <div id="headerContent">
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id="PageContent" class="pagesContainer">
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div class="fleft" style="margin-top: 7px; color: #4A4A4A">
+                                <!--  <table>
+                                    <tr>
+                                        <td style="width: 722px;">
+                                        </td>
+                                        <td style="width: 150px; height: 20px">
+                                            <span class="boldtext font16 textcenter" style="text-align: center; font-weight: bold;">
+                                                Form 11(Revised)</span>
+                                        </td>
+                                    </tr>
+                                </table>-->
+                                <p class="pageText">
+                                    Do you have / had a PF account&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <select style="border: 1px solid #C0C0C0; width: 85px; margin-left: 3px; height: 23px;"
+                                        id="accountconfirmation" class="tbForm" name="YesOrNo" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="Form11.accountconfirmation" jqxb-listsource="accountconfirmation"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description" onchange="YesOrNo()">
+                                    </select></p>
+                                &nbsp;<div id="part1">
+                                    <div>
+                                        <span class="boldtext font16 textcenter" style="text-align: center; font-weight: bold;">
+                                            <p>
+                                                FORM 11(Revised)</p>
+                                        </span>
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <span class="boldtext font10 textcenter" style="text-align: center; font-weight: bold;
+                                            color: Red; font-size: 14PX;">
+                                            <p>
+                                                <marquee> Please save the guideline document in your desktop and refer the same while filling the form</marquee>
+                                            </p>
+                                        </span>
+                                    </div>
+                                    <div id="pf_main" style="margin-left: 5px;">
+                                        <p class="font16 boldtext textcenter paddingTB10">
+                                            THE EMPLOYEES' PROVIDENT FUNDS SCHEME,1952 (Paragraph-34)
+                                            <br />
+                                            <br />
+                                            AND
+                                            <br />
+                                            <br />
+                                            THE EMPLOYEES' FAMILY PENSION SCHEME,1971, (Paragraph-19)</p>
+                                        <br />
+                                        <p class="textcenter font13">
+                                            Declaration by a person taking up employment in an establishment in which the Employees'
+                                            Provident Funds &
+                                            <br />
+                                            Family Pension Fund Scheme enforce
+                                        </p>
+                                        <br />
+                                        <br />
+                                        <!--  <p class="textcenter font13">
+                                        Family Pension Fund Scheme enforce</p>-->
+                                        <!--                                    <p class="font16 boldtext textcenter marginB20 paddingTB10 fleft" style="width: 90%;
+                                        margin-top: 10px;"
+                                    </p>>-->
+                                        <p class="font13 lineht17 marginL20 marginR20 fleft" style="width: 90%">
+                                        </p>
+                                        <div style="clear: both; font-size: 1.3em; line-height: 35px;">
+                                            <span>I</span>
+                                            <input class="inputText_Readonly" type="text" style="border: 1px solid; width: 300px;
+                                                line-height: 15px; font-size: 13px; margin-left: 10px; border-color: InactiveCaptionText;
+                                                background: #f0f0f0; color: #888 !important;" id="Pg_1_text_Name" readonly="readonly"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="Form11.Name" />
+                                            <select style="border: 1px solid; width: 130px; margin-left: 3px; border-color: #C0C0C0;"
+                                                id="Pg_1_text_Relationship" class="tbForm " name="Relationship0" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="Form11.Relation" jqxb-listsource="RelationshipList" jqxb-listvalue="ID"
+                                                jqxb-listtext="Description" disabled="disabled">
+                                            </select>
+                                            <span class="paddingLR10">Of</span>
+                                            <input style="width: 220px; border: 1px solid #c0c0c0; height: 20px; margin-right: 10px;
+                                                line-height: 15px; border-color: #C0C0C0;" id="RelationName" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="Form11.RelationName" type="text" dir="ltr" readonly="readonly" />
+                                            <br />
+                                            <span>do hereby solemnly declare that :-</span>
+                                            <br />
+                                        </div>
+                                        <!--   <ol class="fleft marginL20 Form_li">-->
+                                        <div style="text-align: left; font-size: 1.3em; padding-left: 18px;">
+                                            <span style="color: #ff003a;">*</span> <span class="spaniwas">(a). I was employed in
+                                            </span>
+                                            <textarea rows="2" onkeydown="RestrictCharCount(this.id,150)" allowchar="150" id="CurrentEmployerAddress"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="Form11.CurrentEmployerAddress"
+                                                style="vertical-align: middle; height: 38px; line-height: 15px; border: 1px solid;
+                                                width: 400px; vertical-align: middle; background: #f0f0f0; border-color: #C0C0C0;"
+                                                name="S1" class="CurEmpClass" title="Current/Last employer name and address">  </textarea>&nbsp;
+                                            <span>and left service on</span>
+                                            <input type="text" id="CurrentEmployerEndDate" class="tbForm nospace jQrydatepicker1 dateMandatory"
+                                                style="border: 1px solid; width: 75px; margin-left: 5px; border-color: #C0C0C0;"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="Form11.CurrentEmployerEndDate"
+                                                title="CurrentEmployerEndDate" />
+                                        </div>
+                                        <div>
+                                            <br />
+                                            <span style="font-size: 1.1em; margin-left: 240px;">(Name and full address of the Establishment)</span>
+                                        </div>
+                                        <div style="text-align: left; font-size: 1.3em; padding-top: 5px; margin-left: 50px;">
+                                            <span>prior to that , I was employed in</span>
+                                            <textarea rows="2" onkeydown="RestrictCharCount(this.id,300)" allowchar="300" style="vertical-align: middle;
+                                                height: 38px; line-height: 15px; border: 1px solid; width: 400px; vertical-align: middle;
+                                                border-color: #C0C0C0;" id="PreviousEmployerAddress" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="Form11.PreviousEmployerAddress" name="S2" cols="20" title="Previous employer name and address">  </textarea>
+                                        </div>
+                                        <div style="margin-left: 50px; font-size: 1.3em; padding: 10px 0px; margin-top: 5px">
+                                            <span>from</span>
+                                            <input type="text" id="Text3" class="tbForm nospace jQrydatepicker dateMandatory"
+                                                readonly="readonly" style="border: 1px solid; width: 75px; margin-left: 5px;
+                                                border-color: #C0C0C0;" jqxb-datasource="FormDetails" jqxb-datamember="Form11.PreviousEmployerStartDate"
+                                                title="PreviousEmployerStartDate" />
+                                            <span>to</span>
+                                            <input type="text" id="Text4" class="tbForm nospace jQrydatepicker dateMandatory"
+                                                readonly="readonly" style="border: 1px solid; width: 75px; border-color: #C0C0C0;"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="Form11.PreviousEmployerEndDate"
+                                                title="PreviousEmployerEndDate" />.
+                                        </div>
+                                        <div style="font-size: 1.3em; padding-left: 18px; padding-top: 10px">
+                                            <span style="color: #ff003a;">*</span> <span>(b). I was member of
+                                                <select style="border: 1px solid; width: 150px; margin-left: 3px; border-color: #C0C0C0;"
+                                                    onchange="PFMembertrustvalue();" id="PFMember" class="tbForm" name="PFMember"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="Form11.PFMember" jqxb-listsource="PFMember"
+                                                    jqxb-listvalue="ID" jqxb-listtext="Description">
+                                                </select>
+                                                <textarea rows="2" onkeydown="RestrictCharCount(this.id,150)" allowchar="150" style="vertical-align: middle;
+                                                    width: 300px;" class="CurEmpClass" id="PFMemberName1" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="Form11.PFMember1" name="PFMember1" title="PF Member Name"> </textarea>
+                                                <!--  Provident Fund and also/but not of Pension Fund-->
+                                            </span>
+                                            <!--<textarea rows="2" onkeydown="RestrictCharCount(this.id,150)" allowchar="150" style="vertical-align: middle;
+                                            width: 350px;" class="CurEmpClass" id="PFMemberName" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="Form11.PFMember" name="PFMember" title="PF Member Name"> </textarea>-->
+                                        </div>
+                                        <div style="text-align: left; font-size: 1.3em; padding: 10px 0px; margin-top: 5px;
+                                            margin-left: 43px;">
+                                            <span>from</span>
+                                            <input type="text" id="PensionFrom" class="tbForm nospace jQrydatepicker dateMandatory"
+                                                readonly="readonly" style="border: 1px solid; width: 75px; margin-left: 5px;
+                                                border-color: #C0C0C0;" jqxb-datasource="FormDetails" jqxb-datamember="Form11.PensionFrom"
+                                                title="PensionFrom" />
+                                            <span>to</span>
+                                            <input type="text" id="PensionTo" class="tbForm nospace jQrydatepicker dateMandatory"
+                                                readonly="readonly" style="border: 1px solid; width: 75px; border-color: #C0C0C0;"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="Form11.PensionTo" title="PensionTo" />
+                                            <span class="paddingL10">and my account number(s) was/were</span>
+                                            <input style="border: 1px solid; height: 20px; width: 230px; border-color: #C0C0C0;"
+                                                id="Pg1_text_PFAccNo" jqxb-datasource="FormDetails" jqxb-datamember="Form11.PFAccNo"
+                                                title="PF Account No" /><br />
+                                            <br />
+                                            <br />
+                                        </div>
+                                        <div style="clear: both; font-size: 1.3em; line-height: 35px;">
+                                            <span style="color: #ff003a; margin-left: 10px">*</span> <span>(c). I
+                                                <select style="border: 1px solid; width: 85px; margin-left: 3px; border-color: #C0C0C0;"
+                                                    id="Select1" class="tbForm" name="Relationship1" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="Form11.Withdrawnvalue" jqxb-listsource="withdrawnvalue1" jqxb-listvalue="ID"
+                                                    jqxb-listtext="Description">
+                                                </select>
+                                                withdrawn the amount of my
+                                                <input class="inputText_Readonly" type="text" style="border: 1px solid; width: 200px;
+                                                    line-height: 15px; font-size: 13px; margin-left: 10px; border-color: InactiveCaptionText;
+                                                    background: #f0f0f0; color: #888 !important;" id="fundvalue" readonly="readonly"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="Form11.fundvalue" />
+                                                <!-- <select style="border: 1px solid; width: 150 px; margin-left: 3px; border-color: #C0C0C0;"
+                                                    id="fundvalue" class="tbForm" name="fundvalue" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="Form11.fundvalue" jqxb-listsource="fundvalue" jqxb-listvalue="ID"
+                                                    jqxb-listtext="Description" > </select></span>.-->
+                                                <br />
+                                        </div>
+                                        <div style="clear: both; font-size: 1.3em; line-height: 35px;">
+                                            <span style="color: #ff003a; margin-left: 10px">*</span> <span>(d). I
+                                                <select style="border: 1px solid; width: 85px; margin-left: 3px; border-color: #C0C0C0;"
+                                                    id="Select2" class="tbForm " name="Relationship2" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="Form11.Superannuationbenefitsvalue" jqxb-listsource="withdrawnvalue2"
+                                                    jqxb-listvalue="ID" jqxb-listtext="Description">
+                                                </select>
+                                                drawn any superannuation benefits in respect of my past service from any employer.</span>
+                                            <br />
+                                        </div>
+                                        <div style="clear: both; font-size: 1.3em; line-height: 35px;">
+                                            <span style="color: #ff003a; margin-left: 10px">*</span> <span>(e). I
+                                                <select style="border: 1px solid; width: 85px; margin-left: 3px; border-color: #C0C0C0;"
+                                                    id="Select3" class="tbForm" name="Relationship3" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="Form11.Fundmembervalue" jqxb-listsource="withdrawnvalue3" jqxb-listvalue="ID"
+                                                    jqxb-listtext="Description">
+                                                </select>
+                                                been a member of any provident fund and pension fund.</span>
+                                            <br />
+                                        </div>
+                                        <div style="clear: both; font-size: 1.3em; line-height: 35px;">
+                                            <span style="color: #ff003a; margin-left: 15px"></span><span style="width: 85px;
+                                                margin-left: 3px;">(f). I am
+                                                <label class="DrawningPensionvalue2">
+                                                    not Drawing</label>
+                                                pension under EPS 95.</span><br />
+                                            <!-- <select style="border: 1px solid; width: 120px; margin-left: 3px; border-color: #C0C0C0;"
+                                                    id="Select4" class="tbForm" name="Relationship4" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="Form11.DrawningPensionvalue" jqxb-listsource="pensionvalue"
+                                                    jqxb-listvalue="ID" jqxb-listtext="Description">
+                                                </select>-->
+                                        </div>
+                                        <div style="clear: both; font-size: 1.3em; line-height: 35px;">
+                                            <span style="color: #ff003a; margin-left: 10px">*</span> <span>(g). I have
+                                                <select style="border: 1px solid; width: 120px; margin-left: 3px; border-color: #C0C0C0;"
+                                                    id="SchemeID" class="tbForm " name="Relationship5" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="Form11.HoldingSchemeCertificate" jqxb-listsource="certificateholder"
+                                                    jqxb-listvalue="ID" jqxb-listtext="Description">
+                                                </select>
+                                                scheme certificate .</span>
+                                            <br />
+                                        </div>
+                                        <div style="clear: both; font-size: 1.3em; line-height: 35px;">
+                                            <span style="color: #ff003a; margin-left: 10px">*</span> <span>(h). Scheme certificate
+                                                <select style="border: 1px solid; width: 130px; margin-left: 3px; border-color: #C0C0C0;"
+                                                    id="Select6" class="tbForm " name="Relationship6" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="Form11.Certificatesurrenderedvalue" jqxb-listsource="schemecertificate"
+                                                    jqxb-listvalue="ID" jqxb-listtext="Description">
+                                                </select>.</span>
+                                        </div>
+                                        <div style="clear: both; font-size: 1.3em; line-height: 35px;">
+                                            <span style="color: #ff003a; margin-left: 10px">*</span> <span>(i).I
+                                                <select style="border: 1px solid; width: 130px; margin-left: 3px; border-color: #C0C0C0;"
+                                                    id="traveldetails" class="tbForm " name="traveldetails" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="Form11.traveldetails" jqxb-listsource="traveldetails" jqxb-listvalue="ID"
+                                                    jqxb-listtext="Description">
+                                                </select>
+                                                contributed to the social security programme in
+                                                <input type="text" style="border: 1px solid; height: 1px; width: 230px; border-color: #C0C0C0;
+                                                    padding-bottom: 7px; height: 20px; width: 230px;" id="travelcounrtydetails" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="Form11.travelcounrtydetails" title="travelcounrtydetails" />(Name
+                                                of the Country)
+                                                <div style="margin-left: 4px; font-size: 1.0em; padding: 10px 0px; margin-top: 3px">
+                                                    <span>from</span>
+                                                    <input type="text" id="travelfromdate" class="tbForm nospace jQrydatepicker dateMandatory"
+                                                        readonly="readonly" style="border: 1px solid; width: 75px; margin-left: 3px;
+                                                        padding-bottom: 2px; height: 20px; border-color: #C0C0C0;" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="Form11.travelfromdate" title="travelfromdate2" />
+                                                    <span>to</span>
+                                                    <input type="text" id="traveltodate" class="tbForm nospace jQrydatepicker dateMandatory"
+                                                        readonly="readonly" style="border: 1px solid; width: 75px; margin-left: 3px;
+                                                        padding-bottom: 2px; height: 20px; border-color: #C0C0C0;" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="Form11.traveltodate" title="traveltodate2" />
+                                                    which
+                                                    <select style="border: 1px solid; width: 145 px; margin-left: 3px; border-color: #C0C0C0;"
+                                                        id="socialsecurityvalue" class="tbForm " name="socialsecurityvalue" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="Form11.socialsecurityvalue" jqxb-listsource="socialsecurityvalue"
+                                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                                    </select>
+                                                    entered into a social security agreement with India.
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div style="clear: both; padding-top: 40px; padding-bottom: 20px;">
+                                            <div style="width: 367px; float: right;">
+                                                -------------------------------------------------------
+                                            </div>
+                                            <div>
+                                                <span style="float: left; display: inline-block; width: 535px; font-size: 1.3em;">Date
+                                                    :<input class="inputText_Readonly" type="text" id="Text1" style="border: 1px solid;
+                                                        border-color: #C0C0C0;" readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="Form11.Date" />
+                                                </span><span style="display: block; float: right; font-size: 1.3em; margin-right: 85px;">
+                                                    Signature or left hand thumb impression of the employee </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="part2">
+                                    <div>
+                                        <span class="boldtext font16 textcenter" style="text-align: center; font-weight: bold;">
+                                            <p>
+                                                FORM 11(Revised)</p>
+                                        </span>
+                                    </div>
+                                    <br />
+                                    <div id="form11_NOtemplate" style="margin-left: 5px;">
+                                        <p class="font16 boldtext textcenter paddingTB10">
+                                            THE EMPLOYEES' PROVIDENT FUNDS SCHEME,1952 (Paragraph-34)
+                                            <br />
+                                            <br />
+                                            AND
+                                            <br />
+                                            <br />
+                                            THE EMPLOYEES' FAMILY PENSION SCHEME,1971, (Paragraph-19)</p>
+                                        <br />
+                                        <p class="textcenter font13">
+                                            Declaration by a person taking up employment in an establishment in which the Employees'
+                                            Provident Funds &
+                                            <br />
+                                            Family Pension Fund Scheme enforce
+                                        </p>
+                                        <br />
+                                        <br />
+                                        <p class="font13 lineht17 marginL20 marginR20 fleft" style="width: 90%">
+                                        </p>
+                                        <div style="clear: both; font-size: 1.3em; line-height: 35px;">
+                                            <span>I</span>
+                                            <input class="inputText_Readonly" type="text" style="border: 1px solid; width: 300px;
+                                                line-height: 15px; font-size: 13px; margin-left: 10px; border-color: InactiveCaptionText;
+                                                background: #f0f0f0; color: #888 !important;" id="Pg_1_text_Name_2" readonly="readonly"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="Form11.Name" />
+                                            <select style="border: 1px solid; width: 130px; margin-left: 3px; border-color: #C0C0C0;"
+                                                id="Pg_1_text_Relationship_2" class="tbForm " name="Relationship0" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="Form11.Relation" jqxb-listsource="RelationshipList" jqxb-listvalue="ID"
+                                                jqxb-listtext="Description" disabled="disabled">
+                                            </select>
+                                            <span class="paddingLR10">Of</span>
+                                            <input style="width: 220px; height: 20px; margin-right: 10px; line-height: 15px;
+                                                border: 1px solid #c0c0c0;" id="RelationName_2" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="Form11.RelationName" dir="ltr" type="text" readonly="readonly" />
+                                            <br />
+                                            <span>do hereby solemnly declare that :-</span>
+                                            <br />
+                                        </div>
+                                        <div style="text-align: left; font-size: 1.3em; padding-left: 18px;">
+                                            <!--    <span style="color: #ff003a;">*</span>-->
+                                            <span class="spaniwas">(a). I was employed in </span>
+                                            <textarea rows="1" onkeydown="RestrictCharCount(this.id,150)" allowchar="150" id="CurrentEmployerAddress"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="Form11.CurrentEmployerAddress"
+                                                style="vertical-align: middle; height: 38px; line-height: 15px; border: 1px solid;
+                                                width: 350px; vertical-align: middle; background: #f0f0f0; border-color: #C0C0C0;"
+                                                name="S1" class="CurEmpClass" title="Current/Last employer name and address">  </textarea>
+                                            <span>and left service on</span>
+                                            <input type="text" id="CurrentEmployerEndDate1" class="tbForm nospace jQrydatepicker1 dateMandatory"
+                                                style="border: 1px solid; width: 75px; margin-left: 5px; border-color: #C0C0C0;"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="Form11.CurrentEmployerEndDate"
+                                                title="CurrentEmployerEndDate" />
+                                        </div>
+                                        <div>
+                                            <br />
+                                            <span style="font-size: 1.3em; margin-left: 240px;">(Name and full address of the Establishment)</span>
+                                        </div>
+                                        <div style="text-align: left; font-size: 1.3em; padding-top: 5px; margin-left: 50px;">
+                                            <span>prior to that , I was employed in</span>
+                                            <input style="border: 1px solid; height: 20px; background: #f0f0f0; width: 200px;
+                                                border-color: #C0C0C0;" id="PreviousEmployerAddress_2" value="NOT APPLICABLE"
+                                                readonly="readonly" title="Previous employer name and address" />
+                                            <!--<textarea rows="1" onkeydown="RestrictCharCount(this.id,150)" allowchar="150" style="vertical-align: middle;
+                                                height: 35px; line-height: 15px; border: 1px solid; width: 350px; vertical-align: middle;
+                                                border-color: #C0C0C0;" id="PreviousEmployerAddress_2" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="Form11.PreviousEmployerAddress" name="S2" cols="20" title="Previous employer name and address">  </textarea>-->
+                                            <span>from</span>
+                                            <input type="text" id="PreviousEmployerStartDate_2" class="tbForm nospace jQrydatepicker dateMandatory"
+                                                readonly="readonly" style="border: 1px solid; width: 75px; margin-left: 5px;
+                                                border-color: #C0C0C0;" jqxb-datasource="FormDetails" jqxb-datamember="Form11.PreviousEmployerStartDate"
+                                                title="PreviousEmployerStartDate" />
+                                            <span>to</span>
+                                            <input type="text" id="PreviousEmployerEndDate_2" class="tbForm nospace jQrydatepicker dateMandatory"
+                                                readonly="readonly" style="border: 1px solid; width: 75px; border-color: #C0C0C0;"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="Form11.PreviousEmployerEndDate"
+                                                title="PreviousEmployerEndDate" />.
+                                        </div>
+                                        <div style="font-size: 1.3em; padding-left: 18px; padding-top: 10px">
+                                            <!--<span style="color: #ff003a;">*</span>-->
+                                            <span>(b).I was member of</span>
+                                            <!-- <textarea rows="1"  onkeydown="RestrictCharCount(this.id,150)" allowchar="120" style="vertical-align: middle;
+                                                width: 350px;" class="CurEmpClass" id="PFMemberName_2" value="NOT APPLICABLE" readonly="readonly"
+                                                 name="PFMember2" title="PF Member Name"></textarea>-->
+                                            <input style="border: 1px solid; background: #f0f0f0; height: 20px; width: 120px;
+                                                border-color: #C0C0C0;" id="PFMemberName_2" value="NOT APPLICABLE" readonly="readonly"
+                                                title="PF Member Name" />
+                                            <span>Provident Fund and also/but not of Pension Fund</span><br />
+                                        </div>
+                                        <div style="text-align: left; font-size: 1.3em; padding: 10px 0px; margin-top: 5px;
+                                            margin-left: 43px;">
+                                            <span>from</span>
+                                            <input type="text" id="PensionFrom_2" class="tbForm nospace jQrydatepicker dateMandatory"
+                                                readonly="readonly" style="border: 1px solid; width: 75px; margin-left: 5px;
+                                                border-color: #C0C0C0;" jqxb-datasource="FormDetails" jqxb-datamember="Form11.PensionFrom"
+                                                title="PensionFrom" />
+                                            <span>to</span>
+                                            <input type="text" id="PensionTo_2" class="tbForm nospace jQrydatepicker dateMandatory"
+                                                readonly="readonly" style="border: 1px solid; width: 75px; border-color: #C0C0C0;"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="Form11.PensionTo" title="PensionTo" />
+                                            <span class="paddingL10">and my account number(s) was/were </span>
+                                            <input style="border: 1px solid; background: #f0f0f0; height: 20px; width: 230px;
+                                                border-color: #C0C0C0;" id="Pg1_text_PFAccNo_2" value="NOT APPLICABLE" readonly="readonly"
+                                                title="PF Account No" /><br />
+                                            <br />
+                                        </div>
+                                        <div style="clear: both; font-size: 1.3em; line-height: 35px;">
+                                            <!-- <span style="color: #ff003a; margin-left: 10px">*</span>-->
+                                            <span>(c). I have/have not withdrawn the amount of my provident fund/pension fund.
+                                                <label class="Withdrawnvalue2" style="font-size: 1.2em; color: Red;">
+                                                    -NOT APPLICABLE</label>
+                                            </span>
+                                            <br />
+                                        </div>
+                                        <div style="clear: both; font-size: 1.3em; line-height: 35px;">
+                                            <!--    <span style="color: #ff003a; margin-left: 10px">*</span> -->
+                                            <span>(d). I have/have not drawn any superannuation benefits in respect of my past service
+                                                from any employer.
+                                                <label class="Superannuationbenefitsvalue2" style="font-size: 1.2em; color: Red;">
+                                                    -NOT APPLICABLE</label>
+                                            </span>
+                                            <br />
+                                        </div>
+                                        <div style="clear: both; font-size: 1.3em; line-height: 35px;">
+                                            <!--<span style="color: #ff003a; margin-left: 10px">*</span>-->
+                                            <span>(e). I have /have not never been a member of any provident fund and/or pension
+                                                fund.
+                                                <label class="Fundmembervalue2" style="font-size: 1.2em; color: Red;">
+                                                    -NOT APPLICABLE</label>
+                                            </span>
+                                            <br />
+                                        </div>
+                                        <div style="clear: both; font-size: 1.3em; line-height: 35px;">
+                                            <!--<span style="color: #ff003a; margin-left: 10px">*</span>-->
+                                            <span>(f). I am drawing /not drawing pension under EPS 95.
+                                                <label class="DrawningPensionvalue12 " style="font-size: 1.2em; color: Red;">
+                                                    -NOT APPLICABLE</label></span>
+                                            <br />
+                                        </div>
+                                        <div style="clear: both; font-size: 1.3em; line-height: 35px;">
+                                            <!-- <span style="color: #ff003a; margin-left: 10px">*</span> -->
+                                            <span>(g). I am holder/not holder of scheme certificate.
+                                                <label class="certificateholder2" style="font-size: 1.2em; color: Red;">
+                                                    -NOT APPLICABLE</label>
+                                            </span>
+                                        </div>
+                                        <div style="clear: both; font-size: 1.3em; line-height: 35px;">
+                                            <!--<span style="color: #ff003a; margin-left: 10px">*</span>-->
+                                            <span>(h). Scheme certificate surrendered/ not surrendered.
+                                                <label class="schemecertificate2" style="font-size: 1.2em; color: Red;">
+                                                    -NOT APPLICABLE</label>
+                                            </span>
+                                        </div>
+                                        <div style="clear: both; font-size: 1.3em;">
+                                            <span>(i).I
+                                                <select style="border: 1px solid; width: 130px; margin-left: 3px; border-color: #C0C0C0;"
+                                                    id="traveldetails2" class="tbForm " name="traveldetails2" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="Form11.traveldetails" jqxb-listsource="traveldetails" jqxb-listvalue="ID"
+                                                    jqxb-listtext="Description">
+                                                </select>
+                                                contributed to the social security programme in
+                                                <input style="border: 1px solid; height: 1px; width: 230px; border-color: #C0C0C0;
+                                                    padding-bottom: 7px; height: 20px; width: 230px;" id="travelcounrtydetails2"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="Form11.travelcounrtydetails" title="travelcounrtydetails" />(Name
+                                                of the Country)
+                                                <div style="margin-left: 4px; font-size: 1.0em; padding: 10px 0px; margin-top: 3px">
+                                                    <span>from</span>
+                                                    <input type="text" id="travelfromdate2" class="tbForm nospace jQrydatepicker dateMandatory"
+                                                        readonly="readonly" style="border: 1px solid; width: 75px; margin-left: 3px;
+                                                        padding-bottom: 2px; height: 20px; border-color: #C0C0C0;" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="Form11.travelfromdate2" title="travelfromdate2" />
+                                                    <span>to</span>
+                                                    <input type="text" id="traveltodate2" class="tbForm nospace jQrydatepicker dateMandatory"
+                                                        readonly="readonly" style="border: 1px solid; width: 75px; margin-left: 3px;
+                                                        padding-bottom: 2px; height: 20px; border-color: #C0C0C0;" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="Form11.traveltodate2" title="traveltodate2" />
+                                                    which
+                                                    <select style="border: 1px solid; width: 145 px; margin-left: 3px; border-color: #C0C0C0;"
+                                                        id="socialsecurityvalue2" class="tbForm " name="socialsecurityvalue2" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="Form11.socialsecurityvalue" jqxb-listsource="socialsecurityvalue"
+                                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                                    </select>
+                                                    entered into a social security agreement with India.
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div style="clear: both; padding-top: 40px; padding-bottom: 20px;">
+                                            <div style="width: 367px; float: right;">
+                                                -------------------------------------------------------
+                                            </div>
+                                            <div>
+                                                <span style="float: left; display: inline-block; width: 535px; font-size: 1.3em;">Date
+                                                    :<input class="inputText_Readonly" type="text" id="Date_2" style="border: 1px solid;
+                                                        border-color: #C0C0C0;" readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="Form11.Date" />
+                                                </span><span style="display: block; float: right; font-size: 1.3em; margin-right: 85px;">
+                                                    Signature or left hand thumb impression of the employee </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='footerContent'>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

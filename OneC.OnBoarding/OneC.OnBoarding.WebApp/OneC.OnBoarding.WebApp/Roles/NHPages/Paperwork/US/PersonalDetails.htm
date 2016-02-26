@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Personal Data Form</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/US/PersonalDetails.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <style type="text/css">
+        .alert_f_text
+        {
+            float: right;
+            height: 10px;
+            margin: 0;
+            padding: 0 0 0 170px;
+            text-align: right;
+            width: 220px;
+            font-size: 0.8em;
+            color: #ff0000;
+            display: none;
+        }
+        .pageDetails .personalDetails li button.ui-datepicker-trigger
+        {
+            float: none;
+            margin-right: 0;
+        }
+        .inputText_Readonly
+        {
+            background-color: InactiveCaptionText;
+            font-size: 15px;
+            padding: 3px 5px 2px;
+            border: 1px solid #ccc !important;
+            background: #f0f0f0;
+            color: #888 !important;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id='pageMain'>
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails" style="padding-bottom: 10px;">
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        Personal Details</p>
+                                </div>
+                                <br />
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; border-left: 1px solid #d4e7ef;
+                                    margin-left: 10px; margin-top: -10px; width: 46%; height: 30px;">
+                                    <label for="prefixForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span> Prefix</label>
+                                    <select id="prefixForm" title="Prefix" class="tbForm dropdown" name="Prefix" style="margin: 5px 5px;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Prefix" jqxb-listsource="PrefixList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li style="height: 30px; border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    margin-top: -10px; width: 46.1%">
+                                    <label for="firstNameForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span> First Name</label>
+                                    <input type="text" title="First Name" id="firstNameForm" style="margin: 5px 5px;"
+                                        class="tbForm textMandatory onlyAlp" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.FirstName"
+                                        maxlength="30" />
+                                </li>
+                                <li style="height: 30px; border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    border-left: 1px solid #d4e7ef; margin-left: 10px; width: 46%">
+                                    <label for="middleNameForm" class="notMandatory" style="margin: 5px 0 0 -26px">
+                                        Middle Name</label>
+                                    <input id="middleNameForm" type="text" title="Middle Name" class="tbForm onlyAlp"
+                                        maxlength="30" style="margin: 5px 5px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.MiddleName" />
+                                </li>
+                                <li style="height: 30px; border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    width: 46.1%">
+                                    <label for="lastNameForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span> Last Name</label>
+                                    <input type="text" title="LastName" id="lastNameForm" class="tbForm textMandatory onlyAlp"
+                                        maxlength="30" style="margin: 5px 5px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.LastName" />
+                                </li>
+                                <li style="height: 30px; border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    border-left: 1px solid #d4e7ef; margin-left: 10px; width: 46%">
+                                    <label for="maritalStatusForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span>Marital Status</label>
+                                    <select id="maritalStatusForm" title="Marital Status" class="tbForm ddForm dropdown"
+                                        style="margin: 5px 5px;" name="MaritalStatus" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.MaritalStatus"
+                                        jqxb-listsource="MaritalList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li style="height: 30px; border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    width: 46.1%">
+                                    <label for="dobForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span>Date of Birth</label><div id="date" class="tbForm" style="border: none;
+                                            margin: 5px 5px; width: 172px; float: right;">
+                                            <input type="text" title="DateOfBirth" id="dobForm" readonly="readonly" class="tbForm dob"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.DOB" style="float: left;
+                                                width: 55%; margin-right: 5%" maxlength="10" />
+                                        </div>
+                                </li>
+                                <li style="height: 45px; border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    border-left: 1px solid #d4e7ef; margin-left: 10px; width: 46%">
+                                    <label for="genderForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span>Gender</label>
+                                    <select class="tbForm ddForm dropdown" title="Gender" id="genderForm" name="Gender"
+                                        style="margin: 5px 5px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Gender"
+                                        jqxb-listsource="GenderList" jqxb-listvalue="UserValue" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li style="height: 45px; border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    width: 46.1%">
+
+                                    <label for="securityForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span>Social Security Number<br />&nbsp;&nbsp;
+                                        (xxx-xx-xxxx)</label>
+                                    <input type="text" title="Social Security Number" id="securityForm" maxlength="20" 
+                                        style="margin: 5px 5px;" class="tbForm OnlyNumeric ssn employee textMandatory" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="PersonalData.NationalID" />
+                                        <br />
+                                       <label  for="securityForm"  style="display:inline;width:90%;">
+                                    <input type="checkbox" id="SSNCheck" jqxb-datasource="FormDetails" 
+                                        jqxb-datamember="PersonalData.SSNCheck" jqxb-bindedattribute="checked" style="vertical-align:middle;"/>&nbsp;I have
+                                    not yet applied for a US Social Security Number</label> </li>
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; border-left: 1px solid #d4e7ef;
+                                    margin-left: 10px; width: 46%; height: 55px;">
+                                    <label for="eligibilityForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span>Employment Eligibility<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;(MUST CHECK ONE)</label>
+                                    <p id="eligibilityForm" title="Employment Eligibility" class="test" style="float: right;
+                                        margin: 5px 5px; width: 168px">
+                                        <input type="radio" name="eligibility" id="USCitizen" value="US Citizen" style="margin-bottom: 6px;
+                                            vertical-align: top;" onclick="EligibilityUSCitizen();" jqxb-datasource="FormDetails"
+                                            jqxb-datamember="PersonalData.EmploymentEligibility.Citizen" jqxb-bindedattribute="checked" />
+                                        US Citizen
+                                        <br />
+                                        <input type="radio" name="eligibility" id="AlienTemporary" value="Alien Temporary"
+                                            style="margin-bottom: 6px; vertical-align: top;" onclick="EligibilityAlienTemporary();"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.EmploymentEligibility.AlienTemporary"
+                                            jqxb-bindedattribute="checked" />
+                                        Alien Temporary<br />
+                                        <input type="radio" name="eligibility" value="Permanent Resident" class="Permanent"
+                                            id="PermanentResident" style="vertical-align: bottom;" onclick="EligibilityPermanentResident();"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.EmploymentEligibility.PermanentResidence"
+                                            jqxb-bindedattribute="checked" />
+                                        Permanent Resident
+                                    </p>
+                                </li>
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; width: 46.1%;
+                                    height: 55px;"></li>
+                            </ul>
+
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                       Place of Birth</p>
+                                </div>
+                                <br />
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; border-left: 1px solid #d4e7ef;
+                                    margin-left: 10px; margin-top: -10px; width: 46%; height: 30px;">
+                                    <label style="margin-top: 11px; margin-right: 0px; margin-bottom: 0px; margin-left: -26px; padding-bottom: 0px; border-bottom-width: 0px; border-top-width: 0px;" for="bankacct_form" >
+                                        <span>*</span>Country</label>
+                                    <select class="tbForm dropdown BgvSync " id="currcountry_form" name="Gender" jqxb-datasource="FormDetails" style="padding-bottom: 0px; margin-bottom: 0px; margin-top: 10px; margin-left: 0px; margin-right: 10px;"
+                                        title="Country" jqxb-datamember="PersonalData.BirthCountry" jqxb-listsource="CountryList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li style="height: 30px; border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    width: 46.1%; margin-top: -10px;">
+                                  <label style="margin-top: 11px; margin-right: 0px; margin-bottom: 0px; margin-left: -26px; padding-bottom: 0px; border-bottom-width: 0px; border-top-width: 0px;" for="bankacct_form" >
+                                       <span>*</span>State</label>
+                                    <select class="tbForm dropdown BgvSync" id="currstate_form" name="Gender" jqxb-datasource="FormDetails" style="padding-bottom: 0px; margin-bottom: 0px; margin-top: 10px; margin-left: 0px; margin-right: 10px;
+                                        title="State" jqxb-datamember="PersonalData.BirthState" jqxb-listsource="CurrStateList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; border-left: 1px solid #d4e7ef;
+                                    margin-left: 10px; width: 46%; height: 30px;">
+                                    <label for="bankacct_form" style="margin-top: 11px; margin-right: 0px; margin-bottom: 0px; margin-left: -26px;">
+                                        <span>*</span>City</label>
+                                    <input type="text" id="currcity_form" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.BirthCity"
+                                        maxlength="45" title="City" class="tbForm textMandatory BgvSync" style="margin-top: 10px; margin-right: 10px;" />
+                                </li>
+                            </ul>
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        Mailing Address/Contact Details</p>
+                                </div>
+                                <br />
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; border-left: 1px solid #d4e7ef;
+                                    margin-left: 10px; margin-top: -10px; width: 46%; height: 40px;">
+                                    <label for="addressForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span> Address(apartment number required, if applicable) </label>
+                                    <textarea title="Address" id="addressForm" onkeypress="RestrictCharCount(this.id,199)" allowchar="200"
+                                        class="tbForm Alphanumeric onlyAlphanumeric" style="margin: 5px 5px; height: 28px;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.CurrentAddress"></textarea>
+                                </li>
+                                <li style="height: 40px; border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    width: 46.1%; margin-top: -10px;">
+                                    <label for="cityForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span>City</label>
+                                    <input type="text" title="City" id="cityForm" class="tbForm onlyAlp textMandatory onlyAlp"
+                                        style="margin: 5px 5px;" maxlength="30" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.CurrentCity" />
+                                </li>
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; border-left: 1px solid #d4e7ef;
+                                    margin-left: 10px; width: 46%; height: 30px;">
+                                    <label for="stateForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span> State</label>
+                                    <input type="text" id="stateForm" class="tbForm onlyAlp" onkeypress="RestrictCharCount(this.id,19)" allowchar="20"
+                                        title="State"  style="margin: 5px 5px;" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="PersonalData.CurrentState" />
+                                </li>
+                                <li style="height: 30px; border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    width: 46.1%">
+                                    <label for="zipCodeForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span>ZipCode</label>
+                                    <input type="text" title="Zipcode" id="zipCodeForm" maxlength="12" style="margin: 5px 5px;"
+                                        class="tbForm textMandatory" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.CurrentPinCode" />
+                                </li>
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; border-left: 1px solid #d4e7ef;
+                                    margin-left: 10px; width: 46%; height: 30px;">
+                                    <label for="countryForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span>Country</label>
+                                    <select id="countryForm" name="Country" title="Country" class="tbForm dropdown" style="margin: 5px 5px;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.CurrentCountry" jqxb-listsource="CountryList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li style="height: 30px; border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    width: 46.1%">
+                                    <label for="homePhoneForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span>Home Phone</label>
+                                    <input type="text" title="Home Phone" id="homePhoneForm" maxlength="13" style="margin: 5px 5px;"
+                                        class="tbForm OnlyNumeric textMandatory phone" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="PersonalData.HomePh" />
+                                </li>
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; border-left: 1px solid #d4e7ef;
+                                    margin-left: 10px; width: 46%; height: 30px;">
+                                    <label for="mobilePhoneForm" class="notMandatory" style="margin: 5px 0 0 -26px">
+                                        Mobile Phone</label>
+                                    <input type="text" title="Mobile Phone" id="mobilePhoneForm" maxlength="13" style="margin: 5px 5px;"
+                                        class="tbForm OnlyNumeric phone" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.Mobile" />
+                                </li>
+                                <li style="height: 30px; border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    width: 46.1%">
+                                    <label for="personalEmailForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span>Personal Email</label>
+                                    <input type="text" title="Personal Email" id="personalEmailForm" maxlength="70" style="margin: 5px 5px;"
+                                        class="tbForm  emailMandatory" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.EmailId" />
+                                </li>
+                            </ul>
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        Emergency Contact Details</p>
+                                </div>
+                                <br />
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; border-left: 1px solid #d4e7ef;
+                                    margin-left: 10px; margin-top: -10px; width: 46%; height: 30px;">
+                                    <label for="ecnForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span>Emergency Contact Name<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;(First and Last)</label>
+                                    <input id="ecnForm" title="Emergency Contact Name" type="text" onkeypress="RestrictCharCount(this.id,49)" allowchar="50"
+                                         style="margin: 5px 5px;" class="tbForm textMandatory onlyAlp"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.EmergencyContactName" />
+                                </li>
+                                <li style="height: 30px; border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    width: 46.1%; margin-top: -10px;">
+                                    <label for="emergencyPhoneForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span>Emergency Phone</label>
+                                    <input type="text" title="Emergency Phone" id="emergencyPhoneForm" maxlength="13"
+                                        style="margin: 5px 5px;" class="tbForm textMandatory phone OnlyNumeric" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="PersonalData.EmergencyContactNo" />
+                                </li>
+                                <li style="border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef; border-left: 1px solid #d4e7ef;
+                                    margin-left: 10px; width: 46%; height: 30px;">
+                                    <label for="emergencyContactForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span>Emergency Contact Relation</label>
+                                    <select title="Emergency Contact Relation" class="tbForm ddForm dropdown" id="emergencyContactForm"
+                                        style="margin: 5px 5px;" name="Relationship" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.EmergencyContactRelationship"
+                                        jqxb-listsource="RelationshipList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li style="height: 30px; border-right: 1px solid #d4e7ef; border-bottom: 1px solid #d4e7ef;
+                                    width: 46.1%">
+                                    <label for="ETypeForm" style="margin: 5px 0 0 -26px">
+                                        <span>*</span>Emergency Phone Type</label>
+                                    <select title="Emergency Phone Type" id="EPTypeForm" name="EPType" class="tbForm ddForm dropdown"
+                                        style="margin: 5px 5px;" jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.EmergencyPhoneType"
+                                        jqxb-listsource="EPTypeList" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="Signature" id="Sign_PageId_1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='footerContent'>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

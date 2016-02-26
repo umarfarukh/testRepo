@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40537469-2DCF-4109-9E44-83B9CB145526}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OneC.OnBoarding.DC</RootNamespace>
+    <AssemblyName>OneC.OnBoarding.DC</AssemblyName>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BGVDC\Autocomplete.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="BGVDC\BackPapersDC.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="BGVDC\CandidateBGVData.cs" />
+    <Compile Include="BGVDC\CandidateInformationDC.cs" />
+    <Compile Include="BGVDC\CompareDC.cs" />
+    <Compile Include="BGVDC\ComponentData.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="BGVDC\DocListInfo.cs" />
+    <Compile Include="BGVDC\PageNavigationDC.cs" />
+    <Compile Include="BGVDC\PageNotifications.cs" />
+    <Compile Include="BGVDC\PersonalData.cs" />
+    <Compile Include="BGVDC\SaveComponent.cs" />
+    <Compile Include="BGVDC\Validation.cs" />
+    <Compile Include="BGVDC\VendorDashboard.cs" />
+    <Compile Include="CandidateDC\BgvNHDashboardData.cs" />
+    <Compile Include="CandidateDC\CampusReportingTimeDC.cs" />
+    <Compile Include="CandidateDC\CandidateTaskDC.cs" />
+    <Compile Include="CandidateDC\CandidateTrainingDC.cs" />
+    <Compile Include="CandidateDC\CandidateTypeDC.cs" />
+    <Compile Include="CandidateDC\AssetStatusDC.cs" />
+    <Compile Include="CandidateDC\CandAssetStatusDC.cs" />
+    <Compile Include="CandidateDC\DimStatusDC.cs" />
+    <Compile Include="CandidateDC\ELMDC.cs" />
+    <Compile Include="CandidateDC\EnumConstants.cs" />
+    <Compile Include="CandidateDC\FAQ.cs" />
+    <Compile Include="CandidateDC\FileUploadDC.cs" />
+    <Compile Include="CandidateDC\JoiningStatusDC.cs" />
+    <Compile Include="CandidateDC\LocationDC.cs" />
+    <Compile Include="CandidateDC\MasterList.cs" />
+    <Compile Include="CandidateDC\NewHireTrainingDC.cs" />
+    <Compile Include="CandidateDC\OfferStatusDC.cs" />
+    <Compile Include="CandidateDC\SaveCisDC.cs" />
+    <Compile Include="CandidateDC\SaveMeetingID.cs" />
+    <Compile Include="CandidateDC\SaveRLAFeedbackDC.cs" />
+    <Compile Include="CandidateDC\SaveTaskDC.cs" />
+    <Compile Include="CandidateDC\SignatureDC.cs" />
+    <Compile Include="CandidateDC\VirtualDocumentDC.cs" />
+    <Compile Include="DashBoardDC\AdminDashBoard.cs" />
+    <Compile Include="DashBoardDC\ApprovalDetails.cs" />
+    <Compile Include="DashBoardDC\ApprovalRequestStatus.cs" />
+    <Compile Include="DashBoardDC\BgvCandidateData.cs" />
+    <Compile Include="DashBoardDC\BgvComponent.cs" />
+    <Compile Include="DashBoardDC\BgvComponentMapping.cs" />
+    <Compile Include="DashBoardDC\CandidateDocumentForApproval.cs" />
+    <Compile Include="DashBoardDC\DashboardDataDC.cs" />
+    <Compile Include="DashBoardDC\DashBoardDataPagination.cs" />
+    <Compile Include="DashBoardDC\DashboardFilter.cs" />
+    <Compile Include="CandidateDC\EducationMaster.cs" />
+    <Compile Include="CandidateDC\CandidateDetail.cs" />
+    <Compile Include="CandidateDC\TaskDetails.cs" />
+    <Compile Include="DashBoardDC\DashBoard.cs" />
+    <Compile Include="DashBoardDC\HTransferCandidateData.cs" />
+    <Compile Include="DashBoardDC\NssDashboardData.cs" />
+    <Compile Include="DashBoardDC\TMDashboardData.cs" />
+    <Compile Include="DashBoardDC\TotalCountDC.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UtilityDC\AutoCompleteDC.cs" />
+    <Compile Include="UtilityDC\DocumentDetail.cs" />
+    <Compile Include="UtilityDC\ECMDocument.cs" />
+    <Compile Include="UtilityDC\ErrorDetail.cs" />
+    <Compile Include="UtilityDC\SANUploadDetails.cs" />
+    <Compile Include="UtilityDC\StartDateAndLocationDC.cs" />
+    <Compile Include="UtilityDC\UploadSessionStorage.cs" />
+    <Compile Include="UtilityDC\UploadUtilityDC.cs" />
+    <Compile Include="UtilityDC\GetMailContent.cs" />
+    <Compile Include="UtilityDC\MCkinleyDC.cs" />
+    <Compile Include="UtilityDC\OBFaultContractFC.cs" />
+    <Compile Include="UtilityDC\EventLog.cs" />
+    <Compile Include="UtilityDC\GeographyMaster.cs" />
+    <Compile Include="UtilityDC\MailData.cs" />
+    <Compile Include="UtilityDC\Messages.cs" />
+    <Compile Include="UtilityDC\RoleAccessDC.cs" />
+    <Compile Include="UtilityDC\SessionDetails.cs" />
+    <Compile Include="UtilityDC\SurveyDC.cs" />
+    <Compile Include="UtilityDC\SystemKey.cs" />
+    <Compile Include="UtilityDC\UserInfoDC.cs" />
+    <Compile Include="UtilityDC\UserRoles.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{3D9AD99F-2412-4246-B90B-4EAA41C64699}">
+        <WcfProjectProperties>
+          <AutoStart>True</AutoStart>
+        </WcfProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

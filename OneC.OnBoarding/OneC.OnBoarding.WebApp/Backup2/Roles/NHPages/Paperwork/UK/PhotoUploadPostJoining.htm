@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Photo Upload</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        $().ready(function () {
+            $("#Pg_1_lbl_Name").text(TaskPrefillValues.PrefillValues.Set1.Name);
+            $("#PhotoURL").attr("href", TaskPrefillValues.PrefillValues.Set2.URL)
+            OBPager.ShowPage(1);
+        });
+        function SaveTaskData(saveMode) { closeIt(); }
+        function ResetTaskData() { }
+    </script>
+</head>
+<body>
+    <div id="baseContent">
+        <div id="pageMain">
+            <div id="headerContent">
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <br />
+                                <table width="880px">
+                                <tr>
+                                <td>
+                                <p class="pageText" style="text-align: justify;">
+                                Dear
+                                <label id="Pg_1_lbl_Name">
+                                </label></p>
+                                 </td>
+                                </tr>
+                                </table>
+                                <br />
+                                <br />
+                                <br />
+                                <p class="pageText" style="text-align: justify;">
+                                Kindly ensure to upload your image through <b>
+                                <a href="" target="_blank" id="PhotoURL">My Image application </a></b>
+                                which will automatically reflect in Outlook within 3 business days post Admin approval. 
+                                </p>
+                                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

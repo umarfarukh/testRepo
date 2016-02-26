@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Start Date And Location</title>
+    <script type="text/javascript" src="../../../Scripts/JQuery/1.8/jquery.js"></script>
+    <script type="text/javascript" src="../../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js"></script>
+    <script src="StartDateAndLocation.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../../Scripts/JQuery/jquery.ui.datepicker.js"></script>
+    <script type="text/javascript" src="../../../Scripts/Validations.js"></script>
+  <!--  <script type="text/javascript" src="../../../Scripts/JQuery/jquery.alerts.js"></script>-->
+    <script src="../../../Scripts/Forms/CoreScripts/UploadUtility.js" type="text/javascript"></script>
+    <link href="../../../Styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../../Styles/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Styles/Calender.Css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        var Modifyflag = 0;
+        function popupPro() {
+            faddress = "";
+            // DEBUG: specify the initial country in DataId & function to call in Callback
+            if (Modifyflag == 1) {
+                faddress = $('#req_Address1')[0].value + ',' + $('#req_City')[0].value + ',' + $('#req_State')[0].value + ',' + $('#req_Zip')[0].value;
+            }
+
+            // var addr = faddress;
+            // alert(faddress);
+            var ProPopup = window.open(
+						"../../../Experian/Typedown/RapidSearch.aspx?DataID=USA&Callback=handleProClose&Origin=StartDate&Modifyflag=" + Modifyflag + "&addr=" + faddress + "",
+					"ProPopup",
+					"scrollbars=no,resizable=yes,width=725,height=560");
+
+
+        }
+
+        function handleProClose(asAddress) {
+            document.getElementById("req_Address1").value = asAddress[0];
+            document.getElementById("req_Address2").value = asAddress[1];
+            document.getElementById("req_City").value = asAddress[2];
+            document.getElementById("req_State").value = asAddress[3];
+            document.getElementById("req_Zip").value = asAddress[4];
+            document.getElementById("req_County").value = asAddress[5];
+            document.getElementById("req_Country").value = asAddress[6];
+            document.getElementById("WorkLocationType").value = asAddress[7];
+
+            Modifyflag = 1;
+        }
+
+//        var customUI = {
+//            uploadBtnTxt: 'GO'
+//            //,btnStyle: "height:24px;min-width:60px;cursor:pointer;margin:2px 0 4px 0;padding:0 4px 0 4px;border: 1px solid #5482a3;color:#fff;font-weight:bold;text-align:center;vertical-align:middle;border-radius:3px;background-color:#396584;"
+//        }
+
+    </script>
+   </head>
+<body>
+    <div class="mid_content">
+        <div class="personal_details_content test">
+            <div class="inner_header">
+                <div class="flft">
+                    Start Date</div>
+            </div>
+            <div class="clear">
+            </div>
+            <div id="PersonalDetails" class="inner_mid_content_hrssstrtdate">
+                <ul class="flft locdiv">
+                    <li>
+                        <label for="EDOJ">
+                            Actual Joining Date</label>
+                        <span>
+                            <input type="text" class="txtbx_action" name="EDOJ" id="EDOJInputBox" readonly="readonly" style="margin-right: 18px;" /></span>
+                    </li>
+                    <li style="margin-left: 50px;">
+                        <label>
+                            Candidate Confirmation Status:</label>
+                        <span style="float: none;">
+                            <select style="text-align: left; margin-left: 5px; margin-bottom: 8px; width: 90px;"
+                                id="DOJConfirmStatus" name="status" class="select">
+                            </select></span> </li>
+                    <li>
+                        <label for="CandEDOJ" id="ReqEDOJContainer">
+                            Candidate Reported Joining Date</label>
+                        <span>
+                            <input type="text" class="txtbx_action textMandatory" name="CandEDOJ" id="candrepjoindt" readonly="readonly" />
+                        </span></li>
+                    <li style="margin-left: 50px;width: 485px;">
+                        <label for="reason">
+                            Candidate Comments:</label>
+                        <span>
+                            <textarea id="txt_reason" cols="40" rows="4" name="reason" resize="none"></textarea>
+                        </span></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div class="personal_details_content">
+       
+           <div class="inner_header" style="margin-top: 0px;">
+                <div class="flft">
+                    Address</div>
+            </div>
+            <div id="locaiondiv" class="inner_mid_content_hrsslocation" style="width: 951.97px;">
+                <ul class="flft locdiv">
+                    <li>
+                        <label>
+                            Address1 :</label>
+                        <span class="addresspan"> <!--style="margin-right: 75px;"-->
+                            <input type="text" class="txtbx_action addr_action  textMandatory" name="Address1" id="req_Address1" disabled = "disabled" /></span></li>
+                    <li style="margin-left: -65px;">
+                        <label style="margin-left: 50px;">
+                            Candidate Confirmation Status:</label>
+                        <span>
+                            <select style="text-align: left; margin-left: 5px; margin-bottom: 8px; width: 100px;"
+                                id="pg_1_candlocConfmsts" name="status" class="select">
+                            </select></span> </li>
+                    <li>
+                        <label>
+                            Address2 :</label>
+                        <span class="addresspan"> <!--style="margin-right: 75px;"-->
+                            <input type="text" class="txtbx_action addr_action" name="Address2" id="req_Address2" disabled = "disabled" />
+                        </span></li>
+                    <li></li>
+                  <li>
+                        <label>
+                            City</label>
+                        <span class="addresspan"> <!--style="margin-right: 75px;"-->
+                            <input type="text" class="txtbx_action addr_action  textMandatory" name="City" id="req_City" disabled = "disabled"  />
+                        </span></li>                  
+                    <li style="width: 50%; margin-left: -65px;">
+                        <label style="margin-left: 50px;width: 50px;">
+                            Candidate Comments:</label>
+                        <span>
+                            <textarea id="pg_1_locatcoments" cols="30" rows="7" name="reason" resize="none"></textarea>
+                        </span></li>
+                        <li>
+                        <label>
+                            State:</label>
+                        <span class="addresspan"> <!--style="margin-right: 75px;"-->
+                            <input type="text" class="txtbx_action addr_action  textMandatory" name="State" id="req_State" disabled = "disabled"  />
+                        </span></li>
+                                          
+                    <li></li>
+                       <li>
+                        <label>
+                            Zip:</label>
+                        <span class="addresspan"> <!--style="margin-right: 75px;"-->
+                            <input type="text" class="txtbx_action addr_action textMandatory" name="Zip" id="req_Zip" disabled = "disabled"  /></span>
+                    </li>
+                    <li></li>
+                     <li>
+                        <label>
+                            County:</label>
+                        <span class="addresspan"> <!--style="margin-right: 75px;"-->
+                            <input type="text" class="txtbx_action addr_action textMandatory" name="Country" id="req_County" disabled = "disabled"  />
+                        </span>
+                        </li>
+
+                     <li></li>                  
+                    <li>
+                        <label>
+                            Country :</label>
+                        <span class="addresspan"> <!--style="margin-right: 75px;"-->
+                            <input type="text" class="txtbx_action addr_action textMandatory" name="Country" id="req_Country" disabled = "disabled" /></span>
+                    </li>                      
+                    <li></li>
+                    <li style="width: 350px">
+                        <label>
+                          Work LocationType:</label>
+                        <span style="margin-right: 32px;">
+                         <input type="text" class="txtbx_action addr_action textMandatory" id="WorkLocationType" name="work_location_type" disabled = "disabled"  />
+                            <!--<select style="text-align: left; margin-left: 5px; margin-bottom: 8px;"
+                                id="drpdwn_locationType" name="status" class="select">
+                            </select>-->
+                            </span>
+                        <!--  <span style="margin-left:50px;"><input title="Modify" id="btn_acceptDOJ" style="background-color: #808080; color: #ffffff;
+                            font-size: 12px; text-align: left; margin-left: 95px; margin-bottom: 8px;
+                            width: 100px; cursor: pointer;" type="button" alt="Modify" value="Modify" onclick="enable()" /></span>-->
+                    </li>
+                    <li>
+                        <div>
+                            <input title="Modify" id="btn_modify" style="background-color: rgba(26, 91, 178, 0.93); color: #ffffff;
+                                font-size: 12px; text-align: left; width: 75px; cursor: pointer;" type="button"
+                                alt="Modify" value="Modify" onclick="popupPro();"/></div>
+                    </li>
+                    <!-- </ul>-->
+                    <!--<ul class="flrt">-->
+                    <!-- <li>
+                        <label>
+                            Candidate Confirmation Status:</label>
+                        <span style="float:none;">
+                            <select style="text-align: left; margin-left: 5px; margin-bottom: 8px; width:auto;"
+                                id="pg_1_candlocConfmsts" name="status" class="select">
+                            </select></span></li>-->
+                    <!--<li></li>
+                    <li>
+                        <label>
+                            Candidate Comments:</label>
+                        <span>
+                             <textarea id="pg_1_locatcoments" cols="20" rows="2" name="reason"></textarea>
+                        </span></li>-->
+                    <!--         <li>  <span style="margin-left:50px;"><input title="Modify" id="btn_modify" style="background-color: #808080; color: #ffffff;
+                            font-size: 12px; text-align: left; margin-left: 95px; margin-bottom: 8px; margin-top:50px;
+                            width: 100px; cursor: pointer;" type="button" alt="Modify" value="Modify" onclick="enable()" /></span></li>-->
+                </ul>
+                <div class="clear">
+                </div>
+                <div id="Confirmstatus" class="inner_mid_content_hrsslocation Confirmstatus"  style="width: 951.99px; margin-left: 0px; height: 88px;">
+                    <ul class="flft">
+                        <li style="width: 50%;">
+                            <label>
+                                Hiring Manager Confirmation Status:</label>
+                            <span style="margin-right: 50px;">
+                                <select style="text-align: left; margin-left: 5px; margin-bottom: 8px; width: 135px;"
+                                    id="Mngrcfmsts" name="status" class="select">
+                                </select></span></li>
+                        <li style="width: 50%;margin-left: -70px;">
+                        <label style="margin-left:30px;">
+                                Manager Comments:</label>
+                            <span>
+                                <textarea id="pg_1_mngr_cmmts" cols="30" rows="5" name="reason" resize="none" style="margin-right:25px;"></textarea></span>
+                        </li>
+                        <li style="width: 128.73px;">
+                            <label>
+                                Approval Email:</label>
+<!--                            <span style="margin-right: 75px;">
+                                <input title="Upload HM Mail" id="btn_upload" onclick="OpenPopForFileUpload();" style="background-color: #808080;
+                                    color: #ffffff; font-size: 12px; text-align: left; width: 75px; cursor: pointer;"
+                                    type="button" alt="Upload" value="Upload" /></span>-->
+                           <li>      
+                           <div fu-upid="4HR00" fu-rnid="0" fu-ui="customUI">
+                                </div>
+                              </li>
+                                    </li>
+                        <li>
+                            <!--<label style="margin-left: 50px;">
+                                Manager Comments:</label>
+                            <span>
+                                <textarea id="pg_1_mngr_cmmts" cols="20" rows="2" name="reason"></textarea></span>-->
+                        </li>
+                        <li></li>
+                          <!-- <li style="margin-top: 40px;"><span>
+                            <input title="Submit" id="pg_1_hrSubmit" style="background-color: #808080; color: #ffffff;
+                                font-size: 12px; text-align: left; margin-left: 95px; margin-bottom: 8px; width: 75px;
+                                cursor: pointer;" type="button" alt="Submit" value="Submit" /></span> </li>-->
+                    </ul>
+                   <p>  <span style="font-size: 10px; float: left; margin-top: 15px;color: red;">IMPORTANT: Please remember to click on the 'Submit' button, otherwise this information will not be saved!</span>
+                    <span style="float: inherit;margin-top: 15px;margin-left: -90px;">
+                            <input title="Submit" id="pg_1_hrSubmit" style="background-color: rgba(26, 91, 178, 0.93);border-color: aliceblue;color: #ffffff;
+                                font-size: 12px; text-align: left; margin-left: 125px; margin-bottom: 8px; width: 75px;margin-top: 15px;
+                                cursor: pointer;" type="button" alt="Submit" value="Submit"/>
+                                <span id="msg" style="color:Green;font-weight:bold;font-size: 12px;height:20px;text-align:center;clear:both;Display:none">Updated Successfully</span>
+                                </span>
+                   </p>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+       <input type="hidden" id="hdnUploadDocStatus" />
+        </div>
+    </div>
+</body>
+</html>

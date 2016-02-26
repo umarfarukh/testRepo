@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,IE=9,IE=8" />
+    <title>Expected Date Of Induction Confirmation/Change</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="../../../../Styles/jquery.ui.all.css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/US/EDOJForm.js" type="text/javascript"></script>
+    <style type="text/css">
+        .pd_india ul.personalDetails li.date_box LABEL.notMandatory
+        {
+            margin-right: 0;
+            margin-left: 50px;
+        }
+        
+        .pd_india ul.personalDetails li.date_box label.alert_f_text
+        {
+            float: left;
+            margin-left: -500px;
+        }
+        .pd_india ul.personalDetails li.date_box1 input
+        {
+            width: 145px;
+        }
+        .pd_india ul.personalDetails li.date_box1 label.alert_f_text
+        {
+            float: left;
+            margin-top: 23px;
+        }
+        .pd_india ul.personalDetails li.date_box1 img.alert_f
+        {
+            float: left;
+            margin-left: -170px;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+    <div id='baseContent'>
+        <div id="pageMain" class="personalDataForm">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <!--Start of 1st page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails pd_india">
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        Expected Date Of Induction Confirmation/Change
+                                    </p>
+                                </div>
+                                <br />
+                                <li style="width:45%;">
+                                    <label>
+                                        <span>*</span>Next available date of Induction
+                                        <br />
+                                        <span style="margin-left: 5px;"></span>for joining :</label>
+                                    <!--  <input type="text" id="Pg_1_text_EDOJ" jqxb-datasource="FormDetails" jqxb-datamember="EDOJ.DOJ"
+                                        class="tbForm textMandatory jQryExpdate" style="margin-right: 0px;float:left;background:url('../../../../Images/calendar.png') no-repeat right" maxlength="30"
+                                        title="EDOJ" />-->
+                                    <select class="tbForm dropdown textMandatory" id="date_form" name="EDOJ" jqxb-datasource="FormDetails"
+                                        title="EDOJ" jqxb-datamember="EDOJ.DOJ" jqxb-listsource="DateList" jqxb-listvalue="Description"
+                                        jqxb-listtext="Description">
+                                    </select></li>
+                                <li><a href="#." class="info_img" style="margin-left: -48px; margin-top: 0px;">
+                                    <img src="../../../../Images/info.png" alt="info" style="height: 25px" /></a>
+                                </li>
+
+                                <!--<li id="SubDate1">
+                                    <label>
+                                        <span style="margin-left: 5px;"></span>Expected date of joining<br />
+                                        <span style="margin-left: 5px;"></span>submitted is :</label>
+                                    <span type="text" class="tbForm" id="subdate" name="Submitted Date" title="Submitted Date" style="color:Gray;"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="EDOJ.DOJSubmitted" jqxb-bindedattribute="text" />
+                                </li>
+                                <li id="SubDate2"><label></label></li>-->
+                                 <label class="pageText" style="margin-left: 25px; font-size: 1.4em" id="SubDate3">
+                                     Expected date of Induction submitted is : </label>
+                                     <span class="pageText" id="SubDate1" style="color:Red;" jqxb-datasource="FormDetails" jqxb-datamember="EDOJ.DOJSubmitted" jqxb-bindedattribute="text"></span> 
+                                     <br />                                                                      
+                                     <font id="SubDate2" class="pageText" style="color: Red; margin-left: 25px;">To modify, select the next available date of Induction 
+                                     from the options provided and click 'Submit'.</font>                                    
+                                <br />
+                                <br />
+                                <li style="width:45%;">
+                                    <label for="location">
+                                        <span>*</span>Day One Onboarding
+                                        <br />
+                                        <span style="margin-left: 5px;"></span>Program Location :
+                                    </label>
+                                    <select class="tbForm" id="location_form" name="Location" 
+                                        jqxb-datasource="FormDetails" title="Location" jqxb-datamember="EDOJ.Location"
+                                        jqxb-listsource="LocationList" jqxb-listvalue="UserValue" jqxb-listtext="Description">
+                                    </select>
+                                    <input type="text" id="location_form_2" name="Location" title="Location" 
+                                    readonly="readonly" disabled="disabled" value="Teaneck" class="inputText_Readonly tbForm" unselectable="on" />
+                                </li>
+                                <li></li>
+                                <div id="part1">
+                                <p class="pageText" style="margin-left: 13px; font-size: 1.4em">
+                                    <font style="color: Red">*</font>&nbsp;&nbsp;We will be providing new hires with
+                                    some giveaway items including Cognizant branded articles of clothing which will
+                                    only be &nbsp;&nbsp;&nbsp;available on Day 1 if you indicate you size here.</p>
+                                <br />
+                                <li>
+                                    <!--<span>*</span>    -->
+                                    <select class="tbForm" id="dress_form" name="Dress Size" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="EDOJ.DressSize" jqxb-listsource="DressList" jqxb-listvalue="UserValue"
+                                        jqxb-listtext="Description">
+                                    </select>
+                                </li>
+                                <li></li>
+                                </div>
+                                 <label class="pageText" id="SubDate4" style="margin-left: 30px; width:-10px; font-size: 1.4em">
+                                    Note :- Form has been submitted on : </label><span class="pageText" style="color:Red;" jqxb-datasource="FormDetails" jqxb-datamember="EDOJ.SubmittedDate" jqxb-bindedattribute="text"></span> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 1st page-->
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

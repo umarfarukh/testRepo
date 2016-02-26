@@ -1,0 +1,103 @@
+﻿
+#content
+{
+    width: 960px;
+    height: 550px;
+    background-color: #003366;
+}
+.associates
+{
+    z-index: 999999999;
+    cursor: move;
+    height: 50px;
+    width: 220px;
+    background-color: #9966FF;
+    padding: 10px;
+    margin: 10px;
+}
+ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+#dl_activeusers
+{
+    height: 400px;
+}
+#dl_activeusers span
+{
+    float: left;
+}
+#dl_associates span
+{
+    float: left;
+}
+#dl_activeusers span div.items
+{
+    width: 220px;
+    background-color: Silver;
+    padding: 10px;
+    margin: 10px;
+    height: 60px;
+    position: relative;
+}
+div#activeusers
+{
+    overflow-y: scroll;
+}
+
+
+.associates ui-draggable
+{
+    z-index: 9999;
+    cursor: pointer;
+}
+.designation .location .returnmsg
+{
+    font-size: small;
+    font-style: italic;
+}
+
+#dl_activeusers .activeassociatename
+{
+    font-weight: bold;
+}
+
+#dl_activeusers .activationdate
+{
+    font-style: italic;
+    font-size: small;
+    width: 140px;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+
+.associates .designation
+{
+    color: Yellow;
+}
+.associates .location
+{
+    color: Yellow;
+}
+.activeusers-img
+{
+    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    left: 175px;
+}
+
+#associatefloat
+{
+    width: 265px;
+    height: 400px;
+    background-color: silver;
+    float: right;
+    margin-right: 5px;
+    overflow-y:auto;
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f56b6305-6207-4f61-9f79-9f83eb830113" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51555/ServiceHost/OBUtilityMethods.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OBUtilityMethods5.xsd" MetadataType="Schema" ID="fb9dc6f1-d749-42ec-b8b6-224f7e176777" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd5" />
+    <MetadataFile FileName="OBUtilityMethods.xsd" MetadataType="Schema" ID="d0d19bc3-842f-4690-9b42-84768677fd76" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd1" />
+    <MetadataFile FileName="OBUtilityMethods.wsdl" MetadataType="Wsdl" ID="acf7c26c-cb55-4966-a6fa-c9d7e99d2c69" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="OBUtilityMethods1.xsd" MetadataType="Schema" ID="f95bd42e-152d-42c5-af23-641205fae539" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd4" />
+    <MetadataFile FileName="OBUtilityMethods2.xsd" MetadataType="Schema" ID="25a6e98f-922f-4aa5-a73d-99d83f10a58e" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd3" />
+    <MetadataFile FileName="OBUtilityMethods3.xsd" MetadataType="Schema" ID="2b738a50-1901-40d7-9364-5eb38267e769" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd0" />
+    <MetadataFile FileName="OBUtilityMethods.disco" MetadataType="Disco" ID="fb464f21-030e-465e-9b8b-80cae33f3290" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?disco" />
+    <MetadataFile FileName="OBUtilityMethods4.xsd" MetadataType="Schema" ID="01009847-3f68-4620-89f8-52dc0bf3a56b" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd2" />
+    <MetadataFile FileName="OBUtilityMethods1.wsdl" MetadataType="Wsdl" ID="30d4b7c0-3a87-46ca-bac0-c4c945163abe" SourceId="1" SourceUrl="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

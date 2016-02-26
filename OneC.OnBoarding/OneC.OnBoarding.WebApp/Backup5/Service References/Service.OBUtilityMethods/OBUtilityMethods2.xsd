@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" elementFormDefault="qualified" targetNamespace="http://onecognizant.cognizant.com/OnBoardingService/DataContracts/UtilityDC/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:51555/ServiceHost/OBUtilityMethods.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" />
+  <xs:complexType name="OBFaultContractFC">
+    <xs:sequence>
+      <xs:element name="FaultSource" nillable="true" type="xs:string" />
+      <xs:element name="FaultMessage" nillable="true" type="xs:string" />
+      <xs:element name="FaultStack" nillable="true" type="xs:string" />
+      <xs:element name="FaultInnerException" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OBFaultContractFC" nillable="true" type="tns:OBFaultContractFC" />
+  <xs:complexType name="ErrorDetail">
+    <xs:sequence>
+      <xs:element name="SessionId" type="xs:long" />
+      <xs:element name="ErrorSource" nillable="true" type="xs:string" />
+      <xs:element name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InnerException" nillable="true" type="xs:string" />
+      <xs:element name="ExceptionDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorDetail" nillable="true" type="tns:ErrorDetail" />
+  <xs:complexType name="EventLog">
+    <xs:sequence>
+      <xs:element name="SessionId" type="xs:long" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:long" />
+      <xs:element name="PageId" type="xs:int" />
+      <xs:element name="Event" nillable="true" type="xs:string" />
+      <xs:element name="MethodName" nillable="true" type="xs:string" />
+      <xs:element name="Value" nillable="true" type="xs:string" />
+      <xs:element name="EventTS" type="xs:dateTime" />
+      <xs:element name="XmlType" type="xs:boolean" />
+      <xs:element name="Comment" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventLog" nillable="true" type="tns:EventLog" />
+  <xs:complexType name="UserRolesContainer">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" name="UserRoles" nillable="true" type="q1:ArrayOfUserRoles" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserRolesContainer" nillable="true" type="tns:UserRolesContainer" />
+  <xs:complexType name="SystemKey">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="KeyId" type="xs:int" />
+      <xs:element minOccurs="0" name="KeyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KeyGroupCode" nillable="true" type="xs:string" />
+      <xs:element name="CountryId_x0020_" type="xs:int" />
+      <xs:element minOccurs="0" name="KeyValue_x0020_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SystemKey" nillable="true" type="tns:SystemKey" />
+  <xs:complexType name="PageAccess">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" name="RoleGroupId" type="q2:RoleGroup" />
+      <xs:element name="PageId" type="xs:int" />
+      <xs:element name="CountryId" type="xs:int" />
+      <xs:element minOccurs="0" name="IsAllowed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MessageId" type="xs:int" />
+      <xs:element minOccurs="0" name="RedirectionUrl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageAccess" nillable="true" type="tns:PageAccess" />
+  <xs:complexType name="Messages">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" name="MethodType" type="q3:MessageType" />
+      <xs:element name="MessageId" type="xs:int" />
+      <xs:element name="Message" nillable="true" type="xs:string" />
+      <xs:element name="DisplaMessage" nillable="true" type="xs:string" />
+      <xs:element name="DisplayType" nillable="true" type="xs:string" />
+      <xs:element name="MessageCode" nillable="true" type="xs:string" />
+      <xs:element name="SessionId" type="xs:long" />
+      <xs:element minOccurs="0" name="CountryId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Messages" nillable="true" type="tns:Messages" />
+  <xs:complexType name="UserInfoDC">
+    <xs:sequence>
+      <xs:element name="LoginId" nillable="true" type="xs:string" />
+      <xs:element name="FirstName" nillable="true" type="xs:string" />
+      <xs:element name="LastName" nillable="true" type="xs:string" />
+      <xs:element name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element name="EmailId" nillable="true" type="xs:string" />
+      <xs:element name="IsExternalUser" type="xs:boolean" />
+      <xs:element name="IsCandidate" type="xs:boolean" />
+      <xs:element name="IsApplicationInSupportMode" type="xs:boolean" />
+      <xs:element name="LoggedInUser" nillable="true" type="xs:string" />
+      <xs:element name="EnableIdmRetry" type="xs:boolean" />
+      <xs:element name="ChkRegistrationStatus" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserInfoDC" nillable="true" type="tns:UserInfoDC" />
+  <xs:complexType name="MailData">
+    <xs:sequence>
+      <xs:element name="From" nillable="true" type="xs:string" />
+      <xs:element name="To" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bcc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResendOnFail" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResendFrequency" type="xs:int" />
+      <xs:element minOccurs="0" name="ResendMaxLimit" type="xs:int" />
+      <xs:element minOccurs="0" name="ScheduleMailAt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RemainderValidFromDays" type="xs:int" />
+      <xs:element minOccurs="0" name="RemainderValidTillDays" type="xs:int" />
+      <xs:element minOccurs="0" name="IsReSendRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRemainderRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CandidateId" type="xs:long" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:long" />
+      <xs:element name="NotificationEventID" type="xs:int" />
+      <xs:element name="CountryId" type="xs:int" />
+      <xs:element minOccurs="0" name="MailAttachmentsDetail" nillable="true" type="tns:MailAttachmentsDetail" />
+      <xs:element minOccurs="0" name="Notification_x0020_Mapping_x0020_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="NotificationId" type="xs:int" />
+      <xs:element minOccurs="0" name="SpMode" type="xs:int" />
+      <xs:element minOccurs="0" name="NotificationMasterId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailData" nillable="true" type="tns:MailData" />
+  <xs:complexType name="MailAttachmentsDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MailAttachments" nillable="true" type="tns:ArrayOfMailAttachment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailAttachmentsDetail" nillable="true" type="tns:MailAttachmentsDetail" />
+  <xs:complexType name="ArrayOfMailAttachment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailAttachment" nillable="true" type="tns:MailAttachment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailAttachment" nillable="true" type="tns:ArrayOfMailAttachment" />
+  <xs:complexType name="MailAttachment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AttachmentContent" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="AttachmentName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailAttachment" nillable="true" type="tns:MailAttachment" />
+  <xs:complexType name="MCkinleyDC">
+    <xs:sequence>
+      <xs:element name="Content" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MCkinleyDC" nillable="true" type="tns:MCkinleyDC" />
+  <xs:complexType name="SurveyDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SurveyDataXml" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SurveyDesignXml" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CandidateSurveyDetailXml" nillable="true" type="xs:string" />
+      <xs:element name="SurveyType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SurveyStatus" nillable="true" type="xs:string" />
+      <xs:element name="CandidateId" type="xs:long" />
+      <xs:element minOccurs="0" name="ReturnSurveyType" type="xs:int" />
+      <xs:element minOccurs="0" name="SpMode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SurveyDC" nillable="true" type="tns:SurveyDC" />
+  <xs:complexType name="SendMail">
+    <xs:sequence>
+      <xs:element name="CandidateId" type="xs:long" />
+      <xs:element name="SessionId" type="xs:long" />
+      <xs:element minOccurs="0" name="BodyContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CcId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BccId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HeaderContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FooterContent" nillable="true" type="xs:string" />
+      <xs:element name="NotificationMappingId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendMail" nillable="true" type="tns:SendMail" />
+  <xs:complexType name="ECMDocument">
+    <xs:sequence>
+      <xs:element name="CandidateId" type="xs:long" />
+      <xs:element name="SessionId" type="xs:long" />
+      <xs:element name="DocumentId" type="xs:int" />
+      <xs:element name="ECMDocumentName" nillable="true" type="xs:string" />
+      <xs:element name="CandidateBgvComponentDetailKey" type="xs:long" />
+      <xs:element name="StatusFlag" type="xs:int" />
+      <xs:element name="ResponseMessage" nillable="true" type="xs:string" />
+      <xs:element name="ResponseCode" type="xs:int" />
+      <xs:element name="Filename" nillable="true" type="xs:string" />
+      <xs:element name="FileType" nillable="true" type="xs:string" />
+      <xs:element name="Mode" type="xs:int" />
+      <xs:element name="WebFormMode" type="xs:int" />
+      <xs:element minOccurs="0" name="ApprovedBy" type="xs:long" />
+      <xs:element minOccurs="0" name="SaveMode" type="xs:int" />
+      <xs:element minOccurs="0" name="Pk_CandidateDocumentUploadDetail" type="xs:long" />
+      <xs:element minOccurs="0" name="SpMode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ECMDocument" nillable="true" type="tns:ECMDocument" />
+  <xs:complexType name="PageMenuMappingContract">
+    <xs:sequence>
+      <xs:element name="SessionId" type="xs:long" />
+      <xs:element name="RoleId" type="xs:int" />
+      <xs:element name="CountryId" type="xs:int" />
+      <xs:element name="BasePageId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageMenuMappingContract" nillable="true" type="tns:PageMenuMappingContract" />
+  <xs:complexType name="PageMenuMappingContainer">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" name="PageMenuMappings" nillable="true" type="q4:ArrayOfPageMenuMapping" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageMenuMappingContainer" nillable="true" type="tns:PageMenuMappingContainer" />
+  <xs:complexType name="UserRolesAccessContainer">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" name="UserRolesAccess" nillable="true" type="q5:ArrayOfRoleAccessDC" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/OneC.OnBoarding.DC.UtilityDC" name="RoleAssociateList" nillable="true" type="q6:ArrayOfRoleAssociateDc" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserRolesAccessContainer" nillable="true" type="tns:UserRolesAccessContainer" />
+  <xs:complexType name="UploadUtiltiyDC">
+    <xs:sequence>
+      <xs:element name="SessionId" type="xs:long" />
+      <xs:element name="CandidateId" type="xs:long" />
+      <xs:element name="UpGroupId" nillable="true" type="xs:string" />
+      <xs:element name="RoleGroupId" type="xs:int" />
+      <xs:element name="SpMode" type="xs:int" />
+      <xs:element name="Mode" type="xs:int" />
+      <xs:element minOccurs="0" name="SendStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ECMUtilMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SendCode" type="xs:int" />
+      <xs:element minOccurs="0" name="SendMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentId" type="xs:int" />
+      <xs:element minOccurs="0" name="UpId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileUploadId" type="xs:long" />
+      <xs:element minOccurs="0" name="FileContentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpRunnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Return" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UploadDocRemarks" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UploadUtiltiyDC" nillable="true" type="tns:UploadUtiltiyDC" />
+</xs:schema>

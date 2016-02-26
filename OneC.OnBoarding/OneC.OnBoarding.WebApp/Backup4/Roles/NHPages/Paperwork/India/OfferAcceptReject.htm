@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/India/OfferAcceptRejectForm.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <link href="../../../../Styles/Forms/India/offerscreen.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <link href="../../../../Styles/NHStyles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        #Button1
+        {
+            width: 57px;
+        }
+    </style>
+</head>
+<script language="javascript" type="text/javascript">
+    $().ready(function () {
+        window.onbeforeunload = closeIt1;
+        function closeIt1() {
+            if (OBPager.taskStatusFlag != -1 && OBPager.taskStatusFlag != "" && ($('#reject')[0].checked != true)) {
+                try { window.parent.opener.disablePopup(); } catch (e) { }
+                try { window.close(); } catch (e) { }
+                try { window.opener.updateWithNewData(); } catch (e) { }
+            }
+        }
+    });
+</script>
+<body oncontextmenu="return false;">
+    <div id='baseContent'>
+        <div id="pageMain">
+            <div id='headerContent'>
+            </div>
+            <div id='offerpagecontent' class="pagesContainer">
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <div id="landing_page">
+                                <div id="IntroContent">
+                                </div>
+                                <!-- <p class="IntroContent">
+                            </p>-->
+                                
+                            <label id="please_label" class="bold_text space_b10">Please proceed by selecting of the following :</label>
+                            <label id="please3_label" class="bold_text space_b10">Please proceed with the Onboarding process:</label>
+                            <br />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                            <img src="../../../../Images/next.png" alt="Next" id="Next2" title="Next" 
+                                    onclick="Save(1)" /> 
+                            </div>
+                         <div id="IsMigrate">
+                            <form class="radiobtn" id="fstatus">
+                            <input type="radio" name="offer_status" id="accept" jqxb-datasource="FormDetails"
+                                jqxb-datamember="OfferStatus.Accept" jqxb-bindedattribute="checked" /><label for="accept">
+                                    Accept Offer</label>
+                            <input type="radio" name="offer_status" id="reject" jqxb-datasource="FormDetails"
+                                jqxb-datamember="OfferStatus.Reject" jqxb-bindedattribute="checked" /><label for="reject">
+                                    Decline Offer</label>
+                            </form>
+                            <form class="radiobtn" id="DIMStatus" style="display: none">
+                            <input type="radio" name="DIM_status" id="DIMAccept" jqxb-datasource="FormDetails"
+                                jqxb-datamember="OfferStatus.Campus.DIMAccept" jqxb-bindedattribute="checked" /><label
+                                    for="accept">
+                                    Accept</label>
+                            <!--<input type="radio" name="DIM_status" id="DIMDefer" jqxb-datasource="FormDetails"
+                                jqxb-datamember="OfferStatus.Campus.DIMDefer" jqxb-bindedattribute="checked" /><label
+                                    for="reject">
+                                    Defer</label>-->
+                            <input type="radio" name="DIM_status" id="DIMDecline" jqxb-datasource="FormDetails"
+                                jqxb-datamember="OfferStatus.Campus.DIMDecline" jqxb-bindedattribute="checked" /><label
+                                    for="accept">
+                                    Decline</label>
+                            </form> 
+                          
+                            <!--Added by:312511 for B-School candidates-->
+                            <form class="radiobtn" id="DIMStatusBschool" style="display: none">
+                                <p id="lblcaptionDOJ" class="bold_text">
+                                    Date Of Joining:&nbsp;&nbsp;<label style="font-size:13px;color:#0095db" id="lblDOJ" class="lblDOJ"></label></p>
+                                <input type="radio" name="DIM_statusBschool" id="DIMBschoolAccept" jqxb-datasource="FormDetails"
+                                    jqxb-datamember="OfferStatus.Accept" jqxb-bindedattribute="checked" /><label
+                                        for="accept">
+                                        Accept</label>&nbsp;&nbsp;
+                                <input type="radio" name="DIM_statusBschool" id="DIMBschoolDecline" jqxb-datasource="FormDetails"
+                                    jqxb-datamember="OfferStatus.Reject" jqxb-bindedattribute="checked" /><label
+                                        for="accept">
+                                        Decline</label><br />
+                                 <img src="../../../../Images/submit.png" alt="submit" id="btnsaveBSchool" title="Submit"
+                                    onclick="Save(1)" />
+                            </form>
+                            <!--Accept Offer-->
+                            <div id="accept_offer_page" class="alignForm">
+                                <div id="AcceptContent">
+                                </div>
+                                <!--<p id="P1" class="AcceptContent">
+                            </p>-->
+                                <p class="bold_text space_b10">
+                                    Please fill in these details:</p>
+                                <p id="pEDOJ">
+                                    <label for="edojlbl">
+                                        <span style="color: Red">*</span>Expected date of joining:</label>
+                                    <input type="text" id="edoj" readonly="readonly" jqxb-datasource="FormDetails" jqxb-datamember="OfferStatus.DOJ"
+                                        title="Date of Joining" class="tbForm" />(MM/DD/YYYY)
+                                </p>
+                                <p id="alertDiv" style="color:Red">
+                                Please wait for Date of Joining Confirmation from your Recruiter
+                                </p>
+                                <p class="space_b10">
+                                    <label for="time">
+                                        <span style="color: Red">*</span>Convenient time to contact you:</label>
+                                    <select id="Pg_1_select_time" class="tbForm" name="TrainingDates" title="ConvenientTime"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="OfferStatus.ConvenientTime" jqxb-listsource="ConvenientTime"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </p>
+                                <p class="space_b10">
+                                    <label for="cnumber">
+                                        <span style="color: Red">*</span>Preferred contact number:</label>
+                                    <input type="text" jqxb-datasource="FormDetails" class="OnlyNumeric tbForm" jqxb-datamember="OfferStatus.PrefferedContactNumber"
+                                        title="Preferred ContactN umber" maxlength="15" id="Pg_1_text_PrefferedContactNumber" />
+                                </p>
+                                <p class="space_b10">
+                                    <label for="location">
+                                        Work Location:</label>
+                                    <input type="text" jqxb-datasource="FormDetails" disabled="disabled" jqxb-datamember="OfferStatus.City"
+                                        title="City" maxlength="25" class="tbForm" id="city" />
+                                </p>
+                                <!--  <div id="EDOJFreezeDiv" runat="server" class="note-error" style="display: none; overflow: hidden">
+                        </div>-->
+                                <p id="EDOJFreezeMsg" runat="server" class="note-error" style="width: 70%; height: 10%;
+                                    display: none">
+                                </p>
+                                <img src="../../../../Images/submit.png" alt="submit" id="submit_accept" title="Submit"
+                                    onclick="Save(1)" />
+                            </div>
+                           
+                            <!--Reject offer1-->
+                            <div id="reject_offer_page1" class="pageText">
+                                <div id="RejectContent">
+                                </div>
+                                <p class="bold_text space_b10">
+                                    Please fill in these details:</p>
+                                <p class="space_b10">
+                                    <label for="decline_reason">
+                                        <font color="red">*</font> Reason for declining:</label>
+                                    <select id="decline_reason" class="tbForm decline_reason1" title="Reason For Decline"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="OfferStatus.ReasonForDecline"
+                                        jqxb-listsource="ReasonForDecline" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </p>
+                                <div id="other1" class="space_b10">
+                                    <textarea id="otherT" class="onlyAlphanumeric ccpDisabled" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="OfferStatus.OtherReason" onkeydown="RestrictCharCount(this.id,200)" allowchar="200"
+                                        class="textArea"></textarea>
+                                </div>
+                                <p class="space_b10">
+                                    <input type="checkbox" id="hr" /><label for="hr">I would like to talk with HR</label></p>
+                                <img src="../../../../Images/submit.png" alt="submit" id="submit_accept" onclick="Save(1)"
+                                    title="Submit" />
+                            </div>
+                            <!--Accept Offer Campus-->
+                            <div id="accept_offer_page_campus" class="alignForm" style="display: none">
+                                <div id="AcceptContentCampus">
+                                </div>
+                                <p class="space_b10">
+                                    <label for="time">
+                                        <span style="color: Red">*</span> Location Preference1 :</label>
+                                    <select id="Select1" class="tbForm" title="Location Preference1" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="OfferStatus.CampusLoc1" jqxb-listsource="CampusLoc1" jqxb-listvalue="ID"
+                                        jqxb-listtext="Description">
+                                    </select>
+                                </p>
+                                <p class="space_b10">
+                                    <label for="time">
+                                        <span style="color: Red">*</span> Location Preference2 :</label>
+                                    <select id="Select3" class="tbForm" title="Location Preference2" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="OfferStatus.CampusLoc2" jqxb-listsource="CampusLoc1" jqxb-listvalue="ID"
+                                        jqxb-listtext="Description">
+                                    </select>
+                                </p>
+                                <p id="p1">
+                                    <label for="edojlbl">
+                                        <span style="color: Red">*</span> Tentative Exam Date:</label>
+                                    <input type="text" id="CampusTentExamDate" readonly="readonly" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="OfferStatus.Campus.CampusTentExamDate" title="Date of Joining"
+                                        class="tbForm jQrydatepicker" />
+                                </p>
+                                <p id="p3">
+                                    <label for="edojlbl">
+                                        <span style="color: Red">*</span>Tentative Exam Result Date :</label>
+                                    <input type="text" id="CampusTentExamResultDate" readonly="readonly" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="OfferStatus.Campus.CampusTentExamResultDate" title="Date of Joining"
+                                        class="tbForm jQrydatepicker" />
+                                </p>
+                                <p id="p4">
+                                    <label for="edojlbl">
+                                        <span style="color: Red">*</span>Tentative Available Date of
+                                        <br />
+                                        Provisional Certicate :</label>
+                                    <input type="text" id="CampusTentProvisionalDate" readonly="readonly" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="OfferStatus.Campus.CampusTentProvisionalDate" title="Date of Joining"
+                                        class="tbForm jQrydatepicker" />
+                                </p>
+                                <!--  <div id="EDOJFreezeDiv" runat="server" class="note-error" style="display: none; overflow: hidden">
+                        </div>-->
+                                <p id="P2" runat="server" class="note-error" style="width: 70%; height: 10%; display: none">
+                                </p>
+                                <img src="../../../../Images/submit.png" alt="submit" id="Img1" title="Submit" onclick="Save(1)" />
+                            </div>
+                            <!--Reject offer Campus-->
+                            <div id="reject_offer_pageCampus" class="pageText" style="display: none">
+                                <div id="RejectContentCampus">
+                                </div>
+                                <p class="bold_text space_b10">
+                                    Please fill in these details:</p>
+                                <p class="space_b10">
+                                    <label for="decline_reason">
+                                        Reason for declining:</label>
+                                    <select id="decline_reason" class="tbForm decline_reason" title="Reason For Decline"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="OfferStatus.ReasonForDecline"
+                                        jqxb-listsource="ReasonForDecline" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </p>
+                                <div id="other" class="space_b10">
+                                    <textarea id="Textarea1" class="onlyAlphanumeric ccpDisabled" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="OfferStatus.OtherReason" onkeydown="RestrictCharCount(this.id,200)" allowchar="200"
+                                        class="textArea"></textarea>
+                                </div>
+                                <p class="space_b10">
+                                    <input type="checkbox" jqxb-datasource="FormDetails" jqxb-datamember="OfferStatus.IsTalkToHR"
+                                        jqxb-bindedattribute="checked" id="Checkbox1" /><label for="hr">I would like to talk
+                                            with HR</label></p>
+                                <img src="../../../../Images/submit.png" alt="submit" id="Img2" onclick="Save(2)"
+                                    title="Submit" />
+                            </div>
+                            <!--To be in Touch with Cognizant -->
+                            <div id="divToBeinTouch" class="alignForm pageText" style="display: none">
+                                <p class="space_b10">
+                                    <label for="cnumber">
+                                        Email ID:</label>
+                                    <input type="text" jqxb-datasource="FormDetails" class="tbForm" jqxb-datamember="OfferStatus.EmailId"
+                                        title="EmailId" maxlength="15" id="Text1" />
+                                </p>
+                                <p class="space_b10">
+                                    <label for="cnumber">
+                                        Mobile Number:</label>
+                                    <input type="text" jqxb-datasource="FormDetails" class="OnlyNumeric tbForm" jqxb-datamember="OfferStatus.PrefferedContactNumber"
+                                        title="MobileNumber" maxlength="15" id="Text2" />
+                                </p>
+                                <img src="../../../../Images/submit.png" alt="submit" id="Img3" onclick="Save(1)"
+                                    title="Submit" />
+                            </div>
+                            <!--DIM AFTER DEFER Campus-->
+                            <!--   <div id="defered_DIM" style="display:none">-->
+                            <div id="defered_DIM" style='font-size: 13px; color: #0095db; display: none; font-weight: bold'>
+                            </div>
+                            <!--DIM DEFER Campus-->
+                            <div id="defer_date_campus" class="pageText alignForm" style="display: none">
+                                <p class="space_b10">
+                                    <label for="time">
+                                        Year:</label>
+                                    <select id="DeferYear" class="tbForm" name="DeferYear" title="DeferYear" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="OfferStatus.Campus.DeferYear" jqxb-listsource="DeferYear" jqxb-listvalue="ID"
+                                        jqxb-listtext="Description">
+                                    </select>
+                                </p>
+                                <p class="space_b10">
+                                    <label for="time">
+                                        Month:</label>
+                                    <select id="DeferMonth" class="tbForm" name="DeferMonth" title="DeferMonth" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="OfferStatus.Campus.DeferMonth" jqxb-listsource="DeferMonth"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </p>
+                                <p id="P6" runat="server" class="note-error" style="width: 70%; height: 10%; display: none">
+                                </p>
+                                <img src="../../../../Images/submit.png" alt="submit" id="Img5" title="Submit" onclick="Save(3)" />
+                            </div>
+                            <!--DIM Decline Campus-->
+                            <div id="decline_date_campus" class="pageText alignForm" style="display: none">
+                                <p>
+                                    <label for="decline_reason">
+                                        Reason for declining:</label>
+                                    <select id="Select2" class="tbForm decline_reason2" title="Reason For Decline" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="OfferStatus.ReasonForDecline" jqxb-listsource="ReasonForDecline"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description">
+                                    </select>
+                                </p>
+                                <div id="other2" class="space_b10">
+                                    <textarea id="otherTxtArea" class="onlyAlphanumeric ccpDisabled" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="OfferStatus.OtherReason" onkeydown="RestrictCharCount(this.id,200)" allowchar="200"
+                                        class="textArea"></textarea>
+                                </div>
+                                <p class="space_b10">
+                                    <input type="checkbox" jqxb-datasource="FormDetails" jqxb-datamember="OfferStatus.IsTalkToHR"
+                                        jqxb-bindedattribute="checked" id="Checkbox2" /><label for="hr">I would like to talk
+                                            with HR</label></p>
+                                <img src="../../../../Images/submit.png" alt="submit" id="Img6" onclick="Save(2)"
+                                    title="Submit" />
+                            </div>
+                            
+                       
+
+                        <div class="pageText" id="userManualPDF">
+                        
+                        <p><img id="manualpdf" src="../../../../Images/pdf_ico.gif" alt="PDF"/>
+                      
+                         Please refer to the user manual for information on the process flow</p>
+                        </div>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" runat="server" id="hdnHolidayDates" />
+    <input type="hidden" runat="server" id="hdnEligibleDays" />
+    <input type="hidden" runat="server" id="hdnMaxDayValue" />
+    <input type="hidden" runat="server" id="hdnMinDayValue" />
+</body>
+</html>

@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+.wrapper{width:1200px; height:800px; margin:0 auto; position: relative;overflow:hidden;border:1px solid #999;}
+/* Common Styles*/
+.fl {float:left;}
+.fr {float:right;}
+.display_none {display:none;}
+
+/**/
+.start_date_icon {padding:10px;display:block;}
+.ui-widget-overlay {background-color:#7f7f7f;background-image:none;opacity:.5;}
+.ui-widget {font-family: Trebuchet MS,Arial,Helvetica,sans-serif;ont-size: 14px;}
+.na_popup {border-radius:0px; padding: 0;border:0px; width: 564px;}
+.na_popup .ui-dialog-buttonpane {border:0px;background-color:#ededed;}
+.na_popup .ui-dialog-buttonpane button {border-radius:0px;background-image:none;}
+.na_popup .ui-button-text-only .ui-button-text { padding: 3px 0;}
+.na_popup  .ui-dialog-titlebar , .address_header {border-radius:0px;padding: 0 0 0 25px;border:0px;background-color:#4ea4ef;}
+.na_popup .ui-dialog-title {color:#fff;line-height: 42px; font-size: 16px;}
+
+.na_popup .button_wrapper , .na_popup  .ui-dialog-buttonset {float:left;background-color:#ededed;color:#4ea4ef;width:100%;font-size: 13px;}
+.na_popup .button_wrapper button , .custom_button , .na_popup .ui-dialog-buttonpane button {background-color:#4ea4ef;color:#fff;border-color:#4ea4ef;width:68px; 
+	font-size: 14px;margin-bottom: 8px;margin-top: 7px;border:1px solid #4ea4ef;height:26px;padding-bottom:1px;}/*width:68px;removed for fixing performance validation logs*/
+button.confirm_button {background-color:#fff !important;color:#4ea4ef !important;margin-left:23px;}
+.na_popup .start_date_wrapper {float:left;padding-left:24px;padding-bottom:22px;}
+.na_popup input {border:1px solid #e5e5e5;border-radius:1px;color:#6b6b6b;height:18px;padding-top:4px;padding-bottom:3px;width:111px;}
+.na_popup .start_date_selector {padding:22px 0px 0px 0px;}
+.na_popup .start_date_selector label {color:#4ea4ef;line-height:17px;margin-right:3px;}
+.na_popup .ui-state-default .ui-button-icon-primary,.na_popup .ui-widget-content .ui-state-default .ui-button-icon-primary,
+.na_popup .ui-widget-header .ui-state-default  .ui-button-icon-primary{background-image:url("../Images/popup_close.png");background-position: 0 0;}
+.na_popup  .ui-dialog-titlebar  .ui-state-default,.na_popup  .ui-dialog-titlebar .ui-widget-content .ui-state-default,
+.na_popup  .ui-dialog-titlebar  .ui-state-default {background-color: #4EA4EF;background-image: none;border: 0px;}
+.na_popup  .address_header {width:539px;line-height:40px;color:#fff;font-size: 16px;font-weight: 600;}	
+.na_popup  .address_details {padding:12px 22px;float:left;}
+.address_details ul li {display:block;float:left;background-color:#ececee;margin-right:2px;margin-bottom:2px;position: relative;border:1px solid #ececee;border-bottom:none;height:34px;}
+.address_details ul li.active {border-color: #D7D7D7;height: 37px;margin-top: -5px;padding-bottom: 0;top: 5px;}
+.address_details ul li a {display:block;text-align:center;font-size:14px;line-height:34px;text-decoration:none;padding-left:9px;padding-right:9px;font-weight: 600;color:#4b5658;}
+.tab_content_wrapper {float:left;border:1px solid #d7d7d7;background-color:#ececee;width:483px;}
+.tab_content {float:left;width:100%;padding-top: 7px;}
+.form_wrapper .form_row {width:100%;float:left;padding-bottom:5px;}
+.form_wrapper .form_row label {float:left;width:155px;text-align:left;color:#475659;padding-left:9px;line-height:30px;}
+.form_wrapper .form_row .form_field {float:left;}
+.form_wrapper .form_row .form_field input {width:184px;color:black;padding-left:14px;}
+/*.form_wrapper .form_row .form_field .custom_select {width:150px !important;} */
+.tab_content .button_wrapper  {background-color:#e0e0e2;}
+.tab_content .button_wrapper button {margin-left:7px;line-height: 20px;}                                         
+.form_wrapper .form_row .form_field .ui-state-default .ui-icon {background-image:url("../Images/dropdown_icon.png"); background-position: 3px 7px;}
+.form_wrapper .form_row .form_field .ui-multiselect {background:none;background-color:#fff;border-radius: 0; font-size: 14px;height: 27px;padding-left:12px;}
+button.submit_button {background-color:#89c443;border-color:#69a122;}
+.submit_button_wrapper .submit_button {margin-left:7px;}
+.warning_popup .ui-dialog-titlebar  {padding-left:18px;}
+.warning_popup  .ui-dialog-title{ padding-left: 42px;background-image:url(" ../../Images/warning_sympol.png");background-repeat:no-repeat; background-position: 0 6px;}
+.editaddress_popup input {border-color:#D3D3D3 !important;color:#555555 !important;}
+.editaddress_popup .ui-dialog-buttonpane .confirm_button {margin-left: 20px;}
+.warning_popup .ui-dialog-buttonpane {padding:0px;}
+.warning_popup .ui-dialog-content { padding: 12px 22px 6px;line-height: 18px;}
+.warning_popup .ui-dialog-buttonpane .confirm_button {margin-left:17px;}
+.editaddress_popup .label_only {line-height:28px;}
+.address_wrapper .label_only { color: #4B565A;font-size: 13px;line-height: 15px;padding-top: 6px; width: 62%;}

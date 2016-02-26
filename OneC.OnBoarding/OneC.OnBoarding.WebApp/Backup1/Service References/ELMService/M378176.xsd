@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://xmlns.oracle.com/Enterprise/Tools/schemas/M378176.V1" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M378176.V1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="Get__CompIntfc__CT_ELM1CResponse" type="Get__CompIntfc__CT_ELM1CResponseTypeShape" />
+  <xsd:complexType name="Get__CompIntfc__CT_ELM1CResponseTypeShape">
+    <xsd:sequence>
+      <xsd:element name="LM_PERSON_ID" type="LM_PERSON_IDTypeShape" />
+      <xsd:element minOccurs="0" name="LM_CRSE_CODE" type="LM_CRSE_CODETypeShape" />
+      <xsd:element minOccurs="0" name="LM_CS_LONG_NM" type="LM_CS_LONG_NMTypeShape" />
+      <xsd:element minOccurs="0" name="DESCR" type="DESCRTypeShape" />
+      <xsd:element minOccurs="0" name="LM_DM_LONG_NM" type="LM_DM_LONG_NMTypeShape" />
+      <xsd:element minOccurs="0" name="DESCR1" type="DESCR1TypeShape" />
+      <xsd:element minOccurs="0" name="LM_ACT_ID" type="LM_ACT_IDTypeShape" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LM_PERSON_IDTypeShape">
+    <xsd:simpleContent>
+      <xsd:extension base="LM_PERSON_IDTypeDef" />
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="LM_CRSE_CODETypeShape">
+    <xsd:simpleContent>
+      <xsd:extension base="LM_CRSE_CODETypeDef" />
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="LM_CS_LONG_NMTypeShape">
+    <xsd:simpleContent>
+      <xsd:extension base="LM_CS_LONG_NMTypeDef" />
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="DESCRTypeShape">
+    <xsd:simpleContent>
+      <xsd:extension base="DESCRTypeDef" />
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="LM_DM_LONG_NMTypeShape">
+    <xsd:simpleContent>
+      <xsd:extension base="LM_DM_LONG_NMTypeDef" />
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="DESCR1TypeShape">
+    <xsd:simpleContent>
+      <xsd:extension base="DESCR1TypeDef" />
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="LM_ACT_IDTypeShape">
+    <xsd:simpleContent>
+      <xsd:extension base="LM_ACT_IDTypeDef" />
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="LM_PERSON_IDTypeDef">
+    <xsd:restriction base="xsd:int">
+      <xsd:totalDigits value="15" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="LM_CRSE_CODETypeDef">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="30" />
+      <xsd:whiteSpace value="preserve" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="LM_CS_LONG_NMTypeDef">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="200" />
+      <xsd:whiteSpace value="preserve" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DESCRTypeDef">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="30" />
+      <xsd:whiteSpace value="preserve" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="LM_DM_LONG_NMTypeDef">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="200" />
+      <xsd:whiteSpace value="preserve" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DESCR1TypeDef">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength value="30" />
+      <xsd:whiteSpace value="preserve" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="LM_ACT_IDTypeDef">
+    <xsd:restriction base="xsd:int">
+      <xsd:totalDigits value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

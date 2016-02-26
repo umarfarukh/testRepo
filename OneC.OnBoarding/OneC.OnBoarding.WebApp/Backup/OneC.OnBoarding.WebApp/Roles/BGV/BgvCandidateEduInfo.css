@@ -1,0 +1,24 @@
+﻿@import url("../../Styles/jquery-ui-1.8.16.custom.css");
+@import url("../../Styles/jquery.alerts.css");
+@import url("../../Styles/Calender.Css");
+@import url("../../Styles/jquery.ui.datepicker.css");
+@import url("BGVStyle.css");
+
+.edu_info_content{display: block; width: 970px; height: 500px;}
+.cst_checkbox_container input[type=checkbox]{display: none;}
+.ui-datepicker .ui-datepicker-buttonpane BUTTON.ui-datepicker-current{display:none;}
+.ui-datepicker {font-size:12px; width:150px;}  
+.ui-datepicker-trigger {margin:1px 0 0 -23px;}
+.ui-datepicker TABLE {font-size:0.73em}
+.dropdown {background-color: #ffffff; border: 1px solid #5f8296;height: 22px;width: 200px;float: left;}
+.nhdropdown {background-color: #ffffff; border: 1px solid #5f8296;height: 22px;width: 200px;float: left;}
+.ui-datepicker-title{width:110px;}
+.edu_info_content #qualify_div #qualification li {
+    text-align:  center;	
+    } 
+.edu_info_content #qualify_div #qualification li label {
+    margin-top : 3px;	
+    }
+   .wrapper_docs{ float: left; overflow-y: auto; margin-bottom:10px; height:410px; width:960px;}
+   
+.otherDiv{float:right;}

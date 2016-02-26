@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Drug Screening Test</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/Philippines/DrugScreening.js" type="text/javascript"></script>
+   
+
+    <style type="text/css">
+    .textareaMCA
+    {
+      height:40px;
+	width:168px;
+	border:1px solid #000;
+	float:right;
+	padding:0;
+	margin:0;
+        }
+        
+     
+       
+             .personalDataForm .personalDetails LI BUTTON.ui-datepicker-trigger
+            {
+                 float: left;
+                 margin-left:0px;
+            }
+             .personalDataForm .personalDetails LI .Param_Check
+            {
+                 float: left;
+                 margin-left:0px;
+            }
+           .alert_f
+            {
+           float:left;
+           margin:6px;
+           width:13px;          
+           height:12px;
+           }
+          .alert_f_text{
+            text-align:left;
+           
+            height:20px;
+            margin-left:-480px;
+            margin-right:0px;
+            padding:22px 110px 0px 0px;
+            }
+            
+    </style>
+</head>
+<body oncontextmenu="return false;">
+ <div id='baseContent'>
+           <div id="pageMain" class="equipmentForm">
+             <div id='headerContent'>
+                    <div id="pagingControls">
+                    </div>
+                </div>
+             <div id='PageContent' class='pagesContainer DS_Phil personalDataForm'>
+                    <div class="pageData">
+                        <div class="pageContent">
+                            <div class="pageDetails">
+                                <div class="pageHeader">
+                                         <p>DRUG SCREENING TEST</p>
+                                </div>
+                         <ul class="personalDetails">
+                              
+                                 <li style="width:25%;"><label>Medical Center<span>*</span>:</label></li>
+                                 <li class="tdwidth"><input type="text" id="DS_MC_txtbx" class="tbForm textMandatory" title="Medical Center" jqxb-datasource="FormDetails" jqxb-datamember="DrugScreening.MedicalCenter"  style="float:left;" /></li>
+                                 <li style="width:25%;"><label id="MCA_lbl">Medical Center Address:</label></li>
+                                 <li><textarea id="DS_MCA_txtarea" class="textareaMCA" allowchar="150" onkeydown="RestrictCharCount(this.id,150)" title="Medical Center Address" style="float:left;" jqxb-datasource="FormDetails" jqxb-datamember="DrugScreening.MedicalCenterAddress" ></textarea></li>
+                                 <li>&emsp;</li> <li>&emsp;</li>
+                                 <li style="width:25%;"><label id="Label2">Parameters<span style="color:Red;">*</span>:</label></li>
+                                 <li style="height:105px;"><input type="checkbox" id="DS_Amphetamine_chkbx" jqxb-datasource="FormDetails" jqxb-datamember="DrugScreening.PAmphetamine" jqxb-bindedattribute="checked" class="Param_Check FormChkBx"   /><label>Amphetamine</label>
+                                    <input type="checkbox" id="DS_THC_chkbx" jqxb-datasource="FormDetails" jqxb-datamember="DrugScreening.PTHC" jqxb-bindedattribute="checked" style="float:left;margin-left:150px;" class="FormChkBx"   /><label>THC(Marijuana)</label><br /><br />
+                                    <input type="checkbox" id="DS_Methamphetamine_chkbx" jqxb-datasource="FormDetails" jqxb-datamember="DrugScreening.PMethamphetamine" jqxb-bindedattribute="checked" class="Param_Check FormChkBx"   /><label>Methamphetamine</label>
+                                    <input type="checkbox" id="DS_Cocine_chkbx" jqxb-datasource="FormDetails" jqxb-datamember="DrugScreening.PCocine" jqxb-bindedattribute="checked" style="float:left;margin-left:120px;"  class="FormChkBx"  /><label>Cocine</label><br /><br />
+                                    <input type="checkbox" id="DS_Opiate_chkbx" jqxb-datasource="FormDetails" jqxb-datamember="DrugScreening.POpiate" jqxb-bindedattribute="checked" class="Param_Check FormChkBx"   /><label>Opiate</label>
+                                    <input type="checkbox" id="DS_Morphine_chkbx" jqxb-datasource="FormDetails" jqxb-datamember="DrugScreening.PMorphine" jqxb-bindedattribute="checked" style="float:left;margin-left:194px;" class="FormChkBx"   /><label>Morphine</label><br /><br />
+                                    <input type="checkbox" id="DS_Codeine_chkbx" jqxb-datasource="FormDetails" jqxb-datamember="DrugScreening.PCodeine" jqxb-bindedattribute="checked" class="Param_Check FormChkBx"    /><label>Codeine</label>
+                                    <input type="checkbox" id="DS_Heroin_chkbx" jqxb-datasource="FormDetails" jqxb-datamember="DrugScreening.PHeroin" jqxb-bindedattribute="checked" style="float:left;margin-left:184px;" class="FormChkBx"   /><label>Heroin</label><br /><br />
+                                    <input type="checkbox" id="DS_Phencyclidine_chkbx" jqxb-datasource="FormDetails" jqxb-datamember="DrugScreening.PPCP" jqxb-bindedattribute="checked" class="Param_Check FormChkBx"   /><label>Phencyclidine(PCP)</label></li>
+                                <li>&emsp;</li>
+                                <li >&emsp;</li>
+                                <li>&emsp;</li><li>&emsp;</li><li>&emsp;</li>
+                                <li>&emsp;</li>
+                                
+                                <li style="width:25%;"><label>Exam Taken Date<span style="color:Red;">*</span>:</label></li>
+                                 <li class="MCA_box">
+                                     <input type="text" readonly="readonly" id="DS_ExamDate_txtbx" jqxb-datasource="FormDetails" jqxb-datamember="DrugScreening.TestTakenDate"  class="tbForm textMandatory date_field_from jqrydatepicker" title="Exam Taken Date"  style="float:left;margin-left:0px" /></li>
+                                    
+                                </ul>
+                              
+                             </div>
+                    </div>
+                    <div class="Signature" id="Sign_PageId_1">
+                    </div>
+                </div>
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+    <input type="hidden" runat="server" id="hdnMigrateCandidate" />
+</body>
+</html>
+
+

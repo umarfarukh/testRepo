@@ -1,0 +1,15 @@
+﻿@import url("../../Styles/jquery-ui-1.8.16.custom.css");
+@import url("../../Styles/jquery.alerts.css");
+@import url("../../Styles/Calender.Css");
+@import url("../../Styles/jquery.ui.datepicker.css");
+@import url("BGVStyle.css");
+
+.exp_info_body{width: 970px; height: 500px;}
+.ui-datepicker .ui-datepicker-buttonpane BUTTON.ui-datepicker-current{display:none;}
+.ui-datepicker-trigger {margin:1px 0 0 -23px;}
+.ui-datepicker TABLE {font-size:0.73em}
+.ui-datepicker-title{width:105px;}
+.ui-datepicker {font-size:12px; width:150px;}  
+.dropdown {background-color: #ffffff; border: 1px solid #5f8296;height: 22px;width: 200px;float: left;font-size:11px; font-family:Verdana,Geneva,sans-serif}
+#relevantExp{background: #f0f0f0; padding-right: 5px;}
+

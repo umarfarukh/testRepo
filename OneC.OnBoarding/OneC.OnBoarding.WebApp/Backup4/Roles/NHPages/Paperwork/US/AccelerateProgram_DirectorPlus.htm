@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AccelerateProgram DirectorPlus Form</title>
+    <script src="../../../../Scripts/JQuery/1.8/jquery.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/US/AccelerateProgram_DirectorPlus.js" type="text/javascript"></script>
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <style type="text/css">
+        .pageDetails .personalDetails li
+        {
+            border-bottom: 1px solid #d4e7ef;
+            border-left: 1px solid #d4e7ef;
+            padding-top: 2px;
+            padding-left: 21px;
+            width: 47%;
+        }
+        .pageDetails .personalDetails li.second
+        {
+            border-right: 1px solid #d4e7ef;
+            padding-left: 22px;
+        }
+        .inputText_Readonly
+        {
+            background-color: InactiveCaptionText;
+            font-size: 15px;
+            padding: 3px 5px 2px;
+            border: 1px solid #ccc !important;
+            background: #f0f0f0;
+            color: #888 !important;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id='pageMain'>
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class="pagesContainer">
+                <!--Start of 1st page-->
+                <!-- <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                        </div>
+                    </div>
+                </div>-->
+                <!--End of 1st page-->
+                <!--Start of 2nd page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <ul class="personalDetails" style="margin-bottom: 10px;">
+                                <div class="pageHeader">
+                                    <p>
+                                        <strong><span style="color: Red">*</span> Please complete the following:</strong></p>
+                                </div>
+                                <br />
+                                <div style="margin-left: 10px; margin-top: -10px;">
+                                    <li>
+                                        <label for="Name" class="notMandatory">
+                                            AssociateID</label>&nbsp; </li>
+                                    <li class="second">
+                                        <input class="inputText_Readonly" unselectable="on" type="text" style="border: 1px solid #000"
+                                            id="Pg_2_text_AssociateID" />
+                                    </li>
+                                    <li>
+                                        <label for="Name" class="notMandatory">
+                                            Associate First Name</label>&nbsp; </li>
+                                    <li class="second">
+                                        <input class="inputText_Readonly" unselectable="on" type="text" style="border: 1px solid #000"
+                                            id="Pg_2_text_FirstName" /></li>
+                                    <li>
+                                        <label for="Name" class="notMandatory">
+                                            Associate Last Name</label>&nbsp; </li>
+                                    <li class="second">
+                                        <input class="inputText_Readonly" unselectable="on" type="text" style="border: 1px solid #000"
+                                            id="Pg_2_text_LastName" /></li>
+                                    <li>
+                                        <label for="Name" class="textMandatory">
+                                            <span style="color: Red">*</span>Date of Joining</label>&nbsp; </li>
+                                    <li class="second">
+                                        <input class="inputText_Readonly" unselectable="on" type="text" style="border: 1px solid #000"
+                                            id="Pg_2_text_DateOfJoining" /></li>
+                                    <li>
+                                        <label for="Name" class="textMandatory">
+                                            <span style="color: Red">*</span>Business Unit:</label>&nbsp; </li>
+                                    <li class="second">
+                                        <input type="text" style="border: 1px solid #000; width: 179px;" id="Pg_1_text_BusinessUnit"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="AccelerateDirectorplusForm.BusinessUnit"
+                                            maxlength="45" /></li>
+                                    <li>
+                                        <label for="Name" class="textMandatory">
+                                            <span style="color: Red">*</span>Work Location:</label>&nbsp; </li>
+                                    <li class="second">
+                                        <input type="text" style="border: 1px solid #000; width: 179px;" id="Pg_1_text_Location"
+                                            jqxb-datasource="FormDetails" jqxb-datamember="AccelerateDirectorplusForm.WorkLocation"
+                                            maxlength="30" /></li>
+                                </div>
+                            </ul>
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        <strong><span style="color: Red">*</span>Please select the session you would like to
+                                            attend before the Cut-off date:</strong></p>
+                                </div>
+                                <li style="margin-left: 10px; margin-top: 0px; width: 95%; border-right: 1px solid #d4e7ef;
+                                    padding-right: 5px;">
+                                    <input type="radio" name="unbound" id="Pg_2_radio_click" style="padding-top: 5px;" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--End of 2nd page-->
+                <!--Start of 3rd page-->
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                        </div>
+                    </div>
+                </div>
+                <!--End of 3rd page-->
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

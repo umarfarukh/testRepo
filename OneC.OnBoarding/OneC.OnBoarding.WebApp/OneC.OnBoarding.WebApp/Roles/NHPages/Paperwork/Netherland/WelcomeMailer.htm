@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Welcome Mailer</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        $().ready(function () {
+            $("#Pg_1_lbl_Name").text(TaskPrefillValues.PrefillValues.Set1.Name);
+            OBPager.ShowPage(1);
+        });
+        function SaveTaskData(saveMode) { closeIt(); }
+        function ResetTaskData() { }
+    </script>
+</head>
+<body>
+    <div id="baseContent">
+        <div id="pageMain">
+            <div id="headerContent">
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer'>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <p class="pageText" style="text-align: justify">
+                            Dear  <label id="Pg_1_lbl_Name">
+                                </label></p>
+                             <p class="pageText" style="text-align: justify">
+                             On behalf of the Talent Management Team we would like to welcome you to Cognizant. </p>
+                              <p class="pageText" style="text-align: justify">
+                             There are a few initial activities you need to ensure you have completed. This also contains few 
+                             links to application and documents that will need go through in the first few days with CTS. </p> 
+                             <p style="font-weight: bold;" class="pageText">Bank Details
+                             </p>
+                             <ul class="pageText" style="list-style: disc; margin-left: 30px">
+                             <li>Bank Details : Please login to <a href="https://Peoplesoft.Cognizant.com">PeopleSoft HCM</a> and verify/update the bank details. 
+                             This bank detail will be used for processing salary. All changes that is done in the system on or 
+                             before 13th of the months will be taken for the current payroll cycle & the update done after that 
+                             will be considered from the subsequent months payroll processing. </li>
+                             <li>Bank Details for Expense report:Please login to <a href="https://Peoplesoft.Cognizant.com">PeopleSoft ESA </a>
+                             and update bank details for processing the expense report.   </li></ul>
+                             <p style="font-weight: bold;" class="pageText">Contact Details</p>
+                              <ul class="pageText" style="list-style: disc; margin-left: 30px">
+                              <li>Please validate your personal detail <a href="https://Peoplesoft.Cognizant.com"> PeopleSoft HCM</a>
+                              </li>
+                              <li>The Personal information provided in Outlook Properties flows in from PeopleSoft HCM. 
+                              So please ensure that PeopleSoft HCM is update </li>
+                              </ul>
+                              <p style="font-weight: bold;" class="pageText">
+                              Payslip</p>
+                              <ul class="pageText" style="list-style: disc; margin-left: 30px">
+                             <li>For getting your monthly payslip & tax statements please login to <a href="https://epay.Cognizant.com">Epay.Cognizant.Com</a>
+                             </li></ul>
+                             <p style="font-weight: bold;" class="pageText">
+                             Policy that is applicable to your country  </p>
+                             <ul class="pageText" style="list-style: disc; margin-left: 30px">
+                             <li>Please login to the <a href="https://groups.cognizant.com/corporate/hr/europe/default.apsx">C-World</a> to view the policy on Travel & Expense, Leave Policy etc.
+                             </li></ul>
+                             <p class="pageText" style="text-align: justify">
+                             Peopleline is a remedy based system for questions you may have regarding HR, Immigration, Payroll and 
+                             Finance.  This can be accessed at the following link <a href="https://Peopleline.Cognizant.com">Peopleline.Cognizant.com</a></p>
+                             <p class="pageText" style="text-align: justify">
+                             Eletterbox is an application that facilitates  the generation and issuing of various HR service letters 
+                             such as Bank Reference letters, employment reference letters, etc. Please use the following link for 
+                             the same:<a href="https://eletterbox.cognizant.com">Eletterbox.Cognizant.com</a></p>
+                             <p style="font-weight: bold;" class="pageText">Hardware Network Service & support </p>
+                             <p class="pageText" style="text-align: justify">
+                             The GSD service is available on a 24/7. You can reach the GSD team 
+                             <br />
+                              Raise a ticket at https:\\gsd.cognizant.com<br /></p>
+                               <ul class="pageText" style="list-style: disc; margin-left: 30px">
+                             <li>Just dial the following number from your respective countries</li></ul>
+                             <p class="pageText" style="text-align: justify; margin-left: 45px">
+                             Belgium +32‐220‐088‐03<br />
+                             Czech +42‐023‐901‐6378<br />
+                             Hungary +36‐177‐892‐20<br />
+                             Finland +35‐897‐251‐9573<br />
+                             Sweden +46‐851‐761‐923<br />
+                             Germany +49‐693‐807‐89258<br />
+                             Swiss +41‐227‐614‐081<br />
+                             France +33‐157‐324‐265<br />
+                             Denmark +45‐384‐877‐70<br />
+                             Netherland +31‐202‐035‐229<br /></p>
+                             <p style="font-weight: bold;" class="pageText">Conference Bridge</p>
+                             <ul class="pageText" style="list-style: disc; margin-left: 30px">
+                             <li>
+                             To setup a Video Conference you can login to OneCognizant and search for Meeting Concierge under Apps 
+                             store or you can write to Video Help Desk (Cognizant)</li>
+                             <li>To get a dedicated Audio bridge raise a request under Intercall. 
+                             Please take necessary approval before you raise the request.  
+                             </li></ul>
+                              <p class="pageText" style="text-align: justify">
+                             Please contact your Talent Manager for any clarifications you might have. Good Luck in your new role.
+                             </p>
+
+                             <p class="pageText" style="text-align: justify">Best Regards,<br />
+                             Talent Management Team.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <!--  <div id="footerContent">
+            </div>-->
+        </div>
+    </div>
+</body>
+</html>

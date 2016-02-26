@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Back Papers</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <link href="BGVBackPapers.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="doc_back_paper" style="display: block;">
+        <div id="exp_info_inner_content">
+            <div class="width98 bgColor">
+                <label>
+                    Back Papers</label></div>
+            <ul style="width: 500px;" id="backpaperList">
+            </ul>
+            <div class="width98 bgColor">
+                <label>
+                    Mandatory & Identiy Documents</label></div>
+            <ul style="width: 500px; overflow-y: scroll;" id="manDocList">
+            </ul>
+        </div>
+        <div id="bg_nogo">
+            <div class="width98 bgColor">
+                <label>
+                    Back Papers No Go</label></div>
+            <div>
+                <textarea rows="20" cols="10" id="bgnogo_comments" maxlength="240"></textarea>
+            </div>
+            <div>
+                <input class="_send" value="Send Mail" type="button" />
+            </div>
+        </div>
+        <div id="chks_info_inner_content">
+            <div class="width97 bgColor">
+                <label>
+                    Checks to Initiate</label></div>
+            <ul style="width: 332px;" id="checkList">
+            </ul>
+        </div>
+    </div>
+    <div id="btns_div">
+        <input type="button" class="" id="navigateToNxtPage" style="width: 150px; float: right;
+            margin: 10px 0px 0 20px; border-radius: 2px; display: none;" value="Save and Proceed Next" />
+        <div class="suspectMail" />
+    </div>
+    <div id="divBgvNoticeBar">
+    </div>
+</body>
+<script src="../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+<script src="../../Scripts/Forms/CoreScripts/JSON.js" type="text/javascript"></script>
+<script src="../../Scripts/Forms/CoreScripts/UploadUtility.js" type="text/javascript"></script>
+<script src="BGVBackPapers.js" type="text/javascript"></script>
+<script src="../../Scripts/SendMail.js" type="text/javascript"></script>
+</html>

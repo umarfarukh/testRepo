@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>State W4 Form</title>
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/jQXB.1.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/JSON.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/US/StateW4Form.js" type="text/javascript"></script>
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/BlueThemeGov.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <!--<script src="../../../../Scripts/JQuery/jquery.alerts.js" type="text/javascript"></script>-->
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <!--<script language="javascript" type="text/javascript">
+        window.onbeforeunload = closeIt;
+        function closeIt() {
+            //self.parent.location.reload();
+
+            // disablePopup();
+            window.parent.opener.disablePopup();
+            window.close();
+            window.opener.updateWithNewData();
+
+
+        }
+        function disablePopup() {
+            //disables popup only if it is enabled
+
+            $("#overLay").hide();
+            $(".popupContactwrapper").hide();
+            popupStatus = 0;
+
+        }
+    </script>-->
+    <style type="text/css">
+        .divTable
+        {
+            display: table;
+            width: auto;
+            background-color: #eee;
+            border: 1px solid #666666;
+            border-spacing: 5px; /*cellspacing:poor IE support for  this*/ /* border-collapse:separate;*/
+        }
+        .divRow
+        {
+            display: table-row;
+            width: auto;
+        }
+        .divCell
+        {
+            float: left; /*fix for  buggy browsers*/
+            display: table-column;
+            width: 200px;
+            background-color: #ccc;
+            height: 25px;
+        }
+        .state
+        {
+            width: 19%;
+            height: 43px;
+            float: left;
+            font-size: 13px;
+            color: #4a4a4a;
+            padding: 5px 1px 0 8px;
+            margin-left: 10px;
+            border-left: 1px solid #d4e7ef;
+            border-bottom: 1px solid #d4e7ef;
+        }
+        .state a
+        {
+            padding-left: 4px;
+        }
+        .Remarks
+        {
+            width: 76.5%;
+            height: 43px;
+            float: left;
+            color: #4a4a4a;
+            font-size: 13px;
+            padding-top: 5px;
+            padding-left: 5px;
+            border-left: 1px solid #d4e7ef;
+            border-right: 1px solid #d4e7ef;
+            border-bottom: 1px solid #d4e7ef;
+        }
+        .pageContent .pageHeader p
+        {
+            color: #3f678f;
+            font-weight: bold;
+            font-size: 1.4em;
+            font-family: "Trebuchet MS" ,Verdana, Arial, Helvetica, sans-serif;
+            padding: 10px 0 0 5px;
+        }
+        .pagesDetails
+        {
+            margin: 0 0 0 10px;
+            width: 880px;
+            padding: 10px;
+            border: 1px #d4e7ef solid;
+            background-color: #FFF;
+            text-decoration: none;
+            display: inline;
+            float: left;
+            overflow: hidden;
+        }
+    </style>
+    <script type='text/javascript'>        function showFileSize() { var input, file; if (typeof window.FileReader !== 'function') { bodyAppend("p", "The file API isn't supported on this browser yet."); return; } input = document.getElementById('fileinput'); if (!input) { bodyAppend("p", "Um, couldn't find the fileinput element."); } else if (!input.files) { bodyAppend("p", "This browser doesn't seem to support the `files` property of file inputs."); } else if (!input.files[0]) { bodyAppend("p", "Please select a file before clicking 'Load'"); } else { file = input.files[0]; bodyAppend("p", "File " + file.name + " is " + file.size + " bytes in size"); } } function bodyAppend(tagName, innerHTML) { var elm; elm = document.createElement(tagName); elm.innerHTML = innerHTML; document.body.appendChild(elm); } </script>
+</head>
+<body>
+    <div id='pageMain'>
+        <div id='headerContent'>
+            <div id="pagingControls">
+            </div>
+        </div>
+        <div id='PageContent' class='pagesContainer'>
+            <div class="pageData">
+                <div class="pageContent">
+                    <div class="page_header">
+                        <!--       <img src="../Images/logo_ctsonboardingform.jpg" alt="cts" class="logo flt_left" />-->
+                    </div>
+                    <br />
+                    <div class="pagesDetails">
+                        <p class="pageText">
+                            At this time, we are not able to accept online submissions of State Tax Forms. In
+                            order to submit your State Tax form,Please upload here or forward original ink signed
+                            state tax form to your recruiting coordinator along with your original offer letter.
+                        </p>
+                        <p class="pageText">
+                            We are working to enhance this capability in a future release of OneCognizant.
+                        </p>
+                        <p class="pageText">
+                            Please refer to the detailed state list below to determine if you are required to
+                            submit a state tax form. If required, please upload the relevant state tax form.
+                            Please contact your Recruiting Coordinator if you have any issues uploading the
+                            form.
+                        </p>
+                        <p class="pageText" style="font-weight: bold">
+                            Attach File Here</p>
+                        <div>
+                            <p class="pageText">
+                                <input type="file" size="20" id="Pg_1_text_FileUploadtext" style="border: 1px solid #000;
+                                    width: 262px;" />
+                                <input type="button" id="Pg_1_button_Upload" value="Click here to Upload Your File"
+                                    onclick="UploadFormDetails(0)" />
+                            </p>
+                        </div>
+                        <p style="color: Red; margin-left: 20px;">
+                            Note : Maximum Upload limit is 2 MB
+                        </p>
+                        <div id="messageContent" style="font-size: medium; border: 1px solid #d4e7ef; display: none;
+                            width: 450px; height: 40px; margin-left: 20px;">
+                            <p id="message" style="margin: 10px 0 0 10px; width: 60%">
+                            </p>
+                            <input type="button" id="delete" value="Delete" onclick="UploadFormDetails(1)" style="background: url(../../../../Images/btn.png);
+                                font-size: 14px; float: right; margin-top: -15px; margin-right: 20px;" />
+                        </div>
+                        <div>
+                            <ul class="personalDetails">
+                                <div style="width: 100%">
+                                    <ul>
+                                        <li class="pageHeader" style="width: 20%; padding-left: -15px; float: left; margin-right: 0">
+                                            <p>
+                                                State
+                                            </p>
+                                        </li>
+                                        <li class="pageHeader" style="width: 77%; padding-right: 0; margin-left: -1px; float: left;">
+                                            <p>
+                                                Remarks
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <li class="state"><a href="http://www.revenue.alabama.gov/Withholding/FA4(12_09).pdf"
+                                    target="_blank">Alabama</a></li><li class="Remarks">State form must be completed.</li>
+                                <li class="state"><a target="_blank">Alaska</a></li><li class="Remarks">No personal
+                                    income tax withheld for this state.</li>
+                                <li class="state"><a href="http://www.azdor.gov/LinkClick.aspx?fileticket=nPHLtG7R1YY%3d&amp;tabid=265&amp;mid=921"
+                                    target="_blank">Arizona</a></li><li class="Remarks">State form must be completed.</li>
+                                <li class="state"><a href="http://www.state.ar.us/dfa/income_tax/documents/AR4EC.pdf"
+                                    target="_blank">Arkansas</a></li><li class="Remarks">State form may be completed by
+                                        each employee, to determine the appropriate level of state income tax to withhold
+                                        from earnings, or the federal form can be substituted for state purposes.</li>
+                                <li class="state"><a href="http://www.edd.ca.gov/pdf_pub_ctr/de4.pdf" target="_blank">
+                                    California</a></li><li class="Remarks">State form may be completed by each employee,
+                                        to determine the appropriate level of state income tax to withhold from earnings,
+                                        or the federal form can be substituted for state purposes in some circumstances.</li>
+                                <li class="state"><a target="_blank">Colorado</a></li><li class="Remarks">;Federal W-4
+                                    form should be used for state and&#160; federal withholdings.</li>
+                                <li class="state"><a href="http://www.ct.gov/drs/lib/drs/forms/2009withholding/ct-w4.pdf"
+                                    target="_blank">Connecticut</a></li><li class="Remarks">State form must be completed.</li>
+                                <li class="state"><a href="http://otr.cfo.dc.gov/otr/frames.asp?doc=/otr/lib/otr/tax/forms/D-4.pdf"
+                                    target="_blank">District of Columbia</a></li><li class="Remarks">State form must be
+                                        completed. If employee does not complete a State income tax withholding form, State
+                                        income tax will be withheld based on &quot;single&quot; marital status with zero
+                                        withholding allowances. This is the highest withholding rate.</li>
+                                <li class="state"><a target="_blank">Delaware</a></li><li class="Remarks">Federal W-4
+                                    form should be used for state and&#160; federal withholdings.</li>
+                                <li class="state"><a target="_blank">Florida</a></li><li class="Remarks">No personal
+                                    income tax withheld for this state.</li>
+                                <li class="state"><a href="http://dor.georgia.gov/sites/dor.georgia.gov/files/related_files/document/TSD/Form/TSD_Employees_Withholding_Allowance_Certificate_G4_1.pdf"
+                                    target="_blank">Georgia</a></li><li class="Remarks">State form must be completed.</li>
+                                <li class="state"><a href="http://www.state.hi.us/tax/current/hw4.pdf" target="_blank">
+                                    Hawaii</a></li><li class="Remarks">State form must be completed.&#160; If employee does
+                                        not complete a State income tax withholding form, State income tax will be withheld
+                                        based on &#39;single&#39; marital status with zero withholding allowances. This
+                                        is the highest withholding rate.</li>
+                                <li class="state"><a href="http://www.irs.gov/pub/irs-pdf/fw4.pdf" target="_blank">Idaho</a></li><li
+                                    class="Remarks">Federal W-4 form should be used for state and&#160; federal withholdings.</li>
+                                <li class="state"><a href="http://tax.illinois.gov/taxforms../Withholding/2014/IL-W-4.pdf"
+                                    target="_blank">Illinois</a></li><li class="Remarks">State form must be completed.</li>
+                                <li class="state"><a href="https://forms.in.gov/Download.aspx?id=2702" target="_blank">
+                                    Indiana</a></li><li class="Remarks">State form must be completed.&#160; If employee
+                                        does not complete a State income tax withholding form, State income tax will be
+                                        withheld based on &quot;single&quot; marital status with zero withholding allowances.
+                                        This is the highest withholding rate.</li>
+                                <li class="state"><a href="http://www.iowa.gov/tax/forms/44019.pdf" target="_blank">
+                                    Iowa</a></li><li class="Remarks">State form must be completed.&#160; If employee does
+                                        not complete a State income tax withholding form, State income tax will be withheld
+                                        based on &quot;single&quot; marital status with zero withholding allowances. This
+                                        is the highest withholding rate.</li>
+                                <li class="state"><a href="http://www.ksrevenue.org/pdf/forms/k-4.pdf" target="_blank">
+                                    Kansas</a></li><li class="Remarks">State form must be completed.&#160; If employee does
+                                        not complete a State income tax withholding form, State income tax will be withheld
+                                        based on &quot;single&quot; marital status with zero withholding allowances. This
+                                        is the highest withholding rate.</li>
+                                <li class="state"><a href="http://revenue.ky.gov/NR/rdonlyres/690434A9-D933-4F06-8228-6C70D441A8E0/0/42A8041109_web.pdf"
+                                    target="_blank">Kentucky</a></li><li class="Remarks">State form must be completed.&#160;
+                                        If employee does not complete a State income tax withholding form, State income
+                                        tax will be withheld based on &quot;single&quot; marital status with zero withholding
+                                        allowances. This is the highest withholding rate.</li>
+                                <li class="state"><a href="http://revenue.louisiana.gov/forms/taxforms/1300(10_08)F.pdf"
+                                    target="_blank">Louisiana</a></li><li class="Remarks">State form must be completed.&#160;
+                                        If employee does not complete a State income tax withholding form, State income
+                                        tax will be withheld based on &quot;single&quot; marital status with zero withholding
+                                        allowances. This is the highest withholding rate.</li>
+                                <li class="state"><a href="http://maine.gov/revenue/forms/with/2010/w4me_10.pdf"
+                                    target="_blank">Maine</a></li><li class="Remarks">State form may be completed by each
+                                        employee, to determine the appropriate level of state income tax to withhold from
+                                        earnings, or the federal form can be substituted for state purposes.</li>
+                                <li class="state"><a href="http://forms.marylandtaxes.com/current_forms/MW507.pdf"
+                                    target="_blank">Maryland</a></li><li class="Remarks">State form must be completed.&#160;
+                                        If employee does not complete a State income tax withholding form, State income
+                                        tax will be withheld based on &quot;single&quot; marital status with zero withholding
+                                        allowances. This is the highest withholding rate.</li>
+                                <li class="state"><a href="http://www.mass.gov/Ador/docs/dor/Forms/Wage_Rpt/PDFs/m_4.pdf"
+                                    target="_blank">Massachusetts</a></li><li class="Remarks">State form may be completed
+                                        by each employee, to determine the appropriate level of state income tax to withhold
+                                        from earnings, or the federal form can be substituted for state purposes in some
+                                        circumstances.</li>
+                                <li class="state"><a href="http://www.michigan.gov/documents/mw4f_76761_7.pdf" target="_blank">
+                                    Michigan</a></li><li class="Remarks">State form must be completed.&#160; If employee
+                                        does not complete a State income tax withholding form, State income tax will be
+                                        withheld based on &quot;single&quot; marital status with zero withholding allowances.
+                                        This is the highest withholding rate.</li>
+                                <li class="state"><a href="http://www.irs.gov/pub/irs-pdf/fw4.pdf" target="_blank">Minnesota</a></li><li
+                                    class="Remarks">Federal W-4 form should be used for state and&#160; federal withholdings.</li>
+                                <li class="state"><a href="http://www.mstc.state.ms.us/Taxareas/withhold/89-350001.pdf"
+                                    target="_blank">Mississippi</a></li><li class="Remarks">State form must be completed.</li>
+                                <li class="state"><a href="http://dor.mo.gov/tax/business/withhold/forms/2009/mow4f.pdf"
+                                    target="_blank">Missouri</a></li><li class="Remarks">State form must be completed.&#160;
+                                        If employee does not complete a State income tax withholding form, State income
+                                        tax will be withheld based on &quot;single&quot; marital status with zero withholding
+                                        allowances. This is the highest withholding rate.</li>
+                                <li class="state"><a target="_blank">Montana</a></li><li class="Remarks">Federal W-4
+                                    form should be used for state and&#160; federal withholdings.</li>
+                                <li class="state"><a target="_blank">Nebraska</a></li><li class="Remarks">Federal W-4
+                                    form should be used for state and&#160; federal withholdings.</li>
+                                <li class="state"><a target="_blank">Nevada</a></li><li class="Remarks">No personal
+                                    income tax withheld for this state.</li>
+                                <li class="state"><a target="_blank">New Hampshire</a></li><li class="Remarks">No personal
+                                    income tax withheld for this state.</li>
+                                <li class="state"><a href="http://www.state.nj.us/treasury/taxation/pdf/other_forms/git-er/njw4.pdf"
+                                    target="_blank">New Jersey</a></li><li class="Remarks">State form may be completed by
+                                        each employee, to determine the appropriate level of state income tax to withhold
+                                        from earnings, or the federal form can be substituted for state purposes.</li>
+                                <li class="state"><a href="http://www.irs.gov/pub/irs-pdf/fw4.pdf" target="_blank">New
+                                    Mexico</a></li><li class="Remarks">Federal W-4 form should be used for state and&#160;
+                                        federal withholdings.</li>
+                                <li class="state"><a href="http://www.tax.ny.gov/pdf/2011/fillin/wt/it2104_511_fill_in.pdf"
+                                    target="_blank">New York</a></li><li class="Remarks">State form may be completed by
+                                        each employee, to determine the appropriate level of state income tax to withhold
+                                        from earnings, or the federal form can be substituted for state purposes.</li>
+                                <li class="state"><a href="http://www.dornc.com/downloads/nc-4.pdf" target="_blank">
+                                    North Carolina</a></li><li class="Remarks">State form must be completed.&#160; If employee
+                                        does not complete a State income tax withholding form, State income tax will be
+                                        withheld based on &quot;single&quot; marital status with zero withholding allowances.
+                                        This is the highest withholding rate.</li>
+                                <li class="state"><a target="_blank">North Dakota</a></li><li class="Remarks">Federal
+                                    W-4 form should be used for state and&#160; federal withholdings.</li>
+                                <li class="state"><a href="http://tax.ohio.gov/documents/forms/employer_withholding/2009/WTH_Instructions.pdf"
+                                    target="_blank">Ohio</a></li><li class="Remarks">State form must be completed.&#160;
+                                        If employee does not complete a State income tax withholding form, State income
+                                        tax will be withheld based on &quot;single&quot; marital status with zero withholding
+                                        allowances. This is the highest withholding rate.</li>
+                                <li class="state"><a target="_blank">Oklahoma</a></li><li class="Remarks">Federal W-4
+                                    form should be used for state and&#160; federal withholdings.</li>
+                                <li class="state"><a target="_blank">Oregon</a></li><li class="Remarks">Federal W-4
+                                    form should be used for state and&#160; federal withholdings.</li>
+                                <li class="state"><a href="http://www.revenue.state.pa.us/portal/server.pt/community/personal_income_tax/11409"
+                                    target="_blank">Pennsylvania</a></li><li class="Remarks">A flat 3.07 percent rate is
+                                        applied to determine the appropriate level of state withholding.</li>
+                                <li class="state"><a href="http://www.irs.gov/pub/irs-pdf/fw4.pdf" target="_blank">Rhode
+                                    Island</a></li><li class="Remarks">Federal W-4 form should be used for state and&#160;
+                                        federal withholdings.</li>
+                                <li class="state"><a target="_blank">South Carolina</a></li><li class="Remarks">Federal
+                                    W-4 form should be used for state and&#160; federal withholdings.</li>
+                                <li class="state"><a target="_blank">South Dakota</a></li><li class="Remarks">No personal
+                                    income tax withheld for this state.</li>
+                                <li class="state"><a target="_blank">Tennessee</a></li><li class="Remarks">No personal
+                                    income tax withheld for this state.</li>
+                                <li class="state"><a target="_blank">Texas</a></li><li class="Remarks">No personal income
+                                    tax withheld for this state.</li>
+                                <li class="state"><a target="_blank">Utah</a></li><li class="Remarks">Federal W-4 form
+                                    should be used for state and&#160; federal withholdings.</li>
+                                <li class="state"><a href="http://tax.vermont.gov/pdf.word.excel/forms/business/w4vt.pdf"
+                                    target="_blank">Vermont</a></li><li class="Remarks">State form may be completed by each
+                                        employee, to determine the appropriate level of state income tax to withhold from
+                                        earnings, or the federal form can be substituted for state purposes.</li>
+                                <li class="state"><a href="http://www.tax.virginia.gov/web_pdfs/busForms/va4.pdf"
+                                    target="_blank">Virginia</a></li><li class="Remarks">State form must be completed.</li>
+                                <li class="state"><a target="_blank">Washington</a></li><li class="Remarks">No personal
+                                    income tax withheld for this state.</li>
+                                <li class="state"><a href="http://www.state.wv.us/taxrev/forms/2009/it104.pdf" target="_blank">
+                                    West Virginia</a></li><li class="Remarks">State form must be completed.</li>
+                                <li class="state"><a href="http://www.revenue.wi.gov/forms/with/w-204f.pdf" target="_blank">
+                                    Wisconsin</a></li><li class="Remarks">State form may be completed by each employee,
+                                        to determine the appropriate level of state income tax to withhold from earnings,
+                                        or the federal form can be substituted for state purposes.</li>
+                                <li class="state"><a target="_blank">Wyoming</a> </li>
+                                <li class="Remarks">No personal income tax withheld for this state. </li>
+                            </ul>
+                        </div>
+                        <div style="clear: both; height: 5px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1090 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PF Declaration Form</title>
+    <link href="../../../../Styles/Forms/StandardForms.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/Forms/form.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../Styles/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../Scripts/JQuery/1.8/Jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/CoreScripts/OBPaging.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/India/PFDeclaration.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/Forms/FormsValidation.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/JQuery/1.8/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        table.myTable
+        {
+            border-collapse: collapse;
+        }
+        table.myTable td, table.myTable th
+        {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+    <style type="text/css">
+        .pd_india ul.personalDetails li.date_box LABEL.notMandatory
+        {
+            margin-right: 0;
+        }
+        .pd_india ul.personalDetails li.date_box
+        {
+            float: right;
+            margin-left: -190px;
+        }
+        
+        .pd_india ul.personalDetails li.Addres
+        {
+            width: 180px;
+        }
+        .pd_india ul.personalDetails li.PASSPORT_Validity button.ui-datepicker-trigger
+        {
+            margin-top: -20px;
+            margin-left: 170px;
+        }
+        .pd_india ul.personalDetails li.PFDate button.ui-datepicker-trigger
+        {
+            margin-right: 20px;
+            margin-left: 40px;
+            margin-top: -20px;
+        }
+        .pd_india ul.personalDetails li.PFStatus label.alert_f_text
+        {
+            float: right;
+            margin-top: -9px;
+            margin-right: 60px;
+        }
+        .pd_india ul.personalDetails li.PFDate label.alert_f_text
+        {
+            float: right;
+            margin-top: -10px;
+            margin-right: 50px;
+        }
+        .pd_india ul.personalDetails li.PFDate img.alert_f
+        {
+            margin-top: 0px;
+        }
+        .pd_india ul.personalDetails li.PlaceClass img.alert_f
+        {
+            margin-top: 0px;
+        }
+        .pd_india ul.personalDetails li.CountryIndia img.alert_f
+        {
+            margin-right: -25px;
+            margin-top: 0px;
+        }
+        img.alert_f
+        {
+            display: inline;
+            margin-right: 8px;
+            margin-left: 0px;
+            margin-top: -15px;
+            float: right;
+        }
+        label.alert_f_text
+        {
+            margin-left: -50px;
+            display: inline;
+            margin-right: 250px;
+            width: auto;
+        }
+        .pd_india ul.personalDetails li.PF_MEMBER_ID label.alert_f_text
+        {
+            width: auto;
+        }
+        .pd_india ul.personalDetails li.PFStatus label.alert_f_text
+        {
+            width: auto;
+        }
+        .pd_india ul.personalDetails li.PFStatus img.alert_f
+        {
+            margin-top: -30px;
+            margin-right: 58px;
+        }
+        .pd_india ul.personalDetails li.PFStatus div.PFhave img.alert_f
+        {
+            margin-right: 430px;
+            margin-top: -25px;
+        }
+        .pd_india ul.personalDetails li.PFStatus div.PFhave label.alert_f_text
+        {
+            float: right;
+            margin-right: 430px;
+            margin-top: 0px;
+        }
+        .pd_india ul.personalDetails li.PFStatus div.PFfundname img.alert_f
+        {
+            margin-top: -40px;
+            margin-right: 55px;
+        }
+        .pd_india ul.personalDetails li.PFStatus div.PFfundname label.alert_f_text
+        {
+            float: right;
+            margin-top: -20px;
+        }
+        .pd_india ul.personalDetails li.EducationClass img.alert_f
+        {
+            margin-right: 20px;
+            margin-top: 0px;
+        }
+        .pd_india ul.personalDetails li.KycDetails button.ui-datepicker-trigger 
+        {
+        margin-left: 170px;
+        }
+        /*       #Education.alert_f
+        {
+            margin-right: 170px;
+        }
+        #Education.alert_f_text
+        {
+            float: right; margin-right: 180px;
+        }*/
+    </style>
+</head>
+<body>
+    <div id='baseContent'>
+        <div id="pageMain">
+            <div id='headerContent'>
+                <div id="pagingControls">
+                </div>
+            </div>
+            <div id='PageContent' class='pagesContainer personalDataForm pd_india'>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <img src="../../../../Images/PFDeclarationIndia.jpg" alt="" />
+                            <div style="margin-top: -90px;">
+                                <p style="float: right; font-size: large; font: bold">
+                                    Form No. 11 (New)
+                                </p>
+                            </div>
+                            <br />
+                            <div style="margin-right: 150px;">
+                                <p style="font-size: large; float: right; margin-right: -150px; margin-top: 20px;">
+                                    Declaration Form</p>
+                            </div>
+                            <br />
+                            <div>
+                                <p style="float: right; margin-top: 35px; margin-right: -150px;">
+                                    (To be retained by the Employer for future reference)</p>
+                            </div>
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p style="text-align: center; font-size: large; font: bold">
+                                        Employees’ Provident Fund Organization</p>
+                                </div>
+                                <div>
+                                    <p style="text-align: center; font-size: 15px; font-weight: bold; margin-top: 15px;">
+                                        THE <span style="font-size: 16px;">E</span>MPLOYEES’ <span style="font-size: 16px;">
+                                            P</span>ROVIDENT <span style="font-size: 16px;">F</span>UNDS <span style="font-size: 16px;">
+                                                S</span>CHEME, <span style="font-size: 16px;">1952</span> (<span style="font-size: 16px;">P</span>ARAGRAPH-<span
+                                                    style="font-size: 16px;">34 & 57</span>)
+                                        <br />
+                                        &
+                                        <br />
+                                        THE EMPLOYEES’ PENSION SCHEME, 1995 (PARAGRAPH-24)</p>
+                                    <p style="text-align: center; font-weight: bold; font-size: 12px; text-decoration: underline;
+                                        margin-top: 15px;">
+                                        DECLARATION BY A PERSON TAKING UP EMPLOYMENT IN AN ESTABLISHMENT ON WHICH EMPLOYEES’
+                                        PROVIDENT FUND SCHEME,
+                                        <br />
+                                        <br />
+                                        1952 AND/OR EMPLOYEES’ PENSION SCHEME, 1995 IS APPLICABLE.</p>
+                                    <p style="text-align: center; font-size: small; font-weight: bold; margin-top: 15px;">
+                                        (PLEASE GO THROUGH THE INSTRUCTIONS)</p>
+                                </div>
+                                <br />
+                                <br />
+                                <li>
+                                    <label for="prefix_form" style="width: 50px; margin-right: 20px;">
+                                        <span></span>1)&nbsp;&nbsp;NAME
+                                    </label>
+                                    <select id="Prefix" class="tbForm dropdown" title="Prefix" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="PFDeclaration.Prefix" jqxb-listsource="PrefixList" jqxb-listvalue="ID"
+                                        jqxb-listtext="Description" disabled="disabled" style="width: auto; height: 20.2px;
+                                        margin-right: 0px; margin-left: 72px; float: left;">
+                                    </select>
+                                    <input type="text" id="Name" style="border-top-color: #000; border-right-color: #000;
+                                        border-bottom-color: #000; border-left-color: #000; border-top-width: 1px; border-right-width: 1px;
+                                        border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid;
+                                        border-bottom-style: solid; border-left-style: solid; margin-right: 0px;" readonly="readonly"
+                                        class="tbForm" title="First Name" jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.Name" /><!--readonly="readonly" style="color: #888 !important; margin-top: -3px;
+                                        margin-left: 5px; float: left; background-image: none; background-attachment: scroll;
+                                        background-repeat: repeat; background-position-x: 0%; background-position-y: 0%;
+                                        background-size: auto; background-origin: padding-box; background-clip: border-box;
+                                        background-color: rgb(240, 240, 240);"-->
+                                </li>
+                                <li></li>
+                                <li>
+                                    <label for="DOB" style="width: 137px; margin-right: 20px;">
+                                        <span></span>2)&nbsp;&nbsp;&nbsp;DATE OF BIRTH
+                                    </label>
+                                    <input type="text" id="DOB" readonly="readonly" style="margin-left: 43px; float: left;
+                                        margin-top: -3px;" class="tbForm" maxlength="30" title="DATE OF BIRTH" disabled="disabled"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.DOB" />
+                                </li>
+                                <li></li>
+                                <li style="width: 500px;">
+                                    <label for="father's name" style="width: 150px; margin-right: 20px;">
+                                        <span></span>3)&nbsp;&nbsp;&nbsp;FATHER’S NAME
+                                    </label>
+                                    <select id="PrefixFather" class="tbForm dropdown" title="Prefix" disabled="disabled"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.PrefixFather" jqxb-listsource="PrefixList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description" style="width: auto; height: 20.2px;
+                                        margin-top: -2px; margin-left: -28px; margin-right: 0px; float: left;">
+                                    </select>
+                                    <input type="text" id="Father_Name" readonly="readonly" style="width: 220px; margin-top: -3px;margin-left: 14px;
+                                        float: left; background-image: none; background-attachment: scroll; background-repeat: repeat;
+                                        background-position-x: 0%; background-position-y: 0%; background-size: auto;
+                                        background-origin: padding-box; background-clip: border-box; background-color: rgb(240, 240, 240);
+                                        margin-right: 0px;" class="tbForm" title="Father's Name" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="PFDeclaration.FatherName" />
+                                </li>
+                                <li>
+                                    <label for="prefix_form" style="width: 300px; font-size: 13px">
+                                        <span></span>4)&nbsp;&nbsp;&nbsp;RELATIONSHIP IN RESPECT OF (3) ABOVE
+                                    </label>
+                                    <select class="tbForm dropdown" id="Relation" disabled="disabled" name="Realation"
+                                        title="Relation" jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.FatherRelation"
+                                        jqxb-listsource="RelationshipList" jqxb-listvalue="ID" jqxb-listtext="Description"
+                                        style="width: 75px; float: left; margin-left: -3px; margin-top: -2px; height: 20.2px;
+                                        margin-right: 0px;">
+                                    </select>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <label for="gender" style="width: 150px; margin-right: 20px;">
+                                        <span></span>5)&nbsp;&nbsp;&nbsp;GENDER
+                                    </label>
+                                    <select class="tbForm dropdown" id="gender" name="Prefix" title="Prefix" disabled="disabled"
+                                        jqxb-datasource="FormDetails" title="Sex" jqxb-datamember="PFDeclaration.Gender"
+                                        jqxb-listsource="GenderList" jqxb-listvalue="UserValue" jqxb-listtext="Description"
+                                        style="width: 75px; height: 20.2px; margin-top: -2px; margin-left: 32px; float: left;
+                                        margin-right: 10px;">
+                                    </select>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <label for="prefix_form" style="width: 205px; margin-right: 20px;">
+                                        <span>*</span>6)&nbsp;&nbsp;&nbsp;MOBILE NUMBER (IF ANY)
+                                    </label>
+                                    <input type="text" id="Mobile" style="margin-right: 10px; margin-left: -17px; float: left;
+                                        margin-top: -3px;" class="tbForm textMandatory OnlyNumeric BgvSync" maxlength="10"
+                                        title="Mobile phone" jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.Mobile" />
+                                </li>
+                                <li></li>
+                                <li>
+                                    <label for="prefix_form" style="width: 168px; margin-right: 20px;">
+                                        <span>*</span>7)&nbsp;&nbsp;&nbsp;EMAIL ID (IF ANY)</label>
+                                    <input type="text" id="EmailId" style="margin-top: -3px; margin-right: 10px; margin-left: 14px;
+                                        float: left;" class="tbForm textMandatory BgvSync" maxlength="50" title="Email Id"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.EmailId" />
+                                        
+                                        
+                                </li>
+                                <li><label style="width: 410px; margin-left: -30px;">Personal email id for future communication from PF department</label></li>
+                                <li style="width: 800px;">
+                                    <label for="prefix_form" style="width: 650px; margin-right: 10px;">
+                                        <span>*</span>8)&nbsp;&nbsp;&nbsp;WHETHER EARLIER A MEMBER OF THE EMPLOYEES’ PROVIDENT
+                                        FUND SCHEME, 1952?</label>
+                                    <select class="tbForm PFdropdownClass dropdown" id="form_PFscheme" name="PF Scheme Y/N" jqxb-datasource="FormDetails"
+                                        title="PF Scheme Y/N" jqxb-datamember="PFDeclaration.EarlierPFscheme1952YesOrNo"
+                                        jqxb-listsource="YesOrNo" jqxb-listvalue="ID" jqxb-listtext="Description" style="width: 80px;
+                                        height: 20.2px; margin-left: 0px; float: right;">
+                                    </select>
+                                </li>
+                                <li style="width: 800px;">
+                                    <label for="prefix_form" style="width: 600px; margin-right: 10px;">
+                                        <span>*</span>9)&nbsp;&nbsp;&nbsp;WHETHER EARLIER A MEMBER OF THE EMPLOYEES’ PENSION
+                                        SCHEME, 1995 with EPFO?</label>
+                                    <select class="tbForm dropdown" id="form_Pension" name="Pension Y/N" jqxb-datasource="FormDetails"
+                                        title="Pension Y/N" jqxb-datamember="PFDeclaration.EarlierPension1995YesOrNo"
+                                        jqxb-listsource="YesOrNo" jqxb-listvalue="ID" jqxb-listtext="Description" style="width: 80px;
+                                        height: 20.2px; float: right;">
+                                    </select>
+                                </li>
+                                <li style="width: 800px;"><label for="prefix_form" style="width: 850px; margin-right: 10px;margin-left: 20px;">
+                                Select <span style="font-weight:bold;color:Black;">YES,</span> if you have an active previous membership of the Employees’ Pension Scheme, 1995 or currently hold a Scheme Certificate</label>
+                                </li>
+                                <li style="width: 800px;">
+                                    <label for="prefix_form" style="width: 800px; margin-right: 10px;">
+                                        IF RESPONSE TO ANY OR BOTH OF (8) & (9) ABOVE IS YES, THEN MANDATORILY FILL UP THE
+                                        PREVIOUS EMPLOYMENT DETAILS AT (10, 11&12):</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        A. PREVIOUS EMPLOYMENT DETAILS</p>
+                                </div>
+                                <br />
+                                <div class="PF_Number" style="height: 600px;">
+                                    <label style="width: 600px; font-size: 14px; margin-left: 30px;">
+                                        <span class="PFNoclass"></span>10) THE DETAILS OF THE UNIVERSAL ACCOUNT NUMBER (UAN)
+                                        OR ACTIVE PREVIOUS PF MEMBER ID with EPFO:</label>
+                                    <ul class="personalDetails">
+                                        <li id="UAN" style="font-size: 14px;">
+                                            <label for="UAN" style="margin-left: 15px; margin-right: -30px;">
+                                                <span class="PFNoclass" style="color: white;">*</span>UAN No</label>
+                                            <input type="text" id="UANNo" title="UAN No" class="tbForm OnlyNumeric" style="margin-right: 20px;"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.UANNo" onkeypress="RestrictCharCount(this.id,11)"
+                                                allowchar="12" maxlength="12" />
+                                        </li>
+                                        <li style="width: 120px;"><span class="NAPFclass">--Not Applicable</span></li>
+                                        <li class="PF_MEMBER_ID" id="PREVIOUS_PF_MEMBER_ID" style="width: 600px; font-size: 14px;
+                                            margin-left: 12px; height: 120px;">
+                                            <label for="PFMEMBER" style="margin-top: -1.99px; margin-right: 15px; margin-left: 0px;
+                                                width: 185px;">
+                                                <span class="PFNoclass">*</span> ACTIVE PREVIOUS PF <br /><span class="PFNoclass">&nbsp;&nbsp;</span>MEMBER ID with EPFO<br />
+                                            </label>
+                                            <table style="margin-left: 200px; height: 120px;" cellpadding="5%" cellspacing="5%">
+                                                <tr>
+                                                    <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                        REGION CODE
+                                                    </td>
+                                                    <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                        OFFICE CODE
+                                                    </td>
+                                                    <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                        ESTABLISHMENT ID
+                                                    </td>
+                                                    <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                        EXTENSION
+                                                    </td>
+                                                    <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                        ACCOUNT NUMBER
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                        <input type="text" id="form_PFno_RC" title="Regional Code" class="tbForm onlyAlp pfreionalcode"
+                                                            maxlength="2" style="width: 60px;" jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.LastPFNo_RC" />
+                                                    </td>
+                                                    <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                        <input type="text" id="form_PFno_OC" title="Office code" class="tbForm onlyAlp pfocode"
+                                                            maxlength="3" style="width: 60px;" jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.LastPFNo_OC" />
+                                                    </td>
+                                                    <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                        <input type="text" id="form_PFno_EI" title="Establishment ID" class="tbForm OnlyNumeric"
+                                                            maxlength="7" onblur="formatPFNum(form_PFno_EI);" style="width: 60px;" jqxb-datasource="FormDetails"
+                                                            jqxb-datamember="PFDeclaration.LastPFNo_EI" />
+                                                    </td>
+                                                    <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                        <input type="text" id="form_PFno_Ex" title="Extension" class="tbForm OnlyNumeric"
+                                                            maxlength="3" onblur="formatPFNum(form_PFno_Ex);" style="width: 60px;" jqxb-datasource="FormDetails"
+                                                            jqxb-datamember="PFDeclaration.LastPFNo_Ex" />
+                                                    </td>
+                                                    <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                        <input type="text" id="form_PFno_AN" title="Account Number" class="tbForm OnlyNumeric"
+                                                            maxlength="7" onblur="formatPFNum(form_PFno_AN);" style="width: 60px;" jqxb-datasource="FormDetails"
+                                                            jqxb-datamember="PFDeclaration.LastPFNo_AN" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!-- <input type="text" id="LastPFNo" title="Last PF No" class="tbForm" jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.LastPFNo"  style="margin-top: 0px; margin-right: 200px; margin-left: 0px;" />-->
+                                        </li>
+                                        <li style="width: 117px; margin-left: 90px;"><span class="NAPFclass">--Not Applicable</span></li>
+                                        <li style="margin-top: 0px; padding-right: 100px;">
+                                            <p style="font-size: 14px; font-style: italic; margin-top: 10px; margin-left: 230px;">
+                                                Sample format :
+                                                <br />
+                                                AA/AAA/9999999/999/9999999
+                                                <br />
+                                            </p>
+                                        </li>
+                                        <li class="PFStatus" style="width: 800px; height: 40px;margin-top: 5px;">
+                                            <label for="PreviousPFStatus" style="width: 200px;">
+                                                <span class="PFNoclass">*</span>10(A) Status of previous PF <span style="padding-right: 26px;">
+                                                </span>&nbsp;account
+                                            </label>
+                                            <div class="PFhave">
+                                                <p style="width: 10px; line-height: 30px; margin-top: 0px; margin-left: 210px;">
+                                                    I,
+                                                </p>
+                                                <select class="tbForm" id="PrevPFhave" name="Previous PF status" title="Previous PF status"
+                                                    style="width: 120px; margin-top: -25px; margin-right: 450px; margin-left: 0px;"
+                                                    jqxb-datasource="FormDetails" title="PreviousPFStatus" jqxb-datamember="PFDeclaration.EarlyPFNoHave"
+                                                    jqxb-listsource="EarlyPFNoHave" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                                </select>
+                                            </div>
+                                            <div class="PFfundname">
+                                                <p style="width: 200px; height: 43.92px; padding-left: 20px; margin-top: -25px; margin-right: 60px;
+                                                    margin-left: 355px;">
+                                                    withdrawn the amount of my
+                                                </p>
+                                                <select class="tbForm" id="PreviousPFStatus" name="Previous PF status" title="Status"
+                                                    style="width: 170px; margin-top: -46px; margin-right: 60px; margin-left: 0px;"
+                                                    jqxb-datasource="FormDetails" title="PreviousPFStatus" jqxb-datamember="PFDeclaration.EarlyPFNoYesOrNo"
+                                                    jqxb-listsource="EarlyPFNoStatus" jqxb-listvalue="ID" jqxb-listtext="Description">
+                                                </select>
+                                            </div>
+                                          
+                                        </li>
+                                        <li style="width: 120px; float: right; margin-top: -50px; margin-right: 0px;"><span
+                                            class="NAPFclass" style="">--Not Applicable</span></li>
+                                        <li id="list1" style="width: 600px; font-size: 14px; margin-top: 1px;">
+                                            <label for="PFMEMBER" style="width: 500px;">
+                                                <!--style="width: 219.99px;"-->
+                                                <span class="PFNoclass"></span>10(B) If your previous PF account is managed by a
+                                                PF trust
+                                                <br />
+                                            </label>
+                                            <ul class="personalDetails" style="width: 850px;">
+                                                <li id="PrevPFNo1" style="font-size: 14px;height:45px;">
+                                                    <label for="PFMEMBER" style="width: 209.99px;">
+                                                        Previous PF account No (in full)
+                                                        <br />
+                                                    </label>
+                                                    <table style="margin-left: 200px; height: 120px;" cellpadding="5%" cellspacing="5%">
+                                                        <tr>
+                                                            <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                                REGION CODE
+                                                            </td>
+                                                            <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                                OFFICE CODE
+                                                            </td>
+                                                            <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                                ESTABLISHMENT ID
+                                                            </td>
+                                                            <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                                EXTENSION
+                                                            </td>
+                                                            <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                                ACCOUNT NUMBER
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                                <input type="text" id="form_EarlyPFNo_RC" title="Regional Code" class="tbForm onlyAlp pfreionalcode"
+                                                                    maxlength="2" style="width: 60px;" jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.EarlyPFNo_RC" />
+                                                            </td>
+                                                            <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                                <input type="text" id="form_EarlyPFNo_OC" title="Office code" class="tbForm onlyAlp pfocode"
+                                                                    maxlength="3" style="width: 60px;" jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.EarlyPFNo_OC" />
+                                                            </td>
+                                                            <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                                <input type="text" id="form_EarlyPFNo_EI" title="Establishment ID" class="tbForm OnlyNumeric"
+                                                                    maxlength="7" onblur="formatPFNum(form_EarlyPFNo_EI);" style="width: 60px;" jqxb-datasource="FormDetails"
+                                                                    jqxb-datamember="PFDeclaration.EarlyPFNo_EI" />
+                                                            </td>
+                                                            <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                                <input type="text" id="form_EarlyPFNo_Ex" title="Extension" class="tbForm OnlyNumeric"
+                                                                    maxlength="3" onblur="formatPFNum(form_EarlyPFNo_Ex);" style="width: 60px;" jqxb-datasource="FormDetails"
+                                                                    jqxb-datamember="PFDeclaration.EarlyPFNo_Ex" />
+                                                            </td>
+                                                            <td style="width: 80px; border: 1px solid black; padding: 5px;">
+                                                                <input type="text" id="form_EarlyPFNo_AN" title="Account Number" class="tbForm OnlyNumeric"
+                                                                    maxlength="7" onblur="formatPFNum(form_EarlyPFNo_AN);" style="width: 60px;" jqxb-datasource="FormDetails"
+                                                                    jqxb-datamember="PFDeclaration.EarlyPFNo_AN" />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!-- <input type="text" id="PrevPFNo" title="Prev PF No" class="tbForm" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="PFDeclaration.PrevPFNo" style="margin-right: 20px; float: right;
+                                                        width: 168px; height: 20px; margin-top: -2px;" />-->
+                                                </li>
+                                                <li style="width: 50px; float: right; font-size: 14px; margin-right: 15px;"><span
+                                                    class="NAPFclass">--Not Applicable</span></li>
+                                                <li style="margin-top: 40px; padding-right: 100px;">
+                                                    <p style="font-size: 14px; font-style: italic; margin-top: 70px; margin-left: 230px;">
+                                                        Sample format :
+                                                        <br />
+                                                        AA/AAA/9999999/999/9999999
+                                                        <br />
+                                                    </p>
+                                                </li>
+                                                <li></li>
+                                                <li></li>
+                                              <!--  <li id="PrevPensionNo1" style="font-size: 14px;">
+                                                    <label for="PFMEMBER" style="width: 232px;">
+                                                        Previous Pension account No (in full)
+                                                    </label>
+                                                    <input type="text" id="PrevPensionNo" title="Prev Pension No" class="tbForm" jqxb-datasource="FormDetails"
+                                                        jqxb-datamember="PFDeclaration.PrevPensionNo" style="margin-right: 0px; width: 165px;" />
+                                                </li>
+                                                <li style="font-size: 14px; float: right; width: 120px; margin-right: 270px;"><span
+                                                    class="NAPFclass">--Not Applicable</span></li>-->
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <li class='pfnumberclass  PFDate' id="DATE_EXIT_FOR_PREVIOUS_MEMBER_ID" style="width: 450px;
+                                    font-size: 14px;">
+                                    <label for="PFMEMBER" style="width: 200px;">
+                                        <span class="PFNoclass">*</span>11) Date of Exit for Previous <span style="padding-right: 10px;">
+                                        </span>&nbsp; Member ID(DD/MM/YYYY)<br />
+                                    </label>
+                                    <input type="text" id="PMemberIDDate" title="PreMemID Date" class="tbForm jQryLastdate"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.DateofExit" style="margin-right: 45px;" />
+                                </li>
+                                <li style="width: 120px;"><span class="NAPFclass" style="">--Not Applicable</span>
+                                </li>
+                                <li style="height:50px;padding-left: 0px;">
+                                <div class="Scheme_CertificateClass">
+                                    <ul class="personalDetails">
+                                        <li id="Scheme_Certificate2" style="font-size: 14px; width: 800px;">
+                                            <label style="width: 20px; font-size: 14px; float: left;">
+                                                12)</label>
+                                            <label for="Scheme_Certificate" style="width: 670px; margin-right: 0px; margin-left: 0px;">
+                                                <span></span>(A) IF SCHEME CERTIFICATE ISSUED FOR PREVIOUS EMPLOYMENT, THEN SCHEME
+                                                CERTIFICATE NUMBER:</label>
+                                            <input type="text" id="Scheme_Certificate" title="UAN No" class="tbForm NAPFCLASStext"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.PreviousSchemaCertificateNo"
+                                                style="width: 150px; margin-top: -20px; margin-right: -40px;" />
+                                            <span class="NAPFclass" style="width: 120px; margin-right: -50px;">--Not Applicable</span>
+                                        </li>
+                                        <li id="PPONUMBER" style="width: 850px; font-size: 14px;">
+                                            <label for="PPONUMBER" style="width: 670px; margin-top: -1.99px; margin-right: 15px;
+                                                margin-left: 0px;">
+                                                <span></span>&nbsp; <span></span>(B) IF PENSION PAYMENT ORDER (PPO) ISSUED FOR PREVIOUS
+                                                EMPLOYMENT, THEN PPO NUMBER:<br />
+                                            </label>
+                                            <input type="text" id="PPO_Number" title="PPO No" class="tbForm NAPFCLASStext" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="PFDeclaration.PPONumber" style="width: 150px; margin-top: -8px;
+                                                margin-right: 10px; margin-left: 0px;" />
+                                            <span class="NAPFclass" style="width: 120px; margin-top: -10px; margin-right: 25px;
+                                                float: right;">--Not Applicable</span> 
+                                          </li>
+                                    </ul>
+                                </div>
+                                </li>
+                            </ul>
+                            <ul class="personalDetails">
+                                <div class="pageHeader" style="background-color: White">
+                                    <p>
+                                        B. OTHER DETAILS</p>
+                                </div>
+                                <br />
+                                <li style="width: 450px;">
+                                    <label for="prefix_form" style="width: 200px; height: 20.2px; margin-top: -2px; margin-right: -30px;
+                                        float: left;">
+                                        13) INTERNATIONAL WORKER</label>
+                                    <select class="tbForm InternatnlClass dropdown" id="InternationalWorkerYesorNo" name="InternationalWorkerYesorNo"
+                                        jqxb-datasource="FormDetails" title="InternationalWorkerYesorNo" jqxb-datamember="PFDeclaration.InternationalWorkerYesorNo"
+                                        jqxb-listsource="YesOrNo" jqxb-listvalue="ID" jqxb-listtext="Description" style="width: 170px;
+                                        height: 20.2px; margin-top: -2px; margin-right: 0px; margin-left: 70px; float: left;">
+                                    </select>
+                                </li>
+                                <li class="YesInternationalWorker" style="height: 200px; width: 500px;font-size: 14px;">
+                                <div class="YesInternationalWorker">
+                                    <ul class="personalDetails">
+                                        <li style="width: 600px; margin-top: -20px;">
+                                            <p style="float: left; margin-left: 10px;font-size: 14px;">
+                                                IF THE REPLY TO (13) ABOVE IS YES, THEN ENTER THE DETAILS IN 13(A), 13(B) & 13(C):</p>
+                                        </li>
+                                        <li id="Country_Origin" class="CountryIndia " style="font-size: 14px;">
+                                            <label for="PassportCountry" style="margin-right: -30px; margin-left: 20px; width: 200px;">
+                                                <span class="IntnlWrkrClass">*</span><span></span>13(A) COUNTRY OF ORIGIN</label>
+                                            <select class="tbForm InternatnlClass" id="Country_Origin1" name="Country_Origin" title="Country_Origin"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.PassportCountry"
+                                                jqxb-listsource="CountryIND" jqxb-listvalue="ID" jqxb-listtext="Description"
+                                                style="width: 170px; height: 20.2px; margin-top: -2px; margin-right: -30px; margin-left: 50px;
+                                                float: left;">
+                                            </select>
+                                        </li>
+                                        <li class="PassportCountryNameClass" style="font-size: 14px;font-size: 14px; margin-right: -350px; padding-left: 0px;margin-left: 10px;">
+                                            <label for="PFMEMBER" style="width: 200px;">
+                                                <span class="IntnlWrkrClass1">*</span><span></span>COUNTRY NAME<br />
+                                            </label>
+                                            <select id="PassportCountryName" class="tbForm InternatnlClass" title="Passport Country Name" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="PFDeclaration.PassportCountryName" jqxb-listsource="CountryList"
+                                                jqxb-listvalue="ID" jqxb-listtext="Description">
+                                            </select>
+                                        </li>
+                                        <li id="PASSPORTNUMBER" style="font-size: 14px; width: 600px;">
+                                            <label for="PASSPORT NUMBER" style="width: 200px; margin-top: -1.99px; margin-right: 0px;
+                                                margin-left: 20px;">
+                                                <span class="IntnlWrkrClass">*</span><span></span>13(B) PASSPORT NUMBER<br />
+                                            </label>
+                                            <input type="text" id="PASSPORT_NUMBER" title="Passport Number" class="tbForm" jqxb-datasource="FormDetails"
+                                                jqxb-datamember="PFDeclaration.PassportNo" style="margin-top: -8px; margin-right: 190px;
+                                                margin-left: 10px;" />
+                                        </li>
+                                        <li id="PASSPORT_Validity" class="PASSPORT_Validity passportddetails" style="width: 600px;
+                                            font-size: 14px;">
+                                            <label for="PASSPORT" style="width: 220px; margin-top: -1.99px; margin-right: 15px;
+                                                margin-left: 20px;">
+                                                <span class="IntnlWrkrClass">*</span><span></span>13(C) PASSPORT VALID FROM
+                                                <br />
+                                            </label>
+                                            <input type="text" id="PassportIssueDate" title="Passport Issue Date" class="tbForm jQrydatepicker"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.PassportIssueDate"
+                                                style="margin-top: -20px; margin-right: 190px; margin-bottom: 10px; margin-left: 0px;" />
+                                            <label for="PASSPORT" style="width: 40px; margin-top: 20px; margin-right: 15px; margin-left: 190px;">
+                                                <span class="IntnlWrkrClass">*</span>To
+                                                <br />
+                                            </label>
+                                            <input type="text" id="PassportExpiryDate" title="Passport Expiry Date" class="tbForm jQryExpdate"
+                                                jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.PassportExpiryDate"
+                                                style="margin-top: -20px; margin-right: 190px; margin-left: 0px;" />
+                                        </li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                </li>
+                                <li  class="NoInternationalWorker" style="width: 500px; height: 200px;font-size: 14px;">
+                                <div class="NoInternationalWorker">
+                                    <ul class="personalDetails">
+                                        <li style="width: 600px; margin-top: -20px;">
+                                            <p style="float: left; margin-left: 10px;font-size: 14px;">
+                                                IF THE REPLY TO (13) ABOVE IS YES, THEN ENTER THE DETAILS IN 13(A), 13(B) & 13(C):</p>
+                                        </li>
+                                        <li id="Li1" style="font-size: 14px;">
+                                            <label for="PassportCountry" style="margin-right: -30px; margin-left: 20px; width: 200px;">
+                                                <span class="IntnlWrkrClass">*</span><span></span>13(A) COUNTRY OF ORIGIN</label>
+                                            <select class="tbForm" id="NoCountry_Origin" name="Country_Origin" title="Country_Origin"
+                                                style="width: 170px; height: 20.2px; margin-top: -2px; margin-right: -30px; margin-left: 50px;
+                                                float: left;">
+                                                <option value="1">--Not Applicable--</option>
+                                            </select>
+                                            <!--<input type="text" id="PassportCountryName" title="Passport Country Name" class="tbForm" jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.PassportCountryName" /> -->
+                                        </li>
+                                        <li class="PassportCountryNameClass">
+                                            <label for="PFMEMBER" style="width: 200px;">
+                                                <span class="IntnlWrkrClass1">*</span><span></span>COUNTRY NAME<br />
+                                            </label>
+                                            <select id="NoCountryName" class="tbForm" title="Passport Country Name" disabled="disabled">
+                                            </select>
+                                        </li>
+                                        <li id="Li2" style="font-size: 14px; width: 600px;">
+                                            <label for="PASSPORT NUMBER" style="width: 200px; margin-top: -1.99px; margin-right: 0px;
+                                                margin-left: 20px;">
+                                                <span class="IntnlWrkrClass">*</span><span></span>13(B) PASSPORT NUMBER<br />
+                                            </label>
+                                            <input type="text" id="Text1" title="Passport Number" class="tbForm" disabled="disabled"
+                                                value="Not Applicable" style="margin-top: -8px; margin-right: 190px; margin-left: 10px;" />
+                                        </li>
+                                        <li id="Li3" class="PASSPORT_Validity passportddetails" style="width: 600px; font-size: 14px;">
+                                            <label for="PASSPORT" style="width: 220px; margin-top: -1.99px; margin-right: 15px;
+                                                margin-left: 20px;">
+                                                <span class="IntnlWrkrClass">*</span><span></span>13(C) PASSPORT VALID FROM
+                                                <br />
+                                            </label>
+                                            <input type="text" id="Text2" title="Passport Issue Date" disabled="disabled" class="tbForm"
+                                                value="Not Applicable" style="margin-top: -20px; margin-right: 190px; margin-bottom: 10px;
+                                                margin-left: 0px;" />
+                                            <label for="PASSPORT" style="width: 40px; margin-top: 20px; margin-right: 15px; margin-left: 190px;">
+                                                <span class="IntnlWrkrClass">*</span>To
+                                                <br />
+                                            </label>
+                                            <input type="text" id="Text3" title="Passport Expiry Date" disabled="disabled" class="tbForm"
+                                                style="margin-top: -20px; margin-right: 190px; margin-left: 0px;" value="Not Applicable" />
+                                        </li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                </li>
+                                <li id="Education" class="EducationClass" style="width: 450px;">
+                                    <label for="Educational Qualification" style="width: 236px;">
+                                        <span>*</span>14) EDUCATIONAL QUALIFICATION<br />
+                                    </label>
+                                    <select class="tbForm dropdown" id="EducationQualification" name="EducationQualification"
+                                        title="EducationQualification" jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.EducationQualification"
+                                        jqxb-listsource="EducationQualificationList" jqxb-listvalue="ID" jqxb-listtext="Description"
+                                        style="width: 168px; height: 20.2px; margin-top: -2px; margin-right: 0px; margin-left: 5px;
+                                        float: left;">
+                                    </select>
+                                </li>
+                                <li>
+                                    <label for="MaritalStatus">
+                                        <span>*</span>15) MARITAL STATUS<br />
+                                    </label>
+                                    <select class="tbForm dropdown" id="MaritalStatus" name="Marital Status" title="Marital Status"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.MaritalStatus" jqxb-listsource="MaritalList"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description" style="width: 170px; height: 20.2px;
+                                        margin-top: -2px; margin-left: 65px; float: left; margin-right: -50px;">
+                                    </select>
+                                </li>
+                                <li></li>
+                                <li>
+                                    <label for="SplAbled">
+                                        <span>*</span>16) SPECIALLY ABLED<br />
+                                    </label>
+                                    <select class="tbForm dropdown" id="IsDisabledId" name="IsDisabled" jqxb-datasource="FormDetails"
+                                        title="IsDisabled" jqxb-datamember="PFDeclaration.IsDisabled" jqxb-listsource="YesOrNo"
+                                        jqxb-listvalue="ID" jqxb-listtext="Description" style="width: 170px; height: 20.2px;
+                                        margin-top: -2px; margin-left: 65px; float: left; margin-right: -30px;">
+                                    </select>
+                                </li>
+                                <li class="DisableCategoryClass">
+                                    <label for="PFMEMBER" style="width: 200px;">
+                                        <span>*</span>CATEGORY<br />
+                                    </label>
+                                    <select class="tbForm dropdown" id="DisableCategory" name="DisableCategory" title="DisableCategory"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.IfYesLocorVisorHearing"
+                                        jqxb-listsource="IfYesLocorVisorHearingList" jqxb-listvalue="ID" jqxb-listtext="Description"
+                                        style="width: 110px; height: 20.2px; margin-top: -2px; margin-left: 5px; float: left;
+                                        margin-right: 0px;">
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pageData">
+                    <div class="pageContent">
+                        <div class="pageDetails">
+                            <ul class="personalDetails mlypsprt">
+                                <br />
+                                <li class="KycDetails" style="width: 800px; height: 350px;">
+                                    <label for="KYC DETAILS" style="margin-bottom: 5px;">
+                                        <span>*</span>17) KYC DETAILS
+                                    </label>
+                                    <table class="myTable">
+                                        <tr>
+                                            <th style="width: 150px;">
+                                                KYC DOCUMENT TYPE
+                                            </th>
+                                            <th>
+                                                NAME AS ON KYC DOCUMENT
+                                            </th>
+                                            <th>
+                                                NUMBER
+                                            </th>
+                                            <th>
+                                                REMARKS, IF ANY
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                BANK ACCOUNT-1
+                                            </th>
+                                            <td>
+                                                <input type="text" id="BankAccountName" title="BankAccountName" class="tbForm onlyAlp" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="PFDeclaration.BankAccountName" />
+                                            </td>
+                                            <td>
+                                                <input type="text" id="BankAccountNumber" title="BankAccountNumber" class="tbForm"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.BankAccountNumber" />
+                                            </td>
+                                            <td>
+                                                <input type="text" id="BankAccountRemarks" title="BankAccountRemarks " class="tbForm"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.BankAccountRemarks"
+                                                    onfocus="Cleartext(BankAccountRemarks)" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                NPR/AADHAAR
+                                            </th>
+                                            <td>
+                                                <input type="text" id="AADHAARName" title="AADHAARName" class="tbForm onlyAlp" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="PFDeclaration.kycaadharName" /><!--onblur="setkycflag(1);" -->
+                                            </td>
+                                            <td>
+                                                <input type="text" id="AADHAARNumber" title="AADHAARNumber" class="tbForm number"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.kycaadharNumber" />
+                                            </td>
+                                            <td>
+                                                <input type="text" id="AADHAARRemarks" title="AADHAARRemarks" class="tbForm remarks"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.kycaadharRemarks" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                PERMANENT ACCOUNT NUMBER (PAN)
+                                            </th>
+                                            <td>
+                                                <input type="text" id="PanName" title="PanName" class="tbForm onlyAlp" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="PFDeclaration.kycPANName" />
+                                                <!-- onblur="setkycflag(2);"-->
+                                            </td>
+                                            <td>
+                                                <input type="text" id="PanNumber" title="PanNumber" class="tbForm number pannum_ind_form"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.kycPANNumber" maxlength="10" />
+                                            </td>
+                                            <td>
+                                                <input type="text" id="PanRemarks" title="PanRemarks" class="tbForm remarks" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="PFDeclaration.kycPANRemarks" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                PASSPORT
+                                            </th>
+                                            <td>
+                                                <input type="text" id="PassportName" title="PassportName" class="tbForm onlyAlp" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="PFDeclaration.kycPASSPORTName" /><!-- onblur="setkycflag(3);"-->
+                                            </td>
+                                            <td>
+                                                <input type="text" id="PassportNo" title="PassportNo" class="tbForm" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="PFDeclaration.kycPASSPORTNumber" />
+                                            </td>
+                                            <td>
+                                                <input type="text" id="PassportExpiredDate" title="PassportExpiryDate" value="Expiry date"
+                                                    class="tbForm jQryExpdate" jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.kycPASSPORTRemarks"
+                                                    onfocus="Cleartext(PassportExpiredDate)" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                DRIVING LICENCE
+                                            </th>
+                                            <td>
+                                                <input type="text" id="DRIVINGLicenceName" title="DRIVINGLicenceName" class="tbForm onlyAlp"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.kycDRIVINGName" />
+                                                <!--onblur="setkycflag(4);"-->
+                                            </td>
+                                            <td>
+                                                <input type="text" id="DRIVINGLicenceNumber" title="DRIVINGLicenceNumber" class="tbForm "
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.kycDRIVINGNumber" />
+                                            </td>
+                                            <td>
+                                                <input type="text" id="DRIVINGLicenceRemarks" title="DRIVINGLicenceRemarks" value="Expiry date"
+                                                    class="tbForm jQryExpdate" jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.kycDRIVINGRemarks"
+                                                    onfocus="Cleartext(DRIVINGLicenceRemarks)" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                ELECTION CARD
+                                            </th>
+                                            <td>
+                                                <input type="text" id="ELECTIONName" title="ELECTIONName" class="tbForm onlyAlp" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="PFDeclaration.kycELECTIONName" />
+                                                <!-- onblur="setkycflag(5);"-->
+                                            </td>
+                                            <td>
+                                                <input type="text" id="ELECTIONNumber" title="ELECTIONNumber" class="tbForm number"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.kycELECTIONNumber" />
+                                            </td>
+                                            <td>
+                                                <input type="text" id="ELECTIONRemarks" title="ELECTIONRemarks" class="tbForm remarks"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.kycELECTIONRemarks" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                RATION CARD
+                                            </th>
+                                            <td>
+                                                <input type="text" id="RATIONName" title="RATIONName" class="tbForm onlyAlp" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="PFDeclaration.kycRATIONName" />
+                                                <!-- onblur="setkycflag(6);" -->
+                                            </td>
+                                            <td>
+                                                <input type="text" id="RATIONNumber" title="RATIONNumber" class="tbForm number" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="PFDeclaration.kycRATIONNumber" />
+                                            </td>
+                                            <td>
+                                                <input type="text" id="RATIONRemarks" title="RATIONRemarks" class="tbForm remarks"
+                                                    jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.kycRATIONRemarks" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                ESIC CARD
+                                            </th>
+                                            <td>
+                                                <input type="text" id="ESICName" title="ESICName" class="tbForm onlyAlp" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="PFDeclaration.kycESICName" />
+                                                <!--onblur="setkycflag(7);"-->
+                                            </td>
+                                            <td>
+                                                <input type="text" id="ESICNumber" title="ESICNumber" class="tbForm number" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="PFDeclaration.kycESICNumber" />
+                                            </td>
+                                            <td>
+                                                <input type="text" id="ESICRemarks" title="ESICRemarks" class="tbForm remarks" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="PFDeclaration.kycESICRemarks" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" style="line-height: 18px;">
+                                                <span>*</span><b>Mandatory Field</b> YOU ARE HOWEVER ADVISED TO PROVIDE ALL KYC DOCUMENTS
+                                                AVAILABLE WITH YOU IN ADDITION TO MANDATORY KYCS TO AVAIL BETTER SERVICES. <span style="font-weight:bold;color:Black">ON THE DATE OF JOINING PLEASE CARRY SELF-ATTESTED
+                                                    PHOTOCOPIES OF THE DOCUMENTS.</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                            <ul class="personalDetails" style="margin-top: 50px;">
+                                <div class="pageHeader">
+                                    <p>
+                                        C. UNDERTAKING:</p>
+                                </div>
+                                <br />
+                                <li id="Undertaking" style="height: 150px; width: auto;">
+                                    <ol style="margin-left: 30px; list-style-type: upper-alpha; font-size: 14px;line-height: 18px;">
+                                        <li style="width: 700px; padding-bottom: 0px; font-size: 14px; margin-top: 10px;
+                                            height: 15px;">I CERTIFY THAT ALL THE INFORMATION GIVEN ABOVE IS TRUE TO THE BEST
+                                            OF MY KNOWLEDGE AND BELIEF.</li>
+                                        <li style="width: 700px; font-size: 14px; margin-top: 10px;">IN CASE, EARLIER A MEMBER
+                                            OF EPF SCHEME, 1952 AND/OR EPS, 1995,
+                                            <br />
+                                            <ol style="margin-left: 50px; list-style-type: upper-roman">
+                                                <li style="width: 700px; padding-bottom: 0px; font-size: 14px; margin-top: 10px;
+                                                    margin-bottom: 5px; height: 15px;">I HAVE ENSURED THE CORRECTNESS OF MY UAN/ PREVIOUS
+                                                    PF MEMBER ID.</li>
+                                                <li style="width: 700px; height: 60px; padding-bottom: 0px; font-size: 14px; margin-top: 4px;
+                                                    margin-bottom: 5px;line-height: 18px;" >THIS MAY ALSO BE TREATED AS MY REQUEST FOR TRANSFER OF FUNDS
+                                                    AND SERVICE DETAILS IF APPLICABLE FROM THE PREVIOUS ACCOUNT AS DECLARED ABOVE TO
+                                                    THE PRESENT P.F. ACCOUNT. (THE TRANSFER WOULD BE POSSIBLE ONLY IF THE IDENTIFIED
+                                                    KYC DETAILS APPROVED BY PREVIOUS EMPLOYER HAS BEEN VERIFIED BY PRESENT EMPLOYER
+                                                    USING HIS DIGITAL SIGNATURE CERTIFICATE).</li>
+                                                <li style="width: 700px; font-size: 14px; height: 15px; padding-bottom: 0px; margin-top: 5px; margin-bottom: 10px;">
+                                                    I AM AWARE THAT I CAN SUBMIT MY NOMINATION FORM THROUGH UAN BASED MEMBER PORTAL.</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li style="width: 700px; height: 0px;"></li>
+                                <li style="height: auto">
+                                    <label for="Date">
+                                        <span>*</span> <span></span>&nbsp;DATE:
+                                        <br />
+                                    </label>
+                                    <input type="text" id="Dateofjoing" title="Date of joining" disabled="disabled" class="tbForm"
+                                        jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.Date" /></li>
+                                <li></li>
+                                <li class="PlaceClass" style="height: auto">
+                                    <label for="Place">
+                                        <span>*</span> <span></span>&nbsp;PLACE:
+                                        <br />
+                                    </label>
+                                    <input type="text" id="Place" title="Place" class="tbForm textMandatory" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="PFDeclaration.Place" /></li>
+                                <li>
+                                    <label for="Signature" style="width: 150px; float: right;">
+                                        SIGNATURE OF MEMBER
+                                        <br />
+                                    </label>
+                                </li>
+                            </ul>
+                            <ul class="personalDetails">
+                                <div class="pageHeader">
+                                    <p>
+                                        DECLARATION BY PRESENT EMPLOYER</p>
+                                </div>
+                                <br />
+                                <li style="width: 850px; height: 400px; font-size: 14px;">
+                                    <ol style="list-style-type: upper-alpha; width: 700px; margin-left: 20px; line-height: 18px;">
+                                        <li style="width: 700px; font-size: 14px; height: 50px;">
+                                            <div>
+                                                <p class="page_text1" style="padding-left: 0px; font-size: 14px;">
+                                                    THE MEMBER Mr./Ms./Mrs.&nbsp;&nbsp</p>
+                                                <input class="inputText_Readonly" type="text" id="Pg_3_text_Name" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="PFDeclaration.Name" style="border: 1px solid #000; margin-top: -25px;
+                                                    margin-right: 343px;" readonly="readonly" />
+                                                <p class="page_text1" style="font-size: 14px; width: 110px; padding-left: 0px; margin-top: -25px;
+                                                    margin-left: 350px;">
+                                                    &nbsp;&nbsp; HAS JOINED ON</p>
+                                                <input class="inputText_Readonly" type="text" id="Pg_3_text_Date" jqxb-datasource="FormDetails"
+                                                    jqxb-datamember="PFDeclaration.Date" style="border: 1px solid #000; margin-top: -25px;
+                                                    margin-right: 50px;" readonly="readonly" />
+                                                <p class="page_text1" style="font-size: 14px; width: 260px; padding-left: 0px; margin-left: 0px;
+                                                    margin-top: 5px;">
+                                                    &nbsp;&nbsp;AND HAS BEEN ALLOTTED PF MEMBER ID</p>
+                                                <input class="inputText_Readonly" type="text" id="Pg_3_text_PFNo" style="border: 1px solid #000;
+                                                    margin-top: -25px; margin-right: 250px;" readonly="readonly" />
+                                            </div>
+                                        </li>
+                                        <li style="width: 700px; height: 150px; font-size: 14px;margin-top:5px;">IN CASE THE PERSON WAS EARLIER
+                                            NOT A MEMBER OF EPF SCHEME, 1952 AND EPS, 1995:
+                                            <ul style="margin-left: 30px; list-style-type: disc" line-height: "18px;">
+                                                <li style="width: 700px; font-size: 14px; margin-top: 10px;">(POST ALLOTMENT OF UAN)
+                                                    THE UAN ALLOTTED FOR THE MEMBER IS
+                                                    <input type="text" id="UAN_Number" readonly="readonly" title="UAN" class="tbForm"
+                                                        style="margin-left: 0px; margin-right: 90px; margin-top: -3px;border: 1px solid #000;" /></li>
+                                                <li style="width: 700px; font-size: 14px; margin-top: -10px;">PLEASE TICK THE APPROPRIATE
+                                                    OPTION:<br />
+                                                    <label style="width: 600px; margin-top: 5px;">
+                                                        THE KYC DETAILS OF THE ABOVE MEMBER IN THE UAN DATABASE</label>
+                                                    <label id="" runat="server" style="width: 500px; margin-top: 5px;">
+                                                        <input id="IsKYCNotUploaded" type="checkbox" runat="server" disabled="disabled" style="float: left;
+                                                            margin-left: 20px; margin-top: 0px;" />HAVE NOT BEEN UPLOADED</label><!--jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.IsKYCNotUploaded" jqxb-bindedattribute="checked"-->
+                                                    <br />
+                                                    <label id="Label1" runat="server" style="width: 500px; margin-top: 5px;">
+                                                        <input id="IsKYCNotApproved" disabled="disabled" type="checkbox" runat="server" style="float: left;
+                                                            margin-left: 20px; margin-top: 0px;" />HAVE BEEN UPLOADED BUT NOT APPROVED</label><!--jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.IsKYCNotApproved" jqxb-bindedattribute="checked" -->
+                                                    <br />
+                                                    <label id="Label2" runat="server" style="width: 500px; margin-top: 5px;">
+                                                        <input id="IsKYCUploadedApproved" type="checkbox" disabled="disabled" checked="checked"
+                                                            runat="server" style="float: left; margin-left: 20px; margin-top: 0px;" />HAVE
+                                                        BEEN UPLOADED AND APPROVED
+                                                        <!--jqxb-datasource="FormDetails" jqxb-datamember="PersonalData.IsKYCUploadedApproved" jqxb-bindedattribute="checked"-->
+                                                        WITH DSC</label>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li style="width: 850px; font-size: 14px; margin-top: 10px; height: 130px;">IN CASE
+                                            THE PERSON WAS EARLIER A MEMBER OF EPF SCHEME, 1952 AND EPS, 1995:
+                                            <ul style="margin-left: 30px; list-style-type: disc; line-height: 18px;">
+                                                <li style="width: 750px; font-size: 14px; height: 20px; margin-top: 10px;">THE ABOVE
+                                                    MEMBER ID OF THE MEMBER AS MENTIONED IN (A) ABOVE HAS BEEN TAGGED WITH HIS/HER UAN/PREVIOUS
+                                                    MEMBER ID AS DECLARED BY MEMBER.</li>
+                                                <li style="width: 700px; font-size: 14px;">PLEASE TICK THE APPROPRIATE OPTION:-
+                                                    <label id="Label3" runat="server" style="margin-top: 5px; width: 700px;">
+                                                        <input id="Checkbox3" type="checkbox" runat="server" checked="checked" disabled="disabled"
+                                                            style="margin-left: 10px; float: left;" />THE KYC DETAILS OF THE ABOVE MEMBER
+                                                        IN THE UAN DATABASE HAVE BEEN APPROVED WITH DIGITAL <span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        SIGNATURE CERTIFICATE AND TRANSFER REQUEST HAS BEEN GENERATED ON PORTAL.</label>
+                                                    <label id="Label4" runat="server" style="width: 700px; margin-top: 5px; margin-left: 1px;">
+                                                        <input id="Checkbox4" type="checkbox" disabled="disabled" runat="server" style="margin-left: 10px;
+                                                            float: left;" />AS THE DSC OF ESTABLISHMENT ARE NOT REGISTERED WITH EPFO, THE
+                                                        MEMBER HAS BEEN INFORMED <span></span>&nbsp;&nbsp;&nbsp;&nbsp; TO FILE PHYSICAL
+                                                        CLAIM (FORM-13) FOR TRANSFER OF FUNDS FROM HIS PREVIOUS ESTABLISHMENT.</label></li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li style="margin-top: 35px;">
+                                    <label for="Date">
+                                        DATE:
+                                        <br />
+                                    </label>
+                                    <input type="text" id="Date" title="Date" disabled="disabled" class="tbForm" jqxb-datasource="FormDetails"
+                                        jqxb-datamember="PFDeclaration.Date" style="margin-right: 180px; margin-top: -18px;" /></li>
+                                <li style="height: 120px;">
+                                    <img style="width: 330px; height: 70px; margin-top: 0px; margin-bottom: 0px; margin-left: 0px;
+                                        float: right; margin-right: 60px;" src="../../../../Images/Sign.png" />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <p id="normal" class="fright font13 grey_color boldtext" style="clear: both; margin-top: -20px;">
+                                        ------------------------------------------------------------<br />
+                                        Signature of the Employer WITH SEAL OF ESTABLISHMENT
+                                        <br />
+                                        <br />
+                                        Designation: &nbsp;&nbsp; <u>Senior Director &ndash; HR</u>
+                                        
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li style="height: 230px;">
+                                    
+                                    <!--<div id="SealImgItaas" style="width: 400px; height: 80px; margin-top: 0px; margin-left: 0px;
+                                        display: block; background-size: contain;background-size: 120px 70px;background-repeat:no-repeat">-->
+                                        <img id="SealImgItaas" alt=""style="width: 120px; height: 80px;" />
+                                        
+                                    <!--</div>-->
+                                    <p class="address" id="CompanyAddress" style="width: 360px; margin-top: 0px; margin-left: 60px;">
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="Signature" id="Sign_PageId_3">
+                        </div>
+                        <div class="AgreeSignature authenticationcheck pageDetails" id="" style="height:35px;margin-left:10px;font-size:14px;background-color:rgb(253, 244, 178); border-color:#fccd75; padding-top:0px;padding-bottom:2px;">
+                        <input type="checkbox" id="AgreeCheck" class="CheckClass"  jqxb-datasource="FormDetails" jqxb-datamember="PFDeclaration.AgreeSignature" jqxb-bindedattribute="checked" />
+                        <label style="background-color:rgb(253, 244, 178);">I agree that the information provided in the form will not be Edited/Altered on the day of joining and such actions will not be considered.</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footerContent">
+            </div>
+        </div>
+    </div>
+    <input type="hidden" runat="server" id="hdnMigrateCandidate" />
+</body>
+</html>
